@@ -4,7 +4,7 @@ var fs = require('fs-extra'),
   sass = require('node-sass');
 
 
-var dir = "/Users/jonas/Development/openframeworks/openFrameworks/libs/openFrameworksCompiled/project/doxygen/build/";
+var dir = "../../libs/openFrameworksCompiled/project/doxygen/build/";
 
 
 //Create the output folder

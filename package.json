@@ -5,8 +5,9 @@
   "main": "app.js",
   "author": "",
   "license": "ISC",
+
   "scripts": {
-    "doxygen": "",
+    "doxygen": "cd ../../libs/openFrameworksCompiled/project/doxygen/; doxygen Doxyfile",
     "parse": "node app.js"
   },
   "dependencies": {
