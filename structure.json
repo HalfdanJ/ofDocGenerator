@@ -1,0 +1,133 @@
+{
+  "core": {
+    "3d": [
+      "of3dGraphics",
+      "of3dPrimitive",
+      "of3dUtils",
+      "ofBoxPrimitive",
+      "ofCamera",
+      "ofConePrimitive",
+      "ofCylinderPrimitive",
+      "ofEasyCam",
+      "ofIcoSpherePrimitive",
+      "ofMesh",
+      "ofMeshFace",
+      "ofNode",
+      "ofPlanePrimitive",
+      "ofSpherePrimitive"
+    ],
+
+    "application": [
+      "ofAppBaseWindow",
+      "ofAppEGLWindow",
+      "ofAppGLFWWindow",
+      "ofAppGlutWindow",
+      "ofAppNoWindow",
+      "ofAppRunner",
+      "ofBaseApp",
+      "ofDragInfo"
+    ],
+
+    "communication": [
+      "ofArduino",
+      "ofSerial"
+    ],
+
+    "events": [
+      "ofAudioEventArgs",
+      "ofCoreEvents",
+      "ofEntryEventArgs",
+      "ofEvent",
+      "ofEventArgs",
+      "ofEventUtils",
+      "ofEvents",
+      "ofKeyEventArgs",
+      "ofMessage",
+      "ofMouseEventArgs",
+      "ofResizeEventArgs",
+      "ofTouchEventArgs"
+    ],
+
+    "gl":  [
+      "ofFbo",
+      "ofGLProgrammableRenderer",
+      "ofGLRenderer",
+      "ofGLUtils",
+      "ofLight",
+      "ofMaterial",
+      "ofShader",
+      "ofTexture",
+      "ofTextureData",
+      "ofVbo",
+      "ofVboMesh"
+    ],
+
+    "graphics":  [
+      "ofBitmapFont",
+      "ofGraphics",
+      "ofImage",
+      "ofPath",
+      "ofPixels",
+      "ofPolyline",
+      "ofTTFCharacter",
+      "ofTessellator",
+      "ofTrueTypeFont"
+    ],
+
+    "math":  [
+      "ofMath",
+      "ofMatrix3x3",
+      "ofMatrix4x4",
+      "ofQuaternion",
+      "ofVec2f",
+      "ofVec3f",
+      "ofVec4f"
+    ],
+
+    "sound":  [
+      "ofSoundPlayer",
+      "ofSoundStream"
+    ],
+
+    "types":  [
+      "ofBaseSoundInput",
+      "ofBaseSoundOutput",
+      "ofColor",
+      "ofParameter",
+      "ofParameterGroup",
+      "parameterChangedE",
+      "ofPoint",
+      "ofPtr",
+      "ofReadOnlyParameter",
+      "ofRectangle",
+      "ofSerialDeviceInfo",
+      "ofStyle"
+    ],
+
+    "utils":  [
+      "ofBuffer",
+      "ofDirectory",
+      "ofFile",
+      "ofFileDialogResult",
+      "fileName",
+      "filePath",
+      "ofFilePath",
+      "ofFileUtils",
+      "ofHttpRequest",
+      "ofLog",
+      "ofSystemUtils",
+      "ofThread",
+      "ofURLFileLoader",
+      "ofUtils",
+      "ofXml"
+    ],
+
+    "video":  [
+      "ofVideoDevice",
+      "ofVideoFormat",
+      "ofVideoGrabber",
+      "ofVideoPlayer",
+      "ofVideoSavedEventArgs"
+    ]
+  }
+}

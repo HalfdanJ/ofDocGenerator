@@ -1,0 +1,281 @@
+body {
+  //font-size: 13px;
+  //background-color: rgb(240,240,240);
+}
+
+nav {
+  background-color: rgba(249,249,249,1);
+  border-top: 1px solid rgba(233,233,233,1);
+  border-left: 1px solid rgba(233,233,233,1);
+  border-right: 1px solid rgba(233,233,233,1);
+  bottom: 0;
+  box-shadow: 0 0 1px rgba(0,0,0,.07);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  position: fixed;
+  top: 70px;
+  width: 230px;
+
+  ul#nav-parts {
+    color: rgba(128,128,128,1);
+    font-weight: 100;
+    line-height: 140%;
+    list-style-type: none;
+    margin: 0;
+    -webkit-padding-start: 0;
+    padding-left:0px;
+
+    li.group {
+      border-bottom: 1px solid rgba(233,233,233,1);
+      font-family: Helvetica;
+      font-size: 1.2em;
+      line-height: 150%;
+      list-style-type: none;
+      margin: 0;
+      padding: 10px 30px 10px 20px;
+      cursor: pointer;
+      color: #333;
+
+
+      overflow: hidden;
+    //  max-height:42px;
+    //  transition: all 0.3s;
+
+
+
+      /*&.selected {
+        background-color: rgba(255,255,255,1);
+        max-height:800px;
+        cursor: default;
+      }
+*/
+      ul {
+        padding: 0px;
+
+        li.chapter {
+          display:block;
+          line-height:13px;
+          margin: 9px 0px;
+
+          a {
+            font-size:12px;
+            color: rgba(128,128,128,1);
+          }
+
+          li.section {
+            display:none;
+            font-weight: normal;
+            padding-left:13px;
+            margin: 5px 0px;
+
+
+            a {
+              color: #B8B8B8;
+              transition: all 0.3s;
+
+            }
+
+            &.selected {
+              a {
+                color: darken(#d14, 5);
+              }
+
+            }
+          }
+
+          &.selected {
+            font-weight: bold;
+
+            li.section {
+              display:block;
+            }
+
+          }
+
+
+
+        }
+      }
+
+
+
+
+
+
+
+
+
+    }
+  }
+}
+
+
+
+.main {
+  //background-color: rgba(255,255,255,1);
+  background-color: white;
+  //border: 1px solid rgba(233,233,233,1);
+  border-top: 0;
+  //box-shadow: 0 0 1px rgba(0,0,0,.07);
+  display: block;
+  margin-left: 246px;
+  min-height: calc(100% - 173px);
+  min-height: -moz-calc(100% - 173px);
+  min-height: -webkit-calc(100% - 173px);
+  min-height: -o-calc(100% - 173px);
+  position: absolute;
+  overflow: auto;
+  padding-bottom: 100px;
+  top: 70px;
+  width: 734px;
+}
+
+
+
+#templates {
+  display: none;
+}
+
+.methodHeader {
+  //font-family: "Lucida Console", Monaco, monospace;
+  font-size:14px;
+  margin-bottom:5px;
+  margin-top:5px;
+  cursor: pointer;
+  .type {
+    color: #aaa;
+    padding-right:8px;
+  }
+
+  .args {
+    color: #aaa;
+  }
+
+  &.deprecatedMethod {
+    span {
+      text-decoration: line-through;
+    }
+    a {
+      text-decoration: line-through;
+      color: #aaa;
+    }
+
+    .note {
+      text-decoration: none;
+      color: #ccc;
+    }
+  }
+}
+
+
+.methodDescription {
+  background-color:rgb(246,246,246);
+
+  border: 1px solid rgb(230,230,230);
+  margin-bottom:15px;
+
+  padding:10px 10px 5px 15px;
+
+
+
+  table {
+    border-collapse: collapse;
+  }
+
+  table, th, td {
+    border: 1px solid rgb(215,215,215);
+  }
+
+  td {
+    padding: 6px;
+  }
+
+  td.paramname {
+    font-style: italic;
+  }
+
+  dt {
+    margin-bottom:4px;
+  }
+  dd {
+    // padding-left: 20px;
+  }
+
+
+
+
+}
+
+.fragment, pre {
+  margin-left:15px;
+  border: 0px;
+  border-radius: 0px;
+  border-left:5px solid #c2c2c2;
+  padding: 5px;
+  padding-left:7px;
+  margin-bottom: 8px;
+
+
+
+  a {
+    //color:black;
+  }
+
+  .line {
+    font-family: monospace, fixed;
+    font-size: 13px;
+    min-height: 13px;
+    line-height: 1.0;
+
+    white-space: pre-wrap;
+    word-wrap: break-word;
+
+    /* @group Code Colorization */
+
+    span.keyword {
+      color: #008000
+    }
+
+    span.keywordtype {
+      color: #604020
+    }
+
+    span.keywordflow {
+      color: #e08000
+    }
+
+    span.comment {
+      color: #800000
+    }
+
+    span.preprocessor {
+      color: #806020
+    }
+
+    span.stringliteral {
+      color: #002080
+    }
+
+    span.charliteral {
+      color: #008080
+    }
+
+    span.vhdldigit {
+      color: #ff00ff
+    }
+
+    span.vhdlchar {
+      color: #000000
+    }
+
+    span.vhdlkeyword {
+      color: #700070
+    }
+
+    span.vhdllogic {
+      color: #ff0000
+    }
+
+
+  }
+}
