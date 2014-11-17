@@ -5,15 +5,14 @@
   "main": "app.js",
   "author": "",
   "license": "ISC",
-  "scripts" : {
-    "doxygen" : ""
-    "parse" : "node app.js"
+  "scripts": {
+    "doxygen": "",
+    "parse": "node app.js"
   },
   "dependencies": {
     "cheerio": "^0.18.0",
     "fs-extra": "^0.12.0",
-    "xml2js": "^0.4.4",
-    "xml2json": "^0.5.1",
-    "xml4js": "^0.1.0"
+    "node-sass": "^1.2.2",
+    "xml2js": "^0.4.4"
   }
 }

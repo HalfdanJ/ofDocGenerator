@@ -1,18 +1,10 @@
 var fs = require('fs-extra'),
-  xml2js = require('xml2js');
-util = require('util')
-var xml4js = require('xml4js');
-var cheerio = require('cheerio')
+  xml2js = require('xml2js'),
+  cheerio = require('cheerio'),
+  sass = require('node-sass');
+
 
 var dir = "/Users/jonas/Development/openframeworks/openFrameworks/libs/openFrameworksCompiled/project/doxygen/build/";
-//var className = "singletonof_color__";
-var className = "classof_thread";
-//var className = "of_thread_8h";
-//var className = "classof_camera";
-//var className = "classof_image__";
-//var className = "classof_log"; // BROKEN
-//var className = "classof_texture";
-//var className = "of_graphics_8h";
 
 
 //Create the output folder
@@ -20,7 +12,17 @@ if(fs.existsSync('output'))
   fs.removeSync('output');
 fs.mkdirSync('output');
 fs.copySync('assets/script.js', 'output/script.js');
-fs.copySync('assets/stylesheet.css', 'output/stylesheet.css');
+
+sass.renderFile({
+  file: 'assets/stylesheet.scss',
+  outFile: 'output/stylesheet.css',
+  error: function(error) {
+    console.error(error);
+  },
+  success: function(){}
+});
+
+
 
 // Load the doc structure
 var structure = require("./structure.json");
