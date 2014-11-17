@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ofKeyEventArgs</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheet.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+
+<div class="container">
+    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">events</a> &gt; <span id="classQuickNav">ofKeyEventArgs</span></div>
+    <nav class="navigator" role="navigation">
+      <ul id="nav-parts">
+        <li class="group selected">
+          Topics
+          <ul id="topics">
+            <!--<li class="chapter"><a href="asd">sad</a></li>-->
+          <li class="chapter"><a href="#PublicTypes">Public Types</a></li><li class="chapter"><a href="#PublicAttributes">Public Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li></ul>
+      </li></ul>
+    </nav>
+    <div class="main">
+      <div class="content">
+        <div class="classHeader">
+          <h1 id="title">ofKeyEventArgs</h1>
+        </div>
+        <div class="classDescription"></div>
+        <div class="classMethods"><div id="PublicTypes">
+    <h3 class="sectionHeader">Public Types</h3>
+    <div class="sectionContent"><div id="a551471a78845484004332f64798ab8a5">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a551471a78845484004332f64798ab8a5&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">Type</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a551471a78845484004332f64798ab8a5_description">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a551471a78845484004332f64798ab8a5a793b23692a3ec9b6ff62ecae1f8404b9"></a>Pressed&#xA0;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a551471a78845484004332f64798ab8a5a496274fd747ced32ddc7dbcd4defc563"></a>Released&#xA0;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+
+  </div></div>
+  </div><div id="PublicAttributes">
+    <h3 class="sectionHeader">Public Attributes</h3>
+    <div class="sectionContent"><div id="a7d65746cae459177b0add5579268bfa7">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a7d65746cae459177b0add5579268bfa7&quot;)">
+      <span class="type"><a href="ofKeyEventArgs.html#1a551471a78845484004332f64798ab8a5">Type</a></span>
+      <a class="name">type</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a7d65746cae459177b0add5579268bfa7_description">
+
+</div>
+
+  </div><div id="a51c166832e41e794963bc7ad6c6dd725">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a51c166832e41e794963bc7ad6c6dd725&quot;)">
+      <span class="type">int </span>
+      <a class="name">key</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a51c166832e41e794963bc7ad6c6dd725_description">
+
+<p>For special keys, one of OF_KEY_* (. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="of_constants_8h.html">ofConstants.h</a>). For all other keys, the Unicode code point you&apos;<a class="el" href="of_matrix4x4_8cpp.html#a2530554172d8629149ec56816eeaa947">d</a> expect if this <a class="el" href="classof_key_event_args.html#a51c166832e41e794963bc7ad6c6dd725" title="For special keys, one of OF_KEY_* (. ">key</a> combo (including modifier keys that may be down) was pressed in <a class="el" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a> text editor (same as <a class="el" href="classof_key_event_args.html#ad2039a03a652ef446eff283ca0feae2f" title="The Unicode code point you&apos;d expect if this key combo (including modifier keys) was pressed in a text...">codepoint</a>). </dd></dl>
+
+</div>
+
+  </div><div id="a45828665fb41d98fc3497cf273c1a392">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a45828665fb41d98fc3497cf273c1a392&quot;)">
+      <span class="type">int </span>
+      <a class="name">keycode</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a45828665fb41d98fc3497cf273c1a392_description">
+
+<p>The keycode returned by the windowing system, independent of any modifier keys or keyboard layout settings. For <a class="el" href="classof_app_g_l_f_w_window.html">ofAppGLFWWindow</a> this value is one of GLFW_KEY_* (. </p>
+<dl class="section see"><dt>See also</dt><dd>glfw3.h) - typically, ASCII representation of the symbol on the physical <a class="el" href="classof_key_event_args.html#a51c166832e41e794963bc7ad6c6dd725" title="For special keys, one of OF_KEY_* (. ">key</a>, so A <a class="el" href="classof_key_event_args.html#a51c166832e41e794963bc7ad6c6dd725" title="For special keys, one of OF_KEY_* (. ">key</a> always returns 0x41 even if shift, alt, ctrl are down. </dd></dl>
+
+</div>
+
+  </div><div id="aa76bf90bf3a086056a3aabc8756fef66">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aa76bf90bf3a086056a3aabc8756fef66&quot;)">
+      <span class="type">int </span>
+      <a class="name">scancode</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aa76bf90bf3a086056a3aabc8756fef66_description">
+
+<p>The raw scan code returned by the keyboard, OS and hardware specific. </p>
+
+</div>
+
+  </div><div id="ad2039a03a652ef446eff283ca0feae2f">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ad2039a03a652ef446eff283ca0feae2f&quot;)">
+      <span class="type">unsigned int </span>
+      <a class="name">codepoint</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ad2039a03a652ef446eff283ca0feae2f_description">
+
+<p>The Unicode code point you&apos;d expect if this key combo (including modifier keys) was pressed in a text editor, or -1 for non-printable characters. </p>
+
+</div>
+
+  </div></div>
+  </div><div id="PublicFunctions">
+    <h3 class="sectionHeader">Public Functions</h3>
+    <div class="sectionContent"><div id="a1a1a0e140620ab6058800970ba273414">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a1a1a0e140620ab6058800970ba273414&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ofKeyEventArgs</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a1a1a0e140620ab6058800970ba273414_description">
+
+</div>
+
+  </div><div id="a97b8a726821aa8f7c2fa93701e81d60a">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a97b8a726821aa8f7c2fa93701e81d60a&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ofKeyEventArgs</a>
+      <span class="args">(Type type, int key, int keycode, int scancode, unsigned int codepoint)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a97b8a726821aa8f7c2fa93701e81d60a_description">
+
+</div>
+
+  </div><div id="a849d9ede8c325f72ec7753d93a251fc9">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a849d9ede8c325f72ec7753d93a251fc9&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ofKeyEventArgs</a>
+      <span class="args">(Type type, int key)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a849d9ede8c325f72ec7753d93a251fc9_description">
+
+</div>
+
+  </div></div>
+  </div></div>
+      </div>
+    </div>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+<script src="script.js"></script>
+
+</body>
+
+<div id="templates">
+
+  <div id="sectionTemplate">
+    <h3 class="sectionHeader"></h3>
+    <div class="sectionContent"></div>
+  </div>
+
+  <div id="classMethodTemplate">
+    <div class="methodHeader">
+      <span class="type"></span>
+      <a class="name"></a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none"></div>
+
+  </div>
+
+</div>
+
+</html>

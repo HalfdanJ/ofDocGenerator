@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ofEasyCam</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheet.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+
+<div class="container">
+    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">3d</a> &gt; <span id="classQuickNav">ofEasyCam</span></div>
+    <nav class="navigator" role="navigation">
+      <ul id="nav-parts">
+        <li class="group selected">
+          Topics
+          <ul id="topics">
+            <!--<li class="chapter"><a href="asd">sad</a></li>-->
+          <li class="chapter"><a href="#PublicFunctions">Public Functions</a></li></ul>
+      </li></ul>
+    </nav>
+    <div class="main">
+      <div class="content">
+        <div class="classHeader">
+          <h1 id="title">ofEasyCam</h1>
+        </div>
+        <div class="classDescription"><div class="textblock"><p>A super simple camera for interacting with objects in 3D space. </p>
+</div></div>
+        <div class="classMethods"><div id="PublicFunctions">
+    <h3 class="sectionHeader">Public Functions</h3>
+    <div class="sectionContent"><div id="ae432309081375a91cacf80c5d9093c14">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ae432309081375a91cacf80c5d9093c14&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ofEasyCam</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ae432309081375a91cacf80c5d9093c14_description">
+
+<p>Create a default camera. </p>
+
+</div>
+
+  </div><div id="a00f32e3774a5d9f4733ee43dd6b9b8f7">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a00f32e3774a5d9f4733ee43dd6b9b8f7&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">~ofEasyCam</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a00f32e3774a5d9f4733ee43dd6b9b8f7_description">
+
+<p>Destroy the camera. </p>
+
+</div>
+
+  </div><div id="ac81e95f6c7e4c7c7de9250708c9a5664">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ac81e95f6c7e4c7c7de9250708c9a5664&quot;)">
+      <span class="type">void </span>
+      <a class="name">begin</a>
+      <span class="args">(ofRectangle viewport=ofGetCurrentViewport())</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ac81e95f6c7e4c7c7de9250708c9a5664_description">
+
+<p>Begins rendering with the camera. </p>
+<p>Example: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="classof_node.html#a69ed7a21f7f8ee435fa6d8a99424e9ba">draw</a>() {</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Begin rendering from the camera&apos;s perspective.</span></div>
+<div class="line">    camera.begin();</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="of_graphics_8cpp.html#acc4b7173caaa9e04c8965782c6925bdc">ofLine</a>(0, 0, <a class="code" href="of_app_runner_8cpp.html#a28bb1c518b5c68ee2eae655bd4e56445">ofGetWidth</a>(), <a class="code" href="of_app_runner_8cpp.html#a415b5eadf885ebd1f4799cc40e5db137">ofGetHeight</a>());</div>
+<div class="line">    <span class="comment">// Additional rendering ...</span></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// End rendering form the camera&apos;s perspective.</span></div>
+<div class="line">    camera.end();</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">viewport</td><td>The camera&apos;s rendering viewport. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classof_camera.html#afb7b6b17c6b13fcb1ec05fbc8b9b407f">ofCamera</a>.</p>
+
+</div>
+
+  </div><div id="a8833ae781975911013b5f6aa3bec32cd">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a8833ae781975911013b5f6aa3bec32cd&quot;)">
+      <span class="type">void </span>
+      <a class="name">reset</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a8833ae781975911013b5f6aa3bec32cd_description">
+
+<p>Reset the camera position and orientation. </p>
+
+</div>
+
+  </div><div id="a16d54adecaba3892262551e5ea8dce25">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a16d54adecaba3892262551e5ea8dce25&quot;)">
+      <span class="type">void </span>
+      <a class="name">setTarget</a>
+      <span class="args">(const ofVec3f &amp;target)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a16d54adecaba3892262551e5ea8dce25_description">
+
+<p>Set the camera&apos;s target. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>The position of the target. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+
+  </div><div id="a322c85a648810e06612b486fc8508155">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a322c85a648810e06612b486fc8508155&quot;)">
+      <span class="type">void </span>
+      <a class="name">setTarget</a>
+      <span class="args">(ofNode &amp;target)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a322c85a648810e06612b486fc8508155_description">
+
+<p>Set the camera&apos;s target. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>The position of the target. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+
+  </div><div id="afbf5951608a33ebd3c5f32b9fd0f2b1d">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#afbf5951608a33ebd3c5f32b9fd0f2b1d&quot;)">
+      <span class="type"><a href="ofNode.html">ofNode</a></span>
+      <a class="name">getTarget</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="afbf5951608a33ebd3c5f32b9fd0f2b1d_description">
+
+<p>Get the camera&apos;s target node reference. </p>
+<dl class="section return"><dt>Returns</dt><dd>a reference the the camera&apos;s target node. </dd></dl>
+
+</div>
+
+  </div><div id="a4e3ba707cdc44c46bd442641d1b0c25a">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a4e3ba707cdc44c46bd442641d1b0c25a&quot;)">
+      <span class="type">void </span>
+      <a class="name">setDistance</a>
+      <span class="args">(float distance)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a4e3ba707cdc44c46bd442641d1b0c25a_description">
+
+<p>Set the camera&apos;s distance to the target. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">distance</td><td>The distance to the target. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+
+  </div><div id="a27eac21ea675b765c599cc3947455efd">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a27eac21ea675b765c599cc3947455efd&quot;)">
+      <span class="type">float </span>
+      <a class="name">getDistance</a>
+      <span class="args">() const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a27eac21ea675b765c599cc3947455efd_description">
+
+<p>Get the distance to the target. </p>
+<dl class="section return"><dt>Returns</dt><dd>the distance to the target. </dd></dl>
+
+</div>
+
+  </div><div id="a3c25cc3a6ca19efd4e06667bcc2586b0">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a3c25cc3a6ca19efd4e06667bcc2586b0&quot;)">
+      <span class="type">void </span>
+      <a class="name">setDrag</a>
+      <span class="args">(float drag)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a3c25cc3a6ca19efd4e06667bcc2586b0_description">
+
+<p>Set the camera&apos;s drag coefficient. </p>
+<p>Drag is affects how quickly the camera starts up and slows down when a user interacts with its position using a pointer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">drag</td><td>The normalized coefficient value between 0 and 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+
+  </div><div id="a160c0400017413385c89bb9084073bff">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a160c0400017413385c89bb9084073bff&quot;)">
+      <span class="type">float </span>
+      <a class="name">getDrag</a>
+      <span class="args">() const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a160c0400017413385c89bb9084073bff_description">
+
+<p>Get the camera&apos;s drag coefficient. </p>
+<dl class="section return"><dt>Returns</dt><dd>the camera&apos;s drag coefficient. </dd></dl>
+
+</div>
+
+  </div><div id="aa4d75c007405c69f76d7fb4a89f931bd">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aa4d75c007405c69f76d7fb4a89f931bd&quot;)">
+      <span class="type">void </span>
+      <a class="name">setTranslationKey</a>
+      <span class="args">(char key)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aa4d75c007405c69f76d7fb4a89f931bd_description">
+
+<p>Set the key used to switch between camera rotation and translation. </p>
+<p>Translation will only happen when the translation key is pressed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key code for the translation key. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000017">Todo:</a></b></dt><dd>char is not the right data type for this. Should be int. </dd></dl>
+
+</div>
+
+  </div><div id="ae9a2019ff4ed6c2f26e0bb799c735b21">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ae9a2019ff4ed6c2f26e0bb799c735b21&quot;)">
+      <span class="type">char </span>
+      <a class="name">getTranslationKey</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ae9a2019ff4ed6c2f26e0bb799c735b21_description">
+
+<p>Get the current translation key code. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current translation key code. </dd></dl>
+
+</div>
+
+  </div><div id="ac267e28e06a92003f6422e0ba707bfae">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ac267e28e06a92003f6422e0ba707bfae&quot;)">
+      <span class="type">void </span>
+      <a class="name">enableMouseInput</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ac267e28e06a92003f6422e0ba707bfae_description">
+
+<p>Enable mouse camera control. </p>
+
+</div>
+
+  </div><div id="a206a55a70de3bc16bd53cc3b6e9d07f0">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a206a55a70de3bc16bd53cc3b6e9d07f0&quot;)">
+      <span class="type">void </span>
+      <a class="name">disableMouseInput</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a206a55a70de3bc16bd53cc3b6e9d07f0_description">
+
+<p>Disable mouse camera control. </p>
+
+</div>
+
+  </div><div id="a47affec73161672979f9ae3e826702d6">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a47affec73161672979f9ae3e826702d6&quot;)">
+      <span class="type">bool </span>
+      <a class="name">getMouseInputEnabled</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a47affec73161672979f9ae3e826702d6_description">
+
+<p>Determine if mouse camera control is enabled. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000018">Todo:</a></b></dt><dd>Rename to isMouseInputEnabled(). <dl class="section return"><dt>Returns</dt><dd>true iff mouse camera control is enabled. </dd></dl>
+</dd></dl>
+
+</div>
+
+  </div><div id="aa42058727e704550d6e23b91e81fe985">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aa42058727e704550d6e23b91e81fe985&quot;)">
+      <span class="type">void </span>
+      <a class="name">enableMouseMiddleButton</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aa42058727e704550d6e23b91e81fe985_description">
+
+<p>Enable the mouse&apos;s middle button for camera control. </p>
+
+</div>
+
+  </div><div id="ae7762c86d87889acd1cdd7c0d3a408cc">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ae7762c86d87889acd1cdd7c0d3a408cc&quot;)">
+      <span class="type">void </span>
+      <a class="name">disableMouseMiddleButton</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ae7762c86d87889acd1cdd7c0d3a408cc_description">
+
+<p>Disable the mouse&apos;s middle button for camera control. </p>
+
+</div>
+
+  </div><div id="ae69406a67c4ceea8ee86767e53c08a44">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ae69406a67c4ceea8ee86767e53c08a44&quot;)">
+      <span class="type">bool </span>
+      <a class="name">getMouseMiddleButtonEnabled</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ae69406a67c4ceea8ee86767e53c08a44_description">
+
+<p>Determine if the middle mouse button is enabled. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000019">Todo:</a></b></dt><dd>Rename to isMouseMiddleButtonEnabled(). <dl class="section return"><dt>Returns</dt><dd>true iff the mouse&apos;s middle button is enabled. </dd></dl>
+</dd></dl>
+
+</div>
+
+  </div><div id="ac7b61a7f125b40d75eb4ab03d05fc0b8">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ac7b61a7f125b40d75eb4ab03d05fc0b8&quot;)">
+      <span class="type">void </span>
+      <a class="name">setAutoDistance</a>
+      <span class="args">(bool bAutoDistance)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ac7b61a7f125b40d75eb4ab03d05fc0b8_description">
+
+<p>Enable or disable camera autodistance. </p>
+<p>Allow the camera to attempt to set the distance based on the camera&apos;s current viewpoirt.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bAutoDistance</td><td>true to enable auto distance. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+
+  </div></div>
+  </div></div>
+      </div>
+    </div>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+<script src="script.js"></script>
+
+</body>
+
+<div id="templates">
+
+  <div id="sectionTemplate">
+    <h3 class="sectionHeader"></h3>
+    <div class="sectionContent"></div>
+  </div>
+
+  <div id="classMethodTemplate">
+    <div class="methodHeader">
+      <span class="type"></span>
+      <a class="name"></a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none"></div>
+
+  </div>
+
+</div>
+
+</html>

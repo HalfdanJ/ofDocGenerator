@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ofSoundPlayer</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheet.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+
+<div class="container">
+    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">sound</a> &gt; <span id="classQuickNav">ofSoundPlayer</span></div>
+    <nav class="navigator" role="navigation">
+      <ul id="nav-parts">
+        <li class="group selected">
+          Topics
+          <ul id="topics">
+            <!--<li class="chapter"><a href="asd">sad</a></li>-->
+          <li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li></ul>
+      </li></ul>
+    </nav>
+    <div class="main">
+      <div class="content">
+        <div class="classHeader">
+          <h1 id="title">ofSoundPlayer</h1>
+        </div>
+        <div class="classDescription"><div class="textblock"><p>Plays sound files. </p>
+<p><a class="el" href="classof_sound_player.html" title="Plays sound files. ">ofSoundPlayer</a> handles simple playback of sound files, with controls for volume, pan, speed, seeking and multiplay. This is a common cross-platform sound player interface which is inherited by each of the platform-specific sound player implementations. </p>
+</div></div>
+        <div class="classMethods"><div id="ProtectedAttributes">
+    <h3 class="sectionHeader">Protected Attributes</h3>
+    <div class="sectionContent"><div id="a0ccb346121a71b309237975a46d33977">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a0ccb346121a71b309237975a46d33977&quot;)">
+      <span class="type"><a href="ofBaseSoundPlayer.html">ofBaseSoundPlayer</a></span>
+      <a class="name">player</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a0ccb346121a71b309237975a46d33977_description">
+
+</div>
+
+  </div></div>
+  </div><div id="PublicFunctions">
+    <h3 class="sectionHeader">Public Functions</h3>
+    <div class="sectionContent"><div id="a19c22b314803390acc76cc0ec8a0dd08">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a19c22b314803390acc76cc0ec8a0dd08&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ofSoundPlayer</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a19c22b314803390acc76cc0ec8a0dd08_description">
+
+</div>
+
+  </div><div id="a730ad8b7a3fbc642d4b3dff1e25fbe68">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a730ad8b7a3fbc642d4b3dff1e25fbe68&quot;)">
+      <span class="type">void </span>
+      <a class="name">setPlayer</a>
+      <span class="args">(shared_ptr&lt; ofBaseSoundPlayer &gt; newPlayer)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a730ad8b7a3fbc642d4b3dff1e25fbe68_description">
+
+</div>
+
+  </div><div id="a0419cae9022ba20f2f09236314f879b2">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a0419cae9022ba20f2f09236314f879b2&quot;)">
+      <span class="type"><a href="ofBaseSoundPlayer.html">ofBaseSoundPlayer</a></span>
+      <a class="name">getPlayer</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a0419cae9022ba20f2f09236314f879b2_description">
+
+</div>
+
+  </div><div id="afaeef912ef8131cf848cfd4822094f00">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#afaeef912ef8131cf848cfd4822094f00&quot;)">
+      <span class="type">bool </span>
+      <a class="name">loadSound</a>
+      <span class="args">(string fileName, bool stream=false)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="afaeef912ef8131cf848cfd4822094f00_description">
+
+<p>Tells the sound player which file to play. </p>
+<p>Codec support varies by platform but wav, aif, and mp3 are safe.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>Path to the sound file, relative to your app&apos;s data folder. </td></tr>
+    <tr><td class="paramname">stream</td><td>set &quot;true&quot; to enable streaming from disk (for large files). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classof_base_sound_player.html#ac338c40f639d72229c425fb1906a7a21">ofBaseSoundPlayer</a>.</p>
+
+</div>
+
+  </div><div id="af34f51c6db954cca3ccf9f0a7f7bdca3">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#af34f51c6db954cca3ccf9f0a7f7bdca3&quot;)">
+      <span class="type">void </span>
+      <a class="name">unloadSound</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="af34f51c6db954cca3ccf9f0a7f7bdca3_description">
+
+<p>Stops and unloads the current sound. </p>
+
+<p>Implements <a class="el" href="classof_base_sound_player.html#a9d4f87a9c835c9521d63677a40cc2378">ofBaseSoundPlayer</a>.</p>
+
+</div>
+
+  </div><div id="a0b33f32cd5330619a7c4d9a812a201bf">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a0b33f32cd5330619a7c4d9a812a201bf&quot;)">
+      <span class="type">void </span>
+      <a class="name">play</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a0b33f32cd5330619a7c4d9a812a201bf_description">
+
+<p>Starts playback. </p>
+
+<p>Implements <a class="el" href="classof_base_sound_player.html#a75724561c5bfd5b36099ae13b4a448ed">ofBaseSoundPlayer</a>.</p>
+
+</div>
+
+  </div><div id="a47cc0ae78fbb5a8b62f9c9d92279932f">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a47cc0ae78fbb5a8b62f9c9d92279932f&quot;)">
+      <span class="type">void </span>
+      <a class="name">stop</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a47cc0ae78fbb5a8b62f9c9d92279932f_description">
+
+<p>Stops playback. </p>
+
+<p>Implements <a class="el" href="classof_base_sound_player.html#a815bdc74ee89a4953eeb55803d220ad5">ofBaseSoundPlayer</a>.</p>
+
+</div>
+
+  </div><div id="acaa80eb92af43c4889a1f2968849dd80">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#acaa80eb92af43c4889a1f2968849dd80&quot;)">
+      <span class="type">void </span>
+      <a class="name">setVolume</a>
+      <span class="args">(float vol)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="acaa80eb92af43c4889a1f2968849dd80_description">
+
+<p>Sets playback volume. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vol</td><td>range is 0 to 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classof_base_sound_player.html#a8dd48f4e7cad15d4df5c2ab572a243af">ofBaseSoundPlayer</a>.</p>
+
+</div>
+
+  </div><div id="a09b4d2544fd2a8996495d86abc6a37b4">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a09b4d2544fd2a8996495d86abc6a37b4&quot;)">
+      <span class="type">void </span>
+      <a class="name">setPan</a>
+      <span class="args">(float pan)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a09b4d2544fd2a8996495d86abc6a37b4_description">
+
+<p>Sets stereo pan. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pan</td><td>range is -1 to 1 (-1 is full left, 1 is full right). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classof_base_sound_player.html#a84e70f38b1ae07380fb2d902f3e21e61">ofBaseSoundPlayer</a>.</p>
+
+</div>
+
+  </div><div id="ae53cf7c7dae0dce98b3b2723d2cfc1cc">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ae53cf7c7dae0dce98b3b2723d2cfc1cc&quot;)">
+      <span class="type">void </span>
+      <a class="name">setSpeed</a>
+      <span class="args">(float speed)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ae53cf7c7dae0dce98b3b2723d2cfc1cc_description">
+
+<p>Sets playback speed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">speed</td><td>set &gt; 1 for faster playback, &lt; 1 for slower playback. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classof_base_sound_player.html#a1b44d5401ee7c0d20fb9d1b9b4d507f9">ofBaseSoundPlayer</a>.</p>
+
+</div>
+
+  </div><div id="acacd7c20575eedd1e76e83690000b531">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#acacd7c20575eedd1e76e83690000b531&quot;)">
+      <span class="type">void </span>
+      <a class="name">setPaused</a>
+      <span class="args">(bool paused)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="acacd7c20575eedd1e76e83690000b531_description">
+
+<p>Enables pause / resume. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paused</td><td>&quot;true&quot; to pause, &quot;false&quot; to resume. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classof_base_sound_player.html#ab3a7af6b4cbb14ecaf12f836d05d7c8b">ofBaseSoundPlayer</a>.</p>
+
+</div>
+
+  </div><div id="aaec50cde0a65da345e27b1f2c3fe71c0">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aaec50cde0a65da345e27b1f2c3fe71c0&quot;)">
+      <span class="type">void </span>
+      <a class="name">setLoop</a>
+      <span class="args">(bool loop)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aaec50cde0a65da345e27b1f2c3fe71c0_description">
+
+<p>Sets whether to loop once the end of the file is reached. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loop</td><td>&quot;true&quot; to loop, default is false. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classof_base_sound_player.html#af99466881ec3c5b0fb9d374d353ff7b1">ofBaseSoundPlayer</a>.</p>
+
+</div>
+
+  </div><div id="a966974fb83e033cb299abead57c9010b">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a966974fb83e033cb299abead57c9010b&quot;)">
+      <span class="type">void </span>
+      <a class="name">setMultiPlay</a>
+      <span class="args">(bool multiplay)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a966974fb83e033cb299abead57c9010b_description">
+
+<p>Enables playing multiple simultaneous copies of the sound. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">multiplay</td><td>&quot;true&quot; to enable, default is false. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classof_base_sound_player.html#a576345622ea19d09d5c4e5e3cf6cb653">ofBaseSoundPlayer</a>.</p>
+
+</div>
+
+  </div><div id="a4603df47fce522ef54b077382d53de9d">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a4603df47fce522ef54b077382d53de9d&quot;)">
+      <span class="type">void </span>
+      <a class="name">setPosition</a>
+      <span class="args">(float percent)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a4603df47fce522ef54b077382d53de9d_description">
+
+<p>Sets position of the playhead within the file (aka &quot;seeking&quot;). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">percent</td><td>range is 0 (beginning of file) to 1 (end of file). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classof_base_sound_player.html#ae302cd3a5f42cef51ea72f950f6a2b10">ofBaseSoundPlayer</a>.</p>
+
+</div>
+
+  </div><div id="ac9971abc1e86caf996fa18688cfe3f23">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ac9971abc1e86caf996fa18688cfe3f23&quot;)">
+      <span class="type">void </span>
+      <a class="name">setPositionMS</a>
+      <span class="args">(int ms)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ac9971abc1e86caf996fa18688cfe3f23_description">
+
+<p>Sets position of the playhead within the file (aka &quot;seeking&quot;). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ms</td><td>number of milliseconds from the start of the file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classof_base_sound_player.html#a39d353e9765a15e18916d2cba4477cf8">ofBaseSoundPlayer</a>.</p>
+
+</div>
+
+  </div><div id="a030e9784d82c0e5e100f88c3c24a4209">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a030e9784d82c0e5e100f88c3c24a4209&quot;)">
+      <span class="type">int </span>
+      <a class="name">getPositionMS</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a030e9784d82c0e5e100f88c3c24a4209_description">
+
+<p>Gets position of the playhead. </p>
+<dl class="section return"><dt>Returns</dt><dd>playhead position in milliseconds. </dd></dl>
+
+<p>Implements <a class="el" href="classof_base_sound_player.html#a03deb9c7833a9e765e885c68214559b5">ofBaseSoundPlayer</a>.</p>
+
+</div>
+
+  </div><div id="ab323f725c722b7c858e5fb2cd26d054e">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ab323f725c722b7c858e5fb2cd26d054e&quot;)">
+      <span class="type">float </span>
+      <a class="name">getPosition</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ab323f725c722b7c858e5fb2cd26d054e_description">
+
+<p>Gets position of the playhead. </p>
+<dl class="section return"><dt>Returns</dt><dd>playhead position as a float between 0 and 1. </dd></dl>
+
+<p>Implements <a class="el" href="classof_base_sound_player.html#aa397af6f05c4451866bd343692c1aa33">ofBaseSoundPlayer</a>.</p>
+
+</div>
+
+  </div><div id="a5b6d6347a3a94823f64df7c34da29fcb">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a5b6d6347a3a94823f64df7c34da29fcb&quot;)">
+      <span class="type">bool </span>
+      <a class="name">getIsPlaying</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a5b6d6347a3a94823f64df7c34da29fcb_description">
+
+<p>Gets current playback state. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the player is currently playing a file. </dd></dl>
+
+<p>Implements <a class="el" href="classof_base_sound_player.html#aa3445838a28c7622edecb778f7400bd6">ofBaseSoundPlayer</a>.</p>
+
+</div>
+
+  </div><div id="a7ce70d482070ef585016d4a47b016a04">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a7ce70d482070ef585016d4a47b016a04&quot;)">
+      <span class="type">float </span>
+      <a class="name">getSpeed</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a7ce70d482070ef585016d4a47b016a04_description">
+
+<p>Gets playback speed. </p>
+<dl class="section return"><dt>Returns</dt><dd>playback speed (see <a class="el" href="classof_sound_player.html#ae53cf7c7dae0dce98b3b2723d2cfc1cc" title="Sets playback speed. ">ofSoundPlayer::setSpeed()</a>). </dd></dl>
+
+<p>Implements <a class="el" href="classof_base_sound_player.html#ac81d07b18bde46e618ca026e088b1e19">ofBaseSoundPlayer</a>.</p>
+
+</div>
+
+  </div><div id="a45fae5c6233c598671bbce9ecac9e017">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a45fae5c6233c598671bbce9ecac9e017&quot;)">
+      <span class="type">float </span>
+      <a class="name">getPan</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a45fae5c6233c598671bbce9ecac9e017_description">
+
+<p>Gets stereo pan. </p>
+<dl class="section return"><dt>Returns</dt><dd>stereo pan in the range -1 to 1. </dd></dl>
+
+<p>Implements <a class="el" href="classof_base_sound_player.html#ab17c0b5c5684ce988eb1f52259477aae">ofBaseSoundPlayer</a>.</p>
+
+</div>
+
+  </div><div id="a75236eacf64de363550781b979d728c7">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a75236eacf64de363550781b979d728c7&quot;)">
+      <span class="type">float </span>
+      <a class="name">getVolume</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a75236eacf64de363550781b979d728c7_description">
+
+<p>Gets current volume. </p>
+<dl class="section return"><dt>Returns</dt><dd>current volume in the range 0 to 1. </dd></dl>
+
+<p>Implements <a class="el" href="classof_base_sound_player.html#aca6bacfc7d14de5c2d02ba47c8a39922">ofBaseSoundPlayer</a>.</p>
+
+</div>
+
+  </div><div id="a517b9a3efc4dc076359d4a5187649343">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a517b9a3efc4dc076359d4a5187649343&quot;)">
+      <span class="type">bool </span>
+      <a class="name">isLoaded</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a517b9a3efc4dc076359d4a5187649343_description">
+
+<p>Queries the player to see if its file was loaded successfully. </p>
+<dl class="section return"><dt>Returns</dt><dd>whether or not the player is ready to begin playback. </dd></dl>
+
+<p>Implements <a class="el" href="classof_base_sound_player.html#a130cd77db54b76836c7b8da709c03bc8">ofBaseSoundPlayer</a>.</p>
+
+</div>
+
+  </div></div>
+  </div></div>
+      </div>
+    </div>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+<script src="script.js"></script>
+
+</body>
+
+<div id="templates">
+
+  <div id="sectionTemplate">
+    <h3 class="sectionHeader"></h3>
+    <div class="sectionContent"></div>
+  </div>
+
+  <div id="classMethodTemplate">
+    <div class="methodHeader">
+      <span class="type"></span>
+      <a class="name"></a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none"></div>
+
+  </div>
+
+</div>
+
+</html>

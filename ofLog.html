@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ofLog</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheet.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+
+<div class="container">
+    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">utils</a> &gt; <span id="classQuickNav">ofLog</span></div>
+    <nav class="navigator" role="navigation">
+      <ul id="nav-parts">
+        <li class="group selected">
+          Topics
+          <ul id="topics">
+            <!--<li class="chapter"><a href="asd">sad</a></li>-->
+          <li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#ProtectedStaticAttributes">Protected Static Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#PublicStaticFunctions">Public Static Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li></ul>
+      </li></ul>
+    </nav>
+    <div class="main">
+      <div class="content">
+        <div class="classHeader">
+          <h1 id="title">ofLog</h1>
+        </div>
+        <div class="classDescription"><div class="textblock"><p>a streaming log interface </p>
+<p><a class="el" href="classof_log.html" title="a streaming log interface ">ofLog</a> accepts variables via the ostream operator &lt;&lt; and builds a string and logs it when the stream is finished (via the destructor). A newline is printed automatically and all the stream controls (endl, flush, hex, etc) work normally. The log level is explicitly OF_LOG_NOTICE unless set, see the derived wrapper classes:</p>
+<p>Usage: <a class="el" href="classof_log.html#a11a926adbe4ef4bfbee393345f5df1cc" title="log at notice level ">ofLog()</a> &lt;&lt; &quot;a string&quot; &lt;&lt; 100 &lt;&lt; 20.234f;</p>
+<p>It also accepts the legacy <a class="el" href="classof_log.html" title="a streaming log interface ">ofLog</a> interface: <a class="el" href="classof_log.html" title="a streaming log interface ">ofLog(ofLogLevel level, string message)</a>:</p>
+<p>Usage: <a class="el" href="classof_log.html" title="a streaming log interface ">ofLog</a>(OF_LOG_ERROR, &quot;another string&quot;);</p>
+<p>class idea from: <a href="http://www.gamedev.net/community/forums/topic.asp?topic_id=525405&amp;whichpage=1&#xFFFD;">http://www.gamedev.net/community/forums/topic.asp?topic_id=525405&amp;whichpage=1&amp;#3406418</a> how to catch std::endl (which is actually a func pointer): <a href="http://yvan.seth.id.au/Entries/Technology/Code/std__endl.html">http://yvan.seth.id.au/Entries/Technology/Code/std__endl.html</a></p>
+<dl class="section author"><dt>Author</dt><dd>Dan Wilcox <a href="#" onclick="location.href=&apos;mai&apos;+&apos;lto:&apos;+&apos;dan&apos;+&apos;om&apos;+&apos;ati&apos;+&apos;ka&apos;+&apos;@gm&apos;+&apos;ai&apos;+&apos;l.c&apos;+&apos;om&apos;; return false;">danom<span style="display: none;">.nosp@m.</span>atik<span style="display: none;">.nosp@m.</span>a@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a> danomatika.com </dd></dl>
+</div></div>
+        <div class="classMethods"><div id="ProtectedAttributes">
+    <h3 class="sectionHeader">Protected Attributes</h3>
+    <div class="sectionContent"><div id="ae6e5efb037f89eec86c478c7501b7f11">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ae6e5efb037f89eec86c478c7501b7f11&quot;)">
+      <span class="type"><a href="ofLog.html#1a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a></span>
+      <a class="name">level</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ae6e5efb037f89eec86c478c7501b7f11_description">
+
+<p>log level </p>
+
+</div>
+
+  </div><div id="adfeb1385b39fad45477eb0bc1f70fdb4">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#adfeb1385b39fad45477eb0bc1f70fdb4&quot;)">
+      <span class="type">bool </span>
+      <a class="name">bPrinted</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="adfeb1385b39fad45477eb0bc1f70fdb4_description">
+
+<p>has the msg been printed in the constructor? </p>
+
+</div>
+
+  </div><div id="aa1f61b048422566b8bdd9c50f5a05f44">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aa1f61b048422566b8bdd9c50f5a05f44&quot;)">
+      <span class="type">string </span>
+      <a class="name">module</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aa1f61b048422566b8bdd9c50f5a05f44_description">
+
+<p>the destination module for this message </p>
+
+</div>
+
+  </div></div>
+  </div><div id="ProtectedStaticAttributes">
+    <h3 class="sectionHeader">Protected Static Attributes</h3>
+    <div class="sectionContent"><div id="a3466c00f03aa33dc7f7388a382f6211d">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a3466c00f03aa33dc7f7388a382f6211d&quot;)">
+      <span class="type"><a href="ofBaseLoggerChannel.html">ofBaseLoggerChannel</a></span>
+      <a class="name">channel</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a3466c00f03aa33dc7f7388a382f6211d_description">
+
+<p>the message destination </p>
+
+</div>
+
+  </div></div>
+  </div><div id="PublicFunctions">
+    <h3 class="sectionHeader">Public Functions</h3>
+    <div class="sectionContent"><div id="a11a926adbe4ef4bfbee393345f5df1cc">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a11a926adbe4ef4bfbee393345f5df1cc&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ofLog</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a11a926adbe4ef4bfbee393345f5df1cc_description">
+
+<p>log at notice level </p>
+
+</div>
+
+  </div><div id="a8df66599c4ab1c9d0ebdb379871da3f0">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a8df66599c4ab1c9d0ebdb379871da3f0&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ofLog</a>
+      <span class="args">(ofLogLevel level)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a8df66599c4ab1c9d0ebdb379871da3f0_description">
+
+<p>set the log level </p>
+
+</div>
+
+  </div><div id="a23271f8fa71758dc7b81b695d36a8df9">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a23271f8fa71758dc7b81b695d36a8df9&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ofLog</a>
+      <span class="args">(ofLogLevel level, const string &amp;message)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a23271f8fa71758dc7b81b695d36a8df9_description">
+
+<p>the legacy <a class="el" href="classof_log.html" title="a streaming log interface ">ofLog</a> interfaces </p>
+
+</div>
+
+  </div><div id="adedf88362f6c9a49141a50d26c8e6716">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#adedf88362f6c9a49141a50d26c8e6716&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ofLog</a>
+      <span class="args">(ofLogLevel level, const char *format,...) OF_PRINTF_ATTR(3</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="adedf88362f6c9a49141a50d26c8e6716_description">
+
+</div>
+
+  </div><div id="a8b9d6e1110e97f1c70c6c0f1c1997db1">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a8b9d6e1110e97f1c70c6c0f1c1997db1&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">~ofLog</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a8b9d6e1110e97f1c70c6c0f1c1997db1_description">
+
+<p>does the actual printing when the ostream is done </p>
+
+</div>
+
+  </div><div id="a2f19640fb8269ff470f9941eca0d39b2">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a2f19640fb8269ff470f9941eca0d39b2&quot;)">
+      <span class="type"><a href="ofLog.html">ofLog</a></span>
+      <a class="name">operator&lt;&lt;</a>
+      <span class="args">(const T &amp;value)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a2f19640fb8269ff470f9941eca0d39b2_description">
+
+<p>catch the &lt;&lt; ostream with a template class to read any type of data </p>
+
+</div>
+
+  </div><div id="a10502cf2a6a2ad636e5f1c4058bd037f">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a10502cf2a6a2ad636e5f1c4058bd037f&quot;)">
+      <span class="type"><a href="ofLog.html">ofLog</a></span>
+      <a class="name">operator&lt;&lt;</a>
+      <span class="args">(std::ostream &amp;(*func)(std::ostream &amp;))</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a10502cf2a6a2ad636e5f1c4058bd037f_description">
+
+<p>catch the &lt;&lt; ostream function pointers such as std::endl and std::hex </p>
+
+</div>
+
+  </div></div>
+  </div><div id="PublicStaticFunctions">
+    <h3 class="sectionHeader">Public Static Functions</h3>
+    <div class="sectionContent"><div id="acd753685ca548b145fd33301abe63433">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#acd753685ca548b145fd33301abe63433&quot;)">
+      <span class="type">void </span>
+      <a class="name">setAutoSpace</a>
+      <span class="args">(bool autoSpace)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="acd753685ca548b145fd33301abe63433_description">
+
+<p>put a space between stream operator calls? </p>
+
+</div>
+
+  </div><div id="a25da93787b658473a679ba3096407270">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a25da93787b658473a679ba3096407270&quot;)">
+      <span class="type">void </span>
+      <a class="name">setChannel</a>
+      <span class="args">(shared_ptr&lt; ofBaseLoggerChannel &gt; channel)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a25da93787b658473a679ba3096407270_description">
+
+<p>set the logging channel destinations for messages </p>
+
+</div>
+
+  </div></div>
+  </div><div id="ProtectedFunctions">
+    <h3 class="sectionHeader">Protected Functions</h3>
+    <div class="sectionContent"><div id="a1d4ece9af238988b484420a2422c69e9">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a1d4ece9af238988b484420a2422c69e9&quot;)">
+      <span class="type">void </span>
+      <a class="name">_log</a>
+      <span class="args">(ofLogLevel level, const string &amp;module, const string &amp;message)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a1d4ece9af238988b484420a2422c69e9_description">
+
+<p>print a log line </p>
+
+</div>
+
+  </div><div id="a3288e9556cd90f363a1575ef3ec2ed0d">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a3288e9556cd90f363a1575ef3ec2ed0d&quot;)">
+      <span class="type">bool </span>
+      <a class="name">checkLog</a>
+      <span class="args">(ofLogLevel level, const string &amp;module)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a3288e9556cd90f363a1575ef3ec2ed0d_description">
+
+</div>
+
+  </div></div>
+  </div></div>
+      </div>
+    </div>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+<script src="script.js"></script>
+
+</body>
+
+<div id="templates">
+
+  <div id="sectionTemplate">
+    <h3 class="sectionHeader"></h3>
+    <div class="sectionContent"></div>
+  </div>
+
+  <div id="classMethodTemplate">
+    <div class="methodHeader">
+      <span class="type"></span>
+      <a class="name"></a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none"></div>
+
+  </div>
+
+</div>
+
+</html>

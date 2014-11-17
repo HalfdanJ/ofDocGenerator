@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ofMath.h</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheet.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+
+<div class="container">
+    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">math</a> &gt; <span id="classQuickNav">ofMath.h</span></div>
+    <nav class="navigator" role="navigation">
+      <ul id="nav-parts">
+        <li class="group selected">
+          Topics
+          <ul id="topics">
+            <!--<li class="chapter"><a href="asd">sad</a></li>-->
+          <li class="chapter"><a href="#Functions">Functions</a></li></ul>
+      </li></ul>
+    </nav>
+    <div class="main">
+      <div class="content">
+        <div class="classHeader">
+          <h1 id="title">ofMath.h</h1>
+        </div>
+        <div class="classDescription"></div>
+        <div class="classMethods"><div id="Functions">
+    <h3 class="sectionHeader">Functions</h3>
+    <div class="sectionContent"><div id="a0e50654e98b730299945741b53853421">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a0e50654e98b730299945741b53853421&quot;)">
+      <span class="type">int </span>
+      <a class="name">ofNextPow2</a>
+      <span class="args">(int a)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a0e50654e98b730299945741b53853421_description">
+
+<p>Calculates the next larger power of 2. </p>
+<p>If the input is already a power of 2, it will return itself. Example:</p>
+<p>ofNextPow2(50); // returns 64 ofNextPow2(64); // returns 64 ofNextPow(401)); // returns 512</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value.</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>value^2. </dd></dl>
+
+</div>
+
+  </div><div id="a0df526ceae8b4f80f169d6d3918540e5">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a0df526ceae8b4f80f169d6d3918540e5&quot;)">
+      <span class="type">void </span>
+      <a class="name">ofSeedRandom</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a0df526ceae8b4f80f169d6d3918540e5_description">
+
+<p>Randomly seeds the random number generator. </p>
+<p>This seeds the random number generator with an acceptably random value, generated from clock time and the PID. </p>
+
+</div>
+
+  </div><div id="a54f5c56b8cfc33bbc059aeb147d4bbef">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a54f5c56b8cfc33bbc059aeb147d4bbef&quot;)">
+      <span class="type">void </span>
+      <a class="name">ofSeedRandom</a>
+      <span class="args">(int val)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a54f5c56b8cfc33bbc059aeb147d4bbef_description">
+
+<p>Seeds the random number generator with a value for consistent randomness. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>The value with which to seed the generator. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+
+  </div><div id="ae93bfe2a2080f0e2a03df835e72c7521">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ae93bfe2a2080f0e2a03df835e72c7521&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofRandom</a>
+      <span class="args">(float max)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ae93bfe2a2080f0e2a03df835e72c7521_description">
+
+<p>Returns a random floating point number between 0 and max. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">float</td><td>The maximum value of the random number. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+
+  </div><div id="a4f89011a70f981bab979cc82b9713f85">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a4f89011a70f981bab979cc82b9713f85&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofRandom</a>
+      <span class="args">(float val0, float val1)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a4f89011a70f981bab979cc82b9713f85_description">
+
+<p>returns a random number between two values. </p>
+<p>Example:</p>
+<p>// Return a random floating point number between -30 and 20. ofRandom(-30, 20);</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val0</td><td>the minimum value of the random number. </td></tr>
+    <tr><td class="paramname">val1</td><td>The maximum value of the random number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A random floating point number between val0 and val1. </dd></dl>
+
+</div>
+
+  </div><div id="aea7a1685224b49b4949899d4b283af51">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aea7a1685224b49b4949899d4b283af51&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofRandomf</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aea7a1685224b49b4949899d4b283af51_description">
+<dl class="section return"><dt>Returns</dt><dd>A random floating point number between -1 and 1. </dd></dl>
+
+</div>
+
+  </div><div id="ab701838d1aa2e4ad8f04bad401c21a0a">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ab701838d1aa2e4ad8f04bad401c21a0a&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofRandomuf</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ab701838d1aa2e4ad8f04bad401c21a0a_description">
+
+<p>a random floating point number between 0 and 1. </p>
+
+</div>
+
+  </div><div id="aeda138c0500e2d10b0763e4c1ac1cc53">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aeda138c0500e2d10b0763e4c1ac1cc53&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofNormalize</a>
+      <span class="args">(float value, float min, float max)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aeda138c0500e2d10b0763e4c1ac1cc53_description">
+
+<p>Given a value and a range, remap the value to be within 0 and 1. </p>
+<p>Often, you&apos;ll need to work with percentages or other methods that expect a value between 0 and 1. This function will take a minimum and maximum, and then finds where within that range a value sits. If the value is outside the range, it will be mapped to 0 or 1.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The number to be normalized. </td></tr>
+    <tr><td class="paramname">min</td><td>The floor of the range. </td></tr>
+    <tr><td class="paramname">max</td><td>The ceiling of the range. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A float between 0 and 1. </dd></dl>
+
+</div>
+
+  </div><div id="aed7db854914e53ba53ded1f9a4ff47da">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aed7db854914e53ba53ded1f9a4ff47da&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofMap</a>
+      <span class="args">(float value, float inputMin, float inputMax, float outputMin, float outputMax, bool clamp=false)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aed7db854914e53ba53ded1f9a4ff47da_description">
+
+<p>Given a value and an input range, remap the value to be within an output range. </p>
+<p>ofMap remaps the value passed in &quot;value&quot;, calculating it&apos;s linear distance between inputMin and inputMax, and remapping it based on that percentage to outputMin and outputMax. You can choose to clamp the results, which will constrain the results between outputMin and outputMax. Results are not clamped by default.</p>
+<p>Example: </p><pre class="fragment">float x, newx;
+x = 5;
+// 0 &lt; x &lt; 10
+newx = ofMap(x, 0, 10, 21, 22); // newx = 21.5 a value between 21 and 22
+</pre><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The number to be mapped. </td></tr>
+    <tr><td class="paramname">inputMin</td><td>The floor of the input range. </td></tr>
+    <tr><td class="paramname">inputMax</td><td>The ceiling of the input range. </td></tr>
+    <tr><td class="paramname">outputMin</td><td>The floor of the output range. </td></tr>
+    <tr><td class="paramname">outputMax</td><td>The ceiling of the output range. </td></tr>
+    <tr><td class="paramname">clamp</td><td>true iff the value should be clamped between outputMin and outputMax. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a float, mapped between outputMin and outputMax. </dd></dl>
+
+</div>
+
+  </div><div id="a4b2fc21e53bfb8521923300b0d30afdb">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a4b2fc21e53bfb8521923300b0d30afdb&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofClamp</a>
+      <span class="args">(float value, float min, float max)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a4b2fc21e53bfb8521923300b0d30afdb_description">
+
+<p>Clamp a value between min and max. </p>
+<p>Restricts a value to be within a specified range defined by values min and max. If the value is min &lt;= value &lt;= max, returns value. If the value is greater than max, return max; if the value is less than min, return min. </p><pre class="fragment">float val, newval;
+val = 10;
+newval = ofClamp(val,30,40); // newval = 30
+newval = ofClamp(val,0,5); // newval = 5
+newval = ofClamp(val,0,20); // newval = 10
+</pre><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The number to be clamped. </td></tr>
+    <tr><td class="paramname">min</td><td>The floor of the range. </td></tr>
+    <tr><td class="paramname">max</td><td>The ceiling of the range. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A float between min and max. </dd></dl>
+
+</div>
+
+  </div><div id="a851eb0ea11c2bfe151665de8e3c66561">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a851eb0ea11c2bfe151665de8e3c66561&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofLerp</a>
+      <span class="args">(float start, float stop, float amt)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a851eb0ea11c2bfe151665de8e3c66561_description">
+
+<p>Linearly interpolate a value be within a range. </p>
+<p>Calculates a number between two numbers (start,stop) at a specific increment (amt). If we want the new number to be between start and stop numbers, amt needs to be a number between 0 and 1. <a class="el" href="of_math_8h.html#a851eb0ea11c2bfe151665de8e3c66561" title="Linearly interpolate a value be within a range. ">ofLerp()</a> does not clamp the values. </p><pre class="fragment">float init = 1;
+float end = 2;
+float increment = 0.2;
+float result = ofLerp(init, end, increment); // result = 1.2
+// Values outside 0...1 work as well.
+increment = 2;
+result = ofLerp(init, end, increment); // result = 3
+</pre><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>The floor of the range. </td></tr>
+    <tr><td class="paramname">stop</td><td>The ceiling of the range. </td></tr>
+    <tr><td class="paramname">amt</td><td>The position within the range to return. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A float between start and stop. </dd></dl>
+
+</div>
+
+  </div><div id="aa866e5d80a66299e18b89bf9f879b3f5">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aa866e5d80a66299e18b89bf9f879b3f5&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofDist</a>
+      <span class="args">(float x1, float y1, float x2, float y2)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aa866e5d80a66299e18b89bf9f879b3f5_description">
+
+<p>Calculates the distance between two points. </p>
+<p>Uses <a href="http://en.wikipedia.org/wiki/Pythagorean_theorem">http://en.wikipedia.org/wiki/Pythagorean_theorem</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x1</td><td>X position of first point. </td></tr>
+    <tr><td class="paramname">y1</td><td>Y position of first point. </td></tr>
+    <tr><td class="paramname">x2</td><td>X position of second point. </td></tr>
+    <tr><td class="paramname">y2</td><td>Y position of second point. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>float Distance between points. </dd></dl>
+
+</div>
+
+  </div><div id="acca6b68f9a67cbc302866c6b60f55899">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#acca6b68f9a67cbc302866c6b60f55899&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofDistSquared</a>
+      <span class="args">(float x1, float y1, float x2, float y2)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="acca6b68f9a67cbc302866c6b60f55899_description">
+
+<p>Calculates the distance between two points, without taking the square root of the result. </p>
+<p>Same as ofMath::ofDist() but doesn&apos;t take the sqrt() of the result, which is a faster operation if you need to calculate and compare multiple distances.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x1</td><td>X position of first point. </td></tr>
+    <tr><td class="paramname">y1</td><td>Y position of first point. </td></tr>
+    <tr><td class="paramname">x2</td><td>X position of second point. </td></tr>
+    <tr><td class="paramname">y2</td><td>Y position of second point. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>distance^2 between two points. </dd></dl>
+
+</div>
+
+  </div><div id="a7f39494418fc89efee2378ec2ac989f8">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a7f39494418fc89efee2378ec2ac989f8&quot;)">
+      <span class="type">int </span>
+      <a class="name">ofSign</a>
+      <span class="args">(float n)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a7f39494418fc89efee2378ec2ac989f8_description">
+
+<p>Returns the sign of a number. </p>
+<dl class="section return"><dt>Returns</dt><dd>int -1 if n is negative, 1 if n is positive, and 0 is n == 0; </dd></dl>
+
+</div>
+
+  </div><div id="aa078cdd83eb6d3dd355897e7f15a2f33">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aa078cdd83eb6d3dd355897e7f15a2f33&quot;)">
+      <span class="type">bool </span>
+      <a class="name">ofInRange</a>
+      <span class="args">(float t, float min, float max)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aa078cdd83eb6d3dd355897e7f15a2f33_description">
+
+<p>Determines if a number is inside of a given range. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>The value to test. </td></tr>
+    <tr><td class="paramname">min</td><td>The floor of the range. </td></tr>
+    <tr><td class="paramname">max</td><td>The ceiling of the range. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true iff the number t is the range of [min - max]. </dd></dl>
+
+</div>
+
+  </div><div id="a7d02e72641780bca037f6c63f7b6e508">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a7d02e72641780bca037f6c63f7b6e508&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofRadToDeg</a>
+      <span class="args">(float radians)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a7d02e72641780bca037f6c63f7b6e508_description">
+
+<p>Convert radians to degrees. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radians</td><td>An angle in radians. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the angle in degrees. </dd></dl>
+
+</div>
+
+  </div><div id="a70a120b33471d10ce0e755ee43c32b25">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a70a120b33471d10ce0e755ee43c32b25&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofDegToRad</a>
+      <span class="args">(float degrees)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a70a120b33471d10ce0e755ee43c32b25_description">
+
+<p>Convert degrees to radians. </p>
+<p>Example: </p><pre class="fragment">float result = ofDegToRad(90); // result will be PI/2
+</pre><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">degrees</td><td>An angle in degrees. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the angle in radians. </dd></dl>
+
+</div>
+
+  </div><div id="a3b9d058406f6fc2c2dc378057e789a60">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a3b9d058406f6fc2c2dc378057e789a60&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofLerpDegrees</a>
+      <span class="args">(float currentAngle, float targetAngle, float pct)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a3b9d058406f6fc2c2dc378057e789a60_description">
+
+<p>Linearly interpolate a value between two angles in degrees. </p>
+<p>Calculates a number between two numbers (start, stop) at a specific increment (amt). This does constrain the result into a single rotation, but does not clamp the values</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currentAngle</td><td>The floor of the range in degrees. </td></tr>
+    <tr><td class="paramname">targetAngle</td><td>The ceiling of the range in degrees. </td></tr>
+    <tr><td class="paramname">pct</td><td>An amount between 0.0..1.0 within the range to return. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An angle in degrees between currentAngle and targetAngle. </dd></dl>
+
+</div>
+
+  </div><div id="ae1f8c65595c036c675cc390c2d90d166">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ae1f8c65595c036c675cc390c2d90d166&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofLerpRadians</a>
+      <span class="args">(float currentAngle, float targetAngle, float pct)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ae1f8c65595c036c675cc390c2d90d166_description">
+
+<p>Linearly interpolate a value between two angles in radians. </p>
+<p>Calculates a number between two numbers (start, stop) at a specific increment (amt). This does constrain the result into a single rotation, but does not clamp the values</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currentAngle</td><td>The floor of the range in radians. </td></tr>
+    <tr><td class="paramname">targetAngle</td><td>The ceiling of the range in radians. </td></tr>
+    <tr><td class="paramname">pct</td><td>An amount between 0.0..1.0 within the range to return. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An angle in radians between currentAngle and targetAngle. </dd></dl>
+
+</div>
+
+  </div><div id="a9187e3d0572b394eb8f341ec88b575f4">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a9187e3d0572b394eb8f341ec88b575f4&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofAngleDifferenceDegrees</a>
+      <span class="args">(float currentAngle, float targetAngle)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a9187e3d0572b394eb8f341ec88b575f4_description">
+
+<p>Calculates the difference between two angles in degrees. </p>
+<p>This will calculate the actual difference, taking into account multiple revolutions. For example: </p><pre class="fragment">ofAngleDifferenceDegrees(0,90); // returns 90;
+ofAngleDifferenceDegrees(0,450); // also returns 90;
+</pre><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currentAngle</td><td>The current angle in degrees. </td></tr>
+    <tr><td class="paramname">targetAngle</td><td>the angle to be compared to in degrees. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The difference between two angles in degrees. </dd></dl>
+
+</div>
+
+  </div><div id="a10ed9288cb91336033e7c3eeb159f604">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a10ed9288cb91336033e7c3eeb159f604&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofAngleDifferenceRadians</a>
+      <span class="args">(float currentAngle, float targetAngle)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a10ed9288cb91336033e7c3eeb159f604_description">
+
+<p>Calculates the difference between two angles in radians. </p>
+<p>This will calculate the actual difference, taking into account multiple revolutions. For example: </p><pre class="fragment">ofAngleDifferenceRadians(0,PI); // returns -PI;
+ofAngleDifferenceRadians(0,3*PI); // also returns -PI;
+</pre><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currentAngle</td><td>The current angle in radians. </td></tr>
+    <tr><td class="paramname">targetAngle</td><td>the angle to be compared to in radians. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The difference between two angles in radians. </dd></dl>
+
+</div>
+
+  </div><div id="a11cf9bc2b855744f58aa7f2f174eb657">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a11cf9bc2b855744f58aa7f2f174eb657&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofWrap</a>
+      <span class="args">(float value, float from, float to)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a11cf9bc2b855744f58aa7f2f174eb657_description">
+
+<p>Find a value within a given range, wrapping the value if it overflows. </p>
+<p>If a value is between from and to, return that value. If a value is NOT within that range, wrap it.</p>
+<p>For example: </p><pre class="fragment">ofWrap(5,0,10); // returns 5;
+ofWrap(15,0,10); // also returns 5;
+ofWrap(-5,0,10); // also returns 5;
+</pre><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to map. </td></tr>
+    <tr><td class="paramname">from</td><td>The floor of the range. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>to The ceiling of the range. </dd></dl>
+
+</div>
+
+  </div><div id="a34be4c1bb0fedb406eb7dcfd7cf743bc">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a34be4c1bb0fedb406eb7dcfd7cf743bc&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofWrapRadians</a>
+      <span class="args">(float angle, float from=-PI, float to=+PI)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a34be4c1bb0fedb406eb7dcfd7cf743bc_description">
+
+</div>
+
+  </div><div id="a33e3f2421ab89bc4ee00a0f67d09aa0a">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a33e3f2421ab89bc4ee00a0f67d09aa0a&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofWrapDegrees</a>
+      <span class="args">(float angle, float from=-180, float to=+180)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a33e3f2421ab89bc4ee00a0f67d09aa0a_description">
+
+</div>
+
+  </div><div id="a9a9226ad2046591bf4aa5d2707ebba2f">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a9a9226ad2046591bf4aa5d2707ebba2f&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofRandomWidth</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a9a9226ad2046591bf4aa5d2707ebba2f_description">
+<dl class="section return"><dt>Returns</dt><dd>a random number between 0 and the width of the window. </dd></dl>
+
+</div>
+
+  </div><div id="ac0e9ce331e6b98373845f16e778548df">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ac0e9ce331e6b98373845f16e778548df&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofRandomHeight</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ac0e9ce331e6b98373845f16e778548df_description">
+<dl class="section return"><dt>Returns</dt><dd>a random number between 0 and the height of the window. </dd></dl>
+
+</div>
+
+  </div><div id="a94cb5392d5d0a5ed7908c5fd31ae97d2">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a94cb5392d5d0a5ed7908c5fd31ae97d2&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofNoise</a>
+      <span class="args">(float x)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a94cb5392d5d0a5ed7908c5fd31ae97d2_description">
+
+<p>Calculates a one dimensional Perlin noise value between 0.0...1.0. </p>
+
+</div>
+
+  </div><div id="a21b4f1d491303ad4a36d892a2ab4f4be">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a21b4f1d491303ad4a36d892a2ab4f4be&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofNoise</a>
+      <span class="args">(float x, float y)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a21b4f1d491303ad4a36d892a2ab4f4be_description">
+
+<p>Calculates a two dimensional Perlin noise value between 0.0...1.0. </p>
+
+</div>
+
+  </div><div id="a9e780ac96e9ca3fc409b2e17b85c9e61">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a9e780ac96e9ca3fc409b2e17b85c9e61&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofNoise</a>
+      <span class="args">(float x, float y, float z)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a9e780ac96e9ca3fc409b2e17b85c9e61_description">
+
+<p>Calculates a three dimensional Perlin noise value between 0.0...1.0. </p>
+
+</div>
+
+  </div><div id="ac27bf743a5ae09ec44fbf95969f031ab">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ac27bf743a5ae09ec44fbf95969f031ab&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofNoise</a>
+      <span class="args">(float x, float y, float z, float w)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ac27bf743a5ae09ec44fbf95969f031ab_description">
+
+<p>Calculates a four dimensional Perlin noise value between 0.0...1.0. </p>
+
+</div>
+
+  </div><div id="a16196baebc57f663f27f9aff40c518e3">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a16196baebc57f663f27f9aff40c518e3&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofSignedNoise</a>
+      <span class="args">(float x)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a16196baebc57f663f27f9aff40c518e3_description">
+
+<p>Calculates a one dimensional Perlin noise value between -1.0...1.0. </p>
+
+</div>
+
+  </div><div id="a7850c901fdde189ca52645017fa55c4b">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a7850c901fdde189ca52645017fa55c4b&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofSignedNoise</a>
+      <span class="args">(float x, float y)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a7850c901fdde189ca52645017fa55c4b_description">
+
+<p>Calculates a two dimensional Perlin noise value between -1.0...1.0. </p>
+
+</div>
+
+  </div><div id="a95e125e2fb6e73c3fcda31baebef2c69">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a95e125e2fb6e73c3fcda31baebef2c69&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofSignedNoise</a>
+      <span class="args">(float x, float y, float z)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a95e125e2fb6e73c3fcda31baebef2c69_description">
+
+<p>Calculates a three dimensional Perlin noise value between -1.0...1.0. </p>
+
+</div>
+
+  </div><div id="a29682c90a71c5931f30e855b35014b4c">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a29682c90a71c5931f30e855b35014b4c&quot;)">
+      <span class="type">float </span>
+      <a class="name">ofSignedNoise</a>
+      <span class="args">(float x, float y, float z, float w)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a29682c90a71c5931f30e855b35014b4c_description">
+
+<p>Calculates a four dimensional Perlin noise value between -1.0...1.0. </p>
+
+</div>
+
+  </div><div id="ade445c844b18f82fdf311268eec5400c">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ade445c844b18f82fdf311268eec5400c&quot;)">
+      <span class="type">bool </span>
+      <a class="name">ofInsidePoly</a>
+      <span class="args">(float x, float y, const vector&lt; ofPoint &gt; &amp;poly)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ade445c844b18f82fdf311268eec5400c_description">
+
+<p>Determine if an (x,y) coordinate is within the polygon defined by a vector of ofPoints. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The x dimension of the coordinate. </td></tr>
+    <tr><td class="paramname">y</td><td>The y dimension of the coordinate. </td></tr>
+    <tr><td class="paramname">poly</td><td>a vector of ofPoints defining a polygon. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the point defined by the coordinates is enclosed, false otherwise. </dd></dl>
+
+</div>
+
+  </div><div id="aafee3b18d9dccdfa85aa1b925a346029">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aafee3b18d9dccdfa85aa1b925a346029&quot;)">
+      <span class="type">bool </span>
+      <a class="name">ofInsidePoly</a>
+      <span class="args">(const ofPoint &amp;p, const vector&lt; ofPoint &gt; &amp;poly)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aafee3b18d9dccdfa85aa1b925a346029_description">
+
+<p>Determine if an ofPoint is within the polygon defined by a vector of ofPoints. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>A point to check. </td></tr>
+    <tr><td class="paramname">poly</td><td>A vector of ofPoints defining a polygon. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the ofPoint is enclosed, false otherwise. </dd></dl>
+
+</div>
+
+  </div><div id="a6dc7132fb85eb90d7cf3194ad6c054cc">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a6dc7132fb85eb90d7cf3194ad6c054cc&quot;)">
+      <span class="type">bool </span>
+      <a class="name">ofLineSegmentIntersection</a>
+      <span class="args">(ofPoint line1Start, ofPoint line1End, ofPoint line2Start, ofPoint line2End, ofPoint &amp;intersection)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a6dc7132fb85eb90d7cf3194ad6c054cc_description">
+
+<p>Determine the intersection between two lines. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line1Start</td><td>Starting point for first line. </td></tr>
+    <tr><td class="paramname">line1End</td><td>End point for first line. </td></tr>
+    <tr><td class="paramname">line2Start</td><td>Starting point for second line. </td></tr>
+    <tr><td class="paramname">line2End</td><td>End point for second line. </td></tr>
+    <tr><td class="paramname">intersection</td><td>ofPoint reference in which to store the computed intersection point. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the lines intersect. </dd></dl>
+
+</div>
+
+  </div><div id="ae41684be82f712ce9afe52366c57f9a0">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ae41684be82f712ce9afe52366c57f9a0&quot;)">
+      <span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a></span>
+      <a class="name">ofBezierPoint</a>
+      <span class="args">(ofPoint a, ofPoint b, ofPoint c, ofPoint d, float t)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ae41684be82f712ce9afe52366c57f9a0_description">
+
+<p>Given the four points that determine a bezier curve, return an interpolated point on the curve. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>The beginning point of the curve. </td></tr>
+    <tr><td class="paramname">b</td><td>The first control point. </td></tr>
+    <tr><td class="paramname">c</td><td>The second control point. </td></tr>
+    <tr><td class="paramname">d</td><td>The end point of the curve. </td></tr>
+    <tr><td class="paramname">t</td><td>an offset along the curve, normalized between 0 and 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A ofPoint on the curve. </dd></dl>
+
+</div>
+
+  </div><div id="abb059119ae6349bbbde274ac2b1b5e26">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#abb059119ae6349bbbde274ac2b1b5e26&quot;)">
+      <span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a></span>
+      <a class="name">ofCurvePoint</a>
+      <span class="args">(ofPoint a, ofPoint b, ofPoint c, ofPoint d, float t)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="abb059119ae6349bbbde274ac2b1b5e26_description">
+
+<p>Given the four points that determine a Catmull Rom curve, return an interpolated point on the curve. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>The first control point. </td></tr>
+    <tr><td class="paramname">b</td><td>The beginning point of the curve. </td></tr>
+    <tr><td class="paramname">c</td><td>The end point of the curve. </td></tr>
+    <tr><td class="paramname">d</td><td>The second control point. </td></tr>
+    <tr><td class="paramname">t</td><td>an offset along the curve, normalized between 0 and 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A ofPoint on the curve. </dd></dl>
+
+</div>
+
+  </div><div id="af7ef7086c0cb61b4883a15873dd2b87e">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#af7ef7086c0cb61b4883a15873dd2b87e&quot;)">
+      <span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a></span>
+      <a class="name">ofBezierTangent</a>
+      <span class="args">(ofPoint a, ofPoint b, ofPoint c, ofPoint d, float t)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="af7ef7086c0cb61b4883a15873dd2b87e_description">
+<p>Given the four points that determine a bezier curve and an offset along the curve, return an tangent vector to a point on the curve. Currently this is not a normalized point, and will need to be normalized. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>The beginning point of the curve. </td></tr>
+    <tr><td class="paramname">b</td><td>The first control point. </td></tr>
+    <tr><td class="paramname">c</td><td>The second control point. </td></tr>
+    <tr><td class="paramname">d</td><td>The end point of the curve. </td></tr>
+    <tr><td class="paramname">t</td><td>an offset along the curve, normalized between 0 and 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A ofPoint on the curve. </dd></dl>
+
+</div>
+
+  </div><div id="ae12c7ac240f0bd70fb212c16a9022f0d">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ae12c7ac240f0bd70fb212c16a9022f0d&quot;)">
+      <span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a></span>
+      <a class="name">ofCurveTangent</a>
+      <span class="args">(ofPoint a, ofPoint b, ofPoint c, ofPoint d, float t)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ae12c7ac240f0bd70fb212c16a9022f0d_description">
+
+<p>Return a tangent point for an offset along a Catmull Rom curve. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>The first control point. </td></tr>
+    <tr><td class="paramname">b</td><td>The beginning point of the curve. </td></tr>
+    <tr><td class="paramname">c</td><td>The end point of the curve. </td></tr>
+    <tr><td class="paramname">d</td><td>The second control point. </td></tr>
+    <tr><td class="paramname">t</td><td>an offset along the curve, normalized between 0 and 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A ofPoint on the curve. </dd></dl>
+
+</div>
+
+  </div><div id="a03ae1b6363bc5768851000d35538066e">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a03ae1b6363bc5768851000d35538066e&quot;)">
+      <span class="type">Type </span>
+      <a class="name">ofInterpolateCosine</a>
+      <span class="args">(Type y1, Type y2, float pct)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a03ae1b6363bc5768851000d35538066e_description">
+
+</div>
+
+  </div><div id="ae4fa59b0c4c66e53f4e017923121ea0d">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ae4fa59b0c4c66e53f4e017923121ea0d&quot;)">
+      <span class="type">Type </span>
+      <a class="name">ofInterpolateCubic</a>
+      <span class="args">(Type y0, Type y1, Type y2, Type y3, float pct)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ae4fa59b0c4c66e53f4e017923121ea0d_description">
+
+</div>
+
+  </div><div id="a91742a5ecd1dd798be415bbc493c22bf">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a91742a5ecd1dd798be415bbc493c22bf&quot;)">
+      <span class="type">Type </span>
+      <a class="name">ofInterpolateCatmullRom</a>
+      <span class="args">(Type y0, Type y1, Type y2, Type y3, float pct)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a91742a5ecd1dd798be415bbc493c22bf_description">
+
+</div>
+
+  </div><div id="a5983155f864e82d3f5dfb57d95ff8f27">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a5983155f864e82d3f5dfb57d95ff8f27&quot;)">
+      <span class="type">Type </span>
+      <a class="name">ofInterpolateHermite</a>
+      <span class="args">(Type y0, Type y1, Type y2, Type y3, float pct)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a5983155f864e82d3f5dfb57d95ff8f27_description">
+
+</div>
+
+  </div><div id="a2fff1be1275f2e15198628c0cd15bb4f">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a2fff1be1275f2e15198628c0cd15bb4f&quot;)">
+      <span class="type">Type </span>
+      <a class="name">ofInterpolateHermite</a>
+      <span class="args">(Type y0, Type y1, Type y2, Type y3, float pct, float tension, float bias)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a2fff1be1275f2e15198628c0cd15bb4f_description">
+
+</div>
+
+  </div></div>
+  </div></div>
+      </div>
+    </div>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+<script src="script.js"></script>
+
+</body>
+
+<div id="templates">
+
+  <div id="sectionTemplate">
+    <h3 class="sectionHeader"></h3>
+    <div class="sectionContent"></div>
+  </div>
+
+  <div id="classMethodTemplate">
+    <div class="methodHeader">
+      <span class="type"></span>
+      <a class="name"></a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none"></div>
+
+  </div>
+
+</div>
+
+</html>

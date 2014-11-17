@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ofCamera</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheet.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+
+<div class="container">
+    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">3d</a> &gt; <span id="classQuickNav">ofCamera</span></div>
+    <nav class="navigator" role="navigation">
+      <ul id="nav-parts">
+        <li class="group selected">
+          Topics
+          <ul id="topics">
+            <!--<li class="chapter"><a href="asd">sad</a></li>-->
+          <li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li></ul>
+      </li></ul>
+    </nav>
+    <div class="main">
+      <div class="content">
+        <div class="classHeader">
+          <h1 id="title">ofCamera</h1>
+        </div>
+        <div class="classDescription"><div class="textblock"><p>A basic camera object for interacting with objects in 3D space. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd><p class="startdd">Use the public API of <a class="el" href="classof_node.html">ofNode</a> for all transformations </p>
+<p>add set projection matrix </p>
+<p class="enddd">support for left handed or right handed? </p>
+</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Memo Akten, MSA Visuals Ltd. 2011 </dd></dl>
+</div></div>
+        <div class="classMethods"><div id="ProtectedAttributes">
+    <h3 class="sectionHeader">Protected Attributes</h3>
+    <div class="sectionContent"><div id="a741a221b952bd29fc717eda23565ee22">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a741a221b952bd29fc717eda23565ee22&quot;)">
+      <span class="type">bool </span>
+      <a class="name">isOrtho</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a741a221b952bd29fc717eda23565ee22_description">
+
+</div>
+
+  </div><div id="a34bc96c4a0fce3ec78b33db6be83b4fb">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a34bc96c4a0fce3ec78b33db6be83b4fb&quot;)">
+      <span class="type">float </span>
+      <a class="name">fov</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a34bc96c4a0fce3ec78b33db6be83b4fb_description">
+
+</div>
+
+  </div><div id="ad11580161e4664656d26013f6638769c">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ad11580161e4664656d26013f6638769c&quot;)">
+      <span class="type">float </span>
+      <a class="name">nearClip</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ad11580161e4664656d26013f6638769c_description">
+
+</div>
+
+  </div><div id="a1af538e481519a184d4320cedd456fb9">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a1af538e481519a184d4320cedd456fb9&quot;)">
+      <span class="type">float </span>
+      <a class="name">farClip</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a1af538e481519a184d4320cedd456fb9_description">
+
+</div>
+
+  </div><div id="a54570e367b902a61cbcbadf4a8ebbd16">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a54570e367b902a61cbcbadf4a8ebbd16&quot;)">
+      <span class="type"><a href="ofVec2f.html">ofVec2f</a></span>
+      <a class="name">lensOffset</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a54570e367b902a61cbcbadf4a8ebbd16_description">
+
+</div>
+
+  </div><div id="a5f80899f0f5b8c699f4e476879bd5441">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a5f80899f0f5b8c699f4e476879bd5441&quot;)">
+      <span class="type">bool </span>
+      <a class="name">forceAspectRatio</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a5f80899f0f5b8c699f4e476879bd5441_description">
+
+</div>
+
+  </div><div id="a6dfc2ca4d2b9920888f5d2df0cd21413">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a6dfc2ca4d2b9920888f5d2df0cd21413&quot;)">
+      <span class="type">float </span>
+      <a class="name">aspectRatio</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a6dfc2ca4d2b9920888f5d2df0cd21413_description">
+
+</div>
+
+  </div><div id="a960e80a1ae5ac42560a4b01c63b62e49">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a960e80a1ae5ac42560a4b01c63b62e49&quot;)">
+      <span class="type">bool </span>
+      <a class="name">isActive</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a960e80a1ae5ac42560a4b01c63b62e49_description">
+
+</div>
+
+  </div><div id="ae6a88528d41af6addd75236037fac3ea">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ae6a88528d41af6addd75236037fac3ea&quot;)">
+      <span class="type">bool </span>
+      <a class="name">vFlip</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ae6a88528d41af6addd75236037fac3ea_description">
+
+</div>
+
+  </div></div>
+  </div><div id="PublicFunctions">
+    <h3 class="sectionHeader">Public Functions</h3>
+    <div class="sectionContent"><div id="abd30fe5920612bd673a7a7af7991fc4a">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#abd30fe5920612bd673a7a7af7991fc4a&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ofCamera</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="abd30fe5920612bd673a7a7af7991fc4a_description">
+
+<p>Construct a default camera. </p>
+
+</div>
+
+  </div><div id="a78eb546659ce672e16df3443a0e74eba">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a78eb546659ce672e16df3443a0e74eba&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">~ofCamera</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a78eb546659ce672e16df3443a0e74eba_description">
+
+<p>Destroy the camera. </p>
+
+</div>
+
+  </div><div id="ac79f42fa863eb5ce703625800dee236c">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ac79f42fa863eb5ce703625800dee236c&quot;)">
+      <span class="type">void </span>
+      <a class="name">setFov</a>
+      <span class="args">(float f)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ac79f42fa863eb5ce703625800dee236c_description">
+
+<p>Set the field of view for a perspective camera. </p>
+<p>This sets the horizontal field of view for the camera, in degrees. This only operates with perspective cameras, and will have no effect with cameras in orthographic mode.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>The desired field of view for the camera, in degrees. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+
+  </div><div id="a4ed2f176b5dbdb65e1e452b847497086">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a4ed2f176b5dbdb65e1e452b847497086&quot;)">
+      <span class="type">void </span>
+      <a class="name">setNearClip</a>
+      <span class="args">(float f)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a4ed2f176b5dbdb65e1e452b847497086_description">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd><a class="el" href="classof_camera.html#a4ed2f176b5dbdb65e1e452b847497086">setNearClip()</a> </dd></dl>
+
+</div>
+
+  </div><div id="aef6f9ea9a776c0113900a75e54d05bb9">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aef6f9ea9a776c0113900a75e54d05bb9&quot;)">
+      <span class="type">void </span>
+      <a class="name">setFarClip</a>
+      <span class="args">(float f)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aef6f9ea9a776c0113900a75e54d05bb9_description">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd><a class="el" href="classof_camera.html#aef6f9ea9a776c0113900a75e54d05bb9">setFarClip()</a> </dd></dl>
+
+</div>
+
+  </div><div id="aadfd00b6ade210e6dd9f9c1dc500468b">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aadfd00b6ade210e6dd9f9c1dc500468b&quot;)">
+      <span class="type">void </span>
+      <a class="name">setLensOffset</a>
+      <span class="args">(const ofVec2f &amp;lensOffset)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aadfd00b6ade210e6dd9f9c1dc500468b_description">
+
+<p>Set the &quot;lens offset&quot; applied to this camera. </p>
+<p>Ordinarily, the camera is pointed straight down the center of its view frustum. However, it is possible to orient the camera towards a location offset from the center of its frustum. This is called an &quot;assymetric
+frustum&quot; and is used (for example) in stereo views. It is acheived by applying an offset to the center of projection. This function sets this offset from an <a class="el" href="classof_vec2f.html">ofVec2f</a> argument. For more information see <a href="http://www.orthostereo.com/geometryopengl.html">http://www.orthostereo.com/geometryopengl.html</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lensOffset</td><td>The &quot;lens offset&quot; to apply to this camera, encoded in an <a class="el" href="classof_vec2f.html">ofVec2f</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+
+  </div><div id="a1c786ac3f953960fb58881dae1bc4083">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a1c786ac3f953960fb58881dae1bc4083&quot;)">
+      <span class="type">void </span>
+      <a class="name">setAspectRatio</a>
+      <span class="args">(float aspectRatio)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a1c786ac3f953960fb58881dae1bc4083_description">
+
+<p>Set the recommended aspect ratio for a perspective camera. </p>
+<p>Sets the aspect ratio of the camera to the desired float, and forces the use of aspect ratio calculations. Currently only used with perspective cameras. The default value (and the value used with orthographic cameras) is the ratio of the viewport&apos;s width to the viewport&apos;s height.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aspectRatio</td><td>The desired aspect ratio, e.g. 1.3333, 1.6, etc. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+
+  </div><div id="a123c0d1c078ffdb6c54175afaff2f45d">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a123c0d1c078ffdb6c54175afaff2f45d&quot;)">
+      <span class="type">void </span>
+      <a class="name">setForceAspectRatio</a>
+      <span class="args">(bool forceAspectRatio)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a123c0d1c078ffdb6c54175afaff2f45d_description">
+
+<p>Set whether or not the aspect ratio of this camera is forced to a non-default setting. </p>
+<p>The camera&apos;s aspect ratio, by default, is the aspect ratio of your viewport. If you have set a non-default value (with <a class="el" href="classof_camera.html#a1c786ac3f953960fb58881dae1bc4083" title="Set the recommended aspect ratio for a perspective camera. ">ofCamera::setAspectRatio()</a>), you can toggle whether or not this value is applied.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">forceAspectRatio</td><td>Whether or not this camera should use an aspect ratio you have set yourself. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+
+  </div><div id="ae53ac9b4daf751eeb549e7d74fa2080b">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ae53ac9b4daf751eeb549e7d74fa2080b&quot;)">
+      <span class="type">float </span>
+      <a class="name">getFov</a>
+      <span class="args">() const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ae53ac9b4daf751eeb549e7d74fa2080b_description">
+
+<p>Get the camera&apos;s field of view, in degrees. </p>
+<p>Get the horizontal camera&apos;s field of view, in degrees. This is only meaningful for perspective cameras.</p>
+<dl class="section return"><dt>Returns</dt><dd>The camera&apos;s field of view, in degrees. </dd></dl>
+
+</div>
+
+  </div><div id="a1a30c9b9a1cff8efa6d2cda3fea34a89">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a1a30c9b9a1cff8efa6d2cda3fea34a89&quot;)">
+      <span class="type">float </span>
+      <a class="name">getNearClip</a>
+      <span class="args">() const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a1a30c9b9a1cff8efa6d2cda3fea34a89_description">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd><a class="el" href="classof_camera.html#a1a30c9b9a1cff8efa6d2cda3fea34a89">getNearClip()</a> </dd></dl>
+
+</div>
+
+  </div><div id="ac6f4f04a10cb800ad525f5e9cc7813a6">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ac6f4f04a10cb800ad525f5e9cc7813a6&quot;)">
+      <span class="type">float </span>
+      <a class="name">getFarClip</a>
+      <span class="args">() const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ac6f4f04a10cb800ad525f5e9cc7813a6_description">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd><a class="el" href="classof_camera.html#ac6f4f04a10cb800ad525f5e9cc7813a6">getFarClip()</a> </dd></dl>
+
+</div>
+
+  </div><div id="afa1f9852946d33e0817e4ffc5835c3d9">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#afa1f9852946d33e0817e4ffc5835c3d9&quot;)">
+      <span class="type"><a href="ofVec2f.html">ofVec2f</a></span>
+      <a class="name">getLensOffset</a>
+      <span class="args">() const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="afa1f9852946d33e0817e4ffc5835c3d9_description">
+
+<p>Get the &quot;lens offset&quot; applied to this camera, encoded as an <a class="el" href="classof_vec2f.html">ofVec2f</a>. </p>
+<p>Ordinarily, the camera is pointed straight down the center of its view frustum. However, it is possible to orient the camera towards a location offset from the center of its frustum. This is called an &quot;asymetric frustum&quot; and is used (for example) in stereo views. It is acheived by applying an offset to the center of projection. This function returns the offset that has been applied, as an <a class="el" href="classof_vec2f.html">ofVec2f</a>. For more information see <a href="http://www.orthostereo.com/geometryopengl.html">http://www.orthostereo.com/geometryopengl.html</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>The &quot;lens offset&quot; applied to this camera, encoded in an <a class="el" href="classof_vec2f.html">ofVec2f</a>. </dd></dl>
+
+</div>
+
+  </div><div id="ace8154b357e9b6f285d34c067c1555ee">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ace8154b357e9b6f285d34c067c1555ee&quot;)">
+      <span class="type">bool </span>
+      <a class="name">getForceAspectRatio</a>
+      <span class="args">() const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ace8154b357e9b6f285d34c067c1555ee_description">
+
+<p>Get the boolean state which indicates whether the aspect ratio of this camera is forced to a non-default setting. </p>
+<dl class="section return"><dt>Returns</dt><dd>A boolean: whether or not this camera&apos;s aspect ratio is set to a non-default value. </dd></dl>
+
+</div>
+
+  </div><div id="ad0554203893a0d40d40f46ee70ca6d41">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ad0554203893a0d40d40f46ee70ca6d41&quot;)">
+      <span class="type">float </span>
+      <a class="name">getAspectRatio</a>
+      <span class="args">() const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ad0554203893a0d40d40f46ee70ca6d41_description">
+
+<p>Get the aspect ratio of this camera&apos;s viewport. </p>
+<p>Returns the aspect ratio of this camera&apos;s viewport. Usually this will be the ratio of the width to height of your display. Intended for perspective cameras.</p>
+<dl class="section return"><dt>Returns</dt><dd>The aspect ratio of this camera&apos;s viewport. </dd></dl>
+
+</div>
+
+  </div><div id="a72cedd2a056d8bf460c2add5cc607179">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a72cedd2a056d8bf460c2add5cc607179&quot;)">
+      <span class="type">void </span>
+      <a class="name">setupPerspective</a>
+      <span class="args">(bool vFlip=true, float fov=60, float nearDist=0, float farDist=0, const ofVec2f &amp;lensOffset=ofVec2f(0.0f, 0.0f))</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a72cedd2a056d8bf460c2add5cc607179_description">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd><a class="el" href="classof_camera.html#a72cedd2a056d8bf460c2add5cc607179">setupPerspective()</a> </dd></dl>
+
+</div>
+
+  </div><div id="ae73c73a3552e34d043ad90d0bd42b240">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ae73c73a3552e34d043ad90d0bd42b240&quot;)">
+      <span class="type">void </span>
+      <a class="name">setupOffAxisViewPortal</a>
+      <span class="args">(const ofVec3f &amp;topLeft, const ofVec3f &amp;bottomLeft, const ofVec3f &amp;bottomRight)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ae73c73a3552e34d043ad90d0bd42b240_description">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd><a class="el" href="classof_camera.html#ae73c73a3552e34d043ad90d0bd42b240">setupOffAxisViewPortal()</a> </dd></dl>
+
+</div>
+
+  </div><div id="afa77a0f8af4aa2be652a4c8dcd9628c4">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#afa77a0f8af4aa2be652a4c8dcd9628c4&quot;)">
+      <span class="type">void </span>
+      <a class="name">setVFlip</a>
+      <span class="args">(bool vflip)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="afa77a0f8af4aa2be652a4c8dcd9628c4_description">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd><a class="el" href="classof_camera.html#afa77a0f8af4aa2be652a4c8dcd9628c4">setVFlip()</a> </dd></dl>
+
+</div>
+
+  </div><div id="a6409c2eebe415a9f1a145286fe6e6f5f">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a6409c2eebe415a9f1a145286fe6e6f5f&quot;)">
+      <span class="type">bool </span>
+      <a class="name">isVFlipped</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a6409c2eebe415a9f1a145286fe6e6f5f_description">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd><a class="el" href="classof_camera.html#a6409c2eebe415a9f1a145286fe6e6f5f">isVFlipped()</a> </dd></dl>
+
+</div>
+
+  </div><div id="a3188281a0708f7ed030b0742ff2d3f6d">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a3188281a0708f7ed030b0742ff2d3f6d&quot;)">
+      <span class="type">void </span>
+      <a class="name">enableOrtho</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a3188281a0708f7ed030b0742ff2d3f6d_description">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd><a class="el" href="classof_camera.html#a3188281a0708f7ed030b0742ff2d3f6d">enableOrtho()</a> </dd></dl>
+
+</div>
+
+  </div><div id="a8b9f8d32444f72544b3a05e6646fcdfc">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a8b9f8d32444f72544b3a05e6646fcdfc&quot;)">
+      <span class="type">void </span>
+      <a class="name">disableOrtho</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a8b9f8d32444f72544b3a05e6646fcdfc_description">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd><a class="el" href="classof_camera.html#a8b9f8d32444f72544b3a05e6646fcdfc">disableOrtho()</a> </dd></dl>
+
+</div>
+
+  </div><div id="a64ecd6f32c55d31f8570e22a1597c29a">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a64ecd6f32c55d31f8570e22a1597c29a&quot;)">
+      <span class="type">bool </span>
+      <a class="name">getOrtho</a>
+      <span class="args">() const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a64ecd6f32c55d31f8570e22a1597c29a_description">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd><a class="el" href="classof_camera.html#a64ecd6f32c55d31f8570e22a1597c29a">getOrtho()</a> </dd></dl>
+
+</div>
+
+  </div><div id="a229cb35e80d84ce864e07d569116890e">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a229cb35e80d84ce864e07d569116890e&quot;)">
+      <span class="type">float </span>
+      <a class="name">getImagePlaneDistance</a>
+      <span class="args">(ofRectangle viewport=ofGetCurrentViewport()) const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a229cb35e80d84ce864e07d569116890e_description">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Todo:</a></b></dt><dd>getImagePlaneDistance </dd></dl>
+
+</div>
+
+  </div><div id="afb7b6b17c6b13fcb1ec05fbc8b9b407f">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#afb7b6b17c6b13fcb1ec05fbc8b9b407f&quot;)">
+      <span class="type">void </span>
+      <a class="name">begin</a>
+      <span class="args">(ofRectangle viewport=ofGetCurrentViewport())</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="afb7b6b17c6b13fcb1ec05fbc8b9b407f_description">
+
+<p>Begins rendering with the camera. </p>
+<p>Example: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="classof_node.html#a69ed7a21f7f8ee435fa6d8a99424e9ba">draw</a>() {</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Begin rendering from the camera&apos;s perspective.</span></div>
+<div class="line">    camera.begin();</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="of_graphics_8cpp.html#acc4b7173caaa9e04c8965782c6925bdc">ofLine</a>(0, 0, <a class="code" href="of_app_runner_8cpp.html#a28bb1c518b5c68ee2eae655bd4e56445">ofGetWidth</a>(), <a class="code" href="of_app_runner_8cpp.html#a415b5eadf885ebd1f4799cc40e5db137">ofGetHeight</a>());</div>
+<div class="line">    <span class="comment">// Additional rendering ...</span></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// End rendering form the camera&apos;s perspective.</span></div>
+<div class="line">    camera.end();</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">viewport</td><td>The camera&apos;s rendering viewport. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="classof_easy_cam.html#ac81e95f6c7e4c7c7de9250708c9a5664">ofEasyCam</a>.</p>
+
+</div>
+
+  </div><div id="a2ab2daf9b7432374e6c4bf70a5d94861">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a2ab2daf9b7432374e6c4bf70a5d94861&quot;)">
+      <span class="type">void </span>
+      <a class="name">end</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a2ab2daf9b7432374e6c4bf70a5d94861_description">
+
+<p>Ends rendering with the camera. </p>
+
+</div>
+
+  </div><div id="a69c858a6ecd8f140ac114cec108b3499">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a69c858a6ecd8f140ac114cec108b3499&quot;)">
+      <span class="type"><a href="ofMatrix4x4.html">ofMatrix4x4</a></span>
+      <a class="name">getProjectionMatrix</a>
+      <span class="args">(ofRectangle viewport=ofGetCurrentViewport()) const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a69c858a6ecd8f140ac114cec108b3499_description">
+
+<p>Access the projection matrix. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current 4x4 projection matrix. </dd></dl>
+
+</div>
+
+  </div><div id="aef9fc0a70e89d6807db26d17304c7aa2">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aef9fc0a70e89d6807db26d17304c7aa2&quot;)">
+      <span class="type"><a href="ofMatrix4x4.html">ofMatrix4x4</a></span>
+      <a class="name">getModelViewMatrix</a>
+      <span class="args">() const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aef9fc0a70e89d6807db26d17304c7aa2_description">
+
+<p>Access the model view matrix. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current 4x4 model view matrix. </dd></dl>
+
+</div>
+
+  </div><div id="a03586331b2309433c3a8842f6bc333b1">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a03586331b2309433c3a8842f6bc333b1&quot;)">
+      <span class="type"><a href="ofMatrix4x4.html">ofMatrix4x4</a></span>
+      <a class="name">getModelViewProjectionMatrix</a>
+      <span class="args">(ofRectangle viewport=ofGetCurrentViewport()) const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a03586331b2309433c3a8842f6bc333b1_description">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000014">Todo:</a></b></dt><dd><a class="el" href="classof_camera.html#a03586331b2309433c3a8842f6bc333b1">getModelViewProjectionMatrix()</a> </dd></dl>
+
+</div>
+
+  </div><div id="a7b5e9d4853d39a23fa836dcec18d7ae7">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a7b5e9d4853d39a23fa836dcec18d7ae7&quot;)">
+      <span class="type"><a href="ofVec3f.html">ofVec3f</a></span>
+      <a class="name">worldToScreen</a>
+      <span class="args">(ofVec3f WorldXYZ, ofRectangle viewport=ofGetCurrentViewport()) const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a7b5e9d4853d39a23fa836dcec18d7ae7_description">
+
+<p>Obtain the screen coordinates of a point in the 3D world. </p>
+<p>Takes an (X,Y,Z) point in your 3D world, encoded as an <a class="el" href="classof_vec3f.html">ofVec3f</a>, and returns the location (also as an <a class="el" href="classof_vec3f.html">ofVec3f</a>) where this point would appear on your (two-dimensional) display. The screen position&apos;s &quot;Z
+coordinate&quot; is set to be the same as your camera&apos;s.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">WorldXYZ</td><td>A 3D point in the world, whose screen coordinates you wish to know. </td></tr>
+    <tr><td class="paramname">viewport</td><td>(Optional) A viewport. The default is <a class="el" href="of_graphics_8cpp.html#a9b45fc63c10fdf222fcbf20543183220">ofGetCurrentViewport()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An <a class="el" href="classof_vec3f.html">ofVec3f</a> containing the screen coordinates of your 3D point of interest. </dd></dl>
+
+</div>
+
+  </div><div id="a2d561fd8fb958c9512d576ed54129a73">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a2d561fd8fb958c9512d576ed54129a73&quot;)">
+      <span class="type"><a href="ofVec3f.html">ofVec3f</a></span>
+      <a class="name">screenToWorld</a>
+      <span class="args">(ofVec3f ScreenXYZ, ofRectangle viewport=ofGetCurrentViewport()) const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a2d561fd8fb958c9512d576ed54129a73_description">
+
+<p>Obtain the coordinates, in the 3D world, of a 2D point presumed to be on your screen. </p>
+<p>Takes a pixel location on your screen, encoded in an <a class="el" href="classof_vec3f.html">ofVec3f</a>, and returns (also as an <a class="el" href="classof_vec3f.html">ofVec3f</a>) the 3D world coordinates of that point. You&apos;ll also need to specify a Z value when providing your screen point. This Z value is interpreted as a distance into or away from the screen.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ScreenXYZ</td><td>A point on your screen, whose 3D world coordinates you wish to know. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+
+  </div><div id="a32da4f33ddc9b4ee49aed5f5840813e1">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a32da4f33ddc9b4ee49aed5f5840813e1&quot;)">
+      <span class="type"><a href="ofVec3f.html">ofVec3f</a></span>
+      <a class="name">worldToCamera</a>
+      <span class="args">(ofVec3f WorldXYZ, ofRectangle viewport=ofGetCurrentViewport()) const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a32da4f33ddc9b4ee49aed5f5840813e1_description">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000015">Todo:</a></b></dt><dd><a class="el" href="classof_camera.html#a32da4f33ddc9b4ee49aed5f5840813e1">worldToCamera()</a> </dd></dl>
+
+</div>
+
+  </div><div id="a0b71942ab459cce76425154c52032363">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a0b71942ab459cce76425154c52032363&quot;)">
+      <span class="type"><a href="ofVec3f.html">ofVec3f</a></span>
+      <a class="name">cameraToWorld</a>
+      <span class="args">(ofVec3f CameraXYZ, ofRectangle viewport=ofGetCurrentViewport()) const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a0b71942ab459cce76425154c52032363_description">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000016">Todo:</a></b></dt><dd><a class="el" href="classof_camera.html#a0b71942ab459cce76425154c52032363">cameraToWorld()</a> </dd></dl>
+
+</div>
+
+  </div></div>
+  </div><div id="ProtectedFunctions">
+    <h3 class="sectionHeader">Protected Functions</h3>
+    <div class="sectionContent"><div id="a14be7a543e64f332e9f3106fce2b369f">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a14be7a543e64f332e9f3106fce2b369f&quot;)">
+      <span class="type">void </span>
+      <a class="name">calcClipPlanes</a>
+      <span class="args">(ofRectangle viewport)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a14be7a543e64f332e9f3106fce2b369f_description">
+
+</div>
+
+  </div></div>
+  </div></div>
+      </div>
+    </div>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+<script src="script.js"></script>
+
+</body>
+
+<div id="templates">
+
+  <div id="sectionTemplate">
+    <h3 class="sectionHeader"></h3>
+    <div class="sectionContent"></div>
+  </div>
+
+  <div id="classMethodTemplate">
+    <div class="methodHeader">
+      <span class="type"></span>
+      <a class="name"></a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none"></div>
+
+  </div>
+
+</div>
+
+</html>

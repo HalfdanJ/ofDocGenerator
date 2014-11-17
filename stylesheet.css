@@ -1,0 +1,151 @@
+nav {
+  background-color: #f9f9f9;
+  border-top: 1px solid #e9e9e9;
+  border-left: 1px solid #e9e9e9;
+  border-right: 1px solid #e9e9e9;
+  bottom: 0;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.07);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  position: fixed;
+  top: 70px;
+  width: 230px; }
+  nav ul#nav-parts {
+    color: gray;
+    font-weight: 100;
+    line-height: 140%;
+    list-style-type: none;
+    margin: 0;
+    -webkit-padding-start: 0;
+    padding-left: 0px; }
+    nav ul#nav-parts li.group {
+      border-bottom: 1px solid #e9e9e9;
+      font-family: Helvetica;
+      font-size: 1.2em;
+      line-height: 150%;
+      list-style-type: none;
+      margin: 0;
+      padding: 10px 30px 10px 20px;
+      cursor: pointer;
+      color: #333;
+      overflow: hidden;
+      /*&.selected {
+        background-color: rgba(255,255,255,1);
+        max-height:800px;
+        cursor: default;
+      }
+*/ }
+      nav ul#nav-parts li.group ul {
+        padding: 0px; }
+        nav ul#nav-parts li.group ul li.chapter {
+          display: block;
+          line-height: 13px;
+          margin: 9px 0px; }
+          nav ul#nav-parts li.group ul li.chapter a {
+            font-size: 12px;
+            color: gray; }
+          nav ul#nav-parts li.group ul li.chapter li.section {
+            display: none;
+            font-weight: normal;
+            padding-left: 13px;
+            margin: 5px 0px; }
+            nav ul#nav-parts li.group ul li.chapter li.section a {
+              color: #B8B8B8;
+              transition: all 0.3s; }
+            nav ul#nav-parts li.group ul li.chapter li.section.selected a {
+              color: #c50f3d; }
+          nav ul#nav-parts li.group ul li.chapter.selected {
+            font-weight: bold; }
+            nav ul#nav-parts li.group ul li.chapter.selected li.section {
+              display: block; }
+
+.main {
+  background-color: white;
+  border-top: 0;
+  display: block;
+  margin-left: 246px;
+  min-height: calc(100% - 173px);
+  min-height: -moz-calc(100% - 173px);
+  min-height: -webkit-calc(100% - 173px);
+  position: absolute;
+  overflow: auto;
+  padding-bottom: 100px;
+  top: 70px;
+  width: 734px; }
+
+#templates {
+  display: none; }
+
+.methodHeader {
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  cursor: pointer; }
+  .methodHeader .type {
+    color: #aaa;
+    padding-right: 8px; }
+  .methodHeader .args {
+    color: #aaa; }
+  .methodHeader.deprecatedMethod span {
+    text-decoration: line-through; }
+  .methodHeader.deprecatedMethod a {
+    text-decoration: line-through;
+    color: #aaa; }
+  .methodHeader.deprecatedMethod .note {
+    text-decoration: none;
+    color: #ccc; }
+
+.methodDescription {
+  background-color: #f6f6f6;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 15px;
+  padding: 10px 10px 5px 15px; }
+  .methodDescription table {
+    border-collapse: collapse; }
+  .methodDescription table, .methodDescription th, .methodDescription td {
+    border: 1px solid #d7d7d7; }
+  .methodDescription td {
+    padding: 6px; }
+  .methodDescription td.paramname {
+    font-style: italic; }
+  .methodDescription dt {
+    margin-bottom: 4px; }
+
+.fragment, pre {
+  margin-left: 15px;
+  border: 0px;
+  border-radius: 0px;
+  border-left: 5px solid #c2c2c2;
+  padding: 5px;
+  padding-left: 7px;
+  margin-bottom: 8px; }
+  .fragment .line, pre .line {
+    font-family: monospace, fixed;
+    font-size: 13px;
+    min-height: 13px;
+    line-height: 1;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    /* @group Code Colorization */ }
+    .fragment .line span.keyword, pre .line span.keyword {
+      color: #008000; }
+    .fragment .line span.keywordtype, pre .line span.keywordtype {
+      color: #604020; }
+    .fragment .line span.keywordflow, pre .line span.keywordflow {
+      color: #e08000; }
+    .fragment .line span.comment, pre .line span.comment {
+      color: #800000; }
+    .fragment .line span.preprocessor, pre .line span.preprocessor {
+      color: #806020; }
+    .fragment .line span.stringliteral, pre .line span.stringliteral {
+      color: #002080; }
+    .fragment .line span.charliteral, pre .line span.charliteral {
+      color: #008080; }
+    .fragment .line span.vhdldigit, pre .line span.vhdldigit {
+      color: #ff00ff; }
+    .fragment .line span.vhdlchar, pre .line span.vhdlchar {
+      color: #000000; }
+    .fragment .line span.vhdlkeyword, pre .line span.vhdlkeyword {
+      color: #700070; }
+    .fragment .line span.vhdllogic, pre .line span.vhdllogic {
+      color: #ff0000; }

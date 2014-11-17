@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>of3dUtils.h</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheet.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+
+<div class="container">
+    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">3d</a> &gt; <span id="classQuickNav">of3dUtils.h</span></div>
+    <nav class="navigator" role="navigation">
+      <ul id="nav-parts">
+        <li class="group selected">
+          Topics
+          <ul id="topics">
+            <!--<li class="chapter"><a href="asd">sad</a></li>-->
+          <li class="chapter"><a href="#Functions">Functions</a></li></ul>
+      </li></ul>
+    </nav>
+    <div class="main">
+      <div class="content">
+        <div class="classHeader">
+          <h1 id="title">of3dUtils.h</h1>
+        </div>
+        <div class="classDescription"></div>
+        <div class="classMethods"><div id="Functions">
+    <h3 class="sectionHeader">Functions</h3>
+    <div class="sectionContent"><div id="a30cb936226988baf93141d8a14eabd31">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a30cb936226988baf93141d8a14eabd31&quot;)">
+      <span class="type">void </span>
+      <a class="name">ofDrawAxis</a>
+      <span class="args">(float size)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a30cb936226988baf93141d8a14eabd31_description">
+
+<p>Draws x,y,z axes representing the current reference frame. </p>
+<p>This function draws a set of x,y,z axes, which can be helpful for understanding which way is up. There are no unit markings nor arrowheads. Axes are not drawn in the negative directions. Axes are drawn in red (+x), green (+y) and blue (+z), starting from the origin. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>The size at which to draw the axes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+
+  </div><div id="a900dbdc7a29a9bf59f6b09241260a2d2">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a900dbdc7a29a9bf59f6b09241260a2d2&quot;)">
+      <span class="type">void </span>
+      <a class="name">ofDrawGrid</a>
+      <span class="args">(float stepSize=1.25f, size_t numberOfSteps=8, bool labels=false, bool x=true, bool y=true, bool z=true)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a900dbdc7a29a9bf59f6b09241260a2d2_description">
+
+<p>Draws grid planes representing the current reference frame. </p>
+<p>This function draws a set of three double-ended grid planes centered at the origin. Parameters allow each of the grid planes (yz,xz, and xy) to be turned on or off. Optionally, the function can include white numeric labels for grid subdivisions. (Numeric labels are drawn using ofDrawBitmapString internally.)</p>
+<p>The yz plane (at x=0) is drawn in red. The xz plane (at y=0) is drawn in green. The xy plane (at z=0) is drawn in blue.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stepSize</td><td>distance between (parallel) lines on the grid </td></tr>
+    <tr><td class="paramname">numberOfSteps</td><td>number of lines to draw on each side of the central axis of the grid. A number of 8 will draw 8 lines on each side of the central axis, plus one line at the central axis. </td></tr>
+    <tr><td class="paramname">labels</td><td>Whether or not labels are drawn. </td></tr>
+    <tr><td class="paramname">x</td><td>Whether or not the yz plane (at x=0) is drawn. </td></tr>
+    <tr><td class="paramname">y</td><td>Whether or not the xz plane (at y=0) is drawn. </td></tr>
+    <tr><td class="paramname">z</td><td>Whether or not the xy plane (at z=0) is drawn. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+
+  </div><div id="a35d969d379c53141f2a201086286db02">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a35d969d379c53141f2a201086286db02&quot;)">
+      <span class="type">void </span>
+      <a class="name">ofDrawGridPlane</a>
+      <span class="args">(float stepSize=1.25f, size_t numberOfSteps=8, bool labels=false)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a35d969d379c53141f2a201086286db02_description">
+
+<p>Draws the YZ grid plane representing the current reference frame. </p>
+<p>This function draws the YZ grid plane, at x=0, in a double-ended manner centered at the origin. Optionally, the function can include white numeric labels for grid subdivisions. (Numeric labels are drawn using ofDrawBitmapString internally.) The grid is drawn with the current color (i.e. set with ofSetColor).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stepSize</td><td>distance between (parallel) lines on the grid </td></tr>
+    <tr><td class="paramname">numberOfSteps</td><td>number of lines to draw on each side of the central axis of the grid. A number of 8 will draw 8 lines on each side of the central axis, plus one line at the central axis. </td></tr>
+    <tr><td class="paramname">labels</td><td>Whether or not labels are drawn. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+
+  </div><div id="a52ecf8cf34da4115f243f95a0afd50a7">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a52ecf8cf34da4115f243f95a0afd50a7&quot;)">
+      <span class="type">void </span>
+      <a class="name">ofDrawArrow</a>
+      <span class="args">(const ofVec3f &amp;start, const ofVec3f &amp;end, float headSize=0.05f)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a52ecf8cf34da4115f243f95a0afd50a7_description">
+
+<p>Draws an arrow with the current color. </p>
+<p>This function draws an arrow from a start (tail) point to an end (head) point, with a conical arrowhead at the end point. The arrow is drawn in the current color (e.g. set with ofSetColor).</p>
+<p>Example: </p><pre class="fragment">ofSetColor(0,0,0);
+ofVec3f arrowTailPoint (0,0,0);
+ofVec3f arrowHeadPoint (100, 150,0);
+ofDrawArrow(arrowTailPoint, arrowHeadPoint, 20.0);
+</pre><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>The start point (tail) of the arrow, expressed as an <a class="el" href="classof_vec3f.html">ofVec3f</a>. </td></tr>
+    <tr><td class="paramname">end</td><td>The end point (head) of the arrow, expressed as an <a class="el" href="classof_vec3f.html">ofVec3f</a>. </td></tr>
+    <tr><td class="paramname">headSize</td><td>The size of the arrowhead. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+
+  </div><div id="a8dba2f5056d15d74d2e4acc58967003d">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a8dba2f5056d15d74d2e4acc58967003d&quot;)">
+      <span class="type">void </span>
+      <a class="name">ofDrawRotationAxes</a>
+      <span class="args">(float radius, float stripWidth=10, int circleRes=60)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a8dba2f5056d15d74d2e4acc58967003d_description">
+
+<p>This function renders a set of 3 axis-aligned circular bands, centered at the origin. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radius</td><td>The radius of the circular bands. </td></tr>
+    <tr><td class="paramname">stripWidth</td><td>The width of the circular bands. The default is 10 units. </td></tr>
+    <tr><td class="paramname">circleRes</td><td>The resolution of the circular bands. The default is 60 segments. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+
+  </div></div>
+  </div></div>
+      </div>
+    </div>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+<script src="script.js"></script>
+
+</body>
+
+<div id="templates">
+
+  <div id="sectionTemplate">
+    <h3 class="sectionHeader"></h3>
+    <div class="sectionContent"></div>
+  </div>
+
+  <div id="classMethodTemplate">
+    <div class="methodHeader">
+      <span class="type"></span>
+      <a class="name"></a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none"></div>
+
+  </div>
+
+</div>
+
+</html>
