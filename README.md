@@ -3,7 +3,7 @@
 
 Work in progress documentation generator for openframeworks, based on the doxygen output. 
 
-See work in progress [here](http://halfdanj.github.io/ofDocGenerator/ofBoxPrimitive.html)
+See work in progress [here](http://halfdanj.github.io/ofDocGenerator/ofThread.html)
 
 
 ## Dependencies
