@@ -2,19 +2,12 @@
   "core": {
     "3d": [
       "of3dGraphics",
-      "of3dPrimitive",
+      "of3dPrimitives",
       "of3dUtils",
-      "ofBoxPrimitive",
       "ofCamera",
-      "ofConePrimitive",
-      "ofCylinderPrimitive",
       "ofEasyCam",
-      "ofIcoSpherePrimitive",
       "ofMesh",
-      "ofMeshFace",
-      "ofNode",
-      "ofPlanePrimitive",
-      "ofSpherePrimitive"
+      "ofNode"
     ],
 
     "application": [
@@ -24,8 +17,7 @@
       "ofAppGlutWindow",
       "ofAppNoWindow",
       "ofAppRunner",
-      "ofBaseApp",
-      "ofDragInfo"
+      "ofBaseApp"
     ],
 
     "communication": [
@@ -34,18 +26,9 @@
     ],
 
     "events": [
-      "ofAudioEventArgs",
-      "ofCoreEvents",
-      "ofEntryEventArgs",
-      "ofEvent",
-      "ofEventArgs",
-      "ofEventUtils",
+      "ofDelegate",
       "ofEvents",
-      "ofKeyEventArgs",
-      "ofMessage",
-      "ofMouseEventArgs",
-      "ofResizeEventArgs",
-      "ofTouchEventArgs"
+      "ofEventUtils"
     ],
 
     "gl":  [
@@ -57,7 +40,6 @@
       "ofMaterial",
       "ofShader",
       "ofTexture",
-      "ofTextureData",
       "ofVbo",
       "ofVboMesh"
     ],
@@ -69,7 +51,6 @@
       "ofPath",
       "ofPixels",
       "ofPolyline",
-      "ofTTFCharacter",
       "ofTessellator",
       "ofTrueTypeFont"
     ],
@@ -90,30 +71,15 @@
     ],
 
     "types":  [
-      "ofBaseSoundInput",
-      "ofBaseSoundOutput",
       "ofColor",
       "ofParameter",
       "ofParameterGroup",
-      "parameterChangedE",
       "ofPoint",
-      "ofPtr",
-      "ofReadOnlyParameter",
-      "ofRectangle",
-      "ofSerialDeviceInfo",
-      "ofStyle"
+      "ofRectangle"
     ],
 
     "utils":  [
-      "ofBuffer",
-      "ofDirectory",
-      "ofFile",
-      "ofFileDialogResult",
-      "fileName",
-      "filePath",
-      "ofFilePath",
       "ofFileUtils",
-      "ofHttpRequest",
       "ofLog",
       "ofSystemUtils",
       "ofThread",
@@ -123,11 +89,8 @@
     ],
 
     "video":  [
-      "ofVideoDevice",
-      "ofVideoFormat",
       "ofVideoGrabber",
-      "ofVideoPlayer",
-      "ofVideoSavedEventArgs"
+      "ofVideoPlayer"
     ]
   }
 }

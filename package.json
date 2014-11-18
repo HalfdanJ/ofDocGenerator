@@ -5,15 +5,16 @@
   "main": "app.js",
   "author": "",
   "license": "ISC",
-
   "scripts": {
     "doxygen": "cd ../../libs/openFrameworksCompiled/project/doxygen/; doxygen Doxyfile",
-    "parse": "node app.js"
+    "parse": "node app.js",
+    "start": "npm run doxygen; npm run parse"
   },
   "dependencies": {
     "cheerio": "^0.18.0",
     "fs-extra": "^0.12.0",
     "node-sass": "^1.2.2",
+    "q": "^1.1.1",
     "xml2js": "^0.4.4"
   }
 }
