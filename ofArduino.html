@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ofArduino</title>
+  <title>ofArduino.h</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -25,24 +25,710 @@
 
 
 <div class="container">
-    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">communication</a> &gt; <span id="classQuickNav">ofArduino</span></div>
+    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">video</a> &gt; <span id="classQuickNav">ofArduino.h</span></div>
     <nav class="navigator" role="navigation">
       <ul id="nav-parts">
         <li class="group selected">
           Topics
           <ul id="topics">
             <!--<li class="chapter"><a href="asd">sad</a></li>-->
-          <li class="chapter"><a href="#PublicAttributes">Public Attributes</a></li><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li></ul>
+          <li class="chapter"><a href="#Defines">Defines</a></li><li class="chapter"><a href="#Typedefs">Typedefs</a></li><li class="chapter"><a href="#PublicAttributes">Public Attributes</a></li><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li></ul>
       </li></ul>
     </nav>
     <div class="main">
       <div class="content">
-        <div class="classHeader">
-          <h1 id="title">ofArduino</h1>
-        </div>
-        <div class="classDescription"><div class="textblock"><p>This class extend ofStandardFirmata and provides additional functionality like servo support through SysEx messages. use the OFstdFirmata for servo support... </p>
+
+      <div id="" class="classBlock">
+    <div class="classHeader">
+      <h1 class="classTitle">ofArduino.h</h1>
+    </div>
+    <div class="classDescription"></div>
+    <div class="classMethods"><div id="Defines">
+    <h3 class="sectionHeader">Defines</h3>
+    <div class="sectionContent"><div id="aaf7fe5483ddb14af12856ba8c20fc961">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aaf7fe5483ddb14af12856ba8c20fc961&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_MAJOR_VERSION</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aaf7fe5483ddb14af12856ba8c20fc961_description">
+
+</div>
+
+  </div><div id="a4ccbfa7d5df56de079344468949bbe40">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a4ccbfa7d5df56de079344468949bbe40&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_MINOR_VERSION</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a4ccbfa7d5df56de079344468949bbe40_description">
+
+</div>
+
+  </div><div id="a3e01d3b90d8fa543eaa24d83af769189">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a3e01d3b90d8fa543eaa24d83af769189&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_MAX_DATA_BYTES</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a3e01d3b90d8fa543eaa24d83af769189_description">
+
+</div>
+
+  </div><div id="a885c42031025e73fb192dbd7b2dfbeae">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a885c42031025e73fb192dbd7b2dfbeae&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_DIGITAL_MESSAGE</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a885c42031025e73fb192dbd7b2dfbeae_description">
+
+</div>
+
+  </div><div id="a4855bafd45f2204900cda895c44b596b">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a4855bafd45f2204900cda895c44b596b&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_ANALOG_MESSAGE</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a4855bafd45f2204900cda895c44b596b_description">
+
+</div>
+
+  </div><div id="a8aad51634f904b00ea5c934a597138e8">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a8aad51634f904b00ea5c934a597138e8&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_REPORT_ANALOG</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a8aad51634f904b00ea5c934a597138e8_description">
+
+</div>
+
+  </div><div id="afefc75b9763024048150b46f4c4fd75e">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#afefc75b9763024048150b46f4c4fd75e&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_REPORT_DIGITAL</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="afefc75b9763024048150b46f4c4fd75e_description">
+
+</div>
+
+  </div><div id="a4362b34497a2328d47b0733abc3ad843">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a4362b34497a2328d47b0733abc3ad843&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_SET_PIN_MODE</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a4362b34497a2328d47b0733abc3ad843_description">
+
+</div>
+
+  </div><div id="a611544bd9d5321762bfec5bcb5084dff">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a611544bd9d5321762bfec5bcb5084dff&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_REPORT_VERSION</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a611544bd9d5321762bfec5bcb5084dff_description">
+
+</div>
+
+  </div><div id="aecfe5368a570f7d5d01a11fe10362acf">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aecfe5368a570f7d5d01a11fe10362acf&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_SYSTEM_RESET</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aecfe5368a570f7d5d01a11fe10362acf_description">
+
+</div>
+
+  </div><div id="ad0d6203b894903c25aac34c3bc469fec">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ad0d6203b894903c25aac34c3bc469fec&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_START_SYSEX</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ad0d6203b894903c25aac34c3bc469fec_description">
+
+</div>
+
+  </div><div id="af427a9330fd705406768594524cb4b23">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#af427a9330fd705406768594524cb4b23&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_END_SYSEX</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="af427a9330fd705406768594524cb4b23_description">
+
+</div>
+
+  </div><div id="aaa0206f2f8bfd1fe8926055989d16c8d">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aaa0206f2f8bfd1fe8926055989d16c8d&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_INPUT</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aaa0206f2f8bfd1fe8926055989d16c8d_description">
+
+</div>
+
+  </div><div id="a9bcb5e22bda6a4ea25b4f9c4cbd7c90b">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a9bcb5e22bda6a4ea25b4f9c4cbd7c90b&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_OUTPUT</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a9bcb5e22bda6a4ea25b4f9c4cbd7c90b_description">
+
+</div>
+
+  </div><div id="ab6d0b5ff53d0acf36acc8fb84c9d925b">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ab6d0b5ff53d0acf36acc8fb84c9d925b&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_ANALOG</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ab6d0b5ff53d0acf36acc8fb84c9d925b_description">
+
+</div>
+
+  </div><div id="ada10baab843378d88d58f8c6acdb2906">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ada10baab843378d88d58f8c6acdb2906&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_PWM</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ada10baab843378d88d58f8c6acdb2906_description">
+
+</div>
+
+  </div><div id="a174bb92619a6b8b5e345fd875b2a605f">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a174bb92619a6b8b5e345fd875b2a605f&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_SERVO</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a174bb92619a6b8b5e345fd875b2a605f_description">
+
+</div>
+
+  </div><div id="ac179eef68bcc694aa0ef8dd1eb09950b">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ac179eef68bcc694aa0ef8dd1eb09950b&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">SHIFT</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ac179eef68bcc694aa0ef8dd1eb09950b_description">
+
+</div>
+
+  </div><div id="a457a9aa93dbb216459873a30bdb4d84a">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a457a9aa93dbb216459873a30bdb4d84a&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">I2C</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a457a9aa93dbb216459873a30bdb4d84a_description">
+
+</div>
+
+  </div><div id="a71fb14b7d1dfa89eda085b52b9f5c754">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a71fb14b7d1dfa89eda085b52b9f5c754&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">TOTAL_PIN_MODES</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a71fb14b7d1dfa89eda085b52b9f5c754_description">
+
+</div>
+
+  </div><div id="a39d1bdad9fced0daa68e96f52016bc5c">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a39d1bdad9fced0daa68e96f52016bc5c&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_SYSEX_SERVO_CONFIG</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a39d1bdad9fced0daa68e96f52016bc5c_description">
+
+</div>
+
+  </div><div id="a6693aec92895d1b83b091190285afde0">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a6693aec92895d1b83b091190285afde0&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_SYSEX_FIRMATA_STRING</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a6693aec92895d1b83b091190285afde0_description">
+
+</div>
+
+  </div><div id="a616db7a36b772511eca293613d15c36b">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a616db7a36b772511eca293613d15c36b&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">SHIFT_DATA</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a616db7a36b772511eca293613d15c36b_description">
+
+</div>
+
+  </div><div id="a20b05d8f183170e02df5fc4e6ec0116f">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a20b05d8f183170e02df5fc4e6ec0116f&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">I2C_REQUEST</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a20b05d8f183170e02df5fc4e6ec0116f_description">
+
+</div>
+
+  </div><div id="a46aaa2293185dfc3cd655f65bea7f614">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a46aaa2293185dfc3cd655f65bea7f614&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">I2C_REPLY</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a46aaa2293185dfc3cd655f65bea7f614_description">
+
+</div>
+
+  </div><div id="a94122c44db7a01c6f6035bdcc5f40905">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a94122c44db7a01c6f6035bdcc5f40905&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">I2C_CONFIG</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a94122c44db7a01c6f6035bdcc5f40905_description">
+
+</div>
+
+  </div><div id="a6b1a9cda8c6ee228df3ed787d1278a15">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a6b1a9cda8c6ee228df3ed787d1278a15&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">EXTENDED_ANALOG</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a6b1a9cda8c6ee228df3ed787d1278a15_description">
+
+</div>
+
+  </div><div id="a67f7b22e5ccc4e60bbb29da457396f65">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a67f7b22e5ccc4e60bbb29da457396f65&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">PIN_STATE_QUERY</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a67f7b22e5ccc4e60bbb29da457396f65_description">
+
+</div>
+
+  </div><div id="a9f8f0145aba7e3c3875d437dfd297efa">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a9f8f0145aba7e3c3875d437dfd297efa&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">PIN_STATE_RESPONSE</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a9f8f0145aba7e3c3875d437dfd297efa_description">
+
+</div>
+
+  </div><div id="ae9f1ac062b9f73c9814219ec6a0131b2">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ae9f1ac062b9f73c9814219ec6a0131b2&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">CAPABILITY_QUERY</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ae9f1ac062b9f73c9814219ec6a0131b2_description">
+
+</div>
+
+  </div><div id="a18014587c29c9ed92c025e38827bd30a">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a18014587c29c9ed92c025e38827bd30a&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">CAPABILITY_RESPONSE</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a18014587c29c9ed92c025e38827bd30a_description">
+
+</div>
+
+  </div><div id="a4c572bc2c43ff5952378fdd91eae9b88">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a4c572bc2c43ff5952378fdd91eae9b88&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ANALOG_MAPPING_QUERY</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a4c572bc2c43ff5952378fdd91eae9b88_description">
+
+</div>
+
+  </div><div id="ac97ec6eb3e72f83450a66bd8a08911f4">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ac97ec6eb3e72f83450a66bd8a08911f4&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ANALOG_MAPPING_RESPONSE</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ac97ec6eb3e72f83450a66bd8a08911f4_description">
+
+</div>
+
+  </div><div id="a3e2ddd60eb54be3c99fdb6157cccf865">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a3e2ddd60eb54be3c99fdb6157cccf865&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_SYSEX_REPORT_FIRMWARE</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a3e2ddd60eb54be3c99fdb6157cccf865_description">
+
+</div>
+
+  </div><div id="a06387eb92a3708a2c132287d100d44d7">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a06387eb92a3708a2c132287d100d44d7&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">SAMPLING_INTERVAL</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a06387eb92a3708a2c132287d100d44d7_description">
+
+</div>
+
+  </div><div id="a9c9cc52444838a378a9d17dc039c1502">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a9c9cc52444838a378a9d17dc039c1502&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_SYSEX_NON_REALTIME</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a9c9cc52444838a378a9d17dc039c1502_description">
+
+</div>
+
+  </div><div id="ad68622c82998bda258c5475de6d01a8a">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ad68622c82998bda258c5475de6d01a8a&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMATA_SYSEX_REALTIME</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ad68622c82998bda258c5475de6d01a8a_description">
+
+</div>
+
+  </div><div id="a29481de64656a12e7bf2cf3a29510cd7">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a29481de64656a12e7bf2cf3a29510cd7&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ARD_TOTAL_DIGITAL_PINS</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a29481de64656a12e7bf2cf3a29510cd7_description">
+
+</div>
+
+  </div><div id="ab6791cb48447ad6f0837c191e676347a">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ab6791cb48447ad6f0837c191e676347a&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ARD_TOTAL_ANALOG_PINS</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ab6791cb48447ad6f0837c191e676347a_description">
+
+</div>
+
+  </div><div id="a67911c6caf0770ee9acfeca057f245ce">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a67911c6caf0770ee9acfeca057f245ce&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ARD_TOTAL_PORTS</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a67911c6caf0770ee9acfeca057f245ce_description">
+
+</div>
+
+  </div><div id="a396a6a79882903a41dc5cc57ed078ae6">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a396a6a79882903a41dc5cc57ed078ae6&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ARD_INPUT</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a396a6a79882903a41dc5cc57ed078ae6_description">
+
+</div>
+
+  </div><div id="aba2cbe0446fd350e2c07d5902c301e50">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aba2cbe0446fd350e2c07d5902c301e50&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ARD_OUTPUT</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aba2cbe0446fd350e2c07d5902c301e50_description">
+
+</div>
+
+  </div><div id="af628e84ef48d6a60ccc296ab3fc91083">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#af628e84ef48d6a60ccc296ab3fc91083&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ARD_ANALOG</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="af628e84ef48d6a60ccc296ab3fc91083_description">
+
+</div>
+
+  </div><div id="ad2a79836db9685c23c65c270f1df7682">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ad2a79836db9685c23c65c270f1df7682&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ARD_PWM</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ad2a79836db9685c23c65c270f1df7682_description">
+
+</div>
+
+  </div><div id="a12e2777415ba5b15aee9faaca6d1e5b1">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a12e2777415ba5b15aee9faaca6d1e5b1&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ARD_SERVO</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a12e2777415ba5b15aee9faaca6d1e5b1_description">
+
+</div>
+
+  </div><div id="ace0e23a8ec9c14258e2d4a8e483cc8c0">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ace0e23a8ec9c14258e2d4a8e483cc8c0&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ARD_HIGH</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ace0e23a8ec9c14258e2d4a8e483cc8c0_description">
+
+</div>
+
+  </div><div id="a8ee7fc9b0ef730e6976998c0fee4ab1d">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a8ee7fc9b0ef730e6976998c0fee4ab1d&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ARD_LOW</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a8ee7fc9b0ef730e6976998c0fee4ab1d_description">
+
+</div>
+
+  </div><div id="aa91dccc69b418cbcc106050b4609d99f">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aa91dccc69b418cbcc106050b4609d99f&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ARD_ON</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aa91dccc69b418cbcc106050b4609d99f_description">
+
+</div>
+
+  </div><div id="afcb35e5909c051f497cfec808a7731f9">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#afcb35e5909c051f497cfec808a7731f9&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ARD_OFF</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="afcb35e5909c051f497cfec808a7731f9_description">
+
+</div>
+
+  </div><div id="afed33e42a1db5884dc556d02d69000b0">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#afed33e42a1db5884dc556d02d69000b0&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">SYSEX_SERVO_ATTACH</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="afed33e42a1db5884dc556d02d69000b0_description">
+
+</div>
+
+  </div><div id="aab54816f2393999727b4b1cfdd46e920">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aab54816f2393999727b4b1cfdd46e920&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">SYSEX_SERVO_DETACH</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aab54816f2393999727b4b1cfdd46e920_description">
+
+</div>
+
+  </div><div id="a073bcaeafbb9b4f63470308244c6dca2">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a073bcaeafbb9b4f63470308244c6dca2&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">SYSEX_SERVO_WRITE</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a073bcaeafbb9b4f63470308244c6dca2_description">
+
+</div>
+
+  </div><div id="a69111f892d740629f41d43df88540f1b">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a69111f892d740629f41d43df88540f1b&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">OF_ARDUINO_DELAY_LENGTH</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a69111f892d740629f41d43df88540f1b_description">
+
+</div>
+
+  </div><div id="ab219b6a100a1e42ed4eec5f1ce18897c">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ab219b6a100a1e42ed4eec5f1ce18897c&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMWARE2_2</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ab219b6a100a1e42ed4eec5f1ce18897c_description">
+
+</div>
+
+  </div><div id="ab9088f84fa6b3dc0a8a7d765765b4d5c">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ab9088f84fa6b3dc0a8a7d765765b4d5c&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">FIRMWARE2_3</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ab9088f84fa6b3dc0a8a7d765765b4d5c_description">
+
+</div>
+
+  </div></div>
+  </div><div id="Typedefs">
+    <h3 class="sectionHeader">Typedefs</h3>
+    <div class="sectionContent"><div id="aaec58dfca8bc5450347136f6f9f1f556">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aaec58dfca8bc5450347136f6f9f1f556&quot;)">
+      <span class="type"><a href="ofArduino.html">ofArduino</a></span>
+      <a class="name">ofStandardFirmata</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aaec58dfca8bc5450347136f6f9f1f556_description">
+
+</div>
+
+  </div></div>
+  </div></div>
+  </div><div id="" class="classBlock">
+    <div class="classHeader">
+      <h1 class="classTitle">ofArduino</h1>
+    </div>
+    <div class="classDescription"><div class="textblock"><p>This class extend ofStandardFirmata and provides additional functionality like servo support through SysEx messages. use the OFstdFirmata for servo support... </p>
 </div></div>
-        <div class="classMethods"><div id="PublicAttributes">
+    <div class="classMethods"><div id="PublicAttributes">
     <h3 class="sectionHeader">Public Attributes</h3>
     <div class="sectionContent"><div id="a4f767ce1bf2cff3ceda67a5fff6d9e84">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a4f767ce1bf2cff3ceda67a5fff6d9e84&quot;)">
@@ -1159,7 +1845,7 @@
 
   </div></div>
   </div></div>
-      </div>
+  </div></div>
     </div>
 
 </div>
@@ -1176,6 +1862,13 @@
 </body>
 
 <div id="templates">
+  <div id="classTemplate" class="classBlock">
+    <div class="classHeader">
+      <h1 class="classTitle"></h1>
+    </div>
+    <div class="classDescription"></div>
+    <div class="classMethods"></div>
+  </div>
 
   <div id="sectionTemplate">
     <h3 class="sectionHeader"></h3>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ofRectangle</title>
+  <title>ofRectangle.h</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -25,28 +25,63 @@
 
 
 <div class="container">
-    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">types</a> &gt; <span id="classQuickNav">ofRectangle</span></div>
+    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">video</a> &gt; <span id="classQuickNav">ofRectangle.h</span></div>
     <nav class="navigator" role="navigation">
       <ul id="nav-parts">
         <li class="group selected">
           Topics
           <ul id="topics">
             <!--<li class="chapter"><a href="asd">sad</a></li>-->
-          <li class="chapter"><a href="#PublicAttributes">Public Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li></ul>
+          <li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#PublicAttributes">Public Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li></ul>
       </li></ul>
     </nav>
     <div class="main">
       <div class="content">
-        <div class="classHeader">
-          <h1 id="title">ofRectangle</h1>
-        </div>
-        <div class="classDescription"><div class="textblock"><p>A class representing a 2D rectangle. </p>
-<p><a class="el" href="classof_rectangle.html" title="A class representing a 2D rectangle. ">ofRectangle</a> is a simple container for describing the position and size of a 2D rectangle. Since the <code>width</code> and <code>height</code> variables can be negative, the x/y position is not garanteed to represent the upper right hand corner. For example, two visually identical rectangles can be represented in the following ways: </p><pre class="fragment">ofRectangle myRect(0, 0, 100, 100);
+
+      <div id="" class="classBlock">
+    <div class="classHeader">
+      <h1 class="classTitle">ofRectangle.h</h1>
+    </div>
+    <div class="classDescription"></div>
+    <div class="classMethods"><div id="Functions">
+    <h3 class="sectionHeader">Functions</h3>
+    <div class="sectionContent"><div id="a940ea1d005fcc7ac1799844c6ad12a80">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a940ea1d005fcc7ac1799844c6ad12a80&quot;)">
+      <span class="type">ostream &amp; </span>
+      <a class="name">operator&lt;&lt;</a>
+      <span class="args">(ostream &amp;os, const ofRectangle &amp;rect)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a940ea1d005fcc7ac1799844c6ad12a80_description">
+
+</div>
+
+  </div><div id="a0cc259ec4213f3e4df6fd006f228d64f">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a0cc259ec4213f3e4df6fd006f228d64f&quot;)">
+      <span class="type">istream &amp; </span>
+      <a class="name">operator&gt;&gt;</a>
+      <span class="args">(istream &amp;is, ofRectangle &amp;rect)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a0cc259ec4213f3e4df6fd006f228d64f_description">
+
+</div>
+
+  </div></div>
+  </div></div>
+  </div><div id="" class="classBlock">
+    <div class="classHeader">
+      <h1 class="classTitle">ofRectangle</h1>
+    </div>
+    <div class="classDescription"><div class="textblock"><p>A class representing a 2D rectangle. </p>
+<p><a class="el" href="ofRectangle.html" title="A class representing a 2D rectangle. ">ofRectangle</a> is a simple container for describing the position and size of a 2D rectangle. Since the <code>width</code> and <code>height</code> variables can be negative, the x/y position is not garanteed to represent the upper right hand corner. For example, two visually identical rectangles can be represented in the following ways: </p><pre class="fragment">ofRectangle myRect(0, 0, 100, 100);
 </pre><p>or </p><pre class="fragment">ofRectangle myRect(100, 100, -100, -100);
 </pre><p>While both representations will yield the same visual results in all openFrameworks renderers, the results of some method operations that modify x, y, width and height (such as scaling) produce mathematically correct, but visually different results for each of the above representations.</p>
-<p>To avoid this ambiguity, users planning to should prefer &quot;standardized&quot; rectangles. &quot;Standardized&quot; rectangles are rectangles whose width &gt;= 0 and height &gt;= 0. The <a class="el" href="classof_rectangle.html#a046a94f9d56c6da3d782fbde69f2b8db">ofRectangle::standardize()</a> method can be used to ensure that the is in it the &quot;standard&quot; form. </p>
+<p>To avoid this ambiguity, users planning to should prefer &quot;standardized&quot; rectangles. &quot;Standardized&quot; rectangles are rectangles whose width &gt;= 0 and height &gt;= 0. The <a class="el" href="ofRectangle.html#a046a94f9d56c6da3d782fbde69f2b8db">ofRectangle::standardize()</a> method can be used to ensure that the is in it the &quot;standard&quot; form. </p>
 </div></div>
-        <div class="classMethods"><div id="PublicAttributes">
+    <div class="classMethods"><div id="PublicAttributes">
     <h3 class="sectionHeader">Public Attributes</h3>
     <div class="sectionContent"><div id="a191e7c2fa179310eb3376e2607499a9e">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a191e7c2fa179310eb3376e2607499a9e&quot;)">
@@ -1387,7 +1422,7 @@
 
   </div></div>
   </div></div>
-      </div>
+  </div></div>
     </div>
 
 </div>
@@ -1404,6 +1439,13 @@
 </body>
 
 <div id="templates">
+  <div id="classTemplate" class="classBlock">
+    <div class="classHeader">
+      <h1 class="classTitle"></h1>
+    </div>
+    <div class="classDescription"></div>
+    <div class="classMethods"></div>
+  </div>
 
   <div id="sectionTemplate">
     <h3 class="sectionHeader"></h3>

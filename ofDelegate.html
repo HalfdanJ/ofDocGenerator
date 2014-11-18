@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ofDelegate.h</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheet.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+
+<div class="container">
+    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">video</a> &gt; <span id="classQuickNav">ofDelegate.h</span></div>
+    <nav class="navigator" role="navigation">
+      <ul id="nav-parts">
+        <li class="group selected">
+          Topics
+          <ul id="topics">
+            <!--<li class="chapter"><a href="asd">sad</a></li>-->
+          <li class="chapter"><a href="#PublicTypes">Public Types</a></li><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#PublicTypes">Public Types</a></li><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#PublicTypes">Public Types</a></li><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#PublicTypes">Public Types</a></li><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li></ul>
+      </li></ul>
+    </nav>
+    <div class="main">
+      <div class="content">
+
+      <div id="" class="classBlock">
+    <div class="classHeader">
+      <h1 class="classTitle">ofDelegate.h</h1>
+    </div>
+    <div class="classDescription"></div>
+    <div class="classMethods"></div>
+  </div><div id="" class="classBlock">
+    <div class="classHeader">
+      <h1 class="classTitle">ofEventAttendedException</h1>
+    </div>
+    <div class="classDescription"></div>
+    <div class="classMethods"></div>
+  </div><div id="" class="classBlock">
+    <div class="classHeader">
+      <h1 class="classTitle">ofDelegate</h1>
+    </div>
+    <div class="classDescription"></div>
+    <div class="classMethods"><div id="PublicTypes">
+    <h3 class="sectionHeader">Public Types</h3>
+    <div class="sectionContent"><div id="a28246e6ecc931479d32478e2d6896860">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a28246e6ecc931479d32478e2d6896860&quot;)">
+      <span class="type">bool(TObj::* </span>
+      <a class="name">NotifyMethod</a>
+      <span class="args">)(const void *, TArgs &amp;)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a28246e6ecc931479d32478e2d6896860_description">
+
+</div>
+
+  </div></div>
+  </div><div id="ProtectedAttributes">
+    <h3 class="sectionHeader">Protected Attributes</h3>
+    <div class="sectionContent"><div id="ac653635506343fd5589b8491e33b479e">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ac653635506343fd5589b8491e33b479e&quot;)">
+      <span class="type">TObj * </span>
+      <a class="name">_receiverObject</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ac653635506343fd5589b8491e33b479e_description">
+
+</div>
+
+  </div><div id="ab02b1b5b5fe31306c7a69c9db9d4d3a7">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ab02b1b5b5fe31306c7a69c9db9d4d3a7&quot;)">
+      <span class="type"><a href="ofDelegate.html#1a28246e6ecc931479d32478e2d6896860">NotifyMethod</a></span>
+      <a class="name">_receiverMethod</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ab02b1b5b5fe31306c7a69c9db9d4d3a7_description">
+
+</div>
+
+  </div><div id="ae421e97d0d743d63a5c8151db39ddfdf">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ae421e97d0d743d63a5c8151db39ddfdf&quot;)">
+      <span class="type">Poco::Mutex </span>
+      <a class="name">_mutex</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ae421e97d0d743d63a5c8151db39ddfdf_description">
+
+</div>
+
+  </div></div>
+  </div><div id="PublicFunctions">
+    <h3 class="sectionHeader">Public Functions</h3>
+    <div class="sectionContent"><div id="a4f0b3b14165da84ad23db475e2122017">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a4f0b3b14165da84ad23db475e2122017&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ofDelegate</a>
+      <span class="args">(TObj *obj, NotifyMethod method, int prio)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a4f0b3b14165da84ad23db475e2122017_description">
+
+</div>
+
+  </div><div id="a35c66d22275b03afc433b92f0ff228b8">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a35c66d22275b03afc433b92f0ff228b8&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ofDelegate</a>
+      <span class="args">(const ofDelegate &amp;delegate)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a35c66d22275b03afc433b92f0ff228b8_description">
+
+</div>
+
+  </div><div id="a08e4376e9a0033d89924120372024956">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a08e4376e9a0033d89924120372024956&quot;)">
+      <span class="type"><a href="ofDelegate.html">ofDelegate</a></span>
+      <a class="name">operator=</a>
+      <span class="args">(const ofDelegate &amp;delegate)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a08e4376e9a0033d89924120372024956_description">
+
+</div>
+
+  </div><div id="a1107042aa2692cc2746a09d1d4a3287b">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a1107042aa2692cc2746a09d1d4a3287b&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">~ofDelegate</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a1107042aa2692cc2746a09d1d4a3287b_description">
+
+</div>
+
+  </div><div id="aabe8c8db8d4473af8b8846a8cea2395e">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aabe8c8db8d4473af8b8846a8cea2395e&quot;)">
+      <span class="type">bool </span>
+      <a class="name">notify</a>
+      <span class="args">(const void *sender, TArgs &amp;arguments)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aabe8c8db8d4473af8b8846a8cea2395e_description">
+
+</div>
+
+  </div><div id="a6446c4b4f426abcb315f35916ed7c472">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a6446c4b4f426abcb315f35916ed7c472&quot;)">
+      <span class="type">bool </span>
+      <a class="name">equals</a>
+      <span class="args">(const Poco::AbstractDelegate&lt; TArgs &gt; &amp;other) const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a6446c4b4f426abcb315f35916ed7c472_description">
+
+</div>
+
+  </div><div id="a1230bb5b862dfa5f936d08390c17e8d8">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a1230bb5b862dfa5f936d08390c17e8d8&quot;)">
+      <span class="type">Poco::AbstractDelegate&lt; TArgs &gt; * </span>
+      <a class="name">clone</a>
+      <span class="args">() const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a1230bb5b862dfa5f936d08390c17e8d8_description">
+
+</div>
+
+  </div><div id="a7ec2bb26b96d8779b0a2932ced23eca5">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a7ec2bb26b96d8779b0a2932ced23eca5&quot;)">
+      <span class="type">void </span>
+      <a class="name">disable</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a7ec2bb26b96d8779b0a2932ced23eca5_description">
+
+</div>
+
+  </div></div>
+  </div></div>
+  </div><div id="" class="classBlock">
+    <div class="classHeader">
+      <h1 class="classTitle">ofDelegate&lt; TObj, TArgs, false &gt;</h1>
+    </div>
+    <div class="classDescription"></div>
+    <div class="classMethods"><div id="PublicTypes">
+    <h3 class="sectionHeader">Public Types</h3>
+    <div class="sectionContent"><div id="a9048bac64115d8149350f401531143bd">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a9048bac64115d8149350f401531143bd&quot;)">
+      <span class="type">bool(TObj::* </span>
+      <a class="name">NotifyMethod</a>
+      <span class="args">)(TArgs &amp;)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a9048bac64115d8149350f401531143bd_description">
+
+</div>
+
+  </div></div>
+  </div><div id="ProtectedAttributes">
+    <h3 class="sectionHeader">Protected Attributes</h3>
+    <div class="sectionContent"><div id="a87913990f98494f49f29d4a5e7695d15">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a87913990f98494f49f29d4a5e7695d15&quot;)">
+      <span class="type">TObj * </span>
+      <a class="name">_receiverObject</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a87913990f98494f49f29d4a5e7695d15_description">
+
+</div>
+
+  </div><div id="a657b471e7def9c437fe942344fb060db">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a657b471e7def9c437fe942344fb060db&quot;)">
+      <span class="type"><a href="ofDelegate301TObj0001TArgs0001false014.html#1a9048bac64115d8149350f401531143bd">NotifyMethod</a></span>
+      <a class="name">_receiverMethod</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a657b471e7def9c437fe942344fb060db_description">
+
+</div>
+
+  </div><div id="a489d77e597cbeeb84e7b345ad0f6509a">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a489d77e597cbeeb84e7b345ad0f6509a&quot;)">
+      <span class="type">Poco::Mutex </span>
+      <a class="name">_mutex</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a489d77e597cbeeb84e7b345ad0f6509a_description">
+
+</div>
+
+  </div></div>
+  </div><div id="PublicFunctions">
+    <h3 class="sectionHeader">Public Functions</h3>
+    <div class="sectionContent"><div id="a892b26902cfdc8fe44a397dfe5ff5ab6">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a892b26902cfdc8fe44a397dfe5ff5ab6&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ofDelegate</a>
+      <span class="args">(TObj *obj, NotifyMethod method, int prio)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a892b26902cfdc8fe44a397dfe5ff5ab6_description">
+
+</div>
+
+  </div><div id="a27612ed7ce4e7355f654054402dd85c9">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a27612ed7ce4e7355f654054402dd85c9&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ofDelegate</a>
+      <span class="args">(const ofDelegate &amp;delegate)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a27612ed7ce4e7355f654054402dd85c9_description">
+
+</div>
+
+  </div><div id="a3d9383df3bbd9f2dc4ce2b763699f156">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a3d9383df3bbd9f2dc4ce2b763699f156&quot;)">
+      <span class="type"><a href="ofDelegate.html">ofDelegate</a></span>
+      <a class="name">operator=</a>
+      <span class="args">(const ofDelegate &amp;delegate)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a3d9383df3bbd9f2dc4ce2b763699f156_description">
+
+</div>
+
+  </div><div id="a374189e2f4035b9b88c0989e0fb8071e">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a374189e2f4035b9b88c0989e0fb8071e&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">~ofDelegate</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a374189e2f4035b9b88c0989e0fb8071e_description">
+
+</div>
+
+  </div><div id="a9299e2c68a3766ac10a71a740d33b376">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a9299e2c68a3766ac10a71a740d33b376&quot;)">
+      <span class="type">bool </span>
+      <a class="name">notify</a>
+      <span class="args">(const void *sender, TArgs &amp;arguments)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a9299e2c68a3766ac10a71a740d33b376_description">
+
+</div>
+
+  </div><div id="a0ad42ab6ee0f6e9b87712075f2753efe">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a0ad42ab6ee0f6e9b87712075f2753efe&quot;)">
+      <span class="type">bool </span>
+      <a class="name">equals</a>
+      <span class="args">(const Poco::AbstractDelegate&lt; TArgs &gt; &amp;other) const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a0ad42ab6ee0f6e9b87712075f2753efe_description">
+
+</div>
+
+  </div><div id="af52e7b72562f5b93211940c70bb01b5c">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#af52e7b72562f5b93211940c70bb01b5c&quot;)">
+      <span class="type">Poco::AbstractDelegate&lt; TArgs &gt; * </span>
+      <a class="name">clone</a>
+      <span class="args">() const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="af52e7b72562f5b93211940c70bb01b5c_description">
+
+</div>
+
+  </div><div id="a3d2819d0a7e9dc2b0585bff67024896a">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a3d2819d0a7e9dc2b0585bff67024896a&quot;)">
+      <span class="type">void </span>
+      <a class="name">disable</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a3d2819d0a7e9dc2b0585bff67024896a_description">
+
+</div>
+
+  </div></div>
+  </div></div>
+  </div><div id="" class="classBlock">
+    <div class="classHeader">
+      <h1 class="classTitle">ofDelegate&lt; TObj, void, true &gt;</h1>
+    </div>
+    <div class="classDescription"></div>
+    <div class="classMethods"><div id="PublicTypes">
+    <h3 class="sectionHeader">Public Types</h3>
+    <div class="sectionContent"><div id="a196f0750fad9d80a2efd66be22df6e49">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a196f0750fad9d80a2efd66be22df6e49&quot;)">
+      <span class="type">bool(TObj::* </span>
+      <a class="name">NotifyMethod</a>
+      <span class="args">)(const void *)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a196f0750fad9d80a2efd66be22df6e49_description">
+
+</div>
+
+  </div></div>
+  </div><div id="ProtectedAttributes">
+    <h3 class="sectionHeader">Protected Attributes</h3>
+    <div class="sectionContent"><div id="a1ae6a9d1e90d2f57f1ea4eeb0fdb957f">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a1ae6a9d1e90d2f57f1ea4eeb0fdb957f&quot;)">
+      <span class="type">TObj * </span>
+      <a class="name">_receiverObject</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a1ae6a9d1e90d2f57f1ea4eeb0fdb957f_description">
+
+</div>
+
+  </div><div id="a7f09d48a1fadd41e57cc85be6721c5cf">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a7f09d48a1fadd41e57cc85be6721c5cf&quot;)">
+      <span class="type"><a href="ofDelegate301TObj0001void0001true014.html#1a196f0750fad9d80a2efd66be22df6e49">NotifyMethod</a></span>
+      <a class="name">_receiverMethod</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a7f09d48a1fadd41e57cc85be6721c5cf_description">
+
+</div>
+
+  </div><div id="a0aba3ebb4ebb8d4dfd46da9c9f106fe5">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a0aba3ebb4ebb8d4dfd46da9c9f106fe5&quot;)">
+      <span class="type">Poco::Mutex </span>
+      <a class="name">_mutex</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a0aba3ebb4ebb8d4dfd46da9c9f106fe5_description">
+
+</div>
+
+  </div></div>
+  </div><div id="PublicFunctions">
+    <h3 class="sectionHeader">Public Functions</h3>
+    <div class="sectionContent"><div id="a1a0be45e3521eb24dfb95cc72f97876e">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a1a0be45e3521eb24dfb95cc72f97876e&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ofDelegate</a>
+      <span class="args">(TObj *obj, NotifyMethod method, int prio)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a1a0be45e3521eb24dfb95cc72f97876e_description">
+
+</div>
+
+  </div><div id="a82cee44706e5710bee269dab8d9177f2">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a82cee44706e5710bee269dab8d9177f2&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ofDelegate</a>
+      <span class="args">(const ofDelegate &amp;delegate)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a82cee44706e5710bee269dab8d9177f2_description">
+
+</div>
+
+  </div><div id="adec1ca0bfbfe699d1c9605bd7e97a3e3">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#adec1ca0bfbfe699d1c9605bd7e97a3e3&quot;)">
+      <span class="type"><a href="ofDelegate.html">ofDelegate</a></span>
+      <a class="name">operator=</a>
+      <span class="args">(const ofDelegate &amp;delegate)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="adec1ca0bfbfe699d1c9605bd7e97a3e3_description">
+
+</div>
+
+  </div><div id="a658f6c73067c5b8b2ea5f370d29fdf6e">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a658f6c73067c5b8b2ea5f370d29fdf6e&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">~ofDelegate</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a658f6c73067c5b8b2ea5f370d29fdf6e_description">
+
+</div>
+
+  </div><div id="ad07b9aff61f6f6dd173aa0215a1f6aee">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ad07b9aff61f6f6dd173aa0215a1f6aee&quot;)">
+      <span class="type">bool </span>
+      <a class="name">notify</a>
+      <span class="args">(const void *sender)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ad07b9aff61f6f6dd173aa0215a1f6aee_description">
+
+</div>
+
+  </div><div id="a346fd53cc5db39c05020c6c4b865b053">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a346fd53cc5db39c05020c6c4b865b053&quot;)">
+      <span class="type">bool </span>
+      <a class="name">equals</a>
+      <span class="args">(const Poco::AbstractDelegate&lt; void &gt; &amp;other) const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a346fd53cc5db39c05020c6c4b865b053_description">
+
+</div>
+
+  </div><div id="af9a56c2a1b08dabc5c7bc2dc182c3ff0">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#af9a56c2a1b08dabc5c7bc2dc182c3ff0&quot;)">
+      <span class="type">Poco::AbstractDelegate&lt; void &gt; * </span>
+      <a class="name">clone</a>
+      <span class="args">() const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="af9a56c2a1b08dabc5c7bc2dc182c3ff0_description">
+
+</div>
+
+  </div><div id="a9bcbf74e6a1da3dc1f7e8c08190fcb41">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a9bcbf74e6a1da3dc1f7e8c08190fcb41&quot;)">
+      <span class="type">void </span>
+      <a class="name">disable</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a9bcbf74e6a1da3dc1f7e8c08190fcb41_description">
+
+</div>
+
+  </div></div>
+  </div></div>
+  </div><div id="" class="classBlock">
+    <div class="classHeader">
+      <h1 class="classTitle">ofDelegate&lt; TObj, void, false &gt;</h1>
+    </div>
+    <div class="classDescription"></div>
+    <div class="classMethods"><div id="PublicTypes">
+    <h3 class="sectionHeader">Public Types</h3>
+    <div class="sectionContent"><div id="a001196fcd4fa591935d7c77679ce7460">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a001196fcd4fa591935d7c77679ce7460&quot;)">
+      <span class="type">void(TObj::* </span>
+      <a class="name">NotifyMethod</a>
+      <span class="args">)()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a001196fcd4fa591935d7c77679ce7460_description">
+
+</div>
+
+  </div></div>
+  </div><div id="ProtectedAttributes">
+    <h3 class="sectionHeader">Protected Attributes</h3>
+    <div class="sectionContent"><div id="a3725aa5e02a929c577c9c8782007bf95">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a3725aa5e02a929c577c9c8782007bf95&quot;)">
+      <span class="type">TObj * </span>
+      <a class="name">_receiverObject</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a3725aa5e02a929c577c9c8782007bf95_description">
+
+</div>
+
+  </div><div id="abef4066d3a20b9c0fa939b05d6ed2518">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#abef4066d3a20b9c0fa939b05d6ed2518&quot;)">
+      <span class="type"><a href="ofDelegate301TObj0001void0001false014.html#1a001196fcd4fa591935d7c77679ce7460">NotifyMethod</a></span>
+      <a class="name">_receiverMethod</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="abef4066d3a20b9c0fa939b05d6ed2518_description">
+
+</div>
+
+  </div><div id="abc50ace2647e4d194cabbd7134952b01">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#abc50ace2647e4d194cabbd7134952b01&quot;)">
+      <span class="type">Poco::Mutex </span>
+      <a class="name">_mutex</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="abc50ace2647e4d194cabbd7134952b01_description">
+
+</div>
+
+  </div></div>
+  </div><div id="PublicFunctions">
+    <h3 class="sectionHeader">Public Functions</h3>
+    <div class="sectionContent"><div id="abe1c2a2b51f71d3a99ae72d819595e81">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#abe1c2a2b51f71d3a99ae72d819595e81&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ofDelegate</a>
+      <span class="args">(TObj *obj, NotifyMethod method, int prio)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="abe1c2a2b51f71d3a99ae72d819595e81_description">
+
+</div>
+
+  </div><div id="af7e5ecc5f2975ef095ae38221e3b6317">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#af7e5ecc5f2975ef095ae38221e3b6317&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">ofDelegate</a>
+      <span class="args">(const ofDelegate &amp;delegate)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="af7e5ecc5f2975ef095ae38221e3b6317_description">
+
+</div>
+
+  </div><div id="ac485b8a19c135e5611d7380084eddd99">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ac485b8a19c135e5611d7380084eddd99&quot;)">
+      <span class="type"><a href="ofDelegate.html">ofDelegate</a></span>
+      <a class="name">operator=</a>
+      <span class="args">(const ofDelegate &amp;delegate)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ac485b8a19c135e5611d7380084eddd99_description">
+
+</div>
+
+  </div><div id="a8a996044940a8cf02179e200191a0021">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a8a996044940a8cf02179e200191a0021&quot;)">
+      <span class="type" style="display: none;"> </span>
+      <a class="name">~ofDelegate</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a8a996044940a8cf02179e200191a0021_description">
+
+</div>
+
+  </div><div id="a6c8b0747723e68ae87b3b7d078bdbd84">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a6c8b0747723e68ae87b3b7d078bdbd84&quot;)">
+      <span class="type">bool </span>
+      <a class="name">notify</a>
+      <span class="args">(const void *sender)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a6c8b0747723e68ae87b3b7d078bdbd84_description">
+
+</div>
+
+  </div><div id="a75b1e37df89c57ca9f53294b2193d750">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a75b1e37df89c57ca9f53294b2193d750&quot;)">
+      <span class="type">bool </span>
+      <a class="name">equals</a>
+      <span class="args">(const Poco::AbstractDelegate&lt; void &gt; &amp;other) const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a75b1e37df89c57ca9f53294b2193d750_description">
+
+</div>
+
+  </div><div id="a235edde05f1268d9490ec99c477d065a">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a235edde05f1268d9490ec99c477d065a&quot;)">
+      <span class="type">Poco::AbstractDelegate&lt; void &gt; * </span>
+      <a class="name">clone</a>
+      <span class="args">() const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a235edde05f1268d9490ec99c477d065a_description">
+
+</div>
+
+  </div><div id="acdbd1373eba6b215f6ca0bbddd23f15f">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#acdbd1373eba6b215f6ca0bbddd23f15f&quot;)">
+      <span class="type">void </span>
+      <a class="name">disable</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="acdbd1373eba6b215f6ca0bbddd23f15f_description">
+
+</div>
+
+  </div></div>
+  </div></div>
+  </div></div>
+    </div>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+<script src="script.js"></script>
+
+</body>
+
+<div id="templates">
+  <div id="classTemplate" class="classBlock">
+    <div class="classHeader">
+      <h1 class="classTitle"></h1>
+    </div>
+    <div class="classDescription"></div>
+    <div class="classMethods"></div>
+  </div>
+
+  <div id="sectionTemplate">
+    <h3 class="sectionHeader"></h3>
+    <div class="sectionContent"></div>
+  </div>
+
+  <div id="classMethodTemplate">
+    <div class="methodHeader">
+      <span class="type"></span>
+      <a class="name"></a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none"></div>
+
+  </div>
+
+</div>
+
+</html>

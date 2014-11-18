@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ofThread</title>
+  <title>ofThread.h</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -25,7 +25,7 @@
 
 
 <div class="container">
-    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">utils</a> &gt; <span id="classQuickNav">ofThread</span></div>
+    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">video</a> &gt; <span id="classQuickNav">ofThread.h</span></div>
     <nav class="navigator" role="navigation">
       <ul id="nav-parts">
         <li class="group selected">
@@ -37,25 +37,33 @@
     </nav>
     <div class="main">
       <div class="content">
-        <div class="classHeader">
-          <h1 id="title">ofThread</h1>
-        </div>
-        <div class="classDescription"><div class="textblock"><p>A threaded base class with a built in mutex for convenience. </p>
+
+      <div id="" class="classBlock">
+    <div class="classHeader">
+      <h1 class="classTitle">ofThread.h</h1>
+    </div>
+    <div class="classDescription"></div>
+    <div class="classMethods"></div>
+  </div><div id="" class="classBlock">
+    <div class="classHeader">
+      <h1 class="classTitle">ofThread</h1>
+    </div>
+    <div class="classDescription"><div class="textblock"><p>A threaded base class with a built in mutex for convenience. </p>
 <p>Users can extend this base class by public inheritance like this:</p>
-<div class="fragment"><div class="line"><span class="keyword">class </span>MyThreadedClass: <span class="keyword">public</span> <a class="code" href="classof_thread.html">ofThread</a></div>
+<div class="fragment"><div class="line"><span class="keyword">class </span>MyThreadedClass: <span class="keyword">public</span> <a class="code" href="ofThread.html">ofThread</a></div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">public</span>:</div>
-<div class="line">    <span class="keywordtype">void</span> <a class="code" href="classof_thread.html#a7e90ddaf0113435c451e6daf600c33f1">threadedFunction</a>()</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code" href="ofThread.html#a7e90ddaf0113435c451e6daf600c33f1">threadedFunction</a>()</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keywordflow">while</span>(<a class="code" href="classof_thread.html#a07a51505ea9f5407e8c5999368bd54e2">isThreadRunning</a>())</div>
+<div class="line">        <span class="keywordflow">while</span>(<a class="code" href="ofThread.html#a07a51505ea9f5407e8c5999368bd54e2">isThreadRunning</a>())</div>
 <div class="line">        {</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line">};</div>
-</div><!-- fragment --><p><a class="el" href="classof_thread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> is a convenient wrapper for Poco::Thread, Poco::Runnable and Poco::Mutex. It represents a simplified (sometimes overly simplified - or simplified in ways that might not make sense for your project) pathway for quickly writing threaded classes. Poco::Runnable represents a class that can be &quot;run&quot; via its void run() method. Poco::Thread is able to spawn a thread and &quot;run&quot; the contents of a class that extends the Poco::Runnable interface (which <a class="el" href="classof_thread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> does). Poco::FastMutex, (aka ofMutex) is a &quot;mutual exclusion&quot; object that prevents two threads from accessing the same data at the same time. It is important to know that Poco::FastMutex (aka ofMutex) is not &quot;recursive&quot; while Poco::Mutex is. This means that if the same thread attempts to lock a thread while it ALREADY has a lock on the mutex, the program will lock up and go nowhere. Thus, it is important that <a class="el" href="classof_thread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> subclasses carefully their use of the mutex. Currently <a class="el" href="classof_thread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> does not lock its own mutex at any point (e.g. <a class="el" href="classof_thread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a>&apos;s internal variables are not thread safe). This is a somewhat dangerous convenience that is (theoretically) supposed to make it easier for subclasses to avoid the recursive mutex &quot;problem&quot;. The situation that arises from two threads simultanously reading or writing from the same shared data (shared data occupies the same physical location in memory) leads to something called a &quot;race condition&quot;, which can lead to deadlocks. A deadlock is as bad as it sounds. It means your program just stops. ofMutex prevents race conditions, deadlocks and crashes by permitting only one thread access to shared data at a time. When using mutexes to protect data, the trick is to always be sure to unlock the mutex when finished. This problem can often be avoided by using an Poco::FastMutex::ScopedLock (aka ofScopedLock). See the the documentation for more information. Finally, there are many cases where it might make more sense to use Poco::Thread, Poco::Runnable and Poco::FastMutex directly rather than using <a class="el" href="classof_thread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a>. Further, cross platform thread management will be alleviated with the std::thread support library included with C++11.</p>
-<p>Uncaught Exceptions throw from within <a class="el" href="classof_thread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> will cause the thread to stop and the Exception will be delivered to the default ofBaseThreadErrorHandler. The ofBaseThreadErrorHandler will print the exception details, if available. The ofBaseThreadErrorHandler offers no opportunity to take corrective action and only allows the user to receive more valuable debugging information about the uncaught exception. Users should design <a class="el" href="classof_thread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> subclasses to catch and respond to all anticipated exceptions. </p>
+</div><!-- fragment --><p><a class="el" href="ofThread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> is a convenient wrapper for Poco::Thread, Poco::Runnable and Poco::Mutex. It represents a simplified (sometimes overly simplified - or simplified in ways that might not make sense for your project) pathway for quickly writing threaded classes. Poco::Runnable represents a class that can be &quot;run&quot; via its void run() method. Poco::Thread is able to spawn a thread and &quot;run&quot; the contents of a class that extends the Poco::Runnable interface (which <a class="el" href="ofThread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> does). Poco::FastMutex, (aka ofMutex) is a &quot;mutual exclusion&quot; object that prevents two threads from accessing the same data at the same time. It is important to know that Poco::FastMutex (aka ofMutex) is not &quot;recursive&quot; while Poco::Mutex is. This means that if the same thread attempts to lock a thread while it ALREADY has a lock on the mutex, the program will lock up and go nowhere. Thus, it is important that <a class="el" href="ofThread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> subclasses carefully their use of the mutex. Currently <a class="el" href="ofThread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> does not lock its own mutex at any point (e.g. <a class="el" href="ofThread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a>&apos;s internal variables are not thread safe). This is a somewhat dangerous convenience that is (theoretically) supposed to make it easier for subclasses to avoid the recursive mutex &quot;problem&quot;. The situation that arises from two threads simultanously reading or writing from the same shared data (shared data occupies the same physical location in memory) leads to something called a &quot;race condition&quot;, which can lead to deadlocks. A deadlock is as bad as it sounds. It means your program just stops. ofMutex prevents race conditions, deadlocks and crashes by permitting only one thread access to shared data at a time. When using mutexes to protect data, the trick is to always be sure to unlock the mutex when finished. This problem can often be avoided by using an Poco::FastMutex::ScopedLock (aka ofScopedLock). See the the documentation for more information. Finally, there are many cases where it might make more sense to use Poco::Thread, Poco::Runnable and Poco::FastMutex directly rather than using <a class="el" href="ofThread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a>. Further, cross platform thread management will be alleviated with the std::thread support library included with C++11.</p>
+<p>Uncaught Exceptions throw from within <a class="el" href="ofThread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> will cause the thread to stop and the Exception will be delivered to the default ofBaseThreadErrorHandler. The ofBaseThreadErrorHandler will print the exception details, if available. The ofBaseThreadErrorHandler offers no opportunity to take corrective action and only allows the user to receive more valuable debugging information about the uncaught exception. Users should design <a class="el" href="ofThread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> subclasses to catch and respond to all anticipated exceptions. </p>
 </div></div>
-        <div class="classMethods"><div id="Constructionanddestruction">
+    <div class="classMethods"><div id="Constructionanddestruction">
     <h3 class="sectionHeader">Construction and destruction</h3>
     <div class="sectionContent"><div id="a6e9afd83f8dd763f7230d13286611a9c">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a6e9afd83f8dd763f7230d13286611a9c&quot;)">
@@ -67,7 +75,7 @@
 
     <div class="methodDescription " style="display:none" id="a6e9afd83f8dd763f7230d13286611a9c_description">
 
-<p>Create an <a class="el" href="classof_thread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a>. </p>
+<p>Create an <a class="el" href="ofThread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a>. </p>
 
 </div>
 
@@ -81,7 +89,7 @@
 
     <div class="methodDescription " style="display:none" id="a8faffc9621a184465b9fdfef0b36b2fd_description">
 
-<p>Destroy the <a class="el" href="classof_thread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a>. </p>
+<p>Destroy the <a class="el" href="ofThread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a>. </p>
 <dl class="section warning"><dt>Warning</dt><dd>The destructor WILL NOT stop the thread or wait for the underlying Poco::Thread to finish. For threads that require the correct deallocation of resources, the user MUST call waitForThread(...); to ensure that the thread is stopped and the thread&apos;s resources are released. Improper release of resources or memory can lead to segementation faults and other errors. </dd></dl>
 
 </div>
@@ -148,10 +156,9 @@
     <div class="methodDescription " style="display:none" id="a46295f96e3730f6449adca48426c967e_description">
 
 <p>Start the thread with options. </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mutexesBlock</td><td>Set blocking to true if you want the mutex to block when <a class="el" href="classof_thread.html#a8b682673b3d11225785b74f68fc3ce96" title="Try to lock the mutex. ">lock()</a> is called. </td></tr>
+    <tr><td class="paramname">mutexesBlock</td><td>Set blocking to true if you want the mutex to block when <a class="el" href="ofThread.html#a8b682673b3d11225785b74f68fc3ce96" title="Try to lock the mutex. ">lock()</a> is called. </td></tr>
     <tr><td class="paramname">verbose</td><td>use verbose logging methods. </td></tr>
   </table>
   </dd>
@@ -172,7 +179,7 @@
 <p>Start the thread with options. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mutexBlocks</td><td>Set blocking to true if you want the mutex to block when <a class="el" href="classof_thread.html#a8b682673b3d11225785b74f68fc3ce96" title="Try to lock the mutex. ">lock()</a> is called. </td></tr>
+    <tr><td class="paramname">mutexBlocks</td><td>Set blocking to true if you want the mutex to block when <a class="el" href="ofThread.html#a8b682673b3d11225785b74f68fc3ce96" title="Try to lock the mutex. ">lock()</a> is called. </td></tr>
   </table>
   </dd>
 </dl>
@@ -191,7 +198,7 @@
     <div class="methodDescription " style="display:none" id="a3102a3bf7897f579d70a418ae3ed010b_description">
 
 <p>Stop the thread. </p>
-<p>This does immediately stop the thread from processing, but will only set a flag that must be checked from within your <a class="el" href="classof_thread.html#a7e90ddaf0113435c451e6daf600c33f1" title="The thread&apos;s run function. ">threadedFunction()</a> by calling <a class="el" href="classof_thread.html#a07a51505ea9f5407e8c5999368bd54e2" title="Check the running status of the thread. ">isThreadRunning()</a>. If the user wants to both stop the thread AND wait for the thread to finish processing, the user should call waitForThread(true, ...). </p>
+<p>This does immediately stop the thread from processing, but will only set a flag that must be checked from within your <a class="el" href="ofThread.html#a7e90ddaf0113435c451e6daf600c33f1" title="The thread&apos;s run function. ">threadedFunction()</a> by calling <a class="el" href="ofThread.html#a07a51505ea9f5407e8c5999368bd54e2" title="Check the running status of the thread. ">isThreadRunning()</a>. If the user wants to both stop the thread AND wait for the thread to finish processing, the user should call waitForThread(true, ...). </p>
 
 </div>
 
@@ -243,10 +250,10 @@
     <div class="methodDescription " style="display:none" id="a4faefa778ff5338ee7add57dd5ec2a5f_description">
 
 <p>Wait for the thread to exit (aka &quot;joining&quot; the thread). </p>
-<p>This method waits for a thread will &quot;block&quot; and wait for the thread (aka &quot;join&quot; the thread) before it returns. This allows the user to be sure that the thread is properly cleaned up. An example of when this might be particularly important is if the <a class="el" href="classof_thread.html#a7e90ddaf0113435c451e6daf600c33f1" title="The thread&apos;s run function. ">threadedFunction()</a> is opening a set of network sockets, or downloading data from the web. Destroying an <a class="el" href="classof_thread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> subclass without releasing those sockets (or other resources), may result in segmentation faults, error signals or other undefined behaviors.</p>
+<p>This method waits for a thread will &quot;block&quot; and wait for the thread (aka &quot;join&quot; the thread) before it returns. This allows the user to be sure that the thread is properly cleaned up. An example of when this might be particularly important is if the <a class="el" href="ofThread.html#a7e90ddaf0113435c451e6daf600c33f1" title="The thread&apos;s run function. ">threadedFunction()</a> is opening a set of network sockets, or downloading data from the web. Destroying an <a class="el" href="ofThread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> subclass without releasing those sockets (or other resources), may result in segmentation faults, error signals or other undefined behaviors.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">callStopThread</td><td>Set stop to true if you want to signal the thread to exit before waiting. This is the equivalent to calling <a class="el" href="classof_thread.html#a3102a3bf7897f579d70a418ae3ed010b" title="Stop the thread. ">stopThread()</a>. If you your threadedFunction uses a while-loop that depends on <a class="el" href="classof_thread.html#a07a51505ea9f5407e8c5999368bd54e2" title="Check the running status of the thread. ">isThreadRunning()</a> and you do not call <a class="el" href="classof_thread.html#a3102a3bf7897f579d70a418ae3ed010b" title="Stop the thread. ">stopThread()</a> or set stop == true, waitForThread will hang indefinitely. Set stop == false ONLY if you have already called <a class="el" href="classof_thread.html#a3102a3bf7897f579d70a418ae3ed010b" title="Stop the thread. ">stopThread()</a> and you simply need to be sure your thread has finished its tasks.</td></tr>
+    <tr><td class="paramname">callStopThread</td><td>Set stop to true if you want to signal the thread to exit before waiting. This is the equivalent to calling <a class="el" href="ofThread.html#a3102a3bf7897f579d70a418ae3ed010b" title="Stop the thread. ">stopThread()</a>. If you your threadedFunction uses a while-loop that depends on <a class="el" href="ofThread.html#a07a51505ea9f5407e8c5999368bd54e2" title="Check the running status of the thread. ">isThreadRunning()</a> and you do not call <a class="el" href="ofThread.html#a3102a3bf7897f579d70a418ae3ed010b" title="Stop the thread. ">stopThread()</a> or set stop == true, waitForThread will hang indefinitely. Set stop == false ONLY if you have already called <a class="el" href="ofThread.html#a3102a3bf7897f579d70a418ae3ed010b" title="Stop the thread. ">stopThread()</a> and you simply need to be sure your thread has finished its tasks.</td></tr>
     <tr><td class="paramname">milliseconds</td><td>If millseconds is set to INFINITE_JOIN_TIMEOUT, the waitForThread will wait indefinitely for the thread to complete. If milliseconds is set to a lower number (e.g. 10000 for 10 seconds), waitForThread will wait for 10000 milliseconds and if the thread has not yet stopped it will return and log an error message. Users are encouraged to use the default INFINITE_JOIN_TIMEOUT. If the user is unhappy with the amount of time it takes to join a thread, the user is encouraged to seek more expedient ways of signalling their desire for a thread to complete via other signalling methods such as Poco::Event, Poco::Condition, or Poco::Semaphore. </td></tr>
   </table>
   </dd>
@@ -272,11 +279,11 @@
     <div class="methodDescription " style="display:none" id="a9e99dc383aba491a664efad32d2d7ccb_description">
 
 <p>Tell the thread to sleep for a certain amount of milliseconds. </p>
-<p>This is useful inside the <a class="el" href="classof_thread.html#a7e90ddaf0113435c451e6daf600c33f1" title="The thread&apos;s run function. ">threadedFunction()</a> when a thread is waiting for input to process:</p>
+<p>This is useful inside the <a class="el" href="ofThread.html#a7e90ddaf0113435c451e6daf600c33f1" title="The thread&apos;s run function. ">threadedFunction()</a> when a thread is waiting for input to process:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> MyThreadedClass::threadedFunction()</div>
 <div class="line">{</div>
 <div class="line">       <span class="comment">// start</span></div>
-<div class="line">       <span class="keywordflow">while</span>(<a class="code" href="classof_thread.html#a07a51505ea9f5407e8c5999368bd54e2">isThreadRunning</a>())</div>
+<div class="line">       <span class="keywordflow">while</span>(<a class="code" href="ofThread.html#a07a51505ea9f5407e8c5999368bd54e2">isThreadRunning</a>())</div>
 <div class="line">    {</div>
 <div class="line">        <span class="comment">// bReadyToProcess can be set from outside the threadedFuntion.</span></div>
 <div class="line">        <span class="comment">// perhaps by another thread that downloads data, or loads</span></div>
@@ -290,7 +297,7 @@
 <div class="line">        <span class="keywordflow">else</span></div>
 <div class="line">        {</div>
 <div class="line">               <span class="comment">// sleep the thread to give up some cpu</span></div>
-<div class="line">               <a class="code" href="classof_thread.html#a9e99dc383aba491a664efad32d2d7ccb">sleep</a>(20);</div>
+<div class="line">               <a class="code" href="ofThread.html#a9e99dc383aba491a664efad32d2d7ccb">sleep</a>(20);</div>
 <div class="line">           }</div>
 <div class="line">       }</div>
 <div class="line">       <span class="comment">// done</span></div>
@@ -316,7 +323,7 @@
     <div class="methodDescription " style="display:none" id="a35bf3cab66dc5dda34b172784b401003_description">
 
 <p>Tell the thread to give up its CPU time other threads. </p>
-<p>This method is similar to <a class="el" href="classof_thread.html#a9e99dc383aba491a664efad32d2d7ccb" title="Tell the thread to sleep for a certain amount of milliseconds. ">sleep()</a> and can often be used in the same way. The main difference is that 1 millisecond (the minimum sleep time available with <a class="el" href="classof_thread.html#a9e99dc383aba491a664efad32d2d7ccb" title="Tell the thread to sleep for a certain amount of milliseconds. ">sleep()</a>) is a very long time on modern processors and <a class="el" href="classof_thread.html#a35bf3cab66dc5dda34b172784b401003" title="Tell the thread to give up its CPU time other threads. ">yield()</a> simply gives up processing time to the next thread, instead of waiting for number of milliseconds. In some cases, this behavior will be preferred. </p>
+<p>This method is similar to <a class="el" href="ofThread.html#a9e99dc383aba491a664efad32d2d7ccb" title="Tell the thread to sleep for a certain amount of milliseconds. ">sleep()</a> and can often be used in the same way. The main difference is that 1 millisecond (the minimum sleep time available with <a class="el" href="ofThread.html#a9e99dc383aba491a664efad32d2d7ccb" title="Tell the thread to sleep for a certain amount of milliseconds. ">sleep()</a>) is a very long time on modern processors and <a class="el" href="ofThread.html#a35bf3cab66dc5dda34b172784b401003" title="Tell the thread to give up its CPU time other threads. ">yield()</a> simply gives up processing time to the next thread, instead of waiting for number of milliseconds. In some cases, this behavior will be preferred. </p>
 
 </div>
 
@@ -334,18 +341,18 @@
     <div class="methodDescription " style="display:none" id="a96b7892fb6c0ddda7fe046aaa019da90_description">
 
 <p>Query whether the current thread is active. </p>
-<p>In multithreaded situations, it can be useful to know which thread is currently running some code in order to make sure only certain threads can do certain things. For example, OpenGL can only run in the main execution thread. Thus, situations where a thread is responsible for interacting with graphics resources may need to prevent graphics updates unless the main thread is accessing or updating resources shared with this <a class="el" href="classof_thread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> (or its subclass).</p>
+<p>In multithreaded situations, it can be useful to know which thread is currently running some code in order to make sure only certain threads can do certain things. For example, OpenGL can only run in the main execution thread. Thus, situations where a thread is responsible for interacting with graphics resources may need to prevent graphics updates unless the main thread is accessing or updating resources shared with this <a class="el" href="ofThread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> (or its subclass).</p>
 <div class="fragment"><div class="line"><span class="keywordflow">if</span>(myThread.isCurrentThread())</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// do some myThread things,</span></div>
 <div class="line">    <span class="comment">// but keep your hands off my resources!</span></div>
 <div class="line">}</div>
-<div class="line"><span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="classof_thread.html#a23f292adedaad5a0991637a1746d9772">ofThread::isMainThread</a>())</div>
+<div class="line"><span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="ofThread.html#a23f292adedaad5a0991637a1746d9772">ofThread::isMainThread</a>())</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// pheew! ok, update those graphics resources</span></div>
 <div class="line">}</div>
-</div><!-- fragment --><p>By way of another example, a subclass of <a class="el" href="classof_thread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> may have an update() method that is called from <a class="el" href="classof_base_app.html">ofBaseApp</a> during the execution of the main application thread. In these cases, the <a class="el" href="classof_thread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> subclass might want to ask itself whether it can, for instance, call update() on an ofImage, in order to send copy some ofPixels to an <a class="el" href="classof_texture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> on the graphics card.</p>
-<dl class="section return"><dt>Returns</dt><dd>True iff this <a class="el" href="classof_thread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> the currently active thread. </dd></dl>
+</div><!-- fragment --><p>By way of another example, a subclass of <a class="el" href="ofThread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> may have an update() method that is called from <a class="el" href="ofBaseApp.html">ofBaseApp</a> during the execution of the main application thread. In these cases, the <a class="el" href="ofThread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> subclass might want to ask itself whether it can, for instance, call update() on an ofImage, in order to send copy some ofPixels to an <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> on the graphics card.</p>
+<dl class="section return"><dt>Returns</dt><dd>True iff this <a class="el" href="ofThread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> the currently active thread. </dd></dl>
 
 </div>
 
@@ -361,13 +368,13 @@
 
 <p>A query to see if the current thread is the main thread. </p>
 <p>Some functions (e.g. OpenGL calls) can only be executed the main thread. This static function will tell the user what thread is currently active at the moment the method is called.</p>
-<div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code" href="classof_thread.html#a23f292adedaad5a0991637a1746d9772">ofThread::isMainThread</a>())</div>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code" href="ofThread.html#a23f292adedaad5a0991637a1746d9772">ofThread::isMainThread</a>())</div>
 <div class="line">{</div>
-<div class="line">    <a class="code" href="classof_log_notice.html">ofLogNotice</a>() &lt;&lt; <span class="stringliteral">&quot;This is the main thread!&quot;</span>;</div>
+<div class="line">    <a class="code" href="ofLogNotice.html">ofLogNotice</a>() &lt;&lt; <span class="stringliteral">&quot;This is the main thread!&quot;</span>;</div>
 <div class="line">}</div>
 <div class="line"><span class="keywordflow">else</span></div>
 <div class="line">{</div>
-<div class="line">    <a class="code" href="classof_log_notice.html">ofLogNotice</a>() &lt;&lt; <span class="stringliteral">&quot;This is NOT the main thread.&quot;</span>;</div>
+<div class="line">    <a class="code" href="ofLogNotice.html">ofLogNotice</a>() &lt;&lt; <span class="stringliteral">&quot;This is NOT the main thread.&quot;</span>;</div>
 <div class="line">}</div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>true iff the current thread is the main thread. </dd></dl>
 
@@ -417,8 +424,6 @@
     </div>
 
     <div class="methodDescription " style="display:none" id="a49beba601eef1f31fe733fd0e5647f2b_description">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd><dl class="section warning"><dt>Warning</dt><dd>This function is dangerous and should no longer be used. </dd></dl>
-</dd></dl>
 
 </div>
 
@@ -433,7 +438,7 @@
     <div class="methodDescription " style="display:none" id="a4060c79bf667e0ad2fbe78e7d12c2905_description">
 
 <p>Get the current Poco thread. </p>
-<p>In most cases, it is more appropriate to query the current thread by calling <a class="el" href="classof_thread.html#a96b7892fb6c0ddda7fe046aaa019da90" title="Query whether the current thread is active. ">isCurrentThread()</a> on an active thread or by calling <a class="el" href="classof_thread.html#a23f292adedaad5a0991637a1746d9772" title="A query to see if the current thread is the main thread. ">ofThread::isMainThread()</a>. See the method documentation for more information on those methods.</p>
+<p>In most cases, it is more appropriate to query the current thread by calling <a class="el" href="ofThread.html#a96b7892fb6c0ddda7fe046aaa019da90" title="Query whether the current thread is active. ">isCurrentThread()</a> on an active thread or by calling <a class="el" href="ofThread.html#a23f292adedaad5a0991637a1746d9772" title="A query to see if the current thread is the main thread. ">ofThread::isMainThread()</a>. See the method documentation for more information on those methods.</p>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the current active thread OR 0 iff the main application thread is active. </dd></dl>
 
 </div>
@@ -453,7 +458,7 @@
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a73e55750cdbed68d45a0ba9e7d391c4aacd7c0f12a26a642772db642e8862e98e"></a>INFINITE_JOIN_TIMEOUT&#xA0;</td><td class="fielddoc">
 <p>A sentinal value for an infinite join timeout. </p>
-<p>Primarily used with the <a class="el" href="classof_thread.html#a4faefa778ff5338ee7add57dd5ec2a5f" title="Wait for the thread to exit (aka &quot;joining&quot; the thread). ">waitForThread()</a> method. </p>
+<p>Primarily used with the <a class="el" href="ofThread.html#a4faefa778ff5338ee7add57dd5ec2a5f" title="Wait for the thread to exit (aka &quot;joining&quot; the thread). ">waitForThread()</a> method. </p>
 </td></tr>
 </table>
 
@@ -486,7 +491,7 @@
 
     <div class="methodDescription " style="display:none" id="a12ff152ef6ad45f82cff7dcd5b4b9742_description">
 
-<p>The internal mutex called through <a class="el" href="classof_thread.html#a8b682673b3d11225785b74f68fc3ce96" title="Try to lock the mutex. ">lock()</a> &amp; <a class="el" href="classof_thread.html#a98fd09fe1a8db65c2444abab0e806831" title="Unlock the mutex. ">unlock()</a>. </p>
+<p>The internal mutex called through <a class="el" href="ofThread.html#a8b682673b3d11225785b74f68fc3ce96" title="Try to lock the mutex. ">lock()</a> &amp; <a class="el" href="ofThread.html#a98fd09fe1a8db65c2444abab0e806831" title="Unlock the mutex. ">unlock()</a>. </p>
 <p>This mutext can also be used with ofScopedLock within the threaded function by calling: </p><pre class="fragment">ofScopedLock lock(mutex);</pre> 
 </div>
 
@@ -505,12 +510,12 @@
 
 <p>The thread&apos;s run function. </p>
 <p>Users must overide this in your their derived class and then implement their threaded activity inside the loop. If the the users&apos;s threadedFunction does not have a loop, the contents of the threadedFunction will be executed once and the thread will then exit.</p>
-<p>For tasks that must be repeated, the user can use a while loop that will run repeatedly until the thread&apos;s threadRunning is set to false via the <a class="el" href="classof_thread.html#a3102a3bf7897f579d70a418ae3ed010b" title="Stop the thread. ">stopThread()</a> method.</p>
+<p>For tasks that must be repeated, the user can use a while loop that will run repeatedly until the thread&apos;s threadRunning is set to false via the <a class="el" href="ofThread.html#a3102a3bf7897f579d70a418ae3ed010b" title="Stop the thread. ">stopThread()</a> method.</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> MyThreadedClass::threadedFunction()</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Start the loop and continue until</span></div>
 <div class="line">    <span class="comment">// isThreadRunning() returns false.</span></div>
-<div class="line">    <span class="keywordflow">while</span>(<a class="code" href="classof_thread.html#a07a51505ea9f5407e8c5999368bd54e2">isThreadRunning</a>())</div>
+<div class="line">    <span class="keywordflow">while</span>(<a class="code" href="ofThread.html#a07a51505ea9f5407e8c5999368bd54e2">isThreadRunning</a>())</div>
 <div class="line">    {</div>
 <div class="line">        <span class="comment">// Do activity repeatedly here:</span></div>
 <div class="line"></div>
@@ -528,13 +533,13 @@
 <div class="line">    }</div>
 <div class="line">}</div>
 </div><!-- fragment --> 
-<p>Reimplemented in <a class="el" href="classof_app_e_g_l_window.html#a3ae549b0d4f26ba0ba3200554dd659d2">ofAppEGLWindow</a>, and <a class="el" href="classof_u_r_l_file_loader_impl.html#a945b2dfdc767abe627a72b023e970b24">ofURLFileLoaderImpl</a>.</p>
+<p>Reimplemented in <a class="el" href="ofAppEGLWindow.html#a3ae549b0d4f26ba0ba3200554dd659d2">ofAppEGLWindow</a>, and <a class="el" href="ofURLFileLoaderImpl.html#a945b2dfdc767abe627a72b023e970b24">ofURLFileLoaderImpl</a>.</p>
 
 </div>
 
   </div></div>
   </div></div>
-      </div>
+  </div></div>
     </div>
 
 </div>
@@ -551,6 +556,13 @@
 </body>
 
 <div id="templates">
+  <div id="classTemplate" class="classBlock">
+    <div class="classHeader">
+      <h1 class="classTitle"></h1>
+    </div>
+    <div class="classDescription"></div>
+    <div class="classMethods"></div>
+  </div>
 
   <div id="sectionTemplate">
     <h3 class="sectionHeader"></h3>
