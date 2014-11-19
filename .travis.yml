@@ -18,11 +18,4 @@ script:
     - cd openFrameworks/libs/openFrameworksCompiled/project/doxygen/; doxygen Doxyfile; cd ../../../../../
     - node app openFrameworks
     - npm run sass;
-    - mkdir ghpages
-    - cd ghpages
-    - git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/HalfdanJ/ofDocGenerator.git . > /dev/null
-    - cp -R ../output/* .
-    - git add --all .
-    - git commit -m "Auto update ofDoc from Travis-ci"
-    - git remote set-url origin "https://${GH_TOKEN}@github.com/HalfdanJ/ofDocGenerator.git"
-    - git push -fq origin gh-pages
+    - ./publish.sh
