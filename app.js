@@ -1,6 +1,6 @@
 var fs = require('fs-extra'),
   util = require('util'),
-  Q = require('Q'),
+  Q = require('q'),
   xml2js = require('xml2js'),
   cheerio = require('cheerio')
   //sass = require('node-sass');
