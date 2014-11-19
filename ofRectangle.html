@@ -25,14 +25,14 @@
 
 
 <div class="container">
-    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">video</a> &gt; <span id="classQuickNav">ofRectangle.h</span></div>
+    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">types</a> &gt; <span id="classQuickNav">ofRectangle.h</span></div>
     <nav class="navigator" role="navigation">
       <ul id="nav-parts">
         <li class="group selected">
           Topics
           <ul id="topics">
             <!--<li class="chapter"><a href="asd">sad</a></li>-->
-          <li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#PublicAttributes">Public Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li></ul>
+          <li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofRectangle</span><li class="chapter"><a href="#PublicAttributes">Public Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li></ul>
       </li></ul>
     </nav>
     <div class="main">
@@ -45,6 +45,7 @@
     <div class="classDescription"></div>
     <div class="classMethods"><div id="Functions">
     <h3 class="sectionHeader">Functions</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a940ea1d005fcc7ac1799844c6ad12a80">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a940ea1d005fcc7ac1799844c6ad12a80&quot;)">
       <span class="type">ostream &amp; </span>
@@ -75,14 +76,10 @@
     <div class="classHeader">
       <h1 class="classTitle">ofRectangle</h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>A class representing a 2D rectangle. </p>
-<p><a class="el" href="ofRectangle.html" title="A class representing a 2D rectangle. ">ofRectangle</a> is a simple container for describing the position and size of a 2D rectangle. Since the <code>width</code> and <code>height</code> variables can be negative, the x/y position is not garanteed to represent the upper right hand corner. For example, two visually identical rectangles can be represented in the following ways: </p><pre class="fragment">ofRectangle myRect(0, 0, 100, 100);
-</pre><p>or </p><pre class="fragment">ofRectangle myRect(100, 100, -100, -100);
-</pre><p>While both representations will yield the same visual results in all openFrameworks renderers, the results of some method operations that modify x, y, width and height (such as scaling) produce mathematically correct, but visually different results for each of the above representations.</p>
-<p>To avoid this ambiguity, users planning to should prefer &quot;standardized&quot; rectangles. &quot;Standardized&quot; rectangles are rectangles whose width &gt;= 0 and height &gt;= 0. The <a class="el" href="ofRectangle.html#a046a94f9d56c6da3d782fbde69f2b8db">ofRectangle::standardize()</a> method can be used to ensure that the is in it the &quot;standard&quot; form. </p>
-</div></div>
+    <div class="classDescription"></div>
     <div class="classMethods"><div id="PublicAttributes">
     <h3 class="sectionHeader">Public Attributes</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a191e7c2fa179310eb3376e2607499a9e">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a191e7c2fa179310eb3376e2607499a9e&quot;)">
       <span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a></span>
@@ -146,6 +143,7 @@
   </div></div>
   </div><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a9118ecf471c26e8e4c08a4cf8fc2b844">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a9118ecf471c26e8e4c08a4cf8fc2b844&quot;)">
       <span class="type" style="display: none;"> </span>
@@ -186,7 +184,7 @@
 
 <p>Construct a rectangle using location and size. </p>
 <p>To produce consistent results, users are encouraged to initialize rectangles in the standardized form with width &gt;=0 and height &gt;= 0.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">px</td><td>The x location of the rectangle. </td></tr>
     <tr><td class="paramname">py</td><td>The y location of the rectangle. </td></tr>
@@ -210,7 +208,7 @@
 
 <p>Construct a rectangle from a point and dimensions. </p>
 <p>To produce consistent results, users are encouraged to initialize rectangles in the standardized form with width &gt;=0 and height &gt;= 0.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">p</td><td>The ofPoint representing the location of the rectangle. </td></tr>
     <tr><td class="paramname">w</td><td>The width of the rectangle. </td></tr>
@@ -233,7 +231,7 @@
 
 <p>Construct a rectangle by copying another rectangle. </p>
 <p>To produce consistent results, users are encouraged to initialize rectangles in the standardized form with width &gt;=0 and height &gt;= 0.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">rect</td><td>The rectangle to copy. </td></tr>
   </table>
@@ -253,7 +251,7 @@
     <div class="methodDescription " style="display:none" id="a35a7edcb07fba3c3fdd2ea7e20d48927_description">
 
 <p>Construct a rectangle by defining two corners. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">p0</td><td>The ofPoint representing the upper left hand corner. </td></tr>
     <tr><td class="paramname">p1</td><td>The ofPoint representing the lower right hand corner. </td></tr>
@@ -275,7 +273,7 @@
 
 <p>Set the position and size of a rectangle. </p>
 <p>To produce consistent results, users are encouraged to initialize rectangles in the standardized form with width &gt;=0 and height &gt;= 0.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">px</td><td>The x location of the rectangle. </td></tr>
     <tr><td class="paramname">py</td><td>The y location of the rectangle. </td></tr>
@@ -299,7 +297,7 @@
 
 <p>Set the position and size of a rectangle. </p>
 <p>To produce consistent results, users are encouraged to initialize rectangles in the standardized form with width &gt;=0 and height &gt;= 0.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">p</td><td>The ofPoint representing the location of the rectangle. </td></tr>
     <tr><td class="paramname">w</td><td>The width of the rectangle. </td></tr>
@@ -321,7 +319,7 @@
     <div class="methodDescription " style="display:none" id="abb6c72a6e32a9ca4cf60697bf5824f86_description">
 
 <p>Set the position and size of a rectangle by defining two corners. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">rect</td><td>The rectangle to copy. </td></tr>
   </table>
@@ -341,7 +339,7 @@
     <div class="methodDescription " style="display:none" id="aa4dd27fbcbc533fa785fef53ebbbac17_description">
 
 <p>Set the position and size of a rectangle using corners. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">p0</td><td>The ofPoint representing the upper left hand corner. </td></tr>
     <tr><td class="paramname">p1</td><td>The ofPoint representing the lower right hand corner. </td></tr>
@@ -362,7 +360,7 @@
     <div class="methodDescription " style="display:none" id="ab30ac60ec5f93ae7c687eb533c76dcdf_description">
 
 <p>Set the x position of a rectangle. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">px</td><td>The x position. </td></tr>
   </table>
@@ -382,7 +380,7 @@
     <div class="methodDescription " style="display:none" id="ac466581c07775f535f39bb1a0c92a8dc_description">
 
 <p>Set the y position of a rectangle. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">py</td><td>The y position. </td></tr>
   </table>
@@ -402,7 +400,7 @@
     <div class="methodDescription " style="display:none" id="a24d83a9f4ec774bb762d3831de2a819d_description">
 
 <p>Set the width of a rectangle. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">w</td><td>The width. </td></tr>
   </table>
@@ -422,7 +420,7 @@
     <div class="methodDescription " style="display:none" id="a4f903b04a4f2ac38caf3c7bce24ab0c1_description">
 
 <p>Set the height of a rectangle. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">h</td><td>The height. </td></tr>
   </table>
@@ -442,7 +440,7 @@
     <div class="methodDescription " style="display:none" id="aa3634cc440075289ddbeefe3d6521400_description">
 
 <p>Set the position of a rectangle. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">px</td><td>The x position. </td></tr>
     <tr><td class="paramname">py</td><td>The y position. </td></tr>
@@ -463,7 +461,7 @@
     <div class="methodDescription " style="display:none" id="a10d17b5bee2998f977ca211e06ebb0b8_description">
 
 <p>Set the position of a rectangle. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">p</td><td>The position as an ofPoint. </td></tr>
   </table>
@@ -484,7 +482,7 @@
 
 <p>Set position and size of a rectangle from the center. </p>
 <p>The center of the rectangle is defined and the width and height grow out around the center.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">px</td><td>The x position of the rectangle&apos;s center. </td></tr>
     <tr><td class="paramname">py</td><td>The y position of the rectangle&apos;s center. </td></tr>
@@ -508,7 +506,7 @@
 
 <p>Set position and size of a rectangle from the center. </p>
 <p>The center of the rectangle is defined and the width and height grow out around the center.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">p</td><td>The position of the rectangle&apos;s center as an ofPoint. </td></tr>
     <tr><td class="paramname">w</td><td>The width of the rectangle. </td></tr>
@@ -530,7 +528,7 @@
     <div class="methodDescription " style="display:none" id="ad3df964c5d176534f7739350bf28ffa8_description">
 
 <p>Translate the rectangle&apos;s position by an x and y amount. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">dx</td><td>The amount to translate in the x direction. </td></tr>
     <tr><td class="paramname">dy</td><td>The amount to translate in the y direction. </td></tr>
@@ -551,7 +549,7 @@
     <div class="methodDescription " style="display:none" id="a572c45633384fe6b5ee510dc43923660_description">
 
 <p>Translate the rectangle&apos;s position by an x and y amount. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">dp</td><td>The amount to translate as an ofPoint. </td></tr>
   </table>
@@ -571,7 +569,7 @@
     <div class="methodDescription " style="display:none" id="abe1231c40baa7abe35c0da67d2c1d98d_description">
 
 <p>Translate the x position of the rectangle. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">dx</td><td>the amount to translate on the x-axis. </td></tr>
   </table>
@@ -591,7 +589,7 @@
     <div class="methodDescription " style="display:none" id="aec2aba5ebe5aca4416b95f18ffcacdb9_description">
 
 <p>Translate the y position of the rectangle. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">dy</td><td>the amount to translate on the y-axis. </td></tr>
   </table>
@@ -612,7 +610,7 @@
 
 <p>Scale the rectangle. </p>
 <p>Scaling will scale the width and the height, but will not change the position.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td>sclaing factor. </td></tr>
   </table>
@@ -633,7 +631,7 @@
 
 <p>Scale the rectangle. </p>
 <p>Scaling will scale the width and the height, but will not change the position.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">sX</td><td>the x scaling factor. The new width = sX * width. </td></tr>
     <tr><td class="paramname">sY</td><td>the y scaling factor. The new height = sY * height. </td></tr>
@@ -655,7 +653,7 @@
 
 <p>Scale the rectangle. </p>
 <p>Scaling will scale the width and the height, but will not change the position.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td>Scales x and y. The new width = sX * width and the new height = sY * height. </td></tr>
   </table>
@@ -1449,6 +1447,7 @@
 
   <div id="sectionTemplate">
     <h3 class="sectionHeader"></h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"></div>
   </div>
 

@@ -25,14 +25,14 @@
 
 
 <div class="container">
-    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">video</a> &gt; <span id="classQuickNav">ofLog.h</span></div>
+    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">utils</a> &gt; <span id="classQuickNav">ofLog.h</span></div>
     <nav class="navigator" role="navigation">
       <ul id="nav-parts">
         <li class="group selected">
           Topics
           <ul id="topics">
             <!--<li class="chapter"><a href="asd">sad</a></li>-->
-          <li class="chapter"><a href="#ofLogglobalsettings">ofLog global settings</a></li><li class="chapter"><a href="#Enums">Enums</a></li><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#ProtectedStaticAttributes">Protected Static Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#PublicStaticFunctions">Public Static Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li></ul>
+          <li class="chapter"><a href="#Globalloggingsettings">Global logging settings</a></li><li class="chapter"><a href="#Enums">Enums</a></li><span class="class">ofLog</span><li class="chapter"><a href="#Logging">Logging</a></li><li class="chapter"><a href="#Legacyinterface">Legacy interface</a></li><li class="chapter"><a href="#Loggingconfiguration">Logging configuration</a></li><span class="class">ofLogVerbose</span><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><span class="class">ofLogNotice</span><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><span class="class">ofLogWarning</span><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><span class="class">ofLogError</span><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><span class="class">ofLogFatalError</span><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><span class="class">ofBaseLoggerChannel</span><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><span class="class">ofConsoleLoggerChannel</span><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><span class="class">ofFileLoggerChannel</span><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li></ul>
       </li></ul>
     </nav>
     <div class="main">
@@ -43,8 +43,9 @@
       <h1 class="classTitle">ofLog.h</h1>
     </div>
     <div class="classDescription"></div>
-    <div class="classMethods"><div id="ofLogglobalsettings">
-    <h3 class="sectionHeader">ofLog global settings</h3>
+    <div class="classMethods"><div id="Globalloggingsettings">
+    <h3 class="sectionHeader">Global logging settings</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a7a1aca68c925a0cf024a14fc70fb7417">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a7a1aca68c925a0cf024a14fc70fb7417&quot;)">
       <span class="type">void </span>
@@ -57,16 +58,18 @@
 
 <p>Sets the logging level so only messages above a certain priority are shown. </p>
 <p>This is useful if you want see lots of messages when debugging, but then set a higher level so only warnings and errors appear for users.</p>
-<p>ofLogLevel values are (in order of priority):</p><ul>
-<li><code>OF_LOG_VERBOSE</code></li>
-<li><code>OF_LOG_NOTICE</code></li>
-<li><code>OF_LOG_WARNING</code></li>
-<li><code>OF_LOG_ERROR</code></li>
-<li><code>OF_LOG_FATAL_ERROR</code></li>
-<li><code>OF_LOG_SILENT</code></li>
+<p>ofLogLevel values are (in order of priority):</p>
+<ul>
+<li>`OF_LOG_VERBOSE`</li>
+<li>`OF_LOG_NOTICE`</li>
+<li>`OF_LOG_WARNING`</li>
+<li>`OF_LOG_ERROR`</li>
+<li>`OF_LOG_FATAL_ERROR`</li>
+<li>`OF_LOG_SILENT`</li>
 </ul>
-<p>Following priority, setting a log level of <code>OF_LOG_ERROR</code>, means only error and fatal error messages will be printed. Conversely, setting OF_LOG_VERBOSE means all log level messages will be printed.</p>
-<p>Default ofLogLevel is <code>OF_LOG_NOTICE</code> </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Following priority, setting a log level of `OF_LOG_ERROR`, means only error and fatal error messages will be printed. Conversely, setting OF_LOG_VERBOSE means all log level messages will be printed.</p>
+<p>Default ofLogLevel is `OF_LOG_NOTICE` </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">level</td><td>the ofLogLevel (and below) you want to show </td></tr>
   </table>
@@ -110,7 +113,7 @@
     <div class="methodDescription " style="display:none" id="a18730a546b3c27723dc95ecf1a5e55b7_description">
 
 <p>Get log level name as a string. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">level</td><td>The ofLogLevel you want the name of </td></tr>
     <tr><td class="paramname">pad</td><td>set to true if you want all log level names to be the same length </td></tr>
@@ -159,6 +162,7 @@
   </div></div>
   </div><div id="Enums">
     <h3 class="sectionHeader">Enums</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a6b3aba959377cae6ed3afbb9d5826fe4">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a6b3aba959377cae6ed3afbb9d5826fe4&quot;)">
       <span class="type" style="display: none;"> </span>
@@ -169,22 +173,23 @@
 
     <div class="methodDescription " style="display:none" id="a6b3aba959377cae6ed3afbb9d5826fe4_description">
 
-<p>Logging in openFrameworks. </p>
-<p>The supported logging levels. Default is <code>OF_LOG_NOTICE</code> </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4a344bd0fb24d6bd1f23f6d7e09a1ada2f"></a>OF_LOG_VERBOSE&#xA0;</td><td class="fielddoc">
+<p>The supported logging levels. Default is `OF_LOG_NOTICE`. </p>
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4a344bd0fb24d6bd1f23f6d7e09a1ada2f"></a><!-- doxytag: member="OF_LOG_VERBOSE" ref="a6b3aba959377cae6ed3afbb9d5826fe4a344bd0fb24d6bd1f23f6d7e09a1ada2f" args="" -->OF_LOG_VERBOSE</em>&#xA0;</td><td>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4ae694d6f9c9ad50b955aa85ded74c41bc"></a>OF_LOG_NOTICE&#xA0;</td><td class="fielddoc">
+<tr><td valign="top"><em><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4ae694d6f9c9ad50b955aa85ded74c41bc"></a><!-- doxytag: member="OF_LOG_NOTICE" ref="a6b3aba959377cae6ed3afbb9d5826fe4ae694d6f9c9ad50b955aa85ded74c41bc" args="" -->OF_LOG_NOTICE</em>&#xA0;</td><td>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4a0ece8203f15199db94060ba73e974635"></a>OF_LOG_WARNING&#xA0;</td><td class="fielddoc">
+<tr><td valign="top"><em><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4a0ece8203f15199db94060ba73e974635"></a><!-- doxytag: member="OF_LOG_WARNING" ref="a6b3aba959377cae6ed3afbb9d5826fe4a0ece8203f15199db94060ba73e974635" args="" -->OF_LOG_WARNING</em>&#xA0;</td><td>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4a64e5a9d8e8727e95ec14005ffd896a6d"></a>OF_LOG_ERROR&#xA0;</td><td class="fielddoc">
+<tr><td valign="top"><em><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4a64e5a9d8e8727e95ec14005ffd896a6d"></a><!-- doxytag: member="OF_LOG_ERROR" ref="a6b3aba959377cae6ed3afbb9d5826fe4a64e5a9d8e8727e95ec14005ffd896a6d" args="" -->OF_LOG_ERROR</em>&#xA0;</td><td>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4a5379d861c8b09cd189567f6779256dd2"></a>OF_LOG_FATAL_ERROR&#xA0;</td><td class="fielddoc">
+<tr><td valign="top"><em><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4a5379d861c8b09cd189567f6779256dd2"></a><!-- doxytag: member="OF_LOG_FATAL_ERROR" ref="a6b3aba959377cae6ed3afbb9d5826fe4a5379d861c8b09cd189567f6779256dd2" args="" -->OF_LOG_FATAL_ERROR</em>&#xA0;</td><td>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4ad2f1bd16f52d94ab0ff47f9095d4a7f3"></a>OF_LOG_SILENT&#xA0;</td><td class="fielddoc">
+<tr><td valign="top"><em><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4ad2f1bd16f52d94ab0ff47f9095d4a7f3"></a><!-- doxytag: member="OF_LOG_SILENT" ref="a6b3aba959377cae6ed3afbb9d5826fe4ad2f1bd16f52d94ab0ff47f9095d4a7f3" args="" -->OF_LOG_SILENT</em>&#xA0;</td><td>
 </td></tr>
 </table>
+</dd>
+</dl>
 
 </div>
 
@@ -194,78 +199,10 @@
     <div class="classHeader">
       <h1 class="classTitle">ofLog</h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>a streaming log interface </p>
-<p><a class="el" href="ofLog.html" title="a streaming log interface ">ofLog</a> accepts variables via the ostream operator &lt;&lt; and builds a string and logs it when the stream is finished (via the destructor). A newline is printed automatically and all the stream controls (endl, flush, hex, etc) work normally. The log level is explicitly <code>OF_LOG_NOTICE</code> unless set.</p>
-<p>Basic usage: </p><div class="fragment"><div class="line"><a class="code" href="ofLog.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>() &lt;&lt; <span class="stringliteral">&quot;a string&quot;</span> &lt;&lt; 100 &lt;&lt; 20.234f;</div>
-</div><!-- fragment --><p>It also accepts the legacy <a class="el" href="ofLog.html" title="a streaming log interface ">ofLog</a> interface: <a class="el" href="ofLog.html" title="a streaming log interface ">ofLog(ofLogLevel level, string message)</a>: </p><div class="fragment"><div class="line"><a class="code" href="ofLog.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>(<a class="code" href="ofLog.html#a6b3aba959377cae6ed3afbb9d5826fe4a64e5a9d8e8727e95ec14005ffd896a6d">OF_LOG_ERROR</a>, <span class="stringliteral">&quot;another string&quot;</span>);</div>
-</div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>Class idea from <a href="http://www.gamedev.net/community/forums/topic.asp?topic_id=525405&amp;whichpage=1&amp;#3406418">gamedev</a></dd></dl>
-<p><a href="http://yvan.seth.id.au/Entries/Technology/Code/std__endl.html">How to catch std::endl (which is actually a func pointer)</a></p>
-<dl class="section author"><dt>Author</dt><dd>Dan Wilcox <a href="#" onclick="location.href=&apos;mai&apos;+&apos;lto:&apos;+&apos;dan&apos;+&apos;om&apos;+&apos;ati&apos;+&apos;ka&apos;+&apos;@gm&apos;+&apos;ai&apos;+&apos;l.c&apos;+&apos;om&apos;; return false;">danom<span style="display: none;">.nosp@m.</span>atik<span style="display: none;">.nosp@m.</span>a@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a> danomatika.com </dd></dl>
-</div></div>
-    <div class="classMethods"><div id="ProtectedAttributes">
-    <h3 class="sectionHeader">Protected Attributes</h3>
-    <div class="sectionContent"><div id="ae6e5efb037f89eec86c478c7501b7f11">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ae6e5efb037f89eec86c478c7501b7f11&quot;)">
-      <span class="type"><a href="ofLog.html#1a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a></span>
-      <a class="name">level</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="ae6e5efb037f89eec86c478c7501b7f11_description">
-
-<p>log level </p>
-
-</div>
-
-  </div><div id="adfeb1385b39fad45477eb0bc1f70fdb4">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#adfeb1385b39fad45477eb0bc1f70fdb4&quot;)">
-      <span class="type">bool </span>
-      <a class="name">bPrinted</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="adfeb1385b39fad45477eb0bc1f70fdb4_description">
-
-<p>has the msg been printed in the constructor? </p>
-
-</div>
-
-  </div><div id="aa1f61b048422566b8bdd9c50f5a05f44">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aa1f61b048422566b8bdd9c50f5a05f44&quot;)">
-      <span class="type">string </span>
-      <a class="name">module</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="aa1f61b048422566b8bdd9c50f5a05f44_description">
-
-<p>the destination module for this message </p>
-
-</div>
-
-  </div></div>
-  </div><div id="ProtectedStaticAttributes">
-    <h3 class="sectionHeader">Protected Static Attributes</h3>
-    <div class="sectionContent"><div id="a3466c00f03aa33dc7f7388a382f6211d">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a3466c00f03aa33dc7f7388a382f6211d&quot;)">
-      <span class="type"><a href="ofBaseLoggerChannel.html">ofBaseLoggerChannel</a></span>
-      <a class="name">channel</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a3466c00f03aa33dc7f7388a382f6211d_description">
-
-<p>the message destination </p>
-
-</div>
-
-  </div></div>
-  </div><div id="PublicFunctions">
-    <h3 class="sectionHeader">Public Functions</h3>
+    <div class="classDescription"></div>
+    <div class="classMethods"><div id="Logging">
+    <h3 class="sectionHeader">Logging</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a11a926adbe4ef4bfbee393345f5df1cc">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a11a926adbe4ef4bfbee393345f5df1cc&quot;)">
       <span class="type" style="display: none;"> </span>
@@ -276,7 +213,7 @@
 
     <div class="methodDescription " style="display:none" id="a11a926adbe4ef4bfbee393345f5df1cc_description">
 
-<p>log at notice level </p>
+<p>Start logging on notice level. </p>
 
 </div>
 
@@ -289,12 +226,22 @@
     </div>
 
     <div class="methodDescription " style="display:none" id="a8df66599c4ab1c9d0ebdb379871da3f0_description">
-
-<p>set the log level </p>
+<p>Start logging on a specific ofLogLevel </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>The ofLogLevel to log on </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 
-  </div><div id="a23271f8fa71758dc7b81b695d36a8df9">
+  </div></div>
+  </div><div id="Legacyinterface">
+    <h3 class="sectionHeader">Legacy interface</h3>
+    <div class="sectionDescription"><p>&#xA0; </p>
+</div>
+    <div class="sectionContent"><div id="a23271f8fa71758dc7b81b695d36a8df9">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a23271f8fa71758dc7b81b695d36a8df9&quot;)">
       <span class="type" style="display: none;"> </span>
       <a class="name">ofLog</a>
@@ -304,7 +251,7 @@
 
     <div class="methodDescription " style="display:none" id="a23271f8fa71758dc7b81b695d36a8df9_description">
 
-<p>the legacy <a class="el" href="ofLog.html" title="a streaming log interface ">ofLog</a> interfaces </p>
+<p>the legacy <a class="el" href="ofLog.html" title="a streaming log interface">ofLog</a> interfaces </p>
 
 </div>
 
@@ -320,51 +267,10 @@
 
 </div>
 
-  </div><div id="a8b9d6e1110e97f1c70c6c0f1c1997db1">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a8b9d6e1110e97f1c70c6c0f1c1997db1&quot;)">
-      <span class="type" style="display: none;"> </span>
-      <a class="name">~ofLog</a>
-      <span class="args">()</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a8b9d6e1110e97f1c70c6c0f1c1997db1_description">
-
-<p>does the actual printing when the ostream is done </p>
-
-</div>
-
-  </div><div id="a2f19640fb8269ff470f9941eca0d39b2">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a2f19640fb8269ff470f9941eca0d39b2&quot;)">
-      <span class="type"><a href="ofLog.html">ofLog</a></span>
-      <a class="name">operator&lt;&lt;</a>
-      <span class="args">(const T &amp;value)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a2f19640fb8269ff470f9941eca0d39b2_description">
-
-<p>catch the &lt;&lt; ostream with a template class to read any type of data </p>
-
-</div>
-
-  </div><div id="a10502cf2a6a2ad636e5f1c4058bd037f">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a10502cf2a6a2ad636e5f1c4058bd037f&quot;)">
-      <span class="type"><a href="ofLog.html">ofLog</a></span>
-      <a class="name">operator&lt;&lt;</a>
-      <span class="args">(std::ostream &amp;(*func)(std::ostream &amp;))</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a10502cf2a6a2ad636e5f1c4058bd037f_description">
-
-<p>catch the &lt;&lt; ostream function pointers such as std::endl and std::hex </p>
-
-</div>
-
   </div></div>
-  </div><div id="PublicStaticFunctions">
-    <h3 class="sectionHeader">Public Static Functions</h3>
+  </div><div id="Loggingconfiguration">
+    <h3 class="sectionHeader">Logging configuration</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="acd753685ca548b145fd33301abe63433">
     <div class="methodHeader" onClick="toggleDescription(&quot;#acd753685ca548b145fd33301abe63433&quot;)">
       <span class="type">void </span>
@@ -374,8 +280,13 @@
     </div>
 
     <div class="methodDescription " style="display:none" id="acd753685ca548b145fd33301abe63433_description">
-
-<p>put a space between stream operator calls? </p>
+<p>Let the logger automaticly add spaces between messages. Default is `false`. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">autoSpace</td><td>Set to true to add spaces between messages </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 
@@ -388,37 +299,8 @@
     </div>
 
     <div class="methodDescription " style="display:none" id="a25da93787b658473a679ba3096407270_description">
-
-<p>set the logging channel destinations for messages </p>
-
-</div>
-
-  </div></div>
-  </div><div id="ProtectedFunctions">
-    <h3 class="sectionHeader">Protected Functions</h3>
-    <div class="sectionContent"><div id="a1d4ece9af238988b484420a2422c69e9">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a1d4ece9af238988b484420a2422c69e9&quot;)">
-      <span class="type">void </span>
-      <a class="name">_log</a>
-      <span class="args">(ofLogLevel level, const string &amp;module, const string &amp;message)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a1d4ece9af238988b484420a2422c69e9_description">
-
-<p>print a log line </p>
-
-</div>
-
-  </div><div id="a3288e9556cd90f363a1575ef3ec2ed0d">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a3288e9556cd90f363a1575ef3ec2ed0d&quot;)">
-      <span class="type">bool </span>
-      <a class="name">checkLog</a>
-      <span class="args">(ofLogLevel level, const string &amp;module)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a3288e9556cd90f363a1575ef3ec2ed0d_description">
+<p>Set the logging channel destinations for messages. This can be used to output to files instead of stdout. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="ofFileLoggerChannel.html">ofFileLoggerChannel</a> <a class="el" href="ofConsoleLoggerChannel.html">ofConsoleLoggerChannel</a> </dd></dl>
 
 </div>
 
@@ -428,10 +310,10 @@
     <div class="classHeader">
       <h1 class="classTitle">ofLogVerbose</h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>Derived log class for easy verbose logging. Example: <code><a class="el" href="ofLogVerbose.html">ofLogVerbose</a>(&quot;Log message&quot;)</code> </p>
-</div></div>
+    <div class="classDescription"></div>
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a285461612136b05e9b9abbc9ebd2a0f3">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a285461612136b05e9b9abbc9ebd2a0f3&quot;)">
       <span class="type" style="display: none;"> </span>
@@ -474,10 +356,10 @@
     <div class="classHeader">
       <h1 class="classTitle">ofLogNotice</h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>Derived log class for easy notice logging. Example: <code><a class="el" href="ofLogNotice.html">ofLogNotice</a>(&quot;Log message&quot;)</code> </p>
-</div></div>
+    <div class="classDescription"></div>
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a6729c589b2c946748c9b59015a1328e5">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a6729c589b2c946748c9b59015a1328e5&quot;)">
       <span class="type" style="display: none;"> </span>
@@ -520,10 +402,10 @@
     <div class="classHeader">
       <h1 class="classTitle">ofLogWarning</h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>Derived log class for easy warning logging. Example: <code><a class="el" href="ofLogWarning.html">ofLogWarning</a>(&quot;Log message&quot;)</code> </p>
-</div></div>
+    <div class="classDescription"></div>
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a9679a4b19eb6707ae13aa644daf56b42">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a9679a4b19eb6707ae13aa644daf56b42&quot;)">
       <span class="type" style="display: none;"> </span>
@@ -566,10 +448,10 @@
     <div class="classHeader">
       <h1 class="classTitle">ofLogError</h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>Derived log class for easy error logging. Example: <code><a class="el" href="ofLogError.html">ofLogError</a>(&quot;Log message&quot;)</code> </p>
-</div></div>
+    <div class="classDescription"></div>
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a5d595a6ff1fd74b962dc90a410d5e956">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a5d595a6ff1fd74b962dc90a410d5e956&quot;)">
       <span class="type" style="display: none;"> </span>
@@ -612,10 +494,10 @@
     <div class="classHeader">
       <h1 class="classTitle">ofLogFatalError</h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>Derived log class for easy fatal error logging. Example: <code><a class="el" href="ofLogFatalError.html">ofLogFatalError</a>(&quot;Log message&quot;)</code> </p>
-</div></div>
+    <div class="classDescription"></div>
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a36491d3a10c051583e400b032e24ab1a">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a36491d3a10c051583e400b032e24ab1a&quot;)">
       <span class="type" style="display: none;"> </span>
@@ -658,10 +540,10 @@
     <div class="classHeader">
       <h1 class="classTitle">ofBaseLoggerChannel</h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>swappable logging destinations, derive your own for custom logging </p>
-</div></div>
+    <div class="classDescription"></div>
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="ad25596521f5df6c781fd2668c829c50e">
     <div class="methodHeader" onClick="toggleDescription(&quot;#ad25596521f5df6c781fd2668c829c50e&quot;)">
       <span class="type" style="display: none;"> </span>
@@ -725,6 +607,7 @@
     <div class="classDescription"></div>
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a4eadfde9d9789bff8eee8bb8949aed97">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a4eadfde9d9789bff8eee8bb8949aed97&quot;)">
       <span class="type" style="display: none;"> </span>
@@ -788,6 +671,7 @@
     <div class="classDescription"></div>
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a4db912afeff73bff1b44d744252c48c9">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a4db912afeff73bff1b44d744252c48c9&quot;)">
       <span class="type" style="display: none;"> </span>
@@ -919,6 +803,7 @@
 
   <div id="sectionTemplate">
     <h3 class="sectionHeader"></h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"></div>
   </div>
 

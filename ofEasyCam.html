@@ -25,14 +25,14 @@
 
 
 <div class="container">
-    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">video</a> &gt; <span id="classQuickNav">ofEasyCam.h</span></div>
+    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">3d</a> &gt; <span id="classQuickNav">ofEasyCam.h</span></div>
     <nav class="navigator" role="navigation">
       <ul id="nav-parts">
         <li class="group selected">
           Topics
           <ul id="topics">
             <!--<li class="chapter"><a href="asd">sad</a></li>-->
-          <li class="chapter"><a href="#PublicFunctions">Public Functions</a></li></ul>
+          <span class="class">ofEasyCam</span><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li></ul>
       </li></ul>
     </nav>
     <div class="main">
@@ -48,10 +48,10 @@
     <div class="classHeader">
       <h1 class="classTitle">ofEasyCam</h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>A super simple camera for interacting with objects in 3D space. </p>
-</div></div>
+    <div class="classDescription"></div>
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="ae432309081375a91cacf80c5d9093c14">
     <div class="methodHeader" onClick="toggleDescription(&quot;#ae432309081375a91cacf80c5d9093c14&quot;)">
       <span class="type" style="display: none;"> </span>
@@ -91,19 +91,22 @@
     <div class="methodDescription " style="display:none" id="ac81e95f6c7e4c7c7de9250708c9a5664_description">
 
 <p>Begins rendering with the camera. </p>
-<p>Example: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="ofNode.html#a69ed7a21f7f8ee435fa6d8a99424e9ba">draw</a>() {</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// Begin rendering from the camera&apos;s perspective.</span></div>
-<div class="line">    camera.begin();</div>
-<div class="line"></div>
-<div class="line">    <a class="code" href="of_graphics_8cpp.html#acc4b7173caaa9e04c8965782c6925bdc">ofLine</a>(0, 0, <a class="code" href="of_app_runner_8cpp.html#a28bb1c518b5c68ee2eae655bd4e56445">ofGetWidth</a>(), <a class="code" href="of_app_runner_8cpp.html#a415b5eadf885ebd1f4799cc40e5db137">ofGetHeight</a>());</div>
-<div class="line">    <span class="comment">// Additional rendering ...</span></div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// End rendering form the camera&apos;s perspective.</span></div>
-<div class="line">    camera.end();</div>
-<div class="line"></div>
-<div class="line">}</div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+<p>Example: </p>
+<div class="fragment"><pre class="fragment"> {.cpp}
+
+ <span class="keywordtype">void</span> <a class="code" href="ofNode.html#a69ed7a21f7f8ee435fa6d8a99424e9ba">draw</a>() {
+
+     <span class="comment">// Begin rendering from the camera&apos;s perspective.</span>
+     camera.begin();
+
+     <a class="code" href="of_graphics_8cpp.html#acc4b7173caaa9e04c8965782c6925bdc">ofLine</a>(0, 0, <a class="code" href="of_app_runner_8cpp.html#a28bb1c518b5c68ee2eae655bd4e56445">ofGetWidth</a>(), <a class="code" href="of_app_runner_8cpp.html#a415b5eadf885ebd1f4799cc40e5db137">ofGetHeight</a>());
+     <span class="comment">// Additional rendering ...</span>
+
+     <span class="comment">// End rendering form the camera&apos;s perspective.</span>
+     camera.end();
+
+ }
+</pre></div><dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">viewport</td><td>The camera&apos;s rendering viewport. </td></tr>
   </table>
@@ -139,7 +142,7 @@
     <div class="methodDescription " style="display:none" id="a16d54adecaba3892262551e5ea8dce25_description">
 
 <p>Set the camera&apos;s target. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">target</td><td>The position of the target. </td></tr>
   </table>
@@ -159,7 +162,7 @@
     <div class="methodDescription " style="display:none" id="a322c85a648810e06612b486fc8508155_description">
 
 <p>Set the camera&apos;s target. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">target</td><td>The position of the target. </td></tr>
   </table>
@@ -179,7 +182,7 @@
     <div class="methodDescription " style="display:none" id="afbf5951608a33ebd3c5f32b9fd0f2b1d_description">
 
 <p>Get the camera&apos;s target node reference. </p>
-<dl class="section return"><dt>Returns</dt><dd>a reference the the camera&apos;s target node. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a reference the the camera&apos;s target node. </dd></dl>
 
 </div>
 
@@ -194,7 +197,7 @@
     <div class="methodDescription " style="display:none" id="a4e3ba707cdc44c46bd442641d1b0c25a_description">
 
 <p>Set the camera&apos;s distance to the target. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">distance</td><td>The distance to the target. </td></tr>
   </table>
@@ -214,7 +217,7 @@
     <div class="methodDescription " style="display:none" id="a27eac21ea675b765c599cc3947455efd_description">
 
 <p>Get the distance to the target. </p>
-<dl class="section return"><dt>Returns</dt><dd>the distance to the target. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the distance to the target. </dd></dl>
 
 </div>
 
@@ -230,7 +233,7 @@
 
 <p>Set the camera&apos;s drag coefficient. </p>
 <p>Drag is affects how quickly the camera starts up and slows down when a user interacts with its position using a pointer.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">drag</td><td>The normalized coefficient value between 0 and 1. </td></tr>
   </table>
@@ -250,7 +253,7 @@
     <div class="methodDescription " style="display:none" id="a160c0400017413385c89bb9084073bff_description">
 
 <p>Get the camera&apos;s drag coefficient. </p>
-<dl class="section return"><dt>Returns</dt><dd>the camera&apos;s drag coefficient. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the camera&apos;s drag coefficient. </dd></dl>
 
 </div>
 
@@ -266,7 +269,7 @@
 
 <p>Set the key used to switch between camera rotation and translation. </p>
 <p>Translation will only happen when the translation key is pressed.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>The key code for the translation key. </td></tr>
   </table>
@@ -286,7 +289,7 @@
     <div class="methodDescription " style="display:none" id="ae9a2019ff4ed6c2f26e0bb799c735b21_description">
 
 <p>Get the current translation key code. </p>
-<dl class="section return"><dt>Returns</dt><dd>the current translation key code. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the current translation key code. </dd></dl>
 
 </div>
 
@@ -329,6 +332,7 @@
     <div class="methodDescription " style="display:none" id="a47affec73161672979f9ae3e826702d6_description">
 
 <p>Determine if mouse camera control is enabled. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true iff mouse camera control is enabled. </dd></dl>
 
 </div>
 
@@ -371,6 +375,7 @@
     <div class="methodDescription " style="display:none" id="ae69406a67c4ceea8ee86767e53c08a44_description">
 
 <p>Determine if the middle mouse button is enabled. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true iff the mouse&apos;s middle button is enabled. </dd></dl>
 
 </div>
 
@@ -386,7 +391,7 @@
 
 <p>Enable or disable camera autodistance. </p>
 <p>Allow the camera to attempt to set the distance based on the camera&apos;s current viewpoirt.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">bAutoDistance</td><td>true to enable auto distance. </td></tr>
   </table>
@@ -424,6 +429,7 @@
 
   <div id="sectionTemplate">
     <h3 class="sectionHeader"></h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"></div>
   </div>
 

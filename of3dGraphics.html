@@ -25,7 +25,7 @@
 
 
 <div class="container">
-    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">video</a> &gt; <span id="classQuickNav">of3dGraphics.h</span></div>
+    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">3d</a> &gt; <span id="classQuickNav">of3dGraphics.h</span></div>
     <nav class="navigator" role="navigation">
       <ul id="nav-parts">
         <li class="group selected">
@@ -45,6 +45,7 @@
     <div class="classDescription"></div>
     <div class="classMethods"><div id="Functions">
     <h3 class="sectionHeader">Functions</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a18e69981f51d49f4fd2f7d6b30e4e060">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a18e69981f51d49f4fd2f7d6b30e4e060&quot;)">
       <span class="type">void </span>
@@ -392,8 +393,8 @@
     <div class="methodDescription " style="display:none" id="a83f93e69a0f38939b992960454f142f2_description">
 
 <p>Set the resolution of a polygonized cone. </p>
-<p>Allows you to set the polygonization resolution of any cones you subsequently draw with <a class="el" href="of3dGraphics.html#a1937585d9ebb2acaa8d8b8c71aba8d05">ofDrawCone()</a>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Allows you to set the polygonization resolution of any cones you subsequently draw with <a class="el" href="of3d_graphics_8cpp.html#a1937585d9ebb2acaa8d8b8c71aba8d05">ofDrawCone()</a>.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">radiusSegments</td><td>The number of facets (subdivisions) around the cone&apos;s circular footprint. </td></tr>
     <tr><td class="paramname">heightSegments</td><td>The number of subdivisions from the cone&apos;s top to bottom. </td></tr>
@@ -416,7 +417,7 @@
 
 <p>Retrieve a data structure describing the resolution with which cones are polygonized. </p>
 <p>Allows you to fetch the resolution with which cones are polygonized. Returns an <a class="el" href="ofVec3f.html">ofVec3f</a> containing the following data: Encoded as &quot;x&quot;: radiusSegments, the number of facets (subdivisions) around the cone&apos;s circular footprint. Encoded as &quot;y&quot;: heightSegments, the number of subdivisions from the cone&apos;s top to bottom. Encoded as &quot;z&quot;: capSegments, the number of annular (ring-shaped) subdivisions of the cone&apos;s endcap.</p>
-<dl class="section return"><dt>Returns</dt><dd>An <a class="el" href="ofVec3f.html">ofVec3f</a> containing (radiusSegments, heightSegments, capSegments) for cone polygonization. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>An <a class="el" href="ofVec3f.html">ofVec3f</a> containing (radiusSegments, heightSegments, capSegments) for cone polygonization. </dd></dl>
 
 </div>
 
@@ -564,7 +565,7 @@
 
 <p>Draws a rectangular box with the specified dimensions, starting from the specified coordinates. </p>
 <p>A box is a rectangular solid: an extruded rectangle. It is drawn starting from a 3D reference coordinate. It has a width (in x), a height (in y), and a depth (in z). The box is drawn with the current color, e.g. set with <a class="el" href="of_graphics_8cpp.html#abf32a6859916c39dfe5e4835c725fb6d">ofSetColor()</a>. The box is drawn filled by default; change this with <a class="el" href="of_graphics_8cpp.html#a25b1aa7e2b181dd3cb8b1086f6abbee6">ofFill()</a>;</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>The x-coordinate of the box&apos;s origin. </td></tr>
     <tr><td class="paramname">y</td><td>The y-coordinate of the box&apos;s origin. </td></tr>
@@ -591,7 +592,7 @@
 <p>Draws a cube with the specified size, starting from the specified coordinates. </p>
 <p>A cube is a rectangular solid bounded by six square faces of equal size. It is also known as a regular hexahedron, a square parallelepiped, an equilateral cuboid and a right rhombohedron. It is a regular square prism in three orientations.</p>
 <p>It is drawn starting from a 3D reference coordinate, with the specified size. The cube is drawn with the current color, e.g. set with <a class="el" href="of_graphics_8cpp.html#abf32a6859916c39dfe5e4835c725fb6d">ofSetColor()</a>. The cube is drawn filled by default; change this with <a class="el" href="of_graphics_8cpp.html#a25b1aa7e2b181dd3cb8b1086f6abbee6">ofFill()</a>;</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>The x-coordinate of the cube&apos;s origin. </td></tr>
     <tr><td class="paramname">y</td><td>The y-coordinate of the cube&apos;s origin. </td></tr>
@@ -615,7 +616,7 @@
 
 <p>Draws a rectangular box with the specified dimensions, starting from the specified position. </p>
 <p>A box is a rectangular solid: an extruded rectangle. It is drawn starting from a 3D reference coordinate. It has a width (in x), a height (in y), and a depth (in z). The box is drawn with the current color, e.g. set with <a class="el" href="of_graphics_8cpp.html#abf32a6859916c39dfe5e4835c725fb6d">ofSetColor()</a>. The box is drawn filled by default; change this with <a class="el" href="of_graphics_8cpp.html#a25b1aa7e2b181dd3cb8b1086f6abbee6">ofFill()</a>;</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">position</td><td>an ofPoint which contains the (x,y,z) coordinates for the box&apos;s reference corner. </td></tr>
     <tr><td class="paramname">width</td><td>The width of the box. </td></tr>
@@ -639,7 +640,7 @@
 
 <p>Draws a cube with the specified size, starting from the specified position. </p>
 <p>A cube is drawn starting from a 3D reference position, with the specified size. The cube is drawn with the current color, e.g. set with <a class="el" href="of_graphics_8cpp.html#abf32a6859916c39dfe5e4835c725fb6d">ofSetColor()</a>. The cube is drawn filled by default; change this with <a class="el" href="of_graphics_8cpp.html#a25b1aa7e2b181dd3cb8b1086f6abbee6">ofFill()</a>;</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">position</td><td>an ofPoint which contains the (x,y,z) coordinates for the cube&apos;s reference corner. </td></tr>
     <tr><td class="paramname">size</td><td>The size of the cube. </td></tr>
@@ -661,7 +662,7 @@
 
 <p>Draws a cube with the specified size, starting from the origin. </p>
 <p>The cube is drawn with the current color, e.g. set with <a class="el" href="of_graphics_8cpp.html#abf32a6859916c39dfe5e4835c725fb6d">ofSetColor()</a>. The cube is drawn filled by default; change this with <a class="el" href="of_graphics_8cpp.html#a25b1aa7e2b181dd3cb8b1086f6abbee6">ofFill()</a>;</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">size</td><td>The size of the cube. </td></tr>
   </table>
@@ -682,7 +683,7 @@
 
 <p>Draws a rectangular box with the specified dimensions, starting from the origin. </p>
 <p>A box is a rectangular solid: an extruded rectangle. It is drawn starting from the origin of the current reference frame. It has a width (in x), a height (in y), and a depth (in z). The box is drawn with the current color, e.g. set with <a class="el" href="of_graphics_8cpp.html#abf32a6859916c39dfe5e4835c725fb6d">ofSetColor()</a>. The box is drawn filled by default; change this with <a class="el" href="of_graphics_8cpp.html#a25b1aa7e2b181dd3cb8b1086f6abbee6">ofFill()</a>;</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">width</td><td>The width of the box. </td></tr>
     <tr><td class="paramname">height</td><td>The height of the box. </td></tr>
@@ -794,6 +795,7 @@
 
   <div id="sectionTemplate">
     <h3 class="sectionHeader"></h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"></div>
   </div>
 

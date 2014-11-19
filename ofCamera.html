@@ -25,14 +25,14 @@
 
 
 <div class="container">
-    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">video</a> &gt; <span id="classQuickNav">ofCamera.h</span></div>
+    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">3d</a> &gt; <span id="classQuickNav">ofCamera.h</span></div>
     <nav class="navigator" role="navigation">
       <ul id="nav-parts">
         <li class="group selected">
           Topics
           <ul id="topics">
             <!--<li class="chapter"><a href="asd">sad</a></li>-->
-          <li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li></ul>
+          <span class="class">ofCamera</span><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li></ul>
       </li></ul>
     </nav>
     <div class="main">
@@ -48,11 +48,10 @@
     <div class="classHeader">
       <h1 class="classTitle">ofCamera</h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>A basic camera object for interacting with objects in 3D space. </p>
-<dl class="section author"><dt>Author</dt><dd>Memo Akten, MSA Visuals Ltd. 2011 </dd></dl>
-</div></div>
+    <div class="classDescription"></div>
     <div class="classMethods"><div id="ProtectedAttributes">
     <h3 class="sectionHeader">Protected Attributes</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a741a221b952bd29fc717eda23565ee22">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a741a221b952bd29fc717eda23565ee22&quot;)">
       <span class="type">bool </span>
@@ -164,6 +163,7 @@
   </div></div>
   </div><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="abd30fe5920612bd673a7a7af7991fc4a">
     <div class="methodHeader" onClick="toggleDescription(&quot;#abd30fe5920612bd673a7a7af7991fc4a&quot;)">
       <span class="type" style="display: none;"> </span>
@@ -204,7 +204,7 @@
 
 <p>Set the field of view for a perspective camera. </p>
 <p>This sets the horizontal field of view for the camera, in degrees. This only operates with perspective cameras, and will have no effect with cameras in orthographic mode.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">f</td><td>The desired field of view for the camera, in degrees. </td></tr>
   </table>
@@ -249,8 +249,8 @@
 
 <p>Set the &quot;lens offset&quot; applied to this camera. </p>
 <p>Ordinarily, the camera is pointed straight down the center of its view frustum. However, it is possible to orient the camera towards a location offset from the center of its frustum. This is called an &quot;assymetric
-frustum&quot; and is used (for example) in stereo views. It is acheived by applying an offset to the center of projection. This function sets this offset from an <a class="el" href="ofVec2f.html">ofVec2f</a> argument. For more information see <a href="http://www.orthostereo.com/geometryopengl.html">http://www.orthostereo.com/geometryopengl.html</a>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+        frustum&quot; and is used (for example) in stereo views. It is acheived by applying an offset to the center of projection. This function sets this offset from an <a class="el" href="ofVec2f.html">ofVec2f</a> argument. For more information see &lt;<a href="http://www.orthostereo.com/geometryopengl.html">http://www.orthostereo.com/geometryopengl.html</a>&gt;.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">lensOffset</td><td>The &quot;lens offset&quot; to apply to this camera, encoded in an <a class="el" href="ofVec2f.html">ofVec2f</a>. </td></tr>
   </table>
@@ -271,7 +271,7 @@ frustum&quot; and is used (for example) in stereo views. It is acheived by apply
 
 <p>Set the recommended aspect ratio for a perspective camera. </p>
 <p>Sets the aspect ratio of the camera to the desired float, and forces the use of aspect ratio calculations. Currently only used with perspective cameras. The default value (and the value used with orthographic cameras) is the ratio of the viewport&apos;s width to the viewport&apos;s height.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">aspectRatio</td><td>The desired aspect ratio, e.g. 1.3333, 1.6, etc. </td></tr>
   </table>
@@ -291,8 +291,8 @@ frustum&quot; and is used (for example) in stereo views. It is acheived by apply
     <div class="methodDescription " style="display:none" id="a123c0d1c078ffdb6c54175afaff2f45d_description">
 
 <p>Set whether or not the aspect ratio of this camera is forced to a non-default setting. </p>
-<p>The camera&apos;s aspect ratio, by default, is the aspect ratio of your viewport. If you have set a non-default value (with <a class="el" href="ofCamera.html#a1c786ac3f953960fb58881dae1bc4083" title="Set the recommended aspect ratio for a perspective camera. ">ofCamera::setAspectRatio()</a>), you can toggle whether or not this value is applied.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>The camera&apos;s aspect ratio, by default, is the aspect ratio of your viewport. If you have set a non-default value (with <a class="el" href="ofCamera.html#a1c786ac3f953960fb58881dae1bc4083" title="Set the recommended aspect ratio for a perspective camera.">ofCamera::setAspectRatio()</a>), you can toggle whether or not this value is applied.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">forceAspectRatio</td><td>Whether or not this camera should use an aspect ratio you have set yourself. </td></tr>
   </table>
@@ -313,7 +313,7 @@ frustum&quot; and is used (for example) in stereo views. It is acheived by apply
 
 <p>Get the camera&apos;s field of view, in degrees. </p>
 <p>Get the horizontal camera&apos;s field of view, in degrees. This is only meaningful for perspective cameras.</p>
-<dl class="section return"><dt>Returns</dt><dd>The camera&apos;s field of view, in degrees. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The camera&apos;s field of view, in degrees. </dd></dl>
 
 </div>
 
@@ -353,7 +353,7 @@ frustum&quot; and is used (for example) in stereo views. It is acheived by apply
 
 <p>Get the &quot;lens offset&quot; applied to this camera, encoded as an <a class="el" href="ofVec2f.html">ofVec2f</a>. </p>
 <p>Ordinarily, the camera is pointed straight down the center of its view frustum. However, it is possible to orient the camera towards a location offset from the center of its frustum. This is called an &quot;asymetric frustum&quot; and is used (for example) in stereo views. It is acheived by applying an offset to the center of projection. This function returns the offset that has been applied, as an <a class="el" href="ofVec2f.html">ofVec2f</a>. For more information see <a href="http://www.orthostereo.com/geometryopengl.html">http://www.orthostereo.com/geometryopengl.html</a>.</p>
-<dl class="section return"><dt>Returns</dt><dd>The &quot;lens offset&quot; applied to this camera, encoded in an <a class="el" href="ofVec2f.html">ofVec2f</a>. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The &quot;lens offset&quot; applied to this camera, encoded in an <a class="el" href="ofVec2f.html">ofVec2f</a>. </dd></dl>
 
 </div>
 
@@ -368,7 +368,7 @@ frustum&quot; and is used (for example) in stereo views. It is acheived by apply
     <div class="methodDescription " style="display:none" id="ace8154b357e9b6f285d34c067c1555ee_description">
 
 <p>Get the boolean state which indicates whether the aspect ratio of this camera is forced to a non-default setting. </p>
-<dl class="section return"><dt>Returns</dt><dd>A boolean: whether or not this camera&apos;s aspect ratio is set to a non-default value. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A boolean: whether or not this camera&apos;s aspect ratio is set to a non-default value. </dd></dl>
 
 </div>
 
@@ -384,7 +384,7 @@ frustum&quot; and is used (for example) in stereo views. It is acheived by apply
 
 <p>Get the aspect ratio of this camera&apos;s viewport. </p>
 <p>Returns the aspect ratio of this camera&apos;s viewport. Usually this will be the ratio of the width to height of your display. Intended for perspective cameras.</p>
-<dl class="section return"><dt>Returns</dt><dd>The aspect ratio of this camera&apos;s viewport. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The aspect ratio of this camera&apos;s viewport. </dd></dl>
 
 </div>
 
@@ -495,19 +495,22 @@ frustum&quot; and is used (for example) in stereo views. It is acheived by apply
     <div class="methodDescription " style="display:none" id="afb7b6b17c6b13fcb1ec05fbc8b9b407f_description">
 
 <p>Begins rendering with the camera. </p>
-<p>Example: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="ofNode.html#a69ed7a21f7f8ee435fa6d8a99424e9ba">draw</a>() {</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// Begin rendering from the camera&apos;s perspective.</span></div>
-<div class="line">    camera.begin();</div>
-<div class="line"></div>
-<div class="line">    <a class="code" href="of_graphics_8cpp.html#acc4b7173caaa9e04c8965782c6925bdc">ofLine</a>(0, 0, <a class="code" href="of_app_runner_8cpp.html#a28bb1c518b5c68ee2eae655bd4e56445">ofGetWidth</a>(), <a class="code" href="of_app_runner_8cpp.html#a415b5eadf885ebd1f4799cc40e5db137">ofGetHeight</a>());</div>
-<div class="line">    <span class="comment">// Additional rendering ...</span></div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// End rendering form the camera&apos;s perspective.</span></div>
-<div class="line">    camera.end();</div>
-<div class="line"></div>
-<div class="line">}</div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+<p>Example: </p>
+<div class="fragment"><pre class="fragment"> {.cpp}
+
+ <span class="keywordtype">void</span> <a class="code" href="ofNode.html#a69ed7a21f7f8ee435fa6d8a99424e9ba">draw</a>() {
+
+     <span class="comment">// Begin rendering from the camera&apos;s perspective.</span>
+     camera.begin();
+
+     <a class="code" href="of_graphics_8cpp.html#acc4b7173caaa9e04c8965782c6925bdc">ofLine</a>(0, 0, <a class="code" href="of_app_runner_8cpp.html#a28bb1c518b5c68ee2eae655bd4e56445">ofGetWidth</a>(), <a class="code" href="of_app_runner_8cpp.html#a415b5eadf885ebd1f4799cc40e5db137">ofGetHeight</a>());
+     <span class="comment">// Additional rendering ...</span>
+
+     <span class="comment">// End rendering form the camera&apos;s perspective.</span>
+     camera.end();
+
+ }
+</pre></div><dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">viewport</td><td>The camera&apos;s rendering viewport. </td></tr>
   </table>
@@ -543,7 +546,7 @@ frustum&quot; and is used (for example) in stereo views. It is acheived by apply
     <div class="methodDescription " style="display:none" id="a69c858a6ecd8f140ac114cec108b3499_description">
 
 <p>Access the projection matrix. </p>
-<dl class="section return"><dt>Returns</dt><dd>the current 4x4 projection matrix. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the current 4x4 projection matrix. </dd></dl>
 
 </div>
 
@@ -558,7 +561,7 @@ frustum&quot; and is used (for example) in stereo views. It is acheived by apply
     <div class="methodDescription " style="display:none" id="aef9fc0a70e89d6807db26d17304c7aa2_description">
 
 <p>Access the model view matrix. </p>
-<dl class="section return"><dt>Returns</dt><dd>the current 4x4 model view matrix. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the current 4x4 model view matrix. </dd></dl>
 
 </div>
 
@@ -586,15 +589,15 @@ frustum&quot; and is used (for example) in stereo views. It is acheived by apply
 
 <p>Obtain the screen coordinates of a point in the 3D world. </p>
 <p>Takes an (X,Y,Z) point in your 3D world, encoded as an <a class="el" href="ofVec3f.html">ofVec3f</a>, and returns the location (also as an <a class="el" href="ofVec3f.html">ofVec3f</a>) where this point would appear on your (two-dimensional) display. The screen position&apos;s &quot;Z
-coordinate&quot; is set to be the same as your camera&apos;s.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+        coordinate&quot; is set to be the same as your camera&apos;s.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">WorldXYZ</td><td>A 3D point in the world, whose screen coordinates you wish to know. </td></tr>
     <tr><td class="paramname">viewport</td><td>(Optional) A viewport. The default is <a class="el" href="of_graphics_8cpp.html#a9b45fc63c10fdf222fcbf20543183220">ofGetCurrentViewport()</a>. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>An <a class="el" href="ofVec3f.html">ofVec3f</a> containing the screen coordinates of your 3D point of interest. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>An <a class="el" href="ofVec3f.html">ofVec3f</a> containing the screen coordinates of your 3D point of interest. </dd></dl>
 
 </div>
 
@@ -610,7 +613,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
 <p>Obtain the coordinates, in the 3D world, of a 2D point presumed to be on your screen. </p>
 <p>Takes a pixel location on your screen, encoded in an <a class="el" href="ofVec3f.html">ofVec3f</a>, and returns (also as an <a class="el" href="ofVec3f.html">ofVec3f</a>) the 3D world coordinates of that point. You&apos;ll also need to specify a Z value when providing your screen point. This Z value is interpreted as a distance into or away from the screen.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">ScreenXYZ</td><td>A point on your screen, whose 3D world coordinates you wish to know. </td></tr>
   </table>
@@ -646,6 +649,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
   </div></div>
   </div><div id="ProtectedFunctions">
     <h3 class="sectionHeader">Protected Functions</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a14be7a543e64f332e9f3106fce2b369f">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a14be7a543e64f332e9f3106fce2b369f&quot;)">
       <span class="type">void </span>
@@ -687,6 +691,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
   <div id="sectionTemplate">
     <h3 class="sectionHeader"></h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"></div>
   </div>
 

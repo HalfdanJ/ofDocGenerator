@@ -25,14 +25,14 @@
 
 
 <div class="container">
-    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">video</a> &gt; <span id="classQuickNav">ofSoundPlayer.h</span></div>
+    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">sound</a> &gt; <span id="classQuickNav">ofSoundPlayer.h</span></div>
     <nav class="navigator" role="navigation">
       <ul id="nav-parts">
         <li class="group selected">
           Topics
           <ul id="topics">
             <!--<li class="chapter"><a href="asd">sad</a></li>-->
-          <li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li></ul>
+          <li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofSoundPlayer</span><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li></ul>
       </li></ul>
     </nav>
     <div class="main">
@@ -45,6 +45,7 @@
     <div class="classDescription"></div>
     <div class="classMethods"><div id="Functions">
     <h3 class="sectionHeader">Functions</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a59583d461cb699576ac603fcf1865c3a">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a59583d461cb699576ac603fcf1865c3a&quot;)">
       <span class="type">void </span>
@@ -84,7 +85,7 @@
     <div class="methodDescription " style="display:none" id="abc2ae62ed625b27bba334d3123cb6e89_description">
 
 <p>Sets global volume for FMOD-based sound players (windows, osx). </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">vol</td><td>range is 0 to 1. </td></tr>
   </table>
@@ -119,14 +120,14 @@
 
 <p>Gets a frequency spectrum sample, taking all current sound players into account. </p>
 <p>Each band will be represented as a float between 0 and 1.</p>
-<dl class="section warning"><dt>Warning</dt><dd>This isn&apos;t implemented on mobile &amp; embedded platforms. </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This isn&apos;t implemented on mobile &amp; embedded platforms. </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">nBands</td><td>number of spectrum bands to return, max 512. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>pointer to an FFT sample, sample size is equal to the nBands parameter. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>pointer to an FFT sample, sample size is equal to the nBands parameter. </dd></dl>
 
 </div>
 
@@ -136,11 +137,10 @@
     <div class="classHeader">
       <h1 class="classTitle">ofSoundPlayer</h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>Plays sound files. </p>
-<p><a class="el" href="ofSoundPlayer.html" title="Plays sound files. ">ofSoundPlayer</a> handles simple playback of sound files, with controls for volume, pan, speed, seeking and multiplay. This is a common cross-platform sound player interface which is inherited by each of the platform-specific sound player implementations. </p>
-</div></div>
+    <div class="classDescription"></div>
     <div class="classMethods"><div id="ProtectedAttributes">
     <h3 class="sectionHeader">Protected Attributes</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a0ccb346121a71b309237975a46d33977">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a0ccb346121a71b309237975a46d33977&quot;)">
       <span class="type"><a href="ofBaseSoundPlayer.html">ofBaseSoundPlayer</a></span>
@@ -156,6 +156,7 @@
   </div></div>
   </div><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a19c22b314803390acc76cc0ec8a0dd08">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a19c22b314803390acc76cc0ec8a0dd08&quot;)">
       <span class="type" style="display: none;"> </span>
@@ -204,7 +205,7 @@
 
 <p>Tells the sound player which file to play. </p>
 <p>Codec support varies by platform but wav, aif, and mp3 are safe.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">fileName</td><td>Path to the sound file, relative to your app&apos;s data folder. </td></tr>
     <tr><td class="paramname">stream</td><td>set &quot;true&quot; to enable streaming from disk (for large files). </td></tr>
@@ -275,7 +276,7 @@
     <div class="methodDescription " style="display:none" id="acaa80eb92af43c4889a1f2968849dd80_description">
 
 <p>Sets playback volume. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">vol</td><td>range is 0 to 1. </td></tr>
   </table>
@@ -297,7 +298,7 @@
     <div class="methodDescription " style="display:none" id="a09b4d2544fd2a8996495d86abc6a37b4_description">
 
 <p>Sets stereo pan. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">pan</td><td>range is -1 to 1 (-1 is full left, 1 is full right). </td></tr>
   </table>
@@ -319,7 +320,7 @@
     <div class="methodDescription " style="display:none" id="ae53cf7c7dae0dce98b3b2723d2cfc1cc_description">
 
 <p>Sets playback speed. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">speed</td><td>set &gt; 1 for faster playback, &lt; 1 for slower playback. </td></tr>
   </table>
@@ -341,7 +342,7 @@
     <div class="methodDescription " style="display:none" id="acacd7c20575eedd1e76e83690000b531_description">
 
 <p>Enables pause / resume. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">paused</td><td>&quot;true&quot; to pause, &quot;false&quot; to resume. </td></tr>
   </table>
@@ -363,7 +364,7 @@
     <div class="methodDescription " style="display:none" id="aaec50cde0a65da345e27b1f2c3fe71c0_description">
 
 <p>Sets whether to loop once the end of the file is reached. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">loop</td><td>&quot;true&quot; to loop, default is false. </td></tr>
   </table>
@@ -385,7 +386,7 @@
     <div class="methodDescription " style="display:none" id="a966974fb83e033cb299abead57c9010b_description">
 
 <p>Enables playing multiple simultaneous copies of the sound. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">multiplay</td><td>&quot;true&quot; to enable, default is false. </td></tr>
   </table>
@@ -407,7 +408,7 @@
     <div class="methodDescription " style="display:none" id="a4603df47fce522ef54b077382d53de9d_description">
 
 <p>Sets position of the playhead within the file (aka &quot;seeking&quot;). </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">percent</td><td>range is 0 (beginning of file) to 1 (end of file). </td></tr>
   </table>
@@ -429,7 +430,7 @@
     <div class="methodDescription " style="display:none" id="ac9971abc1e86caf996fa18688cfe3f23_description">
 
 <p>Sets position of the playhead within the file (aka &quot;seeking&quot;). </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">ms</td><td>number of milliseconds from the start of the file. </td></tr>
   </table>
@@ -451,7 +452,7 @@
     <div class="methodDescription " style="display:none" id="a030e9784d82c0e5e100f88c3c24a4209_description">
 
 <p>Gets position of the playhead. </p>
-<dl class="section return"><dt>Returns</dt><dd>playhead position in milliseconds. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>playhead position in milliseconds. </dd></dl>
 
 <p>Implements <a class="el" href="ofBaseSoundPlayer.html#a03deb9c7833a9e765e885c68214559b5">ofBaseSoundPlayer</a>.</p>
 
@@ -468,7 +469,7 @@
     <div class="methodDescription " style="display:none" id="ab323f725c722b7c858e5fb2cd26d054e_description">
 
 <p>Gets position of the playhead. </p>
-<dl class="section return"><dt>Returns</dt><dd>playhead position as a float between 0 and 1. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>playhead position as a float between 0 and 1. </dd></dl>
 
 <p>Implements <a class="el" href="ofBaseSoundPlayer.html#aa397af6f05c4451866bd343692c1aa33">ofBaseSoundPlayer</a>.</p>
 
@@ -485,7 +486,7 @@
     <div class="methodDescription " style="display:none" id="a5b6d6347a3a94823f64df7c34da29fcb_description">
 
 <p>Gets current playback state. </p>
-<dl class="section return"><dt>Returns</dt><dd>true if the player is currently playing a file. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if the player is currently playing a file. </dd></dl>
 
 <p>Implements <a class="el" href="ofBaseSoundPlayer.html#aa3445838a28c7622edecb778f7400bd6">ofBaseSoundPlayer</a>.</p>
 
@@ -502,7 +503,7 @@
     <div class="methodDescription " style="display:none" id="a7ce70d482070ef585016d4a47b016a04_description">
 
 <p>Gets playback speed. </p>
-<dl class="section return"><dt>Returns</dt><dd>playback speed (see <a class="el" href="ofSoundPlayer.html#ae53cf7c7dae0dce98b3b2723d2cfc1cc" title="Sets playback speed. ">ofSoundPlayer::setSpeed()</a>). </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>playback speed (see <a class="el" href="ofSoundPlayer.html#ae53cf7c7dae0dce98b3b2723d2cfc1cc" title="Sets playback speed.">ofSoundPlayer::setSpeed()</a>). </dd></dl>
 
 <p>Implements <a class="el" href="ofBaseSoundPlayer.html#ac81d07b18bde46e618ca026e088b1e19">ofBaseSoundPlayer</a>.</p>
 
@@ -519,7 +520,7 @@
     <div class="methodDescription " style="display:none" id="a45fae5c6233c598671bbce9ecac9e017_description">
 
 <p>Gets stereo pan. </p>
-<dl class="section return"><dt>Returns</dt><dd>stereo pan in the range -1 to 1. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>stereo pan in the range -1 to 1. </dd></dl>
 
 <p>Implements <a class="el" href="ofBaseSoundPlayer.html#ab17c0b5c5684ce988eb1f52259477aae">ofBaseSoundPlayer</a>.</p>
 
@@ -536,7 +537,7 @@
     <div class="methodDescription " style="display:none" id="a75236eacf64de363550781b979d728c7_description">
 
 <p>Gets current volume. </p>
-<dl class="section return"><dt>Returns</dt><dd>current volume in the range 0 to 1. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>current volume in the range 0 to 1. </dd></dl>
 
 <p>Implements <a class="el" href="ofBaseSoundPlayer.html#aca6bacfc7d14de5c2d02ba47c8a39922">ofBaseSoundPlayer</a>.</p>
 
@@ -553,7 +554,7 @@
     <div class="methodDescription " style="display:none" id="a517b9a3efc4dc076359d4a5187649343_description">
 
 <p>Queries the player to see if its file was loaded successfully. </p>
-<dl class="section return"><dt>Returns</dt><dd>whether or not the player is ready to begin playback. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>whether or not the player is ready to begin playback. </dd></dl>
 
 <p>Implements <a class="el" href="ofBaseSoundPlayer.html#a130cd77db54b76836c7b8da709c03bc8">ofBaseSoundPlayer</a>.</p>
 
@@ -588,6 +589,7 @@
 
   <div id="sectionTemplate">
     <h3 class="sectionHeader"></h3>
+    <div class="sectionDescription"></div>
     <div class="sectionContent"></div>
   </div>
 
