@@ -2,7 +2,7 @@ var fs = require('fs-extra'),
   util = require('util'),
   Q = require('Q'),
   xml2js = require('xml2js'),
-  cheerio = require('cheerio'),
+  cheerio = require('cheerio')
   //sass = require('node-sass');
 
 var root =  process.argv[2] || "../../";
