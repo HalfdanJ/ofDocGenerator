@@ -1,8 +1,15 @@
 before_install:
     - sudo apt-get update
     - sudo apt-get install -qq doxygen
+    - gem install sass --version "=3.2.12"
+    - gem install compass --version "=0.12.2"
+    - git clone https://github.com/HalfdanJ/openFrameworks.git 
 language: node_js
 node_js: "0.10"
 env:
     global:
         - secure: "NMv9a+t30l1Cf+MgO6OHpcKaK+yraCD6imDLwjt15Z9SIkKk5S70q2xt16ccRDDrn7x78C771WRkgN1ZgLW7T1gEOGB0bNt7gk2bSS+NoCbgL+/T4lWV3a/4+X+Ol6F8l6EuzlMX84FtGcegxMYWQd16pBvpAXeCkHmImOV5264="
+
+script:
+    - cd openFrameworks/libs/openFrameworksCompiled/project/doxygen/; doxygen Doxyfile;
+    - pwd
