@@ -8,7 +8,7 @@ language: node_js
 node_js: "0.10"
 env:
     global:
-        - secure: "NMv9a+t30l1Cf+MgO6OHpcKaK+yraCD6imDLwjt15Z9SIkKk5S70q2xt16ccRDDrn7x78C771WRkgN1ZgLW7T1gEOGB0bNt7gk2bSS+NoCbgL+/T4lWV3a/4+X+Ol6F8l6EuzlMX84FtGcegxMYWQd16pBvpAXeCkHmImOV5264="
+        - secure: "cDW4C0M6gHP7Zfhyi2xwKrHtqT3FkuS7BkyVe/hG4piSYxnf7LyxElQhDxjedEg0ibxNNbINAnYwtvc+s7skL40c6HsgkFm49AE/h150KVKqfu9nhJUoMsHVsCBnF29oKk9qXvla3mfJsGOBfZsY9UNIosqnMjXHzYuDbsNQ/5k="
 
 script:
     - git config --global user.name "Travis-CI"
