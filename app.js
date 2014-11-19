@@ -15,6 +15,7 @@ if(fs.existsSync('output'))
 fs.mkdirSync('output');
 fs.copySync('assets/script.js', 'output/script.js');
 
+//Create the css file from the scss file in assets
 sass.renderFile({
   file: 'assets/stylesheet.scss',
   outFile: 'output/stylesheet.css',
@@ -28,13 +29,12 @@ sass.renderFile({
 
 // Load the doc structure
 var structure = require("./structure.json");
-//structure = {core: {"utils": ['ofThread','ofLog']}}
+structure = {core: {"utils": ['ofThread','ofLog', 'ofColor']}}
 var tocInfo = {};
 
 // Generate the docs
 for(var category in structure['core']){
   structure['core'][category].forEach(function(file){
-    console.log(category, file)
     generateDoc(file, category);
   })
 }
@@ -57,10 +57,10 @@ function generateDoc(className, category) {
 
   parseDoxygenXml(doxygenName+"_8h")
     .then(function(parseData) {
-      return scrapeHtml(parseData);
+      return scrapeDoxygenHtml(parseData);
     })
     .then(function(parseData){
-      return updateHtml(parseData);
+      return generateHtml(parseData, category);
     })
     .then(function(html){
       //Save the html
@@ -70,28 +70,6 @@ function generateDoc(className, category) {
     .fail(function(e){
       console.error(e)
     })
-}
-// ---------
-
-function generateToc(structure, tocInfo){
-  var templateData = fs.readFileSync("templateToc.html");
-  var $ = cheerio.load(templateData.toString());
-
-
-  var c = $(".content");
-  for(var category in structure['core']){
-    c.append('<h3>'+category+"</h3>");
-    structure['core'][category].forEach(function(file){
-      var desc = '';
-      if(tocInfo[file]){
-        desc = ' - '+tocInfo[file];
-      }
-      c.append('<a href="'+file+'.html">'+file+"</a>"+desc+"<br>");
-    })
-  }
-  // Write the file
-  fs.writeFile("output/index.html", $.html());
-
 }
 
 
@@ -316,7 +294,7 @@ function parseDoxygenXml(doxygenName){
 
 // -----------
 
-function scrapeHtml(parsedData){
+function scrapeDoxygenHtml(parsedData){
   var promises = [];
 
   if(!fs.existsSync(parsedData.htmlPath)){
@@ -328,7 +306,7 @@ function scrapeHtml(parsedData){
 
   var $input = cheerio.load(htmlData.toString());
 
-  // Class description
+  // Overall description
   $input(".groupheader").each(function (i, elm) {
     if ($input(elm).text() == "Detailed Description") {
       parsedData.description = $input(elm).next();
@@ -338,7 +316,7 @@ function scrapeHtml(parsedData){
 
   // Classes
   parsedData.classes.forEach(function (innerclass) {
-    var p = scrapeHtml(innerclass).then(function(parsedData){
+    var p = scrapeDoxygenHtml(innerclass).then(function(parsedData){
       innerclass = parsedData;
     });
 
@@ -348,6 +326,13 @@ function scrapeHtml(parsedData){
 
   // Sections
   parsedData.sections.forEach(function (section) {
+    // Find description of section
+    $input("div.groupHeader").each(function (i, elm) {
+      if ($input(elm).text() == section.name) {
+        //This is not the best solution, but the only i could find to find the section description....
+        section.description = $input(elm).closest('tr').next().find('.groupText').html();
+      }
+    });
 
     // Go through all methods in the section
     section.methods.forEach(function (method) {
@@ -358,7 +343,7 @@ function scrapeHtml(parsedData){
       var ref = method.info.id.replace(parsedData.doxygenName + "_1", "");
       var refElm = $input("#" + ref);
 
-      if (!ref || !refElm) {
+      if (!refElm) {
         console.error("Missing docs!")
       } else {
         var memitem = refElm.next();
@@ -382,7 +367,7 @@ function scrapeHtml(parsedData){
 
 // -----------
 
-function updateHtml(parsedData){
+function generateHtml(parsedData, category){
   var templateData = fs.readFileSync("template.html");
 
   var $ = cheerio.load(templateData.toString());
@@ -399,6 +384,8 @@ function updateHtml(parsedData){
   generateHtmlContent(parsedData, $);
 
   parsedData.classes.forEach(function(innerclass){
+    $("#topics").append('<span class="class">'+innerclass.name+'</span>');
+
     generateHtmlContent(innerclass, $);
   });
 
@@ -428,10 +415,12 @@ function generateHtmlContent(parsedData, $){
     $("#topics").append('<li class="chapter"><a href="#' + section.anchor + '">' + section.name + "</a></li>")
 
 
-    // Template
+    // Section template
     var s = $('#sectionTemplate').clone().attr('id', section.anchor);
-    s.children('.sectionHeader').text(section.name)
-
+    s.children('.sectionHeader').text(section.name);
+    if(section.description) {
+      s.children('.sectionDescription').html(section.description);
+    }
     section.methods.forEach(function (method) {
       var ref = method.info.id.replace(parsedData.doxygenName + "_1", "");
 
@@ -505,7 +494,29 @@ function generateHtmlContent(parsedData, $){
 
 // -----------
 
+function generateToc(structure, tocInfo){
+  var templateData = fs.readFileSync("templateToc.html");
+  var $ = cheerio.load(templateData.toString());
 
+
+  var c = $(".content");
+  for(var category in structure['core']){
+    c.append('<h3>'+category+"</h3>");
+    structure['core'][category].forEach(function(file){
+      var desc = '';
+      if(tocInfo[file]){
+        desc = ' - '+tocInfo[file];
+      }
+      c.append('<a href="'+file+'.html">'+file+"</a>"+desc+"<br>");
+    })
+  }
+  // Write the file
+  fs.writeFile("output/index.html", $.html());
+
+}
+
+
+// -----------
 
 function updateLink(elm){
   var ref = elm.attr('href');
@@ -542,6 +553,10 @@ function updateLink(elm){
 
   elm.attr('href',ref);
 }
+
+// ---------
+
+
 
 function getLinkUrlFromDoxygenUrl(ref){
   if(ref.match(/^class/g)){
