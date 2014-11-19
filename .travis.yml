@@ -18,9 +18,11 @@ script:
     - npm run sass;
     - mkdir ghpages
     - cd ghpages
-    - git clone https://github.com/halfdanJ/ofDocGenerator
+    - git clone https://github.com/halfdanJ/ofDocGenerator . 
     - git checkout gh-pages
     - cp -R ../output/* .
     - git add --all .
     - git commit -m "Auto update ofDoc from Travis-ci"
+    - git config --global user.name "${GIT_NAME}"
+    - git config --global user.email ${GIT_EMAIL}
     - git push https://${GH_TOKEN}@github.com/HalfdanJ/ofDocGenerator gh-pages
