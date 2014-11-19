@@ -5,8 +5,8 @@ var fs = require('fs-extra'),
   cheerio = require('cheerio')
   //sass = require('node-sass');
 
-var root =  process.argv[2] || "../../";
-var dir = root + "libs/openFrameworksCompiled/project/doxygen/build/";
+var root =  process.argv[2] || "../..";
+var dir = root + "/libs/openFrameworksCompiled/project/doxygen/build/";
 console.log("Openframeworks root: "+root);
 
 //Create the output folder
