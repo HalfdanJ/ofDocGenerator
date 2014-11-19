@@ -29,7 +29,7 @@ fs.copySync('assets/script.js', 'output/script.js');
 
 // Load the doc structure
 var structure = require("./structure.json");
-structure = {core: {"utils": ['ofThread','ofLog', 'ofColor']}}
+//structure = {core: {"utils": ['ofThread','ofLog', 'ofColor']}}
 var tocInfo = {};
 
 // Generate the docs
