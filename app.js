@@ -3,7 +3,7 @@ var fs = require('fs-extra'),
   Q = require('Q'),
   xml2js = require('xml2js'),
   cheerio = require('cheerio'),
-  sass = require('node-sass');
+  //sass = require('node-sass');
 
 var root =  process.argv[2] || "../../";
 var dir = root + "libs/openFrameworksCompiled/project/doxygen/build/";
@@ -16,7 +16,7 @@ fs.mkdirSync('output');
 fs.copySync('assets/script.js', 'output/script.js');
 
 //Create the css file from the scss file in assets
-sass.renderFile({
+/*sass.renderFile({
   file: 'assets/stylesheet.scss',
   outFile: 'output/stylesheet.css',
   error: function(error) {
@@ -24,7 +24,7 @@ sass.renderFile({
   },
   success: function(){}
 });
-
+*/
 
 
 // Load the doc structure

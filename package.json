@@ -8,12 +8,12 @@
   "scripts": {
     "doxygen": "cd ../../libs/openFrameworksCompiled/project/doxygen/; doxygen Doxyfile",
     "parse": "node app.js",
-    "start": "npm run doxygen; npm run parse"
+    "sass": "sass assets/stylesheet.scss output/stylesheet.css",
+    "start": "npm run doxygen; npm run parse; npm run sass"
   },
   "dependencies": {
     "cheerio": "^0.18.0",
     "fs-extra": "^0.12.0",
-    "node-sass": "^1.2.2",
     "q": "^1.1.1",
     "xml2js": "^0.4.4"
   }
