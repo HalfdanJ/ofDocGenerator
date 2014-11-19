@@ -7,8 +7,8 @@ git clone --branch=gh-pages https://github.com/HalfdanJ/ofDocGenerator.git ghpag
 cp -R output/* ghpages/
 (
 	cd ghpages;
-	git remote set-url origin "https://${GH_TOKEN}@github.com/HalfdanJ/ofDocGenerator.git"
-	git push -f origin gh-pages
+	git remote set-url origin "https://${GIT_TOKEN}@github.com/HalfdanJ/ofDocGenerator.git"
+	git push -fq origin gh-pages  > /dev/null 2>&1
 )
 
 echo "Publishing done"
