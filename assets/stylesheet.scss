@@ -147,19 +147,34 @@ nav {
   display: none;
 }
 
+
+.sectionHeader {
+  font-weight: 200;
+  font-size:20px;
+}
 .methodHeader {
-  //font-family: "Lucida Console", Monaco, monospace;
+  font-family: 'Inconsolata', monospace;
   font-size:14px;
   margin-bottom:5px;
   margin-top:5px;
+  margin-left: 23px;
   cursor: pointer;
+
+  a {
+    &:hover{
+      text-decoration: none;
+    }
+  }
+
   .type {
     color: #aaa;
     padding-right:8px;
+    display: none;
   }
 
   .args {
     color: #aaa;
+    display: none;
   }
 
   &.deprecatedMethod {
@@ -168,7 +183,8 @@ nav {
     }
     a {
       text-decoration: line-through;
-      color: #aaa;
+
+
     }
 
     .note {
@@ -186,6 +202,8 @@ nav {
   margin-bottom:15px;
 
   padding:10px 10px 5px 15px;
+
+
 
 
 
@@ -233,7 +251,7 @@ nav {
   }
 
   .line {
-    font-family: monospace, fixed;
+    font-family: 'Inconsolata', monospace;
     font-size: 13px;
     min-height: 13px;
     line-height: 1.0;

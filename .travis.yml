@@ -13,8 +13,7 @@ env:
 script:
     - git config --global user.name "Travis-CI"
     - git config --global user.email ${GIT_EMAIL}
-    - git clone --quiet https://github.com/HalfdanJ/openFrameworks.git
-    - cd openFrameworks; git checkout documentation; cd ..; 
+    - git clone --quiet --branch documentation https://github.com/HalfdanJ/openFrameworks.git
     - cd openFrameworks/libs/openFrameworksCompiled/project/doxygen/; doxygen Doxyfile; cd ../../../../../
     - node app openFrameworks
     - npm run sass;
