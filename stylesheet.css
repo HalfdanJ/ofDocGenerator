@@ -83,21 +83,30 @@ nav {
 #templates {
   display: none; }
 
+.sectionHeader {
+  font-weight: 200;
+  font-size: 20px; }
+
 .methodHeader {
+  font-family: 'Inconsolata', monospace;
   font-size: 14px;
   margin-bottom: 5px;
   margin-top: 5px;
+  margin-left: 23px;
   cursor: pointer; }
+  .methodHeader a:hover {
+    text-decoration: none; }
   .methodHeader .type {
     color: #aaa;
-    padding-right: 8px; }
+    padding-right: 8px;
+    display: none; }
   .methodHeader .args {
-    color: #aaa; }
+    color: #aaa;
+    display: none; }
   .methodHeader.deprecatedMethod span {
     text-decoration: line-through; }
   .methodHeader.deprecatedMethod a {
-    text-decoration: line-through;
-    color: #aaa; }
+    text-decoration: line-through; }
   .methodHeader.deprecatedMethod .note {
     text-decoration: none;
     color: #ccc; }
@@ -127,7 +136,7 @@ nav {
   padding-left: 7px;
   margin-bottom: 8px; }
   .fragment .line, pre .line {
-    font-family: monospace, fixed;
+    font-family: 'Inconsolata', monospace;
     font-size: 13px;
     min-height: 13px;
     line-height: 1.0;

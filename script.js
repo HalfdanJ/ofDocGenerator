@@ -5,7 +5,7 @@ var e = $(elm+"_description");
 
   console.log($(elm + "_description").css("height"));
 
-  e.slideToggle("slow", function(){
+  e.slideToggle("fast", function(){
     console.log("done")
   })
 }
