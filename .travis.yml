@@ -1,6 +1,7 @@
 before_install:
     - sudo apt-get update
-    - sudo apt-get install -qq doxygen
+    - sudo apt-get install doxygen
+    - sudo apt-get upgrade doxygen
     - gem install sass --version "=3.2.12"
     - gem install compass --version "=0.12.2"
 

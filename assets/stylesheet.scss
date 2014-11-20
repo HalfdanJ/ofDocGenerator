@@ -152,6 +152,7 @@ nav {
   font-weight: 200;
   font-size:20px;
 }
+
 .methodHeader {
   font-family: 'Inconsolata', monospace;
   font-size:14px;
@@ -167,13 +168,13 @@ nav {
   }
 
   .type {
-    color: #aaa;
+    color: #999;
     padding-right:8px;
     display: none;
   }
 
   .args {
-    color: #aaa;
+    color: #999;
     display: none;
   }
 
@@ -191,6 +192,15 @@ nav {
       text-decoration: none;
       color: #ccc;
     }
+  }
+}
+
+.open {
+  .type {
+    display:initial;
+  }
+  .args {
+    display: initial;
   }
 }
 
