@@ -1,7 +1,8 @@
 before_install:
+    - sudo apt-get install python-software-properties 
+    - sudo apt-add-repository ppa:libreoffice/libreoffice-4-2
     - sudo apt-get update
     - sudo apt-get install doxygen
-    - sudo apt-get upgrade doxygen
     - gem install sass --version "=3.2.12"
     - gem install compass --version "=0.12.2"
 
