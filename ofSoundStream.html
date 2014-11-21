@@ -58,9 +58,9 @@
 
     <div class="methodDescription " style="display:none" id="a0c047cfad99e651f9338b2c01e9f35af_description">
 
-<p>Sets up and starts a global <a class="el" href="ofSoundStream.html" title="Gives access to audio input and output devices.">ofSoundStream</a>. </p>
+<p>Sets up and starts a global <a class="el" href="ofSoundStream.html" title="Gives access to audio input and output devices. ">ofSoundStream</a>. </p>
 <p>This will set up a sound stream with a default sample rate of 44100, a buffer size of 256 samples, and a queue of 4 buffers.</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">nOutputChannels</td><td>number of requested output channels (i.e. 2 for stereo). </td></tr>
     <tr><td class="paramname">nInputChannels</td><td>number of requested input channels. </td></tr>
@@ -81,8 +81,8 @@
 
     <div class="methodDescription " style="display:none" id="a0c56700090e9220c980d65388cd32945_description">
 
-<p>Sets up and starts a global <a class="el" href="ofSoundStream.html" title="Gives access to audio input and output devices.">ofSoundStream</a>. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<p>Sets up and starts a global <a class="el" href="ofSoundStream.html" title="Gives access to audio input and output devices. ">ofSoundStream</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">nOutputChannels</td><td>number of requested output channels (i.e. 2 for stereo). </td></tr>
     <tr><td class="paramname">nInputChannels</td><td>number of requested input channels. </td></tr>
@@ -105,8 +105,8 @@
 
     <div class="methodDescription " style="display:none" id="a9cc30053279fe0af218834ef4f5216b4_description">
 
-<p>Sets up and starts a global <a class="el" href="ofSoundStream.html" title="Gives access to audio input and output devices.">ofSoundStream</a>. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<p>Sets up and starts a global <a class="el" href="ofSoundStream.html" title="Gives access to audio input and output devices. ">ofSoundStream</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">nOutputChannels</td><td>number of requested output channels (i.e. 2 for stereo). </td></tr>
     <tr><td class="paramname">nInputChannels</td><td>number of requested input channels. </td></tr>
@@ -182,7 +182,13 @@
     <div class="classHeader">
       <h1 class="classTitle">ofSoundStream</h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>Gives access to audio input and output devices. </p>
+<p><a class="el" href="ofSoundStream.html" title="Gives access to audio input and output devices. ">ofSoundStream</a> controls access to your computer&apos;s audio input and output devices. For example, you could use an <a class="el" href="ofSoundStream.html" title="Gives access to audio input and output devices. ">ofSoundStream</a> to get live input from a microphone, or generate sound in realtime for your computer&apos;s speakers.</p>
+<p>A typical openFrameworks app will use just one <a class="el" href="ofSoundStream.html" title="Gives access to audio input and output devices. ">ofSoundStream</a>, and you might not even need to use this class directly at all if you don&apos;t need to query things like the sample rate or buffer size. In order to start receiving or generating audio, your ofApp should implement either <a class="el" href="ofBaseSoundInput.html#a27614c83263da3af6ba55f91ec651b70">ofBaseApp::audioIn()</a> or <a class="el" href="ofBaseSoundOutput.html#affbe31ef262e3fad9bbb70538523c191">ofBaseApp::audioOut()</a> respectively, and then call <a class="el" href="of_sound_stream_8cpp.html#a80beb9b0117e2ce24c6a54cf2404185c" title="Sets up and starts a global ofSoundStream. ">ofSoundStreamSetup()</a>. You can find examples of this in either the audioInputExample or the audioOutputExample.</p>
+<p>Starting a stream with 0 input or output channels will prevent audioIn() or audioOut() from being called, respectively.</p>
+<p>Some platforms (iOS, for example) will expose additional platform-specific sound stream functionality. See the platform-specific examples for demos.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Be aware that audioIn() and audioOut() will be called on a different thread from your app&apos;s update() / draw() thread. </dd></dl>
+</div></div>
     <div class="classMethods"><div id="ProtectedAttributes">
     <h3 class="sectionHeader">Protected Attributes</h3>
     <div class="sectionDescription"></div>
@@ -262,7 +268,7 @@
 
     <div class="methodDescription " style="display:none" id="ab09bcde2d99186c5a5889da94fec5132_description">
 
-<p>sets the device represented by the stream, see <a class="el" href="ofSoundStream.html#a7ab3c672a357f1b30c8e3b7db6b14fc7" title="prints a list of available audio devices to the console.">ofSoundStream::listDevices()</a>. </p>
+<p>sets the device represented by the stream, see <a class="el" href="ofSoundStream.html#a7ab3c672a357f1b30c8e3b7db6b14fc7" title="prints a list of available audio devices to the console. ">ofSoundStream::listDevices()</a>. </p>
 
 </div>
 
@@ -277,7 +283,7 @@
     <div class="methodDescription " style="display:none" id="a6e608c0034437ca0152a1fce35c11af5_description">
 
 <p>Sets up and starts the stream. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">app</td><td>pointer to the app which will own the sound stream. </td></tr>
     <tr><td class="paramname">outChannels</td><td>number of requested output channels (i.e. 2 for stereo). </td></tr>
@@ -288,7 +294,7 @@
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true on success </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true on success </dd></dl>
 
 </div>
 
@@ -303,7 +309,7 @@
     <div class="methodDescription " style="display:none" id="acb80fe32014433d50d453bf161b45505_description">
 
 <p>Sets up and starts the stream. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">outChannels</td><td>number of requested output channels (i.e. 2 for stereo). </td></tr>
     <tr><td class="paramname">inChannels</td><td>number of requested input channels. </td></tr>
@@ -313,7 +319,7 @@
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true on success </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true on success </dd></dl>
 
 </div>
 
@@ -355,7 +361,7 @@
 
     <div class="methodDescription " style="display:none" id="a841b585c0c00e5c1475462cee9c86455_description">
 
-<p>Starts a stream (note that <a class="el" href="ofSoundStream.html#a6e608c0034437ca0152a1fce35c11af5" title="Sets up and starts the stream.">setup()</a> will start the stream on its own). </p>
+<p>Starts a stream (note that <a class="el" href="ofSoundStream.html#a6e608c0034437ca0152a1fce35c11af5" title="Sets up and starts the stream. ">setup()</a> will start the stream on its own). </p>
 
 </div>
 
@@ -400,7 +406,7 @@
 <p>Queries the number of &quot;ticks&quot; passed since the stream started. </p>
 <p>This is a representation of how many buffers have passed through the stream since it started. This can be converted to seconds with the following formula:</p>
 <p>secondsOfPlayback = (tickCount * bufferSize) / sampleRate</p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>number of buffers passed through the stream since it started. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>number of buffers passed through the stream since it started. </dd></dl>
 
 </div>
 
@@ -415,7 +421,7 @@
     <div class="methodDescription " style="display:none" id="acad14341e4a7eafb7b7b8012d6745feb_description">
 
 <p>Queries the stream&apos;s number of input channels. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>the number of input channels (e.g. 2 for stereo). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the number of input channels (e.g. 2 for stereo). </dd></dl>
 
 </div>
 
@@ -430,7 +436,7 @@
     <div class="methodDescription " style="display:none" id="a6c5cd61d04e29c2473d2cd1a5a93543a_description">
 
 <p>Queries the stream&apos;s number of output channels. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>the number of output channels (e.g. 2 for stereo). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the number of output channels (e.g. 2 for stereo). </dd></dl>
 
 </div>
 
@@ -445,8 +451,8 @@
     <div class="methodDescription " style="display:none" id="a6637b6fc50ffb7df5f32829bc5b6ef50_description">
 
 <p>Queries the stream&apos;s sample rate. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>the current sample rate of the stream </dd></dl>
-<dl class="note"><dt><b>Note:</b></dt><dd>The returned sample rate may differ from the requested sample rate. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the current sample rate of the stream </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The returned sample rate may differ from the requested sample rate. </dd></dl>
 
 </div>
 
@@ -461,7 +467,7 @@
     <div class="methodDescription " style="display:none" id="adac81ab108d13712887591e2985f99b4_description">
 
 <p>Queries the stream&apos;s buffer size. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>the current buffer size of the stream. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the current buffer size of the stream. </dd></dl>
 
 </div>
 

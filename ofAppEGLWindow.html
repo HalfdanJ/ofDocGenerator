@@ -57,16 +57,14 @@
     </div>
 
     <div class="methodDescription " style="display:none" id="aa946a00857892177ec100469f699acb2_description">
-<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em><a class="anchor" id="aa946a00857892177ec100469f699acb2a61f7c77e2625b3aa8d363b10ec270195"></a><!-- doxytag: member="OF_APP_WINDOW_AUTO" ref="aa946a00857892177ec100469f699acb2a61f7c77e2625b3aa8d363b10ec270195" args="" -->OF_APP_WINDOW_AUTO</em>&#xA0;</td><td>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="aa946a00857892177ec100469f699acb2a61f7c77e2625b3aa8d363b10ec270195"></a>OF_APP_WINDOW_AUTO</em>&#xA0;</td><td class="fielddoc">
 </td></tr>
-<tr><td valign="top"><em><a class="anchor" id="aa946a00857892177ec100469f699acb2aefe0b0370e0703f0afe893880cf1bd95"></a><!-- doxytag: member="OF_APP_WINDOW_NATIVE" ref="aa946a00857892177ec100469f699acb2aefe0b0370e0703f0afe893880cf1bd95" args="" -->OF_APP_WINDOW_NATIVE</em>&#xA0;</td><td>
+<tr><td class="fieldname"><em><a class="anchor" id="aa946a00857892177ec100469f699acb2aefe0b0370e0703f0afe893880cf1bd95"></a>OF_APP_WINDOW_NATIVE</em>&#xA0;</td><td class="fielddoc">
 </td></tr>
-<tr><td valign="top"><em><a class="anchor" id="aa946a00857892177ec100469f699acb2a4380c4d8a96ca8d01a94787e26cf5357"></a><!-- doxytag: member="OF_APP_WINDOW_X11" ref="aa946a00857892177ec100469f699acb2a4380c4d8a96ca8d01a94787e26cf5357" args="" -->OF_APP_WINDOW_X11</em>&#xA0;</td><td>
+<tr><td class="fieldname"><em><a class="anchor" id="aa946a00857892177ec100469f699acb2a4380c4d8a96ca8d01a94787e26cf5357"></a>OF_APP_WINDOW_X11</em>&#xA0;</td><td class="fielddoc">
 </td></tr>
 </table>
-</dd>
-</dl>
 
 </div>
 
@@ -1174,12 +1172,29 @@
 
 <p>The thread&apos;s run function. </p>
 <p>Users must overide this in your their derived class and then implement their threaded activity inside the loop. If the the users&apos;s threadedFunction does not have a loop, the contents of the threadedFunction will be executed once and the thread will then exit.</p>
-<p>For tasks that must be repeated, the user can use a while loop that will run repeatedly until the thread&apos;s threadRunning is set to false via the <a class="el" href="ofThread.html#a3102a3bf7897f579d70a418ae3ed010b" title="Stop the thread.">stopThread()</a> method.</p>
-<p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~{.cpp} void MyThreadedClass::threadedFunction() { Start the loop and continue until <a class="el" href="ofThread.html#a07a51505ea9f5407e8c5999368bd54e2" title="Check the running status of the thread.">isThreadRunning()</a> returns false. while(<a class="el" href="ofThread.html#a07a51505ea9f5407e8c5999368bd54e2" title="Check the running status of the thread.">isThreadRunning()</a>) { Do activity repeatedly here:</p>
-<p>int j = 1 + 1;</p>
-<p>This while loop will run as fast as it possibly can, consuming as much processor speed as it can. To help the processor stay cool, users are encouraged to let the while loop sleep via the <a class="el" href="ofThread.html#a9e99dc383aba491a664efad32d2d7ccb" title="Tell the thread to sleep for a certain amount of milliseconds.">sleep()</a> method, or call the <a class="el" href="ofThread.html#a35bf3cab66dc5dda34b172784b401003" title="Tell the thread to give up its CPU time other threads.">yield()</a> method to let other threads have a turn. See the <a class="el" href="ofThread.html#a9e99dc383aba491a664efad32d2d7ccb" title="Tell the thread to sleep for a certain amount of milliseconds.">sleep()</a> and <a class="el" href="ofThread.html#a35bf3cab66dc5dda34b172784b401003" title="Tell the thread to give up its CPU time other threads.">yield()</a> methods for more information.</p>
-<p>sleep(100); } } ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ </p>
-
+<p>For tasks that must be repeated, the user can use a while loop that will run repeatedly until the thread&apos;s threadRunning is set to false via the <a class="el" href="ofThread.html#a3102a3bf7897f579d70a418ae3ed010b" title="Stop the thread. ">stopThread()</a> method.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> MyThreadedClass::threadedFunction()</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Start the loop and continue until</span></div>
+<div class="line">    <span class="comment">// isThreadRunning() returns false.</span></div>
+<div class="line">    <span class="keywordflow">while</span>(<a class="code" href="ofThread.html#a07a51505ea9f5407e8c5999368bd54e2">isThreadRunning</a>())</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Do activity repeatedly here:</span></div>
+<div class="line"></div>
+<div class="line">        <span class="comment">// int j = 1 + 1;</span></div>
+<div class="line"></div>
+<div class="line">        <span class="comment">// This while loop will run as fast as it possibly</span></div>
+<div class="line">        <span class="comment">// can, consuming as much processor speed as it can.</span></div>
+<div class="line">        <span class="comment">// To help the processor stay cool, users are</span></div>
+<div class="line">        <span class="comment">// encouraged to let the while loop sleep via the</span></div>
+<div class="line">        <span class="comment">// sleep() method, or call the yield() method to let</span></div>
+<div class="line">        <span class="comment">// other threads have a turn.  See the sleep() and</span></div>
+<div class="line">        <span class="comment">// yield() methods for more information.</span></div>
+<div class="line"></div>
+<div class="line">        <span class="comment">// sleep(100);</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 <p>Reimplemented from <a class="el" href="ofThread.html#a7e90ddaf0113435c451e6daf600c33f1">ofThread</a>.</p>
 
 </div>

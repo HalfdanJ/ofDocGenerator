@@ -97,11 +97,11 @@ nav {
   .methodHeader a:hover {
     text-decoration: none; }
   .methodHeader .type {
-    color: #aaa;
+    color: #999;
     padding-right: 8px;
     display: none; }
   .methodHeader .args {
-    color: #aaa;
+    color: #999;
     display: none; }
   .methodHeader.deprecatedMethod span {
     text-decoration: line-through; }
@@ -110,6 +110,11 @@ nav {
   .methodHeader.deprecatedMethod .note {
     text-decoration: none;
     color: #ccc; }
+
+.open .type {
+  display: initial; }
+.open .args {
+  display: initial; }
 
 .methodDescription {
   background-color: #f6f6f6;

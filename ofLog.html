@@ -44,7 +44,8 @@
     <div class="classHeader">
       <h1 class="classTitle">ofLog.h</h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>Logging in openFrameworks </p>
+</div></div>
     <div class="classMethods"><div id="Globalloggingsettings">
     <h3 class="sectionHeader">Global logging settings</h3>
     <div class="sectionDescription"></div>
@@ -62,16 +63,16 @@
 <p>This is useful if you want see lots of messages when debugging, but then set a higher level so only warnings and errors appear for users.</p>
 <p>ofLogLevel values are (in order of priority):</p>
 <ul>
-<li>`OF_LOG_VERBOSE`</li>
-<li>`OF_LOG_NOTICE`</li>
-<li>`OF_LOG_WARNING`</li>
-<li>`OF_LOG_ERROR`</li>
-<li>`OF_LOG_FATAL_ERROR`</li>
-<li>`OF_LOG_SILENT`</li>
+<li><code>OF_LOG_VERBOSE</code></li>
+<li><code>OF_LOG_NOTICE</code></li>
+<li><code>OF_LOG_WARNING</code></li>
+<li><code>OF_LOG_ERROR</code></li>
+<li><code>OF_LOG_FATAL_ERROR</code></li>
+<li><code>OF_LOG_SILENT</code></li>
 </ul>
-<p>Following priority, setting a log level of `OF_LOG_ERROR`, means only error and fatal error messages will be printed. Conversely, setting OF_LOG_VERBOSE means all log level messages will be printed.</p>
-<p>Default ofLogLevel is `OF_LOG_NOTICE` </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<p>Following priority, setting a log level of <code>OF_LOG_ERROR</code>, means only error and fatal error messages will be printed. Conversely, setting OF_LOG_VERBOSE means all log level messages will be printed.</p>
+<p>Default ofLogLevel is <code>OF_LOG_NOTICE</code> </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">level</td><td>the ofLogLevel (and below) you want to show </td></tr>
   </table>
@@ -115,7 +116,7 @@
     <div class="methodDescription " style="display:none" id="a18730a546b3c27723dc95ecf1a5e55b7_description">
 
 <p>Get log level name as a string. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">level</td><td>The ofLogLevel you want the name of </td></tr>
     <tr><td class="paramname">pad</td><td>set to true if you want all log level names to be the same length </td></tr>
@@ -175,23 +176,21 @@
 
     <div class="methodDescription " style="display:none" id="a6b3aba959377cae6ed3afbb9d5826fe4_description">
 
-<p>The supported logging levels. Default is `OF_LOG_NOTICE`. </p>
-<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4a344bd0fb24d6bd1f23f6d7e09a1ada2f"></a><!-- doxytag: member="OF_LOG_VERBOSE" ref="a6b3aba959377cae6ed3afbb9d5826fe4a344bd0fb24d6bd1f23f6d7e09a1ada2f" args="" -->OF_LOG_VERBOSE</em>&#xA0;</td><td>
+<p>The supported logging levels. Default is <code>OF_LOG_NOTICE</code> </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4a344bd0fb24d6bd1f23f6d7e09a1ada2f"></a>OF_LOG_VERBOSE</em>&#xA0;</td><td class="fielddoc">
 </td></tr>
-<tr><td valign="top"><em><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4ae694d6f9c9ad50b955aa85ded74c41bc"></a><!-- doxytag: member="OF_LOG_NOTICE" ref="a6b3aba959377cae6ed3afbb9d5826fe4ae694d6f9c9ad50b955aa85ded74c41bc" args="" -->OF_LOG_NOTICE</em>&#xA0;</td><td>
+<tr><td class="fieldname"><em><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4ae694d6f9c9ad50b955aa85ded74c41bc"></a>OF_LOG_NOTICE</em>&#xA0;</td><td class="fielddoc">
 </td></tr>
-<tr><td valign="top"><em><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4a0ece8203f15199db94060ba73e974635"></a><!-- doxytag: member="OF_LOG_WARNING" ref="a6b3aba959377cae6ed3afbb9d5826fe4a0ece8203f15199db94060ba73e974635" args="" -->OF_LOG_WARNING</em>&#xA0;</td><td>
+<tr><td class="fieldname"><em><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4a0ece8203f15199db94060ba73e974635"></a>OF_LOG_WARNING</em>&#xA0;</td><td class="fielddoc">
 </td></tr>
-<tr><td valign="top"><em><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4a64e5a9d8e8727e95ec14005ffd896a6d"></a><!-- doxytag: member="OF_LOG_ERROR" ref="a6b3aba959377cae6ed3afbb9d5826fe4a64e5a9d8e8727e95ec14005ffd896a6d" args="" -->OF_LOG_ERROR</em>&#xA0;</td><td>
+<tr><td class="fieldname"><em><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4a64e5a9d8e8727e95ec14005ffd896a6d"></a>OF_LOG_ERROR</em>&#xA0;</td><td class="fielddoc">
 </td></tr>
-<tr><td valign="top"><em><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4a5379d861c8b09cd189567f6779256dd2"></a><!-- doxytag: member="OF_LOG_FATAL_ERROR" ref="a6b3aba959377cae6ed3afbb9d5826fe4a5379d861c8b09cd189567f6779256dd2" args="" -->OF_LOG_FATAL_ERROR</em>&#xA0;</td><td>
+<tr><td class="fieldname"><em><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4a5379d861c8b09cd189567f6779256dd2"></a>OF_LOG_FATAL_ERROR</em>&#xA0;</td><td class="fielddoc">
 </td></tr>
-<tr><td valign="top"><em><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4ad2f1bd16f52d94ab0ff47f9095d4a7f3"></a><!-- doxytag: member="OF_LOG_SILENT" ref="a6b3aba959377cae6ed3afbb9d5826fe4ad2f1bd16f52d94ab0ff47f9095d4a7f3" args="" -->OF_LOG_SILENT</em>&#xA0;</td><td>
+<tr><td class="fieldname"><em><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4ad2f1bd16f52d94ab0ff47f9095d4a7f3"></a>OF_LOG_SILENT</em>&#xA0;</td><td class="fielddoc">
 </td></tr>
 </table>
-</dd>
-</dl>
 
 </div>
 
@@ -201,7 +200,14 @@
     <div class="classHeader">
       <h1 class="classTitle">ofLog</h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>a streaming log interface </p>
+<p><a class="el" href="ofLog.html" title="a streaming log interface ">ofLog</a> accepts variables via the ostream operator &lt;&lt; and builds a string and logs it when the stream is finished (via the destructor). A newline is printed automatically and all the stream controls (endl, flush, hex, etc) work normally. The log level is explicitly <code>OF_LOG_NOTICE</code> unless set.</p>
+<p>Basic usage: </p>
+<div class="fragment"><div class="line"><a class="code" href="ofLog.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>() &lt;&lt; <span class="stringliteral">&quot;a string&quot;</span> &lt;&lt; 100 &lt;&lt; 20.234f;</div>
+</div><!-- fragment --><p>It also accepts the legacy <a class="el" href="ofLog.html" title="a streaming log interface ">ofLog</a> interface: <a class="el" href="ofLog.html" title="a streaming log interface ">ofLog(ofLogLevel level, string message)</a>: </p>
+<div class="fragment"><div class="line"><a class="code" href="ofLog.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>(<a class="code" href="ofLog.html#a6b3aba959377cae6ed3afbb9d5826fe4a64e5a9d8e8727e95ec14005ffd896a6d">OF_LOG_ERROR</a>, <span class="stringliteral">&quot;another string&quot;</span>);</div>
+</div><!-- fragment --><dl class="section author"><dt>Author</dt><dd>Dan Wilcox <a href="#" onclick="location.href=&apos;mai&apos;+&apos;lto:&apos;+&apos;dan&apos;+&apos;om&apos;+&apos;ati&apos;+&apos;ka&apos;+&apos;@gm&apos;+&apos;ai&apos;+&apos;l.c&apos;+&apos;om&apos;; return false;">danom<span style="display: none;">.nosp@m.</span>atik<span style="display: none;">.nosp@m.</span>a@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a> danomatika.com </dd></dl>
+</div></div>
     <div class="classMethods"><div id="Logging">
     <h3 class="sectionHeader">Logging</h3>
     <div class="sectionDescription"></div>
@@ -229,7 +235,7 @@
 
     <div class="methodDescription " style="display:none" id="a8df66599c4ab1c9d0ebdb379871da3f0_description">
 <p>Start logging on a specific ofLogLevel </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">level</td><td>The ofLogLevel to log on </td></tr>
   </table>
@@ -253,7 +259,7 @@
 
     <div class="methodDescription " style="display:none" id="a23271f8fa71758dc7b81b695d36a8df9_description">
 
-<p>the legacy <a class="el" href="ofLog.html" title="a streaming log interface">ofLog</a> interfaces </p>
+<p>the legacy <a class="el" href="ofLog.html" title="a streaming log interface ">ofLog</a> interfaces </p>
 
 </div>
 
@@ -282,8 +288,8 @@
     </div>
 
     <div class="methodDescription " style="display:none" id="acd753685ca548b145fd33301abe63433_description">
-<p>Let the logger automaticly add spaces between messages. Default is `false`. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<p>Let the logger automaticly add spaces between messages. Default is <code>false</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">autoSpace</td><td>Set to true to add spaces between messages </td></tr>
   </table>
@@ -302,7 +308,7 @@
 
     <div class="methodDescription " style="display:none" id="a25da93787b658473a679ba3096407270_description">
 <p>Set the logging channel destinations for messages. This can be used to output to files instead of stdout. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="ofFileLoggerChannel.html">ofFileLoggerChannel</a> <a class="el" href="ofConsoleLoggerChannel.html">ofConsoleLoggerChannel</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofFileLoggerChannel.html">ofFileLoggerChannel</a> <a class="el" href="ofConsoleLoggerChannel.html">ofConsoleLoggerChannel</a> </dd></dl>
 
 </div>
 
@@ -312,7 +318,8 @@
     <div class="classHeader">
       <h1 class="classTitle">ofLogVerbose</h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>Derived log class for easy verbose logging. Example: <code><a class="el" href="ofLogVerbose.html">ofLogVerbose</a>(&quot;Log message&quot;)</code> </p>
+</div></div>
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
     <div class="sectionDescription"></div>
@@ -358,7 +365,8 @@
     <div class="classHeader">
       <h1 class="classTitle">ofLogNotice</h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>Derived log class for easy notice logging. Example: <code><a class="el" href="ofLogNotice.html">ofLogNotice</a>(&quot;Log message&quot;)</code> </p>
+</div></div>
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
     <div class="sectionDescription"></div>
@@ -404,7 +412,8 @@
     <div class="classHeader">
       <h1 class="classTitle">ofLogWarning</h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>Derived log class for easy warning logging. Example: <code><a class="el" href="ofLogWarning.html">ofLogWarning</a>(&quot;Log message&quot;)</code> </p>
+</div></div>
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
     <div class="sectionDescription"></div>
@@ -450,7 +459,8 @@
     <div class="classHeader">
       <h1 class="classTitle">ofLogError</h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>Derived log class for easy error logging. Example: <code><a class="el" href="ofLogError.html">ofLogError</a>(&quot;Log message&quot;)</code> </p>
+</div></div>
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
     <div class="sectionDescription"></div>
@@ -496,7 +506,8 @@
     <div class="classHeader">
       <h1 class="classTitle">ofLogFatalError</h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>Derived log class for easy fatal error logging. Example: <code><a class="el" href="ofLogFatalError.html">ofLogFatalError</a>(&quot;Log message&quot;)</code> </p>
+</div></div>
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
     <div class="sectionDescription"></div>
@@ -542,7 +553,8 @@
     <div class="classHeader">
       <h1 class="classTitle">ofBaseLoggerChannel</h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>swappable logging destinations, derive your own for custom logging </p>
+</div></div>
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
     <div class="sectionDescription"></div>

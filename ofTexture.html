@@ -57,20 +57,18 @@
     </div>
 
     <div class="methodDescription " style="display:none" id="a218c238fdc83c3d9ac235f31dfd3c895_description">
-<p>Compression is only available through OpenGL for textures using GL_TEXTURE_2D, *not* GL_TEXTURE_RECTANGLE, also note that most compression algorithms work on blocks of 4x4 pixels, and therefore expect compressed textures to have multiple-of-four dimensions. </p>
-<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em><a class="anchor" id="a218c238fdc83c3d9ac235f31dfd3c895a6054d6a854453c2cf0fa120f76a9384b"></a><!-- doxytag: member="OF_COMPRESS_NONE" ref="a218c238fdc83c3d9ac235f31dfd3c895a6054d6a854453c2cf0fa120f76a9384b" args="" -->OF_COMPRESS_NONE</em>&#xA0;</td><td>
+<p>Compression is only available through OpenGL for textures using GL_TEXTURE_2D, <em>not</em> GL_TEXTURE_RECTANGLE, also note that most compression algorithms work on blocks of 4x4 pixels, and therefore expect compressed textures to have multiple-of-four dimensions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a218c238fdc83c3d9ac235f31dfd3c895a6054d6a854453c2cf0fa120f76a9384b"></a>OF_COMPRESS_NONE</em>&#xA0;</td><td class="fielddoc">
 <p>no compression </p>
 </td></tr>
-<tr><td valign="top"><em><a class="anchor" id="a218c238fdc83c3d9ac235f31dfd3c895aa6399fcb7ada14d9b22d2900a4c6e994"></a><!-- doxytag: member="OF_COMPRESS_SRGB" ref="a218c238fdc83c3d9ac235f31dfd3c895aa6399fcb7ada14d9b22d2900a4c6e994" args="" -->OF_COMPRESS_SRGB</em>&#xA0;</td><td>
+<tr><td class="fieldname"><em><a class="anchor" id="a218c238fdc83c3d9ac235f31dfd3c895aa6399fcb7ada14d9b22d2900a4c6e994"></a>OF_COMPRESS_SRGB</em>&#xA0;</td><td class="fielddoc">
 <p>sRGB compression </p>
 </td></tr>
-<tr><td valign="top"><em><a class="anchor" id="a218c238fdc83c3d9ac235f31dfd3c895a13cbc14ece371e2be3e16cd0738458a0"></a><!-- doxytag: member="OF_COMPRESS_ARB" ref="a218c238fdc83c3d9ac235f31dfd3c895a13cbc14ece371e2be3e16cd0738458a0" args="" -->OF_COMPRESS_ARB</em>&#xA0;</td><td>
+<tr><td class="fieldname"><em><a class="anchor" id="a218c238fdc83c3d9ac235f31dfd3c895a13cbc14ece371e2be3e16cd0738458a0"></a>OF_COMPRESS_ARB</em>&#xA0;</td><td class="fielddoc">
 <p>ARB compression. </p>
 </td></tr>
 </table>
-</dd>
-</dl>
 
 </div>
 
@@ -89,8 +87,8 @@
     <div class="methodDescription " style="display:none" id="ae0f994e7424dc7c5309aff96109228da_description">
 
 <p>Check whether OF is using GL_TEXTURE_RECTANGLE rectangular or GL_TEXTURE_2D textures. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="of_texture_8cpp.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures.">ofEnableArbTex()</a> </dd></dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if using GL_TEXTURE_RECTANGLE textures, false if using GL_TEXTURE_2D textures. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures. ">ofEnableArbTex()</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if using GL_TEXTURE_RECTANGLE textures, false if using GL_TEXTURE_2D textures. </dd></dl>
 
 </div>
 
@@ -108,8 +106,8 @@
 <p>GL_TEXTURE_RECTANGLE textures are more intuitive since they allow pixel based coordinates and are enabled by default.</p>
 <p>GL_TEXTURE_2D textures use normalised texture coordinates (a float value between 0 and 1 is used to express texture coordinates along width and height.)</p>
 <p>GL_TEXTURE_2D textures are more widely supported and allow advanced features such as mipmaps and texture compression.</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="of_texture_8cpp.html#a6b679cd9538f7a1399cec6078c227c71" title="Use GL_TEXTURE_2D textures.">ofDisableArbTex()</a> </dd></dl>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>GL_TEXTURE_RECTANGLE is not available in OpenGL ES. </dd>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#a6b679cd9538f7a1399cec6078c227c71" title="Use GL_TEXTURE_2D textures. ">ofDisableArbTex()</a> </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>GL_TEXTURE_RECTANGLE is not available in OpenGL ES. </dd>
 <dd>
 GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
@@ -127,7 +125,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Use GL_TEXTURE_2D textures. </p>
 <p>GL_TEXTURE_2D is OpenGL&apos;s default way of handling textures and does support a wider range of core OpenGL features such as mipmaps.</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="of_texture_8cpp.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures.">ofEnableArbTex()</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures. ">ofEnableArbTex()</a> </dd></dl>
 
 </div>
 
@@ -142,8 +140,8 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="a88fcb7afbd579aa6ee79b0c5bb64b096_description">
 
 <p>Check whether OF is using normalized or pixel texture coordinates. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="of_texture_8cpp.html#a444caf6c6cb03c61bcd569345ee0fbe9" title="Use normalized (0 - 1) texture coordinates.">ofEnableNormalizedTexCoords()</a> </dd></dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if using normalized (0 - 1) texture coordinates. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#a444caf6c6cb03c61bcd569345ee0fbe9" title="Use normalized (0 - 1) texture coordinates. ">ofEnableNormalizedTexCoords()</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if using normalized (0 - 1) texture coordinates. </dd></dl>
 
 </div>
 
@@ -159,8 +157,8 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Use normalized (0 - 1) texture coordinates. </p>
 <p>By default, textures in OF work with pixel based coordinates based on given content dimensions (images size, fbo size, etc). Normalized (0 - 1) coordinates are the traditional GL default as they allow working with internal texture data without having to worry about specific dimensions of the content.</p>
-<p>This overrides individual <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card.">ofTexture</a> wrap settings.</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a href="http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml">http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml</a> </dd></dl>
+<p>This overrides individual <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> wrap settings.</p>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml">http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml</a> </dd></dl>
 
 </div>
 
@@ -175,7 +173,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="aeab07f8c299416402fc0ee745f099686_description">
 
 <p>Use pixel based texture coordinates. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="of_texture_8cpp.html#a444caf6c6cb03c61bcd569345ee0fbe9" title="Use normalized (0 - 1) texture coordinates.">ofEnableNormalizedTexCoords()</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#a444caf6c6cb03c61bcd569345ee0fbe9" title="Use normalized (0 - 1) texture coordinates. ">ofEnableNormalizedTexCoords()</a> </dd></dl>
 
 </div>
 
@@ -191,11 +189,11 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Set custom global texture wrapping. </p>
 <p>By default, textures are clamped to their edges with GL_CLAMP_TO_EDGE. Setting a repeat mode like GL_REPEAT allows you to create tiled backgrounds with small textures.</p>
-<p>See &lt;<a href="http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml">http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml</a>&gt; for more info.</p>
-<p>This overrides individual <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card.">ofTexture</a> wrap settings. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="ofTexture.html#ac980af43af2cacdbd57e1bfcd8e222e2" title="Set texture wrapping.">ofTexture::setTextureWrap</a></dd></dl>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>Deprecated. Use member methods instead.</dd></dl>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<p>See <a href="http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml">http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml</a> for more info.</p>
+<p>This overrides individual <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> wrap settings. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#ac980af43af2cacdbd57e1bfcd8e222e2" title="Set texture wrapping. ">ofTexture::setTextureWrap</a></dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Deprecated. Use member methods instead.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">wrapS</td><td>wrap parameter for texture coordinate s. </td></tr>
     <tr><td class="paramname">wrapT</td><td>wrap parameter for texture coordinate t. </td></tr>
@@ -216,9 +214,9 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="a1d9b18fb7df5ff74910bdde4a98204de_description">
 
 <p>Check whether OF is using custom global texture wrapping. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>Deprecated. Use member methods instead. </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="of_texture_8cpp.html#a4804b412c789b866234f3049de856883">ofSetTextureWrap()</a> </dd></dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if OF is currently using custom global texture wrapping. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Deprecated. Use member methods instead. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="of_texture_8cpp.html#a4804b412c789b866234f3049de856883">ofSetTextureWrap()</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if OF is currently using custom global texture wrapping. </dd></dl>
 
 </div>
 
@@ -233,9 +231,9 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="a30bdfbb183a4f9b034378c23b89a67b8_description">
 
 <p>Removes global custom texture wrapping. </p>
-<p>Restores individual <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card.">ofTexture</a> wrap settings. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>Deprecated. Use member methods instead. </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="of_texture_8cpp.html#a4804b412c789b866234f3049de856883">ofSetTextureWrap()</a> </dd></dl>
+<p>Restores individual <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> wrap settings. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Deprecated. Use member methods instead. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="of_texture_8cpp.html#a4804b412c789b866234f3049de856883">ofSetTextureWrap()</a> </dd></dl>
 
 </div>
 
@@ -250,10 +248,10 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="ab2bf8d06066dcb3d8edfba671e9668b3_description">
 
 <p>Set custom global texture minification/magnification scaling filters. </p>
-<p>This setting allows global control over how OpenGL scales textures. It overrides individual <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card.">ofTexture</a> min &amp; mag filter settings.</p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>Deprecated. Use member methods instead. </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="ofTexture.html#a60ebbd584455b495d0b56c0fa563680a" title="Set texture minification/magnification scaling filters.">ofTexture::setTextureMinMagFilter()</a> </dd></dl>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<p>This setting allows global control over how OpenGL scales textures. It overrides individual <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> min &amp; mag filter settings.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Deprecated. Use member methods instead. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#a60ebbd584455b495d0b56c0fa563680a" title="Set texture minification/magnification scaling filters. ">ofTexture::setTextureMinMagFilter()</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">minFilter</td><td>minifying filter for scaling a pixel to a smaller area. </td></tr>
     <tr><td class="paramname">magFilter</td><td>magnifying filter for scaling a pixel to a larger area. </td></tr>
@@ -274,8 +272,8 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="a62b435cf2ee8bf51c87b421f18a15bfe_description">
 
 <p>Check whether OF is using custom global texture scaling filters. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if OF is currently using custom texture scaling filters. </dd></dl>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>Deprecated. Use member methods instead. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if OF is currently using custom texture scaling filters. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Deprecated. Use member methods instead. </dd></dl>
 
 </div>
 
@@ -290,8 +288,8 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="a968ad2b8d21e033096800c5a273e67b6_description">
 
 <p>Removes global custom texture wrapping. </p>
-<p>Restores individual <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card.">ofTexture</a> min mag filter settings. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>Deprecated. Use member methods instead. </dd></dl>
+<p>Restores individual <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> min mag filter settings. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Deprecated. Use member methods instead. </dd></dl>
 
 </div>
 
@@ -306,7 +304,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="af70a133cd74f4c448e841521287f16b2_description">
 
 <p>Enable global texture &quot;edge hacking&quot; to compensate for edge artifacts. </p>
-<p>Adds a 2 pixel offset to avoid possible edge artifacts (typically a black or white border). This *very slightly* alters the image by scaling. This is enabled by default. </p>
+<p>Adds a 2 pixel offset to avoid possible edge artifacts (typically a black or white border). This <em>very slightly</em> alters the image by scaling. This is enabled by default. </p>
 
 </div>
 
@@ -321,7 +319,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="a1c85492981b1ecaa449f6a46b2a34673_description">
 
 <p>Disable global texture &quot;edge hacking&quot;. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="of_texture_8cpp.html#af70a133cd74f4c448e841521287f16b2" title="Enable global texture &quot;edge hacking&quot; to compensate for edge artifacts.">ofEnableTextureEdgeHack()</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#af70a133cd74f4c448e841521287f16b2" title="Enable global texture &quot;edge hacking&quot; to compensate for edge artifacts. ">ofEnableTextureEdgeHack()</a> </dd></dl>
 
 </div>
 
@@ -336,8 +334,8 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="ab986ff110085b3cea93e0e705f98cfcd_description">
 
 <p>Check whether OF is using the &quot;texture edge hack&quot;. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="of_texture_8cpp.html#af70a133cd74f4c448e841521287f16b2" title="Enable global texture &quot;edge hacking&quot; to compensate for edge artifacts.">ofEnableTextureEdgeHack()</a> </dd></dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if OF is currently using the &quot;texture edge hack&quot;. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#af70a133cd74f4c448e841521287f16b2" title="Enable global texture &quot;edge hacking&quot; to compensate for edge artifacts. ">ofEnableTextureEdgeHack()</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if OF is currently using the &quot;texture edge hack&quot;. </dd></dl>
 
 </div>
 
@@ -347,7 +345,9 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="classHeader">
       <h1 class="classTitle">ofTextureData</h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>Internal texture settings struct. </p>
+<p>Used by <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> internally. You won&apos;t need to work with this in most cases. </p>
+</div></div>
     <div class="classMethods"><div id="PublicAttributes">
     <h3 class="sectionHeader">Public Attributes</h3>
     <div class="sectionDescription"></div>
@@ -388,7 +388,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
     <div class="methodDescription " style="display:none" id="a2349f7972cb95234e0b726e51d0d8a10_description">
 <p>GL internal format, e.g. GL_RGB8. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a href="http://www.opengl.org/wiki/Image_Format">http://www.opengl.org/wiki/Image_Format</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://www.opengl.org/wiki/Image_Format">http://www.opengl.org/wiki/Image_Format</a> </dd></dl>
 
 </div>
 
@@ -610,7 +610,10 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="classHeader">
       <h1 class="classTitle">ofTexture</h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>An OpenGL image on the the graphics card. </p>
+<p><a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> is a wrapper for the OpenGL texture API. It allows use of non-power of 2 textures and to upload and draw graphical data.</p>
+<dl class="section see"><dt>See Also</dt><dd><a href="https://www.opengl.org/wiki/Texture">https://www.opengl.org/wiki/Texture</a> </dd></dl>
+</div></div>
     <div class="classMethods"><div id="PublicAttributes">
     <h3 class="sectionHeader">Public Attributes</h3>
     <div class="sectionDescription"></div>
@@ -669,7 +672,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
     <div class="methodDescription " style="display:none" id="ae091e52a2a4a86bc57bf8f17833bbfb8_description">
 
-<p>Construct an <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card.">ofTexture</a> instance. </p>
+<p>Construct an <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> instance. </p>
 
 </div>
 
@@ -683,10 +686,10 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
     <div class="methodDescription " style="display:none" id="ace8dda2da6169c88b9c94c00438e251e_description">
 
-<p>Construct an <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card.">ofTexture</a> from an existing <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card.">ofTexture</a>. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<p>Construct an <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> from an existing <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mom</td><td>The <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card.">ofTexture</a> to copy. Reuses internal GL texture ID. </td></tr>
+    <tr><td class="paramname">mom</td><td>The <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> to copy. Reuses internal GL texture ID. </td></tr>
   </table>
   </dd>
 </dl>
@@ -703,10 +706,10 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
     <div class="methodDescription " style="display:none" id="a152b6e78436b0525f2d2688fd6304338_description">
 
-<p>Copy a given <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card.">ofTexture</a> into this texture. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<p>Copy a given <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> into this texture. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mom</td><td>The <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card.">ofTexture</a> to copy from. Reuses internal GL texture ID. </td></tr>
+    <tr><td class="paramname">mom</td><td>The <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> to copy from. Reuses internal GL texture ID. </td></tr>
   </table>
   </dd>
 </dl>
@@ -723,7 +726,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
     <div class="methodDescription " style="display:none" id="a9d0bbb24231157b2795b99241183b297_description">
 
-<p>Destroy an <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card.">ofTexture</a> instance. </p>
+<p>Destroy an <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> instance. </p>
 <p>The internal GL texture ID is only rleased if this is the last texture using it. </p>
 
 </div>
@@ -740,7 +743,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Allocate texture using the given settings. </p>
 <p>This is useful if you need manual control over loading a number of textures with the same settings. Make sure to set the parameters first.</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">textureData</td><td>Reference to settings to use when allocating. </td></tr>
   </table>
@@ -760,7 +763,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="a3e577b1f78804018969e751f9edf44e9_description">
 
 <p>Allocate texture using the given settings &amp; specify the format. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">textureData</td><td>Reference to settings to use when allocating. </td></tr>
     <tr><td class="paramname">glFormat</td><td>GL texture format: GL_RGBA, GL_LUMINANCE, etc. </td></tr>
@@ -783,7 +786,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Allocate texture of a given size and format. </p>
 <p>Uses the currently set OF texture type. Defaults to ARB rectangular textures if they are supported. (They are not supported on OpenGL ES).</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">w</td><td>Desired width in pixels. </td></tr>
     <tr><td class="paramname">h</td><td>Desired height in pixels. </td></tr>
@@ -806,7 +809,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Allocate texture of a given size and format. </p>
 <p>Same as allocate(w, h, glInternalFormat) with the addition of:</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pixelType</td><td>GL pixel type: GL_UNSIGNED_BYTE, GL_FLOAT, etc. </td></tr>
   </table>
@@ -827,10 +830,10 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Allocate texture of a given size and format. Specify texture type. </p>
 <p>This lets you overide the default OF texture type, in case you need a square GL_TEXTURE_2D texture.</p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>ARB textures are not available in OpenGL ES. </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="of_texture_8cpp.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures.">ofEnableArbTex()</a></dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>ARB textures are not available in OpenGL ES. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="of_texture_8cpp.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures. ">ofEnableArbTex()</a></dd></dl>
 <p>Same as allocate(w, h, glInternalFormat) with the addition of:</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bUseARBExtension</td><td>Set to true to use rectangular textures. </td></tr>
   </table>
@@ -852,7 +855,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 <p>Allocate texture of a given size, format, &amp; type. </p>
 <p>Not sure how the two texture format parameters are different: glFormat &amp; glInternalFormat.</p>
 <p>Same as allocate(w, h, glInternalFormat, bUseARBExtension) with the addition of:</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">glFormat</td><td>GL texture format: GL_RGBA, GL_LUMINANCE, etc. </td></tr>
     <tr><td class="paramname">pixelType</td><td>GL pixel type: GL_UNSIGNED_BYTE, GL_FLOAT, etc. </td></tr>
@@ -874,7 +877,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Allocate texture using an ofPixels instance. </p>
 <p>Pixel type and GL format are determined from pixel settings.</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pix</td><td>Reference to ofPixels instance. </td></tr>
   </table>
@@ -895,10 +898,10 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Allocate texture using an ofPixels instance &amp; type. </p>
 <p>This lets you overide the default OF texture type, in case you need a square GL_TEXTURE_2D texture.</p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>ARB textures are not available in OpenGL ES. </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="of_texture_8cpp.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures.">ofEnableArbTex()</a></dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>ARB textures are not available in OpenGL ES. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="of_texture_8cpp.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures. ">ofEnableArbTex()</a></dd></dl>
 <p>Same as loadData(ofPixels &amp;) with the addition of: </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bUseARBExtension</td><td>Set to true to use rectangular textures. </td></tr>
   </table>
@@ -935,29 +938,29 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 </div>
 
-  </div><div id="a2c759fa7e3ee62f4349791a554a38b2c">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a2c759fa7e3ee62f4349791a554a38b2c&quot;)">
+  </div><div id="a5fd3931d5d62eb0d23c5e218954db8fe">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a5fd3931d5d62eb0d23c5e218954db8fe&quot;)">
       <span class="type">void </span>
       <a class="name">allocate</a>
       <span class="args">(const ofFloatPixels &amp;pix)</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a2c759fa7e3ee62f4349791a554a38b2c_description">
+    <div class="methodDescription " style="display:none" id="a5fd3931d5d62eb0d23c5e218954db8fe_description">
 
 <p>Allocate texture using an ofFloatPixels instance. Same as loadData(ofPixels &amp;), except using ofFloatPixels. </p>
 
 </div>
 
-  </div><div id="a66648aa1a8f256042ecbacafb0a0610f">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a66648aa1a8f256042ecbacafb0a0610f&quot;)">
+  </div><div id="ab8ec9a76d58d8da391350c84b060a3a3">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ab8ec9a76d58d8da391350c84b060a3a3&quot;)">
       <span class="type">void </span>
       <a class="name">allocate</a>
       <span class="args">(const ofFloatPixels &amp;pix, bool bUseARBExtention)</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a66648aa1a8f256042ecbacafb0a0610f_description">
+    <div class="methodDescription " style="display:none" id="ab8ec9a76d58d8da391350c84b060a3a3_description">
 
 <p>Allocate texture using an ofFloatPixels instance &amp; type. Same as loadData(ofPixels &amp;, bool), except using ofFloatPixels. </p>
 
@@ -990,7 +993,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Set the texture ID. </p>
 <p>Allows you to point the texture id to an externally allocated id (perhaps from another texture). Its up to you to set the rest of the textData parameters manually.</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">externTexID</td><td>New texture ID. </td></tr>
   </table>
@@ -1011,7 +1014,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Load byte pixel data. </p>
 <p>glFormat can be different to the internal format of the texture on each load, ie. we can upload GL_BGRA pixels into a GL_RGBA texture, but the number of channels need to match according to the OpenGL standard.</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>Pointer to byte pixel data. Must not be NULL. </td></tr>
     <tr><td class="paramname">w</td><td>Pixel data width. </td></tr>
@@ -1062,7 +1065,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="a8e098fb602b428c6e5242b902de4da61_description">
 
 <p>Load pixels from an ofPixels instance. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pix</td><td>Reference to ofPixels instance. </td></tr>
   </table>
@@ -1111,7 +1114,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Load pixels from an ofPixels instance &amp; specify the format. </p>
 <p>glFormat can be different to the internal format of the texture on each load, ie. we can upload GL_BGRA pixels into a GL_RGBA texture, but the number of channels need to match according to the OpenGL standard.</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pix</td><td>Reference to ofPixels instance. </td></tr>
     <tr><td class="paramname">glFormat</td><td>GL pixel type: GL_RGBA, GL_LUMINANCE, etc. </td></tr>
@@ -1174,10 +1177,10 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="a7eb8ed330899e19e11271122291e7915_description">
 
 <p>Generate mipmap for the current texture. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>Only GL_TEXTURE_RECTANGLE - which is the default openFrameworks texture target - does *not* support mipmaps, so make sure to call <a class="el" href="of_texture_8cpp.html#a6b679cd9538f7a1399cec6078c227c71" title="Use GL_TEXTURE_2D textures.">ofDisableArbTex()</a> before loading texture data for a texture you want to generate mipmaps for.</dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="of_texture_8cpp.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures.">ofEnableArbTex()</a> </dd>
+<dl class="section warning"><dt>Warning</dt><dd>Only GL_TEXTURE_RECTANGLE - which is the default openFrameworks texture target - does <em>not</em> support mipmaps, so make sure to call <a class="el" href="of_texture_8cpp.html#a6b679cd9538f7a1399cec6078c227c71" title="Use GL_TEXTURE_2D textures. ">ofDisableArbTex()</a> before loading texture data for a texture you want to generate mipmaps for.</dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="of_texture_8cpp.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures. ">ofEnableArbTex()</a> </dd>
 <dd>
-<a class="el" href="of_texture_8cpp.html#a6b679cd9538f7a1399cec6078c227c71" title="Use GL_TEXTURE_2D textures.">ofDisableArbTex()</a> </dd></dl>
+<a class="el" href="of_texture_8cpp.html#a6b679cd9538f7a1399cec6078c227c71" title="Use GL_TEXTURE_2D textures. ">ofDisableArbTex()</a> </dd></dl>
 <p>OpenGL ES only supports mipmap for the following two texture targets:</p>
 <p>OpenGL supports mipmaps for additional texture targets: </p>
 
@@ -1195,7 +1198,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Swizzle RGBA to grayscale with alpha in the red channel. </p>
 <p>Use 1 channel GL_R as luminance instead of red channel in OpenGL 3+.</p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>This is not supported in OpenGL ES and does nothing. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This is not supported in OpenGL ES and does nothing. </dd></dl>
 
 </div>
 
@@ -1211,7 +1214,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Swizzle a channel to another. </p>
 <p>Example: tex.setSwizzle(GL_TEXTURE_SWIZZLE_R,GL_ALPHA) will make channel 0 appear as alpha in the shader</p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>This is not supported in OpenGL ES and does nothing. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This is not supported in OpenGL ES and does nothing. </dd></dl>
 
 </div>
 
@@ -1226,8 +1229,8 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="a0a514787330456b4f5962091a7ee434a_description">
 
 <p>Copy an area of the screen into this texture. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a href="http://www.opengl.org/sdk/docs/man4/html/glCopyTexSubImage2D.xhtml">http://www.opengl.org/sdk/docs/man4/html/glCopyTexSubImage2D.xhtml</a></dd></dl>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://www.opengl.org/sdk/docs/man4/html/glCopyTexSubImage2D.xhtml">http://www.opengl.org/sdk/docs/man4/html/glCopyTexSubImage2D.xhtml</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>Upper left corner horizontal screen position. </td></tr>
     <tr><td class="paramname">y</td><td>Upper left corner vertical screen position. </td></tr>
@@ -1251,7 +1254,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Set the anchor point the texture is drawn around as a percentage. </p>
 <p>This can be useful if you want to rotate an image around a particular point.</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">xPct</td><td>Horizontal texture position as a percentage (0 - 1). </td></tr>
     <tr><td class="paramname">yPct</td><td>Vertical texture position as a percentage (0 - 1). </td></tr>
@@ -1275,7 +1278,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Set the anchor point the texture is drawn around in pixels. </p>
 <p>This can be useful if you want to rotate an image around a particular point.</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>Horizontal texture position in pixels. </td></tr>
     <tr><td class="paramname">y</td><td>Vertical texture position in pixels. </td></tr>
@@ -1314,7 +1317,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="a05e7b58296961f71d22761315db41cdb_description">
 
 <p>Draw the texture by it&apos;s upper left &amp; lower right corners. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p1</td><td>Upper left position on the x axis. </td></tr>
     <tr><td class="paramname">p2</td><td>Upper left position on the y axis. </td></tr>
@@ -1338,7 +1341,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="af187694221f5112048bebaf9c78d86cb_description">
 
 <p>Draw the texture at it&apos;s normal size. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>Draw position on the x axis. </td></tr>
     <tr><td class="paramname">y</td><td>Draw position on the y axis. </td></tr>
@@ -1361,7 +1364,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="ac302c8628b012aaf3e956cba9499c8b8_description">
 
 <p>Draw the texture at it&apos;s normal size with depth. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>Draw position on the x axis. </td></tr>
     <tr><td class="paramname">y</td><td>Draw position on the y axis. </td></tr>
@@ -1383,7 +1386,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="a93625f13f765773e58f1682ed180d0a3_description">
 
 <p>Draw the texture at a given size. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>Draw position on the x axis. </td></tr>
     <tr><td class="paramname">y</td><td>Draw position on the y axis. </td></tr>
@@ -1408,7 +1411,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="ac1437f8fbc32dd63ab2786fe343dbaeb_description">
 
 <p>Draw the texture at a given size with depth. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>Draw position on the x axis. </td></tr>
     <tr><td class="paramname">y</td><td>Draw position on the y axis. </td></tr>
@@ -1433,9 +1436,12 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Draw a subsection of the texture. </p>
 <p>Like ofRect, (x, y) depend on the current OF_RECT_MODE:</p>
-<p>OF_RECT_MODE_CORNER: drawn with the upper left corner = (x,y) OF_RECT_MODE_CENTER: drawn centered on (x,y)</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="of_graphics_8cpp.html#aa3b1c1ceb97a0d2eb223c079f460239e">ofSetRectMode()</a></dd></dl>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<ul>
+<li>OF_RECT_MODE_CORNER: drawn with the upper left corner = (x,y)</li>
+<li>OF_RECT_MODE_CENTER: drawn centered on (x,y)</li>
+</ul>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="of_graphics_8cpp.html#aa3b1c1ceb97a0d2eb223c079f460239e">ofSetRectMode()</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>Draw position on the x axis. </td></tr>
     <tr><td class="paramname">y</td><td>Draw position on the y axis. </td></tr>
@@ -1461,7 +1467,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Draw a subsection of the texture with depth. </p>
 <p>Same as drawSubsection(x, y, w, h, sx, sy) with the addition of:</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">z</td><td>Draw position on the z axis. </td></tr>
   </table>
@@ -1482,7 +1488,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Draw a subsection of the texture with an offset. </p>
 <p>Same as drawSubsection(x, y, w, h, sx, sy) with the addition of:</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sw</td><td>Subsection width within the texture. </td></tr>
     <tr><td class="paramname">sh</td><td>Subsection height within the texture. </td></tr>
@@ -1504,7 +1510,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Draw a subsection of the texture with an offset and depth. </p>
 <p>Same as drawSubsection(x, y, w, h, sx, sy, sw, sh) with the addition of:</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sw</td><td>Subsection width within the texture. </td></tr>
     <tr><td class="paramname">sh</td><td>Subsection height within the texture. </td></tr>
@@ -1539,8 +1545,8 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="ab378e36d23c87c061913d07ba6653912_description">
 
 <p>Read current texture data from the GPU into pixels. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>This is not supported in OpenGL ES and does nothing.</dd></dl>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="section warning"><dt>Warning</dt><dd>This is not supported in OpenGL ES and does nothing.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pixels</td><td>Target ofPixels reference. </td></tr>
   </table>
@@ -1560,8 +1566,8 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="a2c25b04a2fd3f05c710b1ece54820a5c_description">
 
 <p>Read current texture data from the GPU into pixels. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>This is not supported in OpenGL ES and does nothing.</dd></dl>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="section warning"><dt>Warning</dt><dd>This is not supported in OpenGL ES and does nothing.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pixels</td><td>Target pixels reference. </td></tr>
   </table>
@@ -1581,8 +1587,8 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="a5c8ac788901be0c0f030e62755d60625_description">
 
 <p>Read current texture data from the GPU into pixels. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>This is not supported in OpenGL ES and does nothing.</dd></dl>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="section warning"><dt>Warning</dt><dd>This is not supported in OpenGL ES and does nothing.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pixels</td><td>Target pixels reference. </td></tr>
   </table>
@@ -1614,8 +1620,8 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="a6a2b4dcddf37c5953bf08dcacd7447e5_description">
 
 <p>Bind the texture. </p>
-<p>For advanced users who need to manually manage texture drawing without calling <a class="el" href="ofTexture.html#a05e7b58296961f71d22761315db41cdb" title="Draw the texture by it&apos;s upper left &amp; lower right corners.">ofTexture::draw</a>.</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a href="http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml">http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml</a> </dd></dl>
+<p>For advanced users who need to manually manage texture drawing without calling <a class="el" href="ofTexture.html#a05e7b58296961f71d22761315db41cdb" title="Draw the texture by it&apos;s upper left &amp; lower right corners. ">ofTexture::draw</a>.</p>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml">http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml</a> </dd></dl>
 
 </div>
 
@@ -1630,8 +1636,8 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="a2b33ffb2d560989acd50977310c46423_description">
 
 <p>Unbind the texture. </p>
-<p>For advanced users who need to manually manage texture drawing without calling <a class="el" href="ofTexture.html#a05e7b58296961f71d22761315db41cdb" title="Draw the texture by it&apos;s upper left &amp; lower right corners.">ofTexture::draw</a>.</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a href="http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml">http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml</a> </dd></dl>
+<p>For advanced users who need to manually manage texture drawing without calling <a class="el" href="ofTexture.html#a05e7b58296961f71d22761315db41cdb" title="Draw the texture by it&apos;s upper left &amp; lower right corners. ">ofTexture::draw</a>.</p>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml">http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml</a> </dd></dl>
 
 </div>
 
@@ -1684,14 +1690,14 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="aafa0ddbae92812df141c1b3a47b88ece_description">
 
 <p>Helper to convert display coordinate to texture coordinate. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">xPos</td><td>Horizontal position in pixels. </td></tr>
     <tr><td class="paramname">yPos</td><td>Vertical position in pixels. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Texture coordinate or (0, 0) if texture is not allocated. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Texture coordinate or (0, 0) if texture is not allocated. </dd></dl>
 
 </div>
 
@@ -1706,14 +1712,14 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="ade541a570a891ed4e8222edb90d6e311_description">
 
 <p>Helper to convert display coordinate to texture coordinate. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">xPts</td><td>Horizontal position in a normalized percentage (0 - 1). </td></tr>
     <tr><td class="paramname">yPts</td><td>Vertical position in a normalized percentage (0 - 1). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Texture coordinate or (0, 0) if texture is not allocated. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Texture coordinate or (0, 0) if texture is not allocated. </dd></dl>
 
 </div>
 
@@ -1729,11 +1735,11 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Set texture wrapping. </p>
 <p>By default, textures are clamped to their edges with GL_CLAMP_TO_EDGE. Setting a repeat mode like GL_REPEAT allows you to create tiled backgrounds with small textures.</p>
-<dl class="see"><dt><b>See also:</b></dt><dd>ofTextureSetWrap() </dd>
+<dl class="section see"><dt>See Also</dt><dd>ofTextureSetWrap() </dd>
 <dd>
 <a href="http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml">http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml</a></dd></dl>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>May be overridden.</dd></dl>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="section warning"><dt>Warning</dt><dd>May be overridden.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">wrapS</td><td>wrap parameter for texture coordinate s. </td></tr>
     <tr><td class="paramname">wrapT</td><td>wrap parameter for texture coordinate t. </td></tr>
@@ -1755,11 +1761,11 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Set texture minification/magnification scaling filters. </p>
 <p>Controls how OpenGL will scale this texture.</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a href="http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml">http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml</a> </dd>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml">http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml</a> </dd>
 <dd>
 ofTextureSetMinMagFilters()</dd></dl>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>May be overridden.</dd></dl>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="section warning"><dt>Warning</dt><dd>May be overridden.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">minFilter</td><td>minifying filter for scaling a pixel to a smaller area. </td></tr>
     <tr><td class="paramname">magFilter</td><td>magnifying filter for scaling a pixel to a larger area. </td></tr>
@@ -1807,8 +1813,8 @@ ofTextureSetMinMagFilters()</dd></dl>
     <div class="methodDescription " style="display:none" id="a40e4284b661dbf0819089cd242c5bc6c_description">
 
 <p>Set the texture compression. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>: not yet implemented. </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="ofTexture.html#a218c238fdc83c3d9ac235f31dfd3c895">ofTexCompression</a> </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>: not yet implemented. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#a218c238fdc83c3d9ac235f31dfd3c895">ofTexCompression</a> </dd></dl>
 
 </div>
 
@@ -1823,13 +1829,13 @@ ofTextureSetMinMagFilters()</dd></dl>
     <div class="methodDescription " style="display:none" id="a4d59a5114c8ceef3427cee6efb16d8da_description">
 
 <p>Sets flag allowing texture to auto-generate mipmap. </p>
-<p>By default, this will set your minFilter to GL_LINEAR_MIPMAP_LINEAR. If you want to change your minFilter later use <a class="el" href="ofTexture.html#a60ebbd584455b495d0b56c0fa563680a" title="Set texture minification/magnification scaling filters.">setTextureMinMagFilter()</a></p>
-<p>If you want to generate a mipmap later, or at a specific point in your code, use <a class="el" href="ofTexture.html#a7eb8ed330899e19e11271122291e7915" title="Generate mipmap for the current texture.">ofTexture::generateMipmap()</a> instead.</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="ofTexture.html#a7eb8ed330899e19e11271122291e7915" title="Generate mipmap for the current texture.">generateMipmap()</a> </dd>
+<p>By default, this will set your minFilter to GL_LINEAR_MIPMAP_LINEAR. If you want to change your minFilter later use <a class="el" href="ofTexture.html#a60ebbd584455b495d0b56c0fa563680a" title="Set texture minification/magnification scaling filters. ">setTextureMinMagFilter()</a></p>
+<p>If you want to generate a mipmap later, or at a specific point in your code, use <a class="el" href="ofTexture.html#a7eb8ed330899e19e11271122291e7915" title="Generate mipmap for the current texture. ">ofTexture::generateMipmap()</a> instead.</p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#a7eb8ed330899e19e11271122291e7915" title="Generate mipmap for the current texture. ">generateMipmap()</a> </dd>
 <dd>
-<a class="el" href="ofTexture.html#a0a1d608ff6440b63e797745052f4147f" title="Sets flag allowing texture to auto-generate mipmap.">disableMipmap()</a> </dd>
+<a class="el" href="ofTexture.html#a0a1d608ff6440b63e797745052f4147f" title="Sets flag allowing texture to auto-generate mipmap. ">disableMipmap()</a> </dd>
 <dd>
-<a class="el" href="ofTexture.html#a60ebbd584455b495d0b56c0fa563680a" title="Set texture minification/magnification scaling filters.">setTextureMinMagFilter()</a> </dd></dl>
+<a class="el" href="ofTexture.html#a60ebbd584455b495d0b56c0fa563680a" title="Set texture minification/magnification scaling filters. ">setTextureMinMagFilter()</a> </dd></dl>
 
 </div>
 
@@ -1844,13 +1850,13 @@ ofTextureSetMinMagFilters()</dd></dl>
     <div class="methodDescription " style="display:none" id="a0a1d608ff6440b63e797745052f4147f_description">
 
 <p>Sets flag allowing texture to auto-generate mipmap. </p>
-<p>By default, this will set your minFilter to GL_LINEAR_MIPMAP_LINEAR. If you want to change your minFilter later use <a class="el" href="ofTexture.html#a60ebbd584455b495d0b56c0fa563680a" title="Set texture minification/magnification scaling filters.">setTextureMinMagFilter()</a></p>
-<p>If you want to generate a mipmap later, or at a specific point in your code, use <a class="el" href="ofTexture.html#a7eb8ed330899e19e11271122291e7915" title="Generate mipmap for the current texture.">ofTexture::generateMipmap()</a> instead.</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="ofTexture.html#a7eb8ed330899e19e11271122291e7915" title="Generate mipmap for the current texture.">generateMipmap()</a> </dd>
+<p>By default, this will set your minFilter to GL_LINEAR_MIPMAP_LINEAR. If you want to change your minFilter later use <a class="el" href="ofTexture.html#a60ebbd584455b495d0b56c0fa563680a" title="Set texture minification/magnification scaling filters. ">setTextureMinMagFilter()</a></p>
+<p>If you want to generate a mipmap later, or at a specific point in your code, use <a class="el" href="ofTexture.html#a7eb8ed330899e19e11271122291e7915" title="Generate mipmap for the current texture. ">ofTexture::generateMipmap()</a> instead.</p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#a7eb8ed330899e19e11271122291e7915" title="Generate mipmap for the current texture. ">generateMipmap()</a> </dd>
 <dd>
-<a class="el" href="ofTexture.html#a4d59a5114c8ceef3427cee6efb16d8da" title="Sets flag allowing texture to auto-generate mipmap.">enableMipmap()</a> </dd>
+<a class="el" href="ofTexture.html#a4d59a5114c8ceef3427cee6efb16d8da" title="Sets flag allowing texture to auto-generate mipmap. ">enableMipmap()</a> </dd>
 <dd>
-<a class="el" href="ofTexture.html#a60ebbd584455b495d0b56c0fa563680a" title="Set texture minification/magnification scaling filters.">setTextureMinMagFilter()</a> </dd></dl>
+<a class="el" href="ofTexture.html#a60ebbd584455b495d0b56c0fa563680a" title="Set texture minification/magnification scaling filters. ">setTextureMinMagFilter()</a> </dd></dl>
 
 </div>
 
@@ -1866,7 +1872,7 @@ ofTextureSetMinMagFilters()</dd></dl>
 
 <p>Has the texture been allocated? </p>
 <p>Legacy function for backwards compatibility.</p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if the texture has been allocated. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the texture has been allocated. </dd></dl>
 
 </div>
 
@@ -1881,7 +1887,7 @@ ofTextureSetMinMagFilters()</dd></dl>
     <div class="methodDescription " style="display:none" id="aad1888a6e4ed69a0936d0d724125150d_description">
 
 <p>Has the texture been allocated? </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if the texture has been allocated. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the texture has been allocated. </dd></dl>
 
 </div>
 
@@ -1896,7 +1902,7 @@ ofTextureSetMinMagFilters()</dd></dl>
     <div class="methodDescription " style="display:none" id="ab8852339546c4bbf87b5a5a463cc8ec8_description">
 
 <p>Internal texture data access. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>a reference to the internal texture data struct. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a reference to the internal texture data struct. </dd></dl>
 
 </div>
 
@@ -1910,8 +1916,8 @@ ofTextureSetMinMagFilters()</dd></dl>
 
     <div class="methodDescription " style="display:none" id="a2032ce2c2a1bb7c51957b040d7636088_description">
 
-<p>Const version of <a class="el" href="ofTexture.html#ab8852339546c4bbf87b5a5a463cc8ec8" title="Internal texture data access.">getTextureData()</a>. </p>
-<dl class="see"><dt><b>See also:</b></dt><dd>ofTextureData::getTextureData() </dd></dl>
+<p>Const version of <a class="el" href="ofTexture.html#ab8852339546c4bbf87b5a5a463cc8ec8" title="Internal texture data access. ">getTextureData()</a>. </p>
+<dl class="section see"><dt>See Also</dt><dd>ofTextureData::getTextureData() </dd></dl>
 
 </div>
 
@@ -1927,8 +1933,8 @@ ofTextureSetMinMagFilters()</dd></dl>
 
 <p>Display height of texture. </p>
 <p>Return value is pixel size (default) or normalized (0 - 1).</p>
-<dl class="see"><dt><b>See also:</b></dt><dd>ofEnabledNormalizedTextures()</dd></dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Display height of texture in pixels. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd>ofEnabledNormalizedTextures()</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Display height of texture in pixels. </dd></dl>
 
 <p>Implements <a class="el" href="ofBaseDraws.html#a65f504e6dec109161334138f17b19402">ofBaseDraws</a>.</p>
 
@@ -1946,8 +1952,8 @@ ofTextureSetMinMagFilters()</dd></dl>
 
 <p>Display width of texture. </p>
 <p>Return value is pixel size (default) or normalized (0 - 1).</p>
-<dl class="see"><dt><b>See also:</b></dt><dd>ofEnabledNormalizedTextures()</dd></dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Display width of texture in pixels. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd>ofEnabledNormalizedTextures()</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Display width of texture in pixels. </dd></dl>
 
 <p>Implements <a class="el" href="ofBaseDraws.html#a0513ff59c024202df4cfd31e1244ac4b">ofBaseDraws</a>.</p>
 

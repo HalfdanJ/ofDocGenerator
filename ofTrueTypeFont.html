@@ -651,7 +651,7 @@
 <p>Loads the font specified by filename, allows you to control size, aliasing, and other parameters. </p>
 <p>loads a font, and allows you to set the following parameters: the filename, the size, if the font is anti-aliased, if it has a full character set, if you need it to have contours (for getStringPoints) and paramters that control the simplification amount for those contours and the dpi of the font.</p>
 <p>default (without dpi), non-full char set, anti aliased, 96 dpi</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>The name of the font file to load. </td></tr>
     <tr><td class="paramname">fontsize</td><td>The size in pixels to load the font. </td></tr>
@@ -663,7 +663,7 @@
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if the font was loaded correctly. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the font was loaded correctly. </dd></dl>
 
 </div>
 
@@ -690,7 +690,7 @@
     <div class="methodDescription " style="display:none" id="aa5694c01739ede1bb0a136153b848ebc_description">
 
 <p>Has the font been loaded successfully? </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if the font was loaded. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the font was loaded. </dd></dl>
 
 </div>
 
@@ -705,7 +705,7 @@
     <div class="methodDescription " style="display:none" id="ab565e2941f3d53d97f2292d07bf87b61_description">
 
 <p>Is the font anit-aliased? </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if the font was set to be anti-aliased. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the font was set to be anti-aliased. </dd></dl>
 
 </div>
 
@@ -720,7 +720,7 @@
     <div class="methodDescription " style="display:none" id="a30ad1c1bd00c8708324463f5d46e466a_description">
 
 <p>Does the font have a full character set? </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if the font was allocated with a full character set. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the font was allocated with a full character set. </dd></dl>
 
 </div>
 
@@ -735,7 +735,7 @@
     <div class="methodDescription " style="display:none" id="adbb80647aa21a907250af47d5a3fcc6f_description">
 
 <p>Returns the size of the font. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Size of font, set when font was loaded. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Size of font, set when font was loaded. </dd></dl>
 
 </div>
 
@@ -750,7 +750,7 @@
     <div class="methodDescription " style="display:none" id="ab3bc6e1c7a358236094471e85556fa70_description">
 
 <p>Computes line height based on font size. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Returns current line height. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns current line height. </dd></dl>
 
 </div>
 
@@ -766,7 +766,7 @@
 
 <p>Sets line height for text drawn on screen. </p>
 <p>Note the line height is automatically computed based on the font size, when you load in the font.</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">height</td><td>Line height for text drawn on screen. </td></tr>
   </table>
@@ -787,7 +787,7 @@
 
 <p>Get the ascender distance for this font. </p>
 <p>The ascender is the vertical distance from the baseline to the highest &quot;character&quot; coordinate. The meaning of &quot;character&quot; coordinate depends on the font. Some fonts take accents into account, others do not, and still others define it simply to be the highest coordinate over all glyphs.</p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Returns font ascender height in pixels. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns font ascender height in pixels. </dd></dl>
 
 </div>
 
@@ -803,7 +803,7 @@
 
 <p>Get the descender distance for this font. </p>
 <p>The descender is the vertical distance from the baseline to the lowest &quot;character&quot; coordinate. The meaning of &quot;character&quot; coordinate depends on the font. Some fonts take accents into account, others do not, and still others define it simply to be the lowest coordinate over all glyphs. This value will be negative for descenders below the baseline (which is typical).</p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Returns font descender height in pixels. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns font descender height in pixels. </dd></dl>
 
 </div>
 
@@ -819,7 +819,7 @@
 
 <p>Get the global bounding box for this font. </p>
 <p>The global bounding box is the rectangle inside of which all glyphs in the font can fit. Glyphs are drawn starting from (0,0) in the returned box (though note that the box can extend in any direction out from the origin).</p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Returns font descender height in pixels. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns font descender height in pixels. </dd></dl>
 
 </div>
 
@@ -834,8 +834,8 @@
     <div class="methodDescription " style="display:none" id="a634099486e62ef1b02f74efc57f2d9ae_description">
 
 <p>Returns letter spacing of font object. </p>
-<p>You can control this by the <a class="el" href="ofTrueTypeFont.html#a5cd0651d15f07ae1b350bf398871be62" title="Sets the letter spacing of the font object.">ofTrueTypeFont::setLetterSpacing()</a> function. 1.0 = default spacing, less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing.</p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Returns letter spacing of font object. </dd></dl>
+<p>You can control this by the <a class="el" href="ofTrueTypeFont.html#a5cd0651d15f07ae1b350bf398871be62" title="Sets the letter spacing of the font object. ">ofTrueTypeFont::setLetterSpacing()</a> function. 1.0 = default spacing, less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing.</p>
+<dl class="section return"><dt>Returns</dt><dd>Returns letter spacing of font object. </dd></dl>
 
 </div>
 
@@ -851,7 +851,7 @@
 
 <p>Sets the letter spacing of the font object. </p>
 <p>1.0 = default spacing, less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">spacing</td><td>Spacing of font object. </td></tr>
   </table>
@@ -872,7 +872,7 @@
 
 <p>Returns a variable that represents how wide spaces are. </p>
 <p>It&apos;s a scalar for the width of the letter &apos;p&apos;, so 1.0 means that a space will be the size of the lower case &apos;p&apos; of that font. 2.0 means that it&apos;s 2 times the size of the lower case &apos;p&apos;, etc.</p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Returns a variable that represents how wide spaces are. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns a variable that represents how wide spaces are. </dd></dl>
 
 </div>
 
@@ -888,7 +888,7 @@
 
 <p>Sets the size of the space &apos; &apos; character. </p>
 <p>This number, which defaults to 1.0, scales the width of the letter &apos;p&apos; for the space.</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">size</td><td>Scales the width of the letter &apos;p&apos; for the space. </td></tr>
   </table>
@@ -908,14 +908,14 @@
     <div class="methodDescription " style="display:none" id="aecb42f8691b704a8fc3394353c9cefd8_description">
 
 <p>Returns the string width. </p>
-<p>This is essentially the width component of the <a class="el" href="ofTrueTypeFont.html#abdd3e920bdd44cef5e7aa05db0907cc4" title="Returns the bounding box of a string as a rectangle.">ofTrueTypeFont::getStringBoundingBox()</a> rectangle.</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<p>This is essentially the width component of the <a class="el" href="ofTrueTypeFont.html#abdd3e920bdd44cef5e7aa05db0907cc4" title="Returns the bounding box of a string as a rectangle. ">ofTrueTypeFont::getStringBoundingBox()</a> rectangle.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td>The string to get the width of. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Returns the string width. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the string width. </dd></dl>
 
 </div>
 
@@ -930,14 +930,14 @@
     <div class="methodDescription " style="display:none" id="a5de7ff4031df5404d2a6be33ca8b62ea_description">
 
 <p>Returns the string height. </p>
-<p>This is essentially the height component of the <a class="el" href="ofTrueTypeFont.html#abdd3e920bdd44cef5e7aa05db0907cc4" title="Returns the bounding box of a string as a rectangle.">ofTrueTypeFont::getStringBoundingBox()</a> rectangle.</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<p>This is essentially the height component of the <a class="el" href="ofTrueTypeFont.html#abdd3e920bdd44cef5e7aa05db0907cc4" title="Returns the bounding box of a string as a rectangle. ">ofTrueTypeFont::getStringBoundingBox()</a> rectangle.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td>The string to get the height of. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Returns the string height. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the string height. </dd></dl>
 
 </div>
 
@@ -952,7 +952,7 @@
     <div class="methodDescription " style="display:none" id="abdd3e920bdd44cef5e7aa05db0907cc4_description">
 
 <p>Returns the bounding box of a string as a rectangle. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td>The string to get bounding box of. </td></tr>
     <tr><td class="paramname">x</td><td>X position of returned rectangle. </td></tr>
@@ -960,7 +960,7 @@
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Returns the bounding box of a string as a rectangle. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the bounding box of a string as a rectangle. </dd></dl>
 
 </div>
 
@@ -975,7 +975,7 @@
     <div class="methodDescription " style="display:none" id="ad775d8f4f08a21356fb4323238430607_description">
 
 <p>Draw a string s at position x,y. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td>String to draw </td></tr>
     <tr><td class="paramname">x</td><td>X position of string </td></tr>
@@ -998,7 +998,7 @@
 
 <p>Draws the string as if it was geometrical shapes. </p>
 <p>Uses the information contained in ofTTFContour and ofTTFCharacter.</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>X position of shapes </td></tr>
     <tr><td class="paramname">y</td><td>Y position of shapes </td></tr>
@@ -1020,7 +1020,7 @@
 
 <p>Get the num chars in the loaded character set. </p>
 <p>If you allocate the font using different paramters, you can load in partial and full character sets, this helps you know how many characters it can represent.</p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Number of characters in loaded character set. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of characters in loaded character set. </dd></dl>
 
 </div>
 
@@ -1107,8 +1107,8 @@
     <div class="methodDescription " style="display:none" id="a8ae68744a50f815cf68cc3836dfba94d_description">
 
 <p>Get the current font endcoding. </p>
-<p>This is set by <a class="el" href="ofTrueTypeFont.html#abcb3ec25a1d51bb2f6945742b71dda23" title="Sets the current font encoding.">ofTrueTypeFont::setEncoding()</a> to either OF_ENCODING_UTF8 or OF_ENCODING_ISO_8859_15. OF_ENCODING_ISO_8859_15 is for an 8-bit single-byte coded graphic character sets, like ASCII while OF_ENCODING_UTF8 is a variable-width encoding that can represent every character in the Unicode character set.</p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>encoding used by the font object. </dd></dl>
+<p>This is set by <a class="el" href="ofTrueTypeFont.html#abcb3ec25a1d51bb2f6945742b71dda23" title="Sets the current font encoding. ">ofTrueTypeFont::setEncoding()</a> to either OF_ENCODING_UTF8 or OF_ENCODING_ISO_8859_15. OF_ENCODING_ISO_8859_15 is for an 8-bit single-byte coded graphic character sets, like ASCII while OF_ENCODING_UTF8 is a variable-width encoding that can represent every character in the Unicode character set.</p>
+<dl class="section return"><dt>Returns</dt><dd>encoding used by the font object. </dd></dl>
 
 </div>
 
@@ -1124,7 +1124,7 @@
 
 <p>Sets the current font encoding. </p>
 <p>Can be set to either OF_ENCODING_UTF8 or OF_ENCODING_ISO_8859_15. OF_ENCODING_ISO_8859_15 is for an 8-bit single-byte coded graphic character sets, like ASCII while OF_ENCODING_UTF8 is a variable-width encoding that can represent every character in the Unicode character set. This function is useful if you are trying to draw unicode strings.</p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">encoding</td><td>The encoding used by the font object, either OF_ENCODING_UTF8 or </td></tr>
     <tr><td class="paramname">OF_ENCODING_ISO_8859_15</td><td></td></tr>
