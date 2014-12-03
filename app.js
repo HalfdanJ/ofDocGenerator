@@ -28,42 +28,110 @@ fs.copySync('assets/script.js', 'output/script.js');
 
 
 // Load the doc structure
-var structure = require("./structure.json");
+//var structure = require("./structure.json");
 //structure = {core: {"utils": ['ofThread','ofLog', 'ofColor']}}
 var tocInfo = {};
 
-// Generate the docs
-for(var category in structure['core']){
-  structure['core'][category].forEach(function(file){
-    generateDoc(file, category);
-  })
-}
+loadStructure()
+  .then(function(structure){
+    // Generate the docs
+    console.log(structure);
 
-// Generate the TOC (index.html)
-generateToc(structure, tocInfo);
-
+    for(var category in structure['core']){
+      console.log("CAT: "+category);
+      structure['core'][category].forEach(function(file){
+        try {
+          generateDoc(file, category);
+        } catch(e){
+          console.log(e)
+        }
+      })
+    }
+    // Generate the TOC (index.html)
+    generateToc(structure, tocInfo);
+  });
 
 
 // ---------
+// ---------
+// ---------
 
-function generateDoc(className, category) {
-  var doxygenName = className.replace(/([A-Z])/g, "_$1").toLowerCase();
+
+function loadStructure(){
+  var promises = [];
+  var structure = {core: {}};
+
+  var files = fs.readdirSync(dir+'xml');
+  files.forEach(function(f){
+    if(f.match(/^dir_/)){
+      var deferred = Q.defer();
+
+      var xmlData = fs.readFileSync(dir+'xml/'+f);
+      var xmlParser = new xml2js.Parser();
+      xmlParser.parseString(xmlData, function (err, result) {
+        var compoundname = result['doxygen']['compounddef'][0]['compoundname'][0].match(/\/(\w+)$/)[1];
+
+        // Filter out the root dir xml that descripes the openframeworks base folder
+        if(!compoundname.match(/openframeworks$/i)){
+      //    console.log(f, compoundname);
+        //  console.log(result['doxygen']['compounddef'][0]['innerfile']);
+
+          structure.core[compoundname] = [];
+          result['doxygen']['compounddef'][0]['innerfile'].forEach(function(innerfile){
+            var filename = innerfile['_'];
+            var refid = innerfile['$']['refid']
+
+            //Is it a headerfile?
+            if(filename.match(/\.h$/)){
+              structure.core[compoundname].push({
+                name: filename.replace(/\.h$/, ""),
+                ref: refid
+              })
+            }
+
+          })
+        }
+
+        deferred.resolve();
+      });
+
+      promises.push(deferred.promise);
+    }
+  });
+
+  return Q.all(promises).then(function(){
+    return structure;
+  })
+
+}
+
+// ---------
+
+function generateDoc(fileDescription, category) {
+  var className = fileDescription.name;
+  var doxygenName = fileDescription.ref;
 
   /*if(fs.existsSync(dir + "xml/class"+doxygenName+ ".xml")){
    doxygenName = "class"+doxygenName;
    }
 
    els*e*/
+  console.log("Generate "+className)
 
-  parseDoxygenXml(doxygenName+"_8h")
+  parseDoxygenXml(doxygenName)
     .then(function(parseData) {
+      console.log("Scrape "+className)
+
       return scrapeDoxygenHtml(parseData);
     })
     .then(function(parseData){
+      console.log("Generate html "+className)
+
       return generateHtml(parseData, category);
     })
     .then(function(html){
       //Save the html
+      console.log("Save "+className)
       fs.writeFile("output/"+className+".html", html);
     })
 
@@ -284,7 +352,7 @@ function parseDoxygenXml(doxygenName){
     Q.all(promises).then(function(){
       console.log("Done with "+doxygenName)
       deferred.resolve(ret);
-    });
+    })
 
   });
 
@@ -498,16 +566,15 @@ function generateToc(structure, tocInfo){
   var templateData = fs.readFileSync("templateToc.html");
   var $ = cheerio.load(templateData.toString());
 
-
   var c = $(".content");
   for(var category in structure['core']){
     c.append('<h3>'+category+"</h3>");
     structure['core'][category].forEach(function(file){
       var desc = '';
       if(tocInfo[file]){
-        desc = ' - '+tocInfo[file];
+        desc = ' - '+tocInfo[file.name];
       }
-      c.append('<a href="'+file+'.html">'+file+"</a>"+desc+"<br>");
+      c.append('<a href="'+file.name+'.html">'+file.name+"</a>"+desc+"<br>");
     })
   }
   // Write the file
