@@ -3,7 +3,25 @@ var fs = require('fs-extra'),
   Q = require('q'),
   xml2js = require('xml2js'),
   cheerio = require('cheerio')
-  //sass = require('node-sass');
+
+try {
+  var sass = require('node-sass');
+
+  sass.renderFile({
+    file: 'assets/stylesheet.scss',
+    outFile: 'output/stylesheet.css',
+    error: function(error) {
+      console.error(error);
+    },
+    success: function(){}
+  });
+} catch(e){
+  console.log("Sass not installed, skipping");
+}
+
+
+
+var filterGroup = 'utils';
 
 var root =  process.argv[2] || "../..";
 var dir = root + "/libs/openFrameworksCompiled/project/doxygen/build/";
@@ -16,20 +34,12 @@ fs.mkdirSync('output');
 fs.copySync('assets/script.js', 'output/script.js');
 
 //Create the css file from the scss file in assets
-/*sass.renderFile({
-  file: 'assets/stylesheet.scss',
-  outFile: 'output/stylesheet.css',
-  error: function(error) {
-    console.error(error);
-  },
-  success: function(){}
-});
+/*
 */
 
 
 // Load the doc structure
 //var structure = require("./structure.json");
-//structure = {core: {"utils": ['ofThread','ofLog', 'ofColor']}}
 var tocInfo = {};
 
 loadStructure()
@@ -38,7 +48,6 @@ loadStructure()
     console.log(structure);
 
     for(var category in structure['core']){
-      console.log("CAT: "+category);
       structure['core'][category].forEach(function(file){
         try {
           generateDoc(file, category);
@@ -72,24 +81,30 @@ function loadStructure(){
         var compoundname = result['doxygen']['compounddef'][0]['compoundname'][0].match(/\/(\w+)$/)[1];
 
         // Filter out the root dir xml that descripes the openframeworks base folder
-        if(!compoundname.match(/openframeworks$/i)){
-      //    console.log(f, compoundname);
-        //  console.log(result['doxygen']['compounddef'][0]['innerfile']);
+        if(!compoundname.match(/openframeworks$/i)) {
+          console.log('"' + compoundname + '"', '"' + filterGroup + '"', filterGroup != compoundname);
+          if (filterGroup && filterGroup != compoundname) {
 
-          structure.core[compoundname] = [];
-          result['doxygen']['compounddef'][0]['innerfile'].forEach(function(innerfile){
-            var filename = innerfile['_'];
-            var refid = innerfile['$']['refid']
+          } else {
 
-            //Is it a headerfile?
-            if(filename.match(/\.h$/)){
-              structure.core[compoundname].push({
-                name: filename.replace(/\.h$/, ""),
-                ref: refid
-              })
-            }
+            //    console.log(f, compoundname);
+            //  console.log(result['doxygen']['compounddef'][0]['innerfile']);
 
-          })
+            structure.core[compoundname] = [];
+            result['doxygen']['compounddef'][0]['innerfile'].forEach(function (innerfile) {
+              var filename = innerfile['_'];
+              var refid = innerfile['$']['refid']
+
+              //Is it a headerfile?
+              if (filename.match(/\.h$/)) {
+                structure.core[compoundname].push({
+                  name: filename.replace(/\.h$/, ""),
+                  ref: refid
+                })
+              }
+
+            })
+          }
         }
 
         deferred.resolve();
@@ -291,8 +306,8 @@ function parseDoxygenXml(doxygenName){
           // Section anchor
           section.anchor = section.name.replace(/ /g, '');
 
-
-          // Memebers in the section
+          // Members in the section
+          var lastName = '';
           s.memberdef.forEach(function (member) {
             var m = {
               info: member['$'],
@@ -333,7 +348,13 @@ function parseDoxygenXml(doxygenName){
               //console.log(m.type, m.name, m.argsstring)
             }
 
-            section.methods.push(m);
+            console.log(lastName,m.name);
+            if(lastName != m.name) {
+              section.methods.push({implementations: [m]});
+            } else {
+              section.methods[section.methods.length-1].implementations.push(m);
+            }
+            lastName = m.name;
 
             //console.log(memberType,name)
             // console.log(util.inspect(member, false, null))
@@ -403,27 +424,27 @@ function scrapeDoxygenHtml(parsedData){
     });
 
     // Go through all methods in the section
-    section.methods.forEach(function (method) {
+    section.methods.forEach(function (memberGroup) {
+      memberGroup.implementations.forEach(function(method) {
+        // Description
 
-      // Description
+        // Find the coresponding description in the doxygen generated html
+        var ref = method.info.id.replace(parsedData.doxygenName + "_1", "");
+        var refElm = $input("#" + ref);
 
-      // Find the coresponding description in the doxygen generated html
-      var ref = method.info.id.replace(parsedData.doxygenName + "_1", "");
-      var refElm = $input("#" + ref);
+        if (!refElm) {
+          console.error("Missing docs!")
+        } else {
+          var memitem = refElm.next();
 
-      if (!refElm) {
-        console.error("Missing docs!")
-      } else {
-        var memitem = refElm.next();
+          var memdoc = memitem.children('.memdoc');
+          //if(memitem.is('.memdoc')) {
+          if (memdoc.html()) {
 
-        var memdoc = memitem.children('.memdoc');
-        //if(memitem.is('.memdoc')) {
-        if (memdoc.html()) {
-
-          method.htmlDescription = memdoc.html();
+            method.htmlDescription = memdoc.html();
+          }
         }
-      }
-
+      })
     });
   });
 
@@ -448,9 +469,10 @@ function generateHtml(parsedData, category){
   $('#categoryQuickNav').text(category);
 
 
-
+  // Global  members
   generateHtmlContent(parsedData, $);
 
+  // Inner classes
   parsedData.classes.forEach(function(innerclass){
     $("#topics").append('<span class="class">'+innerclass.name+'</span>');
 
@@ -489,7 +511,8 @@ function generateHtmlContent(parsedData, $){
     if(section.description) {
       s.children('.sectionDescription').html(section.description);
     }
-    section.methods.forEach(function (method) {
+    section.methods.forEach(function (memberGroup) {
+      var method = memberGroup.implementations[0];
       var ref = method.info.id.replace(parsedData.doxygenName + "_1", "");
 
 
@@ -498,22 +521,9 @@ function generateHtmlContent(parsedData, $){
       var header = m.find(".methodHeader");
 
       // Type
-      if (typeof method.type == "string") {
-        header.children('.type').text(method.type + " ");
-        if (method.type == "") {
-          header.children('.type').css("display", 'none');
-        }
-      } else {
-        var refid = method.type.ref[0]['$']['refid'];
-        var kindref = method.type.ref[0]['$']['kindref'];
+      header.children('.arg').html(getTypeHtml(method.type));
 
-        var url = refid+".html";
-        if(kindref == 'member'){
-          url = refid.replace(/(.+)_(.+)$/g, "$1.html#$2");
-        }
-        url = getLinkUrlFromDoxygenUrl(url);
-        header.children('.type').html("<a href='"+url+"'>" + method.type.ref[0]._ + "</a>");
-      }
+
 
       // Name
       header.children('.name').text(method.name);
@@ -537,8 +547,20 @@ function generateHtmlContent(parsedData, $){
 
 
       var methodDescription = m.find(".methodDescription");
-      methodDescription.html(method.htmlDescription);
       methodDescription.attr('id', ref + "_description")
+
+
+      memberGroup.implementations.forEach(function(method){
+        var variantDesc = methodDescription.append('<div class="memberVariant">').children().last();
+        variantDesc.append('<span class="type">'+getTypeHtml(method.type)+'</span>');
+        variantDesc.append('<span class="name">'+method.name+'</span>');
+        variantDesc.append('<span class="args">'+method.argsstring+'</span>');
+
+        console.log(variantDesc.html())
+        methodDescription.append('<div class="memberDocumentation">'+method.htmlDescription+"</div>");
+
+      //  methodImplementations.append(method.name)
+      });
       /*}else {
        console.error(name+" missing memeber description for "+method.name)
        }*/
@@ -582,6 +604,27 @@ function generateToc(structure, tocInfo){
 
 }
 
+// -----------
+
+function getTypeHtml(type){
+  if (typeof type == "string") {
+    //header.children('.type').text(method.type + " ");
+    /*if (method.type == "") {
+      header.children('.type').css("display", 'none');
+    }*/
+    return type + " ";
+  } else {
+    var refid = type.ref[0]['$']['refid'];
+    var kindref = type.ref[0]['$']['kindref'];
+
+    var url = refid+".html";
+    if(kindref == 'member'){
+      url = refid.replace(/(.+)_(.+)$/g, "$1.html#$2");
+    }
+    url = getLinkUrlFromDoxygenUrl(url);
+    return ("<a href='"+url+"'>" + type.ref[0]._ + "</a>");
+  }
+}
 
 // -----------
 

@@ -156,10 +156,14 @@ nav {
 .methodHeader {
   font-family: 'Inconsolata', monospace;
   font-size:14px;
-  margin-bottom:5px;
-  margin-top:5px;
-  margin-left: 23px;
+  padding-bottom:5px;
+  padding-top:5px;
+  padding-left: 23px;
   cursor: pointer;
+  //background-color:rgba(255,255,255,0);
+  border: 1px solid white;
+  border-bottom: 0px;
+  transition: border-color 0.5s ease;
 
   a {
     &:hover{
@@ -196,11 +200,18 @@ nav {
 }
 
 .open {
+  .methodHeader {
+   // font-weight: bold;
+    //background-color:rgba(240,240,240,1);
+    border-color:rgb(230,230,230);
+
+
+  }
   .type {
-    display:initial;
+ //   display:initial;
   }
   .args {
-    display: initial;
+  //  display: initial;
   }
 }
 
@@ -213,7 +224,26 @@ nav {
 
   padding:10px 10px 5px 15px;
 
+  .memberVariant {
+    margin-bottom:8px;
+    font-family: 'Inconsolata', monospace;
+    font-size:14px;
 
+    .type {
+
+    }
+    .name {
+      font-weight: bold;
+
+    }
+    .args{
+
+    }
+  }
+  .memberDocumentation {
+    padding-left: 15px;
+    margin-bottom:8px;
+  }
 
 
 
