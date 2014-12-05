@@ -34,7 +34,7 @@
           Topics
           <ul id="topics">
             <!--<li class="chapter"><a href="asd">sad</a></li>-->
-          <li class="chapter"><a href="#Enums">Enums</a></li><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofTextureData</span><li class="chapter"><a href="#PublicAttributes">Public Attributes</a></li><li class="chapter"><a href="#Friends">Friends</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><span class="class">ofTexture</span><li class="chapter"><a href="#PublicAttributes">Public Attributes</a></li><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li></ul>
+          <li class="chapter"><a href="#Globaltexturesettings">Global texture settings</a></li><li class="chapter"><a href="#Enums">Enums</a></li><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofTexture</span><li class="chapter"><a href="#Constructionandallocation">Construction and allocation</a></li><li class="chapter"><a href="#Updatetexture">Update texture</a></li><li class="chapter"><a href="#Drawing">Drawing</a></li><li class="chapter"><a href="#Sizeandcoordinates">Size and coordinates</a></li><li class="chapter"><a href="#Texturesettings">Texture settings</a></li><li class="chapter"><a href="#Disablethealphamask">Disable the alpha mask</a></li><li class="chapter"><a href="#Readpixeldata">Read pixel data</a></li><li class="chapter"><a href="#Texturedata">Texture data</a></li><li class="chapter"><a href="#Mipmapping">Mipmapping</a></li></ul>
       </li></ul>
     </nav>
     <div class="main">
@@ -45,62 +45,34 @@
       <h1 class="classTitle">ofTexture.h</h1>
     </div>
     <div class="classDescription"></div>
-    <div class="classMethods"><div id="Enums">
-    <h3 class="sectionHeader">Enums</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a218c238fdc83c3d9ac235f31dfd3c895">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a218c238fdc83c3d9ac235f31dfd3c895&quot;)">
-      <span class="type" style="display: none;"> </span>
-      <a class="name">ofTexCompression</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a218c238fdc83c3d9ac235f31dfd3c895_description">
-<p>Compression is only available through OpenGL for textures using GL_TEXTURE_2D, <em>not</em> GL_TEXTURE_RECTANGLE, also note that most compression algorithms work on blocks of 4x4 pixels, and therefore expect compressed textures to have multiple-of-four dimensions. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a218c238fdc83c3d9ac235f31dfd3c895a6054d6a854453c2cf0fa120f76a9384b"></a>OF_COMPRESS_NONE</em>&#xA0;</td><td class="fielddoc">
-<p>no compression </p>
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="a218c238fdc83c3d9ac235f31dfd3c895aa6399fcb7ada14d9b22d2900a4c6e994"></a>OF_COMPRESS_SRGB</em>&#xA0;</td><td class="fielddoc">
-<p>sRGB compression </p>
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="a218c238fdc83c3d9ac235f31dfd3c895a13cbc14ece371e2be3e16cd0738458a0"></a>OF_COMPRESS_ARB</em>&#xA0;</td><td class="fielddoc">
-<p>ARB compression. </p>
-</td></tr>
-</table>
-
-</div>
-
-  </div></div>
-  </div><div id="Functions">
-    <h3 class="sectionHeader">Functions</h3>
+    <div class="classMethods"><div id="Globaltexturesettings">
+    <h3 class="sectionHeader">Global texture settings</h3>
     <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="ae0f994e7424dc7c5309aff96109228da">
     <div class="methodHeader" onClick="toggleDescription(&quot;#ae0f994e7424dc7c5309aff96109228da&quot;)">
-      <span class="type">bool </span>
+      <span class="type"></span>
       <a class="name">ofGetUsingArbTex</a>
       <span class="args">()</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="ae0f994e7424dc7c5309aff96109228da_description">
+    <div class="methodDescription " style="display:none" id="ae0f994e7424dc7c5309aff96109228da_description"><div class="memberVariant"><span class="type">bool </span><span class="name">ofGetUsingArbTex</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Check whether OF is using GL_TEXTURE_RECTANGLE rectangular or GL_TEXTURE_2D textures. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures. ">ofEnableArbTex()</a> </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true if using GL_TEXTURE_RECTANGLE textures, false if using GL_TEXTURE_2D textures. </dd></dl>
 
-</div>
+</div></div>
 
   </div><div id="a2522ef9f2c9415f8ac2d967c6bb37b01">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a2522ef9f2c9415f8ac2d967c6bb37b01&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">ofEnableArbTex</a>
       <span class="args">()</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a2522ef9f2c9415f8ac2d967c6bb37b01_description">
+    <div class="methodDescription " style="display:none" id="a2522ef9f2c9415f8ac2d967c6bb37b01_description"><div class="memberVariant"><span class="type">void </span><span class="name">ofEnableArbTex</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Use GL_TEXTURE_RECTANGLE textures. </p>
 <p>GL_TEXTURE_RECTANGLE textures are more intuitive since they allow pixel based coordinates and are enabled by default.</p>
@@ -111,87 +83,88 @@
 <dd>
 GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
-</div>
+</div></div>
 
   </div><div id="a6b679cd9538f7a1399cec6078c227c71">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a6b679cd9538f7a1399cec6078c227c71&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">ofDisableArbTex</a>
       <span class="args">()</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a6b679cd9538f7a1399cec6078c227c71_description">
+    <div class="methodDescription " style="display:none" id="a6b679cd9538f7a1399cec6078c227c71_description"><div class="memberVariant"><span class="type">void </span><span class="name">ofDisableArbTex</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Use GL_TEXTURE_2D textures. </p>
 <p>GL_TEXTURE_2D is OpenGL&apos;s default way of handling textures and does support a wider range of core OpenGL features such as mipmaps.</p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures. ">ofEnableArbTex()</a> </dd></dl>
 
-</div>
+</div></div>
 
   </div><div id="a88fcb7afbd579aa6ee79b0c5bb64b096">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a88fcb7afbd579aa6ee79b0c5bb64b096&quot;)">
-      <span class="type">bool </span>
+      <span class="type"></span>
       <a class="name">ofGetUsingNormalizedTexCoords</a>
       <span class="args">()</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a88fcb7afbd579aa6ee79b0c5bb64b096_description">
+    <div class="methodDescription " style="display:none" id="a88fcb7afbd579aa6ee79b0c5bb64b096_description"><div class="memberVariant"><span class="type">bool </span><span class="name">ofGetUsingNormalizedTexCoords</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Check whether OF is using normalized or pixel texture coordinates. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#a444caf6c6cb03c61bcd569345ee0fbe9" title="Use normalized (0 - 1) texture coordinates. ">ofEnableNormalizedTexCoords()</a> </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true if using normalized (0 - 1) texture coordinates. </dd></dl>
 
-</div>
+</div></div>
 
   </div><div id="a444caf6c6cb03c61bcd569345ee0fbe9">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a444caf6c6cb03c61bcd569345ee0fbe9&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">ofEnableNormalizedTexCoords</a>
       <span class="args">()</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a444caf6c6cb03c61bcd569345ee0fbe9_description">
+    <div class="methodDescription " style="display:none" id="a444caf6c6cb03c61bcd569345ee0fbe9_description"><div class="memberVariant"><span class="type">void </span><span class="name">ofEnableNormalizedTexCoords</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Use normalized (0 - 1) texture coordinates. </p>
 <p>By default, textures in OF work with pixel based coordinates based on given content dimensions (images size, fbo size, etc). Normalized (0 - 1) coordinates are the traditional GL default as they allow working with internal texture data without having to worry about specific dimensions of the content.</p>
 <p>This overrides individual <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> wrap settings.</p>
 <dl class="section see"><dt>See Also</dt><dd><a href="http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml">http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml</a> </dd></dl>
 
-</div>
+</div></div>
 
   </div><div id="aeab07f8c299416402fc0ee745f099686">
     <div class="methodHeader" onClick="toggleDescription(&quot;#aeab07f8c299416402fc0ee745f099686&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">ofDisableNormalizedTexCoords</a>
       <span class="args">()</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="aeab07f8c299416402fc0ee745f099686_description">
+    <div class="methodDescription " style="display:none" id="aeab07f8c299416402fc0ee745f099686_description"><div class="memberVariant"><span class="type">void </span><span class="name">ofDisableNormalizedTexCoords</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Use pixel based texture coordinates. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#a444caf6c6cb03c61bcd569345ee0fbe9" title="Use normalized (0 - 1) texture coordinates. ">ofEnableNormalizedTexCoords()</a> </dd></dl>
 
-</div>
+</div></div>
 
   </div><div id="a38fe4e6d6e2ef41db941be9a898e384c">
     <div class="methodHeader deprecatedMethod" onClick="toggleDescription(&quot;#a38fe4e6d6e2ef41db941be9a898e384c&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">ofSetTextureWrap</a>
       <span class="args">(GLfloat wrapS=GL_CLAMP_TO_EDGE, GLfloat wrapT=GL_CLAMP_TO_EDGE)</span>
       <span class="note">Use member method ofTexture::setTextureWrap() instead.</span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a38fe4e6d6e2ef41db941be9a898e384c_description">
+    <div class="methodDescription " style="display:none" id="a38fe4e6d6e2ef41db941be9a898e384c_description"><div class="memberVariant"><span class="type">void </span><span class="name">ofSetTextureWrap</span><span class="args">(GLfloat wrapS=GL_CLAMP_TO_EDGE, GLfloat wrapT=GL_CLAMP_TO_EDGE)</span></div><div class="memberDocumentation">
 
 <p>Set custom global texture wrapping. </p>
 <p>By default, textures are clamped to their edges with GL_CLAMP_TO_EDGE. Setting a repeat mode like GL_REPEAT allows you to create tiled backgrounds with small textures.</p>
-<p>See <a href="http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml">http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml</a> for more info.</p>
 <p>This overrides individual <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> wrap settings. </p>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#ac980af43af2cacdbd57e1bfcd8e222e2" title="Set texture wrapping. ">ofTexture::setTextureWrap</a></dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#ac980af43af2cacdbd57e1bfcd8e222e2" title="Set texture wrapping. ">ofTexture::setTextureWrap</a> </dd>
+<dd>
+<a href="http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml">http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml</a></dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Deprecated. Use member methods instead.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -201,51 +174,51 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
+</div></div>
 
   </div><div id="a1d9b18fb7df5ff74910bdde4a98204de">
     <div class="methodHeader deprecatedMethod" onClick="toggleDescription(&quot;#a1d9b18fb7df5ff74910bdde4a98204de&quot;)">
-      <span class="type">bool </span>
+      <span class="type"></span>
       <a class="name">ofGetUsingCustomTextureWrap</a>
       <span class="args">()</span>
       <span class="note">Use member method ofTexture::setTextureWrap() instead.</span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a1d9b18fb7df5ff74910bdde4a98204de_description">
+    <div class="methodDescription " style="display:none" id="a1d9b18fb7df5ff74910bdde4a98204de_description"><div class="memberVariant"><span class="type">bool </span><span class="name">ofGetUsingCustomTextureWrap</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Check whether OF is using custom global texture wrapping. </p>
 <dl class="section warning"><dt>Warning</dt><dd>Deprecated. Use member methods instead. </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="of_texture_8cpp.html#a4804b412c789b866234f3049de856883">ofSetTextureWrap()</a> </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true if OF is currently using custom global texture wrapping. </dd></dl>
 
-</div>
+</div></div>
 
   </div><div id="a30bdfbb183a4f9b034378c23b89a67b8">
     <div class="methodHeader deprecatedMethod" onClick="toggleDescription(&quot;#a30bdfbb183a4f9b034378c23b89a67b8&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">ofRestoreTextureWrap</a>
       <span class="args">()</span>
       <span class="note">Use member method ofTexture::setTextureWrap() instead.</span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a30bdfbb183a4f9b034378c23b89a67b8_description">
+    <div class="methodDescription " style="display:none" id="a30bdfbb183a4f9b034378c23b89a67b8_description"><div class="memberVariant"><span class="type">void </span><span class="name">ofRestoreTextureWrap</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Removes global custom texture wrapping. </p>
 <p>Restores individual <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> wrap settings. </p>
 <dl class="section warning"><dt>Warning</dt><dd>Deprecated. Use member methods instead. </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="of_texture_8cpp.html#a4804b412c789b866234f3049de856883">ofSetTextureWrap()</a> </dd></dl>
 
-</div>
+</div></div>
 
   </div><div id="ab2bf8d06066dcb3d8edfba671e9668b3">
     <div class="methodHeader deprecatedMethod" onClick="toggleDescription(&quot;#ab2bf8d06066dcb3d8edfba671e9668b3&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">ofSetMinMagFilters</a>
       <span class="args">(GLfloat minFilter=GL_LINEAR, GLfloat magFilter=GL_LINEAR)</span>
       <span class="note">Use member method ofTexture::setTextureMinMagFilter() instead.</span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="ab2bf8d06066dcb3d8edfba671e9668b3_description">
+    <div class="methodDescription " style="display:none" id="ab2bf8d06066dcb3d8edfba671e9668b3_description"><div class="memberVariant"><span class="type">void </span><span class="name">ofSetMinMagFilters</span><span class="args">(GLfloat minFilter=GL_LINEAR, GLfloat magFilter=GL_LINEAR)</span></div><div class="memberDocumentation">
 
 <p>Set custom global texture minification/magnification scaling filters. </p>
 <p>This setting allows global control over how OpenGL scales textures. It overrides individual <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> min &amp; mag filter settings.</p>
@@ -259,350 +232,117 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
+</div></div>
 
   </div><div id="a62b435cf2ee8bf51c87b421f18a15bfe">
     <div class="methodHeader deprecatedMethod" onClick="toggleDescription(&quot;#a62b435cf2ee8bf51c87b421f18a15bfe&quot;)">
-      <span class="type">bool </span>
+      <span class="type"></span>
       <a class="name">ofGetUsingCustomMinMagFilters</a>
       <span class="args">()</span>
       <span class="note">Use member method ofTexture::setTextureMinMagFilter() instead.</span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a62b435cf2ee8bf51c87b421f18a15bfe_description">
+    <div class="methodDescription " style="display:none" id="a62b435cf2ee8bf51c87b421f18a15bfe_description"><div class="memberVariant"><span class="type">bool </span><span class="name">ofGetUsingCustomMinMagFilters</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Check whether OF is using custom global texture scaling filters. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if OF is currently using custom texture scaling filters. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Deprecated. Use member methods instead. </dd></dl>
 
-</div>
+</div></div>
 
   </div><div id="a968ad2b8d21e033096800c5a273e67b6">
     <div class="methodHeader deprecatedMethod" onClick="toggleDescription(&quot;#a968ad2b8d21e033096800c5a273e67b6&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">ofRestoreMinMagFilters</a>
       <span class="args">()</span>
       <span class="note">Use member method ofTexture::setTextureMinMagFilter() instead.</span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a968ad2b8d21e033096800c5a273e67b6_description">
+    <div class="methodDescription " style="display:none" id="a968ad2b8d21e033096800c5a273e67b6_description"><div class="memberVariant"><span class="type">void </span><span class="name">ofRestoreMinMagFilters</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Removes global custom texture wrapping. </p>
 <p>Restores individual <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> min mag filter settings. </p>
 <dl class="section warning"><dt>Warning</dt><dd>Deprecated. Use member methods instead. </dd></dl>
 
-</div>
+</div></div>
 
-  </div><div id="af70a133cd74f4c448e841521287f16b2">
+  </div></div>
+  </div><div id="Enums">
+    <h3 class="sectionHeader">Enums</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a218c238fdc83c3d9ac235f31dfd3c895">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a218c238fdc83c3d9ac235f31dfd3c895&quot;)">
+      <span class="type"></span>
+      <a class="name">ofTexCompression</a>
+      <span class="args"></span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a218c238fdc83c3d9ac235f31dfd3c895_description"><div class="memberVariant"><span class="type"> </span><span class="name">ofTexCompression</span><span class="args"></span></div><div class="memberDocumentation">
+<p>Compression is only available through OpenGL for textures using GL_TEXTURE_2D, <em>not</em> GL_TEXTURE_RECTANGLE, also note that most compression algorithms work on blocks of 4x4 pixels, and therefore expect compressed textures to have multiple-of-four dimensions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a218c238fdc83c3d9ac235f31dfd3c895a6054d6a854453c2cf0fa120f76a9384b"></a>OF_COMPRESS_NONE</em>&#xA0;</td><td class="fielddoc">
+<p>no compression </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a218c238fdc83c3d9ac235f31dfd3c895aa6399fcb7ada14d9b22d2900a4c6e994"></a>OF_COMPRESS_SRGB</em>&#xA0;</td><td class="fielddoc">
+<p>sRGB compression </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a218c238fdc83c3d9ac235f31dfd3c895a13cbc14ece371e2be3e16cd0738458a0"></a>OF_COMPRESS_ARB</em>&#xA0;</td><td class="fielddoc">
+<p>ARB compression. </p>
+</td></tr>
+</table>
+
+</div></div>
+
+  </div></div>
+  </div><div id="Functions">
+    <h3 class="sectionHeader">Functions</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="af70a133cd74f4c448e841521287f16b2">
     <div class="methodHeader" onClick="toggleDescription(&quot;#af70a133cd74f4c448e841521287f16b2&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">ofEnableTextureEdgeHack</a>
       <span class="args">()</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="af70a133cd74f4c448e841521287f16b2_description">
+    <div class="methodDescription " style="display:none" id="af70a133cd74f4c448e841521287f16b2_description"><div class="memberVariant"><span class="type">void </span><span class="name">ofEnableTextureEdgeHack</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Enable global texture &quot;edge hacking&quot; to compensate for edge artifacts. </p>
 <p>Adds a 2 pixel offset to avoid possible edge artifacts (typically a black or white border). This <em>very slightly</em> alters the image by scaling. This is enabled by default. </p>
 
-</div>
+</div></div>
 
   </div><div id="a1c85492981b1ecaa449f6a46b2a34673">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a1c85492981b1ecaa449f6a46b2a34673&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">ofDisableTextureEdgeHack</a>
       <span class="args">()</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a1c85492981b1ecaa449f6a46b2a34673_description">
+    <div class="methodDescription " style="display:none" id="a1c85492981b1ecaa449f6a46b2a34673_description"><div class="memberVariant"><span class="type">void </span><span class="name">ofDisableTextureEdgeHack</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Disable global texture &quot;edge hacking&quot;. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#af70a133cd74f4c448e841521287f16b2" title="Enable global texture &quot;edge hacking&quot; to compensate for edge artifacts. ">ofEnableTextureEdgeHack()</a> </dd></dl>
 
-</div>
+</div></div>
 
   </div><div id="ab986ff110085b3cea93e0e705f98cfcd">
     <div class="methodHeader" onClick="toggleDescription(&quot;#ab986ff110085b3cea93e0e705f98cfcd&quot;)">
-      <span class="type">bool </span>
+      <span class="type"></span>
       <a class="name">ofIsTextureEdgeHackEnabled</a>
       <span class="args">()</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="ab986ff110085b3cea93e0e705f98cfcd_description">
+    <div class="methodDescription " style="display:none" id="ab986ff110085b3cea93e0e705f98cfcd_description"><div class="memberVariant"><span class="type">bool </span><span class="name">ofIsTextureEdgeHackEnabled</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Check whether OF is using the &quot;texture edge hack&quot;. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#af70a133cd74f4c448e841521287f16b2" title="Enable global texture &quot;edge hacking&quot; to compensate for edge artifacts. ">ofEnableTextureEdgeHack()</a> </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true if OF is currently using the &quot;texture edge hack&quot;. </dd></dl>
 
-</div>
-
-  </div></div>
-  </div></div>
-  </div><div id="" class="classBlock">
-    <div class="classHeader">
-      <h1 class="classTitle">ofTextureData</h1>
-    </div>
-    <div class="classDescription"><div class="textblock"><p>Internal texture settings struct. </p>
-<p>Used by <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> internally. You won&apos;t need to work with this in most cases. </p>
 </div></div>
-    <div class="classMethods"><div id="PublicAttributes">
-    <h3 class="sectionHeader">Public Attributes</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a8521140c30a62b5cdb0045cd119e396c">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a8521140c30a62b5cdb0045cd119e396c&quot;)">
-      <span class="type">unsigned int </span>
-      <a class="name">textureID</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a8521140c30a62b5cdb0045cd119e396c_description">
-
-<p>GL internal texture ID. </p>
-
-</div>
-
-  </div><div id="a5158e9375dc0805de85e9c1553b415eb">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5158e9375dc0805de85e9c1553b415eb&quot;)">
-      <span class="type">int </span>
-      <a class="name">textureTarget</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a5158e9375dc0805de85e9c1553b415eb_description">
-<p>GL texture type, either GL_TEXTURE_2D or GL_TEXTURE_RECTANGLE_ARB. </p>
-
-</div>
-
-  </div><div id="a2349f7972cb95234e0b726e51d0d8a10">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a2349f7972cb95234e0b726e51d0d8a10&quot;)">
-      <span class="type">int </span>
-      <a class="name">glTypeInternal</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a2349f7972cb95234e0b726e51d0d8a10_description">
-<p>GL internal format, e.g. GL_RGB8. </p>
-<dl class="section see"><dt>See Also</dt><dd><a href="http://www.opengl.org/wiki/Image_Format">http://www.opengl.org/wiki/Image_Format</a> </dd></dl>
-
-</div>
-
-  </div><div id="ad3d54f040cfac8522bb693904867994b">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ad3d54f040cfac8522bb693904867994b&quot;)">
-      <span class="type">float </span>
-      <a class="name">tex_t</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="ad3d54f040cfac8522bb693904867994b_description">
-
-<p>Texture horiz coordinate, ratio of width to display width. </p>
-
-</div>
-
-  </div><div id="a64d6c37e0569a8ad8842cef263185c14">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a64d6c37e0569a8ad8842cef263185c14&quot;)">
-      <span class="type">float </span>
-      <a class="name">tex_u</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a64d6c37e0569a8ad8842cef263185c14_description">
-
-<p>Texture vert coordinate, ratio of height to display height. </p>
-
-</div>
-
-  </div><div id="a2b9ce30701c4d957a73f7bc17863b569">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a2b9ce30701c4d957a73f7bc17863b569&quot;)">
-      <span class="type">float </span>
-      <a class="name">tex_w</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a2b9ce30701c4d957a73f7bc17863b569_description">
-
-<p>Texture width (in pixels). </p>
-
-</div>
-
-  </div><div id="a0127cecdfee0fdf8ec2958a4d5c6a946">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a0127cecdfee0fdf8ec2958a4d5c6a946&quot;)">
-      <span class="type">float </span>
-      <a class="name">tex_h</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a0127cecdfee0fdf8ec2958a4d5c6a946_description">
-
-<p>Texture height (in pixels). </p>
-
-</div>
-
-  </div><div id="a615b0e90bc4d881ee64b57d4125fb0aa">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a615b0e90bc4d881ee64b57d4125fb0aa&quot;)">
-      <span class="type">float </span>
-      <a class="name">width</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a615b0e90bc4d881ee64b57d4125fb0aa_description">
-
-</div>
-
-  </div><div id="a100f21d392ce8dfb29529a40394f1a16">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a100f21d392ce8dfb29529a40394f1a16&quot;)">
-      <span class="type">float </span>
-      <a class="name">height</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a100f21d392ce8dfb29529a40394f1a16_description">
-
-<p>Texture display size. </p>
-
-</div>
-
-  </div><div id="a0067ab9b185e86e9961336ddb1159b29">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a0067ab9b185e86e9961336ddb1159b29&quot;)">
-      <span class="type">bool </span>
-      <a class="name">bFlipTexture</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a0067ab9b185e86e9961336ddb1159b29_description">
-
-<p>Should the texture be flipped vertically? </p>
-
-</div>
-
-  </div><div id="a5fb03608ad56543ed65caa0c544975d3">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5fb03608ad56543ed65caa0c544975d3&quot;)">
-      <span class="type"><a href="ofTexture.html#1a218c238fdc83c3d9ac235f31dfd3c895">ofTexCompression</a></span>
-      <a class="name">compressionType</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a5fb03608ad56543ed65caa0c544975d3_description">
-
-<p>Texture compression type. </p>
-
-</div>
-
-  </div><div id="a5dee9955398c2f5c9b244c019b38265e">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5dee9955398c2f5c9b244c019b38265e&quot;)">
-      <span class="type">bool </span>
-      <a class="name">bAllocated</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a5dee9955398c2f5c9b244c019b38265e_description">
-
-<p>Has the texture been allocated? </p>
-
-</div>
-
-  </div><div id="a6cfd5b679980d2f25af06c674f030505">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a6cfd5b679980d2f25af06c674f030505&quot;)">
-      <span class="type">GLint </span>
-      <a class="name">minFilter</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a6cfd5b679980d2f25af06c674f030505_description">
-
-<p>Filter to use for minification (reduction) </p>
-
-</div>
-
-  </div><div id="a5f2474a4cfad4b806318cda8ea96b2a3">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5f2474a4cfad4b806318cda8ea96b2a3&quot;)">
-      <span class="type">GLint </span>
-      <a class="name">magFilter</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a5f2474a4cfad4b806318cda8ea96b2a3_description">
-
-<p>Filter to use for magnification (enlargement) </p>
-
-</div>
-
-  </div><div id="a04a64d67e4c8d2eaba0aad8e1ccaa06c">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a04a64d67e4c8d2eaba0aad8e1ccaa06c&quot;)">
-      <span class="type">GLint </span>
-      <a class="name">wrapModeHorizontal</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a04a64d67e4c8d2eaba0aad8e1ccaa06c_description">
-
-<p>How will the texture wrap around horizontally? </p>
-
-</div>
-
-  </div><div id="a53deb2fc8da83fb77e659bb78aa1f0db">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a53deb2fc8da83fb77e659bb78aa1f0db&quot;)">
-      <span class="type">GLint </span>
-      <a class="name">wrapModeVertical</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a53deb2fc8da83fb77e659bb78aa1f0db_description">
-
-<p>How will the texture wrap around vertically? </p>
-
-</div>
-
-  </div></div>
-  </div><div id="Friends">
-    <h3 class="sectionHeader">Friends</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="ac81acef65267b2132555da02ec3c681d">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ac81acef65267b2132555da02ec3c681d&quot;)">
-      <span class="type">friend class </span>
-      <a class="name">ofTexture</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="ac81acef65267b2132555da02ec3c681d_description">
-
-</div>
-
-  </div></div>
-  </div><div id="PublicFunctions">
-    <h3 class="sectionHeader">Public Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="ae3766bd02c26dbb2f93f2311577b2c15">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ae3766bd02c26dbb2f93f2311577b2c15&quot;)">
-      <span class="type" style="display: none;"> </span>
-      <a class="name">ofTextureData</a>
-      <span class="args">()</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="ae3766bd02c26dbb2f93f2311577b2c15_description">
-
-</div>
 
   </div></div>
   </div></div>
@@ -614,77 +354,22 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 <p><a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> is a wrapper for the OpenGL texture API. It allows use of non-power of 2 textures and to upload and draw graphical data.</p>
 <dl class="section see"><dt>See Also</dt><dd><a href="https://www.opengl.org/wiki/Texture">https://www.opengl.org/wiki/Texture</a> </dd></dl>
 </div></div>
-    <div class="classMethods"><div id="PublicAttributes">
-    <h3 class="sectionHeader">Public Attributes</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a4c203e4b4c0516e8ee8ebe11de63eb95">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a4c203e4b4c0516e8ee8ebe11de63eb95&quot;)">
-      <span class="type"><a href="ofTextureData.html">ofTextureData</a></span>
-      <a class="name">texData</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a4c203e4b4c0516e8ee8ebe11de63eb95_description">
-<p>Internal texture data access. For backwards compatibility. </p>
-
-</div>
-
-  </div></div>
-  </div><div id="ProtectedAttributes">
-    <h3 class="sectionHeader">Protected Attributes</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="afa0a8aa4148384f2f4590873781915d1">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#afa0a8aa4148384f2f4590873781915d1&quot;)">
-      <span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a></span>
-      <a class="name">anchor</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="afa0a8aa4148384f2f4590873781915d1_description">
-
-</div>
-
-  </div><div id="ab70fdce4a1a2af7d3992400d571254f3">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ab70fdce4a1a2af7d3992400d571254f3&quot;)">
-      <span class="type">bool </span>
-      <a class="name">bAnchorIsPct</a>
-      <span class="args"></span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="ab70fdce4a1a2af7d3992400d571254f3_description">
-
-</div>
-
-  </div></div>
-  </div><div id="PublicFunctions">
-    <h3 class="sectionHeader">Public Functions</h3>
+    <div class="classMethods"><div id="Constructionandallocation">
+    <h3 class="sectionHeader">Construction and allocation</h3>
     <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="ae091e52a2a4a86bc57bf8f17833bbfb8">
     <div class="methodHeader" onClick="toggleDescription(&quot;#ae091e52a2a4a86bc57bf8f17833bbfb8&quot;)">
-      <span class="type" style="display: none;"> </span>
+      <span class="type"></span>
       <a class="name">ofTexture</a>
       <span class="args">()</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="ae091e52a2a4a86bc57bf8f17833bbfb8_description">
+    <div class="methodDescription " style="display:none" id="ae091e52a2a4a86bc57bf8f17833bbfb8_description"><div class="memberVariant"><span class="type"> </span><span class="name">ofTexture</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Construct an <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> instance. </p>
 
-</div>
-
-  </div><div id="ace8dda2da6169c88b9c94c00438e251e">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ace8dda2da6169c88b9c94c00438e251e&quot;)">
-      <span class="type" style="display: none;"> </span>
-      <a class="name">ofTexture</a>
-      <span class="args">(const ofTexture &amp;mom)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="ace8dda2da6169c88b9c94c00438e251e_description">
+</div><div class="memberVariant"><span class="type"> </span><span class="name">ofTexture</span><span class="args">(const ofTexture &amp;mom)</span></div><div class="memberDocumentation">
 
 <p>Construct an <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> from an existing <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -694,52 +379,17 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
-
-  </div><div id="a152b6e78436b0525f2d2688fd6304338">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a152b6e78436b0525f2d2688fd6304338&quot;)">
-      <span class="type"><a href="ofTexture.html">ofTexture</a></span>
-      <a class="name">operator=</a>
-      <span class="args">(const ofTexture &amp;mom)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a152b6e78436b0525f2d2688fd6304338_description">
-
-<p>Copy a given <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> into this texture. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mom</td><td>The <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> to copy from. Reuses internal GL texture ID. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-
-  </div><div id="a9d0bbb24231157b2795b99241183b297">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a9d0bbb24231157b2795b99241183b297&quot;)">
-      <span class="type" style="display: none;"> </span>
-      <a class="name">~ofTexture</a>
-      <span class="args">()</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a9d0bbb24231157b2795b99241183b297_description">
-
-<p>Destroy an <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> instance. </p>
-<p>The internal GL texture ID is only rleased if this is the last texture using it. </p>
-
-</div>
+</div></div>
 
   </div><div id="a37e50fcd472023e3879fda915d356d24">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a37e50fcd472023e3879fda915d356d24&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">allocate</a>
       <span class="args">(const ofTextureData &amp;textureData)</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a37e50fcd472023e3879fda915d356d24_description">
+    <div class="methodDescription " style="display:none" id="a37e50fcd472023e3879fda915d356d24_description"><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofTextureData &amp;textureData)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture using the given settings. </p>
 <p>This is useful if you need manual control over loading a number of textures with the same settings. Make sure to set the parameters first.</p>
@@ -750,17 +400,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
-
-  </div><div id="a3e577b1f78804018969e751f9edf44e9">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a3e577b1f78804018969e751f9edf44e9&quot;)">
-      <span class="type">void </span>
-      <a class="name">allocate</a>
-      <span class="args">(const ofTextureData &amp;textureData, int glFormat, int pixelType)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a3e577b1f78804018969e751f9edf44e9_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofTextureData &amp;textureData, int glFormat, int pixelType)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture using the given settings &amp; specify the format. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -772,17 +412,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
-
-  </div><div id="ae4ddaaa00ce5a7a3989630dfa7eb88df">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ae4ddaaa00ce5a7a3989630dfa7eb88df&quot;)">
-      <span class="type">void </span>
-      <a class="name">allocate</a>
-      <span class="args">(int w, int h, int glInternalFormat)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="ae4ddaaa00ce5a7a3989630dfa7eb88df_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, int glInternalFormat)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture of a given size and format. </p>
 <p>Uses the currently set OF texture type. Defaults to ARB rectangular textures if they are supported. (They are not supported on OpenGL ES).</p>
@@ -795,17 +425,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
-
-  </div><div id="a73bc53727f871cd9d441ec77ef9ceb20">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a73bc53727f871cd9d441ec77ef9ceb20&quot;)">
-      <span class="type">void </span>
-      <a class="name">allocate</a>
-      <span class="args">(int w, int h, int glInternalFormat, int glFormat, int pixelType)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a73bc53727f871cd9d441ec77ef9ceb20_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, int glInternalFormat, int glFormat, int pixelType)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture of a given size and format. </p>
 <p>Same as allocate(w, h, glInternalFormat) with the addition of:</p>
@@ -816,17 +436,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
-
-  </div><div id="ad3e13abdd1b384df4c70c479c96e9297">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ad3e13abdd1b384df4c70c479c96e9297&quot;)">
-      <span class="type">void </span>
-      <a class="name">allocate</a>
-      <span class="args">(int w, int h, int glInternalFormat, bool bUseARBExtention)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="ad3e13abdd1b384df4c70c479c96e9297_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, int glInternalFormat, bool bUseARBExtention)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture of a given size and format. Specify texture type. </p>
 <p>This lets you overide the default OF texture type, in case you need a square GL_TEXTURE_2D texture.</p>
@@ -840,17 +450,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
-
-  </div><div id="a679f4795f8551cb70b313f6cddc7c165">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a679f4795f8551cb70b313f6cddc7c165&quot;)">
-      <span class="type">void </span>
-      <a class="name">allocate</a>
-      <span class="args">(int w, int h, int glInternalFormat, bool bUseARBExtention, int glFormat, int pixelType)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a679f4795f8551cb70b313f6cddc7c165_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, int glInternalFormat, bool bUseARBExtention, int glFormat, int pixelType)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture of a given size, format, &amp; type. </p>
 <p>Not sure how the two texture format parameters are different: glFormat &amp; glInternalFormat.</p>
@@ -863,17 +463,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
-
-  </div><div id="af6b53932ec9c7aec68faeca9fdd72124">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#af6b53932ec9c7aec68faeca9fdd72124&quot;)">
-      <span class="type">void </span>
-      <a class="name">allocate</a>
-      <span class="args">(const ofPixels &amp;pix)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="af6b53932ec9c7aec68faeca9fdd72124_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofPixels &amp;pix)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture using an ofPixels instance. </p>
 <p>Pixel type and GL format are determined from pixel settings.</p>
@@ -884,17 +474,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
-
-  </div><div id="a3cc40775f462f7ee8124ab6da58f2797">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a3cc40775f462f7ee8124ab6da58f2797&quot;)">
-      <span class="type">void </span>
-      <a class="name">allocate</a>
-      <span class="args">(const ofPixels &amp;pix, bool bUseARBExtention)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a3cc40775f462f7ee8124ab6da58f2797_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofPixels &amp;pix, bool bUseARBExtention)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture using an ofPixels instance &amp; type. </p>
 <p>This lets you overide the default OF texture type, in case you need a square GL_TEXTURE_2D texture.</p>
@@ -908,88 +488,119 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
-
-  </div><div id="ac2f45380a3c103f7fbe8d223b162b2e6">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ac2f45380a3c103f7fbe8d223b162b2e6&quot;)">
-      <span class="type">void </span>
-      <a class="name">allocate</a>
-      <span class="args">(const ofShortPixels &amp;pix)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="ac2f45380a3c103f7fbe8d223b162b2e6_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofShortPixels &amp;pix)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture using an ofShortPixels instance. Same as loadData(ofPixels &amp;), except using ofShortPixels. </p>
 
-</div>
-
-  </div><div id="ae849eb2dc05407b5b2692354349c0889">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ae849eb2dc05407b5b2692354349c0889&quot;)">
-      <span class="type">void </span>
-      <a class="name">allocate</a>
-      <span class="args">(const ofShortPixels &amp;pix, bool bUseARBExtention)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="ae849eb2dc05407b5b2692354349c0889_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofShortPixels &amp;pix, bool bUseARBExtention)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture using an ofShortPixels instance &amp; type. Same as loadData(ofPixels &amp;, bool), except using ofShortPixels. </p>
 
-</div>
-
-  </div><div id="a5fd3931d5d62eb0d23c5e218954db8fe">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5fd3931d5d62eb0d23c5e218954db8fe&quot;)">
-      <span class="type">void </span>
-      <a class="name">allocate</a>
-      <span class="args">(const ofFloatPixels &amp;pix)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a5fd3931d5d62eb0d23c5e218954db8fe_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofFloatPixels &amp;pix)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture using an ofFloatPixels instance. Same as loadData(ofPixels &amp;), except using ofFloatPixels. </p>
 
-</div>
-
-  </div><div id="ab8ec9a76d58d8da391350c84b060a3a3">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ab8ec9a76d58d8da391350c84b060a3a3&quot;)">
-      <span class="type">void </span>
-      <a class="name">allocate</a>
-      <span class="args">(const ofFloatPixels &amp;pix, bool bUseARBExtention)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="ab8ec9a76d58d8da391350c84b060a3a3_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofFloatPixels &amp;pix, bool bUseARBExtention)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture using an ofFloatPixels instance &amp; type. Same as loadData(ofPixels &amp;, bool), except using ofFloatPixels. </p>
 
-</div>
+</div></div>
+
+  </div><div id="aad1888a6e4ed69a0936d0d724125150d">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aad1888a6e4ed69a0936d0d724125150d&quot;)">
+      <span class="type"></span>
+      <a class="name">isAllocated</a>
+      <span class="args">() const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aad1888a6e4ed69a0936d0d724125150d_description"><div class="memberVariant"><span class="type">bool </span><span class="name">isAllocated</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Has the texture been allocated? </p>
+<p>This let&apos;s you check if a texture is safe to draw. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the texture has been allocated. </dd></dl>
+
+</div></div>
+
+  </div><div id="a227c04198db5b7be5f31220cf99708d3">
+    <div class="methodHeader deprecatedMethod" onClick="toggleDescription(&quot;#a227c04198db5b7be5f31220cf99708d3&quot;)">
+      <span class="type"></span>
+      <a class="name">bAllocated</a>
+      <span class="args">()</span>
+      <span class="note">Use isAllocated instead</span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a227c04198db5b7be5f31220cf99708d3_description"><div class="memberVariant"><span class="type">bool </span><span class="name">bAllocated</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Has the texture been allocated? </p>
+<p>Legacy function for backwards compatibility.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if the texture has been allocated. </dd></dl>
+
+</div></div>
+
+  </div><div id="a9d0bbb24231157b2795b99241183b297">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a9d0bbb24231157b2795b99241183b297&quot;)">
+      <span class="type"></span>
+      <a class="name">~ofTexture</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a9d0bbb24231157b2795b99241183b297_description"><div class="memberVariant"><span class="type"> </span><span class="name">~ofTexture</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Destroy an <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> instance. </p>
+<p>The internal GL texture ID is only released if this is the last texture using it. </p>
+
+</div></div>
+
+  </div></div>
+  </div><div id="Updatetexture">
+    <h3 class="sectionHeader">Update texture</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a152b6e78436b0525f2d2688fd6304338">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a152b6e78436b0525f2d2688fd6304338&quot;)">
+      <span class="type"></span>
+      <a class="name">operator=</a>
+      <span class="args">(const ofTexture &amp;mom)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a152b6e78436b0525f2d2688fd6304338_description"><div class="memberVariant"><span class="type"><a href="ofTexture.html">ofTexture</a></span><span class="name">operator=</span><span class="args">(const ofTexture &amp;mom)</span></div><div class="memberDocumentation">
+
+<p>Copy a given <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> into this texture. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mom</td><td>The <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> to copy from. Reuses internal GL texture ID. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
 
   </div><div id="a3c220c8be60de9261f1e4788e1a418b7">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a3c220c8be60de9261f1e4788e1a418b7&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">clear</a>
       <span class="args">()</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a3c220c8be60de9261f1e4788e1a418b7_description">
+    <div class="methodDescription " style="display:none" id="a3c220c8be60de9261f1e4788e1a418b7_description"><div class="memberVariant"><span class="type">void </span><span class="name">clear</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Clears the texture. </p>
 <p>The internal GL texture ID is only rleased if this is the last texture using it. </p>
 
-</div>
+</div></div>
 
   </div><div id="a3f645f148af58d295cc2c1c07b8be9e5">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a3f645f148af58d295cc2c1c07b8be9e5&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">setUseExternalTextureID</a>
       <span class="args">(GLuint externTexID)</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a3f645f148af58d295cc2c1c07b8be9e5_description">
+    <div class="methodDescription " style="display:none" id="a3f645f148af58d295cc2c1c07b8be9e5_description"><div class="memberVariant"><span class="type">void </span><span class="name">setUseExternalTextureID</span><span class="args">(GLuint externTexID)</span></div><div class="memberDocumentation">
 
 <p>Set the texture ID. </p>
 <p>Allows you to point the texture id to an externally allocated id (perhaps from another texture). Its up to you to set the rest of the textData parameters manually.</p>
@@ -1000,17 +611,17 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
+</div></div>
 
   </div><div id="a4d480834af11e4016652d7f729264df7">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a4d480834af11e4016652d7f729264df7&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">loadData</a>
       <span class="args">(const unsigned char *const data, int w, int h, int glFormat)</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a4d480834af11e4016652d7f729264df7_description">
+    <div class="methodDescription " style="display:none" id="a4d480834af11e4016652d7f729264df7_description"><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const unsigned char *const data, int w, int h, int glFormat)</span></div><div class="memberDocumentation">
 
 <p>Load byte pixel data. </p>
 <p>glFormat can be different to the internal format of the texture on each load, ie. we can upload GL_BGRA pixels into a GL_RGBA texture, but the number of channels need to match according to the OpenGL standard.</p>
@@ -1024,45 +635,15 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
-
-  </div><div id="a727eb6afa39f86bf0fdc755d436dc35e">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a727eb6afa39f86bf0fdc755d436dc35e&quot;)">
-      <span class="type">void </span>
-      <a class="name">loadData</a>
-      <span class="args">(const unsigned short *data, int w, int h, int glFormat)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a727eb6afa39f86bf0fdc755d436dc35e_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const unsigned short *data, int w, int h, int glFormat)</span></div><div class="memberDocumentation">
 
 <p>Load short (2 byte) pixel data. Same as loadData(unsigned char, ...) but for short pixel data. </p>
 
-</div>
-
-  </div><div id="aaba4fa57baec188f16f1e48db5a1038c">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aaba4fa57baec188f16f1e48db5a1038c&quot;)">
-      <span class="type">void </span>
-      <a class="name">loadData</a>
-      <span class="args">(const float *data, int w, int h, int glFormat)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="aaba4fa57baec188f16f1e48db5a1038c_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const float *data, int w, int h, int glFormat)</span></div><div class="memberDocumentation">
 
 <p>Load float pixel data. Same as loadData(unsigned char, ...) but for float pixel data. </p>
 
-</div>
-
-  </div><div id="a8e098fb602b428c6e5242b902de4da61">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a8e098fb602b428c6e5242b902de4da61&quot;)">
-      <span class="type">void </span>
-      <a class="name">loadData</a>
-      <span class="args">(const ofPixels &amp;pix)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a8e098fb602b428c6e5242b902de4da61_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const ofPixels &amp;pix)</span></div><div class="memberDocumentation">
 
 <p>Load pixels from an ofPixels instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1072,45 +653,15 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
-
-  </div><div id="a2a6d50c8ac5cf629a6aca4e9e4519532">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a2a6d50c8ac5cf629a6aca4e9e4519532&quot;)">
-      <span class="type">void </span>
-      <a class="name">loadData</a>
-      <span class="args">(const ofShortPixels &amp;pix)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a2a6d50c8ac5cf629a6aca4e9e4519532_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const ofShortPixels &amp;pix)</span></div><div class="memberDocumentation">
 
 <p>Load pixels from an ofShortPixels instance. Same as loadData(ofPixels &amp;) but for ofShortPixels. </p>
 
-</div>
-
-  </div><div id="a7b40d097c58d89f5910b09e7c66a49cb">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a7b40d097c58d89f5910b09e7c66a49cb&quot;)">
-      <span class="type">void </span>
-      <a class="name">loadData</a>
-      <span class="args">(const ofFloatPixels &amp;pix)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a7b40d097c58d89f5910b09e7c66a49cb_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const ofFloatPixels &amp;pix)</span></div><div class="memberDocumentation">
 
 <p>Load pixels from an ofFloatPixels instance. Same as loadData(ofPixels &amp;) but for ofFloatPixels. </p>
 
-</div>
-
-  </div><div id="a1d026729f29aca4acd9c93812a374fb9">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a1d026729f29aca4acd9c93812a374fb9&quot;)">
-      <span class="type">void </span>
-      <a class="name">loadData</a>
-      <span class="args">(const ofPixels &amp;pix, int glFormat)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a1d026729f29aca4acd9c93812a374fb9_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const ofPixels &amp;pix, int glFormat)</span></div><div class="memberDocumentation">
 
 <p>Load pixels from an ofPixels instance &amp; specify the format. </p>
 <p>glFormat can be different to the internal format of the texture on each load, ie. we can upload GL_BGRA pixels into a GL_RGBA texture, but the number of channels need to match according to the OpenGL standard.</p>
@@ -1122,111 +673,31 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
-
-  </div><div id="a36745ba0eae08db1c071956e17c03cc3">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a36745ba0eae08db1c071956e17c03cc3&quot;)">
-      <span class="type">void </span>
-      <a class="name">loadData</a>
-      <span class="args">(const ofShortPixels &amp;pix, int glFormat)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a36745ba0eae08db1c071956e17c03cc3_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const ofShortPixels &amp;pix, int glFormat)</span></div><div class="memberDocumentation">
 
 <p>Load pixels from an ofShortPixels instance &amp; specify the format. </p>
 <p>Similar to loadData(ofPixels &amp;, int). </p>
 
-</div>
-
-  </div><div id="a564956df72b8f6de80d15c173c68cbd5">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a564956df72b8f6de80d15c173c68cbd5&quot;)">
-      <span class="type">void </span>
-      <a class="name">loadData</a>
-      <span class="args">(const ofFloatPixels &amp;pix, int glFormat)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a564956df72b8f6de80d15c173c68cbd5_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const ofFloatPixels &amp;pix, int glFormat)</span></div><div class="memberDocumentation">
 
 <p>Load pixels from an ofFloatPixels instance &amp; specify the format. </p>
 <p>Similar to loadData(ofPixels &amp;, int). </p>
 
-</div>
+</div><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const ofBufferObject &amp;buffer, int glFormat, int glType)</span></div><div class="memberDocumentation">
 
-  </div><div id="a7aeb77068ba7f41d3b150726c4f97943">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a7aeb77068ba7f41d3b150726c4f97943&quot;)">
-      <span class="type">void </span>
-      <a class="name">loadData</a>
-      <span class="args">(const ofBufferObject &amp;buffer, int glFormat, int glType)</span>
-      <span class="note"></span>
-    </div>
+<p>Load pixels from an <a class="el" href="ofBufferObject.html">ofBufferObject</a>. </p>
 
-    <div class="methodDescription " style="display:none" id="a7aeb77068ba7f41d3b150726c4f97943_description">
-
-</div>
-
-  </div><div id="a7eb8ed330899e19e11271122291e7915">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a7eb8ed330899e19e11271122291e7915&quot;)">
-      <span class="type">void </span>
-      <a class="name">generateMipmap</a>
-      <span class="args">()</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a7eb8ed330899e19e11271122291e7915_description">
-
-<p>Generate mipmap for the current texture. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Only GL_TEXTURE_RECTANGLE - which is the default openFrameworks texture target - does <em>not</em> support mipmaps, so make sure to call <a class="el" href="of_texture_8cpp.html#a6b679cd9538f7a1399cec6078c227c71" title="Use GL_TEXTURE_2D textures. ">ofDisableArbTex()</a> before loading texture data for a texture you want to generate mipmaps for.</dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="of_texture_8cpp.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures. ">ofEnableArbTex()</a> </dd>
-<dd>
-<a class="el" href="of_texture_8cpp.html#a6b679cd9538f7a1399cec6078c227c71" title="Use GL_TEXTURE_2D textures. ">ofDisableArbTex()</a> </dd></dl>
-<p>OpenGL ES only supports mipmap for the following two texture targets:</p>
-<p>OpenGL supports mipmaps for additional texture targets: </p>
-
-</div>
-
-  </div><div id="a5831aacf2d29722b0f9a583f44745eff">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5831aacf2d29722b0f9a583f44745eff&quot;)">
-      <span class="type">void </span>
-      <a class="name">setRGToRGBASwizzles</a>
-      <span class="args">(bool rToRGBSwizzles)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a5831aacf2d29722b0f9a583f44745eff_description">
-
-<p>Swizzle RGBA to grayscale with alpha in the red channel. </p>
-<p>Use 1 channel GL_R as luminance instead of red channel in OpenGL 3+.</p>
-<dl class="section warning"><dt>Warning</dt><dd>This is not supported in OpenGL ES and does nothing. </dd></dl>
-
-</div>
-
-  </div><div id="abd42d8aac93ee3c8ad420e6cbfbad708">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#abd42d8aac93ee3c8ad420e6cbfbad708&quot;)">
-      <span class="type">void </span>
-      <a class="name">setSwizzle</a>
-      <span class="args">(GLenum srcSwizzle, GLenum dstChannel)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="abd42d8aac93ee3c8ad420e6cbfbad708_description">
-
-<p>Swizzle a channel to another. </p>
-<p>Example: tex.setSwizzle(GL_TEXTURE_SWIZZLE_R,GL_ALPHA) will make channel 0 appear as alpha in the shader</p>
-<dl class="section warning"><dt>Warning</dt><dd>This is not supported in OpenGL ES and does nothing. </dd></dl>
-
-</div>
+</div></div>
 
   </div><div id="a0a514787330456b4f5962091a7ee434a">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a0a514787330456b4f5962091a7ee434a&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">loadScreenData</a>
       <span class="args">(int x, int y, int w, int h)</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a0a514787330456b4f5962091a7ee434a_description">
+    <div class="methodDescription " style="display:none" id="a0a514787330456b4f5962091a7ee434a_description"><div class="memberVariant"><span class="type">void </span><span class="name">loadScreenData</span><span class="args">(int x, int y, int w, int h)</span></div><div class="memberDocumentation">
 
 <p>Copy an area of the screen into this texture. </p>
 <dl class="section see"><dt>See Also</dt><dd><a href="http://www.opengl.org/sdk/docs/man4/html/glCopyTexSubImage2D.xhtml">http://www.opengl.org/sdk/docs/man4/html/glCopyTexSubImage2D.xhtml</a></dd></dl>
@@ -1240,105 +711,21 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
+</div></div>
 
-  </div><div id="a5409b3dfe503bc05d7e06c1977ead2ac">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5409b3dfe503bc05d7e06c1977ead2ac&quot;)">
-      <span class="type">void </span>
-      <a class="name">setAnchorPercent</a>
-      <span class="args">(float xPct, float yPct)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a5409b3dfe503bc05d7e06c1977ead2ac_description">
-
-<p>Set the anchor point the texture is drawn around as a percentage. </p>
-<p>This can be useful if you want to rotate an image around a particular point.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">xPct</td><td>Horizontal texture position as a percentage (0 - 1). </td></tr>
-    <tr><td class="paramname">yPct</td><td>Vertical texture position as a percentage (0 - 1). </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="ofBaseDraws.html#a3cf9dd7a898b3503ac0509574eaaeff3">ofBaseDraws</a>.</p>
-
-</div>
-
-  </div><div id="a294061077b44d033ee778615679d5b78">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a294061077b44d033ee778615679d5b78&quot;)">
-      <span class="type">void </span>
-      <a class="name">setAnchorPoint</a>
-      <span class="args">(float x, float y)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a294061077b44d033ee778615679d5b78_description">
-
-<p>Set the anchor point the texture is drawn around in pixels. </p>
-<p>This can be useful if you want to rotate an image around a particular point.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>Horizontal texture position in pixels. </td></tr>
-    <tr><td class="paramname">y</td><td>Vertical texture position in pixels. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="ofBaseDraws.html#aefa6eaad3d976a6c1717105ea4443e56">ofBaseDraws</a>.</p>
-
-</div>
-
-  </div><div id="abc09e6df3f365142faff8b929a846bab">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#abc09e6df3f365142faff8b929a846bab&quot;)">
-      <span class="type">void </span>
-      <a class="name">resetAnchor</a>
-      <span class="args">()</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="abc09e6df3f365142faff8b929a846bab_description">
-
-<p>Reset the anchor point to (0, 0). </p>
-
-<p>Reimplemented from <a class="el" href="ofBaseDraws.html#a8e60af373caa636320b505ca07f274ae">ofBaseDraws</a>.</p>
-
-</div>
-
-  </div><div id="a05e7b58296961f71d22761315db41cdb">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a05e7b58296961f71d22761315db41cdb&quot;)">
-      <span class="type">void </span>
-      <a class="name">draw</a>
-      <span class="args">(const ofPoint &amp;p1, const ofPoint &amp;p2, const ofPoint &amp;p3, const ofPoint &amp;p4) const </span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a05e7b58296961f71d22761315db41cdb_description">
-
-<p>Draw the texture by it&apos;s upper left &amp; lower right corners. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">p1</td><td>Upper left position on the x axis. </td></tr>
-    <tr><td class="paramname">p2</td><td>Upper left position on the y axis. </td></tr>
-    <tr><td class="paramname">p3</td><td>Lower right position on the x axis. </td></tr>
-    <tr><td class="paramname">p4</td><td>Lower right position on the y axis. </td></tr>
-  </table>
-  </dd>
-</dl>
-<p>ps: maybe if bUsingArbTex is enabled we should use glActiveTextureARB? </p>
-
-</div>
-
-  </div><div id="af187694221f5112048bebaf9c78d86cb">
+  </div></div>
+  </div><div id="Drawing">
+    <h3 class="sectionHeader">Drawing</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="af187694221f5112048bebaf9c78d86cb">
     <div class="methodHeader" onClick="toggleDescription(&quot;#af187694221f5112048bebaf9c78d86cb&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">draw</a>
       <span class="args">(float x, float y) const </span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="af187694221f5112048bebaf9c78d86cb_description">
+    <div class="methodDescription " style="display:none" id="af187694221f5112048bebaf9c78d86cb_description"><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y) const </span></div><div class="memberDocumentation">
 
 <p>Draw the texture at it&apos;s normal size. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1351,17 +738,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Implements <a class="el" href="ofBaseDraws.html#ae333985db65e3ec75bf80267c5bc3fc4">ofBaseDraws</a>.</p>
 
-</div>
-
-  </div><div id="ac302c8628b012aaf3e956cba9499c8b8">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ac302c8628b012aaf3e956cba9499c8b8&quot;)">
-      <span class="type">void </span>
-      <a class="name">draw</a>
-      <span class="args">(float x, float y, float z) const </span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="ac302c8628b012aaf3e956cba9499c8b8_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y, float z) const </span></div><div class="memberDocumentation">
 
 <p>Draw the texture at it&apos;s normal size with depth. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1373,17 +750,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
-
-  </div><div id="a93625f13f765773e58f1682ed180d0a3">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a93625f13f765773e58f1682ed180d0a3&quot;)">
-      <span class="type">void </span>
-      <a class="name">draw</a>
-      <span class="args">(float x, float y, float w, float h) const </span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a93625f13f765773e58f1682ed180d0a3_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y, float w, float h) const </span></div><div class="memberDocumentation">
 
 <p>Draw the texture at a given size. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1398,17 +765,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Implements <a class="el" href="ofBaseDraws.html#a60aab39e0163a542ef18a466633d1372">ofBaseDraws</a>.</p>
 
-</div>
-
-  </div><div id="ac1437f8fbc32dd63ab2786fe343dbaeb">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ac1437f8fbc32dd63ab2786fe343dbaeb&quot;)">
-      <span class="type">void </span>
-      <a class="name">draw</a>
-      <span class="args">(float x, float y, float z, float w, float h) const </span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="ac1437f8fbc32dd63ab2786fe343dbaeb_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y, float z, float w, float h) const </span></div><div class="memberDocumentation">
 
 <p>Draw the texture at a given size with depth. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1422,23 +779,37 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
+</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofPoint &amp;p1, const ofPoint &amp;p2, const ofPoint &amp;p3, const ofPoint &amp;p4) const </span></div><div class="memberDocumentation">
+
+<p>Draw the texture by it&apos;s upper left and lower right corners. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p1</td><td>Upper left position on the x axis. </td></tr>
+    <tr><td class="paramname">p2</td><td>Upper left position on the y axis. </td></tr>
+    <tr><td class="paramname">p3</td><td>Lower right position on the x axis. </td></tr>
+    <tr><td class="paramname">p4</td><td>Lower right position on the y axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>ps: maybe if bUsingArbTex is enabled we should use glActiveTextureARB? </p>
+
+</div></div>
 
   </div><div id="a3a2003ea338e30010e96aae73d33a77c">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a3a2003ea338e30010e96aae73d33a77c&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">drawSubsection</a>
       <span class="args">(float x, float y, float w, float h, float sx, float sy) const </span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a3a2003ea338e30010e96aae73d33a77c_description">
+    <div class="methodDescription " style="display:none" id="a3a2003ea338e30010e96aae73d33a77c_description"><div class="memberVariant"><span class="type">void </span><span class="name">drawSubsection</span><span class="args">(float x, float y, float w, float h, float sx, float sy) const </span></div><div class="memberDocumentation">
 
 <p>Draw a subsection of the texture. </p>
-<p>Like ofRect, (x, y) depend on the current OF_RECT_MODE:</p>
+<p>Like <a class="el" href="of_graphics_8cpp.html#a41e5fdef42e0eb1cd15aaf5f9479d5c3">ofRect()</a> depend on the current <code>OF_RECT_MODE</code>:</p>
 <ul>
-<li>OF_RECT_MODE_CORNER: drawn with the upper left corner = (x,y)</li>
-<li>OF_RECT_MODE_CENTER: drawn centered on (x,y)</li>
+<li><code>OF_RECT_MODE_CORNER</code>: drawn with the upper left corner = (x,y)</li>
+<li><code>OF_RECT_MODE_CENTER</code>: drawn centered on (x,y)</li>
 </ul>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="of_graphics_8cpp.html#aa3b1c1ceb97a0d2eb223c079f460239e">ofSetRectMode()</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1453,20 +824,10 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
-
-  </div><div id="a21ad62216f98cf867bd84400ca686419">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a21ad62216f98cf867bd84400ca686419&quot;)">
-      <span class="type">void </span>
-      <a class="name">drawSubsection</a>
-      <span class="args">(float x, float y, float z, float w, float h, float sx, float sy) const </span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a21ad62216f98cf867bd84400ca686419_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">drawSubsection</span><span class="args">(float x, float y, float z, float w, float h, float sx, float sy) const </span></div><div class="memberDocumentation">
 
 <p>Draw a subsection of the texture with depth. </p>
-<p>Same as drawSubsection(x, y, w, h, sx, sy) with the addition of:</p>
+<p>Same as <a class="el" href="ofTexture.html#a3a2003ea338e30010e96aae73d33a77c" title="Draw a subsection of the texture. ">drawSubsection(float x, float y, float w, float h, float sx, float sy) const </a>with the addition of z axis parameter.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">z</td><td>Draw position on the z axis. </td></tr>
@@ -1474,20 +835,10 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
-
-  </div><div id="a9240d5a539f3e86c4958a720661f4c44">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a9240d5a539f3e86c4958a720661f4c44&quot;)">
-      <span class="type">void </span>
-      <a class="name">drawSubsection</a>
-      <span class="args">(float x, float y, float w, float h, float sx, float sy, float sw, float sh) const </span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a9240d5a539f3e86c4958a720661f4c44_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">drawSubsection</span><span class="args">(float x, float y, float w, float h, float sx, float sy, float sw, float sh) const </span></div><div class="memberDocumentation">
 
 <p>Draw a subsection of the texture with an offset. </p>
-<p>Same as drawSubsection(x, y, w, h, sx, sy) with the addition of:</p>
+<p>Same as ddrawSubsection(float x, float y, float w, float h, float sx, float sy) const with the addition of the width and height of the subsection.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sw</td><td>Subsection width within the texture. </td></tr>
@@ -1496,20 +847,10 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
-
-  </div><div id="a8cc24039f78687d29cdc2325900112a3">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a8cc24039f78687d29cdc2325900112a3&quot;)">
-      <span class="type">void </span>
-      <a class="name">drawSubsection</a>
-      <span class="args">(float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh) const </span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a8cc24039f78687d29cdc2325900112a3_description">
+</div><div class="memberVariant"><span class="type">void </span><span class="name">drawSubsection</span><span class="args">(float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh) const </span></div><div class="memberDocumentation">
 
 <p>Draw a subsection of the texture with an offset and depth. </p>
-<p>Same as drawSubsection(x, y, w, h, sx, sy, sw, sh) with the addition of:</p>
+<p>Same as <a class="el" href="ofTexture.html#a9240d5a539f3e86c4958a720661f4c44" title="Draw a subsection of the texture with an offset. ">drawSubsection(float x, float y, float w, float h, float sx, float sy, float sw, float sh) const </a>with the addition of z axis parameter.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sw</td><td>Subsection width within the texture. </td></tr>
@@ -1520,174 +861,185 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 </dl>
 <p>ps: maybe if bUsingArbTex is enabled we should use glActiveTextureARB? </p>
 
-</div>
+</div></div>
 
   </div><div id="ac66d271f8cf45edabd8e66ac2de20aa4">
     <div class="methodHeader" onClick="toggleDescription(&quot;#ac66d271f8cf45edabd8e66ac2de20aa4&quot;)">
-      <span class="type"><a href="ofMesh.html">ofMesh</a></span>
+      <span class="type"></span>
       <a class="name">getMeshForSubsection</a>
       <span class="args">(float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh) const </span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="ac66d271f8cf45edabd8e66ac2de20aa4_description">
+    <div class="methodDescription " style="display:none" id="ac66d271f8cf45edabd8e66ac2de20aa4_description"><div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a></span><span class="name">getMeshForSubsection</span><span class="args">(float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh) const </span></div><div class="memberDocumentation">
 
-</div>
+<p>Get a mesh that has the texture coordinates set. </p>
 
-  </div><div id="ab378e36d23c87c061913d07ba6653912">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ab378e36d23c87c061913d07ba6653912&quot;)">
-      <span class="type">void </span>
-      <a class="name">readToPixels</a>
-      <span class="args">(ofPixels &amp;pixels) const </span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="ab378e36d23c87c061913d07ba6653912_description">
-
-<p>Read current texture data from the GPU into pixels. </p>
-<dl class="section warning"><dt>Warning</dt><dd>This is not supported in OpenGL ES and does nothing.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pixels</td><td>Target ofPixels reference. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-
-  </div><div id="a2c25b04a2fd3f05c710b1ece54820a5c">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a2c25b04a2fd3f05c710b1ece54820a5c&quot;)">
-      <span class="type">void </span>
-      <a class="name">readToPixels</a>
-      <span class="args">(ofShortPixels &amp;pixels) const </span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a2c25b04a2fd3f05c710b1ece54820a5c_description">
-
-<p>Read current texture data from the GPU into pixels. </p>
-<dl class="section warning"><dt>Warning</dt><dd>This is not supported in OpenGL ES and does nothing.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pixels</td><td>Target pixels reference. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-
-  </div><div id="a5c8ac788901be0c0f030e62755d60625">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5c8ac788901be0c0f030e62755d60625&quot;)">
-      <span class="type">void </span>
-      <a class="name">readToPixels</a>
-      <span class="args">(ofFloatPixels &amp;pixels) const </span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a5c8ac788901be0c0f030e62755d60625_description">
-
-<p>Read current texture data from the GPU into pixels. </p>
-<dl class="section warning"><dt>Warning</dt><dd>This is not supported in OpenGL ES and does nothing.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pixels</td><td>Target pixels reference. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-
-  </div><div id="a603ec9d5a302ff5cc5d062728ddb6e53">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a603ec9d5a302ff5cc5d062728ddb6e53&quot;)">
-      <span class="type">void </span>
-      <a class="name">copyTo</a>
-      <span class="args">(ofBufferObject &amp;buffer) const </span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a603ec9d5a302ff5cc5d062728ddb6e53_description">
-
-</div>
+</div></div>
 
   </div><div id="a6a2b4dcddf37c5953bf08dcacd7447e5">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a6a2b4dcddf37c5953bf08dcacd7447e5&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">bind</a>
       <span class="args">(int textureLocation=0) const </span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a6a2b4dcddf37c5953bf08dcacd7447e5_description">
+    <div class="methodDescription " style="display:none" id="a6a2b4dcddf37c5953bf08dcacd7447e5_description"><div class="memberVariant"><span class="type">void </span><span class="name">bind</span><span class="args">(int textureLocation=0) const </span></div><div class="memberDocumentation">
 
 <p>Bind the texture. </p>
-<p>For advanced users who need to manually manage texture drawing without calling <a class="el" href="ofTexture.html#a05e7b58296961f71d22761315db41cdb" title="Draw the texture by it&apos;s upper left &amp; lower right corners. ">ofTexture::draw</a>.</p>
+<p>For advanced users who need to manually manage texture drawing without calling <a class="el" href="ofTexture.html#af187694221f5112048bebaf9c78d86cb" title="Draw the texture at it&apos;s normal size. ">ofTexture::draw</a>.</p>
 <dl class="section see"><dt>See Also</dt><dd><a href="http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml">http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml</a> </dd></dl>
 
-</div>
+</div></div>
 
   </div><div id="a2b33ffb2d560989acd50977310c46423">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a2b33ffb2d560989acd50977310c46423&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">unbind</a>
       <span class="args">(int textureLocation=0) const </span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a2b33ffb2d560989acd50977310c46423_description">
+    <div class="methodDescription " style="display:none" id="a2b33ffb2d560989acd50977310c46423_description"><div class="memberVariant"><span class="type">void </span><span class="name">unbind</span><span class="args">(int textureLocation=0) const </span></div><div class="memberDocumentation">
 
 <p>Unbind the texture. </p>
-<p>For advanced users who need to manually manage texture drawing without calling <a class="el" href="ofTexture.html#a05e7b58296961f71d22761315db41cdb" title="Draw the texture by it&apos;s upper left &amp; lower right corners. ">ofTexture::draw</a>.</p>
+<p>For advanced users who need to manually manage texture drawing without calling <a class="el" href="ofTexture.html#af187694221f5112048bebaf9c78d86cb" title="Draw the texture at it&apos;s normal size. ">ofTexture::draw</a>.</p>
 <dl class="section see"><dt>See Also</dt><dd><a href="http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml">http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml</a> </dd></dl>
 
-</div>
+</div></div>
 
   </div><div id="a1af30b1946bbd1d9385d4b3869947e46">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a1af30b1946bbd1d9385d4b3869947e46&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">bindAsImage</a>
       <span class="args">(GLuint unit, GLenum access, GLint level=0, GLboolean layered=0, GLint layer=0)</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a1af30b1946bbd1d9385d4b3869947e46_description">
-<p>glBindImageTexture: <a href="https://www.opengl.org/wiki/GLAPI/glBindImageTexture">https://www.opengl.org/wiki/GLAPI/glBindImageTexture</a></p>
-<p>binds the texture as an read or write image, only available since 4.2 </p>
+    <div class="methodDescription " style="display:none" id="a1af30b1946bbd1d9385d4b3869947e46_description"><div class="memberVariant"><span class="type">void </span><span class="name">bindAsImage</span><span class="args">(GLuint unit, GLenum access, GLint level=0, GLboolean layered=0, GLint layer=0)</span></div><div class="memberDocumentation">
+<p>Calls glBindImageTexture on the texture</p>
+<p>Binds the texture as an read or write image, only available since OpenGL 4.2 </p>
+<dl class="section warning"><dt>Warning</dt><dd>This is not available in OpenGLES </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://www.opengl.org/wiki/GLAPI/glBindImageTexture">http://www.opengl.org/wiki/GLAPI/glBindImageTexture</a> </dd></dl>
 
-</div>
+</div></div>
 
-  </div><div id="aad88f3678a33e5aad9ebeb15b31e9322">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aad88f3678a33e5aad9ebeb15b31e9322&quot;)">
-      <span class="type">void </span>
-      <a class="name">setAlphaMask</a>
-      <span class="args">(ofTexture &amp;mask)</span>
+  </div></div>
+  </div><div id="Sizeandcoordinates">
+    <h3 class="sectionHeader">Size and coordinates</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a371f406a32606790780e2bec430bd2ad">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a371f406a32606790780e2bec430bd2ad&quot;)">
+      <span class="type"></span>
+      <a class="name">getHeight</a>
+      <span class="args">() const </span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="aad88f3678a33e5aad9ebeb15b31e9322_description">
+    <div class="methodDescription " style="display:none" id="a371f406a32606790780e2bec430bd2ad_description"><div class="memberVariant"><span class="type">float </span><span class="name">getHeight</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-</div>
+<p>Display height of texture. </p>
+<p>Return value is pixel size (default) or normalized (0 - 1) if ofEnableNormalizedTextures() is set to true.</p>
+<dl class="section see"><dt>See Also</dt><dd>ofEnabledNormalizedTextures()</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Display height of texture in pixels. </dd></dl>
 
-  </div><div id="a9bd8cc8be763bdfd339df0964cf738de">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a9bd8cc8be763bdfd339df0964cf738de&quot;)">
-      <span class="type">void </span>
-      <a class="name">disableAlphaMask</a>
+<p>Implements <a class="el" href="ofBaseDraws.html#a65f504e6dec109161334138f17b19402">ofBaseDraws</a>.</p>
+
+</div></div>
+
+  </div><div id="aa309ccb3cfff6a5de49f7bc287dfeddf">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aa309ccb3cfff6a5de49f7bc287dfeddf&quot;)">
+      <span class="type"></span>
+      <a class="name">getWidth</a>
+      <span class="args">() const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aa309ccb3cfff6a5de49f7bc287dfeddf_description"><div class="memberVariant"><span class="type">float </span><span class="name">getWidth</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Display width of texture. </p>
+<p>Return value is pixel size (default) or normalized (0 - 1) if ofEnableNormalizedTextures() is set to true.</p>
+<dl class="section see"><dt>See Also</dt><dd>ofEnabledNormalizedTextures()</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Display width of texture in pixels. </dd></dl>
+
+<p>Implements <a class="el" href="ofBaseDraws.html#a0513ff59c024202df4cfd31e1244ac4b">ofBaseDraws</a>.</p>
+
+</div></div>
+
+  </div><div id="a5409b3dfe503bc05d7e06c1977ead2ac">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a5409b3dfe503bc05d7e06c1977ead2ac&quot;)">
+      <span class="type"></span>
+      <a class="name">setAnchorPercent</a>
+      <span class="args">(float xPct, float yPct)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a5409b3dfe503bc05d7e06c1977ead2ac_description"><div class="memberVariant"><span class="type">void </span><span class="name">setAnchorPercent</span><span class="args">(float xPct, float yPct)</span></div><div class="memberDocumentation">
+
+<p>Set the anchor point the texture is drawn around as a percentage. </p>
+<p>This can be useful if you want to rotate an image around a particular point.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xPct</td><td>Horizontal texture position as a percentage (0 - 1). </td></tr>
+    <tr><td class="paramname">yPct</td><td>Vertical texture position as a percentage (0 - 1). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="ofBaseDraws.html#a3cf9dd7a898b3503ac0509574eaaeff3">ofBaseDraws</a>.</p>
+
+</div></div>
+
+  </div><div id="a294061077b44d033ee778615679d5b78">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a294061077b44d033ee778615679d5b78&quot;)">
+      <span class="type"></span>
+      <a class="name">setAnchorPoint</a>
+      <span class="args">(float x, float y)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a294061077b44d033ee778615679d5b78_description"><div class="memberVariant"><span class="type">void </span><span class="name">setAnchorPoint</span><span class="args">(float x, float y)</span></div><div class="memberDocumentation">
+
+<p>Set the anchor point the texture is drawn around in pixels. </p>
+<p>This can be useful if you want to rotate an image around a particular point.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Horizontal texture position in pixels. </td></tr>
+    <tr><td class="paramname">y</td><td>Vertical texture position in pixels. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="ofBaseDraws.html#aefa6eaad3d976a6c1717105ea4443e56">ofBaseDraws</a>.</p>
+
+</div></div>
+
+  </div><div id="abc09e6df3f365142faff8b929a846bab">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#abc09e6df3f365142faff8b929a846bab&quot;)">
+      <span class="type"></span>
+      <a class="name">resetAnchor</a>
       <span class="args">()</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a9bd8cc8be763bdfd339df0964cf738de_description">
+    <div class="methodDescription " style="display:none" id="abc09e6df3f365142faff8b929a846bab_description"><div class="memberVariant"><span class="type">void </span><span class="name">resetAnchor</span><span class="args">()</span></div><div class="memberDocumentation">
 
-</div>
+<p>Reset the anchor point to (0, 0). </p>
+
+<p>Reimplemented from <a class="el" href="ofBaseDraws.html#a8e60af373caa636320b505ca07f274ae">ofBaseDraws</a>.</p>
+
+</div></div>
 
   </div><div id="aafa0ddbae92812df141c1b3a47b88ece">
     <div class="methodHeader" onClick="toggleDescription(&quot;#aafa0ddbae92812df141c1b3a47b88ece&quot;)">
-      <span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a></span>
+      <span class="type"></span>
       <a class="name">getCoordFromPoint</a>
       <span class="args">(float xPos, float yPos) const </span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="aafa0ddbae92812df141c1b3a47b88ece_description">
+    <div class="methodDescription " style="display:none" id="aafa0ddbae92812df141c1b3a47b88ece_description"><div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a></span><span class="name">getCoordFromPoint</span><span class="args">(float xPos, float yPos) const </span></div><div class="memberDocumentation">
 
 <p>Helper to convert display coordinate to texture coordinate. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1699,17 +1051,17 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Texture coordinate or (0, 0) if texture is not allocated. </dd></dl>
 
-</div>
+</div></div>
 
   </div><div id="ade541a570a891ed4e8222edb90d6e311">
     <div class="methodHeader" onClick="toggleDescription(&quot;#ade541a570a891ed4e8222edb90d6e311&quot;)">
-      <span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a></span>
+      <span class="type"></span>
       <a class="name">getCoordFromPercent</a>
       <span class="args">(float xPts, float yPts) const </span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="ade541a570a891ed4e8222edb90d6e311_description">
+    <div class="methodDescription " style="display:none" id="ade541a570a891ed4e8222edb90d6e311_description"><div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a></span><span class="name">getCoordFromPercent</span><span class="args">(float xPts, float yPts) const </span></div><div class="memberDocumentation">
 
 <p>Helper to convert display coordinate to texture coordinate. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1721,17 +1073,57 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Texture coordinate or (0, 0) if texture is not allocated. </dd></dl>
 
-</div>
+</div></div>
+
+  </div></div>
+  </div><div id="Texturesettings">
+    <h3 class="sectionHeader">Texture settings</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="aad88f3678a33e5aad9ebeb15b31e9322">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aad88f3678a33e5aad9ebeb15b31e9322&quot;)">
+      <span class="type"></span>
+      <a class="name">setAlphaMask</a>
+      <span class="args">(ofTexture &amp;mask)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="aad88f3678a33e5aad9ebeb15b31e9322_description"><div class="memberVariant"><span class="type">void </span><span class="name">setAlphaMask</span><span class="args">(ofTexture &amp;mask)</span></div><div class="memberDocumentation">
+
+<p>Set another <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> to use as alpha mask. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mask</td><td>The texture to use as alpha mask </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+
+  </div></div>
+  </div><div id="Disablethealphamask">
+    <h3 class="sectionHeader">Disable the alpha mask</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a9bd8cc8be763bdfd339df0964cf738de">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a9bd8cc8be763bdfd339df0964cf738de&quot;)">
+      <span class="type"></span>
+      <a class="name">disableAlphaMask</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a9bd8cc8be763bdfd339df0964cf738de_description"><div class="memberVariant"><span class="type">void </span><span class="name">disableAlphaMask</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div></div>
 
   </div><div id="ac980af43af2cacdbd57e1bfcd8e222e2">
     <div class="methodHeader" onClick="toggleDescription(&quot;#ac980af43af2cacdbd57e1bfcd8e222e2&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">setTextureWrap</a>
       <span class="args">(GLint wrapModeHorizontal, GLint wrapModeVertical)</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="ac980af43af2cacdbd57e1bfcd8e222e2_description">
+    <div class="methodDescription " style="display:none" id="ac980af43af2cacdbd57e1bfcd8e222e2_description"><div class="memberVariant"><span class="type">void </span><span class="name">setTextureWrap</span><span class="args">(GLint wrapModeHorizontal, GLint wrapModeVertical)</span></div><div class="memberDocumentation">
 
 <p>Set texture wrapping. </p>
 <p>By default, textures are clamped to their edges with GL_CLAMP_TO_EDGE. Setting a repeat mode like GL_REPEAT allows you to create tiled backgrounds with small textures.</p>
@@ -1747,17 +1139,17 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div>
+</div></div>
 
   </div><div id="a60ebbd584455b495d0b56c0fa563680a">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a60ebbd584455b495d0b56c0fa563680a&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">setTextureMinMagFilter</a>
       <span class="args">(GLint minFilter, GLint magFilter)</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a60ebbd584455b495d0b56c0fa563680a_description">
+    <div class="methodDescription " style="display:none" id="a60ebbd584455b495d0b56c0fa563680a_description"><div class="memberVariant"><span class="type">void </span><span class="name">setTextureMinMagFilter</span><span class="args">(GLint minFilter, GLint magFilter)</span></div><div class="memberDocumentation">
 
 <p>Set texture minification/magnification scaling filters. </p>
 <p>Controls how OpenGL will scale this texture.</p>
@@ -1773,60 +1165,184 @@ ofTextureSetMinMagFilters()</dd></dl>
   </dd>
 </dl>
 
-</div>
+</div></div>
 
   </div><div id="a9aa509df721634adcf6e60d155d573d5">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a9aa509df721634adcf6e60d155d573d5&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">setTextureMatrix</a>
       <span class="args">(const ofMatrix4x4 &amp;m)</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a9aa509df721634adcf6e60d155d573d5_description">
+    <div class="methodDescription " style="display:none" id="a9aa509df721634adcf6e60d155d573d5_description"><div class="memberVariant"><span class="type">void </span><span class="name">setTextureMatrix</span><span class="args">(const ofMatrix4x4 &amp;m)</span></div><div class="memberDocumentation">
+
+<p>Sets a texture matrix that will be uploaded whenever the texture is binded. </p>
 <p>Sets a texture matrix that will be uploaded whenever the texture is binded. </p>
 
-</div>
+</div></div>
 
   </div><div id="a607f48910f9e9e274249dd8ce4db19d9">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a607f48910f9e9e274249dd8ce4db19d9&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">disableTextureMatrix</a>
       <span class="args">()</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a607f48910f9e9e274249dd8ce4db19d9_description">
+    <div class="methodDescription " style="display:none" id="a607f48910f9e9e274249dd8ce4db19d9_description"><div class="memberVariant"><span class="type">void </span><span class="name">disableTextureMatrix</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Disable the texture matrix. </p>
 
-</div>
+</div></div>
 
   </div><div id="a40e4284b661dbf0819089cd242c5bc6c">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a40e4284b661dbf0819089cd242c5bc6c&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">setCompression</a>
       <span class="args">(ofTexCompression compression)</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a40e4284b661dbf0819089cd242c5bc6c_description">
+    <div class="methodDescription " style="display:none" id="a40e4284b661dbf0819089cd242c5bc6c_description"><div class="memberVariant"><span class="type">void </span><span class="name">setCompression</span><span class="args">(ofTexCompression compression)</span></div><div class="memberDocumentation">
 
 <p>Set the texture compression. </p>
 <dl class="section warning"><dt>Warning</dt><dd>: not yet implemented. </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#a218c238fdc83c3d9ac235f31dfd3c895">ofTexCompression</a> </dd></dl>
 
-</div>
+</div></div>
 
-  </div><div id="a4d59a5114c8ceef3427cee6efb16d8da">
+  </div><div id="a5831aacf2d29722b0f9a583f44745eff">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a5831aacf2d29722b0f9a583f44745eff&quot;)">
+      <span class="type"></span>
+      <a class="name">setRGToRGBASwizzles</a>
+      <span class="args">(bool rToRGBSwizzles)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a5831aacf2d29722b0f9a583f44745eff_description"><div class="memberVariant"><span class="type">void </span><span class="name">setRGToRGBASwizzles</span><span class="args">(bool rToRGBSwizzles)</span></div><div class="memberDocumentation">
+
+<p>Swizzle RGBA to grayscale with alpha in the red channel. </p>
+<p>Use 1 channel GL_R as luminance instead of red channel in OpenGL 3+.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This is not supported in OpenGL ES and does nothing. </dd></dl>
+
+</div></div>
+
+  </div><div id="abd42d8aac93ee3c8ad420e6cbfbad708">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#abd42d8aac93ee3c8ad420e6cbfbad708&quot;)">
+      <span class="type"></span>
+      <a class="name">setSwizzle</a>
+      <span class="args">(GLenum srcSwizzle, GLenum dstChannel)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="abd42d8aac93ee3c8ad420e6cbfbad708_description"><div class="memberVariant"><span class="type">void </span><span class="name">setSwizzle</span><span class="args">(GLenum srcSwizzle, GLenum dstChannel)</span></div><div class="memberDocumentation">
+
+<p>Swizzle a channel to another. </p>
+<p>Example:</p>
+<div class="fragment"><div class="line"><a class="code" href="ofTexture.html">ofTexture</a> tex;</div>
+<div class="line">tex.<a class="code" href="ofTexture.html#abd42d8aac93ee3c8ad420e6cbfbad708">setSwizzle</a>(GL_TEXTURE_SWIZZLE_R,GL_ALPHA);</div>
+</div><!-- fragment --><p>will make channel 0 appear as alpha in the shader</p>
+<dl class="section warning"><dt>Warning</dt><dd>This is not supported in OpenGL ES and does nothing. </dd></dl>
+
+</div></div>
+
+  </div></div>
+  </div><div id="Readpixeldata">
+    <h3 class="sectionHeader">Read pixel data</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="ab378e36d23c87c061913d07ba6653912">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ab378e36d23c87c061913d07ba6653912&quot;)">
+      <span class="type"></span>
+      <a class="name">readToPixels</a>
+      <span class="args">(ofPixels &amp;pixels) const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ab378e36d23c87c061913d07ba6653912_description"><div class="memberVariant"><span class="type">void </span><span class="name">readToPixels</span><span class="args">(ofPixels &amp;pixels) const </span></div><div class="memberDocumentation">
+
+<p>Read current texture data from the GPU into pixels. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This is not supported in OpenGL ES and does nothing.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pixels</td><td>Target ofPixels reference. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div><div class="memberVariant"><span class="type">void </span><span class="name">readToPixels</span><span class="args">(ofShortPixels &amp;pixels) const </span></div><div class="memberDocumentation">
+
+<p>Read current texture data from the GPU into pixels. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This is not supported in OpenGL ES and does nothing.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pixels</td><td>Target pixels reference. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div><div class="memberVariant"><span class="type">void </span><span class="name">readToPixels</span><span class="args">(ofFloatPixels &amp;pixels) const </span></div><div class="memberDocumentation">
+
+<p>Read current texture data from the GPU into pixels. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This is not supported in OpenGL ES and does nothing.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pixels</td><td>Target pixels reference. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+
+  </div><div id="a603ec9d5a302ff5cc5d062728ddb6e53">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a603ec9d5a302ff5cc5d062728ddb6e53&quot;)">
+      <span class="type"></span>
+      <a class="name">copyTo</a>
+      <span class="args">(ofBufferObject &amp;buffer) const </span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="a603ec9d5a302ff5cc5d062728ddb6e53_description"><div class="memberVariant"><span class="type">void </span><span class="name">copyTo</span><span class="args">(ofBufferObject &amp;buffer) const </span></div><div class="memberDocumentation">
+
+</div></div>
+
+  </div></div>
+  </div><div id="Texturedata">
+    <h3 class="sectionHeader">Texture data</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="ab8852339546c4bbf87b5a5a463cc8ec8">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ab8852339546c4bbf87b5a5a463cc8ec8&quot;)">
+      <span class="type"></span>
+      <a class="name">getTextureData</a>
+      <span class="args">()</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription " style="display:none" id="ab8852339546c4bbf87b5a5a463cc8ec8_description"><div class="memberVariant"><span class="type">ofTextureData &amp; </span><span class="name">getTextureData</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Internal texture data access. </p>
+<dl class="section return"><dt>Returns</dt><dd>a reference to the internal texture data struct. </dd></dl>
+
+</div><div class="memberVariant"><span class="type">const ofTextureData &amp; </span><span class="name">getTextureData</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Const version of <a class="el" href="ofTexture.html#ab8852339546c4bbf87b5a5a463cc8ec8" title="Internal texture data access. ">getTextureData()</a>. </p>
+<dl class="section see"><dt>See Also</dt><dd>ofTextureData::getTextureData() </dd></dl>
+
+</div></div>
+
+  </div></div>
+  </div><div id="Mipmapping">
+    <h3 class="sectionHeader">Mipmapping</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a4d59a5114c8ceef3427cee6efb16d8da">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a4d59a5114c8ceef3427cee6efb16d8da&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">enableMipmap</a>
       <span class="args">()</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a4d59a5114c8ceef3427cee6efb16d8da_description">
+    <div class="methodDescription " style="display:none" id="a4d59a5114c8ceef3427cee6efb16d8da_description"><div class="memberVariant"><span class="type">void </span><span class="name">enableMipmap</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Sets flag allowing texture to auto-generate mipmap. </p>
 <p>By default, this will set your minFilter to GL_LINEAR_MIPMAP_LINEAR. If you want to change your minFilter later use <a class="el" href="ofTexture.html#a60ebbd584455b495d0b56c0fa563680a" title="Set texture minification/magnification scaling filters. ">setTextureMinMagFilter()</a></p>
@@ -1837,17 +1353,17 @@ ofTextureSetMinMagFilters()</dd></dl>
 <dd>
 <a class="el" href="ofTexture.html#a60ebbd584455b495d0b56c0fa563680a" title="Set texture minification/magnification scaling filters. ">setTextureMinMagFilter()</a> </dd></dl>
 
-</div>
+</div></div>
 
   </div><div id="a0a1d608ff6440b63e797745052f4147f">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a0a1d608ff6440b63e797745052f4147f&quot;)">
-      <span class="type">void </span>
+      <span class="type"></span>
       <a class="name">disableMipmap</a>
       <span class="args">()</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a0a1d608ff6440b63e797745052f4147f_description">
+    <div class="methodDescription " style="display:none" id="a0a1d608ff6440b63e797745052f4147f_description"><div class="memberVariant"><span class="type">void </span><span class="name">disableMipmap</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Sets flag allowing texture to auto-generate mipmap. </p>
 <p>By default, this will set your minFilter to GL_LINEAR_MIPMAP_LINEAR. If you want to change your minFilter later use <a class="el" href="ofTexture.html#a60ebbd584455b495d0b56c0fa563680a" title="Set texture minification/magnification scaling filters. ">setTextureMinMagFilter()</a></p>
@@ -1858,146 +1374,27 @@ ofTextureSetMinMagFilters()</dd></dl>
 <dd>
 <a class="el" href="ofTexture.html#a60ebbd584455b495d0b56c0fa563680a" title="Set texture minification/magnification scaling filters. ">setTextureMinMagFilter()</a> </dd></dl>
 
-</div>
+</div></div>
 
-  </div><div id="a227c04198db5b7be5f31220cf99708d3">
-    <div class="methodHeader deprecatedMethod" onClick="toggleDescription(&quot;#a227c04198db5b7be5f31220cf99708d3&quot;)">
-      <span class="type">bool </span>
-      <a class="name">bAllocated</a>
-      <span class="args">()</span>
-      <span class="note">Use isAllocated instead</span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a227c04198db5b7be5f31220cf99708d3_description">
-
-<p>Has the texture been allocated? </p>
-<p>Legacy function for backwards compatibility.</p>
-<dl class="section return"><dt>Returns</dt><dd>true if the texture has been allocated. </dd></dl>
-
-</div>
-
-  </div><div id="aad1888a6e4ed69a0936d0d724125150d">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aad1888a6e4ed69a0936d0d724125150d&quot;)">
-      <span class="type">bool </span>
-      <a class="name">isAllocated</a>
-      <span class="args">() const </span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="aad1888a6e4ed69a0936d0d724125150d_description">
-
-<p>Has the texture been allocated? </p>
-<dl class="section return"><dt>Returns</dt><dd>true if the texture has been allocated. </dd></dl>
-
-</div>
-
-  </div><div id="ab8852339546c4bbf87b5a5a463cc8ec8">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ab8852339546c4bbf87b5a5a463cc8ec8&quot;)">
-      <span class="type"><a href="ofTextureData.html">ofTextureData</a></span>
-      <a class="name">getTextureData</a>
+  </div><div id="a7eb8ed330899e19e11271122291e7915">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a7eb8ed330899e19e11271122291e7915&quot;)">
+      <span class="type"></span>
+      <a class="name">generateMipmap</a>
       <span class="args">()</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="ab8852339546c4bbf87b5a5a463cc8ec8_description">
+    <div class="methodDescription " style="display:none" id="a7eb8ed330899e19e11271122291e7915_description"><div class="memberVariant"><span class="type">void </span><span class="name">generateMipmap</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>Internal texture data access. </p>
-<dl class="section return"><dt>Returns</dt><dd>a reference to the internal texture data struct. </dd></dl>
+<p>Generate mipmap for the current texture. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Only GL_TEXTURE_RECTANGLE - which is the default openFrameworks texture target - does <em>not</em> support mipmaps, so make sure to call <a class="el" href="of_texture_8cpp.html#a6b679cd9538f7a1399cec6078c227c71" title="Use GL_TEXTURE_2D textures. ">ofDisableArbTex()</a> before loading texture data for a texture you want to generate mipmaps for.</dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="of_texture_8cpp.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures. ">ofEnableArbTex()</a> </dd>
+<dd>
+<a class="el" href="of_texture_8cpp.html#a6b679cd9538f7a1399cec6078c227c71" title="Use GL_TEXTURE_2D textures. ">ofDisableArbTex()</a> </dd></dl>
+<p>OpenGL ES only supports mipmap for the following two texture targets:</p>
+<p>OpenGL supports mipmaps for additional texture targets: </p>
 
-</div>
-
-  </div><div id="a2032ce2c2a1bb7c51957b040d7636088">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a2032ce2c2a1bb7c51957b040d7636088&quot;)">
-      <span class="type"><a href="ofTextureData.html">ofTextureData</a></span>
-      <a class="name">getTextureData</a>
-      <span class="args">() const </span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a2032ce2c2a1bb7c51957b040d7636088_description">
-
-<p>Const version of <a class="el" href="ofTexture.html#ab8852339546c4bbf87b5a5a463cc8ec8" title="Internal texture data access. ">getTextureData()</a>. </p>
-<dl class="section see"><dt>See Also</dt><dd>ofTextureData::getTextureData() </dd></dl>
-
-</div>
-
-  </div><div id="a371f406a32606790780e2bec430bd2ad">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a371f406a32606790780e2bec430bd2ad&quot;)">
-      <span class="type">float </span>
-      <a class="name">getHeight</a>
-      <span class="args">() const </span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a371f406a32606790780e2bec430bd2ad_description">
-
-<p>Display height of texture. </p>
-<p>Return value is pixel size (default) or normalized (0 - 1).</p>
-<dl class="section see"><dt>See Also</dt><dd>ofEnabledNormalizedTextures()</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Display height of texture in pixels. </dd></dl>
-
-<p>Implements <a class="el" href="ofBaseDraws.html#a65f504e6dec109161334138f17b19402">ofBaseDraws</a>.</p>
-
-</div>
-
-  </div><div id="aa309ccb3cfff6a5de49f7bc287dfeddf">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aa309ccb3cfff6a5de49f7bc287dfeddf&quot;)">
-      <span class="type">float </span>
-      <a class="name">getWidth</a>
-      <span class="args">() const </span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="aa309ccb3cfff6a5de49f7bc287dfeddf_description">
-
-<p>Display width of texture. </p>
-<p>Return value is pixel size (default) or normalized (0 - 1).</p>
-<dl class="section see"><dt>See Also</dt><dd>ofEnabledNormalizedTextures()</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Display width of texture in pixels. </dd></dl>
-
-<p>Implements <a class="el" href="ofBaseDraws.html#a0513ff59c024202df4cfd31e1244ac4b">ofBaseDraws</a>.</p>
-
-</div>
-
-  </div></div>
-  </div><div id="ProtectedFunctions">
-    <h3 class="sectionHeader">Protected Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a73c8e8c7177b2df1e766bf3e9c4408ff">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a73c8e8c7177b2df1e766bf3e9c4408ff&quot;)">
-      <span class="type">void </span>
-      <a class="name">loadData</a>
-      <span class="args">(const void *data, int w, int h, int glFormat, int glType)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a73c8e8c7177b2df1e766bf3e9c4408ff_description">
-
-</div>
-
-  </div><div id="a3a04a7657962e0b0ee8c288bcbde456e">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a3a04a7657962e0b0ee8c288bcbde456e&quot;)">
-      <span class="type">void </span>
-      <a class="name">enableTextureTarget</a>
-      <span class="args">(int textureLocation) const </span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a3a04a7657962e0b0ee8c288bcbde456e_description">
-
-</div>
-
-  </div><div id="a1e4c863fcaf24a9f15dadad7cb2279f4">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a1e4c863fcaf24a9f15dadad7cb2279f4&quot;)">
-      <span class="type">void </span>
-      <a class="name">disableTextureTarget</a>
-      <span class="args">(int textureLocation) const </span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription " style="display:none" id="a1e4c863fcaf24a9f15dadad7cb2279f4_description">
-
-</div>
+</div></div>
 
   </div></div>
   </div></div>
