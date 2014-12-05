@@ -413,9 +413,9 @@ class ofImage_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="a1f72a884aafe2c6ae38fb4641db7f558_description"><div class="memberVariant"><span class="type"> </span><span class="name">ofImage_</span><span class="args">(const ofPixels_&lt; PixelType &gt; &amp;pix)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type"> </span><span class="name">ofImage_</span><span class="args">(const ofFile &amp;file)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofImage_</span><span class="args">(const ofFile &amp;file)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type"> </span><span class="name">ofImage_</span><span class="args">(const string &amp;filename)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofImage_</span><span class="args">(const string &amp;filename)</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -429,7 +429,7 @@ class ofImage_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="a86968a4303907dbaeb008851076eeb8a_description"><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, ofImageType type)</span></div><div class="memberDocumentation">
 
-<p>This allocates space in the ofImage, both the ofPixels and the <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> that the ofImage contains. </p>
+<p>This allocates space in the ofImage, both the ofPixels and the <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> that the ofImage contains. </p>
 <p>You don&apos;t need to call this before loading an image, but for when you want to allocate. space ahead of when you are going to use the image.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -575,8 +575,8 @@ class ofImage_&lt; PixelType &gt;</h3>
 
 <p>Implements <a class="el" href="ofBaseHasTexture.html#a27ed7c3c700e8b6898910d2d9509e551">ofBaseHasTexture</a>.</p>
 
-</div><div class="memberVariant"><span class="type"><a href="ofTexture.html">ofTexture</a></span><span class="name">getTexture</span><span class="args">() const </span></div><div class="memberDocumentation">
-<dl class="section return"><dt>Returns</dt><dd>a const reference to the <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a>. </dd></dl>
+</div><hr><div class="memberVariant"><span class="type"><a href="ofTexture.html">ofTexture</a></span><span class="name">getTexture</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>a const reference to the <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a>. </dd></dl>
 
 <p>Implements <a class="el" href="ofBaseHasTexture.html#a4e7856b7f617a0c8e8cf8bf592606f2a">ofBaseHasTexture</a>.</p>
 
@@ -592,7 +592,7 @@ class ofImage_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="aaaddb3a82ed4f2f15186538114059c45_description"><div class="memberVariant"><span class="type">ofTexture </span><span class="name">getTextureReference</span><span class="args">()</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">const ofTexture </span><span class="name">getTextureReference</span><span class="args">()</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">const ofTexture </span><span class="name">getTextureReference</span><span class="args">()</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -620,7 +620,7 @@ class ofImage_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="ac93d35ec0a4161651575f1bfe8eaa881_description"><div class="memberVariant"><span class="type">void </span><span class="name">unbind</span><span class="args">(int textureLocation=0) const </span></div><div class="memberDocumentation">
 
-<p>Unbinds the <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> instance that the ofImage contains. </p>
+<p>Unbinds the <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> instance that the ofImage contains. </p>
 <p>Call this after you call <a class="el" href="ofImage.html#a523d47032840e28eec2fa314af954607" title="Binds the oftexture instance that the ofImage contains so that it can be used for advanced drawing...">bind()</a>. </p>
 
 </div></div>
@@ -824,7 +824,7 @@ class ofImage_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="ad152464e4b657d848011376cd13966a3_description"><div class="memberVariant"><span class="type">void </span><span class="name">setCompression</span><span class="args">(ofTexCompression compression)</span></div><div class="memberDocumentation">
 
-<p>This sets the compression level used when creating mipmaps for the <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> contained by the ofImage. </p>
+<p>This sets the compression level used when creating mipmaps for the <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> contained by the ofImage. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">compression</td><td>The different texture compression levels are: OF_COMPRESS_NONE, </td></tr>
@@ -852,7 +852,7 @@ class ofImage_&lt; PixelType &gt;</h3>
 
 <p>Implements <a class="el" href="ofBaseHasPixels.html#abf6bc60c9addfbbcc5372ecce0019224">ofBaseHasPixels_&lt; PixelType &gt;</a>.</p>
 
-</div><div class="memberVariant"><span class="type"><a href="ofPixels.html">ofPixels_</a></span><span class="name">getPixels</span><span class="args">() const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"><a href="ofPixels.html">ofPixels_</a></span><span class="name">getPixels</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 <p>Get a const reference to the underlying ofPixels. </p>
 <dl class="section return"><dt>Returns</dt><dd>a const reference the underlying ofPixels. </dd></dl>
@@ -875,7 +875,7 @@ class ofImage_&lt; PixelType &gt;</h3>
 <p>Make sure you call either <a class="el" href="ofImage.html#ae05e8a23c92e28bc4aa8f79621d27dda" title="Call to ensure that changes to pixels are reflected in the ofTexture of the image. ">update()</a> or <a class="el" href="ofImage.html#a39101e7401e3708dba08bba4c95b46de" title="Loads ofPixels data into ofTexture so that draw() calls reflect changes to the pixels. ">reloadTexture()</a> after making changes to the ofPixels.</p>
 <dl class="section return"><dt>Returns</dt><dd>Returns an ofPixels reference that you can use to manipulate the raw pixel data of the ofImage. </dd></dl>
 
-</div><div class="memberVariant"><span class="type">const ofPixels_&lt; PixelType &gt; </span><span class="name">getPixelsRef</span><span class="args">()</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">const ofPixels_&lt; PixelType &gt; </span><span class="name">getPixelsRef</span><span class="args">()</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -934,7 +934,7 @@ class ofImage_&lt; PixelType &gt;</h3>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(int index, const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(int index, const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
 <p>Sets the pixel at the given pixel buffer index. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -945,7 +945,7 @@ class ofImage_&lt; PixelType &gt;</h3>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
 <p>Sets all pixels to a color. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -980,7 +980,7 @@ class ofImage_&lt; PixelType &gt;</h3>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">setFromPixels</span><span class="args">(const ofPixels_&lt; PixelType &gt; &amp;pixels)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setFromPixels</span><span class="args">(const ofPixels_&lt; PixelType &gt; &amp;pixels)</span></div><div class="memberDocumentation">
 
 <p>Set the pixels of the image from an ofPixels instance. </p>
 <p>Set the pixels of the image from an ofPixels instance, for an ofFloatImage these need to be ofFloatPixels, for an ofImage these need to be unsigned chars. </p>
@@ -1154,7 +1154,7 @@ class ofImage_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="ae05e8a23c92e28bc4aa8f79621d27dda_description"><div class="memberVariant"><span class="type">void </span><span class="name">update</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>Call to ensure that changes to pixels are reflected in the <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> of the image. </p>
+<p>Call to ensure that changes to pixels are reflected in the <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> of the image. </p>
 <p>Many of the ofImage methods call this after they change the pixels, but if you directly manipulate the pixels of the ofImage, then you should make sure to call <a class="el" href="ofImage.html#ae05e8a23c92e28bc4aa8f79621d27dda" title="Call to ensure that changes to pixels are reflected in the ofTexture of the image. ">update()</a> before trying to draw the texture of the image to the screen. </p>
 
 </div></div>
@@ -1245,7 +1245,7 @@ class ofImage_&lt; PixelType &gt;</h3>
 
 <p>Implements <a class="el" href="ofBaseDraws.html#ae333985db65e3ec75bf80267c5bc3fc4">ofBaseDraws</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y, float z) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y, float z) const </span></div><div class="memberDocumentation">
 
 <p>Draw the texture at it&apos;s normal size with depth. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1257,7 +1257,7 @@ class ofImage_&lt; PixelType &gt;</h3>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y, float w, float h) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y, float w, float h) const </span></div><div class="memberDocumentation">
 
 <p>Draw the image at a given size. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1272,7 +1272,7 @@ class ofImage_&lt; PixelType &gt;</h3>
 
 <p>Implements <a class="el" href="ofBaseDraws.html#a60aab39e0163a542ef18a466633d1372">ofBaseDraws</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y, float z, float w, float h) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y, float z, float w, float h) const </span></div><div class="memberDocumentation">
 
 <p>Draw the image at a given size with depth. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1312,7 +1312,7 @@ class ofImage_&lt; PixelType &gt;</h3>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">drawSubsection</span><span class="args">(float x, float y, float z, float w, float h, float sx, float sy) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawSubsection</span><span class="args">(float x, float y, float z, float w, float h, float sx, float sy) const </span></div><div class="memberDocumentation">
 
 <p>Draws a subsection of the image. </p>
 <p>This functions like a clipping mask. Does not altering any pixel data.</p>
@@ -1329,7 +1329,7 @@ class ofImage_&lt; PixelType &gt;</h3>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">drawSubsection</span><span class="args">(float x, float y, float w, float h, float sx, float sy, float sw, float sh) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawSubsection</span><span class="args">(float x, float y, float w, float h, float sx, float sy, float sw, float sh) const </span></div><div class="memberDocumentation">
 
 <p>Draws a subsection of the image. </p>
 <p>This functions like a clipping mask. Does not altering any pixel data.</p>
@@ -1347,7 +1347,7 @@ class ofImage_&lt; PixelType &gt;</h3>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">drawSubsection</span><span class="args">(float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawSubsection</span><span class="args">(float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh) const </span></div><div class="memberDocumentation">
 
 <p>Draws a subsection of the image. </p>
 <p>This functions like a clipping mask. Does not altering any pixel data.</p>
@@ -1442,7 +1442,7 @@ class ofImage_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="a39101e7401e3708dba08bba4c95b46de_description"><div class="memberVariant"><span class="type">void </span><span class="name">reloadTexture</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>Loads ofPixels data into <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> so that <a class="el" href="ofImage.html#a2a3bba7e2686869c793102b2e432c9ba" title="Draw the image at it&apos;s normal size. ">draw()</a> calls reflect changes to the pixels. </p>
+<p>Loads ofPixels data into <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> so that <a class="el" href="ofImage.html#a2a3bba7e2686869c793102b2e432c9ba" title="Draw the image at it&apos;s normal size. ">draw()</a> calls reflect changes to the pixels. </p>
 
 </div></div>
 
@@ -1536,7 +1536,7 @@ class ofColor_&lt; T &gt;</h3>
 
 <p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> instance. </p>
 
-</div><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(float red, float green, float blue, float alpha=limit())</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(float red, float green, float blue, float alpha=limit())</span></div><div class="memberDocumentation">
 
 <p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by using channel values. </p>
 <p>When creating an instance of <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> the channel values must fall within the range represented by the PixelType. By default, the alpha component will take the PixelType&apos;s maximum, producing an opaque color.</p>
@@ -1550,7 +1550,7 @@ class ofColor_&lt; T &gt;</h3>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color, float alpha)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color, float alpha)</span></div><div class="memberDocumentation">
 
 <p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an existing <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>. </p>
 <p>This constructor will use the R, G and B components from the passed color ignoring its alpha channel. The provided alpha channel will be used instead.</p>
@@ -1562,7 +1562,7 @@ class ofColor_&lt; T &gt;</h3>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(float gray, float alpha=limit())</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(float gray, float alpha=limit())</span></div><div class="memberDocumentation">
 
 <p>Construct a grayscale <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by specifiying a single number. </p>
 <p>This constructor will use a single value to describe a grayscale color. This single value will be taken by each of the R, G and B components. The alpha channel is specified separately and will and will default to the PixelType&apos;s maximum resulting in an opaque color.</p>
@@ -1574,7 +1574,7 @@ class ofColor_&lt; T &gt;</h3>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(const ofColor_&lt; SrcType &gt; &amp;color)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(const ofColor_&lt; SrcType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
 <p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an existing <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>. </p>
 <p>This constructor will attempt to convert between color instances of differing precision.</p>
@@ -1663,7 +1663,7 @@ class ofColor_&lt; T &gt;</h3>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float gray, float alpha=limit())</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float gray, float alpha=limit())</span></div><div class="memberDocumentation">
 
 <p>Set a grayscale <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by specifiying a single number. </p>
 <p>When modifying an instance of <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> you can use a single value to describe a grayscale color. This single value will be taken by each of the R, G and B components. The alpha channel is specified separately and will and will default to the PixelType&apos;s maximum resulting in an opaque color.</p>
@@ -1675,7 +1675,7 @@ class ofColor_&lt; T &gt;</h3>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
 <p>Set an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an existing <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>. </p>
 <p>This will use the R, G, B and A components from the passed color.</p>
@@ -3906,7 +3906,7 @@ class ofColor_&lt; T &gt;</h3>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A reference to itself. </dd></dl>
 
-</div><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
 
 <p>Assign a color using a grayscale value. </p>
 <p>R, G and B components are set to the grayscale value and alpha is set to <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </p>
@@ -3963,7 +3963,7 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="a8763680d2c7474b30e06520b724edbbe_description"><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator+</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color) const </span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator+</span><span class="args">(const float &amp;val) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator+</span><span class="args">(const float &amp;val) const </span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -3977,7 +3977,7 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="acba02c12ef30601506f635b379ed22b7_description"><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator+=</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator+=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator+=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -3991,7 +3991,7 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="ab136e09e0af27003d59675c83653be95_description"><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator-</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color) const </span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator-</span><span class="args">(const float &amp;val) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator-</span><span class="args">(const float &amp;val) const </span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -4005,7 +4005,7 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="ae235b4efff5a81423e8ad5c47e63ae00_description"><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator-=</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator-=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator-=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -4019,7 +4019,7 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="a8f68a412170f2fc73ed2f4d13755f1da_description"><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator*</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color) const </span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator*</span><span class="args">(const float &amp;val) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator*</span><span class="args">(const float &amp;val) const </span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -4033,7 +4033,7 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="a09e87b6bbd6aa3ef85f9c9e76d605526_description"><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator*=</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator*=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator*=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -4047,7 +4047,7 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="a3956e06f7f5b5f7b7b7deab74f8fe1c8_description"><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator/</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color) const </span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator/</span><span class="args">(const float &amp;val) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator/</span><span class="args">(const float &amp;val) const </span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -4061,7 +4061,7 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="acff1b18e8ada7e3ba3e938a135d0daff_description"><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator/=</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator/=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator/=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -4075,7 +4075,7 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="a4aa6cd7ee596bfcaa1504487349ec775_description"><div class="memberVariant"><span class="type">const PixelType &amp; </span><span class="name">operator[]</span><span class="args">(int n) const </span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">PixelType &amp; </span><span class="name">operator[]</span><span class="args">(int n)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">PixelType &amp; </span><span class="name">operator[]</span><span class="args">(int n)</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -4283,15 +4283,15 @@ class ofColor_&lt; T &gt;</h3>
 
 <p>Implemented in <a class="el" href="ofTexture.html#af187694221f5112048bebaf9c78d86cb">ofTexture</a>, <a class="el" href="ofImage.html#a2a3bba7e2686869c793102b2e432c9ba">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="ofImage.html#a2a3bba7e2686869c793102b2e432c9ba">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="ofVideoPlayer.html#adfff2727745ae87054945131fba51f9a">ofVideoPlayer</a>, <a class="el" href="ofVideoGrabber.html#a4f4de45b222e62a518f79d0654905008">ofVideoGrabber</a>, and <a class="el" href="ofFbo.html#a5147bb2cf2fe8c869f3364cb32b67335">ofFbo</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y, float w, float h) const =0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y, float w, float h) const =0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofTexture.html#a93625f13f765773e58f1682ed180d0a3">ofTexture</a>, <a class="el" href="ofImage.html#ada6acb4a471b8e4eedd01a38ae77b6d2">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="ofImage.html#ada6acb4a471b8e4eedd01a38ae77b6d2">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="ofVideoPlayer.html#a2bae2b7f18753f64f087b23c694a6dcc">ofVideoPlayer</a>, <a class="el" href="ofVideoGrabber.html#aeb3b98d6c2277f76dcb8b807b2539fb8">ofVideoGrabber</a>, and <a class="el" href="ofFbo.html#ac5e5a10b68a960332dce5770bc925259">ofFbo</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofPoint &amp;point) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofPoint &amp;point) const </span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofRectangle &amp;rect) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofRectangle &amp;rect) const </span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofPoint &amp;point, float w, float h) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofPoint &amp;point, float w, float h) const </span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -4412,7 +4412,7 @@ class ofColor_&lt; T &gt;</h3>
     <div class="classHeader">
       <h1 class="classTitle">ofBaseHasTexture</h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>An abstract class representing an object that can have an <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a>. </p>
+    <div class="classDescription"><div class="textblock"><p>An abstract class representing an object that can have an <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a>. </p>
 </div></div>
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
@@ -4440,12 +4440,12 @@ class ofColor_&lt; T &gt;</h3>
     </div>
 
     <div class="methodDescription " style="display:none" id="a27ed7c3c700e8b6898910d2d9509e551_description"><div class="memberVariant"><span class="type"><a href="ofTexture.html">ofTexture</a></span><span class="name">getTexture</span><span class="args">()=0</span></div><div class="memberDocumentation">
-<dl class="section return"><dt>Returns</dt><dd>a reference to the <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a reference to the <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a>. </dd></dl>
 
 <p>Implemented in <a class="el" href="ofImage.html#ac79e338af23a801282409d7e7b8fddc8">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="ofImage.html#ac79e338af23a801282409d7e7b8fddc8">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="ofVideoPlayer.html#af9c1ba47c9f19ee7a04e792a7416c444">ofVideoPlayer</a>, <a class="el" href="ofVideoGrabber.html#ad7e7980ee4493fc40b76d2cdbda428be">ofVideoGrabber</a>, and <a class="el" href="ofFbo.html#a533e05ec8b827df792de3d24f0d69a39">ofFbo</a>.</p>
 
-</div><div class="memberVariant"><span class="type"><a href="ofTexture.html">ofTexture</a></span><span class="name">getTexture</span><span class="args">() const =0</span></div><div class="memberDocumentation">
-<dl class="section return"><dt>Returns</dt><dd>a const reference to the <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a>. </dd></dl>
+</div><hr><div class="memberVariant"><span class="type"><a href="ofTexture.html">ofTexture</a></span><span class="name">getTexture</span><span class="args">() const =0</span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>a const reference to the <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a>. </dd></dl>
 
 <p>Implemented in <a class="el" href="ofImage.html#ac8e65764233dc3a6823b10d684b078bf">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="ofImage.html#ac8e65764233dc3a6823b10d684b078bf">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="ofVideoPlayer.html#a8a93983c03b2a2b5492fac7e264365f6">ofVideoPlayer</a>, <a class="el" href="ofVideoGrabber.html#a95e369473b1c4678cdc1eab08bb81e67">ofVideoGrabber</a>, and <a class="el" href="ofFbo.html#a5857ae645486d721d4813880e70abc9c">ofFbo</a>.</p>
 
@@ -4461,10 +4461,10 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="a3d2529a36a39ad5277f3050459cc3c80_description"><div class="memberVariant"><span class="type">void </span><span class="name">setUseTexture</span><span class="args">(bool bUseTex)=0</span></div><div class="memberDocumentation">
 
-<p>Enable or disable internal <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> use. </p>
+<p>Enable or disable internal <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> use. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bUseTex</td><td>true if an <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> should be used. </td></tr>
+    <tr><td class="paramname">bUseTex</td><td>true if an <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> should be used. </td></tr>
   </table>
   </dd>
 </dl>
@@ -4482,7 +4482,7 @@ class ofColor_&lt; T &gt;</h3>
     </div>
 
     <div class="methodDescription " style="display:none" id="a943d7c05f2f030c2211f38799b148b4b_description"><div class="memberVariant"><span class="type">bool </span><span class="name">isUsingTexture</span><span class="args">() const =0</span></div><div class="memberDocumentation">
-<dl class="section return"><dt>Returns</dt><dd>true if an internal <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> is being used. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if an internal <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> is being used. </dd></dl>
 
 <p>Implemented in <a class="el" href="ofImage.html#a26e5e851236ecd580dddab7411ebf531">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="ofImage.html#a26e5e851236ecd580dddab7411ebf531">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="ofVideoPlayer.html#a41e17987af9793a7b38a3081891b0961">ofVideoPlayer</a>, <a class="el" href="ofVideoGrabber.html#a58707ff67e85a1804ac6a57cb5b29652">ofVideoGrabber</a>, and <a class="el" href="ofFbo.html#a1cb64a9c570f571965d51d02e6a87445">ofFbo</a>.</p>
 
@@ -4494,7 +4494,7 @@ class ofColor_&lt; T &gt;</h3>
     <div class="classHeader">
       <h1 class="classTitle">ofBaseHasTexturePlanes</h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>An abstract class representing an object that <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> planes. </p>
+    <div class="classDescription"><div class="textblock"><p>An abstract class representing an object that <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> planes. </p>
 </div></div>
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
@@ -4522,12 +4522,12 @@ class ofColor_&lt; T &gt;</h3>
     </div>
 
     <div class="methodDescription " style="display:none" id="abc5f669cb95a86435f3ec8f886c371b0_description"><div class="memberVariant"><span class="type"><a href="ofTexture.html">ofTexture</a></span><span class="name">getTexturePlanes</span><span class="args">()=0</span></div><div class="memberDocumentation">
-<dl class="section return"><dt>Returns</dt><dd>a reference to a std::vector containing the <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> planes. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a reference to a std::vector containing the <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> planes. </dd></dl>
 
 <p>Implemented in <a class="el" href="ofVideoPlayer.html#a462718890c7803b18598f2542eaec4c8">ofVideoPlayer</a>, and <a class="el" href="ofVideoGrabber.html#af74b2aa9dd3cf2a4afd5dea0365a0186">ofVideoGrabber</a>.</p>
 
-</div><div class="memberVariant"><span class="type"><a href="ofTexture.html">ofTexture</a></span><span class="name">getTexturePlanes</span><span class="args">() const =0</span></div><div class="memberDocumentation">
-<dl class="section return"><dt>Returns</dt><dd>a const reference to a std::vector containing the <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> planes. </dd></dl>
+</div><hr><div class="memberVariant"><span class="type"><a href="ofTexture.html">ofTexture</a></span><span class="name">getTexturePlanes</span><span class="args">() const =0</span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>a const reference to a std::vector containing the <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> planes. </dd></dl>
 
 <p>Implemented in <a class="el" href="ofVideoPlayer.html#aff819a3538cefb82d2b2f9769c926309">ofVideoPlayer</a>, and <a class="el" href="ofVideoGrabber.html#a6f5a94eeec1924309b8e3f81078cfd36">ofVideoGrabber</a>.</p>
 
@@ -4620,7 +4620,7 @@ class ofBaseHasPixels_&lt; T &gt;</h3>
 
 <p>Implemented in <a class="el" href="ofImage.html#a6ed2791ec7f0c4347e7e5924481a12c3">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="ofImage.html#a6ed2791ec7f0c4347e7e5924481a12c3">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="ofGstVideoUtils.html#ab4565328b835a6fe7f282856abd0352c">ofGstVideoUtils</a>, <a class="el" href="ofVideoPlayer.html#a253d852425650ad27ea488620763b2fc">ofVideoPlayer</a>, <a class="el" href="ofVideoGrabber.html#a19d46a2de4d99148498dba72dd88d106">ofVideoGrabber</a>, <a class="el" href="ofGstVideoGrabber.html#a680437892eb7e4fb983bb1bb0d607cdb">ofGstVideoGrabber</a>, <a class="el" href="ofGstVideoPlayer.html#a734eb131ebaf176917beaf5e68f1c0e7">ofGstVideoPlayer</a>, <a class="el" href="ofAVFoundationPlayer.html#a2c71e08805ff54a8a523389cecb46579">ofAVFoundationPlayer</a>, <a class="el" href="ofQTKitGrabber.html#a971fa27d053d8a00cf45652a71251e21">ofQTKitGrabber</a>, <a class="el" href="ofQuickTimeGrabber.html#afc9de53c2ca686207f6ac2a087b3827c">ofQuickTimeGrabber</a>, <a class="el" href="ofDirectShowGrabber.html#a57df9bc3112bb9900df5ec831a8d65ae">ofDirectShowGrabber</a>, and <a class="el" href="ofDirectShowPlayer.html#a09d1d0e4c07ff862bbfd96c736a3c50b">ofDirectShowPlayer</a>.</p>
 
-</div><div class="memberVariant"><span class="type"><a href="ofPixels.html">ofPixels_</a></span><span class="name">getPixels</span><span class="args">() const =0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"><a href="ofPixels.html">ofPixels_</a></span><span class="name">getPixels</span><span class="args">() const =0</span></div><div class="memberDocumentation">
 
 <p>Get a const reference to the underlying ofPixels. </p>
 <dl class="section return"><dt>Returns</dt><dd>a const reference the underlying ofPixels. </dd></dl>
@@ -4736,7 +4736,7 @@ class ofBaseImage_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="a27614c83263da3af6ba55f91ec651b70_description"><div class="memberVariant"><span class="type">void </span><span class="name">audioIn</span><span class="args">(float *input, int bufferSize, int nChannels, int deviceID, long unsigned long tickCount)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">audioIn</span><span class="args">(float *input, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">audioIn</span><span class="args">(float *input, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -4787,7 +4787,7 @@ class ofBaseImage_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="affbe31ef262e3fad9bbb70538523c191_description"><div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(float *output, int bufferSize, int nChannels, int deviceID, long unsigned long tickCount)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(float *output, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(float *output, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -5051,9 +5051,9 @@ class ofBaseImage_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="a27c96b31dd24e51209ceb93cdcbb9b79_description"><div class="memberVariant"><span class="type"><a href="ofTexture.html">ofTexture</a></span><span class="name">getTexturePtr</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>Get the video grabber&apos;s internal <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> pointer if available. </p>
-<dl class="section note"><dt>Note</dt><dd>Subclasses should implement this method only if internal API can upload video grabber pixels directly to an <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a>.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>the internal <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> pointer or NULL if not available. </dd></dl>
+<p>Get the video grabber&apos;s internal <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> pointer if available. </p>
+<dl class="section note"><dt>Note</dt><dd>Subclasses should implement this method only if internal API can upload video grabber pixels directly to an <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a>.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the internal <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> pointer or NULL if not available. </dd></dl>
 
 </div></div>
 
@@ -5625,37 +5625,37 @@ class ofBaseImage_&lt; T &gt;</h3>
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#a65a0eaf1a4520ab2b9938c8dfb500815">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a86f166dce91098e812e8c2402d97570a">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#ab8d5d534ca0ef6547e6ca3a3466f4d08">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#adf732754ca0af5c8785201a3a27fc418">ofGLRenderer</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofPath &amp;shape) const =0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofPath &amp;shape) const =0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#a5ae9349338757e22b0d0af70efeb08da">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#a5b18a008cc15b52d225284bc7e91d8e3">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#a17886662eccc9c85bd22377aae3e99eb">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#a60eed687784db0578e445084819f21e6">ofGLRenderer</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofMesh &amp;mesh, ofPolyRenderMode renderType) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofMesh &amp;mesh, ofPolyRenderMode renderType) const </span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofMesh &amp;vertexData, bool useColors, bool useTextures, bool useNormals) const =0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofMesh &amp;vertexData, bool useColors, bool useTextures, bool useNormals) const =0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#af9777a3e2c2380f36217c3c4d18efe11">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a5741167c826697109035f996e02057c5">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a4fa1ea53341c92b5f2a07db52ae011c4">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#acb0e4993d16dea7f449f26748019a6e1">ofGLRenderer</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofMesh &amp;vertexData, ofPolyRenderMode renderType, bool useColors, bool useTextures, bool useNormals) const =0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofMesh &amp;vertexData, ofPolyRenderMode renderType, bool useColors, bool useTextures, bool useNormals) const =0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#a14119fc0b56dbd6455cbe33ec8a164b6">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a72bac55b4872dda9aea649734931e433">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a6a36e4177c890bc429b27c5533c46fa5">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a463d1255eb48d662530d4cc525ac5c6b">ofGLRenderer</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const of3dPrimitive &amp;model, ofPolyRenderMode renderType) const =0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const of3dPrimitive &amp;model, ofPolyRenderMode renderType) const =0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#a047910b3b2fafe0eaff66cb0dcbc4cb0">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a204283215285655b3af2763e4fefb9d7">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a32e5e57ed643788395c15eec43706a50">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a5fcf228c52858f917e4557d46f269733">ofGLRenderer</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofImage &amp;image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh) const =0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofImage &amp;image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh) const =0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#ad2aa1848b5fe61f69b4fc6374f9fcdd6">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a67140cd65b46ab37afe0e6460064c837">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a9d7a90933bd94f792c772c563ecdf5f4">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a4dc31bd1c84fc507aaca2366088a4718">ofGLRenderer</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofFloatImage &amp;image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh) const =0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofFloatImage &amp;image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh) const =0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#a7cdbf0f812c34d7061ce12e005041b9f">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#ab4c15286e9cb634329c08281ebaed319">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a814a67484c33f959757415680be4ca69">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a876f278b62b4dbf6e8a47497616d8ce5">ofGLRenderer</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofShortImage &amp;image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh) const =0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofShortImage &amp;image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh) const =0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#a366b05e072bab09fea09d3592bed30d1">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a95ba00af4bdd230ed669c315028608e3">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a7785c9128ac946b7c516aa8126c9a301">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#aa238594016b07aaca1ab87a27275d76f">ofGLRenderer</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofBaseVideoDraws &amp;video, float x, float y, float w, float h) const =0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofBaseVideoDraws &amp;video, float x, float y, float w, float h) const =0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#a8cde91dd8d16ed0acac7756414e9eb0c">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#ae4b8e11962752afb94621faac73e938d">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#af21d9abffcf4d6a1263af9fb96f0cefe">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#ad86a4989901319ba3eb410520dfe19a5">ofGLRenderer</a>.</p>
 
@@ -5729,7 +5729,7 @@ class ofBaseImage_&lt; T &gt;</h3>
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#aa5cf782b4da20f9e72665dc50d41370f">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#aeb4bdbd4882a0846cdd95d4a17c981a3">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a89da006b34bf51edec21a78791690e87">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a57e0572c4ce586b77b1157b9f6ff0f96">ofGLRenderer</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">viewport</span><span class="args">(float x=0, float y=0, float width=-1, float height=-1, bool vflip=ofIsVFlipped())=0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">viewport</span><span class="args">(float x=0, float y=0, float width=-1, float height=-1, bool vflip=ofIsVFlipped())=0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#af1d7dd8be3dd71a63436d098ebadee57">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#ad5a7ade9b372499f6106371af3c25e30">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a85bf43f8009c47a2e7f6b3eab1181c6d">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a97900dffc43f20d14e3d681d170c9a40">ofGLRenderer</a>.</p>
 
@@ -5943,7 +5943,7 @@ class ofBaseImage_&lt; T &gt;</h3>
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#a9c0d3a09db035e040041bbee4636168d">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#ac7767ad5bc65fe42932d8043ffccd699">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a0293e9bd63be6837e6cd670d0f8457c9">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#ac90b43ad1bb96f962af54f1488e0e819">ofGLRenderer</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">translate</span><span class="args">(const ofPoint &amp;p)=0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">translate</span><span class="args">(const ofPoint &amp;p)=0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#a3cfe7642e1c12374db588e345102f071">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#acc56715da18f40bc224dc3caca21b6b1">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a70ff1f06a92a236fa74ffa9440c09428">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a2e254123fc865dd0a8f5133f185b2cbc">ofGLRenderer</a>.</p>
 
@@ -6073,7 +6073,7 @@ class ofBaseImage_&lt; T &gt;</h3>
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#aedd86da6d906a1aae877177854c6c8cf">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a12e2466567bf1e322f09ef5bdf6c07e2">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a24e929f48598ca71b3a0a9efebb4f88c">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#ab0d3a8eee5902bff267c7c874d684b5d">ofGLRenderer</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">loadMatrix</span><span class="args">(const float *m)=0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">loadMatrix</span><span class="args">(const float *m)=0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#a02191cd3485f00f4047768b09cd720a9">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a4008bd4d2425e4633e3ef5c9c7f7290a">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a8b881662039cf6ba27da667bb1156b99">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a385e468989bd43ee68553d0bbd3e4ae5">ofGLRenderer</a>.</p>
 
@@ -6091,7 +6091,7 @@ class ofBaseImage_&lt; T &gt;</h3>
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#a6d6ba27b14e1d2fe2a96678ed11d3570">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a21933eedef7fe07dce06776cedeb6100">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a912855a626c68ceb31db22f264556c10">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a42edcb41199ad1422c73b605596202d8">ofGLRenderer</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">multMatrix</span><span class="args">(const float *m)=0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">multMatrix</span><span class="args">(const float *m)=0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#abe071e501788e21e22bb098ba35c3b9c">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a02ec53edba9b748ae22897bd8875f024">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a2e4381580c03330f1dc802b79d365211">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a2444b7f7346f0e6172f709dc9995f233">ofGLRenderer</a>.</p>
 
@@ -6347,19 +6347,19 @@ class ofBaseImage_&lt; T &gt;</h3>
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#a716ce382e6ac92a64cc5d62c46cbc3d9">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#aae49df33ec0e2e50b192d02bc9254329">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a1f7ca4cbe94d014246f6dfe807ff1bf9">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a3c1195df49743118619b099a77a74a11">ofGLRenderer</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(int r, int g, int b, int a)=0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(int r, int g, int b, int a)=0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#ac7eb16d71c34915a020b45e66dbde7b2">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#ae73b748777bf75fb64ed1d5f6f5db023">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a9804ea8b061bc1f813e10e88646112a8">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a0ea5b1baf697b63cd38d9fe0e5ea88e8">ofGLRenderer</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(const ofColor &amp;color)=0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(const ofColor &amp;color)=0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#a7af63c0b192fca3b52780884b812c11d">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a1cf81f64f592e2277b88bfeb5cbd6aa7">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a5f7045cb762cfd9491104416395ce4f2">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a43aca9fa8ea97a1db2ed51c7b2b6b0d6">ofGLRenderer</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(const ofColor &amp;color, int _a)=0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(const ofColor &amp;color, int _a)=0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#aa825e39c553e6b7967fa7d1adb2a1a7c">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a0912699ae36ae6108f65e0c271a13b31">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a3f6e9dc3159eb790066081c6a3af3e2f">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a7d256ba490f4afc6214ca203b2750473">ofGLRenderer</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(int gray)=0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(int gray)=0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#aa0841ea3dd7853753afe816a80c51cbc">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#aaf5079ce467b4741ee9beea895e09109">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#af9a4cf313e6acd6626f919df241b5ddb">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a12b306db178d8ddca5c3976dbbd7956e">ofGLRenderer</a>.</p>
 
@@ -6419,15 +6419,15 @@ class ofBaseImage_&lt; T &gt;</h3>
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#a7c660859c37d6ce0d87ff287f0153a3b">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#afe6b29f670e797e1cab85562ae365372">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a7d1ecf5b46be4597b203f657e9ddaa17">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#af6e5ccbc3e326071a7cbc6ddc3396e5e">ofGLRenderer</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">background</span><span class="args">(float brightness)=0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">background</span><span class="args">(float brightness)=0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#ad72e46c9c739c319cebef3cba720cdf2">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a55ee27e3f9b943c50d011ff5a038e995">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#acce70f81673b24b4fcfa71761c1e5e3e">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a85246318e21a701975ffb7653821c175">ofGLRenderer</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">background</span><span class="args">(int hexColor, float _a=255.0f)=0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">background</span><span class="args">(int hexColor, float _a=255.0f)=0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#a399467b010c7bffb8c68f6254cd1403b">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a8fa6a2ca6fdefd7008eb85cffef2447a">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#acb60d89fbbee2e5ea7bfb02afd523a63">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a0ca4eb5d33451a27bc3ecfbee06ba8d4">ofGLRenderer</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">background</span><span class="args">(int r, int g, int b, int a=255)=0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">background</span><span class="args">(int r, int g, int b, int a=255)=0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#abfad33e9148287de46953db0443d0d3d">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a1e21b211773d1dd77d668835f964e811">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a8eaa71b129cd681b725c760f86fd246b">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#ad83bc3d1980ee121f9936b0ef20207b1">ofGLRenderer</a>.</p>
 
@@ -6473,11 +6473,11 @@ class ofBaseImage_&lt; T &gt;</h3>
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#a20795a03b7086b44ef40d8e88a0b3333">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a2f8fc392d9aedffe1a0bccea1ce5b142">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a34e40686ce81f218c8274fe62129649f">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a5598717cc64ef307209be32e755192a9">ofGLRenderer</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">clear</span><span class="args">(float r, float g, float b, float a=0)=0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">clear</span><span class="args">(float r, float g, float b, float a=0)=0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#a7940fb36045037c38c0a8706968735e2">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a08f08fcdb8864fde81872d1f3b2308c9">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#ab2961fb8b54755dcb3cd53568314be77">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#ab0a453bcb7d5c7b981a0c01104735633">ofGLRenderer</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">clear</span><span class="args">(float brightness, float a=0)=0</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">clear</span><span class="args">(float brightness, float a=0)=0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofRendererCollection.html#a9b492380fb0424bb838c1a67d279b886">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a475f7c41e13ffe154ed353c4b2e836e9">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a534f3fd18ac2991ae33e80d013d7eda6">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a6b2b684fb5450c3ac1e196927dac6be9">ofGLRenderer</a>.</p>
 
@@ -7385,9 +7385,9 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="a02b8aa5dd03f4403e37186c8eadaa872_description"><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, int channels)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, ofPixelFormat type)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, ofPixelFormat type)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, ofImageType type)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, ofImageType type)</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -7401,7 +7401,7 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="aa14e0f35caf352220a96bfb5cdea1327_description"><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(PixelType val)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(int channel, PixelType val)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(int channel, PixelType val)</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -7415,9 +7415,9 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="a1f0f57c453de1515dfb3d9608baaf998_description"><div class="memberVariant"><span class="type">void </span><span class="name">setFromPixels</span><span class="args">(const PixelType *newPixels, int w, int h, int channels)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">setFromPixels</span><span class="args">(const PixelType *newPixels, int w, int h, ofPixelFormat pixelFormat)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setFromPixels</span><span class="args">(const PixelType *newPixels, int w, int h, ofPixelFormat pixelFormat)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">setFromPixels</span><span class="args">(const PixelType *newPixels, int w, int h, ofImageType type)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setFromPixels</span><span class="args">(const PixelType *newPixels, int w, int h, ofImageType type)</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -7431,7 +7431,7 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="afbb8498d2b71f9925fcede6863e739be_description"><div class="memberVariant"><span class="type">void </span><span class="name">setFromExternalPixels</span><span class="args">(PixelType *newPixels, int w, int h, int channels)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">setFromExternalPixels</span><span class="args">(PixelType *newPixels, int w, int h, ofPixelFormat pixelFormat)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setFromExternalPixels</span><span class="args">(PixelType *newPixels, int w, int h, ofPixelFormat pixelFormat)</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -7445,7 +7445,7 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="af0a1573a60d77d4d9bd48d387f5c6486_description"><div class="memberVariant"><span class="type">void </span><span class="name">setFromAlignedPixels</span><span class="args">(const PixelType *newPixels, int width, int height, int channels, int stride)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">setFromAlignedPixels</span><span class="args">(const PixelType *newPixels, int width, int height, ofPixelFormat pixelFormat, int stride)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setFromAlignedPixels</span><span class="args">(const PixelType *newPixels, int width, int height, ofPixelFormat pixelFormat, int stride)</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -7606,7 +7606,7 @@ class ofPixels_&lt; PixelType &gt;</h3>
 <p>Retrieves pixel data from the ofPixel object. </p>
 <dl class="section return"><dt>Returns</dt><dd>A raw pointer to the pixel data. </dd></dl>
 
-</div><div class="memberVariant"><span class="type">const PixelType </span><span class="name">getPixels</span><span class="args">()</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">const PixelType </span><span class="name">getPixels</span><span class="args">()</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -7620,7 +7620,7 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="a4a5a350c779c3ef5de5c0bd8c4eac2e2_description"><div class="memberVariant"><span class="type">PixelType * </span><span class="name">getData</span><span class="args">()</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">const PixelType * </span><span class="name">getData</span><span class="args">() const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">const PixelType * </span><span class="name">getData</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -7634,7 +7634,7 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="a031e0f9abd0066c8cfce38160efdcff9_description"><div class="memberVariant"><span class="type">operator PixelType </span><span class="name"></span><span class="args">()</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">operator const PixelType </span><span class="name"></span><span class="args">()</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">operator const PixelType </span><span class="name"></span><span class="args">()</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -7672,9 +7672,9 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="a1f8d537a4d8e7af99bd2096f244fab3d_description"><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(int x, int y, const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(int index, const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(int index, const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -7688,7 +7688,7 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="ad7b5fa45ae78789c5b2fed1a9d82dc67_description"><div class="memberVariant"><span class="type">const PixelType &amp; </span><span class="name">operator[]</span><span class="args">(int pos) const </span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">PixelType &amp; </span><span class="name">operator[]</span><span class="args">(int pos)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">PixelType &amp; </span><span class="name">operator[]</span><span class="args">(int pos)</span></div><div class="memberDocumentation">
 
 </div></div>
 

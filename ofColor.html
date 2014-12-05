@@ -138,7 +138,7 @@ class ofColor_&lt; T &gt;</h3>
 
 <p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> instance. </p>
 
-</div><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(float red, float green, float blue, float alpha=limit())</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(float red, float green, float blue, float alpha=limit())</span></div><div class="memberDocumentation">
 
 <p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by using channel values. </p>
 <p>When creating an instance of <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> the channel values must fall within the range represented by the PixelType. By default, the alpha component will take the PixelType&apos;s maximum, producing an opaque color.</p>
@@ -152,7 +152,7 @@ class ofColor_&lt; T &gt;</h3>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color, float alpha)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color, float alpha)</span></div><div class="memberDocumentation">
 
 <p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an existing <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>. </p>
 <p>This constructor will use the R, G and B components from the passed color ignoring its alpha channel. The provided alpha channel will be used instead.</p>
@@ -164,7 +164,7 @@ class ofColor_&lt; T &gt;</h3>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(float gray, float alpha=limit())</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(float gray, float alpha=limit())</span></div><div class="memberDocumentation">
 
 <p>Construct a grayscale <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by specifiying a single number. </p>
 <p>This constructor will use a single value to describe a grayscale color. This single value will be taken by each of the R, G and B components. The alpha channel is specified separately and will and will default to the PixelType&apos;s maximum resulting in an opaque color.</p>
@@ -176,7 +176,7 @@ class ofColor_&lt; T &gt;</h3>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(const ofColor_&lt; SrcType &gt; &amp;color)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(const ofColor_&lt; SrcType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
 <p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an existing <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>. </p>
 <p>This constructor will attempt to convert between color instances of differing precision.</p>
@@ -265,7 +265,7 @@ class ofColor_&lt; T &gt;</h3>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float gray, float alpha=limit())</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float gray, float alpha=limit())</span></div><div class="memberDocumentation">
 
 <p>Set a grayscale <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by specifiying a single number. </p>
 <p>When modifying an instance of <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> you can use a single value to describe a grayscale color. This single value will be taken by each of the R, G and B components. The alpha channel is specified separately and will and will default to the PixelType&apos;s maximum resulting in an opaque color.</p>
@@ -277,7 +277,7 @@ class ofColor_&lt; T &gt;</h3>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
 <p>Set an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an existing <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>. </p>
 <p>This will use the R, G, B and A components from the passed color.</p>
@@ -2508,7 +2508,7 @@ class ofColor_&lt; T &gt;</h3>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A reference to itself. </dd></dl>
 
-</div><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
 
 <p>Assign a color using a grayscale value. </p>
 <p>R, G and B components are set to the grayscale value and alpha is set to <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </p>
@@ -2565,7 +2565,7 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="a8763680d2c7474b30e06520b724edbbe_description"><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator+</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color) const </span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator+</span><span class="args">(const float &amp;val) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator+</span><span class="args">(const float &amp;val) const </span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -2579,7 +2579,7 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="acba02c12ef30601506f635b379ed22b7_description"><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator+=</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator+=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator+=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -2593,7 +2593,7 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="ab136e09e0af27003d59675c83653be95_description"><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator-</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color) const </span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator-</span><span class="args">(const float &amp;val) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator-</span><span class="args">(const float &amp;val) const </span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -2607,7 +2607,7 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="ae235b4efff5a81423e8ad5c47e63ae00_description"><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator-=</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator-=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator-=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -2621,7 +2621,7 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="a8f68a412170f2fc73ed2f4d13755f1da_description"><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator*</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color) const </span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator*</span><span class="args">(const float &amp;val) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator*</span><span class="args">(const float &amp;val) const </span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -2635,7 +2635,7 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="a09e87b6bbd6aa3ef85f9c9e76d605526_description"><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator*=</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator*=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator*=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -2649,7 +2649,7 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="a3956e06f7f5b5f7b7b7deab74f8fe1c8_description"><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator/</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color) const </span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator/</span><span class="args">(const float &amp;val) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator/</span><span class="args">(const float &amp;val) const </span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -2663,7 +2663,7 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="acff1b18e8ada7e3ba3e938a135d0daff_description"><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator/=</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator/=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a></span><span class="name">operator/=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -2677,7 +2677,7 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription " style="display:none" id="a4aa6cd7ee596bfcaa1504487349ec775_description"><div class="memberVariant"><span class="type">const PixelType &amp; </span><span class="name">operator[]</span><span class="args">(int n) const </span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">PixelType &amp; </span><span class="name">operator[]</span><span class="args">(int n)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">PixelType &amp; </span><span class="name">operator[]</span><span class="args">(int n)</span></div><div class="memberDocumentation">
 
 </div></div>
 

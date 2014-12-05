@@ -116,20 +116,28 @@ nav {
 
 .open .methodHeader {
   border-color: #e6e6e6; }
+  .open .methodHeader .note {
+    color: red; }
 
 .methodDescription {
-  background-color: #f6f6f6;
+  background-color: #f8f8f8;
   border: 1px solid #e6e6e6;
   margin-bottom: 15px;
   padding: 10px 10px 5px 15px; }
+  .methodDescription hr {
+    border-top: 1px solid #e2e2e2; }
+  .methodDescription img {
+    max-width: 640px;
+    margin-bottom: 8px; }
   .methodDescription .memberVariant {
+    margin-left: 10px;
     margin-bottom: 8px;
     font-family: 'Inconsolata', monospace;
     font-size: 14px; }
     .methodDescription .memberVariant .name {
       font-weight: bold; }
   .methodDescription .memberDocumentation {
-    padding-left: 15px;
+    padding-left: 45px;
     margin-bottom: 8px; }
   .methodDescription table {
     border-collapse: collapse; }

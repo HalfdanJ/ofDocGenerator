@@ -44,7 +44,11 @@
     <div class="classHeader">
       <h1 class="classTitle">ofTexture.h</h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p><a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> is used to create textures that live on your graphics card. You can use the <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> class to manually create textures from raw bitmap data, but more oftenly you will use other classes like ofImage or <a class="el" href="ofVideoGrabber.html">ofVideoGrabber</a> to create textures from image files or camera feeds.</p>
+<p>ofTextures is a wrapper around OpenGL textures, and allows a way to store pixel data on the graphics card, and quickly render it.</p>
+<p><a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> allows use of non-power of 2 textures in opengl, and has a series of functions to upload and download data in different formats</p>
+<p>You need to allocate the texture before drawing it or loading data into it. </p>
+</div></div>
     <div class="classMethods"><div id="Globaltexturesettings">
     <h3 class="sectionHeader">Global texture settings</h3>
     <div class="sectionDescription"></div>
@@ -59,7 +63,7 @@
     <div class="methodDescription " style="display:none" id="ae0f994e7424dc7c5309aff96109228da_description"><div class="memberVariant"><span class="type">bool </span><span class="name">ofGetUsingArbTex</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Check whether OF is using GL_TEXTURE_RECTANGLE rectangular or GL_TEXTURE_2D textures. </p>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures. ">ofEnableArbTex()</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures. GL_TEXTURE_RECTANGLE textures are more intuitive since they allow ...">ofEnableArbTex()</a> </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true if using GL_TEXTURE_RECTANGLE textures, false if using GL_TEXTURE_2D textures. </dd></dl>
 
 </div></div>
@@ -74,8 +78,7 @@
 
     <div class="methodDescription " style="display:none" id="a2522ef9f2c9415f8ac2d967c6bb37b01_description"><div class="memberVariant"><span class="type">void </span><span class="name">ofEnableArbTex</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>Use GL_TEXTURE_RECTANGLE textures. </p>
-<p>GL_TEXTURE_RECTANGLE textures are more intuitive since they allow pixel based coordinates and are enabled by default.</p>
+<p>Use GL_TEXTURE_RECTANGLE textures. GL_TEXTURE_RECTANGLE textures are more intuitive since they allow pixel based coordinates and are enabled by default. </p>
 <p>GL_TEXTURE_2D textures use normalised texture coordinates (a float value between 0 and 1 is used to express texture coordinates along width and height.)</p>
 <p>GL_TEXTURE_2D textures are more widely supported and allow advanced features such as mipmaps and texture compression.</p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#a6b679cd9538f7a1399cec6078c227c71" title="Use GL_TEXTURE_2D textures. ">ofDisableArbTex()</a> </dd></dl>
@@ -97,7 +100,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Use GL_TEXTURE_2D textures. </p>
 <p>GL_TEXTURE_2D is OpenGL&apos;s default way of handling textures and does support a wider range of core OpenGL features such as mipmaps.</p>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures. ">ofEnableArbTex()</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures. GL_TEXTURE_RECTANGLE textures are more intuitive since they allow ...">ofEnableArbTex()</a> </dd></dl>
 
 </div></div>
 
@@ -129,7 +132,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Use normalized (0 - 1) texture coordinates. </p>
 <p>By default, textures in OF work with pixel based coordinates based on given content dimensions (images size, fbo size, etc). Normalized (0 - 1) coordinates are the traditional GL default as they allow working with internal texture data without having to worry about specific dimensions of the content.</p>
-<p>This overrides individual <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> wrap settings.</p>
+<p>This overrides individual <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> wrap settings.</p>
 <dl class="section see"><dt>See Also</dt><dd><a href="http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml">http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml</a> </dd></dl>
 
 </div></div>
@@ -161,7 +164,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Set custom global texture wrapping. </p>
 <p>By default, textures are clamped to their edges with GL_CLAMP_TO_EDGE. Setting a repeat mode like GL_REPEAT allows you to create tiled backgrounds with small textures.</p>
-<p>This overrides individual <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> wrap settings. </p>
+<p>This overrides individual <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> wrap settings. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#ac980af43af2cacdbd57e1bfcd8e222e2" title="Set texture wrapping. ">ofTexture::setTextureWrap</a> </dd>
 <dd>
 <a href="http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml">http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml</a></dd></dl>
@@ -204,7 +207,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="a30bdfbb183a4f9b034378c23b89a67b8_description"><div class="memberVariant"><span class="type">void </span><span class="name">ofRestoreTextureWrap</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Removes global custom texture wrapping. </p>
-<p>Restores individual <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> wrap settings. </p>
+<p>Restores individual <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> wrap settings. </p>
 <dl class="section warning"><dt>Warning</dt><dd>Deprecated. Use member methods instead. </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="of_texture_8cpp.html#a4804b412c789b866234f3049de856883">ofSetTextureWrap()</a> </dd></dl>
 
@@ -221,7 +224,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="ab2bf8d06066dcb3d8edfba671e9668b3_description"><div class="memberVariant"><span class="type">void </span><span class="name">ofSetMinMagFilters</span><span class="args">(GLfloat minFilter=GL_LINEAR, GLfloat magFilter=GL_LINEAR)</span></div><div class="memberDocumentation">
 
 <p>Set custom global texture minification/magnification scaling filters. </p>
-<p>This setting allows global control over how OpenGL scales textures. It overrides individual <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> min &amp; mag filter settings.</p>
+<p>This setting allows global control over how OpenGL scales textures. It overrides individual <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> min &amp; mag filter settings.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Deprecated. Use member methods instead. </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#a60ebbd584455b495d0b56c0fa563680a" title="Set texture minification/magnification scaling filters. ">ofTexture::setTextureMinMagFilter()</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -261,7 +264,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="a968ad2b8d21e033096800c5a273e67b6_description"><div class="memberVariant"><span class="type">void </span><span class="name">ofRestoreMinMagFilters</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Removes global custom texture wrapping. </p>
-<p>Restores individual <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> min mag filter settings. </p>
+<p>Restores individual <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> min mag filter settings. </p>
 <dl class="section warning"><dt>Warning</dt><dd>Deprecated. Use member methods instead. </dd></dl>
 
 </div></div>
@@ -350,9 +353,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="classHeader">
       <h1 class="classTitle">ofTexture</h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>An OpenGL image on the the graphics card. </p>
-<p><a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> is a wrapper for the OpenGL texture API. It allows use of non-power of 2 textures and to upload and draw graphical data.</p>
-<dl class="section see"><dt>See Also</dt><dd><a href="https://www.opengl.org/wiki/Texture">https://www.opengl.org/wiki/Texture</a> </dd></dl>
+    <div class="classDescription"><div class="textblock"><p>A wrapper class for an OpenGL texture. </p>
 </div></div>
     <div class="classMethods"><div id="Constructionandallocation">
     <h3 class="sectionHeader">Construction and allocation</h3>
@@ -367,14 +368,14 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
     <div class="methodDescription " style="display:none" id="ae091e52a2a4a86bc57bf8f17833bbfb8_description"><div class="memberVariant"><span class="type"> </span><span class="name">ofTexture</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>Construct an <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> instance. </p>
+<p>Construct an <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> instance. </p>
 
-</div><div class="memberVariant"><span class="type"> </span><span class="name">ofTexture</span><span class="args">(const ofTexture &amp;mom)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofTexture</span><span class="args">(const ofTexture &amp;mom)</span></div><div class="memberDocumentation">
 
-<p>Construct an <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> from an existing <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a>. </p>
+<p>Construct an <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> from an existing <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mom</td><td>The <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> to copy. Reuses internal GL texture ID. </td></tr>
+    <tr><td class="paramname">mom</td><td>The <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> to copy. Reuses internal GL texture ID. </td></tr>
   </table>
   </dd>
 </dl>
@@ -400,7 +401,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofTextureData &amp;textureData, int glFormat, int pixelType)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofTextureData &amp;textureData, int glFormat, int pixelType)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture using the given settings &amp; specify the format. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -412,20 +413,22 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, int glInternalFormat)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, int glInternalFormat)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture of a given size and format. </p>
+<p>The width (w) and height (h) do not necessarily need to be powers of 2, but they do need to be large enough to contain the data you will upload to the texture.</p>
+<p>The internal data type <code>glFormat</code> describes how OpenGL will store this texture internally. For example, if you want a grayscale texture, you can use <code>GL_LUMINANCE</code>. You can upload what ever type of data you want (using <code><a class="el" href="ofTexture.html#a4d480834af11e4016652d7f729264df7" title="Load byte pixel data. ">loadData()</a></code>) but internally, opengl will store the information as grayscale. Other types include: <code>GL_RGB</code>, <code>GL_RGBA</code>.</p>
 <p>Uses the currently set OF texture type. Defaults to ARB rectangular textures if they are supported. (They are not supported on OpenGL ES).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">w</td><td>Desired width in pixels. </td></tr>
     <tr><td class="paramname">h</td><td>Desired height in pixels. </td></tr>
-    <tr><td class="paramname">glInternalFormat</td><td>GL texture format: GL_RGBA, GL_LUMINANCE, etc. </td></tr>
+    <tr><td class="paramname">glFormat</td><td>OpenGL internal data format: <code>GL_RGBA</code>, <code>GL_LUMINANCE</code>, etc. </td></tr>
   </table>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, int glInternalFormat, int glFormat, int pixelType)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, int glInternalFormat, int glFormat, int pixelType)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture of a given size and format. </p>
 <p>Same as allocate(w, h, glInternalFormat) with the addition of:</p>
@@ -436,12 +439,12 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, int glInternalFormat, bool bUseARBExtention)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, int glInternalFormat, bool bUseARBExtention)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture of a given size and format. Specify texture type. </p>
-<p>This lets you overide the default OF texture type, in case you need a square GL_TEXTURE_2D texture.</p>
+<p>This allows to enable the ARBE extension for this texture. This will overide the default OF texture type, in case you need a square texture (<code>GL_TEXTURE_2D</code>).</p>
 <dl class="section warning"><dt>Warning</dt><dd>ARB textures are not available in OpenGL ES. </dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="of_texture_8cpp.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures. ">ofEnableArbTex()</a></dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="of_texture_8cpp.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures. GL_TEXTURE_RECTANGLE textures are more intuitive since they allow ...">ofEnableArbTex()</a></dd></dl>
 <p>Same as allocate(w, h, glInternalFormat) with the addition of:</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -450,20 +453,20 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, int glInternalFormat, bool bUseARBExtention, int glFormat, int pixelType)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, int glInternalFormat, bool bUseARBExtention, int glFormat, int pixelType)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture of a given size, format, &amp; type. </p>
 <p>Not sure how the two texture format parameters are different: glFormat &amp; glInternalFormat.</p>
 <p>Same as allocate(w, h, glInternalFormat, bUseARBExtension) with the addition of:</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">glFormat</td><td>GL texture format: GL_RGBA, GL_LUMINANCE, etc. </td></tr>
-    <tr><td class="paramname">pixelType</td><td>GL pixel type: GL_UNSIGNED_BYTE, GL_FLOAT, etc. </td></tr>
+    <tr><td class="paramname">glInternalFormat</td><td>OpenGL data format: <code>GL_RGBA</code>, <code>GL_LUMINANCE</code>, etc. </td></tr>
+    <tr><td class="paramname">pixelType</td><td>OpenGL pixel type: <code>GL_UNSIGNED_BYTE</code>, <code>GL_FLOAT</code>, etc. </td></tr>
   </table>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofPixels &amp;pix)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofPixels &amp;pix)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture using an ofPixels instance. </p>
 <p>Pixel type and GL format are determined from pixel settings.</p>
@@ -474,12 +477,12 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofPixels &amp;pix, bool bUseARBExtention)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofPixels &amp;pix, bool bUseARBExtention)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture using an ofPixels instance &amp; type. </p>
 <p>This lets you overide the default OF texture type, in case you need a square GL_TEXTURE_2D texture.</p>
 <dl class="section warning"><dt>Warning</dt><dd>ARB textures are not available in OpenGL ES. </dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="of_texture_8cpp.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures. ">ofEnableArbTex()</a></dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="of_texture_8cpp.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures. GL_TEXTURE_RECTANGLE textures are more intuitive since they allow ...">ofEnableArbTex()</a></dd></dl>
 <p>Same as loadData(ofPixels &amp;) with the addition of: </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -488,19 +491,19 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofShortPixels &amp;pix)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofShortPixels &amp;pix)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture using an ofShortPixels instance. Same as loadData(ofPixels &amp;), except using ofShortPixels. </p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofShortPixels &amp;pix, bool bUseARBExtention)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofShortPixels &amp;pix, bool bUseARBExtention)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture using an ofShortPixels instance &amp; type. Same as loadData(ofPixels &amp;, bool), except using ofShortPixels. </p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofFloatPixels &amp;pix)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofFloatPixels &amp;pix)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture using an ofFloatPixels instance. Same as loadData(ofPixels &amp;), except using ofFloatPixels. </p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofFloatPixels &amp;pix, bool bUseARBExtention)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofFloatPixels &amp;pix, bool bUseARBExtention)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture using an ofFloatPixels instance &amp; type. Same as loadData(ofPixels &amp;, bool), except using ofFloatPixels. </p>
 
@@ -516,8 +519,8 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
     <div class="methodDescription " style="display:none" id="aad1888a6e4ed69a0936d0d724125150d_description"><div class="memberVariant"><span class="type">bool </span><span class="name">isAllocated</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>Has the texture been allocated? </p>
-<p>This let&apos;s you check if a texture is safe to draw. </p>
+<p>Get whether the texture has been allocated. </p>
+<p>This let&apos;s you check if a texture is safe to draw. The texture can both be allocated by using <code><a class="el" href="ofTexture.html#a37e50fcd472023e3879fda915d356d24" title="Allocate texture using the given settings. ">allocate()</a></code> or loading it with data <code><a class="el" href="ofTexture.html#a4d480834af11e4016652d7f729264df7" title="Load byte pixel data. ">loadData()</a></code> </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the texture has been allocated. </dd></dl>
 
 </div></div>
@@ -548,7 +551,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
     <div class="methodDescription " style="display:none" id="a9d0bbb24231157b2795b99241183b297_description"><div class="memberVariant"><span class="type"> </span><span class="name">~ofTexture</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>Destroy an <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> instance. </p>
+<p>Destroy an <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> instance. </p>
 <p>The internal GL texture ID is only released if this is the last texture using it. </p>
 
 </div></div>
@@ -567,10 +570,10 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
     <div class="methodDescription " style="display:none" id="a152b6e78436b0525f2d2688fd6304338_description"><div class="memberVariant"><span class="type"><a href="ofTexture.html">ofTexture</a></span><span class="name">operator=</span><span class="args">(const ofTexture &amp;mom)</span></div><div class="memberDocumentation">
 
-<p>Copy a given <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> into this texture. </p>
+<p>Copy a given <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> into this texture. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mom</td><td>The <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> to copy from. Reuses internal GL texture ID. </td></tr>
+    <tr><td class="paramname">mom</td><td>The <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> to copy from. Reuses internal GL texture ID. </td></tr>
   </table>
   </dd>
 </dl>
@@ -588,7 +591,8 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="a3c220c8be60de9261f1e4788e1a418b7_description"><div class="memberVariant"><span class="type">void </span><span class="name">clear</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Clears the texture. </p>
-<p>The internal GL texture ID is only rleased if this is the last texture using it. </p>
+<p>Clears / frees the texture memory, if something was already allocated. Useful if you need to control the memory on the graphics card.</p>
+<p>The internal GL texture ID is only released if this is the last texture using it. </p>
 
 </div></div>
 
@@ -635,15 +639,15 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const unsigned short *data, int w, int h, int glFormat)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const unsigned short *data, int w, int h, int glFormat)</span></div><div class="memberDocumentation">
 
 <p>Load short (2 byte) pixel data. Same as loadData(unsigned char, ...) but for short pixel data. </p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const float *data, int w, int h, int glFormat)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const float *data, int w, int h, int glFormat)</span></div><div class="memberDocumentation">
 
 <p>Load float pixel data. Same as loadData(unsigned char, ...) but for float pixel data. </p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const ofPixels &amp;pix)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const ofPixels &amp;pix)</span></div><div class="memberDocumentation">
 
 <p>Load pixels from an ofPixels instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -653,15 +657,15 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const ofShortPixels &amp;pix)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const ofShortPixels &amp;pix)</span></div><div class="memberDocumentation">
 
 <p>Load pixels from an ofShortPixels instance. Same as loadData(ofPixels &amp;) but for ofShortPixels. </p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const ofFloatPixels &amp;pix)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const ofFloatPixels &amp;pix)</span></div><div class="memberDocumentation">
 
 <p>Load pixels from an ofFloatPixels instance. Same as loadData(ofPixels &amp;) but for ofFloatPixels. </p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const ofPixels &amp;pix, int glFormat)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const ofPixels &amp;pix, int glFormat)</span></div><div class="memberDocumentation">
 
 <p>Load pixels from an ofPixels instance &amp; specify the format. </p>
 <p>glFormat can be different to the internal format of the texture on each load, ie. we can upload GL_BGRA pixels into a GL_RGBA texture, but the number of channels need to match according to the OpenGL standard.</p>
@@ -673,17 +677,17 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const ofShortPixels &amp;pix, int glFormat)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const ofShortPixels &amp;pix, int glFormat)</span></div><div class="memberDocumentation">
 
 <p>Load pixels from an ofShortPixels instance &amp; specify the format. </p>
 <p>Similar to loadData(ofPixels &amp;, int). </p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const ofFloatPixels &amp;pix, int glFormat)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const ofFloatPixels &amp;pix, int glFormat)</span></div><div class="memberDocumentation">
 
 <p>Load pixels from an ofFloatPixels instance &amp; specify the format. </p>
 <p>Similar to loadData(ofPixels &amp;, int). </p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const ofBufferObject &amp;buffer, int glFormat, int glType)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">loadData</span><span class="args">(const ofBufferObject &amp;buffer, int glFormat, int glType)</span></div><div class="memberDocumentation">
 
 <p>Load pixels from an <a class="el" href="ofBufferObject.html">ofBufferObject</a>. </p>
 
@@ -700,6 +704,8 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="a0a514787330456b4f5962091a7ee434a_description"><div class="memberVariant"><span class="type">void </span><span class="name">loadScreenData</span><span class="args">(int x, int y, int w, int h)</span></div><div class="memberDocumentation">
 
 <p>Copy an area of the screen into this texture. </p>
+<p>Specifiy the position (x,y) you wish to grab from, with the width (w) and height (h) of the region.</p>
+<p>Make sure that you have allocated your texture (using <code><a class="el" href="ofTexture.html#a37e50fcd472023e3879fda915d356d24" title="Allocate texture using the given settings. ">allocate()</a></code>) to be large enough to hold the region of the screen you wish to load.</p>
 <dl class="section see"><dt>See Also</dt><dd><a href="http://www.opengl.org/sdk/docs/man4/html/glCopyTexSubImage2D.xhtml">http://www.opengl.org/sdk/docs/man4/html/glCopyTexSubImage2D.xhtml</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -738,9 +744,9 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Implements <a class="el" href="ofBaseDraws.html#ae333985db65e3ec75bf80267c5bc3fc4">ofBaseDraws</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y, float z) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y, float z) const </span></div><div class="memberDocumentation">
 
-<p>Draw the texture at it&apos;s normal size with depth. </p>
+<p>Draw the texture at it&apos;s normal size with depth in 3D space. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>Draw position on the x axis. </td></tr>
@@ -750,9 +756,9 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y, float w, float h) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y, float w, float h) const </span></div><div class="memberDocumentation">
 
-<p>Draw the texture at a given size. </p>
+<p>Draw the texture at a given size and position. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>Draw position on the x axis. </td></tr>
@@ -765,9 +771,9 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
 <p>Implements <a class="el" href="ofBaseDraws.html#a60aab39e0163a542ef18a466633d1372">ofBaseDraws</a>.</p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y, float z, float w, float h) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y, float z, float w, float h) const </span></div><div class="memberDocumentation">
 
-<p>Draw the texture at a given size with depth. </p>
+<p>Draw the texture at a given size witdh and depth. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>Draw position on the x axis. </td></tr>
@@ -779,9 +785,9 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofPoint &amp;p1, const ofPoint &amp;p2, const ofPoint &amp;p3, const ofPoint &amp;p4) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofPoint &amp;p1, const ofPoint &amp;p2, const ofPoint &amp;p3, const ofPoint &amp;p4) const </span></div><div class="memberDocumentation">
 
-<p>Draw the texture by it&apos;s upper left and lower right corners. </p>
+<p>Draws the texture at 4 points passed in as if you created 4 glVertices. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p1</td><td>Upper left position on the x axis. </td></tr>
@@ -824,7 +830,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">drawSubsection</span><span class="args">(float x, float y, float z, float w, float h, float sx, float sy) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawSubsection</span><span class="args">(float x, float y, float z, float w, float h, float sx, float sy) const </span></div><div class="memberDocumentation">
 
 <p>Draw a subsection of the texture with depth. </p>
 <p>Same as <a class="el" href="ofTexture.html#a3a2003ea338e30010e96aae73d33a77c" title="Draw a subsection of the texture. ">drawSubsection(float x, float y, float w, float h, float sx, float sy) const </a>with the addition of z axis parameter.</p>
@@ -835,7 +841,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">drawSubsection</span><span class="args">(float x, float y, float w, float h, float sx, float sy, float sw, float sh) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawSubsection</span><span class="args">(float x, float y, float w, float h, float sx, float sy, float sw, float sh) const </span></div><div class="memberDocumentation">
 
 <p>Draw a subsection of the texture with an offset. </p>
 <p>Same as ddrawSubsection(float x, float y, float w, float h, float sx, float sy) const with the addition of the width and height of the subsection.</p>
@@ -847,7 +853,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">drawSubsection</span><span class="args">(float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawSubsection</span><span class="args">(float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh) const </span></div><div class="memberDocumentation">
 
 <p>Draw a subsection of the texture with an offset and depth. </p>
 <p>Same as <a class="el" href="ofTexture.html#a9240d5a539f3e86c4958a720661f4c44" title="Draw a subsection of the texture with an offset. ">drawSubsection(float x, float y, float w, float h, float sx, float sy, float sw, float sh) const </a>with the addition of z axis parameter.</p>
@@ -1089,7 +1095,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 
     <div class="methodDescription " style="display:none" id="aad88f3678a33e5aad9ebeb15b31e9322_description"><div class="memberVariant"><span class="type">void </span><span class="name">setAlphaMask</span><span class="args">(ofTexture &amp;mask)</span></div><div class="memberDocumentation">
 
-<p>Set another <a class="el" href="ofTexture.html" title="An OpenGL image on the the graphics card. ">ofTexture</a> to use as alpha mask. </p>
+<p>Set another <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> to use as alpha mask. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mask</td><td>The texture to use as alpha mask </td></tr>
@@ -1126,7 +1132,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription " style="display:none" id="ac980af43af2cacdbd57e1bfcd8e222e2_description"><div class="memberVariant"><span class="type">void </span><span class="name">setTextureWrap</span><span class="args">(GLint wrapModeHorizontal, GLint wrapModeVertical)</span></div><div class="memberDocumentation">
 
 <p>Set texture wrapping. </p>
-<p>By default, textures are clamped to their edges with GL_CLAMP_TO_EDGE. Setting a repeat mode like GL_REPEAT allows you to create tiled backgrounds with small textures.</p>
+<p>By default, textures are clamped to their edges with <code>GL_CLAMP_TO_EDGE</code>. Setting a repeat mode like <code>GL_REPEAT</code> allows you to create tiled backgrounds with small textures.</p>
 <dl class="section see"><dt>See Also</dt><dd>ofTextureSetWrap() </dd>
 <dd>
 <a href="http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml">http://www.opengl.org/sdk/docs/man4/html/glTexParameter.xhtml</a></dd></dl>
@@ -1270,7 +1276,7 @@ ofTextureSetMinMagFilters()</dd></dl>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">readToPixels</span><span class="args">(ofShortPixels &amp;pixels) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">readToPixels</span><span class="args">(ofShortPixels &amp;pixels) const </span></div><div class="memberDocumentation">
 
 <p>Read current texture data from the GPU into pixels. </p>
 <dl class="section warning"><dt>Warning</dt><dd>This is not supported in OpenGL ES and does nothing.</dd></dl>
@@ -1281,7 +1287,7 @@ ofTextureSetMinMagFilters()</dd></dl>
   </dd>
 </dl>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">readToPixels</span><span class="args">(ofFloatPixels &amp;pixels) const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">readToPixels</span><span class="args">(ofFloatPixels &amp;pixels) const </span></div><div class="memberDocumentation">
 
 <p>Read current texture data from the GPU into pixels. </p>
 <dl class="section warning"><dt>Warning</dt><dd>This is not supported in OpenGL ES and does nothing.</dd></dl>
@@ -1321,9 +1327,10 @@ ofTextureSetMinMagFilters()</dd></dl>
     <div class="methodDescription " style="display:none" id="ab8852339546c4bbf87b5a5a463cc8ec8_description"><div class="memberVariant"><span class="type">ofTextureData &amp; </span><span class="name">getTextureData</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Internal texture data access. </p>
+<p>This returns the internal texture data for this texture, for instance, its textureID, type of texture, whether it&apos;s been allocated, and other data about the state of the texture.</p>
 <dl class="section return"><dt>Returns</dt><dd>a reference to the internal texture data struct. </dd></dl>
 
-</div><div class="memberVariant"><span class="type">const ofTextureData &amp; </span><span class="name">getTextureData</span><span class="args">() const </span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">const ofTextureData &amp; </span><span class="name">getTextureData</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 <p>Const version of <a class="el" href="ofTexture.html#ab8852339546c4bbf87b5a5a463cc8ec8" title="Internal texture data access. ">getTextureData()</a>. </p>
 <dl class="section see"><dt>See Also</dt><dd>ofTextureData::getTextureData() </dd></dl>
@@ -1388,7 +1395,7 @@ ofTextureSetMinMagFilters()</dd></dl>
 
 <p>Generate mipmap for the current texture. </p>
 <dl class="section warning"><dt>Warning</dt><dd>Only GL_TEXTURE_RECTANGLE - which is the default openFrameworks texture target - does <em>not</em> support mipmaps, so make sure to call <a class="el" href="of_texture_8cpp.html#a6b679cd9538f7a1399cec6078c227c71" title="Use GL_TEXTURE_2D textures. ">ofDisableArbTex()</a> before loading texture data for a texture you want to generate mipmaps for.</dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="of_texture_8cpp.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures. ">ofEnableArbTex()</a> </dd>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="of_texture_8cpp.html#a2522ef9f2c9415f8ac2d967c6bb37b01" title="Use GL_TEXTURE_RECTANGLE textures. GL_TEXTURE_RECTANGLE textures are more intuitive since they allow ...">ofEnableArbTex()</a> </dd>
 <dd>
 <a class="el" href="of_texture_8cpp.html#a6b679cd9538f7a1399cec6078c227c71" title="Use GL_TEXTURE_2D textures. ">ofDisableArbTex()</a> </dd></dl>
 <p>OpenGL ES only supports mipmap for the following two texture targets:</p>

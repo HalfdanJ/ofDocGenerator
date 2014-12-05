@@ -141,14 +141,14 @@
     <div class="methodDescription " style="display:none" id="a514570e144c76deb8712b84aeee83d06_description"><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">()</span></div><div class="memberDocumentation">
 <p>creates a buffer without allocating any memory yet glGenBuffers, allocates a GL buffer </p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(GLsizeiptr bytes, GLenum usage)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(GLsizeiptr bytes, GLenum usage)</span></div><div class="memberDocumentation">
 <p>creates a buffer and allocates the required number of bytes glGenBuffers + glNamedBufferData: <a href="https://www.opengl.org/sdk/docs/man4/html/glBufferData.xhtml">https://www.opengl.org/sdk/docs/man4/html/glBufferData.xhtml</a> before GL 4.5 emulates glNamedBufferData by binding to last known target for this buffer uploading data to that target and unbinding again </p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(GLsizeiptr bytes, const void *data, GLenum usage)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(GLsizeiptr bytes, const void *data, GLenum usage)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const vector&lt; T &gt; &amp;data, GLenum usage)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const vector&lt; T &gt; &amp;data, GLenum usage)</span></div><div class="memberDocumentation">
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofPixels_&lt; T &gt; &amp;data, GLenum usage)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofPixels_&lt; T &gt; &amp;data, GLenum usage)</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -301,7 +301,7 @@
     <div class="methodDescription " style="display:none" id="a48f42b93e8cb6c3ae52f50a5c2f11829_description"><div class="memberVariant"><span class="type">void </span><span class="name">setData</span><span class="args">(const vector&lt; T &gt; &amp;data, GLenum usage)</span></div><div class="memberDocumentation">
 <p>typed version of setData, same functionality but guesses the size from the size of the passed vector and size of the type </p>
 
-</div><div class="memberVariant"><span class="type">void </span><span class="name">setData</span><span class="args">(const ofPixels_&lt; T &gt; &amp;data, GLenum usage)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setData</span><span class="args">(const ofPixels_&lt; T &gt; &amp;data, GLenum usage)</span></div><div class="memberDocumentation">
 
 </div></div>
 
