@@ -4,6 +4,8 @@ var fs = require('fs-extra'),
   xml2js = require('xml2js'),
   cheerio = require('cheerio')
 
+var filterGroup = '';
+
 try {
   var sass = require('node-sass');
 
@@ -17,11 +19,12 @@ try {
   });
 } catch(e){
   console.log("Sass not installed, skipping");
+  filterGroup = '';
 }
 
 
 
-var filterGroup = '';
+
 
 var root =  process.argv[2] || "../..";
 var dir = root + "/libs/openFrameworksCompiled/project/doxygen/build/";
@@ -547,10 +550,14 @@ function generateHtmlContent(parsedData, $){
 
 
       var methodDescription = m.find(".methodDescription");
-      methodDescription.attr('id', ref + "_description")
+      methodDescription.attr('id', ref + "_description");
 
-
+      var first = true;
       memberGroup.implementations.forEach(function(method){
+        if(!first){
+          methodDescription.append('<hr>');
+        }
+
         var variantDesc = methodDescription.append('<div class="memberVariant">').children().last();
         variantDesc.append('<span class="type">'+getTypeHtml(method.type)+'</span>');
         variantDesc.append('<span class="name">'+method.name+'</span>');
@@ -559,6 +566,7 @@ function generateHtmlContent(parsedData, $){
         console.log(variantDesc.html())
         methodDescription.append('<div class="memberDocumentation">'+method.htmlDescription+"</div>");
 
+        first = false;
       //  methodImplementations.append(method.name)
       });
       /*}else {
