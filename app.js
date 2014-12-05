@@ -21,7 +21,7 @@ try {
 
 
 
-var filterGroup = 'utils';
+//var filterGroup = 'utils';
 
 var root =  process.argv[2] || "../..";
 var dir = root + "/libs/openFrameworksCompiled/project/doxygen/build/";
