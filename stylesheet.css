@@ -63,6 +63,9 @@ nav {
             nav ul#nav-parts li.group ul li.chapter.selected li.section {
               display: block; }
 
+.content {
+  padding-left: 20px; }
+
 .main {
   background-color: white;
   border-top: 0;
@@ -83,9 +86,25 @@ nav {
 #templates {
   display: none; }
 
-.sectionHeader {
+p {
+  margin-bottom: 20px; }
+
+h1 {
   font-weight: 200;
-  font-size: 20px; }
+  font-size: 40px;
+  margin-bottom: 30px; }
+
+.sectionHeader, h3 {
+  font-weight: 200;
+  font-size: 25px;
+  margin-top: 50px;
+  margin-bottom: 20px; }
+
+h4 {
+  font-weight: 200;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px; }
 
 .methodHeader {
   font-family: 'Inconsolata', monospace;

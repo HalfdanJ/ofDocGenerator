@@ -76,7 +76,9 @@
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a6e9afd83f8dd763f7230d13286611a9c_description"><div class="memberVariant"><span class="type"> </span><span class="name">ofThread</span><span class="args">()</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a6e9afd83f8dd763f7230d13286611a9c_description">
+
+    <div class="memberVariant"><span class="type"> </span><span class="name">ofThread</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Create an <a class="el" href="ofThread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a>. </p>
 
@@ -90,7 +92,9 @@
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a8faffc9621a184465b9fdfef0b36b2fd_description"><div class="memberVariant"><span class="type"> </span><span class="name">~ofThread</span><span class="args">()</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a8faffc9621a184465b9fdfef0b36b2fd_description">
+
+    <div class="memberVariant"><span class="type"> </span><span class="name">~ofThread</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Destroy the <a class="el" href="ofThread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a>. </p>
 <dl class="section warning"><dt>Warning</dt><dd>The destructor WILL NOT stop the thread or wait for the underlying Poco::Thread to finish. For threads that require the correct deallocation of resources, the user MUST call waitForThread(...); to ensure that the thread is stopped and the thread&apos;s resources are released. Improper release of resources or memory can lead to segementation faults and other errors. </dd></dl>
@@ -109,7 +113,9 @@
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a07a51505ea9f5407e8c5999368bd54e2_description"><div class="memberVariant"><span class="type">bool </span><span class="name">isThreadRunning</span><span class="args">() const </span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a07a51505ea9f5407e8c5999368bd54e2_description">
+
+    <div class="memberVariant"><span class="type">bool </span><span class="name">isThreadRunning</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 <p>Check the running status of the thread. </p>
 <dl class="section return"><dt>Returns</dt><dd>true iff the thread is currently running. </dd></dl>
@@ -124,7 +130,9 @@
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a03c3de0a6eafba5ace00150e0ba39e8e_description"><div class="memberVariant"><span class="type">int </span><span class="name">getThreadId</span><span class="args">() const </span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a03c3de0a6eafba5ace00150e0ba39e8e_description">
+
+    <div class="memberVariant"><span class="type">int </span><span class="name">getThreadId</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 <p>Get the unique thread id. </p>
 <dl class="section note"><dt>Note</dt><dd>This is NOT the the same as the operating thread id! </dd></dl>
@@ -139,7 +147,9 @@
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="aa9f277270d8f1220397ce78b7abdbf46_description"><div class="memberVariant"><span class="type">std::string </span><span class="name">getThreadName</span><span class="args">() const </span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="aa9f277270d8f1220397ce78b7abdbf46_description">
+
+    <div class="memberVariant"><span class="type">std::string </span><span class="name">getThreadName</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 <p>Get the unique thread name, in the form of &quot;Thread id#&quot;. </p>
 <dl class="section return"><dt>Returns</dt><dd>the Thread ID string. </dd></dl>
@@ -158,7 +168,9 @@
       <span class="note">Use startThread(bool blocking = true) instead.</span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a46295f96e3730f6449adca48426c967e_description"><div class="memberVariant"><span class="type">void </span><span class="name">startThread</span><span class="args">(bool mutexesBlock, bool verbose)</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a46295f96e3730f6449adca48426c967e_description">
+
+    <div class="memberVariant"><span class="type">void </span><span class="name">startThread</span><span class="args">(bool mutexesBlock, bool verbose)</span></div><div class="memberDocumentation">
 
 <p>Start the thread with options. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -190,7 +202,9 @@
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a3102a3bf7897f579d70a418ae3ed010b_description"><div class="memberVariant"><span class="type">void </span><span class="name">stopThread</span><span class="args">()</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a3102a3bf7897f579d70a418ae3ed010b_description">
+
+    <div class="memberVariant"><span class="type">void </span><span class="name">stopThread</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Stop the thread. </p>
 <p>This does immediately stop the thread from processing, but will only set a flag that must be checked from within your <a class="el" href="ofThread.html#a7e90ddaf0113435c451e6daf600c33f1" title="The thread&apos;s run function. ">threadedFunction()</a> by calling <a class="el" href="ofThread.html#a07a51505ea9f5407e8c5999368bd54e2" title="Check the running status of the thread. ">isThreadRunning()</a>. If the user wants to both stop the thread AND wait for the thread to finish processing, the user should call waitForThread(true, ...). </p>
@@ -209,7 +223,9 @@
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a8b682673b3d11225785b74f68fc3ce96_description"><div class="memberVariant"><span class="type">bool </span><span class="name">lock</span><span class="args">()</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a8b682673b3d11225785b74f68fc3ce96_description">
+
+    <div class="memberVariant"><span class="type">bool </span><span class="name">lock</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Try to lock the mutex. </p>
 <p>If the thread was started startThread(true), then this call will wait until the mutex is available and return true. If the thread was started startThread(false), this call will return true iff the mutex is was successfully acquired.</p>
@@ -225,7 +241,9 @@
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a98fd09fe1a8db65c2444abab0e806831_description"><div class="memberVariant"><span class="type">void </span><span class="name">unlock</span><span class="args">()</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a98fd09fe1a8db65c2444abab0e806831_description">
+
+    <div class="memberVariant"><span class="type">void </span><span class="name">unlock</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Unlock the mutex. </p>
 <p>This will only unlocks the mutex if it was previously by the same calling thread. </p>
@@ -244,7 +262,9 @@
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a4faefa778ff5338ee7add57dd5ec2a5f_description"><div class="memberVariant"><span class="type">void </span><span class="name">waitForThread</span><span class="args">(bool callStopThread=true, long milliseconds=INFINITE_JOIN_TIMEOUT)</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a4faefa778ff5338ee7add57dd5ec2a5f_description">
+
+    <div class="memberVariant"><span class="type">void </span><span class="name">waitForThread</span><span class="args">(bool callStopThread=true, long milliseconds=INFINITE_JOIN_TIMEOUT)</span></div><div class="memberDocumentation">
 
 <p>Wait for the thread to exit (aka &quot;joining&quot; the thread). </p>
 <p>This method waits for a thread will &quot;block&quot; and wait for the thread (aka &quot;join&quot; the thread) before it returns. This allows the user to be sure that the thread is properly cleaned up. An example of when this might be particularly important is if the <a class="el" href="ofThread.html#a7e90ddaf0113435c451e6daf600c33f1" title="The thread&apos;s run function. ">threadedFunction()</a> is opening a set of network sockets, or downloading data from the web. Destroying an <a class="el" href="ofThread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> subclass without releasing those sockets (or other resources), may result in segmentation faults, error signals or other undefined behaviors.</p>
@@ -273,7 +293,9 @@
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a9e99dc383aba491a664efad32d2d7ccb_description"><div class="memberVariant"><span class="type">void </span><span class="name">sleep</span><span class="args">(long milliseconds)</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a9e99dc383aba491a664efad32d2d7ccb_description">
+
+    <div class="memberVariant"><span class="type">void </span><span class="name">sleep</span><span class="args">(long milliseconds)</span></div><div class="memberDocumentation">
 
 <p>Tell the thread to sleep for a certain amount of milliseconds. </p>
 <p>This is useful inside the <a class="el" href="ofThread.html#a7e90ddaf0113435c451e6daf600c33f1" title="The thread&apos;s run function. ">threadedFunction()</a> when a thread is waiting for input to process:</p>
@@ -317,7 +339,9 @@
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a35bf3cab66dc5dda34b172784b401003_description"><div class="memberVariant"><span class="type">void </span><span class="name">yield</span><span class="args">()</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a35bf3cab66dc5dda34b172784b401003_description">
+
+    <div class="memberVariant"><span class="type">void </span><span class="name">yield</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Tell the thread to give up its CPU time other threads. </p>
 <p>This method is similar to <a class="el" href="ofThread.html#a9e99dc383aba491a664efad32d2d7ccb" title="Tell the thread to sleep for a certain amount of milliseconds. ">sleep()</a> and can often be used in the same way. The main difference is that 1 millisecond (the minimum sleep time available with <a class="el" href="ofThread.html#a9e99dc383aba491a664efad32d2d7ccb" title="Tell the thread to sleep for a certain amount of milliseconds. ">sleep()</a>) is a very long time on modern processors and <a class="el" href="ofThread.html#a35bf3cab66dc5dda34b172784b401003" title="Tell the thread to give up its CPU time other threads. ">yield()</a> simply gives up processing time to the next thread, instead of waiting for number of milliseconds. In some cases, this behavior will be preferred. </p>
@@ -336,7 +360,9 @@
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a96b7892fb6c0ddda7fe046aaa019da90_description"><div class="memberVariant"><span class="type">bool </span><span class="name">isCurrentThread</span><span class="args">() const </span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a96b7892fb6c0ddda7fe046aaa019da90_description">
+
+    <div class="memberVariant"><span class="type">bool </span><span class="name">isCurrentThread</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 <p>Query whether the current thread is active. </p>
 <p>In multithreaded situations, it can be useful to know which thread is currently running some code in order to make sure only certain threads can do certain things. For example, OpenGL can only run in the main execution thread. Thus, situations where a thread is responsible for interacting with graphics resources may need to prevent graphics updates unless the main thread is accessing or updating resources shared with this <a class="el" href="ofThread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> (or its subclass).</p>
@@ -362,7 +388,9 @@
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a23f292adedaad5a0991637a1746d9772_description"><div class="memberVariant"><span class="type">bool </span><span class="name">isMainThread</span><span class="args">()</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a23f292adedaad5a0991637a1746d9772_description">
+
+    <div class="memberVariant"><span class="type">bool </span><span class="name">isMainThread</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>A query to see if the current thread is the main thread. </p>
 <p>Some functions (e.g. OpenGL calls) can only be executed the main thread. This static function will tell the user what thread is currently active at the moment the method is called.</p>
@@ -390,7 +418,9 @@
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a3b607a4239526df49fb23738453645ef_description"><div class="memberVariant"><span class="type">Poco::Thread &amp; </span><span class="name">getPocoThread</span><span class="args">()</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a3b607a4239526df49fb23738453645ef_description">
+
+    <div class="memberVariant"><span class="type">Poco::Thread &amp; </span><span class="name">getPocoThread</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Get a reference to the underlying Poco thread. </p>
 <p>Poco::Thread provides a clean cross-platform wrapper for threads. On occasion, it may be useful to interact with the underlying Poco::Thread directly.</p>
@@ -412,7 +442,9 @@
       <span class="note">use ofThread::getCurrentPocoThread() == &amp;yourThread.getPocoThread() to compare threads.</span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a49beba601eef1f31fe733fd0e5647f2b_description"><div class="memberVariant"><span class="type">static ofThread </span><span class="name">getCurrentThread</span><span class="args">()</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a49beba601eef1f31fe733fd0e5647f2b_description">
+
+    <div class="memberVariant"><span class="type">static ofThread </span><span class="name">getCurrentThread</span><span class="args">()</span></div><div class="memberDocumentation">
 
 </div></div>
 
@@ -424,7 +456,9 @@
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a4060c79bf667e0ad2fbe78e7d12c2905_description"><div class="memberVariant"><span class="type">Poco::Thread * </span><span class="name">getCurrentPocoThread</span><span class="args">()</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a4060c79bf667e0ad2fbe78e7d12c2905_description">
+
+    <div class="memberVariant"><span class="type">Poco::Thread * </span><span class="name">getCurrentPocoThread</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Get the current Poco thread. </p>
 <p>In most cases, it is more appropriate to query the current thread by calling <a class="el" href="ofThread.html#a96b7892fb6c0ddda7fe046aaa019da90" title="Query whether the current thread is active. ">isCurrentThread()</a> on an active thread or by calling <a class="el" href="ofThread.html#a23f292adedaad5a0991637a1746d9772" title="A query to see if the current thread is the main thread. ">ofThread::isMainThread()</a>. See the method documentation for more information on those methods.</p>
@@ -444,7 +478,9 @@
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a73e55750cdbed68d45a0ba9e7d391c4a_description"><div class="memberVariant"><span class="type"> </span><span class="name">Anonymous enum</span><span class="args"></span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a73e55750cdbed68d45a0ba9e7d391c4a_description">
+
+    <div class="memberVariant"><span class="type"> </span><span class="name">Anonymous enum</span><span class="args"></span></div><div class="memberDocumentation">
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a73e55750cdbed68d45a0ba9e7d391c4aacd7c0f12a26a642772db642e8862e98e"></a>INFINITE_JOIN_TIMEOUT</em>&#xA0;</td><td class="fielddoc">
 <p>A sentinal value for an infinite join timeout. </p>
@@ -466,7 +502,9 @@
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a2ac54808d526a915319b3ba81edeeea1_description"><div class="memberVariant"><span class="type">Poco::Thread </span><span class="name">thread</span><span class="args"></span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a2ac54808d526a915319b3ba81edeeea1_description">
+
+    <div class="memberVariant"><span class="type">Poco::Thread </span><span class="name">thread</span><span class="args"></span></div><div class="memberDocumentation">
 
 <p>The Poco::Thread that runs the Poco::Runnable. </p>
 
@@ -480,7 +518,9 @@
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a12ff152ef6ad45f82cff7dcd5b4b9742_description"><div class="memberVariant"><span class="type"><a href="ofTypes.html#1a14d0290b2d9067f9b5c30fa5e4e56927">ofMutex</a></span><span class="name">mutex</span><span class="args"></span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a12ff152ef6ad45f82cff7dcd5b4b9742_description">
+
+    <div class="memberVariant"><span class="type"><a href="ofTypes.html#1a14d0290b2d9067f9b5c30fa5e4e56927">ofMutex</a></span><span class="name">mutex</span><span class="args"></span></div><div class="memberDocumentation">
 
 <p>The internal mutex called through <a class="el" href="ofThread.html#a8b682673b3d11225785b74f68fc3ce96" title="Try to lock the mutex. ">lock()</a> &amp; <a class="el" href="ofThread.html#a98fd09fe1a8db65c2444abab0e806831" title="Unlock the mutex. ">unlock()</a>. </p>
 <p>This mutext can also be used with ofScopedLock within the threaded function by calling: </p>
@@ -499,7 +539,9 @@
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none" id="a7e90ddaf0113435c451e6daf600c33f1_description"><div class="memberVariant"><span class="type">void </span><span class="name">threadedFunction</span><span class="args">()</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a7e90ddaf0113435c451e6daf600c33f1_description">
+
+    <div class="memberVariant"><span class="type">void </span><span class="name">threadedFunction</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>The thread&apos;s run function. </p>
 <p>Users must overide this in your their derived class and then implement their threaded activity inside the loop. If the the users&apos;s threadedFunction does not have a loop, the contents of the threadedFunction will be executed once and the thread will then exit.</p>
@@ -571,7 +613,9 @@
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription " style="display:none"></div>
+    <div class="methodDescription" style="display:none">
+
+    </div>
 
   </div>
 
