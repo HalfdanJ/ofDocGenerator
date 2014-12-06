@@ -330,7 +330,7 @@ ofLogFatalError()
 
 <p>Log a string at a specific log level. </p>
 <p>Supply the logging message as a parameter to the function instead of as a stream.</p>
-<p>The string message can be concatenated using the <a class="el" href="ofUtils.html#a31a70a3bfddaf5bd90084e59188f9d59">ofToString(const T&amp; value)</a> conversion function:</p>
+<p>The string message can be concatenated using the <a class="el" href="ofUtils.html#a31a70a3bfddaf5bd90084e59188f9d59" title="Convert a value to a string. ">ofToString(const T&amp; value)</a> conversion function:</p>
 <div class="fragment"><div class="line"><span class="comment">// build a single string message</span></div>
 <div class="line"><a class="code" href="ofLog.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>(<a class="code" href="ofLog.html#a6b3aba959377cae6ed3afbb9d5826fe4ae694d6f9c9ad50b955aa85ded74c41bc">OF_LOG_NOTICE</a>, <span class="stringliteral">&quot;the number is &quot;</span> </div>
 <div class="line">+ <a class="code" href="of_pixels_8cpp.html#a0bdb3162be2ff8c1541a42f3c8f5ac1c">ofToString</a>(10) + <span class="stringliteral">&quot; and I have a float too &quot;</span> + <a class="code" href="of_pixels_8cpp.html#a0bdb3162be2ff8c1541a42f3c8f5ac1c">ofToString</a>(123.45f));</div>

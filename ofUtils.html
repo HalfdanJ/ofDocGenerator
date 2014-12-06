@@ -34,7 +34,7 @@
           Topics
           <ul id="topics">
             <!--<li class="chapter"><a href="asd">sad</a></li>-->
-          <li class="chapter"><a href="#Functions">Functions</a></li></ul>
+          <li class="chapter"><a href="#Elapsedtime">Elapsed time</a></li><li class="chapter"><a href="#Systemtime">System time</a></li><li class="chapter"><a href="#Datapath">Data path</a></li><li class="chapter"><a href="#Vectors">Vectors</a></li><li class="chapter"><a href="#Stringmanipulation">String manipulation</a></li><li class="chapter"><a href="#Stringconversion">String conversion</a></li><li class="chapter"><a href="#Numberconversion">Number conversion</a></li><li class="chapter"><a href="#OpenFrameworksversion">OpenFrameworks version</a></li><li class="chapter"><a href="#Framesaving">Frame saving</a></li><li class="chapter"><a href="#System">System</a></li></ul>
       </li></ul>
     </nav>
     <div class="main">
@@ -45,8 +45,8 @@
       <h1 class="classTitle">ofUtils.h</h1>
     </div>
     <div class="classDescription"></div>
-    <div class="classMethods"><div id="Functions">
-    <h3 class="sectionHeader">Functions</h3>
+    <div class="classMethods"><div id="Elapsedtime">
+    <h3 class="sectionHeader">Elapsed time</h3>
     <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="aea0bc115291cf9119ea1b9f5ac70ca56">
     <div class="methodHeader" onClick="toggleDescription(&quot;#aea0bc115291cf9119ea1b9f5ac70ca56&quot;)">
@@ -116,7 +116,7 @@
 
 <p>Return the elapsed time in microseconds. </p>
 <p>This returns the elapsed time since <a class="el" href="ofUtils.html#aea0bc115291cf9119ea1b9f5ac70ca56" title="Reset the elapsed time counter. ">ofResetElapsedTimeCounter()</a> was called. Usually <a class="el" href="ofUtils.html#aea0bc115291cf9119ea1b9f5ac70ca56" title="Reset the elapsed time counter. ">ofResetElapsedTimeCounter()</a> is called automatically upon program startup.</p>
-<dl class="section return"><dt>Returns</dt><dd>the elapsed time in milliseconds. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the elapsed time in milliseconds (1000000 microsecs = 1 second). </dd></dl>
 
 </div></div>
 
@@ -137,7 +137,11 @@
 
 </div></div>
 
-  </div><div id="aa70e381f3cd98884c5b9a048dc327e93">
+  </div></div>
+  </div><div id="Systemtime">
+    <h3 class="sectionHeader">System time</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="aa70e381f3cd98884c5b9a048dc327e93">
     <div class="methodHeader" onClick="toggleDescription(&quot;#aa70e381f3cd98884c5b9a048dc327e93&quot;)">
       <span class="type"></span>
       <a class="name">ofGetSeconds</a>
@@ -381,30 +385,11 @@
 
 </div></div>
 
-  </div><div id="afa256a8b306de08ee3fee91a27fcc10f">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#afa256a8b306de08ee3fee91a27fcc10f&quot;)">
-      <span class="type"></span>
-      <a class="name">ofLaunchBrowser</a>
-      <span class="args">(const string &amp;url, bool uriEncodeQuery=false)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="afa256a8b306de08ee3fee91a27fcc10f_description">
-
-    <div class="memberVariant"><span class="type">void </span><span class="name">ofLaunchBrowser</span><span class="args">(const string &amp;url, bool uriEncodeQuery=false)</span></div><div class="memberDocumentation">
-
-<p>Launch the given URL in the browser. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">url</td><td>the URL to open. </td></tr>
-    <tr><td class="paramname">uriEncodeQuery</td><td>true iff the query parameters in the given URL have already been URL encoded. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-
-  </div><div id="a5dd69e44833bd031c2c776804d535146">
+  </div></div>
+  </div><div id="Datapath">
+    <h3 class="sectionHeader">Data path</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a5dd69e44833bd031c2c776804d535146">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a5dd69e44833bd031c2c776804d535146&quot;)">
       <span class="type"></span>
       <a class="name">ofEnableDataPath</a>
@@ -463,154 +448,6 @@
 
 </div></div>
 
-  </div><div id="aa6d24b46978740bfa122a77d52af6346">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aa6d24b46978740bfa122a77d52af6346&quot;)">
-      <span class="type"></span>
-      <a class="name">ofRandomize</a>
-      <span class="args">(vector&lt; T &gt; &amp;values)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa6d24b46978740bfa122a77d52af6346_description">
-
-    <div class="memberVariant"><span class="type">void </span><span class="name">ofRandomize</span><span class="args">(vector&lt; T &gt; &amp;values)</span></div><div class="memberDocumentation">
-
-<p>Randomly reorder the values in a vector. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">values</td><td>The vector of values to modify. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-
-  </div><div id="aad01f059019f70fdb4c1ef7bb31c5fd4">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aad01f059019f70fdb4c1ef7bb31c5fd4&quot;)">
-      <span class="type"></span>
-      <a class="name">ofRemove</a>
-      <span class="args">(vector&lt; T &gt; &amp;values, BoolFunction shouldErase)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aad01f059019f70fdb4c1ef7bb31c5fd4_description">
-
-    <div class="memberVariant"><span class="type">void </span><span class="name">ofRemove</span><span class="args">(vector&lt; T &gt; &amp;values, BoolFunction shouldErase)</span></div><div class="memberDocumentation">
-
-<p>Conditionally remove values from a vector. </p>
-<p>Values are removed if, when passed to the BoolFunction, the BoolFunction function returns true. The give BoolFunction can be a custom function or a built-in function.</p>
-<p>Example of a custom function to remove odd numbers from a vector&lt;int&gt; of integers:</p>
-<p>bool IsOdd(int i) { return ((i % 2) == 1); }</p>
-<p>To call the function, one might use:</p>
-<p>std::vector&lt;int&gt; myInts;</p>
-<p>// Fill the vector with integers. for (int i = 0; i &lt; 10; ++i) { myInts.push_back(i); }</p>
-<p>ofRemove(myInts, IsOdd);</p>
-<p>The resulting vector will contain the following values:</p>
-<p>0, 2, 4, 6, 8</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">values</td><td>the vector of values to modify. </td></tr>
-    <tr><td class="paramname">shouldErase</td><td>a boolean function as described above. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See Also</dt><dd><a href="http://www.cplusplus.com/reference/algorithm/remove_if/">http://www.cplusplus.com/reference/algorithm/remove_if/</a> </dd></dl>
-
-</div></div>
-
-  </div><div id="add54b6eb9cc810f885e7b89b6388dba7">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#add54b6eb9cc810f885e7b89b6388dba7&quot;)">
-      <span class="type"></span>
-      <a class="name">ofSort</a>
-      <span class="args">(vector&lt; T &gt; &amp;values)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="add54b6eb9cc810f885e7b89b6388dba7_description">
-
-    <div class="memberVariant"><span class="type">void </span><span class="name">ofSort</span><span class="args">(vector&lt; T &gt; &amp;values)</span></div><div class="memberDocumentation">
-
-<p>Sort a vector of values into ascending order. </p>
-<p>The elements are compared using operator&lt; for the first version. Equivalent elements are not guaranteed to keep their original relative order.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">The</td><td>vector of values to be sorted. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See Also</dt><dd><a href="http://www.cplusplus.com/reference/algorithm/sort/">http://www.cplusplus.com/reference/algorithm/sort/</a> </dd></dl>
-
-</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">ofSort</span><span class="args">(vector&lt; T &gt; &amp;values, BoolFunction compare)</span></div><div class="memberDocumentation">
-
-<p>Sort a vector of values into an order defined by a comparator. </p>
-<p>Example of a custom function to sort descending of integers:</p>
-<p>bool sortDescending(int i,int j) { return (j &lt; i); }</p>
-<p>This binary function must accept two elements in the range as arguments and return a value convertible to bool. The value returned indicates whether the element passed as first argument is considered to go before the second in the specific strict weak ordering it defines. The function shall not modify any of its arguments. This can either be a function pointer or a function object.</p>
-<p>To call the function, one might use:</p>
-<p>std::vector&lt;int&gt; myInts;</p>
-<p>// Fill the vector with integers. for (int i = 0; i &lt; 10; ++i) { myInts.push_back(i); }</p>
-<p>ofSort(myInts, sortDescending);</p>
-<p>The resulting vector will contain the following values:</p>
-<p>9, 8, 7, 6, 5, 4, 3, 2, 1, 0.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">The</td><td>vector of values to be sorted. </td></tr>
-    <tr><td class="paramname">The</td><td>comparison function. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See Also</dt><dd><a href="http://www.cplusplus.com/reference/algorithm/sort/">http://www.cplusplus.com/reference/algorithm/sort/</a> </dd></dl>
-
-</div></div>
-
-  </div><div id="a8722346aca2730ebbb03bf63e6fce6f8">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a8722346aca2730ebbb03bf63e6fce6f8&quot;)">
-      <span class="type"></span>
-      <a class="name">ofFind</a>
-      <span class="args">(const vector&lt; T &gt; &amp;values, const T &amp;target)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a8722346aca2730ebbb03bf63e6fce6f8_description">
-
-    <div class="memberVariant"><span class="type">unsigned int </span><span class="name">ofFind</span><span class="args">(const vector&lt; T &gt; &amp;values, const T &amp;target)</span></div><div class="memberDocumentation">
-
-<p>Search for a target value in a vector of values. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">values</td><td>The vector of values to be searched. </td></tr>
-    <tr><td class="paramname">target</td><td>The target value to be found. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true the index of the first target value found. </dd></dl>
-
-</div></div>
-
-  </div><div id="ad039a52955251f83c2d7c7c4f8920573">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ad039a52955251f83c2d7c7c4f8920573&quot;)">
-      <span class="type"></span>
-      <a class="name">ofContains</a>
-      <span class="args">(const vector&lt; T &gt; &amp;values, const T &amp;target)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ad039a52955251f83c2d7c7c4f8920573_description">
-
-    <div class="memberVariant"><span class="type">bool </span><span class="name">ofContains</span><span class="args">(const vector&lt; T &gt; &amp;values, const T &amp;target)</span></div><div class="memberDocumentation">
-
-<p>Search for a target value in a vector of values. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">values</td><td>The vector of values to be searched. </td></tr>
-    <tr><td class="paramname">target</td><td>The target value to be found. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true iff at least one value equal to the target value is found. </dd></dl>
-
-</div></div>
-
   </div><div id="a1d2223607b65d45e548b331223e7277f">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a1d2223607b65d45e548b331223e7277f&quot;)">
       <span class="type"></span>
@@ -650,7 +487,391 @@
 
 </div></div>
 
-  </div><div id="a31a70a3bfddaf5bd90084e59188f9d59">
+  </div></div>
+  </div><div id="Vectors">
+    <h3 class="sectionHeader">Vectors</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="aa6d24b46978740bfa122a77d52af6346">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aa6d24b46978740bfa122a77d52af6346&quot;)">
+      <span class="type"></span>
+      <a class="name">ofRandomize</a>
+      <span class="args">(vector&lt; T &gt; &amp;values)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aa6d24b46978740bfa122a77d52af6346_description">
+
+    <div class="memberVariant"><span class="type">void </span><span class="name">ofRandomize</span><span class="args">(vector&lt; T &gt; &amp;values)</span></div><div class="memberDocumentation">
+
+<p>Randomly reorder the values in a vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">values</td><td>The vector of values to modify. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+
+  </div><div id="aad01f059019f70fdb4c1ef7bb31c5fd4">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aad01f059019f70fdb4c1ef7bb31c5fd4&quot;)">
+      <span class="type"></span>
+      <a class="name">ofRemove</a>
+      <span class="args">(vector&lt; T &gt; &amp;values, BoolFunction shouldErase)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aad01f059019f70fdb4c1ef7bb31c5fd4_description">
+
+    <div class="memberVariant"><span class="type">void </span><span class="name">ofRemove</span><span class="args">(vector&lt; T &gt; &amp;values, BoolFunction shouldErase)</span></div><div class="memberDocumentation">
+
+<p>Conditionally remove values from a vector. </p>
+<p>Values are removed if, when passed to the BoolFunction, the BoolFunction function returns true. The give BoolFunction can be a custom function or a built-in function.</p>
+<p>Example of a custom function to remove odd numbers from a vector&lt;int&gt; of integers:</p>
+<div class="fragment"><div class="line"><span class="keywordtype">bool</span> IsOdd(<span class="keywordtype">int</span> i) {</div>
+<div class="line">    <span class="keywordflow">return</span> ((i % 2) == 1);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>To call the function, one might use:</p>
+<div class="fragment"><div class="line">vector&lt;int&gt; myInts;</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Fill the vector with integers.</span></div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; ++i)</div>
+<div class="line">{</div>
+<div class="line">    myInts.push_back(i);</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="ofUtils.html#aad01f059019f70fdb4c1ef7bb31c5fd4">ofRemove</a>(myInts, IsOdd);</div>
+</div><!-- fragment --><p>The resulting vector will contain the following values:</p>
+<p>0, 2, 4, 6, 8</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the type contained by the vector. </td></tr>
+    <tr><td class="paramname">BoolFunction</td><td>the boolean function used to erase. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">values</td><td>The vector of values to modify. </td></tr>
+    <tr><td class="paramname">shouldErase</td><td>a boolean function as described above. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://www.cplusplus.com/reference/algorithm/remove_if/">http://www.cplusplus.com/reference/algorithm/remove_if/</a> </dd></dl>
+
+</div></div>
+
+  </div><div id="add54b6eb9cc810f885e7b89b6388dba7">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#add54b6eb9cc810f885e7b89b6388dba7&quot;)">
+      <span class="type"></span>
+      <a class="name">ofSort</a>
+      <span class="args">(vector&lt; T &gt; &amp;values)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="add54b6eb9cc810f885e7b89b6388dba7_description">
+
+    <div class="memberVariant"><span class="type">void </span><span class="name">ofSort</span><span class="args">(vector&lt; T &gt; &amp;values)</span></div><div class="memberDocumentation">
+
+<p>Sort a vector of values into ascending order. </p>
+<p>The elements are compared using operator&lt; for the first version. Equivalent elements are not guaranteed to keep their original relative order.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the type contained by the vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">values</td><td>The vector of values to be sorted. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://www.cplusplus.com/reference/algorithm/sort/">http://www.cplusplus.com/reference/algorithm/sort/</a> </dd></dl>
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">ofSort</span><span class="args">(vector&lt; T &gt; &amp;values, BoolFunction compare)</span></div><div class="memberDocumentation">
+
+<p>Sort a vector of values into an order defined by a comparator. </p>
+<p>Example of a custom function to sort descending of integers:</p>
+<div class="fragment"><div class="line"><span class="keywordtype">bool</span> sortDescending(<span class="keywordtype">int</span> i,<span class="keywordtype">int</span> j)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> (j &lt; i);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>This binary function must accept two elements in the range as arguments and return a value convertible to bool. The value returned indicates whether the element passed as first argument is considered to go before the second in the specific strict weak ordering it defines. The function shall not modify any of its arguments. This can either be a function pointer or a function object.</p>
+<p>To call the function, one might use:</p>
+<div class="fragment"><div class="line">std::vector&lt;int&gt; myInts;</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Fill the vector with integers.</span></div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; ++i)</div>
+<div class="line">{</div>
+<div class="line">    myInts.push_back(i);</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="ofUtils.html#add54b6eb9cc810f885e7b89b6388dba7">ofSort</a>(myInts, sortDescending);</div>
+</div><!-- fragment --><p>The resulting vector will contain the following values:</p>
+<p>9, 8, 7, 6, 5, 4, 3, 2, 1, 0.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the type contained by the vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">The</td><td>vector of values to be sorted. </td></tr>
+    <tr><td class="paramname">The</td><td>comparison function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://www.cplusplus.com/reference/algorithm/sort/">http://www.cplusplus.com/reference/algorithm/sort/</a> </dd></dl>
+
+</div></div>
+
+  </div><div id="a8722346aca2730ebbb03bf63e6fce6f8">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a8722346aca2730ebbb03bf63e6fce6f8&quot;)">
+      <span class="type"></span>
+      <a class="name">ofFind</a>
+      <span class="args">(const vector&lt; T &gt; &amp;values, const T &amp;target)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a8722346aca2730ebbb03bf63e6fce6f8_description">
+
+    <div class="memberVariant"><span class="type">unsigned int </span><span class="name">ofFind</span><span class="args">(const vector&lt; T &gt; &amp;values, const T &amp;target)</span></div><div class="memberDocumentation">
+
+<p>Search for a target value in a vector of values. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the type contained by the vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">values</td><td>The vector of values to be searched. </td></tr>
+    <tr><td class="paramname">target</td><td>The target value to be found. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true the index of the first target value found. </dd></dl>
+
+</div></div>
+
+  </div><div id="ad039a52955251f83c2d7c7c4f8920573">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ad039a52955251f83c2d7c7c4f8920573&quot;)">
+      <span class="type"></span>
+      <a class="name">ofContains</a>
+      <span class="args">(const vector&lt; T &gt; &amp;values, const T &amp;target)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ad039a52955251f83c2d7c7c4f8920573_description">
+
+    <div class="memberVariant"><span class="type">bool </span><span class="name">ofContains</span><span class="args">(const vector&lt; T &gt; &amp;values, const T &amp;target)</span></div><div class="memberDocumentation">
+
+<p>Search for a target value in a vector of values. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the type contained by the vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">values</td><td>The vector of values to be searched. </td></tr>
+    <tr><td class="paramname">target</td><td>The target value to be found. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true iff at least one value equal to the target value is found. </dd></dl>
+
+</div></div>
+
+  </div></div>
+  </div><div id="Stringmanipulation">
+    <h3 class="sectionHeader">String manipulation</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="ab145673fc8b58076ed7a55eb26911a08">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ab145673fc8b58076ed7a55eb26911a08&quot;)">
+      <span class="type"></span>
+      <a class="name">ofSplitString</a>
+      <span class="args">(const string &amp;source, const string &amp;delimiter, bool ignoreEmpty=false, bool trim=false)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ab145673fc8b58076ed7a55eb26911a08_description">
+
+    <div class="memberVariant"><span class="type">vector&lt; string &gt; </span><span class="name">ofSplitString</span><span class="args">(const string &amp;source, const string &amp;delimiter, bool ignoreEmpty=false, bool trim=false)</span></div><div class="memberDocumentation">
+
+<p>Split a string on a delimiter. </p>
+<p>&#xA0; </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>The string to split </td></tr>
+    <tr><td class="paramname">delimiter</td><td>The string to split on </td></tr>
+    <tr><td class="paramname">ignoreEmpty</td><td>Set to true to remove empty results </td></tr>
+    <tr><td class="paramname">trim</td><td>Set to true to trim the resulting strings </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector of string split on the delimiter </dd></dl>
+
+</div></div>
+
+  </div><div id="a81c81f7ad8939f65f767f9e57fe622e0">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a81c81f7ad8939f65f767f9e57fe622e0&quot;)">
+      <span class="type"></span>
+      <a class="name">ofJoinString</a>
+      <span class="args">(const vector&lt; string &gt; &amp;stringElements, const string &amp;delimiter)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a81c81f7ad8939f65f767f9e57fe622e0_description">
+
+    <div class="memberVariant"><span class="type">string </span><span class="name">ofJoinString</span><span class="args">(const vector&lt; string &gt; &amp;stringElements, const string &amp;delimiter)</span></div><div class="memberDocumentation">
+
+<p>Join a vector of string together to one string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stringElements</td><td>The vector of strings to join </td></tr>
+    <tr><td class="paramname">delimiter</td><td>The delimiter to put betweeen each string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+
+  </div><div id="a26fd9920684a6e6c397cfe3a1fee2aea">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a26fd9920684a6e6c397cfe3a1fee2aea&quot;)">
+      <span class="type"></span>
+      <a class="name">ofStringReplace</a>
+      <span class="args">(string &amp;input, const string &amp;searchStr, const string &amp;replaceStr)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a26fd9920684a6e6c397cfe3a1fee2aea_description">
+
+    <div class="memberVariant"><span class="type">void </span><span class="name">ofStringReplace</span><span class="args">(string &amp;input, const string &amp;searchStr, const string &amp;replaceStr)</span></div><div class="memberDocumentation">
+
+<p>Replace occurrences of a string with another string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>The string to run the replacement on </td></tr>
+    <tr><td class="paramname">searchStr</td><td>The string to be replaced </td></tr>
+    <tr><td class="paramname">replaceStr</td><td>The string to put in place </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+
+  </div><div id="a63097e6fed943b5aba952cdf193f5f7d">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a63097e6fed943b5aba952cdf193f5f7d&quot;)">
+      <span class="type"></span>
+      <a class="name">ofIsStringInString</a>
+      <span class="args">(const string &amp;haystack, const string &amp;needle)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a63097e6fed943b5aba952cdf193f5f7d_description">
+
+    <div class="memberVariant"><span class="type">bool </span><span class="name">ofIsStringInString</span><span class="args">(const string &amp;haystack, const string &amp;needle)</span></div><div class="memberDocumentation">
+
+<p>Check if string contains another string. </p>
+<p>Example: </p>
+<div class="fragment"><div class="line"><span class="keywordtype">string</span> haystack = <span class="stringliteral">&quot;foobar&quot;</span>;</div>
+<div class="line"><a class="code" href="ofLog.html">ofLog</a>() &lt;&lt; <a class="code" href="of_utils_8cpp.html#a63097e6fed943b5aba952cdf193f5f7d">ofIsStringInString</a>(haystack, <span class="stringliteral">&quot;foo&quot;</span>); <span class="comment">// outputs 1</span></div>
+<div class="line"><a class="code" href="ofLog.html">ofLog</a>() &lt;&lt; <a class="code" href="of_utils_8cpp.html#a63097e6fed943b5aba952cdf193f5f7d">ofIsStringInString</a>(haystack,<span class="stringliteral">&quot;bar&quot;</span>); <span class="comment">// outputs 1</span></div>
+<div class="line"><a class="code" href="ofLog.html">ofLog</a>() &lt;&lt; <a class="code" href="of_utils_8cpp.html#a63097e6fed943b5aba952cdf193f5f7d">ofIsStringInString</a>(haystack, <span class="stringliteral">&quot;something else&quot;</span>); <span class="comment">// outputs 0</span></div>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">haystack</td><td>The string to check for occurrence in </td></tr>
+    <tr><td class="paramname">needle</td><td>The string to check for </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+
+  </div><div id="a9a06d5c0f8a393359ae121bd91a3e688">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a9a06d5c0f8a393359ae121bd91a3e688&quot;)">
+      <span class="type"></span>
+      <a class="name">ofStringTimesInString</a>
+      <span class="args">(const string &amp;haystack, const string &amp;needle)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a9a06d5c0f8a393359ae121bd91a3e688_description">
+
+    <div class="memberVariant"><span class="type">int </span><span class="name">ofStringTimesInString</span><span class="args">(const string &amp;haystack, const string &amp;needle)</span></div><div class="memberDocumentation">
+
+<p>Check how many times a string contains another string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">haystack</td><td>The string to check for occurrence in </td></tr>
+    <tr><td class="paramname">needle</td><td>The string to check for </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+
+  </div><div id="a92c303a15a7649f987b8dce1e5eec26c">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a92c303a15a7649f987b8dce1e5eec26c&quot;)">
+      <span class="type"></span>
+      <a class="name">ofToLower</a>
+      <span class="args">(const string &amp;src)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a92c303a15a7649f987b8dce1e5eec26c_description">
+
+    <div class="memberVariant"><span class="type">string </span><span class="name">ofToLower</span><span class="args">(const string &amp;src)</span></div><div class="memberDocumentation">
+
+<p>Converts all characters in the string to lowercase. </p>
+
+</div></div>
+
+  </div><div id="ac90c47cb2710aa90def41ddef75d5adf">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#ac90c47cb2710aa90def41ddef75d5adf&quot;)">
+      <span class="type"></span>
+      <a class="name">ofToUpper</a>
+      <span class="args">(const string &amp;src)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ac90c47cb2710aa90def41ddef75d5adf_description">
+
+    <div class="memberVariant"><span class="type">string </span><span class="name">ofToUpper</span><span class="args">(const string &amp;src)</span></div><div class="memberDocumentation">
+
+<p>Converts all characters in the string to uppercase. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">string</span> politeGreeting = <span class="stringliteral">&quot;Hello, World!&quot;</span>;</div>
+<div class="line"><span class="keywordtype">string</span> enthusiasticGreeting = <a class="code" href="of_utils_8cpp.html#ac90c47cb2710aa90def41ddef75d5adf">ofToUpper</a>(politeGreeting); </div>
+<div class="line"><a class="code" href="ofLog.html">ofLog</a>() &lt;&lt; enthusiasticGreeting; <span class="comment">// returns &quot;HELLO, WORLD!&quot;</span></div>
+</div><!-- fragment --> 
+</div></div>
+
+  </div><div id="a666d0d4cc9f1781386de7a678618b35e">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a666d0d4cc9f1781386de7a678618b35e&quot;)">
+      <span class="type"></span>
+      <a class="name">ofVAArgsToString</a>
+      <span class="args">(const char *format,...)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a666d0d4cc9f1781386de7a678618b35e_description">
+
+    <div class="memberVariant"><span class="type">string </span><span class="name">ofVAArgsToString</span><span class="args">(const char *format,...)</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofVAArgsToString</span><span class="args">(const char *format, va_list args)</span></div><div class="memberDocumentation">
+
+</div></div>
+
+  </div></div>
+  </div><div id="Stringconversion">
+    <h3 class="sectionHeader">String conversion</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a31a70a3bfddaf5bd90084e59188f9d59">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a31a70a3bfddaf5bd90084e59188f9d59&quot;)">
       <span class="type"></span>
       <a class="name">ofToString</a>
@@ -662,19 +883,29 @@
 
     <div class="memberVariant"><span class="type">string </span><span class="name">ofToString</span><span class="args">(const T &amp;value)</span></div><div class="memberDocumentation">
 
+<p>Convert a value to a string. </p>
+<p>Example: </p>
+<div class="fragment"><div class="line"><span class="keywordtype">string</span> str = <span class="stringliteral">&quot;framerate is &quot;</span>;                       </div>
+<div class="line">str += <a class="code" href="of_pixels_8cpp.html#a0bdb3162be2ff8c1541a42f3c8f5ac1c">ofToString</a>(<a class="code" href="ofAppRunner.html#a01080ea3b88e20894224b28caa46fd25">ofGetFrameRate</a>(), 2)+<span class="stringliteral">&quot;fps&quot;</span>; </div>
+</div><!-- fragment --> 
 </div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofToString</span><span class="args">(const T &amp;value, int precision)</span></div><div class="memberDocumentation">
 
-<p>like sprintf &quot;%4f&quot; format, in this example precision=4 </p>
+<p>Convert a value to a string with a specific precision. </p>
+<p>Like sprintf &quot;%4f&quot; format, in this example precision=4 </p>
 
 </div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofToString</span><span class="args">(const T &amp;value, int width, char fill)</span></div><div class="memberDocumentation">
 
-<p>like sprintf &quot;% 4d&quot; or &quot;% 4f&quot; format, in this example width=4, fill=&apos; &apos; </p>
+<p>Convert a value to a string with a specific width and fill. </p>
+<p>Like sprintf &quot;% 4d&quot; or &quot;% 4f&quot; format, in this example width=4, fill=&apos; &apos; </p>
 
 </div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofToString</span><span class="args">(const T &amp;value, int precision, int width, char fill)</span></div><div class="memberDocumentation">
 
-<p>like sprintf &quot;%04.2d&quot; or &quot;%04.2f&quot; format, in this example precision=2, width=4, fill=&apos;0&apos; </p>
+<p>Convert a value to a string with a specific precision, width and filll. </p>
+<p>Like sprintf &quot;%04.2d&quot; or &quot;%04.2f&quot; format, in this example precision=2, width=4, fill=&apos;0&apos; </p>
 
 </div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofToString</span><span class="args">(const vector&lt; T &gt; &amp;values)</span></div><div class="memberDocumentation">
+
+<p>Convert a vector of values to a string. </p>
 
 </div></div>
 
@@ -696,81 +927,11 @@
 
 </div></div>
 
-  </div><div id="aaaebd3cb263c8e3da496a9c5e243e7fa">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aaaebd3cb263c8e3da496a9c5e243e7fa&quot;)">
-      <span class="type"></span>
-      <a class="name">ofToHex</a>
-      <span class="args">(const T &amp;value)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aaaebd3cb263c8e3da496a9c5e243e7fa_description">
-
-    <div class="memberVariant"><span class="type">string </span><span class="name">ofToHex</span><span class="args">(const T &amp;value)</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofToHex</span><span class="args">(const string &amp;value)</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofToHex</span><span class="args">(const char *value)</span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a15c08362f3a3a08b564a03f8198e0c91">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a15c08362f3a3a08b564a03f8198e0c91&quot;)">
-      <span class="type"></span>
-      <a class="name">ofHexToInt</a>
-      <span class="args">(const string &amp;intHexString)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a15c08362f3a3a08b564a03f8198e0c91_description">
-
-    <div class="memberVariant"><span class="type">int </span><span class="name">ofHexToInt</span><span class="args">(const string &amp;intHexString)</span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="af10a159a72a7ffe2e21a7f0e524d2647">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#af10a159a72a7ffe2e21a7f0e524d2647&quot;)">
-      <span class="type"></span>
-      <a class="name">ofHexToChar</a>
-      <span class="args">(const string &amp;charHexString)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="af10a159a72a7ffe2e21a7f0e524d2647_description">
-
-    <div class="memberVariant"><span class="type">char </span><span class="name">ofHexToChar</span><span class="args">(const string &amp;charHexString)</span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a1c2be299902ddf28f9f3880562137ab2">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a1c2be299902ddf28f9f3880562137ab2&quot;)">
-      <span class="type"></span>
-      <a class="name">ofHexToFloat</a>
-      <span class="args">(const string &amp;floatHexString)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a1c2be299902ddf28f9f3880562137ab2_description">
-
-    <div class="memberVariant"><span class="type">float </span><span class="name">ofHexToFloat</span><span class="args">(const string &amp;floatHexString)</span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="afcdc71a74c9249e72d93097701fed3ec">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#afcdc71a74c9249e72d93097701fed3ec&quot;)">
-      <span class="type"></span>
-      <a class="name">ofHexToString</a>
-      <span class="args">(const string &amp;stringHexString)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="afcdc71a74c9249e72d93097701fed3ec_description">
-
-    <div class="memberVariant"><span class="type">string </span><span class="name">ofHexToString</span><span class="args">(const string &amp;stringHexString)</span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a02ff3334da0e43587cc19190433fa77b">
+  </div></div>
+  </div><div id="Numberconversion">
+    <h3 class="sectionHeader">Number conversion</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a02ff3334da0e43587cc19190433fa77b">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a02ff3334da0e43587cc19190433fa77b&quot;)">
       <span class="type"></span>
       <a class="name">ofToInt</a>
@@ -782,19 +943,7 @@
 
     <div class="memberVariant"><span class="type">int </span><span class="name">ofToInt</span><span class="args">(const string &amp;intString)</span></div><div class="memberDocumentation">
 
-</div></div>
-
-  </div><div id="a4b1ca14d38d0fd9f224de0d9c7c4df80">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a4b1ca14d38d0fd9f224de0d9c7c4df80&quot;)">
-      <span class="type"></span>
-      <a class="name">ofToChar</a>
-      <span class="args">(const string &amp;charString)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a4b1ca14d38d0fd9f224de0d9c7c4df80_description">
-
-    <div class="memberVariant"><span class="type">char </span><span class="name">ofToChar</span><span class="args">(const string &amp;charString)</span></div><div class="memberDocumentation">
+<p>Converts a string representation of an int (e.g., <code>&quot;3&quot;</code>) to an actual int. </p>
 
 </div></div>
 
@@ -810,6 +959,8 @@
 
     <div class="memberVariant"><span class="type">float </span><span class="name">ofToFloat</span><span class="args">(const string &amp;floatString)</span></div><div class="memberDocumentation">
 
+<p>Converts a string representation of a float (e.g., <code>&quot;3.14&quot;</code>) to an actual float. </p>
+
 </div></div>
 
   </div><div id="a508566c98064b13201ba05760d71d110">
@@ -823,6 +974,8 @@
     <div class="methodDescription" style="display:none" id="a508566c98064b13201ba05760d71d110_description">
 
     <div class="memberVariant"><span class="type">double </span><span class="name">ofToDouble</span><span class="args">(const string &amp;doubleString)</span></div><div class="memberDocumentation">
+
+<p>Converts a string representation of a double (e.g., <code>&quot;3.14&quot;</code>) to an actual double. </p>
 
 </div></div>
 
@@ -838,6 +991,112 @@
 
     <div class="memberVariant"><span class="type">bool </span><span class="name">ofToBool</span><span class="args">(const string &amp;boolString)</span></div><div class="memberDocumentation">
 
+<p>Converts a string representation of a boolean (e.g., <code>&quot;TRUE&quot;</code>) to an actual bool using a case-insensitive comparison against the words <code>&quot;true&quot;</code> and <code>&quot;false&quot;</code>. </p>
+
+</div></div>
+
+  </div><div id="aaaebd3cb263c8e3da496a9c5e243e7fa">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#aaaebd3cb263c8e3da496a9c5e243e7fa&quot;)">
+      <span class="type"></span>
+      <a class="name">ofToHex</a>
+      <span class="args">(const T &amp;value)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aaaebd3cb263c8e3da496a9c5e243e7fa_description">
+
+    <div class="memberVariant"><span class="type">string </span><span class="name">ofToHex</span><span class="args">(const T &amp;value)</span></div><div class="memberDocumentation">
+
+<p>Converts any value to its equivalent hexadecimal representation corresponding to the way it is stored in memory. </p>
+
+</div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofToHex</span><span class="args">(const string &amp;value)</span></div><div class="memberDocumentation">
+
+<p>Converts a string (e.g., <code>&quot;abc&quot;</code>) to its equivalent hexadecimal representation (e.g., <code>&quot;616263&quot;</code>). </p>
+
+</div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofToHex</span><span class="args">(const char *value)</span></div><div class="memberDocumentation">
+
+<p>Converts a c-style string (e.g., <code>&quot;abc&quot;</code>) to its equivalent hexadecimal representation (e.g., <code>&quot;616263&quot;</code>). </p>
+
+</div></div>
+
+  </div><div id="a15c08362f3a3a08b564a03f8198e0c91">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a15c08362f3a3a08b564a03f8198e0c91&quot;)">
+      <span class="type"></span>
+      <a class="name">ofHexToInt</a>
+      <span class="args">(const string &amp;intHexString)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a15c08362f3a3a08b564a03f8198e0c91_description">
+
+    <div class="memberVariant"><span class="type">int </span><span class="name">ofHexToInt</span><span class="args">(const string &amp;intHexString)</span></div><div class="memberDocumentation">
+
+<p>Converts a hexadecimal representation of an int (little-endian, 32-bit, e.g., <code>&quot;0xbadf00d&quot;</code> or <code>&quot;badf00d&quot;</code>) to an actual int. </p>
+
+</div></div>
+
+  </div><div id="af10a159a72a7ffe2e21a7f0e524d2647">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#af10a159a72a7ffe2e21a7f0e524d2647&quot;)">
+      <span class="type"></span>
+      <a class="name">ofHexToChar</a>
+      <span class="args">(const string &amp;charHexString)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="af10a159a72a7ffe2e21a7f0e524d2647_description">
+
+    <div class="memberVariant"><span class="type">char </span><span class="name">ofHexToChar</span><span class="args">(const string &amp;charHexString)</span></div><div class="memberDocumentation">
+
+<p>Converts a hexadecimal representation of an char (e.g., <code>&quot;61&quot;</code>) to an actual char (e.g., <code>a</code>). </p>
+
+</div></div>
+
+  </div><div id="a1c2be299902ddf28f9f3880562137ab2">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a1c2be299902ddf28f9f3880562137ab2&quot;)">
+      <span class="type"></span>
+      <a class="name">ofHexToFloat</a>
+      <span class="args">(const string &amp;floatHexString)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a1c2be299902ddf28f9f3880562137ab2_description">
+
+    <div class="memberVariant"><span class="type">float </span><span class="name">ofHexToFloat</span><span class="args">(const string &amp;floatHexString)</span></div><div class="memberDocumentation">
+
+<p>Converts a hexadecimal representation of an float (little-endian, 32-bit IEEE 754, e.g., <code>&quot;4060000000000000&quot;</code>) to an actual float (e.g., <code>128.f</code>). </p>
+
+</div></div>
+
+  </div><div id="afcdc71a74c9249e72d93097701fed3ec">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#afcdc71a74c9249e72d93097701fed3ec&quot;)">
+      <span class="type"></span>
+      <a class="name">ofHexToString</a>
+      <span class="args">(const string &amp;stringHexString)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="afcdc71a74c9249e72d93097701fed3ec_description">
+
+    <div class="memberVariant"><span class="type">string </span><span class="name">ofHexToString</span><span class="args">(const string &amp;stringHexString)</span></div><div class="memberDocumentation">
+
+<p>Converts a hexadecimal representation of an string (e.g., <code>&quot;61626364656667&quot;</code>) to an actual string (<code>&quot;abcdefg&quot;</code>) </p>
+
+</div></div>
+
+  </div><div id="a4b1ca14d38d0fd9f224de0d9c7c4df80">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#a4b1ca14d38d0fd9f224de0d9c7c4df80&quot;)">
+      <span class="type"></span>
+      <a class="name">ofToChar</a>
+      <span class="args">(const string &amp;charString)</span>
+      <span class="note"></span>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a4b1ca14d38d0fd9f224de0d9c7c4df80_description">
+
+    <div class="memberVariant"><span class="type">char </span><span class="name">ofToChar</span><span class="args">(const string &amp;charString)</span></div><div class="memberDocumentation">
+
+<p>Converts a string representation of a single char (e.g., <code>&quot;c&quot;</code>) to an actual char. </p>
+
 </div></div>
 
   </div><div id="a8faf52968694f975c39c45fab82aa0bc">
@@ -852,9 +1111,15 @@
 
     <div class="memberVariant"><span class="type">string </span><span class="name">ofToBinary</span><span class="args">(const T &amp;value)</span></div><div class="memberDocumentation">
 
+<p>Converts any datatype value to a string of only 1s and 0s corresponding to the way value is stored in memory. </p>
+
 </div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofToBinary</span><span class="args">(const string &amp;value)</span></div><div class="memberDocumentation">
 
+<p>Converts a string value to a string of only 1s and 0s corresponding to the way value is stored in memory. </p>
+
 </div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofToBinary</span><span class="args">(const char *value)</span></div><div class="memberDocumentation">
+
+<p>Converts any C-style string value to a string of only 1s and 0s corresponding to the way value is stored in memory. </p>
 
 </div></div>
 
@@ -870,6 +1135,8 @@
 
     <div class="memberVariant"><span class="type">int </span><span class="name">ofBinaryToInt</span><span class="args">(const string &amp;value)</span></div><div class="memberDocumentation">
 
+<p>Interprets a string consisting only of 1s and 0s as an int (little-endian, 32-bit), and returns the corresponding int value. </p>
+
 </div></div>
 
   </div><div id="ade60b17beae5e41cd433975998fef037">
@@ -883,6 +1150,8 @@
     <div class="methodDescription" style="display:none" id="ade60b17beae5e41cd433975998fef037_description">
 
     <div class="memberVariant"><span class="type">char </span><span class="name">ofBinaryToChar</span><span class="args">(const string &amp;value)</span></div><div class="memberDocumentation">
+
+<p>Interprets a string consisting only of 1s and 0s as a char, and returns the corresponding char value. </p>
 
 </div></div>
 
@@ -898,6 +1167,8 @@
 
     <div class="memberVariant"><span class="type">float </span><span class="name">ofBinaryToFloat</span><span class="args">(const string &amp;value)</span></div><div class="memberDocumentation">
 
+<p>Interprets a string consisting only of 1s and 0s as a float (little-endian, 32-bit IEEE 754), and returns the corresponding float value. </p>
+
 </div></div>
 
   </div><div id="ad930367d2a3bd2514f0a6d5516fd855e">
@@ -912,9 +1183,15 @@
 
     <div class="memberVariant"><span class="type">string </span><span class="name">ofBinaryToString</span><span class="args">(const string &amp;value)</span></div><div class="memberDocumentation">
 
+<p>Interprets a string consisting only of 1s and 0s as 8-bit ASCII characters, and returns the corresponding string. </p>
+
 </div></div>
 
-  </div><div id="ace6bb3ddbbe185712808047277dab043">
+  </div></div>
+  </div><div id="OpenFrameworksversion">
+    <h3 class="sectionHeader">OpenFrameworks version</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="ace6bb3ddbbe185712808047277dab043">
     <div class="methodHeader" onClick="toggleDescription(&quot;#ace6bb3ddbbe185712808047277dab043&quot;)">
       <span class="type"></span>
       <a class="name">ofGetVersionInfo</a>
@@ -925,6 +1202,8 @@
     <div class="methodDescription" style="display:none" id="ace6bb3ddbbe185712808047277dab043_description">
 
     <div class="memberVariant"><span class="type">string </span><span class="name">ofGetVersionInfo</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Get the current version of openFrameworks with dot delimeter. For example <code>0.9.0</code>. </p>
 
 </div></div>
 
@@ -940,6 +1219,8 @@
 
     <div class="memberVariant"><span class="type">unsigned int </span><span class="name">ofGetVersionMajor</span><span class="args">()</span></div><div class="memberDocumentation">
 
+<p>Get the major of the current version number of openFrameworks (the first digit) </p>
+
 </div></div>
 
   </div><div id="aacd9f2aaab3c32a0ef2fa0389ad80c58">
@@ -953,6 +1234,8 @@
     <div class="methodDescription" style="display:none" id="aacd9f2aaab3c32a0ef2fa0389ad80c58_description">
 
     <div class="memberVariant"><span class="type">unsigned int </span><span class="name">ofGetVersionMinor</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Get the minor of the current version number of openFrameworks (the middle digit) </p>
 
 </div></div>
 
@@ -968,9 +1251,15 @@
 
     <div class="memberVariant"><span class="type">unsigned int </span><span class="name">ofGetVersionPatch</span><span class="args">()</span></div><div class="memberDocumentation">
 
+<p>Get the patch number of the current version number of openFrameworks (the last digit) </p>
+
 </div></div>
 
-  </div><div id="a02cd3d33fdbe6ce4757563de082c5e04">
+  </div></div>
+  </div><div id="Framesaving">
+    <h3 class="sectionHeader">Frame saving</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a02cd3d33fdbe6ce4757563de082c5e04">
     <div class="methodHeader" onClick="toggleDescription(&quot;#a02cd3d33fdbe6ce4757563de082c5e04&quot;)">
       <span class="type"></span>
       <a class="name">ofSaveScreen</a>
@@ -981,6 +1270,15 @@
     <div class="methodDescription" style="display:none" id="a02cd3d33fdbe6ce4757563de082c5e04_description">
 
     <div class="memberVariant"><span class="type">void </span><span class="name">ofSaveScreen</span><span class="args">(const string &amp;filename)</span></div><div class="memberDocumentation">
+
+<p>Saves the current screen image into a given file Example: ~~~~{.cpp}. </p>
+<p>string filename; fileName = &quot;screen1.png&quot;; ofSaveScreen(fileName); ~~~~</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>The filename to save the image in </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div></div>
 
@@ -995,6 +1293,8 @@
     <div class="methodDescription" style="display:none" id="aab3fb9d1d4dbd94705f8853d4288dbf0_description">
 
     <div class="memberVariant"><span class="type">void </span><span class="name">ofSaveFrame</span><span class="args">(bool bUseViewport=false)</span></div><div class="memberDocumentation">
+
+<p>Saves the current frame as a PNG image. </p>
 
 </div></div>
 
@@ -1012,117 +1312,30 @@
 
 </div></div>
 
-  </div><div id="ab145673fc8b58076ed7a55eb26911a08">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ab145673fc8b58076ed7a55eb26911a08&quot;)">
+  </div></div>
+  </div><div id="System">
+    <h3 class="sectionHeader">System</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="afa256a8b306de08ee3fee91a27fcc10f">
+    <div class="methodHeader" onClick="toggleDescription(&quot;#afa256a8b306de08ee3fee91a27fcc10f&quot;)">
       <span class="type"></span>
-      <a class="name">ofSplitString</a>
-      <span class="args">(const string &amp;source, const string &amp;delimiter, bool ignoreEmpty=false, bool trim=false)</span>
+      <a class="name">ofLaunchBrowser</a>
+      <span class="args">(const string &amp;url, bool uriEncodeQuery=false)</span>
       <span class="note"></span>
     </div>
 
-    <div class="methodDescription" style="display:none" id="ab145673fc8b58076ed7a55eb26911a08_description">
+    <div class="methodDescription" style="display:none" id="afa256a8b306de08ee3fee91a27fcc10f_description">
 
-    <div class="memberVariant"><span class="type">vector&lt; string &gt; </span><span class="name">ofSplitString</span><span class="args">(const string &amp;source, const string &amp;delimiter, bool ignoreEmpty=false, bool trim=false)</span></div><div class="memberDocumentation">
+    <div class="memberVariant"><span class="type">void </span><span class="name">ofLaunchBrowser</span><span class="args">(const string &amp;url, bool uriEncodeQuery=false)</span></div><div class="memberDocumentation">
 
-</div></div>
-
-  </div><div id="a81c81f7ad8939f65f767f9e57fe622e0">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a81c81f7ad8939f65f767f9e57fe622e0&quot;)">
-      <span class="type"></span>
-      <a class="name">ofJoinString</a>
-      <span class="args">(const vector&lt; string &gt; &amp;stringElements, const string &amp;delimiter)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a81c81f7ad8939f65f767f9e57fe622e0_description">
-
-    <div class="memberVariant"><span class="type">string </span><span class="name">ofJoinString</span><span class="args">(const vector&lt; string &gt; &amp;stringElements, const string &amp;delimiter)</span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a26fd9920684a6e6c397cfe3a1fee2aea">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a26fd9920684a6e6c397cfe3a1fee2aea&quot;)">
-      <span class="type"></span>
-      <a class="name">ofStringReplace</a>
-      <span class="args">(string &amp;input, const string &amp;searchStr, const string &amp;replaceStr)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a26fd9920684a6e6c397cfe3a1fee2aea_description">
-
-    <div class="memberVariant"><span class="type">void </span><span class="name">ofStringReplace</span><span class="args">(string &amp;input, const string &amp;searchStr, const string &amp;replaceStr)</span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a63097e6fed943b5aba952cdf193f5f7d">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a63097e6fed943b5aba952cdf193f5f7d&quot;)">
-      <span class="type"></span>
-      <a class="name">ofIsStringInString</a>
-      <span class="args">(const string &amp;haystack, const string &amp;needle)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a63097e6fed943b5aba952cdf193f5f7d_description">
-
-    <div class="memberVariant"><span class="type">bool </span><span class="name">ofIsStringInString</span><span class="args">(const string &amp;haystack, const string &amp;needle)</span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a9a06d5c0f8a393359ae121bd91a3e688">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a9a06d5c0f8a393359ae121bd91a3e688&quot;)">
-      <span class="type"></span>
-      <a class="name">ofStringTimesInString</a>
-      <span class="args">(const string &amp;haystack, const string &amp;needle)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a9a06d5c0f8a393359ae121bd91a3e688_description">
-
-    <div class="memberVariant"><span class="type">int </span><span class="name">ofStringTimesInString</span><span class="args">(const string &amp;haystack, const string &amp;needle)</span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a92c303a15a7649f987b8dce1e5eec26c">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a92c303a15a7649f987b8dce1e5eec26c&quot;)">
-      <span class="type"></span>
-      <a class="name">ofToLower</a>
-      <span class="args">(const string &amp;src)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a92c303a15a7649f987b8dce1e5eec26c_description">
-
-    <div class="memberVariant"><span class="type">string </span><span class="name">ofToLower</span><span class="args">(const string &amp;src)</span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="ac90c47cb2710aa90def41ddef75d5adf">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ac90c47cb2710aa90def41ddef75d5adf&quot;)">
-      <span class="type"></span>
-      <a class="name">ofToUpper</a>
-      <span class="args">(const string &amp;src)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ac90c47cb2710aa90def41ddef75d5adf_description">
-
-    <div class="memberVariant"><span class="type">string </span><span class="name">ofToUpper</span><span class="args">(const string &amp;src)</span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a666d0d4cc9f1781386de7a678618b35e">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a666d0d4cc9f1781386de7a678618b35e&quot;)">
-      <span class="type"></span>
-      <a class="name">ofVAArgsToString</a>
-      <span class="args">(const char *format,...)</span>
-      <span class="note"></span>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a666d0d4cc9f1781386de7a678618b35e_description">
-
-    <div class="memberVariant"><span class="type">string </span><span class="name">ofVAArgsToString</span><span class="args">(const char *format,...)</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofVAArgsToString</span><span class="args">(const char *format, va_list args)</span></div><div class="memberDocumentation">
+<p>Launch the given URL in the default browser. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>the URL to open. </td></tr>
+    <tr><td class="paramname">uriEncodeQuery</td><td>true if the query parameters in the given URL have already been URL encoded. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div></div>
 
@@ -1138,6 +1351,8 @@
 
     <div class="memberVariant"><span class="type">string </span><span class="name">ofSystem</span><span class="args">(const string &amp;command)</span></div><div class="memberDocumentation">
 
+<p>Run a system command. Similar to run a command in terminal. </p>
+
 </div></div>
 
   </div><div id="ab790b10d5c2913ddb8d29b7e272f24d3">
@@ -1151,6 +1366,8 @@
     <div class="methodDescription" style="display:none" id="ab790b10d5c2913ddb8d29b7e272f24d3_description">
 
     <div class="memberVariant"><span class="type"><a href="ofConstants.html#1a5d9ba7e6cff71339c6f437f75e2678b5">ofTargetPlatform</a></span><span class="name">ofGetTargetPlatform</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Get the target platform of the current system. </p>
 
 </div></div>
 
