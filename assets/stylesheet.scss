@@ -6,6 +6,11 @@ body {
   //background-color: rgb(240,240,240);
 }
 
+small {
+  margin-left: 20px;
+  font-weight: 100!important;
+}
+
 .toc {
   margin-top:100px;
   .form-control {
@@ -16,6 +21,9 @@ body {
   .searchResult {
     border: 1px solid #ccc;
     border-radius: 4px;
+
+    max-height: 500px;
+    overflow-y: scroll;
 
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
@@ -299,6 +307,7 @@ h4 {
     border-bottom: 0px;
     transition: border-color 0.5s ease;
   }
+
 
   a {
 

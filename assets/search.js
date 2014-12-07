@@ -26,7 +26,7 @@ $( document ).ready(function() {
 
 
 
-      _.first(searchResult,10).forEach(function (res) {
+      _.first(searchResult,30).forEach(function (res) {
         var el = $('<li>');
         var link = $('<a href="' + res.ref + '">');
 

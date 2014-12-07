@@ -212,7 +212,7 @@ function parseDoxygenXml(doxygenName){
       ret.url = compound['location'][0]['$']['file'].match(/\/(\w+).h$/)[1]+".html";
 
       // Object type
-      ret.type = compound['$'].kind;
+      ret.kind = compound['$'].kind;
 
 
       // Brief description
@@ -469,7 +469,7 @@ function scrapeDoxygenHtml(parsedData){
 // ----------
 
 function addObjectToSearch(parsedData){
-  searchToc.push({name:parsedData.name, type:parsedData.type, ref:parsedData.url})
+  searchToc.push({name:parsedData.name, type:parsedData.kind, ref:parsedData.url})
 
   parsedData.sections.forEach(function (section) {
     section.methods.forEach(function(method){
@@ -533,7 +533,12 @@ function generateHtmlContent(parsedData, $){
   var classTemplate = $('#classTemplate').clone().attr('id','');
 
   // Class description
-  classTemplate.find('.classTitle').html(parsedData.name);
+  var kind = "";
+  if(parsedData.kind){
+    kind = "<small>"+parsedData.kind+"</small>";
+  }
+  classTemplate.find('.classTitle').html(parsedData.name+kind);
+  //classTemplate.find('.classKind').html(parsedData.kind);
   classTemplate.find('.classDescription').html(parsedData.description);
 
   // Sections
