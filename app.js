@@ -6,7 +6,7 @@ var fs = require('fs-extra'),
 
 // Set this to the section you work on to speed up the generation.
 // But remember to remove it again! :)
-var filterGroup = 'math';
+var filterGroup = '';
 
 // Check for sass compatibility (it does not work on Travis-ci)
 try {
@@ -45,38 +45,57 @@ fs.copySync('assets/fuse.min.js', 'output/fuse.min.js');
 var tocInfo = {};
 var searchToc = [];
 
+// Load the structure from the doxygen xml
 loadStructure()
+
+  // Then generate the docs of all the pages
   .then(function(structure){
-    // Generate the docs
     var promises = [];
 
-    for(var category in structure['core']){
-      structure['core'][category].forEach(function(file){
-        try {
-          var p = generateDoc(file, category)
-            // If the doc fails, remove it from the structure so it's not shown on the frontpage
-            .fail(function(e){
-              console.error(e)
-              var index = structure['core'][category].indexOf(file);
-              structure['core'][category].splice(index,1);
-            });
+    // Iterate over the categories
+    for (var category in structure['core']) {
 
-          promises.push(p);
-        } catch(e){
-          console.error("GenerateDoc error",e);
-        }
+      structure['core'][category].forEach(function (file) {
+        file.category = category;
+
+        // Generate the doc of the file
+        var p = generateDoc(file)
+          .then(function(){
+            console.log(file)
+          })
+          // If the doc fails, remove it from the structure so it's not shown on the frontpage
+          .fail(function (e) {
+            console.error("Error generatic doc:", e, file, file.category)
+            var index = structure['core'][file.category].indexOf(file);
+            structure['core'][file.category].splice(index, 1);
+          });
+
+        promises.push(p);
+
       })
     }
 
     // When all the docs have been generated, then create the TOC
-    Q.all(promises).then(function(){
-      console.log("Generate toc");
-      // Generate the TOC (index.html)
-      generateToc(structure, tocInfo);
+    return Q.all(promises)
+      .then(function(){
+        return structure;
+      })
 
-      console.log("Generate search json");
-      generateSearchTocJSON(structure, searchToc);
-    });
+  })
+
+  // Then generate the TOC and search json
+  .then(function(structure){
+    console.log("Generate toc");
+    // Generate the TOC (index.html)
+    generateToc(structure, tocInfo);
+
+    console.log("Generate search json");
+    generateSearchTocJSON(structure, searchToc);
+  })
+
+  // Fall back
+  .fail(function(e){
+    console.error("General critical error! ",e)
   });
 
 // ---------
@@ -139,36 +158,41 @@ function loadStructure(){
 }
 
 // ---------
-
-function generateDoc(fileDescription, category) {
+// This is where it happens!
+// The chain of `then` ensures that if one step fails, it will will stop parsing
+//
+function generateDoc(fileDescription) {
+  var category = fileDescription.category;
   var className = fileDescription.name;
   var doxygenName = fileDescription.ref;
 
-  /*if(fs.existsSync(dir + "xml/class"+doxygenName+ ".xml")){
-   doxygenName = "class"+doxygenName;
-   }
-
-   els*e*/
   console.log("Generate "+className)
 
+  // First parse the doxygen xml
   return parseDoxygenXml(doxygenName)
+
+    // Then scrape the doxygen html for descriptions
     .then(function(parseData) {
       console.log("Scrape "+className)
 
       return scrapeDoxygenHtml(parseData);
     })
 
-    // Generate search toc object
+    // Then generate search toc object
     .then(function(parsedData){
       addObjectToSearch(parsedData);
 
       return parsedData;
     })
+
+    // Then generate the html output
     .then(function(parseData){
       console.log("Generate html "+className)
 
       return generateHtml(parseData, category);
     })
+
+    // Then save the output file
     .then(function(html){
       //Save the html
       console.log("Save "+className)
@@ -224,21 +248,6 @@ function parseDoxygenXml(doxygenName){
         ret.briefDescription = compound['briefdescription'][0]['para'][0];
       } else {
         console.error("Missing briefDescription on " + ret.name);
-      }
-
-      // Inner classes
-      if (compound['innerclass']) {
-
-        compound['innerclass'].forEach(function (innerclass) {
-          var classDoxygenName = innerclass['$']['refid'];
-
-          var p = parseDoxygenXml(classDoxygenName).then(function(classData){
-            ret.classes.push(classData);
-          });
-
-          promises.push(p);
-
-        });
       }
 
       // Sections
@@ -362,7 +371,7 @@ function parseDoxygenXml(doxygenName){
                 m.argsstring = funcRegex[3].trim();
               } catch (e) {
                 //console.log(m.argsstring);
-                console.error(e);
+                console.error("Error parsing deprecated message", e);
               }
               //console.log(m.type, m.name, m.argsstring)
             }
@@ -381,22 +390,55 @@ function parseDoxygenXml(doxygenName){
 
         });
       }
+
+      // Inner classes
+      if (compound['innerclass']) {
+
+        compound['innerclass'].forEach(function (innerclass) {
+          var p = Q.defer();
+
+          var innerClassDoxygenName = innerclass['$']['refid'];
+
+          // Parse the xml of the inner class
+          parseDoxygenXml(innerClassDoxygenName)
+            .then(function(classData){
+              // If there where no errors, add it to the classes array
+              ret.classes.push(classData);
+            })
+            .fail(function(e){
+              console.log(innerClassDoxygenName+" skipped since it could not be parsed",e);
+            })
+            .done(function(){
+              // Resolve no matter if there was an error or not.
+              // If there was an error its just not added to the classes, but the rest
+              // of the file should not fail
+              p.resolve();
+            });
+
+          promises.push(p.promise);
+
+        });
+      }
     }
 
+    // Wait for all the parsing of inner classes to finish
+    Q.all(promises)
+      .then(function(){
+        console.log("Done with "+doxygenName);
 
-    Q.all(promises).then(function(){
-      console.log("Done with "+doxygenName)
+        // If there are no classes or sections, return an error
+        if(ret.classes.length == 0 && ret.sections.length == 0){
+          // "Empty" file, let's remove it
+          console.log(doxygenName + " is empty");
+          deferred.reject("Object has no members or sections");
+          return;
+        }
 
-      if(ret.classes.length == 0 && ret.sections.length == 0){
-        // "Empty" file, let's remove it
-        console.log(doxygenName + " is empty, removed from toc");
-
-        deferred.reject("Object has no members or sections, skipped");
-
-      }
-
-      deferred.resolve(ret);
-    })
+        deferred.resolve(ret);
+      })
+      .fail(function(e){
+        deferred.reject(e);
+      })
 
   });
 
