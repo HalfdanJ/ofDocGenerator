@@ -782,8 +782,12 @@
 
     <div class="memberVariant"><span class="type">vector&lt; string &gt; </span><span class="name">ofSplitString</span><span class="args">(const string &amp;source, const string &amp;delimiter, bool ignoreEmpty=false, bool trim=false)</span></div><div class="memberDocumentation">
 
-<p>Split a string on a delimiter. </p>
-<p>&#xA0; </p>
+<p>Splits a given string using delimiter and returns the resulting parts of the string as vector. </p>
+<p>&#xA0; A useful application is to use delimiter <code>&quot; &quot;</code>: </p>
+<div class="fragment"><div class="line">result = <a class="code" href="of_utils_8cpp.html#a98dd60cdd03981911102688dd6f1662d">ofSplitString</a>(<span class="stringliteral">&quot;of rocks&quot;</span>, <span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><span class="comment">// result[0] = &quot;of&quot;</span></div>
+<div class="line"><span class="comment">// result[1] = &quot;rocks&quot;</span></div>
+</div><!-- fragment --><p> Like this a big string can be &quot;cut&quot; and turned it into a vector of words.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">source</td><td>The string to split </td></tr>
@@ -1498,7 +1502,9 @@
 
     <div class="memberVariant"><span class="type">string </span><span class="name">ofSystem</span><span class="args">(const string &amp;command)</span></div><div class="memberDocumentation">
 
-<p>Run a system command. Similar to run a command in terminal. </p>
+<p>Executes a system command. Similar to run a command in terminal. </p>
+<dl class="section note"><dt>Note</dt><dd>Will block until the executed program/command has finished. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the system command output as string. </dd></dl>
 
 </div></div>
 

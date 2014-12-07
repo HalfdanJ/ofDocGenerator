@@ -67,32 +67,35 @@
     <div class="classHeader">
       <h1 class="classTitle">ofVec2f<small>file</small></h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p><a class="el" href="ofVec2f.html">ofVec2f</a> is a class for storing a two dimensional vector.</p>
-<p>Moving through space requires knowledge of where things are and where they are going. Vector Maths is the class of mathematics that gives us control over these things in space, allowing for elegant and intuitive descriptions of complex structures and movement. Vectors are at the heart of animations, particle systems, and 2D and 3D graphics.</p>
-<p>Vectors in mathematics in general are entities with magnitude (also called length) and direction. A vector whose magnitude is 1 (ie a vector that is <em>normalized</em>) is called a <em>unit vector</em>. Unit vectors are very handy for storing directions as they can be easily scaled up (or down) to represent motion in a particular direction with a particular length.</p>
-<p>*You will also see the term vector used to describe an array of objects in C++ *(such as text strings). Don&apos;t let this confuse you, they are quite different: *one of them is a mathematical term for a fixed-length list of numbers that *you can do mathematical operations on, the other is a C++-specific term that *means &apos;dynamically sizeable array&apos;.</p>
-<p><a class="el" href="ofVec2f.html">ofVec2f</a> has two member variables, x and y, which allow to conveniently store 2D properties of an object such as its position, velocity, or acceleration.</p>
-<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1; <span class="comment">// v1.x is 0, v1.y is 0</span></div>
-<div class="line">v1.<a class="code" href="ofVec2f.html#aed59b5a86ed33d97e72e601a69d870ad">set</a>( 10, 50 ); <span class="comment">// now v1.x is 10, v1.y is 50</span></div>
-</div><!-- fragment --><p>Using <a class="el" href="ofVec2f.html">ofVec2f</a> greatly simplifies arithmetic operations in two dimensions. For example if you have two vectors v1 and v2, both of which represent a 2D change in position, you can find the total change of position of both of them just by doing an addition v1 + v2:</p>
-<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(5, 2); <span class="comment">// v1 represents walking 5 steps forward then 2 steps sideways</span></div>
-<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2;</div>
-<div class="line">v2.<a class="code" href="ofVec2f.html#aed59b5a86ed33d97e72e601a69d870ad">set</a>(1, 1); <span class="comment">// v2 represents walking 1 step forward then 1 step sideways</span></div>
-<div class="line"><span class="comment">// what happens if you do v1 followed by v2? just add v1 and v2 together:</span></div>
-<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> result = v1 + v2; <span class="comment">// result is 6 steps forward then 3 steps sideways</span></div>
-</div><!-- fragment --><p>You can scale an <a class="el" href="ofVec2f.html">ofVec2f</a> by multiplying it with a float:</p>
-<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(5, 2); <span class="comment">// walk 5 steps forward and 2 steps right</span></div>
-<div class="line"><span class="comment">// what happens if we do v1 three times?</span></div>
-<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> result = v1 * 3; <span class="comment">// result is 15 steps forward and 6 steps right</span></div>
-</div><!-- fragment --><p>This also works for subtraction and division.</p>
-<p>As you can see this really makes dealing with vectors as easy as dealing with single floats or ints, and can reduce the number of lines of code you have to write by half, at the same time making your code much easier to read and understand! </p>
-</div></div>
+    <div class="classDescription"></div>
     <div class="classMethods"></div>
   </div><div id="" class="classBlock">
     <div class="classHeader">
       <h1 class="classTitle">ofVec2f<small>class</small></h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p><a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> is a class for storing a two dimensional vector. </p>
+<p>Moving through space requires knowledge of where things are and where they are going. Vector Maths is the class of mathematics that gives us control over these things in space, allowing for elegant and intuitive descriptions of complex structures and movement. Vectors are at the heart of animations, particle systems, and 2D and 3D graphics.</p>
+<p>Vectors in mathematics in general are entities with magnitude (also called length) and direction. A vector whose magnitude is 1 (ie a vector that is <em>normalized</em>) is called a <em>unit vector</em>. Unit vectors are very handy for storing directions as they can be easily scaled up (or down) to represent motion in a particular direction with a particular length.</p>
+<p><em>You will also see the term vector used to describe an array of objects in C++ (such as text strings). Don&apos;t let this confuse you, they are quite different: one of them is a mathematical term for a fixed-length list of numbers that you can do mathematical operations on, the other is a C++-specific term that means &apos;dynamically sizeable array&apos;.</em></p>
+<p><a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> has two member variables, x and y, which allow to conveniently store 2D properties of an object such as its position, velocity, or acceleration.</p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1; <span class="comment">// v1.x is 0, v1.y is 0</span></div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#aed59b5a86ed33d97e72e601a69d870ad">set</a>( 10, 50 ); <span class="comment">// now v1.x is 10, v1.y is 50</span></div>
+</div><!-- fragment --><p>Using <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> greatly simplifies arithmetic operations in two dimensions. For example if you have two vectors v1 and v2, both of which represent a 2D change in position, you can find the total change of position of both of them just by doing an addition v1 + v2:</p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(5, 2); <span class="comment">// v1 represents walking 5 steps forward then 2 steps sideways</span></div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2;</div>
+<div class="line">v2.<a class="code" href="ofVec2f.html#aed59b5a86ed33d97e72e601a69d870ad">set</a>(1, 1); <span class="comment">// v2 represents walking 1 step forward then 1 step sideways</span></div>
+<div class="line"><span class="comment">// what happens if you do v1 followed by v2? just add v1 and v2 together:</span></div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> result = v1 + v2; <span class="comment">// result is 6 steps forward then 3 steps sideways</span></div>
+</div><!-- fragment --><p>You can scale an <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> by multiplying it with a float:</p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(5, 2); <span class="comment">// walk 5 steps forward and 2 steps right</span></div>
+<div class="line"><span class="comment">// what happens if we do v1 three times?</span></div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> result = v1 * 3; <span class="comment">// result is 15 steps forward and 6 steps right</span></div>
+</div><!-- fragment --><p>This also works for subtraction and division.</p>
+<p>As you can see this really makes dealing with vectors as easy as dealing with single floats or ints, and can reduce the number of lines of code you have to write by half, at the same time making your code much easier to read and understand!</p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec3f.html">ofVec3f</a> for 3D vectors </dd>
+<dd>
+<a class="el" href="ofVec4f.html">ofVec4f</a> for 4D vectors </dd></dl>
+</div></div>
     <div class="classMethods"><div id="Constructa2Dvector">
     <h3 class="sectionHeader">Construct a 2D vector</h3>
     <div class="sectionDescription"></div>
@@ -121,7 +124,7 @@
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="ofVec2f.html">ofVec2f</a> with the <code>x</code> and <code>y</code> components set to 0 </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> with the <code>x</code> and <code>y</code> components set to 0 </dd></dl>
 
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofVec2f</span><span class="args">(float scalar)</span></div><div class="memberDocumentation">
 
@@ -140,17 +143,17 @@
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="ofVec2f.html">ofVec2f</a> with the <code>x</code> and <code>y</code> components set </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> with the <code>x</code> and <code>y</code> components set </dd></dl>
 
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofVec2f</span><span class="args">(const ofVec3f &amp;vec)</span></div><div class="memberDocumentation">
 
-<p>Create a 2D vector (<a class="el" href="ofVec2f.html">ofVec2f</a>) from a 3D vector (<a class="el" href="ofVec3f.html">ofVec3f</a>) by  away the z component of the 3D vector. </p>
+<p>Create a 2D vector (<a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a>) from a 3D vector (<a class="el" href="ofVec3f.html">ofVec3f</a>) by  away the z component of the 3D vector. </p>
 <div class="fragment"><div class="line"><a class="code" href="ofVec3f.html">ofVec3f</a> mom3d(40, 20, 50); <span class="comment">// 3d vector </span></div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v(mom3d); <span class="comment">// v.x is 40, v.y is 20</span></div>
 </div><!-- fragment --> 
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofVec2f</span><span class="args">(const ofVec4f &amp;vec)</span></div><div class="memberDocumentation">
 
-<p>Create a 2D vector (<a class="el" href="ofVec2f.html">ofVec2f</a>) from a 4D vector (<a class="el" href="ofVec4f.html">ofVec4f</a>) by throwing away the z and w components of the 4D vector. </p>
+<p>Create a 2D vector (<a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a>) from a 4D vector (<a class="el" href="ofVec4f.html">ofVec4f</a>) by throwing away the z and w components of the 4D vector. </p>
 <div class="fragment"><div class="line"><a class="code" href="ofVec4f.html">ofVec4f</a> mom4d(40, 20, 50, 80); <span class="comment">// 4d vector </span></div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v(mom4d); <span class="comment">// v.x is 40, v.y is 20</span></div>
 </div><!-- fragment --> 
@@ -199,7 +202,7 @@
 
     <div class="memberVariant"><span class="type">float &amp; </span><span class="name">operator[]</span><span class="args">(int n)</span></div><div class="memberDocumentation">
 
-<p>Allows to access the x and y components of an <a class="el" href="ofVec2f.html">ofVec2f</a> as though it is an array. </p>
+<p>Allows to access the x and y components of an <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> as though it is an array. </p>
 <div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(40, 20);</div>
 <div class="line"><span class="keywordtype">float</span> x = v1[0]; <span class="comment">// x is 40</span></div>
 <div class="line"><span class="keywordtype">float</span> y = v1[1]; <span class="comment">// y is 20</span></div>
@@ -256,7 +259,7 @@
 
     <div class="memberVariant"><span class="type">bool </span><span class="name">operator==</span><span class="args">(const ofVec2f &amp;vec) const </span></div><div class="memberDocumentation">
 
-<p>Check for equality between two <a class="el" href="ofVec2f.html">ofVec2f</a>. </p>
+<p>Check for equality between two <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a>. </p>
 <div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(40, 20); </div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2(50, 30); </div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v3(40, 20); </div>
@@ -280,7 +283,7 @@
 
     <div class="memberVariant"><span class="type">bool </span><span class="name">operator!=</span><span class="args">(const ofVec2f &amp;vec) const </span></div><div class="memberDocumentation">
 
-<p>Check for inequality between two <a class="el" href="ofVec2f.html">ofVec2f</a>. </p>
+<p>Check for inequality between two <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a>. </p>
 <div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(40, 20); </div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2(50, 30); </div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v3(40, 20); </div>
@@ -327,6 +330,19 @@
 
     <div class="memberVariant"><span class="type">bool </span><span class="name">isAligned</span><span class="args">(const ofVec2f &amp;vec, float tolerance=0.0001) const </span></div><div class="memberDocumentation">
 
+<p>Determine if two vectors are aligned. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(40, 20);</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(4, 2);</div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#ad069324f061894ca8f2fa64fc6d21023">isAligned</a>(v2) <span class="comment">// returns true</span></div>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>The vector to compare alignment with </td></tr>
+    <tr><td class="paramname">tolerance</td><td>an angle tolerance/threshold (specified in degrees) for deciding if the vectors are sufficiently aligned. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if both vectors are aligned (pointing in the same direction). </dd></dl>
+
 </div></div>
 
   </div><div id="a3dc037cfe7e343ec376c38e54567510b" class="method">
@@ -342,6 +358,16 @@
     <div class="methodDescription" style="display:none" id="a3dc037cfe7e343ec376c38e54567510b_description">
 
     <div class="memberVariant"><span class="type">bool </span><span class="name">isAlignedRad</span><span class="args">(const ofVec2f &amp;vec, float tolerance=0.0001) const </span></div><div class="memberDocumentation">
+
+<p>Determine if two vectors are aligned with tolerance in radians. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>The vector to compare alignment with </td></tr>
+    <tr><td class="paramname">tolerance</td><td>an angle tolerance/threshold (specified in radians) for deciding if the vectors are sufficiently aligned. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#ad069324f061894ca8f2fa64fc6d21023" title="Determine if two vectors are aligned. ">isAligned()</a> </dd></dl>
 
 </div></div>
 
@@ -362,7 +388,7 @@
 <p>Determine if two vectors are aligned. </p>
 <div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(40, 20);</div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(4, 2);</div>
-<div class="line"><span class="comment">// v1.align(v2) returns true</span></div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#a7e40acde74be0a92399709b69f7b8999">align</a>(v2) <span class="comment">// returns true</span></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec</td><td>The vector to compare alignment with </td></tr>
@@ -396,7 +422,7 @@
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#a7e40acde74be0a92399709b69f7b8999" title="Determine if two vectors are aligned. ">align</a>(const <a class="el" href="ofVec2f.html">ofVec2f</a>&amp; vec, float tolerance=0.0001) </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#a7e40acde74be0a92399709b69f7b8999" title="Determine if two vectors are aligned. ">align()</a> </dd></dl>
 
 </div></div>
 
@@ -670,7 +696,7 @@
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator-</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>Returns a new <a class="el" href="ofVec2f.html">ofVec2f</a> that is the inverted version (mirrored in X and Y) of this vector. </p>
+<p>Returns a new <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> that is the inverted version (mirrored in X and Y) of this vector. </p>
 <div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(2, 5);</div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = -v1; <span class="comment">// (-2, -5)</span></div>
 </div><!-- fragment --> 
@@ -690,7 +716,7 @@
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator*</span><span class="args">(const float f) const </span></div><div class="memberDocumentation">
 
-<p>Return a new <a class="el" href="ofVec2f.html">ofVec2f</a> that is this vector scaled by multiplying both x and y members by the float. </p>
+<p>Return a new <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> that is this vector scaled by multiplying both x and y members by the float. </p>
 <div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(2, 5);</div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = v1 * 4; <span class="comment">// (8, 20)</span></div>
 </div><!-- fragment --> 
@@ -730,7 +756,7 @@
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator/</span><span class="args">(const float f) const </span></div><div class="memberDocumentation">
 
-<p>Return a new <a class="el" href="ofVec2f.html">ofVec2f</a> that is this vector scaled by dividing both x and y members by f. </p>
+<p>Return a new <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> that is this vector scaled by dividing both x and y members by f. </p>
 <div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(2, 5);</div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = v1 / 4; <span class="comment">// (0.5, 1.25)</span></div>
 </div><!-- fragment --> 
@@ -773,8 +799,8 @@
     <div class="methodDescription" style="display:none" id="a8f6769c1cfbb4018a18065d4249d7c19_description">
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">getScaled</span><span class="args">(const float length) const </span></div><div class="memberDocumentation">
-<p>Return a new <a class="el" href="ofVec2f.html">ofVec2f</a> that is the result of scaling this vector up or down so that it has the requested length.</p>
-<p>~~~~{.cpp} <a class="el" href="ofVec2f.html">ofVec2f</a> v1( 3, 4 ); // length is 5 <a class="el" href="ofVec2f.html">ofVec2f</a> v2 = v1.getScaled( 15 ); // ( 9, 12 ), length is now 15 ~~~~ofVec2f</p>
+<p>Return a new <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> that is the result of scaling this vector up or down so that it has the requested length.</p>
+<p>~~~~{.cpp} <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> v1( 3, 4 ); // length is 5 <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> v2 = v1.getScaled( 15 ); // ( 9, 12 ), length is now 15 ~~~~ofVec2f</p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#abd1d88eb6732064fcd22212b3276049a" title="Scales this vector up or down so that it has the requested length. ">scale()</a> </dd></dl>
 
 </div></div>
@@ -814,7 +840,7 @@
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">getRotated</span><span class="args">(float angle) const </span></div><div class="memberDocumentation">
 
-<p>Return a new <a class="el" href="ofVec2f.html">ofVec2f</a> that is the result of rotating this vector by angle degrees around the origin. </p>
+<p>Return a new <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> that is the result of rotating this vector by angle degrees around the origin. </p>
 <div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(1, 0);</div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = v1.<a class="code" href="ofVec2f.html#aee2e05a46e550dcd3c1c15f2d0cc02a7">getRotated</a>( 45 ); <span class="comment">// v2 is (&#x221A;2, &#x221A;2)</span></div>
 <div class="line"><a class="code" href="ofVec3f.html">ofVec3f</a> v3 = v2.<a class="code" href="ofVec2f.html#aee2e05a46e550dcd3c1c15f2d0cc02a7">getRotated</a>( 45 ); <span class="comment">// v3 is (0, 1)</span></div>
@@ -842,7 +868,7 @@
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">getRotatedRad</span><span class="args">(float angle) const </span></div><div class="memberDocumentation">
 
-<p>Return a new <a class="el" href="ofVec2f.html">ofVec2f</a> that is the result of rotating this vector by angle radians around the origin. </p>
+<p>Return a new <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> that is the result of rotating this vector by angle radians around the origin. </p>
 <div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(1, 0);</div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = v1.<a class="code" href="ofVec2f.html#aab0574bd9a07def5c008aa642dae3415">getRotatedRad</a>( <a class="code" href="ofConstants.html#a598a3330b3c21701223ee0ca14316eca">PI</a>/4 ); <span class="comment">// v2 is (&#x221A;2, &#x221A;2)</span></div>
 <div class="line"><a class="code" href="ofVec3f.html">ofVec3f</a> v3 = v2.<a class="code" href="ofVec2f.html#aab0574bd9a07def5c008aa642dae3415">getRotatedRad</a>( <a class="code" href="ofConstants.html#a598a3330b3c21701223ee0ca14316eca">PI</a>/4 ); <span class="comment">// v3 is (0, 1)</span></div>
@@ -921,7 +947,7 @@
 
 <p>Get vector mapped to new coordinate system. </p>
 <p>In most cases you want <code>vx</code> and <code>vy</code> to be perpendicular and of unit length; if they are not perpendicular you will have shearing as part of the mapping, and if they are not of unit length you will have scaling as part of the mapping.</p>
-<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="ofVec2f.html">ofVec2f</a> calculated by copying this vector and then mapping from its default coordinate system &#x2013; origin (0,0), X direction (1,0), Y direction (0,1) &#x2013; to a new coordinate system defined with origin at origin, X direction vx, and Y direction vy. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> calculated by copying this vector and then mapping from its default coordinate system &#x2013; origin (0,0), X direction (1,0), Y direction (0,1) &#x2013; to a new coordinate system defined with origin at origin, X direction vx, and Y direction vy. </dd></dl>
 
 </div></div>
 
@@ -1137,7 +1163,7 @@
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">average</span><span class="args">(const ofVec2f *points, int num)</span></div><div class="memberDocumentation">
 
 <p>Average vector over an array of points. </p>
-<p>Sets this vector to be the average (<em>centre of gravity</em> or <em>centroid</em>) of a given array of <a class="el" href="ofVec2f.html">ofVec2f</a>.</p>
+<p>Sets this vector to be the average (<em>centre of gravity</em> or <em>centroid</em>) of a given array of <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a>.</p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> numPoints = 10;</div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> points[numPoints];</div>
 <div class="line"><span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i=0; i&lt;numPoints; i++ ) {</div>
@@ -1148,8 +1174,8 @@
 <div class="line"><span class="comment">// centroid now is the centre of gravity/average of all the random points</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">points</td><td>The array of <a class="el" href="ofVec2f.html">ofVec2f</a> to avarage over </td></tr>
-    <tr><td class="paramname">num</td><td>specifies the number of <a class="el" href="ofVec2f.html">ofVec2f</a> in the array. </td></tr>
+    <tr><td class="paramname">points</td><td>The array of <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> to avarage over </td></tr>
+    <tr><td class="paramname">num</td><td>specifies the number of <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> in the array. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1391,7 +1417,7 @@
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">getPerpendicular</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>Return the <em>normalized</em> <a class="el" href="ofVec2f.html">ofVec2f</a> that is perpendicular to this vector (ie rotated 90 degrees and normalized). </p>
+<p>Return the <em>normalized</em> <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> that is perpendicular to this vector (ie rotated 90 degrees and normalized). </p>
 <div class="image">
 <img src="math/perpendicular.png" alt="PERPENDICULAR">
 </div>
