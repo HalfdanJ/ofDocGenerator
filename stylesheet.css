@@ -194,6 +194,8 @@ h4 {
   .methodHeader .args {
     color: #999;
     display: none; }
+  .methodHeader .kind {
+    color: #CCC; }
   .methodHeader .deprecatedMethod span {
     text-decoration: line-through; }
   .methodHeader .deprecatedMethod a {
