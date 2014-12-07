@@ -30,7 +30,7 @@
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">ofDoc</a>
+      <a class="navbar-brand" href="index.html">ofDoc</a>
     </div>
 
 
@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofVec2f</span><li class="chapter"><a href="#PublicAttributes">Public Attributes</a></li><li class="chapter"><a href="#PublicStaticAttributes">Public Static Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#Friends">Friends</a></li><li class="chapter"><a href="#PublicStaticFunctions">Public Static Functions</a></li></ul>
+        <span class="class">ofVec2f</span><li class="chapter"><a href="#Constructa2Dvector">Construct a 2D vector</a></li><li class="chapter"><a href="#Accesscomponents">Access components</a></li><li class="chapter"><a href="#Comparison">Comparison</a></li><li class="chapter"><a href="#Operators">Operators</a></li><li class="chapter"><a href="#Simplemanipulations">Simple manipulations</a></li><li class="chapter"><a href="#Distance">Distance</a></li><li class="chapter"><a href="#Interpolation">Interpolation</a></li><li class="chapter"><a href="#Limit">Limit</a></li><li class="chapter"><a href="#Measurement">Measurement</a></li><li class="chapter"><a href="#Perpendicular">Perpendicular</a></li><li class="chapter"><a href="#PublicAttributes">Public Attributes</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -65,173 +65,36 @@
 
     <div id="" class="classBlock">
     <div class="classHeader">
-      <h1 class="classTitle">ofVec2f</h1>
+      <h1 class="classTitle">ofVec2f<small>file</small></h1>
     </div>
-    <div class="classDescription"></div>
-    <div class="classMethods"><div id="Functions">
-    <h3 class="sectionHeader">Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a9e1df79bc9ab4266abbd03c1a0cad7e3" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9e1df79bc9ab4266abbd03c1a0cad7e3&quot;)">
-        <span class="type"></span>
-        <a class="name">operator+</a>
-        <span class="args">(float f, const ofVec2f &amp;vec)</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a9e1df79bc9ab4266abbd03c1a0cad7e3_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator+</span><span class="args">(float f, const ofVec2f &amp;vec)</span></div><div class="memberDocumentation">
-
+    <div class="classDescription"><div class="textblock"><p><a class="el" href="ofVec2f.html">ofVec2f</a> is a class for storing a two dimensional vector.</p>
+<p>Moving through space requires knowledge of where things are and where they are going. Vector Maths is the class of mathematics that gives us control over these things in space, allowing for elegant and intuitive descriptions of complex structures and movement. Vectors are at the heart of animations, particle systems, and 2D and 3D graphics.</p>
+<p>Vectors in mathematics in general are entities with magnitude (also called length) and direction. A vector whose magnitude is 1 (ie a vector that is <em>normalized</em>) is called a <em>unit vector</em>. Unit vectors are very handy for storing directions as they can be easily scaled up (or down) to represent motion in a particular direction with a particular length.</p>
+<p>*You will also see the term vector used to describe an array of objects in C++ *(such as text strings). Don&apos;t let this confuse you, they are quite different: *one of them is a mathematical term for a fixed-length list of numbers that *you can do mathematical operations on, the other is a C++-specific term that *means &apos;dynamically sizeable array&apos;.</p>
+<p><a class="el" href="ofVec2f.html">ofVec2f</a> has two member variables, x and y, which allow to conveniently store 2D properties of an object such as its position, velocity, or acceleration.</p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1; <span class="comment">// v1.x is 0, v1.y is 0</span></div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#aed59b5a86ed33d97e72e601a69d870ad">set</a>( 10, 50 ); <span class="comment">// now v1.x is 10, v1.y is 50</span></div>
+</div><!-- fragment --><p>Using <a class="el" href="ofVec2f.html">ofVec2f</a> greatly simplifies arithmetic operations in two dimensions. For example if you have two vectors v1 and v2, both of which represent a 2D change in position, you can find the total change of position of both of them just by doing an addition v1 + v2:</p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(5, 2); <span class="comment">// v1 represents walking 5 steps forward then 2 steps sideways</span></div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2;</div>
+<div class="line">v2.<a class="code" href="ofVec2f.html#aed59b5a86ed33d97e72e601a69d870ad">set</a>(1, 1); <span class="comment">// v2 represents walking 1 step forward then 1 step sideways</span></div>
+<div class="line"><span class="comment">// what happens if you do v1 followed by v2? just add v1 and v2 together:</span></div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> result = v1 + v2; <span class="comment">// result is 6 steps forward then 3 steps sideways</span></div>
+</div><!-- fragment --><p>You can scale an <a class="el" href="ofVec2f.html">ofVec2f</a> by multiplying it with a float:</p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(5, 2); <span class="comment">// walk 5 steps forward and 2 steps right</span></div>
+<div class="line"><span class="comment">// what happens if we do v1 three times?</span></div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> result = v1 * 3; <span class="comment">// result is 15 steps forward and 6 steps right</span></div>
+</div><!-- fragment --><p>This also works for subtraction and division.</p>
+<p>As you can see this really makes dealing with vectors as easy as dealing with single floats or ints, and can reduce the number of lines of code you have to write by half, at the same time making your code much easier to read and understand! </p>
 </div></div>
-
-  </div><div id="afd63c656c641803159c93478485aa58e" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#afd63c656c641803159c93478485aa58e&quot;)">
-        <span class="type"></span>
-        <a class="name">operator-</a>
-        <span class="args">(float f, const ofVec2f &amp;vec)</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="afd63c656c641803159c93478485aa58e_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator-</span><span class="args">(float f, const ofVec2f &amp;vec)</span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a998bac4b1fe96213dac1b69f761c07f9" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a998bac4b1fe96213dac1b69f761c07f9&quot;)">
-        <span class="type"></span>
-        <a class="name">operator*</a>
-        <span class="args">(float f, const ofVec2f &amp;vec)</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a998bac4b1fe96213dac1b69f761c07f9_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator*</span><span class="args">(float f, const ofVec2f &amp;vec)</span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a73f103d8ea6d9a986f4dd55998408d30" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a73f103d8ea6d9a986f4dd55998408d30&quot;)">
-        <span class="type"></span>
-        <a class="name">operator/</a>
-        <span class="args">(float f, const ofVec2f &amp;vec)</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a73f103d8ea6d9a986f4dd55998408d30_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator/</span><span class="args">(float f, const ofVec2f &amp;vec)</span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a8d8d86b805b7897418a316313db81aba" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8d8d86b805b7897418a316313db81aba&quot;)">
-        <span class="type"></span>
-        <a class="name">operator&lt;&lt;</a>
-        <span class="args">(ostream &amp;os, const ofVec2f &amp;vec)</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a8d8d86b805b7897418a316313db81aba_description">
-
-    <div class="memberVariant"><span class="type">ostream &amp; </span><span class="name">operator&lt;&lt;</span><span class="args">(ostream &amp;os, const ofVec2f &amp;vec)</span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a4ad726f903f25dce290671839061246e" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4ad726f903f25dce290671839061246e&quot;)">
-        <span class="type"></span>
-        <a class="name">operator&gt;&gt;</a>
-        <span class="args">(istream &amp;is, ofVec2f &amp;vec)</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a4ad726f903f25dce290671839061246e_description">
-
-    <div class="memberVariant"><span class="type">istream &amp; </span><span class="name">operator&gt;&gt;</span><span class="args">(istream &amp;is, ofVec2f &amp;vec)</span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div></div>
-  </div></div>
+    <div class="classMethods"></div>
   </div><div id="" class="classBlock">
     <div class="classHeader">
-      <h1 class="classTitle">ofVec2f</h1>
+      <h1 class="classTitle">ofVec2f<small>class</small></h1>
     </div>
     <div class="classDescription"></div>
-    <div class="classMethods"><div id="PublicAttributes">
-    <h3 class="sectionHeader">Public Attributes</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a81763bfaf27b7db5f734055212ca6ec5" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a81763bfaf27b7db5f734055212ca6ec5&quot;)">
-        <span class="type"></span>
-        <a class="name">x</a>
-        <span class="args"></span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a81763bfaf27b7db5f734055212ca6ec5_description">
-
-    <div class="memberVariant"><span class="type">float </span><span class="name">x</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a4be985445b601e54d3ca5917c3d7ac8d" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4be985445b601e54d3ca5917c3d7ac8d&quot;)">
-        <span class="type"></span>
-        <a class="name">y</a>
-        <span class="args"></span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a4be985445b601e54d3ca5917c3d7ac8d_description">
-
-    <div class="memberVariant"><span class="type">float </span><span class="name">y</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div></div>
-  </div><div id="PublicStaticAttributes">
-    <h3 class="sectionHeader">Public Static Attributes</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a4350bcc3bc9a9cb8378bde958d1aec1b" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4350bcc3bc9a9cb8378bde958d1aec1b&quot;)">
-        <span class="type"></span>
-        <a class="name">DIM</a>
-        <span class="args"></span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a4350bcc3bc9a9cb8378bde958d1aec1b_description">
-
-    <div class="memberVariant"><span class="type">const int </span><span class="name">DIM</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div></div>
-  </div><div id="PublicFunctions">
-    <h3 class="sectionHeader">Public Functions</h3>
+    <div class="classMethods"><div id="Constructa2Dvector">
+    <h3 class="sectionHeader">Construct a 2D vector</h3>
     <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a47491f3530f42b816a9d9a5c09005b31" class="method">
     <div class="methodHeader">
@@ -247,17 +110,57 @@
 
     <div class="memberVariant"><span class="type"> </span><span class="name">ofVec2f</span><span class="args">()</span></div><div class="memberDocumentation">
 
-</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofVec2f</span><span class="args">(float _scalar)</span></div><div class="memberDocumentation">
+<p>Construct a 2D vector. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1; <span class="comment">// default: v1.x is 0, v1.y is 0</span></div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(40, 20); <span class="comment">// v2.x is 40, v2.y is 20</span></div>
+<div class="line"><a class="code" href="ofVec3f.html">ofVec3f</a> v3(0.1, 0.3); <span class="comment">// v3.x is 0.1, v3.y is 0.3</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The x component </td></tr>
+    <tr><td class="paramname">y</td><td>The y component </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="ofVec2f.html">ofVec2f</a> with the <code>x</code> and <code>y</code> components set to 0 </dd></dl>
 
-</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofVec2f</span><span class="args">(float _x, float _y)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofVec2f</span><span class="args">(float scalar)</span></div><div class="memberDocumentation">
+
+<p>Construct a 2D vector with <code>x</code> and <code>y</code> set to <code>scalar</code> </p>
+
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofVec2f</span><span class="args">(float x, float y)</span></div><div class="memberDocumentation">
+
+<p>Construct a 2D vector with specific <code>x</code> and `y components. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1; <span class="comment">// default: v1.x is 0, v1.y is 0</span></div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(40, 20); <span class="comment">// v2.x is 40, v2.y is 20</span></div>
+<div class="line"><a class="code" href="ofVec3f.html">ofVec3f</a> v3(0.1, 0.3); <span class="comment">// v3.x is 0.1, v3.y is 0.3</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The x component </td></tr>
+    <tr><td class="paramname">y</td><td>The y component </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="ofVec2f.html">ofVec2f</a> with the <code>x</code> and <code>y</code> components set </dd></dl>
 
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofVec2f</span><span class="args">(const ofVec3f &amp;vec)</span></div><div class="memberDocumentation">
 
+<p>Create a 2D vector (<a class="el" href="ofVec2f.html">ofVec2f</a>) from a 3D vector (<a class="el" href="ofVec3f.html">ofVec3f</a>) by  away the z component of the 3D vector. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec3f.html">ofVec3f</a> mom3d(40, 20, 50); <span class="comment">// 3d vector </span></div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v(mom3d); <span class="comment">// v.x is 40, v.y is 20</span></div>
+</div><!-- fragment --> 
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofVec2f</span><span class="args">(const ofVec4f &amp;vec)</span></div><div class="memberDocumentation">
 
+<p>Create a 2D vector (<a class="el" href="ofVec2f.html">ofVec2f</a>) from a 4D vector (<a class="el" href="ofVec4f.html">ofVec4f</a>) by throwing away the z and w components of the 4D vector. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec4f.html">ofVec4f</a> mom4d(40, 20, 50, 80); <span class="comment">// 4d vector </span></div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v(mom4d); <span class="comment">// v.x is 40, v.y is 20</span></div>
+</div><!-- fragment --> 
 </div></div>
 
-  </div><div id="a136ca01a1e0ab4c7eeed7c9940ca0f00" class="method">
+  </div></div>
+  </div><div id="Accesscomponents">
+    <h3 class="sectionHeader">Access components</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a136ca01a1e0ab4c7eeed7c9940ca0f00" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a136ca01a1e0ab4c7eeed7c9940ca0f00&quot;)">
         <span class="type"></span>
@@ -270,6 +173,13 @@
     <div class="methodDescription" style="display:none" id="a136ca01a1e0ab4c7eeed7c9940ca0f00_description">
 
     <div class="memberVariant"><span class="type">float * </span><span class="name">getPtr</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Returns a pointer to the memory position of the first element of the vector (x); the second element (y) immediately follows it in memory. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(40, 20);</div>
+<div class="line"><span class="keywordtype">float</span> * v1Ptr = v1.<a class="code" href="ofVec2f.html#a136ca01a1e0ab4c7eeed7c9940ca0f00">getPtr</a>();</div>
+<div class="line"><span class="keywordtype">float</span> <a class="code" href="ofVec2f.html#a81763bfaf27b7db5f734055212ca6ec5">x</a> = *(v1Ptr); <span class="comment">// x is 40</span></div>
+<div class="line"><span class="keywordtype">float</span> <a class="code" href="ofVec2f.html#a4be985445b601e54d3ca5917c3d7ac8d">y</a> = *(v1Ptr+1); <span class="comment">// y is 20</span></div>
+</div><!-- fragment --><p>This is very useful when using arrays of ofVec2fs to store geometry information, as it allows the vector to be treated as a simple C array of floats that can be passed verbatim to OpenGL. </p>
 
 </div><hr><div class="memberVariant"><span class="type">const float * </span><span class="name">getPtr</span><span class="args">() const </span></div><div class="memberDocumentation">
 
@@ -289,31 +199,50 @@
 
     <div class="memberVariant"><span class="type">float &amp; </span><span class="name">operator[]</span><span class="args">(int n)</span></div><div class="memberDocumentation">
 
+<p>Allows to access the x and y components of an <a class="el" href="ofVec2f.html">ofVec2f</a> as though it is an array. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(40, 20);</div>
+<div class="line"><span class="keywordtype">float</span> x = v1[0]; <span class="comment">// x is 40</span></div>
+<div class="line"><span class="keywordtype">float</span> y = v1[1]; <span class="comment">// y is 20</span></div>
+</div><!-- fragment --><p>This function can be handy if you want to do the same operation to both x and y components, as it means you can just make a for loop that repeats twice. </p>
+
 </div><hr><div class="memberVariant"><span class="type">float </span><span class="name">operator[]</span><span class="args">(int n) const </span></div><div class="memberDocumentation">
 
 </div></div>
 
-  </div><div id="a32f6d5902574027061853b2ac48284e1" class="method">
+  </div><div id="aed59b5a86ed33d97e72e601a69d870ad" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a32f6d5902574027061853b2ac48284e1&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aed59b5a86ed33d97e72e601a69d870ad&quot;)">
         <span class="type"></span>
         <a class="name">set</a>
-        <span class="args">(float _scalar)</span>
+        <span class="args">(float scalar)</span>
         <span class="note"></span>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a32f6d5902574027061853b2ac48284e1_description">
+    <div class="methodDescription" style="display:none" id="aed59b5a86ed33d97e72e601a69d870ad_description">
 
-    <div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float _scalar)</span></div><div class="memberDocumentation">
+    <div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float scalar)</span></div><div class="memberDocumentation">
 
-</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float _x, float _y)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float x, float y)</span></div><div class="memberDocumentation">
 
+<p>Set x and y components of this vector with just one function call. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1;</div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#aed59b5a86ed33d97e72e601a69d870ad">set</a>(40, 20);</div>
+</div><!-- fragment --> 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(const ofVec2f &amp;vec)</span></div><div class="memberDocumentation">
 
+<p>Set the x and y components of this vector by copying the corresponding values from vec. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(40, 20);</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2;</div>
+<div class="line">v2.<a class="code" href="ofVec2f.html#aed59b5a86ed33d97e72e601a69d870ad">set</a>(v1); <span class="comment">// v2.x is 40, v2.y is 20</span></div>
+</div><!-- fragment --> 
 </div></div>
 
-  </div><div id="a6f9a39674f9f0ec5e5a30090eb4a55bd" class="method">
+  </div></div>
+  </div><div id="Comparison">
+    <h3 class="sectionHeader">Comparison</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a6f9a39674f9f0ec5e5a30090eb4a55bd" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6f9a39674f9f0ec5e5a30090eb4a55bd&quot;)">
         <span class="type"></span>
@@ -326,6 +255,14 @@
     <div class="methodDescription" style="display:none" id="a6f9a39674f9f0ec5e5a30090eb4a55bd_description">
 
     <div class="memberVariant"><span class="type">bool </span><span class="name">operator==</span><span class="args">(const ofVec2f &amp;vec) const </span></div><div class="memberDocumentation">
+
+<p>Check for equality between two <a class="el" href="ofVec2f.html">ofVec2f</a>. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(40, 20); </div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2(50, 30); </div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v3(40, 20); </div>
+<div class="line"><span class="comment">// ( v1 == v2 ) is false</span></div>
+<div class="line"><span class="comment">// ( v1 == v3 ) is true</span></div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>true if each component is the same as the corresponding component in vec, ie if x == vec.x and y == vec.y; otherwise returns false. </dd></dl>
 
 </div></div>
 
@@ -343,6 +280,14 @@
 
     <div class="memberVariant"><span class="type">bool </span><span class="name">operator!=</span><span class="args">(const ofVec2f &amp;vec) const </span></div><div class="memberDocumentation">
 
+<p>Check for inequality between two <a class="el" href="ofVec2f.html">ofVec2f</a>. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(40, 20); </div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2(50, 30); </div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v3(40, 20); </div>
+<div class="line"><span class="comment">// ( v1 != v2 ) is true</span></div>
+<div class="line"><span class="comment">// ( v1 != v3 ) is false</span></div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>true if any component is different to its corresponding component in vec, ie if &apos;x != vec.x&apos; or &apos;y != vec.y&apos;, otherwise returns false. </dd></dl>
+
 </div></div>
 
   </div><div id="a369b1eedc2b46cbdd872756680ce6df1" class="method">
@@ -359,6 +304,13 @@
 
     <div class="memberVariant"><span class="type">bool </span><span class="name">match</span><span class="args">(const ofVec2f &amp;vec, float tolerance=0.0001) const </span></div><div class="memberDocumentation">
 
+<p>Returns true if each component is <em>close enough</em> to its corresponding component in vec, where what is <em>close enough</em> is determined by the value of tolerance: </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(40, 20);</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(40.01, 19.999);</div>
+<div class="line"><span class="comment">// v1.match(v2, 0.1) returns true</span></div>
+<div class="line"><span class="comment">// v1.match(v2, 0.001) returns false</span></div>
+</div><!-- fragment --><p>This is handy if, for example, you want to find out when a point becomes <em>close enough</em> to another point to trigger an event. </p>
+
 </div></div>
 
   </div><div id="ad069324f061894ca8f2fa64fc6d21023" class="method">
@@ -374,7 +326,6 @@
     <div class="methodDescription" style="display:none" id="ad069324f061894ca8f2fa64fc6d21023_description">
 
     <div class="memberVariant"><span class="type">bool </span><span class="name">isAligned</span><span class="args">(const ofVec2f &amp;vec, float tolerance=0.0001) const </span></div><div class="memberDocumentation">
-<p>Checks if vectors look in the same direction. Tolerance is specified in degree. </p>
 
 </div></div>
 
@@ -408,6 +359,19 @@
 
     <div class="memberVariant"><span class="type">bool </span><span class="name">align</span><span class="args">(const ofVec2f &amp;vec, float tolerance=0.0001) const </span></div><div class="memberDocumentation">
 
+<p>Determine if two vectors are aligned. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(40, 20);</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(4, 2);</div>
+<div class="line"><span class="comment">// v1.align(v2) returns true</span></div>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>The vector to compare alignment with </td></tr>
+    <tr><td class="paramname">tolerance</td><td>an angle tolerance/threshold (specified in degrees) for deciding if the vectors are sufficiently aligned. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if both vectors are aligned (pointing in the same direction). </dd></dl>
+
 </div></div>
 
   </div><div id="ab942f58c0a5510c9749043a271e974a6" class="method">
@@ -424,9 +388,23 @@
 
     <div class="memberVariant"><span class="type">bool </span><span class="name">alignRad</span><span class="args">(const ofVec2f &amp;vec, float tolerance=0.0001) const </span></div><div class="memberDocumentation">
 
+<p>Determine if two vectors are aligned with tolerance in radians. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>The vector to compare alignment with </td></tr>
+    <tr><td class="paramname">tolerance</td><td>an angle tolerance/threshold (specified in radians) for deciding if the vectors are sufficiently aligned. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#a7e40acde74be0a92399709b69f7b8999" title="Determine if two vectors are aligned. ">align</a>(const <a class="el" href="ofVec2f.html">ofVec2f</a>&amp; vec, float tolerance=0.0001) </dd></dl>
+
 </div></div>
 
-  </div><div id="a9e3db42e0ba1027a40852d22c9f55497" class="method">
+  </div></div>
+  </div><div id="Operators">
+    <h3 class="sectionHeader">Operators</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a9e3db42e0ba1027a40852d22c9f55497" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9e3db42e0ba1027a40852d22c9f55497&quot;)">
         <span class="type"></span>
@@ -440,11 +418,16 @@
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator+</span><span class="args">(const ofVec2f &amp;vec) const </span></div><div class="memberDocumentation">
 
+<p>Super easy vector addition. Returns a new vector (x+vec.x,y+vec.y). </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(40, 20); </div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(25, 50);</div>
+<div class="line"><a class="code" href="ofVec3f.html">ofVec3f</a> v3 = v1 + v2; <span class="comment">// v3 is (65, 70)</span></div>
+</div><!-- fragment --> 
 </div></div>
 
-  </div><div id="a1a0c9d66e8e97371aaaa0fa6cd58d008" class="method">
+  </div><div id="a3603919aa076043f82b8e6da80c956c2" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1a0c9d66e8e97371aaaa0fa6cd58d008&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3603919aa076043f82b8e6da80c956c2&quot;)">
         <span class="type"></span>
         <a class="name">operator+=</a>
         <span class="args">(const ofVec2f &amp;vec)</span>
@@ -452,10 +435,15 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a1a0c9d66e8e97371aaaa0fa6cd58d008_description">
+    <div class="methodDescription" style="display:none" id="a3603919aa076043f82b8e6da80c956c2_description">
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator+=</span><span class="args">(const ofVec2f &amp;vec)</span></div><div class="memberDocumentation">
 
+<p>Super easy addition assignment. Adds vec.x to x, and adds vec.y to y. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(40, 20); </div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(25, 50);</div>
+<div class="line">v1 += v2; <span class="comment">// v1 is (65, 70)</span></div>
+</div><!-- fragment --> 
 </div></div>
 
   </div><div id="afce65102de5b382b62191f63289f356e" class="method">
@@ -472,11 +460,16 @@
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator-</span><span class="args">(const ofVec2f &amp;vec) const </span></div><div class="memberDocumentation">
 
+<p>Super easy vector subtraction. Returns a new vector (x-vec.x,y-vec.y). </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(40, 20); </div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(25, 50);</div>
+<div class="line"><a class="code" href="ofVec3f.html">ofVec3f</a> v3 = v1 - v2; <span class="comment">// v3 is (15, -30)</span></div>
+</div><!-- fragment --> 
 </div></div>
 
-  </div><div id="a03c4210e1902bc43be9ce96794a939f8" class="method">
+  </div><div id="aa49bdb2b8babce5c7536bf26ae1ff01a" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a03c4210e1902bc43be9ce96794a939f8&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa49bdb2b8babce5c7536bf26ae1ff01a&quot;)">
         <span class="type"></span>
         <a class="name">operator-=</a>
         <span class="args">(const ofVec2f &amp;vec)</span>
@@ -484,10 +477,15 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a03c4210e1902bc43be9ce96794a939f8_description">
+    <div class="methodDescription" style="display:none" id="aa49bdb2b8babce5c7536bf26ae1ff01a_description">
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator-=</span><span class="args">(const ofVec2f &amp;vec)</span></div><div class="memberDocumentation">
 
+<p>Super easy subtraction assignment. Subtracts vec.x from x, and subtracts vec.y from y. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(40, 20); </div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(25, 50);</div>
+<div class="line">v1 -= v2; <span class="comment">// v1 is (15, -30)</span></div>
+</div><!-- fragment --> 
 </div></div>
 
   </div><div id="ab3fc2ebbd6a48a5be7bb8b50ef81d2a9" class="method">
@@ -504,11 +502,17 @@
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator*</span><span class="args">(const ofVec2f &amp;vec) const </span></div><div class="memberDocumentation">
 
+<p>Returns a new vector (x*vec.x , y*vec.y). </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(40, 20); </div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(2, 4);</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v3 = v1 * v2; <span class="comment">// (80, 80)</span></div>
+</div><!-- fragment --><p>Useful for scaling a 2D point by a non-uniform scale. </p>
+
 </div></div>
 
-  </div><div id="a251a8f90ae2e75298315023d411be0b5" class="method">
+  </div><div id="a1894302324c8a805b8c55c12ecea9e5a" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a251a8f90ae2e75298315023d411be0b5&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1894302324c8a805b8c55c12ecea9e5a&quot;)">
         <span class="type"></span>
         <a class="name">operator*=</a>
         <span class="args">(const ofVec2f &amp;vec)</span>
@@ -516,9 +520,15 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a251a8f90ae2e75298315023d411be0b5_description">
+    <div class="methodDescription" style="display:none" id="a1894302324c8a805b8c55c12ecea9e5a_description">
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator*=</span><span class="args">(const ofVec2f &amp;vec)</span></div><div class="memberDocumentation">
+
+<p>Multiplies x by vec.x, and multiplies y by vec.y. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(40, 20); </div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(2, 4);</div>
+<div class="line">v1 *= v2; <span class="comment">// v1 is now (80, 80)</span></div>
+</div><!-- fragment --><p>Useful for scaling a 2D point by a non-uniform scale. </p>
 
 </div></div>
 
@@ -536,11 +546,17 @@
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator/</span><span class="args">(const ofVec2f &amp;vec) const </span></div><div class="memberDocumentation">
 
+<p>Returns a new vector (x/vec.x,y/vec.y). </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(40, 20); </div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(2, 4);</div>
+<div class="line"><a class="code" href="ofVec3f.html">ofVec3f</a> v3 = v1 / v2; <span class="comment">// (20, 5)</span></div>
+</div><!-- fragment --><p>Useful for scaling a 2D point by a non-uniform scale. </p>
+
 </div></div>
 
-  </div><div id="aab3e21f32c19043b9f39acd9d70100a2" class="method">
+  </div><div id="ab5b1dad7809cd0d0ad85faa56cc2c1ee" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aab3e21f32c19043b9f39acd9d70100a2&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab5b1dad7809cd0d0ad85faa56cc2c1ee&quot;)">
         <span class="type"></span>
         <a class="name">operator/=</a>
         <span class="args">(const ofVec2f &amp;vec)</span>
@@ -548,9 +564,15 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="aab3e21f32c19043b9f39acd9d70100a2_description">
+    <div class="methodDescription" style="display:none" id="ab5b1dad7809cd0d0ad85faa56cc2c1ee_description">
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator/=</span><span class="args">(const ofVec2f &amp;vec)</span></div><div class="memberDocumentation">
+
+<p>Divides x by vec.x, and divides y by vec.y. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(40, 20); </div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(2, 4);</div>
+<div class="line">v1 *= v2; <span class="comment">// v1 is now (20, 5)</span></div>
+</div><!-- fragment --><p>Useful for scaling a 2D point by a non-uniform scale. </p>
 
 </div></div>
 
@@ -568,11 +590,15 @@
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator+</span><span class="args">(const float f) const </span></div><div class="memberDocumentation">
 
+<p>Returns a new vector with a float value f added to both x and y members. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(2, 5);</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = v1 + 10; <span class="comment">// (12, 15)</span></div>
+</div><!-- fragment --> 
 </div></div>
 
-  </div><div id="af4e4ac29984ad83575462172afef2819" class="method">
+  </div><div id="acd90744885450839fb91f08fa7819b96" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af4e4ac29984ad83575462172afef2819&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#acd90744885450839fb91f08fa7819b96&quot;)">
         <span class="type"></span>
         <a class="name">operator+=</a>
         <span class="args">(const float f)</span>
@@ -580,10 +606,14 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="af4e4ac29984ad83575462172afef2819_description">
+    <div class="methodDescription" style="display:none" id="acd90744885450839fb91f08fa7819b96_description">
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator+=</span><span class="args">(const float f)</span></div><div class="memberDocumentation">
 
+<p>Adds a float value f to both x and y members. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(2, 5);</div>
+<div class="line">v1 += 10; <span class="comment">// (12, 15)</span></div>
+</div><!-- fragment --> 
 </div></div>
 
   </div><div id="a38443579661966fec31a6df708b9f69d" class="method">
@@ -600,11 +630,15 @@
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator-</span><span class="args">(const float f) const </span></div><div class="memberDocumentation">
 
+<p>Returns a new vector with a float value f subtracted from both x and y members. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(2, 5);</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = v1 - 10; <span class="comment">// (-8, -5)</span></div>
+</div><!-- fragment --> 
 </div></div>
 
-  </div><div id="ab4106805fbfcdd225345160f6a4f0320" class="method">
+  </div><div id="a2d9301cdf56891dc1128cb1bc9b7955e" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab4106805fbfcdd225345160f6a4f0320&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2d9301cdf56891dc1128cb1bc9b7955e&quot;)">
         <span class="type"></span>
         <a class="name">operator-=</a>
         <span class="args">(const float f)</span>
@@ -612,10 +646,14 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="ab4106805fbfcdd225345160f6a4f0320_description">
+    <div class="methodDescription" style="display:none" id="a2d9301cdf56891dc1128cb1bc9b7955e_description">
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator-=</span><span class="args">(const float f)</span></div><div class="memberDocumentation">
 
+<p>Subtract a float value f from both x and y members. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(2, 5);</div>
+<div class="line">v1 -= 10; <span class="comment">// (-8, -5)</span></div>
+</div><!-- fragment --> 
 </div></div>
 
   </div><div id="a6c4fcca742de2ea2cdb4a1e8d8d10b1d" class="method">
@@ -632,6 +670,10 @@
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator-</span><span class="args">() const </span></div><div class="memberDocumentation">
 
+<p>Returns a new <a class="el" href="ofVec2f.html">ofVec2f</a> that is the inverted version (mirrored in X and Y) of this vector. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(2, 5);</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = -v1; <span class="comment">// (-2, -5)</span></div>
+</div><!-- fragment --> 
 </div></div>
 
   </div><div id="a0d3fbf067ad20cbea4c2ce82acee040b" class="method">
@@ -648,11 +690,15 @@
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator*</span><span class="args">(const float f) const </span></div><div class="memberDocumentation">
 
+<p>Return a new <a class="el" href="ofVec2f.html">ofVec2f</a> that is this vector scaled by multiplying both x and y members by the float. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(2, 5);</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = v1 * 4; <span class="comment">// (8, 20)</span></div>
+</div><!-- fragment --> 
 </div></div>
 
-  </div><div id="a6fb31483c478cfd455529510538899bf" class="method">
+  </div><div id="a45b44ad72217dae1dfb69e75bf3aab65" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6fb31483c478cfd455529510538899bf&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a45b44ad72217dae1dfb69e75bf3aab65&quot;)">
         <span class="type"></span>
         <a class="name">operator*=</a>
         <span class="args">(const float f)</span>
@@ -660,10 +706,14 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a6fb31483c478cfd455529510538899bf_description">
+    <div class="methodDescription" style="display:none" id="a45b44ad72217dae1dfb69e75bf3aab65_description">
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator*=</span><span class="args">(const float f)</span></div><div class="memberDocumentation">
 
+<p>Scale this vector by multiplying both x and y members by f. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(2, 5);</div>
+<div class="line">v1 *= 4; <span class="comment">// (8, 20)</span></div>
+</div><!-- fragment --> 
 </div></div>
 
   </div><div id="a41372483e1bbc7ee4c709e08966f8b79" class="method">
@@ -680,11 +730,15 @@
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator/</span><span class="args">(const float f) const </span></div><div class="memberDocumentation">
 
+<p>Return a new <a class="el" href="ofVec2f.html">ofVec2f</a> that is this vector scaled by dividing both x and y members by f. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(2, 5);</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = v1 / 4; <span class="comment">// (0.5, 1.25)</span></div>
+</div><!-- fragment --> 
 </div></div>
 
-  </div><div id="aa5a5439a484a4832b0b1182d04aacba1" class="method">
+  </div><div id="acc9cce0fec08a4b34a9cfd48f42bc084" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa5a5439a484a4832b0b1182d04aacba1&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#acc9cce0fec08a4b34a9cfd48f42bc084&quot;)">
         <span class="type"></span>
         <a class="name">operator/=</a>
         <span class="args">(const float f)</span>
@@ -692,13 +746,21 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="aa5a5439a484a4832b0b1182d04aacba1_description">
+    <div class="methodDescription" style="display:none" id="acc9cce0fec08a4b34a9cfd48f42bc084_description">
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">operator/=</span><span class="args">(const float f)</span></div><div class="memberDocumentation">
 
+<p>Scale this vector by dividing both x and y members by f. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(2, 5);</div>
+<div class="line">v1 /= 4; <span class="comment">// (0.5, 1.25)</span></div>
+</div><!-- fragment --> 
 </div></div>
 
-  </div><div id="a8f6769c1cfbb4018a18065d4249d7c19" class="method">
+  </div></div>
+  </div><div id="Simplemanipulations">
+    <h3 class="sectionHeader">Simple manipulations</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a8f6769c1cfbb4018a18065d4249d7c19" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8f6769c1cfbb4018a18065d4249d7c19&quot;)">
         <span class="type"></span>
@@ -711,12 +773,15 @@
     <div class="methodDescription" style="display:none" id="a8f6769c1cfbb4018a18065d4249d7c19_description">
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">getScaled</span><span class="args">(const float length) const </span></div><div class="memberDocumentation">
+<p>Return a new <a class="el" href="ofVec2f.html">ofVec2f</a> that is the result of scaling this vector up or down so that it has the requested length.</p>
+<p>~~~~{.cpp} <a class="el" href="ofVec2f.html">ofVec2f</a> v1( 3, 4 ); // length is 5 <a class="el" href="ofVec2f.html">ofVec2f</a> v2 = v1.getScaled( 15 ); // ( 9, 12 ), length is now 15 ~~~~ofVec2f</p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#abd1d88eb6732064fcd22212b3276049a" title="Scales this vector up or down so that it has the requested length. ">scale()</a> </dd></dl>
 
 </div></div>
 
-  </div><div id="aa5e76d5003783ee934dbe971991e2e60" class="method">
+  </div><div id="abd1d88eb6732064fcd22212b3276049a" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa5e76d5003783ee934dbe971991e2e60&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#abd1d88eb6732064fcd22212b3276049a&quot;)">
         <span class="type"></span>
         <a class="name">scale</a>
         <span class="args">(const float length)</span>
@@ -724,9 +789,14 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="aa5e76d5003783ee934dbe971991e2e60_description">
+    <div class="methodDescription" style="display:none" id="abd1d88eb6732064fcd22212b3276049a_description">
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">scale</span><span class="args">(const float length)</span></div><div class="memberDocumentation">
+
+<p>Scales this vector up or down so that it has the requested length. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1( 3, 4 ); <span class="comment">// length is 5</span></div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#abd1d88eb6732064fcd22212b3276049a">scale</a>( 15 ); <span class="comment">// v1 is now (9, 12), with length 15</span></div>
+</div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#a8f6769c1cfbb4018a18065d4249d7c19">getScaled()</a> </dd></dl>
 
 </div></div>
 
@@ -744,6 +814,18 @@
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">getRotated</span><span class="args">(float angle) const </span></div><div class="memberDocumentation">
 
+<p>Return a new <a class="el" href="ofVec2f.html">ofVec2f</a> that is the result of rotating this vector by angle degrees around the origin. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(1, 0);</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = v1.<a class="code" href="ofVec2f.html#aee2e05a46e550dcd3c1c15f2d0cc02a7">getRotated</a>( 45 ); <span class="comment">// v2 is (&#x221A;2, &#x221A;2)</span></div>
+<div class="line"><a class="code" href="ofVec3f.html">ofVec3f</a> v3 = v2.<a class="code" href="ofVec2f.html#aee2e05a46e550dcd3c1c15f2d0cc02a7">getRotated</a>( 45 ); <span class="comment">// v3 is (0, 1)</span></div>
+</div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#aab0574bd9a07def5c008aa642dae3415" title="Return a new ofVec2f that is the result of rotating this vector by angle radians around the origin...">getRotatedRad()</a> </dd>
+<dd>
+<a class="el" href="ofVec2f.html#aabc641f9558c86646cc164ff60b67ff7" title="Rotate this vector by angle degrees around the origin. ">rotate()</a> </dd></dl>
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">getRotated</span><span class="args">(float angle, const ofVec2f &amp;pivot) const </span></div><div class="memberDocumentation">
+
+<p>Like <a class="el" href="ofVec2f.html#aee2e05a46e550dcd3c1c15f2d0cc02a7" title="Return a new ofVec2f that is the result of rotating this vector by angle degrees around the origin...">getRotated()</a> but rotates around <code>pivot</code> rather than around the origin. </p>
+
 </div></div>
 
   </div><div id="aab0574bd9a07def5c008aa642dae3415" class="method">
@@ -760,11 +842,20 @@
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">getRotatedRad</span><span class="args">(float angle) const </span></div><div class="memberDocumentation">
 
+<p>Return a new <a class="el" href="ofVec2f.html">ofVec2f</a> that is the result of rotating this vector by angle radians around the origin. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(1, 0);</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2 = v1.<a class="code" href="ofVec2f.html#aab0574bd9a07def5c008aa642dae3415">getRotatedRad</a>( <a class="code" href="ofConstants.html#a598a3330b3c21701223ee0ca14316eca">PI</a>/4 ); <span class="comment">// v2 is (&#x221A;2, &#x221A;2)</span></div>
+<div class="line"><a class="code" href="ofVec3f.html">ofVec3f</a> v3 = v2.<a class="code" href="ofVec2f.html#aab0574bd9a07def5c008aa642dae3415">getRotatedRad</a>( <a class="code" href="ofConstants.html#a598a3330b3c21701223ee0ca14316eca">PI</a>/4 ); <span class="comment">// v3 is (0, 1)</span></div>
+</div><!-- fragment --> 
+</div><hr><div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">getRotatedRad</span><span class="args">(float angle, const ofVec2f &amp;pivot) const </span></div><div class="memberDocumentation">
+
+<p>Like <a class="el" href="ofVec2f.html#aab0574bd9a07def5c008aa642dae3415" title="Return a new ofVec2f that is the result of rotating this vector by angle radians around the origin...">getRotatedRad()</a> but rotates around <code>pivot</code> rather than around the origin. </p>
+
 </div></div>
 
-  </div><div id="a3e1840cb1f02984824c3b0cb1ee57cf3" class="method">
+  </div><div id="aabc641f9558c86646cc164ff60b67ff7" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3e1840cb1f02984824c3b0cb1ee57cf3&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aabc641f9558c86646cc164ff60b67ff7&quot;)">
         <span class="type"></span>
         <a class="name">rotate</a>
         <span class="args">(float angle)</span>
@@ -772,15 +863,25 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a3e1840cb1f02984824c3b0cb1ee57cf3_description">
+    <div class="methodDescription" style="display:none" id="aabc641f9558c86646cc164ff60b67ff7_description">
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">rotate</span><span class="args">(float angle)</span></div><div class="memberDocumentation">
 
+<p>Rotate this vector by angle degrees around the origin. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(1, 0);</div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#aabc641f9558c86646cc164ff60b67ff7">rotate</a>( 45 ); <span class="comment">// (&#x221A;2, &#x221A;2)</span></div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#aabc641f9558c86646cc164ff60b67ff7">rotate</a>( 45 ); <span class="comment">// (0, 1)</span></div>
+</div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#aee2e05a46e550dcd3c1c15f2d0cc02a7" title="Return a new ofVec2f that is the result of rotating this vector by angle degrees around the origin...">getRotated()</a> </dd></dl>
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">rotate</span><span class="args">(float angle, const ofVec2f &amp;pivot)</span></div><div class="memberDocumentation">
+
+<p>Like <a class="el" href="ofVec2f.html#aabc641f9558c86646cc164ff60b67ff7" title="Rotate this vector by angle degrees around the origin. ">rotate()</a> but rotates around <code>pivot</code> rather than around the origin. </p>
+
 </div></div>
 
-  </div><div id="a1aa96117ea3a121fc9cb6136a895e4b9" class="method">
+  </div><div id="a2ee0ebc40ce4a8d44f0c5c08b308b685" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1aa96117ea3a121fc9cb6136a895e4b9&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2ee0ebc40ce4a8d44f0c5c08b308b685&quot;)">
         <span class="type"></span>
         <a class="name">rotateRad</a>
         <span class="args">(float angle)</span>
@@ -788,73 +889,19 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a1aa96117ea3a121fc9cb6136a895e4b9_description">
+    <div class="methodDescription" style="display:none" id="a2ee0ebc40ce4a8d44f0c5c08b308b685_description">
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">rotateRad</span><span class="args">(float angle)</span></div><div class="memberDocumentation">
 
-</div></div>
+<p>Rotate this vector by angle radians around the origin. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(1, 0);</div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#aabc641f9558c86646cc164ff60b67ff7">rotate</a>( <a class="code" href="ofConstants.html#a598a3330b3c21701223ee0ca14316eca">PI</a>/4 ); <span class="comment">// (&#x221A;2, &#x221A;2)</span></div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#aabc641f9558c86646cc164ff60b67ff7">rotate</a>( <a class="code" href="ofConstants.html#a598a3330b3c21701223ee0ca14316eca">PI</a>/4 ); <span class="comment">// (0, 1)</span></div>
+</div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#aab0574bd9a07def5c008aa642dae3415" title="Return a new ofVec2f that is the result of rotating this vector by angle radians around the origin...">getRotatedRad()</a> </dd></dl>
 
-  </div><div id="aecea9827d62898012ae8c684e8ec43cd" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aecea9827d62898012ae8c684e8ec43cd&quot;)">
-        <span class="type"></span>
-        <a class="name">getRotated</a>
-        <span class="args">(float angle, const ofVec2f &amp;pivot) const </span>
-        <span class="note"></span>
-      </div>
-    </div>
+</div><hr><div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">rotateRad</span><span class="args">(float angle, const ofVec2f &amp;pivot)</span></div><div class="memberDocumentation">
 
-    <div class="methodDescription" style="display:none" id="aecea9827d62898012ae8c684e8ec43cd_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">getRotated</span><span class="args">(float angle, const ofVec2f &amp;pivot) const </span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a916fea4c82415c03cf0e0afbdcb80df7" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a916fea4c82415c03cf0e0afbdcb80df7&quot;)">
-        <span class="type"></span>
-        <a class="name">rotate</a>
-        <span class="args">(float angle, const ofVec2f &amp;pivot)</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a916fea4c82415c03cf0e0afbdcb80df7_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">rotate</span><span class="args">(float angle, const ofVec2f &amp;pivot)</span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a9af064d5d3206e60ed0e6e5f8a26dcd0" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9af064d5d3206e60ed0e6e5f8a26dcd0&quot;)">
-        <span class="type"></span>
-        <a class="name">getRotatedRad</a>
-        <span class="args">(float angle, const ofVec2f &amp;pivot) const </span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a9af064d5d3206e60ed0e6e5f8a26dcd0_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">getRotatedRad</span><span class="args">(float angle, const ofVec2f &amp;pivot) const </span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="ab4a02caec83e1a71528c23293232b34d" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab4a02caec83e1a71528c23293232b34d&quot;)">
-        <span class="type"></span>
-        <a class="name">rotateRad</a>
-        <span class="args">(float angle, const ofVec2f &amp;pivot)</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ab4a02caec83e1a71528c23293232b34d_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">rotateRad</span><span class="args">(float angle, const ofVec2f &amp;pivot)</span></div><div class="memberDocumentation">
+<p>Like <a class="el" href="ofVec2f.html#a2ee0ebc40ce4a8d44f0c5c08b308b685" title="Rotate this vector by angle radians around the origin. ">rotateRad()</a> but rotates around <code>pivot</code> rather than around the origin. </p>
 
 </div></div>
 
@@ -872,11 +919,15 @@
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">getMapped</span><span class="args">(const ofVec2f &amp;origin, const ofVec2f &amp;vx, const ofVec2f &amp;vy) const </span></div><div class="memberDocumentation">
 
+<p>Get vector mapped to new coordinate system. </p>
+<p>In most cases you want <code>vx</code> and <code>vy</code> to be perpendicular and of unit length; if they are not perpendicular you will have shearing as part of the mapping, and if they are not of unit length you will have scaling as part of the mapping.</p>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="ofVec2f.html">ofVec2f</a> calculated by copying this vector and then mapping from its default coordinate system &#x2013; origin (0,0), X direction (1,0), Y direction (0,1) &#x2013; to a new coordinate system defined with origin at origin, X direction vx, and Y direction vy. </dd></dl>
+
 </div></div>
 
-  </div><div id="adce22721bfe6e17458e5d596e6d08824" class="method">
+  </div><div id="a35aaa4ef64a316e5caa4dc8caaf757fc" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#adce22721bfe6e17458e5d596e6d08824&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a35aaa4ef64a316e5caa4dc8caaf757fc&quot;)">
         <span class="type"></span>
         <a class="name">map</a>
         <span class="args">(const ofVec2f &amp;origin, const ofVec2f &amp;vx, const ofVec2f &amp;vy)</span>
@@ -884,13 +935,21 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="adce22721bfe6e17458e5d596e6d08824_description">
+    <div class="methodDescription" style="display:none" id="a35aaa4ef64a316e5caa4dc8caaf757fc_description">
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">map</span><span class="args">(const ofVec2f &amp;origin, const ofVec2f &amp;vx, const ofVec2f &amp;vy)</span></div><div class="memberDocumentation">
 
+<p>Maps this vector from its default coordinate system &#x2013; origin (0,0), X direction (1,0), Y direction (0,1) &#x2013; to a new coordinate system defined with origin at origin, X direction vx, and Y direction vy. </p>
+<p>In most case you want vx and vy to be perpendicular and of unit length; if they are not perpendicular you will have shearing as part of the mapping, and if they are not of unit length you will have scaling as part of the mapping.</p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#a2a3659775e2b7bc0f9d56a39b13e79b6" title="Set this vector to its own normalized perpendicular (by rotating 90 degrees and normalizing). ">perpendicular()</a> </dd></dl>
+
 </div></div>
 
-  </div><div id="a7b0364dd393bb208c73157e0deee72c7" class="method">
+  </div></div>
+  </div><div id="Distance">
+    <h3 class="sectionHeader">Distance</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a7b0364dd393bb208c73157e0deee72c7" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7b0364dd393bb208c73157e0deee72c7&quot;)">
         <span class="type"></span>
@@ -903,6 +962,21 @@
     <div class="methodDescription" style="display:none" id="a7b0364dd393bb208c73157e0deee72c7_description">
 
     <div class="memberVariant"><span class="type">float </span><span class="name">distance</span><span class="args">(const ofVec2f &amp;pnt) const </span></div><div class="memberDocumentation">
+
+<p>Distance between two points. </p>
+<p>Treats both this vector and pnt as points in 2D space, and calculates and returns the distance between them.</p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> p1( 3, 4 );</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> p2( 6, 8 );</div>
+<div class="line"><span class="keywordtype">float</span> <a class="code" href="ofVec2f.html#a7b0364dd393bb208c73157e0deee72c7">distance</a> = p1.distance( p2 ); <span class="comment">// distance is 5</span></div>
+</div><!-- fragment --><p>Distance involves a square root calculation, which is one of the slowest things you can do in programming. If you don&apos;t need an exact number but rather just a rough idea of distance (for example when finding the shortest distance of a bunch of points to a reference point, where it doesn&apos;t matter exactly what the distances are, you just want the shortest), you can use <a class="el" href="ofVec2f.html#a3ebd0b6fee431042976ec39811d02893" title="Distance between two points squared. ">squareDistance()</a> instead.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pnt</td><td>The point to calculate the distance to &#xA0;</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The distance as float </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#a3ebd0b6fee431042976ec39811d02893" title="Distance between two points squared. ">squareDistance()</a> </dd></dl>
 
 </div></div>
 
@@ -920,9 +994,22 @@
 
     <div class="memberVariant"><span class="type">float </span><span class="name">squareDistance</span><span class="args">(const ofVec2f &amp;pnt) const </span></div><div class="memberDocumentation">
 
+<p>Distance between two points squared. </p>
+<p>Treats both this vector and pnt as points in 2D space, and calculates and returns the squared distance between them.</p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> p1( 3, 4 );</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> p2( 6, 8 );</div>
+<div class="line"><span class="keywordtype">float</span> distance = p1.distance( p2 ); <span class="comment">// distance is 5</span></div>
+</div><!-- fragment --><p>Use as a much faster alternative to <a href="#distance">distance</a> if you don&apos;t need to know an exact number but rather just a rough idea of distance (for example when finding the shortest distance of a bunch of points to a reference point, where it doesn&apos;t matter exactly what the distances are, you just want the shortest). It avoids the square root calculation that is ordinarily required to calculate a length.</p>
+<dl class="section return"><dt>Returns</dt><dd>The distance squared as float </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#a7b0364dd393bb208c73157e0deee72c7" title="Distance between two points. ">distance()</a> </dd></dl>
+
 </div></div>
 
-  </div><div id="a9c2a407610a1276b76a2762872aa14ac" class="method">
+  </div></div>
+  </div><div id="Interpolation">
+    <h3 class="sectionHeader">Interpolation</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a9c2a407610a1276b76a2762872aa14ac" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9c2a407610a1276b76a2762872aa14ac&quot;)">
         <span class="type"></span>
@@ -935,13 +1022,28 @@
     <div class="methodDescription" style="display:none" id="a9c2a407610a1276b76a2762872aa14ac_description">
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">getInterpolated</span><span class="args">(const ofVec2f &amp;pnt, float p) const </span></div><div class="memberDocumentation">
-<p>p==0.0 results in this point, p==0.5 results in the midpoint, and p==1.0 results in pnt being returned. </p>
+
+<p>Linear interpolation. </p>
+<p>Perform a linear interpolation of this vector&apos;s position towards pnt and return the interpolated position without altering the original vector.</p>
+<p><code>p</code> is normally between 0 and 1 and where 0 means stay the original position and 1 means move all the way to pnt, but you can also have p greater than 1 overshoot pnt, or less than 0 to move backwards away from pnt.</p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1( 0, 5 );</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2( 10, 10 );</div>
+<div class="line"><a class="code" href="ofVec3f.html">ofVec3f</a> v3 = v1.<a class="code" href="ofVec2f.html#a9c2a407610a1276b76a2762872aa14ac">getInterpolated</a>( v2, 0.5 ); <span class="comment">// v3 is (5, 7.5)</span></div>
+<div class="line"><a class="code" href="ofVec3f.html">ofVec3f</a> v4 = v1.<a class="code" href="ofVec2f.html#a9c2a407610a1276b76a2762872aa14ac">getInterpolated</a>( v2, 0.8 ); <span class="comment">// v4 is (8, 9)</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pnt</td><td>The point to move towards </td></tr>
+    <tr><td class="paramname">p</td><td>The amount to move towards pnt </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#ad19ab27b226042cfed6e012d92355b5d" title="Linear interpolation. ">interpolate()</a> </dd></dl>
 
 </div></div>
 
-  </div><div id="aa8ba27d8799d3b5de924c9f6a19495f1" class="method">
+  </div><div id="ad19ab27b226042cfed6e012d92355b5d" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa8ba27d8799d3b5de924c9f6a19495f1&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad19ab27b226042cfed6e012d92355b5d&quot;)">
         <span class="type"></span>
         <a class="name">interpolate</a>
         <span class="args">(const ofVec2f &amp;pnt, float p)</span>
@@ -949,9 +1051,20 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="aa8ba27d8799d3b5de924c9f6a19495f1_description">
+    <div class="methodDescription" style="display:none" id="ad19ab27b226042cfed6e012d92355b5d_description">
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">interpolate</span><span class="args">(const ofVec2f &amp;pnt, float p)</span></div><div class="memberDocumentation">
+
+<p>Linear interpolation. </p>
+<p>Perform a linear interpolation of this vector&apos;s position towards pnt. p controls the amount to move towards pnt. p is normally between 0 and 1 and where 0 means stay the original position and 1 means move all the way to pnt, but you can also have p greater than 1 overshoot pnt, or less than 0 to move backwards away from pnt.</p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1( 0, 5 );</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2( 10, 10 );</div>
+<div class="line"><span class="comment">// go go gadget zeno</span></div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#ad19ab27b226042cfed6e012d92355b5d">interpolate</a>( v2, 0.5 ); <span class="comment">// v1 is now (5, 7.5)</span></div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#ad19ab27b226042cfed6e012d92355b5d">interpolate</a>( v2, 0.5 ); <span class="comment">// v1 is now (7.5, 8.75)</span></div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#ad19ab27b226042cfed6e012d92355b5d">interpolate</a>( v2, 0.5 ); <span class="comment">// v1 is now (8.75, 9.375)</span></div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#ad19ab27b226042cfed6e012d92355b5d">interpolate</a>( v2, 0.5 ); <span class="comment">// v1 is now (9.375, 9.6875)</span></div>
+</div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#a9c2a407610a1276b76a2762872aa14ac" title="Linear interpolation. ">getInterpolated()</a> </dd></dl>
 
 </div></div>
 
@@ -969,11 +1082,24 @@
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">getMiddle</span><span class="args">(const ofVec2f &amp;pnt) const </span></div><div class="memberDocumentation">
 
+<p>Calculate and return the midpoint between this vector and pnt. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(5, 0);</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2(10, 10);</div>
+<div class="line"><a class="code" href="ofVec3f.html">ofVec3f</a> mid = v1.<a class="code" href="ofVec2f.html#a40500665496c359beec61087d4e73809">getMiddle</a>(v2); <span class="comment">// mid gets (7.5, 5)</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pnt</td><td>The vector to find the middle to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The middle between this vector and <code>pnt</code> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#a779cadd159b8e027d284b4db3acb02d5" title="Set this vector to the midpoint between itself and pnt. ">middle()</a> </dd></dl>
+
 </div></div>
 
-  </div><div id="aa9c116e2d6a96c074d4730f6348eb16c" class="method">
+  </div><div id="a779cadd159b8e027d284b4db3acb02d5" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa9c116e2d6a96c074d4730f6348eb16c&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a779cadd159b8e027d284b4db3acb02d5&quot;)">
         <span class="type"></span>
         <a class="name">middle</a>
         <span class="args">(const ofVec2f &amp;pnt)</span>
@@ -981,15 +1107,24 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="aa9c116e2d6a96c074d4730f6348eb16c_description">
+    <div class="methodDescription" style="display:none" id="a779cadd159b8e027d284b4db3acb02d5_description">
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">middle</span><span class="args">(const ofVec2f &amp;pnt)</span></div><div class="memberDocumentation">
 
+<p>Set this vector to the midpoint between itself and pnt. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1( 0, 5 );</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2( 10, 10 );</div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#a779cadd159b8e027d284b4db3acb02d5">middle</a>( v2 ); <span class="comment">// v1 is now (5, 7.5)</span></div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#a779cadd159b8e027d284b4db3acb02d5">middle</a>( v2 ); <span class="comment">// v1 is now (7.5, 8.75)</span></div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#a779cadd159b8e027d284b4db3acb02d5">middle</a>( v2 ); <span class="comment">// v1 is now (8.75, 9.375)</span></div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#a779cadd159b8e027d284b4db3acb02d5">middle</a>( v2 ); <span class="comment">// v1 is now (9.375, 9.6875)</span></div>
+</div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#a40500665496c359beec61087d4e73809" title="Calculate and return the midpoint between this vector and pnt. ">getMiddle()</a> </dd></dl>
+
 </div></div>
 
-  </div><div id="a2b5e48a117ad1bc7afc753ecb0665f42" class="method">
+  </div><div id="a293c557f3a72c96536cc138fede7d5e3" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2b5e48a117ad1bc7afc753ecb0665f42&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a293c557f3a72c96536cc138fede7d5e3&quot;)">
         <span class="type"></span>
         <a class="name">average</a>
         <span class="args">(const ofVec2f *points, int num)</span>
@@ -997,13 +1132,36 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a2b5e48a117ad1bc7afc753ecb0665f42_description">
+    <div class="methodDescription" style="display:none" id="a293c557f3a72c96536cc138fede7d5e3_description">
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">average</span><span class="args">(const ofVec2f *points, int num)</span></div><div class="memberDocumentation">
 
+<p>Average vector over an array of points. </p>
+<p>Sets this vector to be the average (<em>centre of gravity</em> or <em>centroid</em>) of a given array of <a class="el" href="ofVec2f.html">ofVec2f</a>.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> numPoints = 10;</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> points[numPoints];</div>
+<div class="line"><span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i=0; i&lt;numPoints; i++ ) {</div>
+<div class="line">    points[i].<a class="code" href="ofVec2f.html#aed59b5a86ed33d97e72e601a69d870ad">set</a>( <a class="code" href="of_math_8cpp.html#ae93bfe2a2080f0e2a03df835e72c7521">ofRandom</a>(0,100), <a class="code" href="of_math_8cpp.html#ae93bfe2a2080f0e2a03df835e72c7521">ofRandom</a>(0,100) );</div>
+<div class="line">}</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> centroid;</div>
+<div class="line">centroid.<a class="code" href="ofVec2f.html#a293c557f3a72c96536cc138fede7d5e3">average</a>( points, numPoints ); </div>
+<div class="line"><span class="comment">// centroid now is the centre of gravity/average of all the random points</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">points</td><td>The array of <a class="el" href="ofVec2f.html">ofVec2f</a> to avarage over </td></tr>
+    <tr><td class="paramname">num</td><td>specifies the number of <a class="el" href="ofVec2f.html">ofVec2f</a> in the array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector that is the avarage of the points in the array </dd></dl>
+
 </div></div>
 
-  </div><div id="a0dce03f931c60e149d08d831dcf708bd" class="method">
+  </div></div>
+  </div><div id="Limit">
+    <h3 class="sectionHeader">Limit</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a0dce03f931c60e149d08d831dcf708bd" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a0dce03f931c60e149d08d831dcf708bd&quot;)">
         <span class="type"></span>
@@ -1017,11 +1175,18 @@
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">getNormalized</span><span class="args">() const </span></div><div class="memberDocumentation">
 
+<p>Returns a normalized copy of this vector. </p>
+<p><em>Normalization</em> means to scale the vector so that its length (magnitude) is exactly 1, at which stage all that is left is the direction. A normalized vector is usually called a <em>unit vector</em>, and can be used to represent a pure direction (heading).</p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(5, 0);</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1Normalized = v1.<a class="code" href="ofVec2f.html#a0dce03f931c60e149d08d831dcf708bd">getNormalized</a>(); <span class="comment">// (1, 0)</span></div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2(5, 5);</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2Normalized = v2.<a class="code" href="ofVec2f.html#a0dce03f931c60e149d08d831dcf708bd">getNormalized</a>(); <span class="comment">// (&#x221A;2, &#x221A;2)</span></div>
+</div><!-- fragment --> 
 </div></div>
 
-  </div><div id="adaa0832bfedd859adb9df1616a4384c8" class="method">
+  </div><div id="a2d67fa45a702df8ce6b344f05f9ac53c" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#adaa0832bfedd859adb9df1616a4384c8&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2d67fa45a702df8ce6b344f05f9ac53c&quot;)">
         <span class="type"></span>
         <a class="name">normalize</a>
         <span class="args">()</span>
@@ -1029,9 +1194,17 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="adaa0832bfedd859adb9df1616a4384c8_description">
+    <div class="methodDescription" style="display:none" id="a2d67fa45a702df8ce6b344f05f9ac53c_description">
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">normalize</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Normalize the vector. </p>
+<p><em>Normalizing</em> means to scale the vector so that its length (magnitude) is exactly 1, at which stage all that is left is the direction. A normalized vector is usually called a <em>unit vector</em>, and can be used to represent a pure direction (heading).</p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(5, 0);</div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#a2d67fa45a702df8ce6b344f05f9ac53c">normalize</a>(); <span class="comment">// v2 is now (1, 0)</span></div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2(5, 5);</div>
+<div class="line">v2.<a class="code" href="ofVec2f.html#a2d67fa45a702df8ce6b344f05f9ac53c">normalize</a>(); <span class="comment">// v2 is now (&#x221A;2, &#x221A;2)</span></div>
+</div><!-- fragment --> <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#a0dce03f931c60e149d08d831dcf708bd" title="Returns a normalized copy of this vector. ">getNormalized()</a> </dd></dl>
 
 </div></div>
 
@@ -1049,11 +1222,30 @@
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">getLimited</span><span class="args">(float max) const </span></div><div class="memberDocumentation">
 
+<p>Get vector limited by length. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(5, 1); <span class="comment">// length is about 5.1</span></div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2(2, 1); <span class="comment">// length is about 2.2</span></div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1Limited = v1.<a class="code" href="ofVec2f.html#ab62aabb47050ab6d806c9a9a3633b546">getLimited</a>(3); </div>
+<div class="line"><span class="comment">// v1Limited is (2.9417, 0.58835) which has length of 3 in the same direction as v1</span></div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2Limited = v2.<a class="code" href="ofVec2f.html#ab62aabb47050ab6d806c9a9a3633b546">getLimited</a>(3);</div>
+<div class="line"><span class="comment">// v2Limited is (2, 1) (same as v2)</span></div>
+</div><!-- fragment --><p>&#xA0;</p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#af434f9e593899d2b0558fe7b2f058c16" title="Restrict the length (magnitude) of this vector to a maximum of max units by scaling down if necessary...">limit()</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max</td><td>The maximum length of the vector to return </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A copy of this vector with its length (magnitude) restricted to a maximum of max units by scaling down if necessary. </dd></dl>
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">getLimited</span><span class="args">(float max)</span></div><div class="memberDocumentation">
+
 </div></div>
 
-  </div><div id="ad0e9aab27a0da6f889b17793d4dd1bed" class="method">
+  </div><div id="af434f9e593899d2b0558fe7b2f058c16" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad0e9aab27a0da6f889b17793d4dd1bed&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af434f9e593899d2b0558fe7b2f058c16&quot;)">
         <span class="type"></span>
         <a class="name">limit</a>
         <span class="args">(float max)</span>
@@ -1061,45 +1253,27 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="ad0e9aab27a0da6f889b17793d4dd1bed_description">
+    <div class="methodDescription" style="display:none" id="af434f9e593899d2b0558fe7b2f058c16_description">
 
     <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">limit</span><span class="args">(float max)</span></div><div class="memberDocumentation">
 
-</div></div>
-
-  </div><div id="a6b2cabfe71daf7c6ad8e2df2fd9f549f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6b2cabfe71daf7c6ad8e2df2fd9f549f&quot;)">
-        <span class="type"></span>
-        <a class="name">getPerpendicular</a>
-        <span class="args">() const </span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a6b2cabfe71daf7c6ad8e2df2fd9f549f_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">getPerpendicular</span><span class="args">() const </span></div><div class="memberDocumentation">
+<p>Restrict the length (magnitude) of this vector to a maximum of max units by scaling down if necessary. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(5, 1); <span class="comment">// length is about 5.1</span></div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2(2, 1); <span class="comment">// length is about 2.2</span></div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#af434f9e593899d2b0558fe7b2f058c16">limit</a>(3); </div>
+<div class="line"><span class="comment">// v1 is now (2.9417, 0.58835) which has length of 3 in the same direction as at initialization</span></div>
+<div class="line">v2.<a class="code" href="ofVec2f.html#af434f9e593899d2b0558fe7b2f058c16">limit</a>(3);</div>
+<div class="line"><span class="comment">// v2 is unchanged</span></div>
+</div><!-- fragment --><p>&#xA0;</p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#af434f9e593899d2b0558fe7b2f058c16" title="Restrict the length (magnitude) of this vector to a maximum of max units by scaling down if necessary...">limit()</a> </dd></dl>
 
 </div></div>
 
-  </div><div id="a4423ff8cccea37e954b6b8c11b9ef7ae" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4423ff8cccea37e954b6b8c11b9ef7ae&quot;)">
-        <span class="type"></span>
-        <a class="name">perpendicular</a>
-        <span class="args">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a4423ff8cccea37e954b6b8c11b9ef7ae_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">perpendicular</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a04bd477dc0a1e2951b3de90a21bbfff7" class="method">
+  </div></div>
+  </div><div id="Measurement">
+    <h3 class="sectionHeader">Measurement</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a04bd477dc0a1e2951b3de90a21bbfff7" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a04bd477dc0a1e2951b3de90a21bbfff7&quot;)">
         <span class="type"></span>
@@ -1112,6 +1286,12 @@
     <div class="methodDescription" style="display:none" id="a04bd477dc0a1e2951b3de90a21bbfff7_description">
 
     <div class="memberVariant"><span class="type">float </span><span class="name">length</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Return the length (magnitude) of this vector. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v(3, 4);</div>
+<div class="line"><span class="keywordtype">float</span> len = v.length(); <span class="comment">// len is 5 (3,4,5 triangle)</span></div>
+</div><!-- fragment --><p><a class="el" href="ofVec2f.html#a04bd477dc0a1e2951b3de90a21bbfff7" title="Return the length (magnitude) of this vector. ">length()</a> involves a square root calculation, which is one of the slowest things you can do in programming. If you don&apos;t need an exact number but rather just a rough idea of a length (for example when finding the shortest distance of a bunch of points to a reference point, where it doesn&apos;t matter exactly what the lengths are, you just want the shortest), you can use <a class="el" href="ofVec2f.html#aea7962354cc720744f5f07a069f4d954" title="Return the squared length (squared magnitude) of this vector. ">lengthSquared()</a> instead.</p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#aea7962354cc720744f5f07a069f4d954" title="Return the squared length (squared magnitude) of this vector. ">lengthSquared()</a> </dd></dl>
 
 </div></div>
 
@@ -1129,6 +1309,12 @@
 
     <div class="memberVariant"><span class="type">float </span><span class="name">lengthSquared</span><span class="args">() const </span></div><div class="memberDocumentation">
 
+<p>Return the squared length (squared magnitude) of this vector. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v(3, 4);</div>
+<div class="line"><span class="keywordtype">float</span> len = v.length(); <span class="comment">// len is 5 (3,4,5 triangle)</span></div>
+</div><!-- fragment --><p>Use as a much faster alternative to <a class="el" href="ofVec2f.html#a04bd477dc0a1e2951b3de90a21bbfff7" title="Return the length (magnitude) of this vector. ">length()</a> if you don&apos;t need to know an accurate length but rather just a rough idea of a length (for example when finding the shortest distance of a bunch of points to a reference point, where it doesn&apos;t matter exactly what the lengths are, you just want the shortest). It avoids the square root calculation that is ordinarily required to calculate a length.</p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#a04bd477dc0a1e2951b3de90a21bbfff7" title="Return the length (magnitude) of this vector. ">length()</a> </dd></dl>
+
 </div></div>
 
   </div><div id="acb166e3a03ec85d5ceb5bd299ce86ee0" class="method">
@@ -1144,7 +1330,18 @@
     <div class="methodDescription" style="display:none" id="acb166e3a03ec85d5ceb5bd299ce86ee0_description">
 
     <div class="memberVariant"><span class="type">float </span><span class="name">angle</span><span class="args">(const ofVec2f &amp;vec) const </span></div><div class="memberDocumentation">
-<p>Angle (deg) between two vectors. This is a signed relative angle between -180 and 180. </p>
+
+<p>Calculate the angle to another vector in degrees. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(1,0);</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2(0,1);</div>
+<div class="line"><span class="keywordtype">float</span> <a class="code" href="ofVec2f.html#acb166e3a03ec85d5ceb5bd299ce86ee0">angle</a> = v1.<a class="code" href="ofVec2f.html#acb166e3a03ec85d5ceb5bd299ce86ee0">angle</a>(v2); <span class="comment">// angle is 90</span></div>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>The vector to calculate the angle to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The angle in degrees (-180...180) </dd></dl>
 
 </div></div>
 
@@ -1161,7 +1358,72 @@
     <div class="methodDescription" style="display:none" id="a6b32d05b206620ee5295061ee8206d6b_description">
 
     <div class="memberVariant"><span class="type">float </span><span class="name">angleRad</span><span class="args">(const ofVec2f &amp;vec) const </span></div><div class="memberDocumentation">
-<p>Angle (deg) between two vectors. This is a signed relative angle between -180 and 180. </p>
+
+<p>Calculate the angle to another vector in radians. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(1,0);</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2(0,1);</div>
+<div class="line"><span class="keywordtype">float</span> angle = v1.<a class="code" href="ofVec2f.html#a6b32d05b206620ee5295061ee8206d6b">angleRad</a>(v2); <span class="comment">// angle is HALF_PI</span></div>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>The vector to calculate the angle to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The angle in radians (-PI...PI) </dd></dl>
+
+</div></div>
+
+  </div></div>
+  </div><div id="Perpendicular">
+    <h3 class="sectionHeader">Perpendicular</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a6b2cabfe71daf7c6ad8e2df2fd9f549f" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6b2cabfe71daf7c6ad8e2df2fd9f549f&quot;)">
+        <span class="type"></span>
+        <a class="name">getPerpendicular</a>
+        <span class="args">() const </span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a6b2cabfe71daf7c6ad8e2df2fd9f549f_description">
+
+    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">getPerpendicular</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Return the <em>normalized</em> <a class="el" href="ofVec2f.html">ofVec2f</a> that is perpendicular to this vector (ie rotated 90 degrees and normalized). </p>
+<div class="image">
+<img src="math/perpendicular.png" alt="PERPENDICULAR">
+</div>
+<p> Image courtesy of Wikipedia</p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v(2, 5);</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> u = v.<a class="code" href="ofVec2f.html#a6b2cabfe71daf7c6ad8e2df2fd9f549f">getPerpendicular</a>(); <span class="comment">// u is (0.928, -0.371)</span></div>
+</div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#a2a3659775e2b7bc0f9d56a39b13e79b6" title="Set this vector to its own normalized perpendicular (by rotating 90 degrees and normalizing). ">perpendicular()</a> </dd></dl>
+
+</div></div>
+
+  </div><div id="a2a3659775e2b7bc0f9d56a39b13e79b6" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2a3659775e2b7bc0f9d56a39b13e79b6&quot;)">
+        <span class="type"></span>
+        <a class="name">perpendicular</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a2a3659775e2b7bc0f9d56a39b13e79b6_description">
+
+    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">perpendicular</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Set this vector to its own <b>normalized</b> perpendicular (by rotating 90 degrees and normalizing). </p>
+<div class="image">
+<img src="../math/perpendicular.png" alt="PERPENDICULAR">
+</div>
+<p> Image courtesy of Wikipedia</p>
+<div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v(2, 5);</div>
+<div class="line">v.perpendicular(); <span class="comment">// v is (0.928, -0.371)</span></div>
+</div><!-- fragment --> <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec2f.html#a6b2cabfe71daf7c6ad8e2df2fd9f549f" title="Return the normalized ofVec2f that is perpendicular to this vector (ie rotated 90 degrees and normali...">getPerpendicular()</a> </dd></dl>
 
 </div></div>
 
@@ -1178,256 +1440,71 @@
     <div class="methodDescription" style="display:none" id="a0fd71d357ed6e594fd1a40ee92770a95_description">
 
     <div class="memberVariant"><span class="type">float </span><span class="name">dot</span><span class="args">(const ofVec2f &amp;vec) const </span></div><div class="memberDocumentation">
-<p>Dot Product. </p>
 
-</div></div>
-
-  </div><div id="a97240f6d5a01e831d843277b36b98bc8" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a97240f6d5a01e831d843277b36b98bc8&quot;)">
-        <span class="type"></span>
-        <a class="name">rescaled</a>
-        <span class="args">(const float length) const </span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a97240f6d5a01e831d843277b36b98bc8_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">rescaled</span><span class="args">(const float length) const </span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="aa02edc366ac39d9bc74e4527c51891ef" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa02edc366ac39d9bc74e4527c51891ef&quot;)">
-        <span class="type"></span>
-        <a class="name">rescale</a>
-        <span class="args">(const float length)</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa02edc366ac39d9bc74e4527c51891ef_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">rescale</span><span class="args">(const float length)</span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a0341654ad81521acfae8797064854e97" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a0341654ad81521acfae8797064854e97&quot;)">
-        <span class="type"></span>
-        <a class="name">rotated</a>
-        <span class="args">(float angle) const </span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a0341654ad81521acfae8797064854e97_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">rotated</span><span class="args">(float angle) const </span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a5bc256605f4abb393adbfa2714bb43f6" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5bc256605f4abb393adbfa2714bb43f6&quot;)">
-        <span class="type"></span>
-        <a class="name">normalized</a>
-        <span class="args">() const </span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a5bc256605f4abb393adbfa2714bb43f6_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">normalized</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a2400be938d504f158b88b2c91ee5c276" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2400be938d504f158b88b2c91ee5c276&quot;)">
-        <span class="type"></span>
-        <a class="name">limited</a>
-        <span class="args">(float max) const </span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a2400be938d504f158b88b2c91ee5c276_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">limited</span><span class="args">(float max) const </span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="add80e3945025a5eff5490bba74a7cb5a" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#add80e3945025a5eff5490bba74a7cb5a&quot;)">
-        <span class="type"></span>
-        <a class="name">perpendiculared</a>
-        <span class="args">() const </span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="add80e3945025a5eff5490bba74a7cb5a_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">perpendiculared</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="afc19291b1263ac21904ddc95591b4d0f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#afc19291b1263ac21904ddc95591b4d0f&quot;)">
-        <span class="type"></span>
-        <a class="name">interpolated</a>
-        <span class="args">(const ofVec2f &amp;pnt, float p) const </span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="afc19291b1263ac21904ddc95591b4d0f_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">interpolated</span><span class="args">(const ofVec2f &amp;pnt, float p) const </span></div><div class="memberDocumentation">
-<p>p==0.0 results in this point, p==0.5 results in the midpoint, and p==1.0 results in pnt being returned. </p>
-
-</div></div>
-
-  </div><div id="aa815265e7e981bec0bd7ad62fe58a7e6" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa815265e7e981bec0bd7ad62fe58a7e6&quot;)">
-        <span class="type"></span>
-        <a class="name">middled</a>
-        <span class="args">(const ofVec2f &amp;pnt) const </span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa815265e7e981bec0bd7ad62fe58a7e6_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">middled</span><span class="args">(const ofVec2f &amp;pnt) const </span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="ae3b7e6838057a96d9c0fa4da1da5fcad" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae3b7e6838057a96d9c0fa4da1da5fcad&quot;)">
-        <span class="type"></span>
-        <a class="name">mapped</a>
-        <span class="args">(const ofVec2f &amp;origin, const ofVec2f &amp;vx, const ofVec2f &amp;vy) const </span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ae3b7e6838057a96d9c0fa4da1da5fcad_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">mapped</span><span class="args">(const ofVec2f &amp;origin, const ofVec2f &amp;vx, const ofVec2f &amp;vy) const </span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a1d18a2c2edb7ad4229672a2ca89e14bc" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1d18a2c2edb7ad4229672a2ca89e14bc&quot;)">
-        <span class="type"></span>
-        <a class="name">distanceSquared</a>
-        <span class="args">(const ofVec2f &amp;pnt) const </span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a1d18a2c2edb7ad4229672a2ca89e14bc_description">
-
-    <div class="memberVariant"><span class="type">float </span><span class="name">distanceSquared</span><span class="args">(const ofVec2f &amp;pnt) const </span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a6144aa1b43585b770ad7533da3c7f62d" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6144aa1b43585b770ad7533da3c7f62d&quot;)">
-        <span class="type"></span>
-        <a class="name">rotated</a>
-        <span class="args">(float angle, const ofVec2f &amp;pivot) const </span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a6144aa1b43585b770ad7533da3c7f62d_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">rotated</span><span class="args">(float angle, const ofVec2f &amp;pivot) const </span></div><div class="memberDocumentation">
+<p>Calculate and return the dot product of this vector with vec. </p>
+<p><em>Dot product</em> (less commonly known as <em>Euclidean inner product</em>) expresses the angular relationship between two vectors. In other words it is a measure of how <em>parallel</em> two vectors are. If they are completely perpendicular the dot product is 0; if they are completely parallel their dot product is either 1 if they are pointing in the same direction, or -1 if they are pointing in opposite directions.</p>
+<div class="image">
+<img src="../math/dotproduct.png" alt="DOT">
+</div>
+<p> Image courtesy of Wikipedia</p>
+<div class="fragment"><div class="line">ofvec2f a1(1, 0);</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> b1(0, 1); <span class="comment">// 90 degree angle to a1</span></div>
+<div class="line"><a class="code" href="ofVec2f.html#a0fd71d357ed6e594fd1a40ee92770a95">dot</a> = a1.dot(b1); <span class="comment">// dot is 0, ie cos(90)</span></div>
+<div class="line"></div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> a2(1, 0); </div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> b2(1, 1); <span class="comment">// 45 degree angle to a2</span></div>
+<div class="line">b2.normalize(); <span class="comment">// vectors should to be unit vectors (normalized)</span></div>
+<div class="line"><span class="keywordtype">float</span> <a class="code" href="ofVec2f.html#a0fd71d357ed6e594fd1a40ee92770a95">dot</a> = a2.dot(b2); <span class="comment">// dot is 0.707, ie cos(45)</span></div>
+<div class="line"></div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> a3(1, 0);</div>
+<div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> b3(-1, 0); <span class="comment">// 180 degree angle to a3</span></div>
+<div class="line">dot = a3.dot(b3); <span class="comment">// dot is -1, ie cos(180)</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>The vector to dotproduct </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div></div>
 
   </div></div>
-  </div><div id="Friends">
-    <h3 class="sectionHeader">Friends</h3>
+  </div><div id="PublicAttributes">
+    <h3 class="sectionHeader">Public Attributes</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a8d8d86b805b7897418a316313db81aba" class="method">
+    <div class="sectionContent"><div id="a81763bfaf27b7db5f734055212ca6ec5" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8d8d86b805b7897418a316313db81aba&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a81763bfaf27b7db5f734055212ca6ec5&quot;)">
         <span class="type"></span>
-        <a class="name">operator&lt;&lt;</a>
-        <span class="args">(ostream &amp;os, const ofVec2f &amp;vec)</span>
+        <a class="name">x</a>
+        <span class="args"></span>
         <span class="note"></span>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a8d8d86b805b7897418a316313db81aba_description">
+    <div class="methodDescription" style="display:none" id="a81763bfaf27b7db5f734055212ca6ec5_description">
 
-    <div class="memberVariant"><span class="type">friend ostream &amp; </span><span class="name">operator&lt;&lt;</span><span class="args">(ostream &amp;os, const ofVec2f &amp;vec)</span></div><div class="memberDocumentation">
+    <div class="memberVariant"><span class="type">float </span><span class="name">x</span><span class="args"></span></div><div class="memberDocumentation">
+
+<p>Stores the <code>x</code> component of the vector. </p>
 
 </div></div>
 
-  </div><div id="a709840a8a109a25af48973f8514cff3d" class="method">
+  </div><div id="a4be985445b601e54d3ca5917c3d7ac8d" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a709840a8a109a25af48973f8514cff3d&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4be985445b601e54d3ca5917c3d7ac8d&quot;)">
         <span class="type"></span>
-        <a class="name">operator&gt;&gt;</a>
-        <span class="args">(istream &amp;is, const ofVec2f &amp;vec)</span>
+        <a class="name">y</a>
+        <span class="args"></span>
         <span class="note"></span>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a709840a8a109a25af48973f8514cff3d_description">
+    <div class="methodDescription" style="display:none" id="a4be985445b601e54d3ca5917c3d7ac8d_description">
 
-    <div class="memberVariant"><span class="type">friend istream &amp; </span><span class="name">operator&gt;&gt;</span><span class="args">(istream &amp;is, const ofVec2f &amp;vec)</span></div><div class="memberDocumentation">
+    <div class="memberVariant"><span class="type">float </span><span class="name">y</span><span class="args"></span></div><div class="memberDocumentation">
 
-</div></div>
-
-  </div></div>
-  </div><div id="PublicStaticFunctions">
-    <h3 class="sectionHeader">Public Static Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="add8deefc01acf368743025086aeb4188" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#add8deefc01acf368743025086aeb4188&quot;)">
-        <span class="type"></span>
-        <a class="name">zero</a>
-        <span class="args">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="add8deefc01acf368743025086aeb4188_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">zero</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-
-  </div><div id="a75dac7c00c6568d6bb785e805204741a" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a75dac7c00c6568d6bb785e805204741a&quot;)">
-        <span class="type"></span>
-        <a class="name">one</a>
-        <span class="args">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a75dac7c00c6568d6bb785e805204741a_description">
-
-    <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a></span><span class="name">one</span><span class="args">()</span></div><div class="memberDocumentation">
+<p>Stores the <code>y</code> component of the vector. </p>
 
 </div></div>
 

@@ -30,7 +30,7 @@
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">ofDoc</a>
+      <a class="navbar-brand" href="index.html">ofDoc</a>
     </div>
 
 
@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <li class="chapter"><a href="#Elapsedtime">Elapsed time</a></li><li class="chapter"><a href="#Systemtime">System time</a></li><li class="chapter"><a href="#Datapath">Data path</a></li><li class="chapter"><a href="#Vectors">Vectors</a></li><li class="chapter"><a href="#Stringmanipulation">String manipulation</a></li><li class="chapter"><a href="#Stringconversion">String conversion</a></li><li class="chapter"><a href="#Numberconversion">Number conversion</a></li><li class="chapter"><a href="#OpenFrameworksversion">OpenFrameworks version</a></li><li class="chapter"><a href="#Framesaving">Frame saving</a></li><li class="chapter"><a href="#System">System</a></li></ul>
+        <li class="chapter"><a href="#Elapsedtime">Elapsed time</a></li><li class="chapter"><a href="#Systemtime">System time</a></li><li class="chapter"><a href="#Datapath">Data path</a></li><li class="chapter"><a href="#Vectors">Vectors</a></li><li class="chapter"><a href="#Stringmanipulation">String manipulation</a></li><li class="chapter"><a href="#Stringconversion">String conversion</a></li><li class="chapter"><a href="#Numberconversion">Number conversion</a></li><li class="chapter"><a href="#openFrameworksversion">openFrameworks version</a></li><li class="chapter"><a href="#Framesaving">Frame saving</a></li><li class="chapter"><a href="#System">System</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -65,7 +65,7 @@
 
     <div id="" class="classBlock">
     <div class="classHeader">
-      <h1 class="classTitle">ofUtils</h1>
+      <h1 class="classTitle">ofUtils<small>file</small></h1>
     </div>
     <div class="classDescription"></div>
     <div class="classMethods"><div id="Elapsedtime">
@@ -127,7 +127,7 @@
 
 <p>Return the elapsed time in milliseconds. </p>
 <p>This returns the elapsed time since <a class="el" href="ofUtils.html#aea0bc115291cf9119ea1b9f5ac70ca56" title="Reset the elapsed time counter. ">ofResetElapsedTimeCounter()</a> was called. Usually <a class="el" href="ofUtils.html#aea0bc115291cf9119ea1b9f5ac70ca56" title="Reset the elapsed time counter. ">ofResetElapsedTimeCounter()</a> is called automatically once during program startup.</p>
-<dl class="section return"><dt>Returns</dt><dd>the elapsed time in milliseconds. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the elapsed time in milliseconds (1000 milliseconds = 1 second). </dd></dl>
 
 </div></div>
 
@@ -147,7 +147,7 @@
 
 <p>Return the elapsed time in microseconds. </p>
 <p>This returns the elapsed time since <a class="el" href="ofUtils.html#aea0bc115291cf9119ea1b9f5ac70ca56" title="Reset the elapsed time counter. ">ofResetElapsedTimeCounter()</a> was called. Usually <a class="el" href="ofUtils.html#aea0bc115291cf9119ea1b9f5ac70ca56" title="Reset the elapsed time counter. ">ofResetElapsedTimeCounter()</a> is called automatically upon program startup.</p>
-<dl class="section return"><dt>Returns</dt><dd>the elapsed time in milliseconds (1000000 microsecs = 1 second). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the elapsed time in microseconds (1000000 microseconds = 1 second). </dd></dl>
 
 </div></div>
 
@@ -981,7 +981,8 @@
 <p>Convert a value to a string. </p>
 <p>Example: </p>
 <div class="fragment"><div class="line"><span class="keywordtype">string</span> str = <span class="stringliteral">&quot;framerate is &quot;</span>;                       </div>
-<div class="line">str += <a class="code" href="of_pixels_8cpp.html#a0bdb3162be2ff8c1541a42f3c8f5ac1c">ofToString</a>(<a class="code" href="ofAppRunner.html#a01080ea3b88e20894224b28caa46fd25">ofGetFrameRate</a>(), 2)+<span class="stringliteral">&quot;fps&quot;</span>; </div>
+<div class="line">str += <a class="code" href="of_pixels_8cpp.html#a0bdb3162be2ff8c1541a42f3c8f5ac1c">ofToString</a>(<a class="code" href="ofAppRunner.html#a01080ea3b88e20894224b28caa46fd25">ofGetFrameRate</a>())+<span class="stringliteral">&quot;fps&quot;</span>; </div>
+<div class="line"><span class="comment">// returns something like &quot;framerate is 60 fps&quot;</span></div>
 </div><!-- fragment --> 
 </div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofToString</span><span class="args">(const T &amp;value, int precision)</span></div><div class="memberDocumentation">
 
@@ -1315,8 +1316,8 @@
 </div></div>
 
   </div></div>
-  </div><div id="OpenFrameworksversion">
-    <h3 class="sectionHeader">OpenFrameworks version</h3>
+  </div><div id="openFrameworksversion">
+    <h3 class="sectionHeader">openFrameworks version</h3>
     <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="ace6bb3ddbbe185712808047277dab043" class="method">
     <div class="methodHeader">
@@ -1408,9 +1409,10 @@
 
     <div class="memberVariant"><span class="type">void </span><span class="name">ofSaveScreen</span><span class="args">(const string &amp;filename)</span></div><div class="memberDocumentation">
 
-<p>Saves the current screen image into a given file Example: ~~~~{.cpp}. </p>
-<p>string filename; fileName = &quot;screen1.png&quot;; ofSaveScreen(fileName); ~~~~</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Saves the current screen image into a given file. </p>
+<p>Example: </p>
+<div class="fragment"><div class="line"><a class="code" href="of_utils_8cpp.html#a02cd3d33fdbe6ce4757563de082c5e04">ofSaveScreen</a>(<span class="stringliteral">&quot;screen1.png&quot;</span>); <span class="comment">// Will save screen1.png in the /data folder</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>The filename to save the image in </td></tr>
   </table>
