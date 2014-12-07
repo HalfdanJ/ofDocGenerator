@@ -4,11 +4,15 @@ var fs = require('fs-extra'),
   xml2js = require('xml2js'),
   cheerio = require('cheerio')
 
-var filterGroup = 'gl';
+// Set this to the section you work on to speed up the generation.
+// But remember to remove it again! :)
+var filterGroup = 'math';
 
+// Check for sass compatibility (it does not work on Travis-ci)
 try {
   var sass = require('node-sass');
 
+  //Create the css file from the scss file in assets
   sass.renderFile({
     file: 'assets/stylesheet.scss',
     outFile: 'output/stylesheet.css',
@@ -23,9 +27,6 @@ try {
 }
 
 
-
-
-
 var root =  process.argv[2] || "../..";
 var dir = root + "/libs/openFrameworksCompiled/project/doxygen/build/";
 console.log("Openframeworks root: "+root);
@@ -38,42 +39,45 @@ fs.copySync('assets/script.js', 'output/script.js');
 fs.copySync('assets/search.js', 'output/search.js');
 fs.copySync('assets/fuse.min.js', 'output/fuse.min.js');
 
-//Create the css file from the scss file in assets
-/*
-*/
 
 
 // Load the doc structure
-//var structure = require("./structure.json");
 var tocInfo = {};
 var searchToc = [];
 
 loadStructure()
   .then(function(structure){
     // Generate the docs
-    //console.log(structure);
-
     var promises = [];
 
     for(var category in structure['core']){
       structure['core'][category].forEach(function(file){
         try {
-          promises.push(generateDoc(file, category));
+          var p = generateDoc(file, category)
+            // If the doc fails, remove it from the structure so it's not shown on the frontpage
+            .fail(function(e){
+              console.error(e)
+              var index = structure['core'][category].indexOf(file);
+              structure['core'][category].splice(index,1);
+            });
+
+          promises.push(p);
         } catch(e){
-          console.error(e)
+          console.error("GenerateDoc error",e);
         }
       })
     }
 
+    // When all the docs have been generated, then create the TOC
     Q.all(promises).then(function(){
       console.log("Generate toc");
       // Generate the TOC (index.html)
       generateToc(structure, tocInfo);
+
+      console.log("Generate search json");
       generateSearchTocJSON(structure, searchToc);
     });
-
   });
-
 
 // ---------
 // ---------
@@ -171,9 +175,7 @@ function generateDoc(fileDescription, category) {
       fs.writeFile("output/"+className+".html", html);
     })
 
-    .fail(function(e){
-      console.error(e)
-    })
+
 }
 
 
@@ -384,6 +386,15 @@ function parseDoxygenXml(doxygenName){
 
     Q.all(promises).then(function(){
       console.log("Done with "+doxygenName)
+
+      if(ret.classes.length == 0 && ret.sections.length == 0){
+        // "Empty" file, let's remove it
+        console.log(doxygenName + " is empty, removed from toc");
+
+        deferred.reject("Object has no members or sections, skipped");
+
+      }
+
       deferred.resolve(ret);
     })
 
