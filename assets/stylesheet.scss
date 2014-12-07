@@ -327,6 +327,11 @@ h4 {
     display: none;
   }
 
+  .kind {
+    color: #CCC;
+  //  margin-left:-5px;
+  }
+
   .deprecatedMethod {
     span {
       text-decoration: line-through;

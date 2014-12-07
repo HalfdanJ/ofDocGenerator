@@ -6,7 +6,7 @@ var fs = require('fs-extra'),
 
 // Set this to the section you work on to speed up the generation.
 // But remember to remove it again! :)
-var filterGroup = '';
+var filterGroup = 'utils';
 
 // Check for sass compatibility (it does not work on Travis-ci)
 try {
@@ -349,6 +349,10 @@ function parseDoxygenXml(doxygenName){
             // Member ref (anchor)
             m.ref = m.info.id.replace(doxygenName + "_1", "");
 
+            // Member kind
+            m.kind = m.info.kind;
+
+            // Member name
             if (m.name.match(/^@/g)) {
               m.name = "Anonymous " + m.info.kind;
             }
@@ -606,32 +610,39 @@ function generateHtmlContent(parsedData, $){
     if(section.description) {
       s.children('.sectionDescription').html(section.description);
     }
+
+    // Iterate over all members in the section
     section.methods.forEach(function (memberGroup) {
-      var method = memberGroup.implementations[0];
-      var ref = method.ref;// method.info.id.replace(parsedData.doxygenName + "_1", "");
+      var member = memberGroup.implementations[0];
 
-
+      // Set the #ID of the element
+      var ref = member.ref;
       var m = $('#classMethodTemplate').clone().attr('id', ref);
 
       var header = m.find(".methodHeader").find('.methodHeaderBox');
 
       // Type
-      header.children('.arg').html(getTypeHtml(method.type));
+      //header.children('.arg').html(getTypeHtml(method.type));
 
       // Name
-      header.children('.name').text(method.name);
+      header.children('.name').text(member.name);
 
       // Args
-      header.children('.args').text(method.argsstring);
+      //header.children('.args').text(method.argsstring);
+      if(member.kind == "function"){
+        header.children('.kind').text("()");
+      } else {
+        header.children('.kind').text(member.kind);
+      }
 
 
       // Deprecated
-      if (method.deprecated) {
+      if (member.deprecated) {
         header.addClass("deprecatedMethod");
       }
 
-      if (method.note) {
-        header.children('.note').text(method.note);
+      if (member.note) {
+        header.children('.note').text(member.note);
       }
 
       // Description
@@ -641,6 +652,7 @@ function generateHtmlContent(parsedData, $){
       methodDescription.attr('id', ref + "_description");
 
       var first = true;
+      // Iterate over all the variants of the member
       memberGroup.implementations.forEach(function(method){
         if(!first){
           methodDescription.append('<hr>');
@@ -707,10 +719,10 @@ function generateToc(structure, tocInfo){
 function generateSearchTocJSON(structure, tocInfo){
   // Write the file
   fs.writeFile("output/toc.js", "var ofToc = "+JSON.stringify(searchToc));
-
 }
 
 // -----------
+
 function getTypeHtml(type){
   if (typeof type == "string") {
     //header.children('.type').text(method.type + " ");
@@ -727,7 +739,7 @@ function getTypeHtml(type){
       url = refid.replace(/(.+)_(.+)$/g, "$1.html#$2");
     }
     url = getLinkUrlFromDoxygenUrl(url);
-    return ("<a href='"+url+"'>" + type.ref[0]._ + "</a>");
+    return ("<a href='"+url+"'>" + type.ref[0]._ + "</a> ");
   }
 }
 

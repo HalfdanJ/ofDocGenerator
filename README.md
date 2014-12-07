@@ -1,5 +1,5 @@
 ##ofDocGenerator
-
+[![Build Status](https://travis-ci.org/HalfdanJ/ofDocGenerator.svg?branch=master)](https://travis-ci.org/HalfdanJ/ofDocGenerator)
 
 Work in progress documentation generator for openframeworks, based on the doxygen output. 
 
