@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ofOpenALSoundPlayer.h</title>
+  <title>ofOpenALSoundPlayer</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -26,28 +26,51 @@
 <body>
 
 
-<div class="container">
-    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">sound</a> &gt; <span id="classQuickNav">ofOpenALSoundPlayer.h</span></div>
-    <nav class="navigator" role="navigation">
-      <ul id="nav-parts">
-        <li class="group selected">
-          Topics
-          <ul id="topics">
-            <!--<li class="chapter"><a href="asd">sad</a></li>-->
-          </ul>
-      </li></ul>
-    </nav>
-    <div class="main">
-      <div class="content">
+<nav class="navbar navbar-fixed-top header" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">ofDoc</a>
+    </div>
 
-      <div id="" class="classBlock">
+
+    <div class="navbar-form navbar-right" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search" id="search" autocomplete="off">
+      </div>
+      <ul class="searchResult hidden"></ul>
+
+    </div>
+
+
+  </div>
+</nav>
+
+
+<div class="container">
+    <div class="quicknav">
+      <a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">sound</a> &gt; <span id="classQuickNav">ofOpenALSoundPlayer</span>
+    </div>
+
+  <nav class="navigator" role="navigation">
+    <ul id="nav-parts">
+      <li class="group selected">
+        Topics
+        <ul id="topics">
+        </ul>
+    </li></ul>
+  </nav>
+  <div class="main">
+    <div class="content">
+
+    <div id="" class="classBlock">
     <div class="classHeader">
-      <h1 class="classTitle">ofOpenALSoundPlayer.h</h1>
+      <h1 class="classTitle">ofOpenALSoundPlayer</h1>
     </div>
     <div class="classDescription"></div>
     <div class="classMethods"></div>
   </div></div>
-    </div>
+  </div>
 
 </div>
 
@@ -56,9 +79,12 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
 
 <script src="script.js"></script>
+<script src="fuse.min.js"></script>
+<script src="toc.js"></script>
+<script src="search.js"></script>
 
 </body>
 
@@ -77,12 +103,14 @@
     <div class="sectionContent"></div>
   </div>
 
-  <div id="classMethodTemplate">
+  <div id="classMethodTemplate" class="method">
     <div class="methodHeader">
-      <span class="type"></span>
-      <a class="name"></a>
-      <span class="args"></span>
-      <span class="note"></span>
+      <div class="methodHeaderBox">
+        <span class="type"></span>
+        <a class="name"></a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none">

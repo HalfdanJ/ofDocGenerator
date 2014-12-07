@@ -1,20 +1,76 @@
+.toc {
+  margin-top: 100px; }
+  .toc .form-control {
+    height: 45px;
+    font-size: 16px; }
+  .toc .searchResult {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; }
+  .toc .section {
+    float: left;
+    width: 228px;
+    margin-bottom: 20px; }
+
+.header {
+  border-bottom: 1px solid #e9e9e9;
+  background-color: #f9f9f9; }
+  .header .navbar-form {
+    position: relative; }
+  .header .searchResult {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: absolute;
+    right: 15px;
+    margin-top: -3px;
+    background-color: white;
+    width: 500px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; }
+
+ul.searchResult {
+  padding: 0; }
+  ul.searchResult li {
+    list-style: none;
+    position: relative;
+    cursor: pointer; }
+    ul.searchResult li a {
+      padding: 10px 10px 10px 10px;
+      display: block; }
+    ul.searchResult li.selected {
+      background-color: #F0F0F0; }
+    ul.searchResult li .searchName {
+      font-size: 20px;
+      margin: 0; }
+    ul.searchResult li .searchType {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      color: #888; }
+
 .quicknav {
   position: fixed;
-  top: 30px; }
+  top: 60px; }
 
-nav {
-  background-color: rgba(249, 249, 249, 0);
-  border-top: 1px solid #e9e9e9;
-  border-left: 1px solid #e9e9e9;
-  border-right: 1px solid #e9e9e9;
+nav.navigator {
+  border-bottom: 0;
   bottom: 0;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.07);
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   position: fixed;
-  top: 70px;
+  top: 90px;
   width: 230px; }
-  nav ul#nav-parts {
+  nav.navigator .title {
+    font-size: 30px;
+    font-weight: 200;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  nav.navigator ul#nav-parts {
     color: gray;
     font-weight: 100;
     line-height: 140%;
@@ -22,14 +78,13 @@ nav {
     margin: 0;
     -webkit-padding-start: 0;
     padding-left: 0px; }
-    nav ul#nav-parts li.group {
-      border-bottom: 1px solid #e9e9e9;
+    nav.navigator ul#nav-parts li.group {
       font-family: Helvetica;
-      font-size: 1.2em;
+      font-size: 1.5em;
       line-height: 150%;
       list-style-type: none;
       margin: 0;
-      padding: 10px 30px 10px 20px;
+      padding: 10px 30px 10px 0px;
       cursor: pointer;
       color: #333;
       overflow: hidden;
@@ -39,32 +94,36 @@ nav {
         cursor: default;
       }
 */ }
-      nav ul#nav-parts li.group ul {
+      nav.navigator ul#nav-parts li.group ul {
         padding: 0px; }
-        nav ul#nav-parts li.group ul li.chapter {
+        nav.navigator ul#nav-parts li.group ul span {
+          line-height: 40px;
+          font-size: 17px; }
+        nav.navigator ul#nav-parts li.group ul li.chapter {
           display: block;
           line-height: 13px;
-          margin: 9px 0px; }
-          nav ul#nav-parts li.group ul li.chapter a {
+          margin: 9px 0px;
+          padding-left: 10px; }
+          nav.navigator ul#nav-parts li.group ul li.chapter a {
             font-size: 12px;
-            color: gray; }
-          nav ul#nav-parts li.group ul li.chapter li.section {
+            color: gray;
+            transition: color 0.2s ease, padding 0.2s ease;
+            padding-left: 0px; }
+          nav.navigator ul#nav-parts li.group ul li.chapter li.section {
             display: none;
             font-weight: normal;
             padding-left: 13px;
             margin: 5px 0px; }
-            nav ul#nav-parts li.group ul li.chapter li.section a {
+            nav.navigator ul#nav-parts li.group ul li.chapter li.section a {
               color: #B8B8B8;
               transition: all 0.3s; }
-            nav ul#nav-parts li.group ul li.chapter li.section.selected a {
+            nav.navigator ul#nav-parts li.group ul li.chapter li.section.selected a {
               color: #c50f3d; }
-          nav ul#nav-parts li.group ul li.chapter.selected {
-            font-weight: bold; }
-            nav ul#nav-parts li.group ul li.chapter.selected li.section {
-              display: block; }
-
-.content {
-  padding-left: 20px; }
+          nav.navigator ul#nav-parts li.group ul li.chapter.selected a {
+            color: #ee3987;
+            padding-left: 5px; }
+          nav.navigator ul#nav-parts li.group ul li.chapter.selected li.section {
+            display: block; }
 
 .main {
   background-color: white;
@@ -97,8 +156,9 @@ h1 {
 .sectionHeader, h3 {
   font-weight: 200;
   font-size: 25px;
-  margin-top: 50px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  padding-top: 70px;
+  margin-top: -20px; }
 
 h4 {
   font-weight: 200;
@@ -109,13 +169,16 @@ h4 {
 .methodHeader {
   font-family: 'Inconsolata', monospace;
   font-size: 14px;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  padding-left: 23px;
   cursor: pointer;
-  border: 1px solid white;
-  border-bottom: 0px;
-  transition: border-color 0.5s ease; }
+  margin-top: -80px;
+  padding-top: 80px; }
+  .methodHeader .methodHeaderBox {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 23px;
+    border: 1px solid white;
+    border-bottom: 0px;
+    transition: border-color 0.5s ease; }
   .methodHeader a:hover {
     text-decoration: none; }
   .methodHeader .type {
@@ -125,58 +188,66 @@ h4 {
   .methodHeader .args {
     color: #999;
     display: none; }
-  .methodHeader.deprecatedMethod span {
+  .methodHeader .deprecatedMethod span {
     text-decoration: line-through; }
-  .methodHeader.deprecatedMethod a {
+  .methodHeader .deprecatedMethod a {
     text-decoration: line-through; }
-  .methodHeader.deprecatedMethod .note {
+  .methodHeader .deprecatedMethod .note {
     text-decoration: none;
     color: #ccc; }
 
-.open .methodHeader {
+.open .methodHeader .methodHeaderBox {
   border-color: #e6e6e6; }
-  .open .methodHeader .note {
-    color: red; }
+.open .methodHeader .note {
+  color: red; }
 
 .methodDescription {
   background-color: #f8f8f8;
   border: 1px solid #e6e6e6;
   margin-bottom: 15px;
-  padding: 10px 10px 5px 15px; }
-  .methodDescription hr {
-    border-top: 1px solid #e2e2e2; }
-  .methodDescription img {
-    max-width: 640px;
-    margin-bottom: 8px; }
-  .methodDescription .memberVariant {
-    margin-left: 10px;
-    margin-bottom: 8px;
-    font-family: 'Inconsolata', monospace;
-    font-size: 14px; }
-    .methodDescription .memberVariant .name {
-      font-weight: bold; }
+  padding: 10px 10px 5px 15px;
+  display: block; }
+  .methodDescription.hidden {
+    /*visibility: visible!important;
+    //overflow: hidden;
+    display:block!important;
+    padding:0;
+    margin:0;
+    height: 0px;*/ }
   .methodDescription .memberDocumentation {
-    padding-left: 45px;
+    padding-left: 25px;
     margin-bottom: 8px; }
-  .methodDescription table {
-    border-collapse: collapse; }
-  .methodDescription table, .methodDescription th, .methodDescription td {
-    border: 1px solid #d7d7d7; }
-  .methodDescription td {
+
+.methodDescription hr, .classDescription hr {
+  border-top: 1px solid #e2e2e2; }
+.methodDescription img, .classDescription img {
+  max-width: 640px;
+  margin-bottom: 8px; }
+.methodDescription .memberVariant, .classDescription .memberVariant {
+  margin-left: 10px;
+  margin-bottom: 8px;
+  font-family: 'Inconsolata', monospace;
+  font-size: 14px; }
+  .methodDescription .memberVariant .name, .classDescription .memberVariant .name {
+    font-weight: bold; }
+.methodDescription table, .classDescription table {
+  border-collapse: collapse; }
+  .methodDescription table td, .methodDescription table th, .classDescription table td, .classDescription table th {
     padding: 6px; }
-  .methodDescription td.paramname {
+  .methodDescription table td.paramname, .classDescription table td.paramname {
     font-style: italic; }
-  .methodDescription dt {
-    margin-bottom: 4px; }
+.methodDescription table, .methodDescription th, .methodDescription td, .classDescription table, .classDescription th, .classDescription td {
+  border: 1px solid #d7d7d7; }
+.methodDescription dt, .classDescription dt {
+  margin-bottom: 4px; }
+.methodDescription .author, .classDescription .author {
+  display: none; }
 
 .fragment, pre {
-  margin-left: 15px;
-  border: 0px;
-  border-radius: 0px;
-  border-left: 5px solid #c2c2c2;
   padding: 5px;
-  padding-left: 7px;
-  margin-bottom: 8px; }
+  padding-left: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px; }
   .fragment .line, pre .line {
     font-family: 'Inconsolata', monospace;
     font-size: 13px;

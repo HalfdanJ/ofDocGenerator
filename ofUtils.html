@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ofUtils.h</title>
+  <title>ofUtils</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -26,34 +26,59 @@
 <body>
 
 
-<div class="container">
-    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">utils</a> &gt; <span id="classQuickNav">ofUtils.h</span></div>
-    <nav class="navigator" role="navigation">
-      <ul id="nav-parts">
-        <li class="group selected">
-          Topics
-          <ul id="topics">
-            <!--<li class="chapter"><a href="asd">sad</a></li>-->
-          <li class="chapter"><a href="#Elapsedtime">Elapsed time</a></li><li class="chapter"><a href="#Systemtime">System time</a></li><li class="chapter"><a href="#Datapath">Data path</a></li><li class="chapter"><a href="#Vectors">Vectors</a></li><li class="chapter"><a href="#Stringmanipulation">String manipulation</a></li><li class="chapter"><a href="#Stringconversion">String conversion</a></li><li class="chapter"><a href="#Numberconversion">Number conversion</a></li><li class="chapter"><a href="#OpenFrameworksversion">OpenFrameworks version</a></li><li class="chapter"><a href="#Framesaving">Frame saving</a></li><li class="chapter"><a href="#System">System</a></li></ul>
-      </li></ul>
-    </nav>
-    <div class="main">
-      <div class="content">
+<nav class="navbar navbar-fixed-top header" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">ofDoc</a>
+    </div>
 
-      <div id="" class="classBlock">
+
+    <div class="navbar-form navbar-right" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search" id="search" autocomplete="off">
+      </div>
+      <ul class="searchResult hidden"></ul>
+
+    </div>
+
+
+  </div>
+</nav>
+
+
+<div class="container">
+    <div class="quicknav">
+      <a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">utils</a> &gt; <span id="classQuickNav">ofUtils</span>
+    </div>
+
+  <nav class="navigator" role="navigation">
+    <ul id="nav-parts">
+      <li class="group selected">
+        Topics
+        <ul id="topics">
+        <li class="chapter"><a href="#Elapsedtime">Elapsed time</a></li><li class="chapter"><a href="#Systemtime">System time</a></li><li class="chapter"><a href="#Datapath">Data path</a></li><li class="chapter"><a href="#Vectors">Vectors</a></li><li class="chapter"><a href="#Stringmanipulation">String manipulation</a></li><li class="chapter"><a href="#Stringconversion">String conversion</a></li><li class="chapter"><a href="#Numberconversion">Number conversion</a></li><li class="chapter"><a href="#OpenFrameworksversion">OpenFrameworks version</a></li><li class="chapter"><a href="#Framesaving">Frame saving</a></li><li class="chapter"><a href="#System">System</a></li></ul>
+    </li></ul>
+  </nav>
+  <div class="main">
+    <div class="content">
+
+    <div id="" class="classBlock">
     <div class="classHeader">
-      <h1 class="classTitle">ofUtils.h</h1>
+      <h1 class="classTitle">ofUtils</h1>
     </div>
     <div class="classDescription"></div>
     <div class="classMethods"><div id="Elapsedtime">
     <h3 class="sectionHeader">Elapsed time</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="aea0bc115291cf9119ea1b9f5ac70ca56">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aea0bc115291cf9119ea1b9f5ac70ca56&quot;)">
-      <span class="type"></span>
-      <a class="name">ofResetElapsedTimeCounter</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="aea0bc115291cf9119ea1b9f5ac70ca56" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aea0bc115291cf9119ea1b9f5ac70ca56&quot;)">
+        <span class="type"></span>
+        <a class="name">ofResetElapsedTimeCounter</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aea0bc115291cf9119ea1b9f5ac70ca56_description">
@@ -66,12 +91,14 @@
 
 </div></div>
 
-  </div><div id="afe74f75f42101a88aa6b91f684484c78">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#afe74f75f42101a88aa6b91f684484c78&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetElapsedTimef</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="afe74f75f42101a88aa6b91f684484c78" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#afe74f75f42101a88aa6b91f684484c78&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetElapsedTimef</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="afe74f75f42101a88aa6b91f684484c78_description">
@@ -84,12 +111,14 @@
 
 </div></div>
 
-  </div><div id="a4db11980dc3c16e67a5c1e47353fa0a0">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a4db11980dc3c16e67a5c1e47353fa0a0&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetElapsedTimeMillis</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a4db11980dc3c16e67a5c1e47353fa0a0" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4db11980dc3c16e67a5c1e47353fa0a0&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetElapsedTimeMillis</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a4db11980dc3c16e67a5c1e47353fa0a0_description">
@@ -102,12 +131,14 @@
 
 </div></div>
 
-  </div><div id="aca893d16029cf789079b1bb01d63afb6">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aca893d16029cf789079b1bb01d63afb6&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetElapsedTimeMicros</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="aca893d16029cf789079b1bb01d63afb6" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aca893d16029cf789079b1bb01d63afb6&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetElapsedTimeMicros</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aca893d16029cf789079b1bb01d63afb6_description">
@@ -120,12 +151,14 @@
 
 </div></div>
 
-  </div><div id="a3fe28889b15534a5a1c827a4ecb2ef26">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a3fe28889b15534a5a1c827a4ecb2ef26&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetFrameNum</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a3fe28889b15534a5a1c827a4ecb2ef26" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3fe28889b15534a5a1c827a4ecb2ef26&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetFrameNum</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a3fe28889b15534a5a1c827a4ecb2ef26_description">
@@ -141,12 +174,14 @@
   </div><div id="Systemtime">
     <h3 class="sectionHeader">System time</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="aa70e381f3cd98884c5b9a048dc327e93">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aa70e381f3cd98884c5b9a048dc327e93&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetSeconds</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="aa70e381f3cd98884c5b9a048dc327e93" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa70e381f3cd98884c5b9a048dc327e93&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetSeconds</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aa70e381f3cd98884c5b9a048dc327e93_description">
@@ -158,12 +193,14 @@
 
 </div></div>
 
-  </div><div id="a24d379ebf610c2819476ccb509290008">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a24d379ebf610c2819476ccb509290008&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetMinutes</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a24d379ebf610c2819476ccb509290008" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a24d379ebf610c2819476ccb509290008&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetMinutes</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a24d379ebf610c2819476ccb509290008_description">
@@ -175,12 +212,14 @@
 
 </div></div>
 
-  </div><div id="a6ccd64cce2cd952ba3d92ec3c7d3fdcd">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a6ccd64cce2cd952ba3d92ec3c7d3fdcd&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetHours</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a6ccd64cce2cd952ba3d92ec3c7d3fdcd" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6ccd64cce2cd952ba3d92ec3c7d3fdcd&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetHours</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a6ccd64cce2cd952ba3d92ec3c7d3fdcd_description">
@@ -192,12 +231,14 @@
 
 </div></div>
 
-  </div><div id="adf108cb5b8cbd5cf5b70aeb472d390df">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#adf108cb5b8cbd5cf5b70aeb472d390df&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetUnixTime</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="adf108cb5b8cbd5cf5b70aeb472d390df" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#adf108cb5b8cbd5cf5b70aeb472d390df&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetUnixTime</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="adf108cb5b8cbd5cf5b70aeb472d390df_description">
@@ -209,12 +250,14 @@
 
 </div></div>
 
-  </div><div id="a5401277d4f55a5fb2ce9d06b882ffd6a">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5401277d4f55a5fb2ce9d06b882ffd6a&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetSystemTime</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a5401277d4f55a5fb2ce9d06b882ffd6a" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5401277d4f55a5fb2ce9d06b882ffd6a&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetSystemTime</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a5401277d4f55a5fb2ce9d06b882ffd6a_description">
@@ -226,12 +269,14 @@
 
 </div></div>
 
-  </div><div id="a5c90cd191a5033c2d2e92e2acf3db660">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5c90cd191a5033c2d2e92e2acf3db660&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetSystemTimeMicros</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a5c90cd191a5033c2d2e92e2acf3db660" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5c90cd191a5033c2d2e92e2acf3db660&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetSystemTimeMicros</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a5c90cd191a5033c2d2e92e2acf3db660_description">
@@ -243,12 +288,14 @@
 
 </div></div>
 
-  </div><div id="a58fb7f5c12bf9d507f09da1a41041312">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a58fb7f5c12bf9d507f09da1a41041312&quot;)">
-      <span class="type"></span>
-      <a class="name">ofSleepMillis</a>
-      <span class="args">(int millis)</span>
-      <span class="note"></span>
+  </div><div id="a58fb7f5c12bf9d507f09da1a41041312" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a58fb7f5c12bf9d507f09da1a41041312&quot;)">
+        <span class="type"></span>
+        <a class="name">ofSleepMillis</a>
+        <span class="args">(int millis)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a58fb7f5c12bf9d507f09da1a41041312_description">
@@ -259,12 +306,14 @@
 
 </div></div>
 
-  </div><div id="a5b56fd313fa71344f9040a636289f586">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5b56fd313fa71344f9040a636289f586&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetTimestampString</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a5b56fd313fa71344f9040a636289f586" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5b56fd313fa71344f9040a636289f586&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetTimestampString</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a5b56fd313fa71344f9040a636289f586_description">
@@ -316,12 +365,14 @@
 
 </div></div>
 
-  </div><div id="a5e8e9c0b83e712a9a69c6a50f21a3950">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5e8e9c0b83e712a9a69c6a50f21a3950&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetYear</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a5e8e9c0b83e712a9a69c6a50f21a3950" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5e8e9c0b83e712a9a69c6a50f21a3950&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetYear</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a5e8e9c0b83e712a9a69c6a50f21a3950_description">
@@ -333,12 +384,14 @@
 
 </div></div>
 
-  </div><div id="a5c10fdef145283615e2ab0f92523e916">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5c10fdef145283615e2ab0f92523e916&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetMonth</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a5c10fdef145283615e2ab0f92523e916" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5c10fdef145283615e2ab0f92523e916&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetMonth</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a5c10fdef145283615e2ab0f92523e916_description">
@@ -350,12 +403,14 @@
 
 </div></div>
 
-  </div><div id="aa655e6ae2ab15b03f3429432fb4fbbc8">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aa655e6ae2ab15b03f3429432fb4fbbc8&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetDay</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="aa655e6ae2ab15b03f3429432fb4fbbc8" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa655e6ae2ab15b03f3429432fb4fbbc8&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetDay</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aa655e6ae2ab15b03f3429432fb4fbbc8_description">
@@ -367,12 +422,14 @@
 
 </div></div>
 
-  </div><div id="aedebb8ecdac415d22042d7b681ca1d43">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aedebb8ecdac415d22042d7b681ca1d43&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetWeekday</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="aedebb8ecdac415d22042d7b681ca1d43" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aedebb8ecdac415d22042d7b681ca1d43&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetWeekday</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aedebb8ecdac415d22042d7b681ca1d43_description">
@@ -389,12 +446,14 @@
   </div><div id="Datapath">
     <h3 class="sectionHeader">Data path</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a5dd69e44833bd031c2c776804d535146">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5dd69e44833bd031c2c776804d535146&quot;)">
-      <span class="type"></span>
-      <a class="name">ofEnableDataPath</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="a5dd69e44833bd031c2c776804d535146" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5dd69e44833bd031c2c776804d535146&quot;)">
+        <span class="type"></span>
+        <a class="name">ofEnableDataPath</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a5dd69e44833bd031c2c776804d535146_description">
@@ -406,12 +465,14 @@
 
 </div></div>
 
-  </div><div id="abc29e22b96ebfb8d5c7588181469cad9">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#abc29e22b96ebfb8d5c7588181469cad9&quot;)">
-      <span class="type"></span>
-      <a class="name">ofDisableDataPath</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="abc29e22b96ebfb8d5c7588181469cad9" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#abc29e22b96ebfb8d5c7588181469cad9&quot;)">
+        <span class="type"></span>
+        <a class="name">ofDisableDataPath</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="abc29e22b96ebfb8d5c7588181469cad9_description">
@@ -423,12 +484,14 @@
 
 </div></div>
 
-  </div><div id="ad323a280c0604e6d7eea98d7047d9a1e">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ad323a280c0604e6d7eea98d7047d9a1e&quot;)">
-      <span class="type"></span>
-      <a class="name">ofToDataPath</a>
-      <span class="args">(const string &amp;path, bool absolute=false)</span>
-      <span class="note"></span>
+  </div><div id="ad323a280c0604e6d7eea98d7047d9a1e" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad323a280c0604e6d7eea98d7047d9a1e&quot;)">
+        <span class="type"></span>
+        <a class="name">ofToDataPath</a>
+        <span class="args">(const string &amp;path, bool absolute=false)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ad323a280c0604e6d7eea98d7047d9a1e_description">
@@ -448,12 +511,14 @@
 
 </div></div>
 
-  </div><div id="a1d2223607b65d45e548b331223e7277f">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a1d2223607b65d45e548b331223e7277f&quot;)">
-      <span class="type"></span>
-      <a class="name">ofSetWorkingDirectoryToDefault</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a1d2223607b65d45e548b331223e7277f" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1d2223607b65d45e548b331223e7277f&quot;)">
+        <span class="type"></span>
+        <a class="name">ofSetWorkingDirectoryToDefault</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a1d2223607b65d45e548b331223e7277f_description">
@@ -464,12 +529,14 @@
 
 </div></div>
 
-  </div><div id="a02916303aa128f885443701a9c2c72e4">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a02916303aa128f885443701a9c2c72e4&quot;)">
-      <span class="type"></span>
-      <a class="name">ofSetDataPathRoot</a>
-      <span class="args">(const string &amp;root)</span>
-      <span class="note"></span>
+  </div><div id="a02916303aa128f885443701a9c2c72e4" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a02916303aa128f885443701a9c2c72e4&quot;)">
+        <span class="type"></span>
+        <a class="name">ofSetDataPathRoot</a>
+        <span class="args">(const string &amp;root)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a02916303aa128f885443701a9c2c72e4_description">
@@ -491,12 +558,14 @@
   </div><div id="Vectors">
     <h3 class="sectionHeader">Vectors</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="aa6d24b46978740bfa122a77d52af6346">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aa6d24b46978740bfa122a77d52af6346&quot;)">
-      <span class="type"></span>
-      <a class="name">ofRandomize</a>
-      <span class="args">(vector&lt; T &gt; &amp;values)</span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="aa6d24b46978740bfa122a77d52af6346" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa6d24b46978740bfa122a77d52af6346&quot;)">
+        <span class="type"></span>
+        <a class="name">ofRandomize</a>
+        <span class="args">(vector&lt; T &gt; &amp;values)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aa6d24b46978740bfa122a77d52af6346_description">
@@ -513,12 +582,14 @@
 
 </div></div>
 
-  </div><div id="aad01f059019f70fdb4c1ef7bb31c5fd4">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aad01f059019f70fdb4c1ef7bb31c5fd4&quot;)">
-      <span class="type"></span>
-      <a class="name">ofRemove</a>
-      <span class="args">(vector&lt; T &gt; &amp;values, BoolFunction shouldErase)</span>
-      <span class="note"></span>
+  </div><div id="aad01f059019f70fdb4c1ef7bb31c5fd4" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aad01f059019f70fdb4c1ef7bb31c5fd4&quot;)">
+        <span class="type"></span>
+        <a class="name">ofRemove</a>
+        <span class="args">(vector&lt; T &gt; &amp;values, BoolFunction shouldErase)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aad01f059019f70fdb4c1ef7bb31c5fd4_description">
@@ -561,12 +632,14 @@
 
 </div></div>
 
-  </div><div id="add54b6eb9cc810f885e7b89b6388dba7">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#add54b6eb9cc810f885e7b89b6388dba7&quot;)">
-      <span class="type"></span>
-      <a class="name">ofSort</a>
-      <span class="args">(vector&lt; T &gt; &amp;values)</span>
-      <span class="note"></span>
+  </div><div id="add54b6eb9cc810f885e7b89b6388dba7" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#add54b6eb9cc810f885e7b89b6388dba7&quot;)">
+        <span class="type"></span>
+        <a class="name">ofSort</a>
+        <span class="args">(vector&lt; T &gt; &amp;values)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="add54b6eb9cc810f885e7b89b6388dba7_description">
@@ -627,12 +700,14 @@
 
 </div></div>
 
-  </div><div id="a8722346aca2730ebbb03bf63e6fce6f8">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a8722346aca2730ebbb03bf63e6fce6f8&quot;)">
-      <span class="type"></span>
-      <a class="name">ofFind</a>
-      <span class="args">(const vector&lt; T &gt; &amp;values, const T &amp;target)</span>
-      <span class="note"></span>
+  </div><div id="a8722346aca2730ebbb03bf63e6fce6f8" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8722346aca2730ebbb03bf63e6fce6f8&quot;)">
+        <span class="type"></span>
+        <a class="name">ofFind</a>
+        <span class="args">(const vector&lt; T &gt; &amp;values, const T &amp;target)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a8722346aca2730ebbb03bf63e6fce6f8_description">
@@ -657,12 +732,14 @@
 
 </div></div>
 
-  </div><div id="ad039a52955251f83c2d7c7c4f8920573">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ad039a52955251f83c2d7c7c4f8920573&quot;)">
-      <span class="type"></span>
-      <a class="name">ofContains</a>
-      <span class="args">(const vector&lt; T &gt; &amp;values, const T &amp;target)</span>
-      <span class="note"></span>
+  </div><div id="ad039a52955251f83c2d7c7c4f8920573" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad039a52955251f83c2d7c7c4f8920573&quot;)">
+        <span class="type"></span>
+        <a class="name">ofContains</a>
+        <span class="args">(const vector&lt; T &gt; &amp;values, const T &amp;target)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ad039a52955251f83c2d7c7c4f8920573_description">
@@ -691,12 +768,14 @@
   </div><div id="Stringmanipulation">
     <h3 class="sectionHeader">String manipulation</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="ab145673fc8b58076ed7a55eb26911a08">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ab145673fc8b58076ed7a55eb26911a08&quot;)">
-      <span class="type"></span>
-      <a class="name">ofSplitString</a>
-      <span class="args">(const string &amp;source, const string &amp;delimiter, bool ignoreEmpty=false, bool trim=false)</span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="ab145673fc8b58076ed7a55eb26911a08" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab145673fc8b58076ed7a55eb26911a08&quot;)">
+        <span class="type"></span>
+        <a class="name">ofSplitString</a>
+        <span class="args">(const string &amp;source, const string &amp;delimiter, bool ignoreEmpty=false, bool trim=false)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ab145673fc8b58076ed7a55eb26911a08_description">
@@ -718,12 +797,14 @@
 
 </div></div>
 
-  </div><div id="a81c81f7ad8939f65f767f9e57fe622e0">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a81c81f7ad8939f65f767f9e57fe622e0&quot;)">
-      <span class="type"></span>
-      <a class="name">ofJoinString</a>
-      <span class="args">(const vector&lt; string &gt; &amp;stringElements, const string &amp;delimiter)</span>
-      <span class="note"></span>
+  </div><div id="a81c81f7ad8939f65f767f9e57fe622e0" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a81c81f7ad8939f65f767f9e57fe622e0&quot;)">
+        <span class="type"></span>
+        <a class="name">ofJoinString</a>
+        <span class="args">(const vector&lt; string &gt; &amp;stringElements, const string &amp;delimiter)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a81c81f7ad8939f65f767f9e57fe622e0_description">
@@ -741,12 +822,14 @@
 
 </div></div>
 
-  </div><div id="a26fd9920684a6e6c397cfe3a1fee2aea">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a26fd9920684a6e6c397cfe3a1fee2aea&quot;)">
-      <span class="type"></span>
-      <a class="name">ofStringReplace</a>
-      <span class="args">(string &amp;input, const string &amp;searchStr, const string &amp;replaceStr)</span>
-      <span class="note"></span>
+  </div><div id="a26fd9920684a6e6c397cfe3a1fee2aea" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a26fd9920684a6e6c397cfe3a1fee2aea&quot;)">
+        <span class="type"></span>
+        <a class="name">ofStringReplace</a>
+        <span class="args">(string &amp;input, const string &amp;searchStr, const string &amp;replaceStr)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a26fd9920684a6e6c397cfe3a1fee2aea_description">
@@ -765,12 +848,14 @@
 
 </div></div>
 
-  </div><div id="a63097e6fed943b5aba952cdf193f5f7d">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a63097e6fed943b5aba952cdf193f5f7d&quot;)">
-      <span class="type"></span>
-      <a class="name">ofIsStringInString</a>
-      <span class="args">(const string &amp;haystack, const string &amp;needle)</span>
-      <span class="note"></span>
+  </div><div id="a63097e6fed943b5aba952cdf193f5f7d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a63097e6fed943b5aba952cdf193f5f7d&quot;)">
+        <span class="type"></span>
+        <a class="name">ofIsStringInString</a>
+        <span class="args">(const string &amp;haystack, const string &amp;needle)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a63097e6fed943b5aba952cdf193f5f7d_description">
@@ -793,12 +878,14 @@
 
 </div></div>
 
-  </div><div id="a9a06d5c0f8a393359ae121bd91a3e688">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a9a06d5c0f8a393359ae121bd91a3e688&quot;)">
-      <span class="type"></span>
-      <a class="name">ofStringTimesInString</a>
-      <span class="args">(const string &amp;haystack, const string &amp;needle)</span>
-      <span class="note"></span>
+  </div><div id="a9a06d5c0f8a393359ae121bd91a3e688" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9a06d5c0f8a393359ae121bd91a3e688&quot;)">
+        <span class="type"></span>
+        <a class="name">ofStringTimesInString</a>
+        <span class="args">(const string &amp;haystack, const string &amp;needle)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a9a06d5c0f8a393359ae121bd91a3e688_description">
@@ -816,12 +903,14 @@
 
 </div></div>
 
-  </div><div id="a92c303a15a7649f987b8dce1e5eec26c">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a92c303a15a7649f987b8dce1e5eec26c&quot;)">
-      <span class="type"></span>
-      <a class="name">ofToLower</a>
-      <span class="args">(const string &amp;src)</span>
-      <span class="note"></span>
+  </div><div id="a92c303a15a7649f987b8dce1e5eec26c" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a92c303a15a7649f987b8dce1e5eec26c&quot;)">
+        <span class="type"></span>
+        <a class="name">ofToLower</a>
+        <span class="args">(const string &amp;src)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a92c303a15a7649f987b8dce1e5eec26c_description">
@@ -832,12 +921,14 @@
 
 </div></div>
 
-  </div><div id="ac90c47cb2710aa90def41ddef75d5adf">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ac90c47cb2710aa90def41ddef75d5adf&quot;)">
-      <span class="type"></span>
-      <a class="name">ofToUpper</a>
-      <span class="args">(const string &amp;src)</span>
-      <span class="note"></span>
+  </div><div id="ac90c47cb2710aa90def41ddef75d5adf" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac90c47cb2710aa90def41ddef75d5adf&quot;)">
+        <span class="type"></span>
+        <a class="name">ofToUpper</a>
+        <span class="args">(const string &amp;src)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ac90c47cb2710aa90def41ddef75d5adf_description">
@@ -851,12 +942,14 @@
 </div><!-- fragment --> 
 </div></div>
 
-  </div><div id="a666d0d4cc9f1781386de7a678618b35e">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a666d0d4cc9f1781386de7a678618b35e&quot;)">
-      <span class="type"></span>
-      <a class="name">ofVAArgsToString</a>
-      <span class="args">(const char *format,...)</span>
-      <span class="note"></span>
+  </div><div id="a666d0d4cc9f1781386de7a678618b35e" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a666d0d4cc9f1781386de7a678618b35e&quot;)">
+        <span class="type"></span>
+        <a class="name">ofVAArgsToString</a>
+        <span class="args">(const char *format,...)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a666d0d4cc9f1781386de7a678618b35e_description">
@@ -871,12 +964,14 @@
   </div><div id="Stringconversion">
     <h3 class="sectionHeader">String conversion</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a31a70a3bfddaf5bd90084e59188f9d59">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a31a70a3bfddaf5bd90084e59188f9d59&quot;)">
-      <span class="type"></span>
-      <a class="name">ofToString</a>
-      <span class="args">(const T &amp;value)</span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="a31a70a3bfddaf5bd90084e59188f9d59" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a31a70a3bfddaf5bd90084e59188f9d59&quot;)">
+        <span class="type"></span>
+        <a class="name">ofToString</a>
+        <span class="args">(const T &amp;value)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a31a70a3bfddaf5bd90084e59188f9d59_description">
@@ -909,12 +1004,14 @@
 
 </div></div>
 
-  </div><div id="aa65109e95b2ea4dd339cdfb819265e40">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aa65109e95b2ea4dd339cdfb819265e40&quot;)">
-      <span class="type"></span>
-      <a class="name">ofFromString</a>
-      <span class="args">(const string &amp;value)</span>
-      <span class="note"></span>
+  </div><div id="aa65109e95b2ea4dd339cdfb819265e40" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa65109e95b2ea4dd339cdfb819265e40&quot;)">
+        <span class="type"></span>
+        <a class="name">ofFromString</a>
+        <span class="args">(const string &amp;value)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aa65109e95b2ea4dd339cdfb819265e40_description">
@@ -931,12 +1028,14 @@
   </div><div id="Numberconversion">
     <h3 class="sectionHeader">Number conversion</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a02ff3334da0e43587cc19190433fa77b">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a02ff3334da0e43587cc19190433fa77b&quot;)">
-      <span class="type"></span>
-      <a class="name">ofToInt</a>
-      <span class="args">(const string &amp;intString)</span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="a02ff3334da0e43587cc19190433fa77b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a02ff3334da0e43587cc19190433fa77b&quot;)">
+        <span class="type"></span>
+        <a class="name">ofToInt</a>
+        <span class="args">(const string &amp;intString)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a02ff3334da0e43587cc19190433fa77b_description">
@@ -947,12 +1046,14 @@
 
 </div></div>
 
-  </div><div id="a9b92372035fbb1582c8d8a4fc0bcb132">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a9b92372035fbb1582c8d8a4fc0bcb132&quot;)">
-      <span class="type"></span>
-      <a class="name">ofToFloat</a>
-      <span class="args">(const string &amp;floatString)</span>
-      <span class="note"></span>
+  </div><div id="a9b92372035fbb1582c8d8a4fc0bcb132" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9b92372035fbb1582c8d8a4fc0bcb132&quot;)">
+        <span class="type"></span>
+        <a class="name">ofToFloat</a>
+        <span class="args">(const string &amp;floatString)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a9b92372035fbb1582c8d8a4fc0bcb132_description">
@@ -963,12 +1064,14 @@
 
 </div></div>
 
-  </div><div id="a508566c98064b13201ba05760d71d110">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a508566c98064b13201ba05760d71d110&quot;)">
-      <span class="type"></span>
-      <a class="name">ofToDouble</a>
-      <span class="args">(const string &amp;doubleString)</span>
-      <span class="note"></span>
+  </div><div id="a508566c98064b13201ba05760d71d110" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a508566c98064b13201ba05760d71d110&quot;)">
+        <span class="type"></span>
+        <a class="name">ofToDouble</a>
+        <span class="args">(const string &amp;doubleString)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a508566c98064b13201ba05760d71d110_description">
@@ -979,12 +1082,14 @@
 
 </div></div>
 
-  </div><div id="acd94e88f1393f0a00e4e6a3c85d88433">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#acd94e88f1393f0a00e4e6a3c85d88433&quot;)">
-      <span class="type"></span>
-      <a class="name">ofToBool</a>
-      <span class="args">(const string &amp;boolString)</span>
-      <span class="note"></span>
+  </div><div id="acd94e88f1393f0a00e4e6a3c85d88433" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#acd94e88f1393f0a00e4e6a3c85d88433&quot;)">
+        <span class="type"></span>
+        <a class="name">ofToBool</a>
+        <span class="args">(const string &amp;boolString)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="acd94e88f1393f0a00e4e6a3c85d88433_description">
@@ -995,12 +1100,14 @@
 
 </div></div>
 
-  </div><div id="aaaebd3cb263c8e3da496a9c5e243e7fa">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aaaebd3cb263c8e3da496a9c5e243e7fa&quot;)">
-      <span class="type"></span>
-      <a class="name">ofToHex</a>
-      <span class="args">(const T &amp;value)</span>
-      <span class="note"></span>
+  </div><div id="aaaebd3cb263c8e3da496a9c5e243e7fa" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aaaebd3cb263c8e3da496a9c5e243e7fa&quot;)">
+        <span class="type"></span>
+        <a class="name">ofToHex</a>
+        <span class="args">(const T &amp;value)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aaaebd3cb263c8e3da496a9c5e243e7fa_description">
@@ -1019,12 +1126,14 @@
 
 </div></div>
 
-  </div><div id="a15c08362f3a3a08b564a03f8198e0c91">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a15c08362f3a3a08b564a03f8198e0c91&quot;)">
-      <span class="type"></span>
-      <a class="name">ofHexToInt</a>
-      <span class="args">(const string &amp;intHexString)</span>
-      <span class="note"></span>
+  </div><div id="a15c08362f3a3a08b564a03f8198e0c91" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a15c08362f3a3a08b564a03f8198e0c91&quot;)">
+        <span class="type"></span>
+        <a class="name">ofHexToInt</a>
+        <span class="args">(const string &amp;intHexString)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a15c08362f3a3a08b564a03f8198e0c91_description">
@@ -1035,12 +1144,14 @@
 
 </div></div>
 
-  </div><div id="af10a159a72a7ffe2e21a7f0e524d2647">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#af10a159a72a7ffe2e21a7f0e524d2647&quot;)">
-      <span class="type"></span>
-      <a class="name">ofHexToChar</a>
-      <span class="args">(const string &amp;charHexString)</span>
-      <span class="note"></span>
+  </div><div id="af10a159a72a7ffe2e21a7f0e524d2647" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af10a159a72a7ffe2e21a7f0e524d2647&quot;)">
+        <span class="type"></span>
+        <a class="name">ofHexToChar</a>
+        <span class="args">(const string &amp;charHexString)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="af10a159a72a7ffe2e21a7f0e524d2647_description">
@@ -1051,12 +1162,14 @@
 
 </div></div>
 
-  </div><div id="a1c2be299902ddf28f9f3880562137ab2">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a1c2be299902ddf28f9f3880562137ab2&quot;)">
-      <span class="type"></span>
-      <a class="name">ofHexToFloat</a>
-      <span class="args">(const string &amp;floatHexString)</span>
-      <span class="note"></span>
+  </div><div id="a1c2be299902ddf28f9f3880562137ab2" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1c2be299902ddf28f9f3880562137ab2&quot;)">
+        <span class="type"></span>
+        <a class="name">ofHexToFloat</a>
+        <span class="args">(const string &amp;floatHexString)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a1c2be299902ddf28f9f3880562137ab2_description">
@@ -1067,12 +1180,14 @@
 
 </div></div>
 
-  </div><div id="afcdc71a74c9249e72d93097701fed3ec">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#afcdc71a74c9249e72d93097701fed3ec&quot;)">
-      <span class="type"></span>
-      <a class="name">ofHexToString</a>
-      <span class="args">(const string &amp;stringHexString)</span>
-      <span class="note"></span>
+  </div><div id="afcdc71a74c9249e72d93097701fed3ec" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#afcdc71a74c9249e72d93097701fed3ec&quot;)">
+        <span class="type"></span>
+        <a class="name">ofHexToString</a>
+        <span class="args">(const string &amp;stringHexString)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="afcdc71a74c9249e72d93097701fed3ec_description">
@@ -1083,12 +1198,14 @@
 
 </div></div>
 
-  </div><div id="a4b1ca14d38d0fd9f224de0d9c7c4df80">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a4b1ca14d38d0fd9f224de0d9c7c4df80&quot;)">
-      <span class="type"></span>
-      <a class="name">ofToChar</a>
-      <span class="args">(const string &amp;charString)</span>
-      <span class="note"></span>
+  </div><div id="a4b1ca14d38d0fd9f224de0d9c7c4df80" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4b1ca14d38d0fd9f224de0d9c7c4df80&quot;)">
+        <span class="type"></span>
+        <a class="name">ofToChar</a>
+        <span class="args">(const string &amp;charString)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a4b1ca14d38d0fd9f224de0d9c7c4df80_description">
@@ -1099,12 +1216,14 @@
 
 </div></div>
 
-  </div><div id="a8faf52968694f975c39c45fab82aa0bc">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a8faf52968694f975c39c45fab82aa0bc&quot;)">
-      <span class="type"></span>
-      <a class="name">ofToBinary</a>
-      <span class="args">(const T &amp;value)</span>
-      <span class="note"></span>
+  </div><div id="a8faf52968694f975c39c45fab82aa0bc" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8faf52968694f975c39c45fab82aa0bc&quot;)">
+        <span class="type"></span>
+        <a class="name">ofToBinary</a>
+        <span class="args">(const T &amp;value)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a8faf52968694f975c39c45fab82aa0bc_description">
@@ -1123,12 +1242,14 @@
 
 </div></div>
 
-  </div><div id="ae3860664864159916164ed9ab1608339">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ae3860664864159916164ed9ab1608339&quot;)">
-      <span class="type"></span>
-      <a class="name">ofBinaryToInt</a>
-      <span class="args">(const string &amp;value)</span>
-      <span class="note"></span>
+  </div><div id="ae3860664864159916164ed9ab1608339" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae3860664864159916164ed9ab1608339&quot;)">
+        <span class="type"></span>
+        <a class="name">ofBinaryToInt</a>
+        <span class="args">(const string &amp;value)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ae3860664864159916164ed9ab1608339_description">
@@ -1139,12 +1260,14 @@
 
 </div></div>
 
-  </div><div id="ade60b17beae5e41cd433975998fef037">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ade60b17beae5e41cd433975998fef037&quot;)">
-      <span class="type"></span>
-      <a class="name">ofBinaryToChar</a>
-      <span class="args">(const string &amp;value)</span>
-      <span class="note"></span>
+  </div><div id="ade60b17beae5e41cd433975998fef037" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ade60b17beae5e41cd433975998fef037&quot;)">
+        <span class="type"></span>
+        <a class="name">ofBinaryToChar</a>
+        <span class="args">(const string &amp;value)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ade60b17beae5e41cd433975998fef037_description">
@@ -1155,12 +1278,14 @@
 
 </div></div>
 
-  </div><div id="a3399487cdb9e2808b3fc380d7c5645dc">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a3399487cdb9e2808b3fc380d7c5645dc&quot;)">
-      <span class="type"></span>
-      <a class="name">ofBinaryToFloat</a>
-      <span class="args">(const string &amp;value)</span>
-      <span class="note"></span>
+  </div><div id="a3399487cdb9e2808b3fc380d7c5645dc" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3399487cdb9e2808b3fc380d7c5645dc&quot;)">
+        <span class="type"></span>
+        <a class="name">ofBinaryToFloat</a>
+        <span class="args">(const string &amp;value)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a3399487cdb9e2808b3fc380d7c5645dc_description">
@@ -1171,12 +1296,14 @@
 
 </div></div>
 
-  </div><div id="ad930367d2a3bd2514f0a6d5516fd855e">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ad930367d2a3bd2514f0a6d5516fd855e&quot;)">
-      <span class="type"></span>
-      <a class="name">ofBinaryToString</a>
-      <span class="args">(const string &amp;value)</span>
-      <span class="note"></span>
+  </div><div id="ad930367d2a3bd2514f0a6d5516fd855e" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad930367d2a3bd2514f0a6d5516fd855e&quot;)">
+        <span class="type"></span>
+        <a class="name">ofBinaryToString</a>
+        <span class="args">(const string &amp;value)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ad930367d2a3bd2514f0a6d5516fd855e_description">
@@ -1191,12 +1318,14 @@
   </div><div id="OpenFrameworksversion">
     <h3 class="sectionHeader">OpenFrameworks version</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="ace6bb3ddbbe185712808047277dab043">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ace6bb3ddbbe185712808047277dab043&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetVersionInfo</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="ace6bb3ddbbe185712808047277dab043" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ace6bb3ddbbe185712808047277dab043&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetVersionInfo</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ace6bb3ddbbe185712808047277dab043_description">
@@ -1207,12 +1336,14 @@
 
 </div></div>
 
-  </div><div id="a6bcb56c4f4d807b22afea5b178f65bdc">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a6bcb56c4f4d807b22afea5b178f65bdc&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetVersionMajor</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a6bcb56c4f4d807b22afea5b178f65bdc" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6bcb56c4f4d807b22afea5b178f65bdc&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetVersionMajor</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a6bcb56c4f4d807b22afea5b178f65bdc_description">
@@ -1223,12 +1354,14 @@
 
 </div></div>
 
-  </div><div id="aacd9f2aaab3c32a0ef2fa0389ad80c58">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aacd9f2aaab3c32a0ef2fa0389ad80c58&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetVersionMinor</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="aacd9f2aaab3c32a0ef2fa0389ad80c58" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aacd9f2aaab3c32a0ef2fa0389ad80c58&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetVersionMinor</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aacd9f2aaab3c32a0ef2fa0389ad80c58_description">
@@ -1239,12 +1372,14 @@
 
 </div></div>
 
-  </div><div id="ad7fce5c6b942eb31e468bf3431c1b343">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ad7fce5c6b942eb31e468bf3431c1b343&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetVersionPatch</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="ad7fce5c6b942eb31e468bf3431c1b343" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad7fce5c6b942eb31e468bf3431c1b343&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetVersionPatch</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ad7fce5c6b942eb31e468bf3431c1b343_description">
@@ -1259,12 +1394,14 @@
   </div><div id="Framesaving">
     <h3 class="sectionHeader">Frame saving</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a02cd3d33fdbe6ce4757563de082c5e04">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a02cd3d33fdbe6ce4757563de082c5e04&quot;)">
-      <span class="type"></span>
-      <a class="name">ofSaveScreen</a>
-      <span class="args">(const string &amp;filename)</span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="a02cd3d33fdbe6ce4757563de082c5e04" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a02cd3d33fdbe6ce4757563de082c5e04&quot;)">
+        <span class="type"></span>
+        <a class="name">ofSaveScreen</a>
+        <span class="args">(const string &amp;filename)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a02cd3d33fdbe6ce4757563de082c5e04_description">
@@ -1282,12 +1419,14 @@
 
 </div></div>
 
-  </div><div id="aab3fb9d1d4dbd94705f8853d4288dbf0">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aab3fb9d1d4dbd94705f8853d4288dbf0&quot;)">
-      <span class="type"></span>
-      <a class="name">ofSaveFrame</a>
-      <span class="args">(bool bUseViewport=false)</span>
-      <span class="note"></span>
+  </div><div id="aab3fb9d1d4dbd94705f8853d4288dbf0" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aab3fb9d1d4dbd94705f8853d4288dbf0&quot;)">
+        <span class="type"></span>
+        <a class="name">ofSaveFrame</a>
+        <span class="args">(bool bUseViewport=false)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aab3fb9d1d4dbd94705f8853d4288dbf0_description">
@@ -1298,12 +1437,14 @@
 
 </div></div>
 
-  </div><div id="af1f49b16d155ddad73e8f36e242463be">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#af1f49b16d155ddad73e8f36e242463be&quot;)">
-      <span class="type"></span>
-      <a class="name">ofSaveViewport</a>
-      <span class="args">(const string &amp;filename)</span>
-      <span class="note"></span>
+  </div><div id="af1f49b16d155ddad73e8f36e242463be" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af1f49b16d155ddad73e8f36e242463be&quot;)">
+        <span class="type"></span>
+        <a class="name">ofSaveViewport</a>
+        <span class="args">(const string &amp;filename)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="af1f49b16d155ddad73e8f36e242463be_description">
@@ -1316,12 +1457,14 @@
   </div><div id="System">
     <h3 class="sectionHeader">System</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="afa256a8b306de08ee3fee91a27fcc10f">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#afa256a8b306de08ee3fee91a27fcc10f&quot;)">
-      <span class="type"></span>
-      <a class="name">ofLaunchBrowser</a>
-      <span class="args">(const string &amp;url, bool uriEncodeQuery=false)</span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="afa256a8b306de08ee3fee91a27fcc10f" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#afa256a8b306de08ee3fee91a27fcc10f&quot;)">
+        <span class="type"></span>
+        <a class="name">ofLaunchBrowser</a>
+        <span class="args">(const string &amp;url, bool uriEncodeQuery=false)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="afa256a8b306de08ee3fee91a27fcc10f_description">
@@ -1339,12 +1482,14 @@
 
 </div></div>
 
-  </div><div id="ad11480bc788713e160cca1f2622f2c59">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ad11480bc788713e160cca1f2622f2c59&quot;)">
-      <span class="type"></span>
-      <a class="name">ofSystem</a>
-      <span class="args">(const string &amp;command)</span>
-      <span class="note"></span>
+  </div><div id="ad11480bc788713e160cca1f2622f2c59" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad11480bc788713e160cca1f2622f2c59&quot;)">
+        <span class="type"></span>
+        <a class="name">ofSystem</a>
+        <span class="args">(const string &amp;command)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ad11480bc788713e160cca1f2622f2c59_description">
@@ -1355,12 +1500,14 @@
 
 </div></div>
 
-  </div><div id="ab790b10d5c2913ddb8d29b7e272f24d3">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ab790b10d5c2913ddb8d29b7e272f24d3&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetTargetPlatform</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="ab790b10d5c2913ddb8d29b7e272f24d3" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab790b10d5c2913ddb8d29b7e272f24d3&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetTargetPlatform</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ab790b10d5c2913ddb8d29b7e272f24d3_description">
@@ -1374,7 +1521,7 @@
   </div></div>
   </div></div>
   </div></div>
-    </div>
+  </div>
 
 </div>
 
@@ -1383,9 +1530,12 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
 
 <script src="script.js"></script>
+<script src="fuse.min.js"></script>
+<script src="toc.js"></script>
+<script src="search.js"></script>
 
 </body>
 
@@ -1404,12 +1554,14 @@
     <div class="sectionContent"></div>
   </div>
 
-  <div id="classMethodTemplate">
+  <div id="classMethodTemplate" class="method">
     <div class="methodHeader">
-      <span class="type"></span>
-      <a class="name"></a>
-      <span class="args"></span>
-      <span class="note"></span>
+      <div class="methodHeaderBox">
+        <span class="type"></span>
+        <a class="name"></a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none">

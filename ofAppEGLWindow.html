@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ofAppEGLWindow.h</title>
+  <title>ofAppEGLWindow</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -26,34 +26,59 @@
 <body>
 
 
-<div class="container">
-    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">app</a> &gt; <span id="classQuickNav">ofAppEGLWindow.h</span></div>
-    <nav class="navigator" role="navigation">
-      <ul id="nav-parts">
-        <li class="group selected">
-          Topics
-          <ul id="topics">
-            <!--<li class="chapter"><a href="asd">sad</a></li>-->
-          <li class="chapter"><a href="#Enums">Enums</a></li><li class="chapter"><a href="#Typedefs">Typedefs</a></li><span class="class">ofAppEGLWindow::Settings</span><li class="chapter"><a href="#PublicAttributes">Public Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><span class="class">ofAppEGLWindow</span><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li></ul>
-      </li></ul>
-    </nav>
-    <div class="main">
-      <div class="content">
+<nav class="navbar navbar-fixed-top header" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">ofDoc</a>
+    </div>
 
-      <div id="" class="classBlock">
+
+    <div class="navbar-form navbar-right" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search" id="search" autocomplete="off">
+      </div>
+      <ul class="searchResult hidden"></ul>
+
+    </div>
+
+
+  </div>
+</nav>
+
+
+<div class="container">
+    <div class="quicknav">
+      <a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">app</a> &gt; <span id="classQuickNav">ofAppEGLWindow</span>
+    </div>
+
+  <nav class="navigator" role="navigation">
+    <ul id="nav-parts">
+      <li class="group selected">
+        Topics
+        <ul id="topics">
+        <li class="chapter"><a href="#Enums">Enums</a></li><li class="chapter"><a href="#Typedefs">Typedefs</a></li><span class="class">ofAppEGLWindow::Settings</span><li class="chapter"><a href="#PublicAttributes">Public Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><span class="class">ofAppEGLWindow</span><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li></ul>
+    </li></ul>
+  </nav>
+  <div class="main">
+    <div class="content">
+
+    <div id="" class="classBlock">
     <div class="classHeader">
-      <h1 class="classTitle">ofAppEGLWindow.h</h1>
+      <h1 class="classTitle">ofAppEGLWindow</h1>
     </div>
     <div class="classDescription"></div>
     <div class="classMethods"><div id="Enums">
     <h3 class="sectionHeader">Enums</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="aa946a00857892177ec100469f699acb2">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aa946a00857892177ec100469f699acb2&quot;)">
-      <span class="type"></span>
-      <a class="name">ofAppEGLWindowType</a>
-      <span class="args"></span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="aa946a00857892177ec100469f699acb2" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa946a00857892177ec100469f699acb2&quot;)">
+        <span class="type"></span>
+        <a class="name">ofAppEGLWindowType</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aa946a00857892177ec100469f699acb2_description">
@@ -74,12 +99,14 @@
   </div><div id="Typedefs">
     <h3 class="sectionHeader">Typedefs</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="ad12635aeec960723e2db94abc5862b5d">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ad12635aeec960723e2db94abc5862b5d&quot;)">
-      <span class="type"></span>
-      <a class="name">ofEGLAttributeList</a>
-      <span class="args"></span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="ad12635aeec960723e2db94abc5862b5d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad12635aeec960723e2db94abc5862b5d&quot;)">
+        <span class="type"></span>
+        <a class="name">ofEGLAttributeList</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ad12635aeec960723e2db94abc5862b5d_description">
@@ -88,12 +115,14 @@
 
 </div></div>
 
-  </div><div id="a43fdc2156bbb541908b78006571e32c9">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a43fdc2156bbb541908b78006571e32c9&quot;)">
-      <span class="type"></span>
-      <a class="name">ofEGLAttributeListIterator</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a43fdc2156bbb541908b78006571e32c9" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a43fdc2156bbb541908b78006571e32c9&quot;)">
+        <span class="type"></span>
+        <a class="name">ofEGLAttributeListIterator</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a43fdc2156bbb541908b78006571e32c9_description">
@@ -112,12 +141,14 @@
     <div class="classMethods"><div id="PublicAttributes">
     <h3 class="sectionHeader">Public Attributes</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a9ac76cb4a1d57398df743ab8ceb166f9">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a9ac76cb4a1d57398df743ab8ceb166f9&quot;)">
-      <span class="type"></span>
-      <a class="name">eglWindowPreference</a>
-      <span class="args"></span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="a9ac76cb4a1d57398df743ab8ceb166f9" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9ac76cb4a1d57398df743ab8ceb166f9&quot;)">
+        <span class="type"></span>
+        <a class="name">eglWindowPreference</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a9ac76cb4a1d57398df743ab8ceb166f9_description">
@@ -126,12 +157,14 @@
 
 </div></div>
 
-  </div><div id="a7540e10f3099e6f490b77ad7406bd93b">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a7540e10f3099e6f490b77ad7406bd93b&quot;)">
-      <span class="type"></span>
-      <a class="name">eglWindowOpacity</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a7540e10f3099e6f490b77ad7406bd93b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7540e10f3099e6f490b77ad7406bd93b&quot;)">
+        <span class="type"></span>
+        <a class="name">eglWindowOpacity</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a7540e10f3099e6f490b77ad7406bd93b_description">
@@ -140,12 +173,14 @@
 
 </div></div>
 
-  </div><div id="ad01929f29baa7af7f95d237ad73268c1">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ad01929f29baa7af7f95d237ad73268c1&quot;)">
-      <span class="type"></span>
-      <a class="name">frameBufferAttributes</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="ad01929f29baa7af7f95d237ad73268c1" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad01929f29baa7af7f95d237ad73268c1&quot;)">
+        <span class="type"></span>
+        <a class="name">frameBufferAttributes</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ad01929f29baa7af7f95d237ad73268c1_description">
@@ -154,12 +189,14 @@
 
 </div></div>
 
-  </div><div id="a53d7b493da4e4cc0864485ff28ffd0f0">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a53d7b493da4e4cc0864485ff28ffd0f0&quot;)">
-      <span class="type"></span>
-      <a class="name">windowSurfaceAttributes</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a53d7b493da4e4cc0864485ff28ffd0f0" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a53d7b493da4e4cc0864485ff28ffd0f0&quot;)">
+        <span class="type"></span>
+        <a class="name">windowSurfaceAttributes</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a53d7b493da4e4cc0864485ff28ffd0f0_description">
@@ -168,12 +205,14 @@
 
 </div></div>
 
-  </div><div id="a7b0ef0b01e024ab22db515d00354331e">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a7b0ef0b01e024ab22db515d00354331e&quot;)">
-      <span class="type"></span>
-      <a class="name">initialClearColor</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a7b0ef0b01e024ab22db515d00354331e" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7b0ef0b01e024ab22db515d00354331e&quot;)">
+        <span class="type"></span>
+        <a class="name">initialClearColor</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a7b0ef0b01e024ab22db515d00354331e_description">
@@ -182,12 +221,14 @@
 
 </div></div>
 
-  </div><div id="a296b4788167ab3916d52e4a32d586468">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a296b4788167ab3916d52e4a32d586468&quot;)">
-      <span class="type"></span>
-      <a class="name">screenNum</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a296b4788167ab3916d52e4a32d586468" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a296b4788167ab3916d52e4a32d586468&quot;)">
+        <span class="type"></span>
+        <a class="name">screenNum</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a296b4788167ab3916d52e4a32d586468_description">
@@ -196,12 +237,14 @@
 
 </div></div>
 
-  </div><div id="a8e914a6e8abd5cafbf62710d16b92384">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a8e914a6e8abd5cafbf62710d16b92384&quot;)">
-      <span class="type"></span>
-      <a class="name">layer</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a8e914a6e8abd5cafbf62710d16b92384" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8e914a6e8abd5cafbf62710d16b92384&quot;)">
+        <span class="type"></span>
+        <a class="name">layer</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a8e914a6e8abd5cafbf62710d16b92384_description">
@@ -214,12 +257,14 @@
   </div><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a81d18be1717ce11c1f54c9b37152856b">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a81d18be1717ce11c1f54c9b37152856b&quot;)">
-      <span class="type"></span>
-      <a class="name">Settings</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="a81d18be1717ce11c1f54c9b37152856b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a81d18be1717ce11c1f54c9b37152856b&quot;)">
+        <span class="type"></span>
+        <a class="name">Settings</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a81d18be1717ce11c1f54c9b37152856b_description">
@@ -238,12 +283,14 @@
     <div class="classMethods"><div id="ProtectedAttributes">
     <h3 class="sectionHeader">Protected Attributes</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a511d25788895127b49e714123ea8470c">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a511d25788895127b49e714123ea8470c&quot;)">
-      <span class="type"></span>
-      <a class="name">terminate</a>
-      <span class="args"></span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="a511d25788895127b49e714123ea8470c" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a511d25788895127b49e714123ea8470c&quot;)">
+        <span class="type"></span>
+        <a class="name">terminate</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a511d25788895127b49e714123ea8470c_description">
@@ -252,12 +299,14 @@
 
 </div></div>
 
-  </div><div id="a557c1ad9304289aa75955c25ced9871b">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a557c1ad9304289aa75955c25ced9871b&quot;)">
-      <span class="type"></span>
-      <a class="name">windowMode</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a557c1ad9304289aa75955c25ced9871b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a557c1ad9304289aa75955c25ced9871b&quot;)">
+        <span class="type"></span>
+        <a class="name">windowMode</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a557c1ad9304289aa75955c25ced9871b_description">
@@ -266,12 +315,14 @@
 
 </div></div>
 
-  </div><div id="aea4a25154ce4009414a41100a143b3c5">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aea4a25154ce4009414a41100a143b3c5&quot;)">
-      <span class="type"></span>
-      <a class="name">bNewScreenMode</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="aea4a25154ce4009414a41100a143b3c5" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aea4a25154ce4009414a41100a143b3c5&quot;)">
+        <span class="type"></span>
+        <a class="name">bNewScreenMode</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aea4a25154ce4009414a41100a143b3c5_description">
@@ -280,12 +331,14 @@
 
 </div></div>
 
-  </div><div id="ad5eef9f881e28459b51ef4dd8f8ca395">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ad5eef9f881e28459b51ef4dd8f8ca395&quot;)">
-      <span class="type"></span>
-      <a class="name">buttonInUse</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="ad5eef9f881e28459b51ef4dd8f8ca395" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad5eef9f881e28459b51ef4dd8f8ca395&quot;)">
+        <span class="type"></span>
+        <a class="name">buttonInUse</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ad5eef9f881e28459b51ef4dd8f8ca395_description">
@@ -294,12 +347,14 @@
 
 </div></div>
 
-  </div><div id="a40fd5b2fa334190484cd12b67d0adbab">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a40fd5b2fa334190484cd12b67d0adbab&quot;)">
-      <span class="type"></span>
-      <a class="name">bEnableSetupScreen</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a40fd5b2fa334190484cd12b67d0adbab" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a40fd5b2fa334190484cd12b67d0adbab&quot;)">
+        <span class="type"></span>
+        <a class="name">bEnableSetupScreen</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a40fd5b2fa334190484cd12b67d0adbab_description">
@@ -308,12 +363,14 @@
 
 </div></div>
 
-  </div><div id="a5e06cb7e375a5a7819d0fcd6e7b86125">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5e06cb7e375a5a7819d0fcd6e7b86125&quot;)">
-      <span class="type"></span>
-      <a class="name">bShowCursor</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a5e06cb7e375a5a7819d0fcd6e7b86125" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5e06cb7e375a5a7819d0fcd6e7b86125&quot;)">
+        <span class="type"></span>
+        <a class="name">bShowCursor</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a5e06cb7e375a5a7819d0fcd6e7b86125_description">
@@ -322,12 +379,14 @@
 
 </div></div>
 
-  </div><div id="aac3c4c4785c7bc78e4703d8bc907540a">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aac3c4c4785c7bc78e4703d8bc907540a&quot;)">
-      <span class="type"></span>
-      <a class="name">eglDisplayString</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="aac3c4c4785c7bc78e4703d8bc907540a" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aac3c4c4785c7bc78e4703d8bc907540a&quot;)">
+        <span class="type"></span>
+        <a class="name">eglDisplayString</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aac3c4c4785c7bc78e4703d8bc907540a_description">
@@ -336,12 +395,14 @@
 
 </div></div>
 
-  </div><div id="a682d7019b27749848ab62c9572d22417">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a682d7019b27749848ab62c9572d22417&quot;)">
-      <span class="type"></span>
-      <a class="name">nFramesSinceWindowResized</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a682d7019b27749848ab62c9572d22417" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a682d7019b27749848ab62c9572d22417&quot;)">
+        <span class="type"></span>
+        <a class="name">nFramesSinceWindowResized</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a682d7019b27749848ab62c9572d22417_description">
@@ -350,12 +411,14 @@
 
 </div></div>
 
-  </div><div id="a78ad61b0ac123fde29888cb5fc8c08d7">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a78ad61b0ac123fde29888cb5fc8c08d7&quot;)">
-      <span class="type"></span>
-      <a class="name">orientation</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a78ad61b0ac123fde29888cb5fc8c08d7" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a78ad61b0ac123fde29888cb5fc8c08d7&quot;)">
+        <span class="type"></span>
+        <a class="name">orientation</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a78ad61b0ac123fde29888cb5fc8c08d7_description">
@@ -364,12 +427,14 @@
 
 </div></div>
 
-  </div><div id="a65af76e8eb2a47b123dc301cc95b0d7d">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a65af76e8eb2a47b123dc301cc95b0d7d&quot;)">
-      <span class="type"></span>
-      <a class="name">ofAppPtr</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a65af76e8eb2a47b123dc301cc95b0d7d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a65af76e8eb2a47b123dc301cc95b0d7d&quot;)">
+        <span class="type"></span>
+        <a class="name">ofAppPtr</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a65af76e8eb2a47b123dc301cc95b0d7d_description">
@@ -378,12 +443,14 @@
 
 </div></div>
 
-  </div><div id="a1c23bbd631b42d90ff25bcabd4bd6bf5">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a1c23bbd631b42d90ff25bcabd4bd6bf5&quot;)">
-      <span class="type"></span>
-      <a class="name">mouseEvents</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a1c23bbd631b42d90ff25bcabd4bd6bf5" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1c23bbd631b42d90ff25bcabd4bd6bf5&quot;)">
+        <span class="type"></span>
+        <a class="name">mouseEvents</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a1c23bbd631b42d90ff25bcabd4bd6bf5_description">
@@ -392,12 +459,14 @@
 
 </div></div>
 
-  </div><div id="aa2e9546ce1d57dd571da52334afc69e2">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aa2e9546ce1d57dd571da52334afc69e2&quot;)">
-      <span class="type"></span>
-      <a class="name">keyEvents</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="aa2e9546ce1d57dd571da52334afc69e2" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa2e9546ce1d57dd571da52334afc69e2&quot;)">
+        <span class="type"></span>
+        <a class="name">keyEvents</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aa2e9546ce1d57dd571da52334afc69e2_description">
@@ -406,12 +475,14 @@
 
 </div></div>
 
-  </div><div id="af4ee9fdaa49f4d25a85ef913b2234eb9">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#af4ee9fdaa49f4d25a85ef913b2234eb9&quot;)">
-      <span class="type"></span>
-      <a class="name">mouseCursor</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="af4ee9fdaa49f4d25a85ef913b2234eb9" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af4ee9fdaa49f4d25a85ef913b2234eb9&quot;)">
+        <span class="type"></span>
+        <a class="name">mouseCursor</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="af4ee9fdaa49f4d25a85ef913b2234eb9_description">
@@ -420,12 +491,14 @@
 
 </div></div>
 
-  </div><div id="a24de484b1850a7316c66aa7ea7b33fe7">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a24de484b1850a7316c66aa7ea7b33fe7&quot;)">
-      <span class="type"></span>
-      <a class="name">mouseScaleX</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a24de484b1850a7316c66aa7ea7b33fe7" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a24de484b1850a7316c66aa7ea7b33fe7&quot;)">
+        <span class="type"></span>
+        <a class="name">mouseScaleX</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a24de484b1850a7316c66aa7ea7b33fe7_description">
@@ -434,12 +507,14 @@
 
 </div></div>
 
-  </div><div id="a8a8d78c3283f2000d126772fb7c16686">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a8a8d78c3283f2000d126772fb7c16686&quot;)">
-      <span class="type"></span>
-      <a class="name">mouseScaleY</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a8a8d78c3283f2000d126772fb7c16686" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8a8d78c3283f2000d126772fb7c16686&quot;)">
+        <span class="type"></span>
+        <a class="name">mouseScaleY</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a8a8d78c3283f2000d126772fb7c16686_description">
@@ -448,12 +523,14 @@
 
 </div></div>
 
-  </div><div id="ac968862a3c1d8bf2d501455a4b9aebbe">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ac968862a3c1d8bf2d501455a4b9aebbe&quot;)">
-      <span class="type"></span>
-      <a class="name">eglDisplay</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="ac968862a3c1d8bf2d501455a4b9aebbe" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac968862a3c1d8bf2d501455a4b9aebbe&quot;)">
+        <span class="type"></span>
+        <a class="name">eglDisplay</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ac968862a3c1d8bf2d501455a4b9aebbe_description">
@@ -462,12 +539,14 @@
 
 </div></div>
 
-  </div><div id="a38db30b65ba8723a562ff6a7bc8170d0">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a38db30b65ba8723a562ff6a7bc8170d0&quot;)">
-      <span class="type"></span>
-      <a class="name">eglSurface</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a38db30b65ba8723a562ff6a7bc8170d0" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a38db30b65ba8723a562ff6a7bc8170d0&quot;)">
+        <span class="type"></span>
+        <a class="name">eglSurface</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a38db30b65ba8723a562ff6a7bc8170d0_description">
@@ -476,12 +555,14 @@
 
 </div></div>
 
-  </div><div id="a89c3f48c626fb8d16109803b77adb26c">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a89c3f48c626fb8d16109803b77adb26c&quot;)">
-      <span class="type"></span>
-      <a class="name">eglContext</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a89c3f48c626fb8d16109803b77adb26c" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a89c3f48c626fb8d16109803b77adb26c&quot;)">
+        <span class="type"></span>
+        <a class="name">eglContext</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a89c3f48c626fb8d16109803b77adb26c_description">
@@ -490,12 +571,14 @@
 
 </div></div>
 
-  </div><div id="a47a8e8ac9ae6343c49b0697aaadd35e6">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a47a8e8ac9ae6343c49b0697aaadd35e6&quot;)">
-      <span class="type"></span>
-      <a class="name">eglConfig</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a47a8e8ac9ae6343c49b0697aaadd35e6" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a47a8e8ac9ae6343c49b0697aaadd35e6&quot;)">
+        <span class="type"></span>
+        <a class="name">eglConfig</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a47a8e8ac9ae6343c49b0697aaadd35e6_description">
@@ -504,12 +587,14 @@
 
 </div></div>
 
-  </div><div id="a2230450c04b51cbca1f5b8d3c8c0741c">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a2230450c04b51cbca1f5b8d3c8c0741c&quot;)">
-      <span class="type"></span>
-      <a class="name">eglVersionMajor</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a2230450c04b51cbca1f5b8d3c8c0741c" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2230450c04b51cbca1f5b8d3c8c0741c&quot;)">
+        <span class="type"></span>
+        <a class="name">eglVersionMajor</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a2230450c04b51cbca1f5b8d3c8c0741c_description">
@@ -518,12 +603,14 @@
 
 </div></div>
 
-  </div><div id="a7479de6fa5077c9ca2368ee9cbef637f">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a7479de6fa5077c9ca2368ee9cbef637f&quot;)">
-      <span class="type"></span>
-      <a class="name">eglVersionMinor</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a7479de6fa5077c9ca2368ee9cbef637f" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7479de6fa5077c9ca2368ee9cbef637f&quot;)">
+        <span class="type"></span>
+        <a class="name">eglVersionMinor</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a7479de6fa5077c9ca2368ee9cbef637f_description">
@@ -532,12 +619,14 @@
 
 </div></div>
 
-  </div><div id="a129848ab166c94f34207650051a549b6">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a129848ab166c94f34207650051a549b6&quot;)">
-      <span class="type"></span>
-      <a class="name">nonFullscreenWindowRect</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a129848ab166c94f34207650051a549b6" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a129848ab166c94f34207650051a549b6&quot;)">
+        <span class="type"></span>
+        <a class="name">nonFullscreenWindowRect</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a129848ab166c94f34207650051a549b6_description">
@@ -546,12 +635,14 @@
 
 </div></div>
 
-  </div><div id="adbaad1c82e84916228ed5ae13bb0bc4e">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#adbaad1c82e84916228ed5ae13bb0bc4e&quot;)">
-      <span class="type"></span>
-      <a class="name">currentWindowRect</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="adbaad1c82e84916228ed5ae13bb0bc4e" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#adbaad1c82e84916228ed5ae13bb0bc4e&quot;)">
+        <span class="type"></span>
+        <a class="name">currentWindowRect</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="adbaad1c82e84916228ed5ae13bb0bc4e_description">
@@ -560,12 +651,14 @@
 
 </div></div>
 
-  </div><div id="a94e635bde8bdcb4c83d8255b3e5ad9aa">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a94e635bde8bdcb4c83d8255b3e5ad9aa&quot;)">
-      <span class="type"></span>
-      <a class="name">isUsingX11</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a94e635bde8bdcb4c83d8255b3e5ad9aa" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a94e635bde8bdcb4c83d8255b3e5ad9aa&quot;)">
+        <span class="type"></span>
+        <a class="name">isUsingX11</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a94e635bde8bdcb4c83d8255b3e5ad9aa_description">
@@ -574,12 +667,14 @@
 
 </div></div>
 
-  </div><div id="a5775ed15ecdec5a8cda9ae7cc462094d">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5775ed15ecdec5a8cda9ae7cc462094d&quot;)">
-      <span class="type"></span>
-      <a class="name">isWindowInited</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a5775ed15ecdec5a8cda9ae7cc462094d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5775ed15ecdec5a8cda9ae7cc462094d&quot;)">
+        <span class="type"></span>
+        <a class="name">isWindowInited</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a5775ed15ecdec5a8cda9ae7cc462094d_description">
@@ -588,12 +683,14 @@
 
 </div></div>
 
-  </div><div id="a1d214ab7e0ab1ae0ec64bc943bfe0fd5">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a1d214ab7e0ab1ae0ec64bc943bfe0fd5&quot;)">
-      <span class="type"></span>
-      <a class="name">isSurfaceInited</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a1d214ab7e0ab1ae0ec64bc943bfe0fd5" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1d214ab7e0ab1ae0ec64bc943bfe0fd5&quot;)">
+        <span class="type"></span>
+        <a class="name">isSurfaceInited</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a1d214ab7e0ab1ae0ec64bc943bfe0fd5_description">
@@ -602,12 +699,14 @@
 
 </div></div>
 
-  </div><div id="aab1f26f664d71b50853c2a4003e1906b">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aab1f26f664d71b50853c2a4003e1906b&quot;)">
-      <span class="type"></span>
-      <a class="name">x11Display</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="aab1f26f664d71b50853c2a4003e1906b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aab1f26f664d71b50853c2a4003e1906b&quot;)">
+        <span class="type"></span>
+        <a class="name">x11Display</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aab1f26f664d71b50853c2a4003e1906b_description">
@@ -616,12 +715,14 @@
 
 </div></div>
 
-  </div><div id="af067ce6d16f064e33c9fe86992903aa1">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#af067ce6d16f064e33c9fe86992903aa1&quot;)">
-      <span class="type"></span>
-      <a class="name">x11Screen</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="af067ce6d16f064e33c9fe86992903aa1" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af067ce6d16f064e33c9fe86992903aa1&quot;)">
+        <span class="type"></span>
+        <a class="name">x11Screen</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="af067ce6d16f064e33c9fe86992903aa1_description">
@@ -630,12 +731,14 @@
 
 </div></div>
 
-  </div><div id="a72dea66f2a244ad9563c26d953fb729c">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a72dea66f2a244ad9563c26d953fb729c&quot;)">
-      <span class="type"></span>
-      <a class="name">x11Window</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a72dea66f2a244ad9563c26d953fb729c" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a72dea66f2a244ad9563c26d953fb729c&quot;)">
+        <span class="type"></span>
+        <a class="name">x11Window</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a72dea66f2a244ad9563c26d953fb729c_description">
@@ -644,12 +747,14 @@
 
 </div></div>
 
-  </div><div id="a2421a0b26d07f8f620e78b101dc2fd88">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a2421a0b26d07f8f620e78b101dc2fd88&quot;)">
-      <span class="type"></span>
-      <a class="name">x11ScreenNum</a>
-      <span class="args"></span>
-      <span class="note"></span>
+  </div><div id="a2421a0b26d07f8f620e78b101dc2fd88" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2421a0b26d07f8f620e78b101dc2fd88&quot;)">
+        <span class="type"></span>
+        <a class="name">x11ScreenNum</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a2421a0b26d07f8f620e78b101dc2fd88_description">
@@ -662,12 +767,14 @@
   </div><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a03cb1acadb0f1208ac90b9fb76d67642">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a03cb1acadb0f1208ac90b9fb76d67642&quot;)">
-      <span class="type"></span>
-      <a class="name">ofAppEGLWindow</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="a03cb1acadb0f1208ac90b9fb76d67642" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a03cb1acadb0f1208ac90b9fb76d67642&quot;)">
+        <span class="type"></span>
+        <a class="name">ofAppEGLWindow</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a03cb1acadb0f1208ac90b9fb76d67642_description">
@@ -678,12 +785,14 @@
 
 </div></div>
 
-  </div><div id="abedc1a32243fa18191a61b1facdddf2d">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#abedc1a32243fa18191a61b1facdddf2d&quot;)">
-      <span class="type"></span>
-      <a class="name">~ofAppEGLWindow</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="abedc1a32243fa18191a61b1facdddf2d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#abedc1a32243fa18191a61b1facdddf2d&quot;)">
+        <span class="type"></span>
+        <a class="name">~ofAppEGLWindow</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="abedc1a32243fa18191a61b1facdddf2d_description">
@@ -692,12 +801,14 @@
 
 </div></div>
 
-  </div><div id="a5bd09a51040d4408fdd085d3634abd8e">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5bd09a51040d4408fdd085d3634abd8e&quot;)">
-      <span class="type"></span>
-      <a class="name">setThreadTimeout</a>
-      <span class="args">(long timeOut)</span>
-      <span class="note"></span>
+  </div><div id="a5bd09a51040d4408fdd085d3634abd8e" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5bd09a51040d4408fdd085d3634abd8e&quot;)">
+        <span class="type"></span>
+        <a class="name">setThreadTimeout</a>
+        <span class="args">(long timeOut)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a5bd09a51040d4408fdd085d3634abd8e_description">
@@ -706,12 +817,14 @@
 
 </div></div>
 
-  </div><div id="ac3d779940c413a5ee6b6cc9a00d26e06">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ac3d779940c413a5ee6b6cc9a00d26e06&quot;)">
-      <span class="type"></span>
-      <a class="name">setGLESVersion</a>
-      <span class="args">(int glesVersion)</span>
-      <span class="note"></span>
+  </div><div id="ac3d779940c413a5ee6b6cc9a00d26e06" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac3d779940c413a5ee6b6cc9a00d26e06&quot;)">
+        <span class="type"></span>
+        <a class="name">setGLESVersion</a>
+        <span class="args">(int glesVersion)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ac3d779940c413a5ee6b6cc9a00d26e06_description">
@@ -722,12 +835,14 @@
 
 </div></div>
 
-  </div><div id="ad30397b877507819196b5aee534c866d">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ad30397b877507819196b5aee534c866d&quot;)">
-      <span class="type"></span>
-      <a class="name">setupOpenGL</a>
-      <span class="args">(int w, int h, ofWindowMode screenMode)</span>
-      <span class="note"></span>
+  </div><div id="ad30397b877507819196b5aee534c866d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad30397b877507819196b5aee534c866d&quot;)">
+        <span class="type"></span>
+        <a class="name">setupOpenGL</a>
+        <span class="args">(int w, int h, ofWindowMode screenMode)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ad30397b877507819196b5aee534c866d_description">
@@ -738,12 +853,14 @@
 
 </div></div>
 
-  </div><div id="ae442a82d046e664f9f6c03f90e9d166b">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ae442a82d046e664f9f6c03f90e9d166b&quot;)">
-      <span class="type"></span>
-      <a class="name">initializeWindow</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="ae442a82d046e664f9f6c03f90e9d166b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae442a82d046e664f9f6c03f90e9d166b&quot;)">
+        <span class="type"></span>
+        <a class="name">initializeWindow</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ae442a82d046e664f9f6c03f90e9d166b_description">
@@ -754,12 +871,14 @@
 
 </div></div>
 
-  </div><div id="a5f831606f6e445b84a762591887e6ef9">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5f831606f6e445b84a762591887e6ef9&quot;)">
-      <span class="type"></span>
-      <a class="name">runAppViaInfiniteLoop</a>
-      <span class="args">(ofBaseApp *appPtr)</span>
-      <span class="note"></span>
+  </div><div id="a5f831606f6e445b84a762591887e6ef9" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5f831606f6e445b84a762591887e6ef9&quot;)">
+        <span class="type"></span>
+        <a class="name">runAppViaInfiniteLoop</a>
+        <span class="args">(ofBaseApp *appPtr)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a5f831606f6e445b84a762591887e6ef9_description">
@@ -770,12 +889,14 @@
 
 </div></div>
 
-  </div><div id="a8da6d843ad232f519319ad8707816a9b">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a8da6d843ad232f519319ad8707816a9b&quot;)">
-      <span class="type"></span>
-      <a class="name">windowShouldClose</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a8da6d843ad232f519319ad8707816a9b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8da6d843ad232f519319ad8707816a9b&quot;)">
+        <span class="type"></span>
+        <a class="name">windowShouldClose</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a8da6d843ad232f519319ad8707816a9b_description">
@@ -786,12 +907,14 @@
 
 </div></div>
 
-  </div><div id="a65e9f597305f8b2f4c906e5ed0543c76">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a65e9f597305f8b2f4c906e5ed0543c76&quot;)">
-      <span class="type"></span>
-      <a class="name">hideCursor</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a65e9f597305f8b2f4c906e5ed0543c76" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a65e9f597305f8b2f4c906e5ed0543c76&quot;)">
+        <span class="type"></span>
+        <a class="name">hideCursor</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a65e9f597305f8b2f4c906e5ed0543c76_description">
@@ -802,12 +925,14 @@
 
 </div></div>
 
-  </div><div id="a76cf9b50808ddb6844b4766a8bb7fb4f">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a76cf9b50808ddb6844b4766a8bb7fb4f&quot;)">
-      <span class="type"></span>
-      <a class="name">showCursor</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a76cf9b50808ddb6844b4766a8bb7fb4f" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a76cf9b50808ddb6844b4766a8bb7fb4f&quot;)">
+        <span class="type"></span>
+        <a class="name">showCursor</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a76cf9b50808ddb6844b4766a8bb7fb4f_description">
@@ -818,12 +943,14 @@
 
 </div></div>
 
-  </div><div id="a5e5d7087efbe1ea083b76430d637d288">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5e5d7087efbe1ea083b76430d637d288&quot;)">
-      <span class="type"></span>
-      <a class="name">setWindowPosition</a>
-      <span class="args">(int x, int y)</span>
-      <span class="note"></span>
+  </div><div id="a5e5d7087efbe1ea083b76430d637d288" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5e5d7087efbe1ea083b76430d637d288&quot;)">
+        <span class="type"></span>
+        <a class="name">setWindowPosition</a>
+        <span class="args">(int x, int y)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a5e5d7087efbe1ea083b76430d637d288_description">
@@ -834,12 +961,14 @@
 
 </div></div>
 
-  </div><div id="a71e0a710f906bc522b3e9fefe0ce017d">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a71e0a710f906bc522b3e9fefe0ce017d&quot;)">
-      <span class="type"></span>
-      <a class="name">setWindowShape</a>
-      <span class="args">(int w, int h)</span>
-      <span class="note"></span>
+  </div><div id="a71e0a710f906bc522b3e9fefe0ce017d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a71e0a710f906bc522b3e9fefe0ce017d&quot;)">
+        <span class="type"></span>
+        <a class="name">setWindowShape</a>
+        <span class="args">(int w, int h)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a71e0a710f906bc522b3e9fefe0ce017d_description">
@@ -850,12 +979,14 @@
 
 </div></div>
 
-  </div><div id="ae4b80d63f2e85f572d0b539dccf5dabe">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ae4b80d63f2e85f572d0b539dccf5dabe&quot;)">
-      <span class="type"></span>
-      <a class="name">getWindowPosition</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="ae4b80d63f2e85f572d0b539dccf5dabe" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae4b80d63f2e85f572d0b539dccf5dabe&quot;)">
+        <span class="type"></span>
+        <a class="name">getWindowPosition</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ae4b80d63f2e85f572d0b539dccf5dabe_description">
@@ -866,12 +997,14 @@
 
 </div></div>
 
-  </div><div id="ae13bcbc3cf0a877b78944654e09bdcd9">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ae13bcbc3cf0a877b78944654e09bdcd9&quot;)">
-      <span class="type"></span>
-      <a class="name">getWindowSize</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="ae13bcbc3cf0a877b78944654e09bdcd9" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae13bcbc3cf0a877b78944654e09bdcd9&quot;)">
+        <span class="type"></span>
+        <a class="name">getWindowSize</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ae13bcbc3cf0a877b78944654e09bdcd9_description">
@@ -882,12 +1015,14 @@
 
 </div></div>
 
-  </div><div id="a92d2b1b7c60ff619dbef69fc27f9d300">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a92d2b1b7c60ff619dbef69fc27f9d300&quot;)">
-      <span class="type"></span>
-      <a class="name">getScreenSize</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a92d2b1b7c60ff619dbef69fc27f9d300" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a92d2b1b7c60ff619dbef69fc27f9d300&quot;)">
+        <span class="type"></span>
+        <a class="name">getScreenSize</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a92d2b1b7c60ff619dbef69fc27f9d300_description">
@@ -898,12 +1033,14 @@
 
 </div></div>
 
-  </div><div id="a5862e62be66351c1ce944c38f6d5a9f2">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5862e62be66351c1ce944c38f6d5a9f2&quot;)">
-      <span class="type"></span>
-      <a class="name">setOrientation</a>
-      <span class="args">(ofOrientation orientation)</span>
-      <span class="note"></span>
+  </div><div id="a5862e62be66351c1ce944c38f6d5a9f2" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5862e62be66351c1ce944c38f6d5a9f2&quot;)">
+        <span class="type"></span>
+        <a class="name">setOrientation</a>
+        <span class="args">(ofOrientation orientation)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a5862e62be66351c1ce944c38f6d5a9f2_description">
@@ -914,12 +1051,14 @@
 
 </div></div>
 
-  </div><div id="aa6ff8cfc7d01dc3eff7ee4efb751a4dd">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aa6ff8cfc7d01dc3eff7ee4efb751a4dd&quot;)">
-      <span class="type"></span>
-      <a class="name">getOrientation</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="aa6ff8cfc7d01dc3eff7ee4efb751a4dd" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa6ff8cfc7d01dc3eff7ee4efb751a4dd&quot;)">
+        <span class="type"></span>
+        <a class="name">getOrientation</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aa6ff8cfc7d01dc3eff7ee4efb751a4dd_description">
@@ -930,12 +1069,14 @@
 
 </div></div>
 
-  </div><div id="aefa35b1f0994c9f7a7c3bf271422aed8">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aefa35b1f0994c9f7a7c3bf271422aed8&quot;)">
-      <span class="type"></span>
-      <a class="name">doesHWOrientation</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="aefa35b1f0994c9f7a7c3bf271422aed8" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aefa35b1f0994c9f7a7c3bf271422aed8&quot;)">
+        <span class="type"></span>
+        <a class="name">doesHWOrientation</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aefa35b1f0994c9f7a7c3bf271422aed8_description">
@@ -946,12 +1087,14 @@
 
 </div></div>
 
-  </div><div id="a3b5313ae50414ee50b6984bfd8b3fbd4">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a3b5313ae50414ee50b6984bfd8b3fbd4&quot;)">
-      <span class="type"></span>
-      <a class="name">getWidth</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a3b5313ae50414ee50b6984bfd8b3fbd4" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3b5313ae50414ee50b6984bfd8b3fbd4&quot;)">
+        <span class="type"></span>
+        <a class="name">getWidth</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a3b5313ae50414ee50b6984bfd8b3fbd4_description">
@@ -962,12 +1105,14 @@
 
 </div></div>
 
-  </div><div id="a142d6edb9e16e078a6d6634fe0148029">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a142d6edb9e16e078a6d6634fe0148029&quot;)">
-      <span class="type"></span>
-      <a class="name">getHeight</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a142d6edb9e16e078a6d6634fe0148029" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a142d6edb9e16e078a6d6634fe0148029&quot;)">
+        <span class="type"></span>
+        <a class="name">getHeight</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a142d6edb9e16e078a6d6634fe0148029_description">
@@ -978,12 +1123,14 @@
 
 </div></div>
 
-  </div><div id="aed0311785795aa56f27d23a5b5709371">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aed0311785795aa56f27d23a5b5709371&quot;)">
-      <span class="type"></span>
-      <a class="name">setWindowTitle</a>
-      <span class="args">(string title)</span>
-      <span class="note"></span>
+  </div><div id="aed0311785795aa56f27d23a5b5709371" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aed0311785795aa56f27d23a5b5709371&quot;)">
+        <span class="type"></span>
+        <a class="name">setWindowTitle</a>
+        <span class="args">(string title)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aed0311785795aa56f27d23a5b5709371_description">
@@ -994,12 +1141,14 @@
 
 </div></div>
 
-  </div><div id="ab19fa24f2bb2ac7e10a2bed3064e992d">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ab19fa24f2bb2ac7e10a2bed3064e992d&quot;)">
-      <span class="type"></span>
-      <a class="name">getWindowMode</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="ab19fa24f2bb2ac7e10a2bed3064e992d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab19fa24f2bb2ac7e10a2bed3064e992d&quot;)">
+        <span class="type"></span>
+        <a class="name">getWindowMode</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ab19fa24f2bb2ac7e10a2bed3064e992d_description">
@@ -1010,12 +1159,14 @@
 
 </div></div>
 
-  </div><div id="a87bd748810c622c7ebdef73f2b537d0a">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a87bd748810c622c7ebdef73f2b537d0a&quot;)">
-      <span class="type"></span>
-      <a class="name">setFullscreen</a>
-      <span class="args">(bool fullscreen)</span>
-      <span class="note"></span>
+  </div><div id="a87bd748810c622c7ebdef73f2b537d0a" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a87bd748810c622c7ebdef73f2b537d0a&quot;)">
+        <span class="type"></span>
+        <a class="name">setFullscreen</a>
+        <span class="args">(bool fullscreen)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a87bd748810c622c7ebdef73f2b537d0a_description">
@@ -1026,12 +1177,14 @@
 
 </div></div>
 
-  </div><div id="a6a2ef78b612274f7f3cb6fae46ececf6">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a6a2ef78b612274f7f3cb6fae46ececf6&quot;)">
-      <span class="type"></span>
-      <a class="name">toggleFullscreen</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a6a2ef78b612274f7f3cb6fae46ececf6" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6a2ef78b612274f7f3cb6fae46ececf6&quot;)">
+        <span class="type"></span>
+        <a class="name">toggleFullscreen</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a6a2ef78b612274f7f3cb6fae46ececf6_description">
@@ -1042,12 +1195,14 @@
 
 </div></div>
 
-  </div><div id="ab44e8dde93fda55e2b040ef98bcb83c6">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ab44e8dde93fda55e2b040ef98bcb83c6&quot;)">
-      <span class="type"></span>
-      <a class="name">enableSetupScreen</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="ab44e8dde93fda55e2b040ef98bcb83c6" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab44e8dde93fda55e2b040ef98bcb83c6&quot;)">
+        <span class="type"></span>
+        <a class="name">enableSetupScreen</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ab44e8dde93fda55e2b040ef98bcb83c6_description">
@@ -1058,12 +1213,14 @@
 
 </div></div>
 
-  </div><div id="a2a6ca6c7a340a7007dc2bb8275c13e21">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a2a6ca6c7a340a7007dc2bb8275c13e21&quot;)">
-      <span class="type"></span>
-      <a class="name">disableSetupScreen</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a2a6ca6c7a340a7007dc2bb8275c13e21" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2a6ca6c7a340a7007dc2bb8275c13e21&quot;)">
+        <span class="type"></span>
+        <a class="name">disableSetupScreen</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a2a6ca6c7a340a7007dc2bb8275c13e21_description">
@@ -1074,12 +1231,14 @@
 
 </div></div>
 
-  </div><div id="ab03ddba78f3697799eb2cedf7433cee5">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ab03ddba78f3697799eb2cedf7433cee5&quot;)">
-      <span class="type"></span>
-      <a class="name">setVerticalSync</a>
-      <span class="args">(bool enabled)</span>
-      <span class="note"></span>
+  </div><div id="ab03ddba78f3697799eb2cedf7433cee5" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab03ddba78f3697799eb2cedf7433cee5&quot;)">
+        <span class="type"></span>
+        <a class="name">setVerticalSync</a>
+        <span class="args">(bool enabled)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ab03ddba78f3697799eb2cedf7433cee5_description">
@@ -1090,12 +1249,14 @@
 
 </div></div>
 
-  </div><div id="a31a2b4cbf0aa4cba412464f656e9586c">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a31a2b4cbf0aa4cba412464f656e9586c&quot;)">
-      <span class="type"></span>
-      <a class="name">getEglDisplay</a>
-      <span class="args">() const </span>
-      <span class="note"></span>
+  </div><div id="a31a2b4cbf0aa4cba412464f656e9586c" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a31a2b4cbf0aa4cba412464f656e9586c&quot;)">
+        <span class="type"></span>
+        <a class="name">getEglDisplay</a>
+        <span class="args">() const </span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a31a2b4cbf0aa4cba412464f656e9586c_description">
@@ -1104,12 +1265,14 @@
 
 </div></div>
 
-  </div><div id="afea46c60e78e83679fc80d2128415500">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#afea46c60e78e83679fc80d2128415500&quot;)">
-      <span class="type"></span>
-      <a class="name">getEglSurface</a>
-      <span class="args">() const </span>
-      <span class="note"></span>
+  </div><div id="afea46c60e78e83679fc80d2128415500" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#afea46c60e78e83679fc80d2128415500&quot;)">
+        <span class="type"></span>
+        <a class="name">getEglSurface</a>
+        <span class="args">() const </span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="afea46c60e78e83679fc80d2128415500_description">
@@ -1118,12 +1281,14 @@
 
 </div></div>
 
-  </div><div id="ae9dac20442c3d913c37852c573be7359">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ae9dac20442c3d913c37852c573be7359&quot;)">
-      <span class="type"></span>
-      <a class="name">getEglContext</a>
-      <span class="args">() const </span>
-      <span class="note"></span>
+  </div><div id="ae9dac20442c3d913c37852c573be7359" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae9dac20442c3d913c37852c573be7359&quot;)">
+        <span class="type"></span>
+        <a class="name">getEglContext</a>
+        <span class="args">() const </span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ae9dac20442c3d913c37852c573be7359_description">
@@ -1132,12 +1297,14 @@
 
 </div></div>
 
-  </div><div id="a99028a6c3a21d0aab40f956c9c6e0a64">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a99028a6c3a21d0aab40f956c9c6e0a64&quot;)">
-      <span class="type"></span>
-      <a class="name">getX11Display</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a99028a6c3a21d0aab40f956c9c6e0a64" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a99028a6c3a21d0aab40f956c9c6e0a64&quot;)">
+        <span class="type"></span>
+        <a class="name">getX11Display</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a99028a6c3a21d0aab40f956c9c6e0a64_description">
@@ -1146,12 +1313,14 @@
 
 </div></div>
 
-  </div><div id="a4d751c639d47103c238a622f9cf1de51">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a4d751c639d47103c238a622f9cf1de51&quot;)">
-      <span class="type"></span>
-      <a class="name">getX11Window</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a4d751c639d47103c238a622f9cf1de51" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4d751c639d47103c238a622f9cf1de51&quot;)">
+        <span class="type"></span>
+        <a class="name">getX11Window</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a4d751c639d47103c238a622f9cf1de51_description">
@@ -1160,12 +1329,14 @@
 
 </div></div>
 
-  </div><div id="ab506da1593727c659a6b6d0a3bd260bc">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ab506da1593727c659a6b6d0a3bd260bc&quot;)">
-      <span class="type"></span>
-      <a class="name">getEglConfig</a>
-      <span class="args">() const </span>
-      <span class="note"></span>
+  </div><div id="ab506da1593727c659a6b6d0a3bd260bc" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab506da1593727c659a6b6d0a3bd260bc&quot;)">
+        <span class="type"></span>
+        <a class="name">getEglConfig</a>
+        <span class="args">() const </span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ab506da1593727c659a6b6d0a3bd260bc_description">
@@ -1174,12 +1345,14 @@
 
 </div></div>
 
-  </div><div id="a2bf633e5d6c8eb57e9732d846393c112">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a2bf633e5d6c8eb57e9732d846393c112&quot;)">
-      <span class="type"></span>
-      <a class="name">getEglVersionMajor</a>
-      <span class="args">() const </span>
-      <span class="note"></span>
+  </div><div id="a2bf633e5d6c8eb57e9732d846393c112" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2bf633e5d6c8eb57e9732d846393c112&quot;)">
+        <span class="type"></span>
+        <a class="name">getEglVersionMajor</a>
+        <span class="args">() const </span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a2bf633e5d6c8eb57e9732d846393c112_description">
@@ -1188,12 +1361,14 @@
 
 </div></div>
 
-  </div><div id="a669a3ae100b045fd25de22e100b71024">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a669a3ae100b045fd25de22e100b71024&quot;)">
-      <span class="type"></span>
-      <a class="name">getEglVersionMinor</a>
-      <span class="args">() const </span>
-      <span class="note"></span>
+  </div><div id="a669a3ae100b045fd25de22e100b71024" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a669a3ae100b045fd25de22e100b71024&quot;)">
+        <span class="type"></span>
+        <a class="name">getEglVersionMinor</a>
+        <span class="args">() const </span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a669a3ae100b045fd25de22e100b71024_description">
@@ -1206,12 +1381,14 @@
   </div><div id="ProtectedFunctions">
     <h3 class="sectionHeader">Protected Functions</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a2a5ea20bb88a0e327befada602989571">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a2a5ea20bb88a0e327befada602989571&quot;)">
-      <span class="type"></span>
-      <a class="name">init</a>
-      <span class="args">(Settings settings=Settings())</span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="a2a5ea20bb88a0e327befada602989571" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2a5ea20bb88a0e327befada602989571&quot;)">
+        <span class="type"></span>
+        <a class="name">init</a>
+        <span class="args">(Settings settings=Settings())</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a2a5ea20bb88a0e327befada602989571_description">
@@ -1220,12 +1397,14 @@
 
 </div></div>
 
-  </div><div id="a2828f9155c89a7986925be40145b9238">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a2828f9155c89a7986925be40145b9238&quot;)">
-      <span class="type"></span>
-      <a class="name">idle</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a2828f9155c89a7986925be40145b9238" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2828f9155c89a7986925be40145b9238&quot;)">
+        <span class="type"></span>
+        <a class="name">idle</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a2828f9155c89a7986925be40145b9238_description">
@@ -1234,12 +1413,14 @@
 
 </div></div>
 
-  </div><div id="a267d0442ba9543bd91c2a81e6f519453">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a267d0442ba9543bd91c2a81e6f519453&quot;)">
-      <span class="type"></span>
-      <a class="name">display</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a267d0442ba9543bd91c2a81e6f519453" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a267d0442ba9543bd91c2a81e6f519453&quot;)">
+        <span class="type"></span>
+        <a class="name">display</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a267d0442ba9543bd91c2a81e6f519453_description">
@@ -1248,12 +1429,14 @@
 
 </div></div>
 
-  </div><div id="a32895f3c9623bf28d017eed3398edd96">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a32895f3c9623bf28d017eed3398edd96&quot;)">
-      <span class="type"></span>
-      <a class="name">setWindowRect</a>
-      <span class="args">(const ofRectangle &amp;requestedWindowRect)</span>
-      <span class="note"></span>
+  </div><div id="a32895f3c9623bf28d017eed3398edd96" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a32895f3c9623bf28d017eed3398edd96&quot;)">
+        <span class="type"></span>
+        <a class="name">setWindowRect</a>
+        <span class="args">(const ofRectangle &amp;requestedWindowRect)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a32895f3c9623bf28d017eed3398edd96_description">
@@ -1262,12 +1445,14 @@
 
 </div></div>
 
-  </div><div id="a540f00251c4e25dd9f046d970031f9a0">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a540f00251c4e25dd9f046d970031f9a0&quot;)">
-      <span class="type"></span>
-      <a class="name">setupPeripherals</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a540f00251c4e25dd9f046d970031f9a0" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a540f00251c4e25dd9f046d970031f9a0&quot;)">
+        <span class="type"></span>
+        <a class="name">setupPeripherals</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a540f00251c4e25dd9f046d970031f9a0_description">
@@ -1276,12 +1461,14 @@
 
 </div></div>
 
-  </div><div id="ae45909d702bc8b23d03e5747712400aa">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ae45909d702bc8b23d03e5747712400aa&quot;)">
-      <span class="type"></span>
-      <a class="name">getScreenRect</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="ae45909d702bc8b23d03e5747712400aa" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae45909d702bc8b23d03e5747712400aa&quot;)">
+        <span class="type"></span>
+        <a class="name">getScreenRect</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ae45909d702bc8b23d03e5747712400aa_description">
@@ -1290,12 +1477,14 @@
 
 </div></div>
 
-  </div><div id="aa1f2b074af710ed2c2042824e7561c30">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aa1f2b074af710ed2c2042824e7561c30&quot;)">
-      <span class="type"></span>
-      <a class="name">getWindowWidth</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="aa1f2b074af710ed2c2042824e7561c30" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa1f2b074af710ed2c2042824e7561c30&quot;)">
+        <span class="type"></span>
+        <a class="name">getWindowWidth</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aa1f2b074af710ed2c2042824e7561c30_description">
@@ -1304,12 +1493,14 @@
 
 </div></div>
 
-  </div><div id="abe4473cf265d0748a3c785bced031882">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#abe4473cf265d0748a3c785bced031882&quot;)">
-      <span class="type"></span>
-      <a class="name">getWindowHeight</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="abe4473cf265d0748a3c785bced031882" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#abe4473cf265d0748a3c785bced031882&quot;)">
+        <span class="type"></span>
+        <a class="name">getWindowHeight</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="abe4473cf265d0748a3c785bced031882_description">
@@ -1318,12 +1509,14 @@
 
 </div></div>
 
-  </div><div id="a3ae549b0d4f26ba0ba3200554dd659d2">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a3ae549b0d4f26ba0ba3200554dd659d2&quot;)">
-      <span class="type"></span>
-      <a class="name">threadedFunction</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a3ae549b0d4f26ba0ba3200554dd659d2" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3ae549b0d4f26ba0ba3200554dd659d2&quot;)">
+        <span class="type"></span>
+        <a class="name">threadedFunction</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a3ae549b0d4f26ba0ba3200554dd659d2_description">
@@ -1359,12 +1552,14 @@
 
 </div></div>
 
-  </div><div id="ade7d09e126ada8e7ac2b7f2f9856f2ea">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ade7d09e126ada8e7ac2b7f2f9856f2ea&quot;)">
-      <span class="type"></span>
-      <a class="name">checkEvents</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="ade7d09e126ada8e7ac2b7f2f9856f2ea" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ade7d09e126ada8e7ac2b7f2f9856f2ea&quot;)">
+        <span class="type"></span>
+        <a class="name">checkEvents</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ade7d09e126ada8e7ac2b7f2f9856f2ea_description">
@@ -1373,12 +1568,14 @@
 
 </div></div>
 
-  </div><div id="a699350d7b17c02525ba736d314542442">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a699350d7b17c02525ba736d314542442&quot;)">
-      <span class="type"></span>
-      <a class="name">hasMouse</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a699350d7b17c02525ba736d314542442" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a699350d7b17c02525ba736d314542442&quot;)">
+        <span class="type"></span>
+        <a class="name">hasMouse</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a699350d7b17c02525ba736d314542442_description">
@@ -1387,12 +1584,14 @@
 
 </div></div>
 
-  </div><div id="ab16d3b99d7e34f4cbe63ba8e0c2a1387">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ab16d3b99d7e34f4cbe63ba8e0c2a1387&quot;)">
-      <span class="type"></span>
-      <a class="name">hasKeyboard</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="ab16d3b99d7e34f4cbe63ba8e0c2a1387" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab16d3b99d7e34f4cbe63ba8e0c2a1387&quot;)">
+        <span class="type"></span>
+        <a class="name">hasKeyboard</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ab16d3b99d7e34f4cbe63ba8e0c2a1387_description">
@@ -1401,12 +1600,14 @@
 
 </div></div>
 
-  </div><div id="a52fee23e0d99157e65796650df94cd1a">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a52fee23e0d99157e65796650df94cd1a&quot;)">
-      <span class="type"></span>
-      <a class="name">createSurface</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a52fee23e0d99157e65796650df94cd1a" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a52fee23e0d99157e65796650df94cd1a&quot;)">
+        <span class="type"></span>
+        <a class="name">createSurface</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a52fee23e0d99157e65796650df94cd1a_description">
@@ -1415,12 +1616,14 @@
 
 </div></div>
 
-  </div><div id="a8bb95b3c374bbad6b4d85a2184e718f0">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a8bb95b3c374bbad6b4d85a2184e718f0&quot;)">
-      <span class="type"></span>
-      <a class="name">destroySurface</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a8bb95b3c374bbad6b4d85a2184e718f0" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8bb95b3c374bbad6b4d85a2184e718f0&quot;)">
+        <span class="type"></span>
+        <a class="name">destroySurface</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a8bb95b3c374bbad6b4d85a2184e718f0_description">
@@ -1429,12 +1632,14 @@
 
 </div></div>
 
-  </div><div id="ac9f5234cae6d6ea9d82ff1ca42abd01c">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ac9f5234cae6d6ea9d82ff1ca42abd01c&quot;)">
-      <span class="type"></span>
-      <a class="name">createWindow</a>
-      <span class="args">(const ofRectangle &amp;requestedWindowRect)</span>
-      <span class="note"></span>
+  </div><div id="ac9f5234cae6d6ea9d82ff1ca42abd01c" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac9f5234cae6d6ea9d82ff1ca42abd01c&quot;)">
+        <span class="type"></span>
+        <a class="name">createWindow</a>
+        <span class="args">(const ofRectangle &amp;requestedWindowRect)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ac9f5234cae6d6ea9d82ff1ca42abd01c_description">
@@ -1443,12 +1648,14 @@
 
 </div></div>
 
-  </div><div id="a1ee61bd5f9489be8e259279fb3ec326d">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a1ee61bd5f9489be8e259279fb3ec326d&quot;)">
-      <span class="type"></span>
-      <a class="name">destroyWindow</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a1ee61bd5f9489be8e259279fb3ec326d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1ee61bd5f9489be8e259279fb3ec326d&quot;)">
+        <span class="type"></span>
+        <a class="name">destroyWindow</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a1ee61bd5f9489be8e259279fb3ec326d_description">
@@ -1457,12 +1664,14 @@
 
 </div></div>
 
-  </div><div id="a973bf5869dc1c7cd76cbf03a7460c896">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a973bf5869dc1c7cd76cbf03a7460c896&quot;)">
-      <span class="type"></span>
-      <a class="name">initNative</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a973bf5869dc1c7cd76cbf03a7460c896" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a973bf5869dc1c7cd76cbf03a7460c896&quot;)">
+        <span class="type"></span>
+        <a class="name">initNative</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a973bf5869dc1c7cd76cbf03a7460c896_description">
@@ -1471,12 +1680,14 @@
 
 </div></div>
 
-  </div><div id="a392e88dc3176d4a9d7d871e232de1b57">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a392e88dc3176d4a9d7d871e232de1b57&quot;)">
-      <span class="type"></span>
-      <a class="name">exitNative</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a392e88dc3176d4a9d7d871e232de1b57" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a392e88dc3176d4a9d7d871e232de1b57&quot;)">
+        <span class="type"></span>
+        <a class="name">exitNative</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a392e88dc3176d4a9d7d871e232de1b57_description">
@@ -1485,12 +1696,14 @@
 
 </div></div>
 
-  </div><div id="abf506cc3c5b8b27bb7a1c761cb817a72">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#abf506cc3c5b8b27bb7a1c761cb817a72&quot;)">
-      <span class="type"></span>
-      <a class="name">getNativeWindow</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="abf506cc3c5b8b27bb7a1c761cb817a72" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#abf506cc3c5b8b27bb7a1c761cb817a72&quot;)">
+        <span class="type"></span>
+        <a class="name">getNativeWindow</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="abf506cc3c5b8b27bb7a1c761cb817a72_description">
@@ -1499,12 +1712,14 @@
 
 </div></div>
 
-  </div><div id="a8f380c64b68b0051f95f2a61c73e4eff">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a8f380c64b68b0051f95f2a61c73e4eff&quot;)">
-      <span class="type"></span>
-      <a class="name">getNativeDisplay</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a8f380c64b68b0051f95f2a61c73e4eff" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8f380c64b68b0051f95f2a61c73e4eff&quot;)">
+        <span class="type"></span>
+        <a class="name">getNativeDisplay</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a8f380c64b68b0051f95f2a61c73e4eff_description">
@@ -1513,12 +1728,14 @@
 
 </div></div>
 
-  </div><div id="a46cfd1e5eb7edc7af2f7921026c91c9a">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a46cfd1e5eb7edc7af2f7921026c91c9a&quot;)">
-      <span class="type"></span>
-      <a class="name">createX11NativeWindow</a>
-      <span class="args">(const ofRectangle &amp;requestedWindowRect)</span>
-      <span class="note"></span>
+  </div><div id="a46cfd1e5eb7edc7af2f7921026c91c9a" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a46cfd1e5eb7edc7af2f7921026c91c9a&quot;)">
+        <span class="type"></span>
+        <a class="name">createX11NativeWindow</a>
+        <span class="args">(const ofRectangle &amp;requestedWindowRect)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a46cfd1e5eb7edc7af2f7921026c91c9a_description">
@@ -1527,12 +1744,14 @@
 
 </div></div>
 
-  </div><div id="a702bf80a7a514818244bc881f8e3e71d">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a702bf80a7a514818244bc881f8e3e71d&quot;)">
-      <span class="type"></span>
-      <a class="name">setupNativeEvents</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a702bf80a7a514818244bc881f8e3e71d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a702bf80a7a514818244bc881f8e3e71d&quot;)">
+        <span class="type"></span>
+        <a class="name">setupNativeEvents</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a702bf80a7a514818244bc881f8e3e71d_description">
@@ -1541,12 +1760,14 @@
 
 </div></div>
 
-  </div><div id="a4a06071f6a19d32ca2e1d8e308b66b56">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a4a06071f6a19d32ca2e1d8e308b66b56&quot;)">
-      <span class="type"></span>
-      <a class="name">destroyNativeEvents</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a4a06071f6a19d32ca2e1d8e308b66b56" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4a06071f6a19d32ca2e1d8e308b66b56&quot;)">
+        <span class="type"></span>
+        <a class="name">destroyNativeEvents</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a4a06071f6a19d32ca2e1d8e308b66b56_description">
@@ -1555,12 +1776,14 @@
 
 </div></div>
 
-  </div><div id="a08d12918a490bb6e99ca112b54b3cc9f">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a08d12918a490bb6e99ca112b54b3cc9f&quot;)">
-      <span class="type"></span>
-      <a class="name">setupNativeUDev</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a08d12918a490bb6e99ca112b54b3cc9f" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a08d12918a490bb6e99ca112b54b3cc9f&quot;)">
+        <span class="type"></span>
+        <a class="name">setupNativeUDev</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a08d12918a490bb6e99ca112b54b3cc9f_description">
@@ -1569,12 +1792,14 @@
 
 </div></div>
 
-  </div><div id="a11f3db1e25f4b9069ad8994ef39058c4">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a11f3db1e25f4b9069ad8994ef39058c4&quot;)">
-      <span class="type"></span>
-      <a class="name">destroyNativeUDev</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a11f3db1e25f4b9069ad8994ef39058c4" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a11f3db1e25f4b9069ad8994ef39058c4&quot;)">
+        <span class="type"></span>
+        <a class="name">destroyNativeUDev</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a11f3db1e25f4b9069ad8994ef39058c4_description">
@@ -1583,12 +1808,14 @@
 
 </div></div>
 
-  </div><div id="a68c37b61a5ff30df8f6effe685b77f03">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a68c37b61a5ff30df8f6effe685b77f03&quot;)">
-      <span class="type"></span>
-      <a class="name">setupNativeMouse</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a68c37b61a5ff30df8f6effe685b77f03" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a68c37b61a5ff30df8f6effe685b77f03&quot;)">
+        <span class="type"></span>
+        <a class="name">setupNativeMouse</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a68c37b61a5ff30df8f6effe685b77f03_description">
@@ -1597,12 +1824,14 @@
 
 </div></div>
 
-  </div><div id="acfa83f9e8c58239c201de54cfc7f1995">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#acfa83f9e8c58239c201de54cfc7f1995&quot;)">
-      <span class="type"></span>
-      <a class="name">setupNativeKeyboard</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="acfa83f9e8c58239c201de54cfc7f1995" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#acfa83f9e8c58239c201de54cfc7f1995&quot;)">
+        <span class="type"></span>
+        <a class="name">setupNativeKeyboard</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="acfa83f9e8c58239c201de54cfc7f1995_description">
@@ -1611,12 +1840,14 @@
 
 </div></div>
 
-  </div><div id="a5bc46e41e93d6acccacd1510f7c56d9e">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5bc46e41e93d6acccacd1510f7c56d9e&quot;)">
-      <span class="type"></span>
-      <a class="name">destroyNativeMouse</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a5bc46e41e93d6acccacd1510f7c56d9e" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5bc46e41e93d6acccacd1510f7c56d9e&quot;)">
+        <span class="type"></span>
+        <a class="name">destroyNativeMouse</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a5bc46e41e93d6acccacd1510f7c56d9e_description">
@@ -1625,12 +1856,14 @@
 
 </div></div>
 
-  </div><div id="a18feeab599cd7710da5280fedd9fce6b">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a18feeab599cd7710da5280fedd9fce6b&quot;)">
-      <span class="type"></span>
-      <a class="name">destroyNativeKeyboard</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a18feeab599cd7710da5280fedd9fce6b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a18feeab599cd7710da5280fedd9fce6b&quot;)">
+        <span class="type"></span>
+        <a class="name">destroyNativeKeyboard</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a18feeab599cd7710da5280fedd9fce6b_description">
@@ -1639,12 +1872,14 @@
 
 </div></div>
 
-  </div><div id="ae75871a1c31ccdd0d4e04585dcc416da">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ae75871a1c31ccdd0d4e04585dcc416da&quot;)">
-      <span class="type"></span>
-      <a class="name">readNativeMouseEvents</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="ae75871a1c31ccdd0d4e04585dcc416da" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae75871a1c31ccdd0d4e04585dcc416da&quot;)">
+        <span class="type"></span>
+        <a class="name">readNativeMouseEvents</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ae75871a1c31ccdd0d4e04585dcc416da_description">
@@ -1653,12 +1888,14 @@
 
 </div></div>
 
-  </div><div id="a34c83aed92e8f4384b7499def9c0d262">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a34c83aed92e8f4384b7499def9c0d262&quot;)">
-      <span class="type"></span>
-      <a class="name">readNativeKeyboardEvents</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="a34c83aed92e8f4384b7499def9c0d262" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a34c83aed92e8f4384b7499def9c0d262&quot;)">
+        <span class="type"></span>
+        <a class="name">readNativeKeyboardEvents</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a34c83aed92e8f4384b7499def9c0d262_description">
@@ -1667,12 +1904,14 @@
 
 </div></div>
 
-  </div><div id="ac404002771cb080aa70f7c70e4e110d6">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ac404002771cb080aa70f7c70e4e110d6&quot;)">
-      <span class="type"></span>
-      <a class="name">readNativeUDevEvents</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="ac404002771cb080aa70f7c70e4e110d6" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac404002771cb080aa70f7c70e4e110d6&quot;)">
+        <span class="type"></span>
+        <a class="name">readNativeUDevEvents</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ac404002771cb080aa70f7c70e4e110d6_description">
@@ -1681,12 +1920,14 @@
 
 </div></div>
 
-  </div><div id="ab5ac1b3beb08b14f9a2fd6e00a12e339">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ab5ac1b3beb08b14f9a2fd6e00a12e339&quot;)">
-      <span class="type"></span>
-      <a class="name">handleX11Event</a>
-      <span class="args">(const XEvent &amp;event)</span>
-      <span class="note"></span>
+  </div><div id="ab5ac1b3beb08b14f9a2fd6e00a12e339" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab5ac1b3beb08b14f9a2fd6e00a12e339&quot;)">
+        <span class="type"></span>
+        <a class="name">handleX11Event</a>
+        <span class="args">(const XEvent &amp;event)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ab5ac1b3beb08b14f9a2fd6e00a12e339_description">
@@ -1698,7 +1939,7 @@
   </div></div>
   </div></div>
   </div></div>
-    </div>
+  </div>
 
 </div>
 
@@ -1707,9 +1948,12 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
 
 <script src="script.js"></script>
+<script src="fuse.min.js"></script>
+<script src="toc.js"></script>
+<script src="search.js"></script>
 
 </body>
 
@@ -1728,12 +1972,14 @@
     <div class="sectionContent"></div>
   </div>
 
-  <div id="classMethodTemplate">
+  <div id="classMethodTemplate" class="method">
     <div class="methodHeader">
-      <span class="type"></span>
-      <a class="name"></a>
-      <span class="args"></span>
-      <span class="note"></span>
+      <div class="methodHeaderBox">
+        <span class="type"></span>
+        <a class="name"></a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none">

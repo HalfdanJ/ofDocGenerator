@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ofLog.h</title>
+  <title>ofLog</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -26,23 +26,46 @@
 <body>
 
 
-<div class="container">
-    <div class="quicknav"><a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">utils</a> &gt; <span id="classQuickNav">ofLog.h</span></div>
-    <nav class="navigator" role="navigation">
-      <ul id="nav-parts">
-        <li class="group selected">
-          Topics
-          <ul id="topics">
-            <!--<li class="chapter"><a href="asd">sad</a></li>-->
-          <li class="chapter"><a href="#Globallogginglevel">Global logging level</a></li><li class="chapter"><a href="#Globalloggerchannel">Global logger channel</a></li><span class="class">ofLog</span><li class="chapter"><a href="#Logging">Logging</a></li><li class="chapter"><a href="#Loggingconfiguration">Logging configuration</a></li><span class="class">ofLogVerbose</span><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><span class="class">ofLogNotice</span><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><span class="class">ofLogWarning</span><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><span class="class">ofLogError</span><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><span class="class">ofLogFatalError</span><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li></ul>
-      </li></ul>
-    </nav>
-    <div class="main">
-      <div class="content">
+<nav class="navbar navbar-fixed-top header" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">ofDoc</a>
+    </div>
 
-      <div id="" class="classBlock">
+
+    <div class="navbar-form navbar-right" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search" id="search" autocomplete="off">
+      </div>
+      <ul class="searchResult hidden"></ul>
+
+    </div>
+
+
+  </div>
+</nav>
+
+
+<div class="container">
+    <div class="quicknav">
+      <a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">utils</a> &gt; <span id="classQuickNav">ofLog</span>
+    </div>
+
+  <nav class="navigator" role="navigation">
+    <ul id="nav-parts">
+      <li class="group selected">
+        Topics
+        <ul id="topics">
+        <li class="chapter"><a href="#Globallogginglevel">Global logging level</a></li><li class="chapter"><a href="#Globalloggerchannel">Global logger channel</a></li><span class="class">ofLog</span><li class="chapter"><a href="#Logging">Logging</a></li><li class="chapter"><a href="#Loggingconfiguration">Logging configuration</a></li><span class="class">ofLogVerbose</span><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><span class="class">ofLogNotice</span><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><span class="class">ofLogWarning</span><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><span class="class">ofLogError</span><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><span class="class">ofLogFatalError</span><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li></ul>
+    </li></ul>
+  </nav>
+  <div class="main">
+    <div class="content">
+
+    <div id="" class="classBlock">
     <div class="classHeader">
-      <h1 class="classTitle">ofLog.h</h1>
+      <h1 class="classTitle">ofLog</h1>
     </div>
     <div class="classDescription"><div class="textblock"><p><a class="el" href="ofLog.html" title="a streaming log interface ">ofLog</a> provides an interface for writing text output from your app. It&apos;s basically a more useful version of <code>cout</code> or <code>printf</code> where the output can be filtered and written to the console or to a file.</p>
 <p>Sometimes you want to be able to see when something has happened inside the code, but don&apos;t need to draw something visually. Oftentimes it&apos;s more then enough to print out the state of a few variables when debugging. Other times you need to know if a crash happened while your app was running somewhere, so you log messages and variables to a file you can read after the program crashes.</p>
@@ -97,12 +120,14 @@
     <div class="classMethods"><div id="Globallogginglevel">
     <h3 class="sectionHeader">Global logging level</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a6b3aba959377cae6ed3afbb9d5826fe4">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a6b3aba959377cae6ed3afbb9d5826fe4&quot;)">
-      <span class="type"></span>
-      <a class="name">ofLogLevel</a>
-      <span class="args"></span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="a6b3aba959377cae6ed3afbb9d5826fe4" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6b3aba959377cae6ed3afbb9d5826fe4&quot;)">
+        <span class="type"></span>
+        <a class="name">ofLogLevel</a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a6b3aba959377cae6ed3afbb9d5826fe4_description">
@@ -127,12 +152,14 @@
 
 </div></div>
 
-  </div><div id="a7a1aca68c925a0cf024a14fc70fb7417">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a7a1aca68c925a0cf024a14fc70fb7417&quot;)">
-      <span class="type"></span>
-      <a class="name">ofSetLogLevel</a>
-      <span class="args">(ofLogLevel level)</span>
-      <span class="note"></span>
+  </div><div id="a7a1aca68c925a0cf024a14fc70fb7417" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7a1aca68c925a0cf024a14fc70fb7417&quot;)">
+        <span class="type"></span>
+        <a class="name">ofSetLogLevel</a>
+        <span class="args">(ofLogLevel level)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a7a1aca68c925a0cf024a14fc70fb7417_description">
@@ -168,12 +195,14 @@
 </div><!-- fragment --> 
 </div></div>
 
-  </div><div id="ac6e0d81bf5142843892fe54908399794">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#ac6e0d81bf5142843892fe54908399794&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetLogLevel</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="ac6e0d81bf5142843892fe54908399794" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac6e0d81bf5142843892fe54908399794&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetLogLevel</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="ac6e0d81bf5142843892fe54908399794_description">
@@ -184,12 +213,14 @@
 
 </div></div>
 
-  </div><div id="a18730a546b3c27723dc95ecf1a5e55b7">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a18730a546b3c27723dc95ecf1a5e55b7&quot;)">
-      <span class="type"></span>
-      <a class="name">ofGetLogLevelName</a>
-      <span class="args">(ofLogLevel level, bool pad=false)</span>
-      <span class="note"></span>
+  </div><div id="a18730a546b3c27723dc95ecf1a5e55b7" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a18730a546b3c27723dc95ecf1a5e55b7&quot;)">
+        <span class="type"></span>
+        <a class="name">ofGetLogLevelName</a>
+        <span class="args">(ofLogLevel level, bool pad=false)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a18730a546b3c27723dc95ecf1a5e55b7_description">
@@ -211,12 +242,14 @@
   </div><div id="Globalloggerchannel">
     <h3 class="sectionHeader">Global logger channel</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a1ed956aa67bdd9871b2839ead0dc1191">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a1ed956aa67bdd9871b2839ead0dc1191&quot;)">
-      <span class="type"></span>
-      <a class="name">ofLogToFile</a>
-      <span class="args">(const string &amp;path, bool append=false)</span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="a1ed956aa67bdd9871b2839ead0dc1191" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1ed956aa67bdd9871b2839ead0dc1191&quot;)">
+        <span class="type"></span>
+        <a class="name">ofLogToFile</a>
+        <span class="args">(const string &amp;path, bool append=false)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a1ed956aa67bdd9871b2839ead0dc1191_description">
@@ -234,12 +267,14 @@
 
 </div></div>
 
-  </div><div id="aeaeb5016cb838a99e88502a57d8b2cb6">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aeaeb5016cb838a99e88502a57d8b2cb6&quot;)">
-      <span class="type"></span>
-      <a class="name">ofLogToConsole</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+  </div><div id="aeaeb5016cb838a99e88502a57d8b2cb6" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aeaeb5016cb838a99e88502a57d8b2cb6&quot;)">
+        <span class="type"></span>
+        <a class="name">ofLogToConsole</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aeaeb5016cb838a99e88502a57d8b2cb6_description">
@@ -251,12 +286,14 @@
 
 </div></div>
 
-  </div><div id="aa88c7cbf28c4fd02fa688f537b41df18">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#aa88c7cbf28c4fd02fa688f537b41df18&quot;)">
-      <span class="type"></span>
-      <a class="name">ofSetLoggerChannel</a>
-      <span class="args">(shared_ptr&lt; ofBaseLoggerChannel &gt; loggerChannel)</span>
-      <span class="note"></span>
+  </div><div id="aa88c7cbf28c4fd02fa688f537b41df18" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa88c7cbf28c4fd02fa688f537b41df18&quot;)">
+        <span class="type"></span>
+        <a class="name">ofSetLoggerChannel</a>
+        <span class="args">(shared_ptr&lt; ofBaseLoggerChannel &gt; loggerChannel)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="aa88c7cbf28c4fd02fa688f537b41df18_description">
@@ -284,12 +321,14 @@
     <div class="classMethods"><div id="Logging">
     <h3 class="sectionHeader">Logging</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a11a926adbe4ef4bfbee393345f5df1cc">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a11a926adbe4ef4bfbee393345f5df1cc&quot;)">
-      <span class="type"></span>
-      <a class="name">ofLog</a>
-      <span class="args">()</span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="a11a926adbe4ef4bfbee393345f5df1cc" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a11a926adbe4ef4bfbee393345f5df1cc&quot;)">
+        <span class="type"></span>
+        <a class="name">ofLog</a>
+        <span class="args">()</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a11a926adbe4ef4bfbee393345f5df1cc_description">
@@ -369,12 +408,14 @@ ofLogFatalError()
   </div><div id="Loggingconfiguration">
     <h3 class="sectionHeader">Logging configuration</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="acd753685ca548b145fd33301abe63433">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#acd753685ca548b145fd33301abe63433&quot;)">
-      <span class="type"></span>
-      <a class="name">setAutoSpace</a>
-      <span class="args">(bool autoSpace)</span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="acd753685ca548b145fd33301abe63433" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#acd753685ca548b145fd33301abe63433&quot;)">
+        <span class="type"></span>
+        <a class="name">setAutoSpace</a>
+        <span class="args">(bool autoSpace)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="acd753685ca548b145fd33301abe63433_description">
@@ -390,12 +431,14 @@ ofLogFatalError()
 
 </div></div>
 
-  </div><div id="a25da93787b658473a679ba3096407270">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a25da93787b658473a679ba3096407270&quot;)">
-      <span class="type"></span>
-      <a class="name">setChannel</a>
-      <span class="args">(shared_ptr&lt; ofBaseLoggerChannel &gt; channel)</span>
-      <span class="note"></span>
+  </div><div id="a25da93787b658473a679ba3096407270" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a25da93787b658473a679ba3096407270&quot;)">
+        <span class="type"></span>
+        <a class="name">setChannel</a>
+        <span class="args">(shared_ptr&lt; ofBaseLoggerChannel &gt; channel)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a25da93787b658473a679ba3096407270_description">
@@ -417,12 +460,14 @@ ofLogFatalError()
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a285461612136b05e9b9abbc9ebd2a0f3">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a285461612136b05e9b9abbc9ebd2a0f3&quot;)">
-      <span class="type"></span>
-      <a class="name">ofLogVerbose</a>
-      <span class="args">(const string &amp;module=&quot;&quot;)</span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="a285461612136b05e9b9abbc9ebd2a0f3" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a285461612136b05e9b9abbc9ebd2a0f3&quot;)">
+        <span class="type"></span>
+        <a class="name">ofLogVerbose</a>
+        <span class="args">(const string &amp;module=&quot;&quot;)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a285461612136b05e9b9abbc9ebd2a0f3_description">
@@ -446,12 +491,14 @@ ofLogFatalError()
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a6729c589b2c946748c9b59015a1328e5">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a6729c589b2c946748c9b59015a1328e5&quot;)">
-      <span class="type"></span>
-      <a class="name">ofLogNotice</a>
-      <span class="args">(const string &amp;module=&quot;&quot;)</span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="a6729c589b2c946748c9b59015a1328e5" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6729c589b2c946748c9b59015a1328e5&quot;)">
+        <span class="type"></span>
+        <a class="name">ofLogNotice</a>
+        <span class="args">(const string &amp;module=&quot;&quot;)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a6729c589b2c946748c9b59015a1328e5_description">
@@ -475,12 +522,14 @@ ofLogFatalError()
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a9679a4b19eb6707ae13aa644daf56b42">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a9679a4b19eb6707ae13aa644daf56b42&quot;)">
-      <span class="type"></span>
-      <a class="name">ofLogWarning</a>
-      <span class="args">(const string &amp;module=&quot;&quot;)</span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="a9679a4b19eb6707ae13aa644daf56b42" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9679a4b19eb6707ae13aa644daf56b42&quot;)">
+        <span class="type"></span>
+        <a class="name">ofLogWarning</a>
+        <span class="args">(const string &amp;module=&quot;&quot;)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a9679a4b19eb6707ae13aa644daf56b42_description">
@@ -504,12 +553,14 @@ ofLogFatalError()
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a5d595a6ff1fd74b962dc90a410d5e956">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a5d595a6ff1fd74b962dc90a410d5e956&quot;)">
-      <span class="type"></span>
-      <a class="name">ofLogError</a>
-      <span class="args">(const string &amp;module=&quot;&quot;)</span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="a5d595a6ff1fd74b962dc90a410d5e956" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5d595a6ff1fd74b962dc90a410d5e956&quot;)">
+        <span class="type"></span>
+        <a class="name">ofLogError</a>
+        <span class="args">(const string &amp;module=&quot;&quot;)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a5d595a6ff1fd74b962dc90a410d5e956_description">
@@ -533,12 +584,14 @@ ofLogFatalError()
     <div class="classMethods"><div id="PublicFunctions">
     <h3 class="sectionHeader">Public Functions</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a36491d3a10c051583e400b032e24ab1a">
-    <div class="methodHeader" onClick="toggleDescription(&quot;#a36491d3a10c051583e400b032e24ab1a&quot;)">
-      <span class="type"></span>
-      <a class="name">ofLogFatalError</a>
-      <span class="args">(const string &amp;module=&quot;&quot;)</span>
-      <span class="note"></span>
+    <div class="sectionContent"><div id="a36491d3a10c051583e400b032e24ab1a" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a36491d3a10c051583e400b032e24ab1a&quot;)">
+        <span class="type"></span>
+        <a class="name">ofLogFatalError</a>
+        <span class="args">(const string &amp;module=&quot;&quot;)</span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none" id="a36491d3a10c051583e400b032e24ab1a_description">
@@ -554,7 +607,7 @@ ofLogFatalError()
   </div></div>
   </div></div>
   </div></div>
-    </div>
+  </div>
 
 </div>
 
@@ -563,9 +616,12 @@ ofLogFatalError()
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
 
 <script src="script.js"></script>
+<script src="fuse.min.js"></script>
+<script src="toc.js"></script>
+<script src="search.js"></script>
 
 </body>
 
@@ -584,12 +640,14 @@ ofLogFatalError()
     <div class="sectionContent"></div>
   </div>
 
-  <div id="classMethodTemplate">
+  <div id="classMethodTemplate" class="method">
     <div class="methodHeader">
-      <span class="type"></span>
-      <a class="name"></a>
-      <span class="args"></span>
-      <span class="note"></span>
+      <div class="methodHeaderBox">
+        <span class="type"></span>
+        <a class="name"></a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription" style="display:none">
