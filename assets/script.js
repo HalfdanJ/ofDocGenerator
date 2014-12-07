@@ -1,47 +1,49 @@
 function toggleDescription(elm){
-  var e = $(elm+"_description");
-  $(elm).toggleClass("open")
+  if($(elm).hasClass('method')) {
+
+    var e = $(elm + "_description");
+    $(elm).toggleClass("open")
 
 
-  if( $(elm).hasClass("open")){
-    var wh = $( window ).height();
-    var eh = (e.height() + 80);
-    if(eh > wh-70){
-      eh = wh-70;
+    if ($(elm).hasClass("open")) {
+      var wh = $(window).height();
+      var eh = (e.height() + 80);
+      if (eh > wh - 70) {
+        eh = wh - 70;
+      }
+
+      var scrollBottom = $(elm).offset().top - wh + eh;
+      if (scrollBottom > $(window).scrollTop()) {
+        //Scroll
+        $('html,body').animate({
+          scrollTop: scrollBottom
+        }, 300);
+      }
     }
 
-    var scrollBottom = $(elm).offset().top - wh + eh;
-    if(scrollBottom > $(window).scrollTop()) {
-      //Scroll
-      $('html,body').animate({
-        scrollTop: scrollBottom
-      }, 300);
-    }
-
+    e.slideToggle("fast", function () { });
 
   }
-
-
-  e.slideToggle("fast", function(){
-  });
-
 }
 
 
 $( document ).ready(function() {
 
+  // Check if there is a # in the url, and open the description if there is
   if(window.location.hash) {
     console.log(window.location.hash)
     toggleDescription(window.location.hash);
   }
 
-  if ("onhashchange" in window) // does the browser support the hashchange event?
+  // Look for # change in the URL
+  if ("onhashchange" in window) { // does the browser support the hashchange event?
     window.onhashchange = function () {
-      if(! $(window.location.hash).hasClass("open")) {
+      if (!$(window.location.hash).hasClass("open")) {
         toggleDescription(window.location.hash);
       }
 
     }
+  }
 
   $(".chapter").click(function () {
     $('.chapter.selected').removeClass('selected');
@@ -50,10 +52,9 @@ $( document ).ready(function() {
   })
 
 
-  // Cache selectors
   var menu = $(".navigator");
 
-// All list items
+  // All list items
   var offset = 150;
   var menuItems = menu.find("a");
 
@@ -64,8 +65,9 @@ $( document ).ready(function() {
   });
 
 
-// Bind to scroll
+  // Bind to scroll to update the menu
   $(window).scroll(function(){
+
     // Get container scroll position
     var fromTop = $(this).scrollTop() + offset;
 
@@ -87,10 +89,5 @@ $( document ).ready(function() {
       .end().filter("[href=#"+id+"]").parent().addClass("selected");
 
   });
-
-
-
-
-
 
 });

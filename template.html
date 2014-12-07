@@ -34,12 +34,13 @@
     </div>
 
 
-    <form class="navbar-form navbar-right" role="search">
+    <div class="navbar-form navbar-right" role="search">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
+        <input type="text" class="form-control" placeholder="Search" id="search" autocomplete="off">
       </div>
+      <ul class="searchResult hidden"></ul>
 
-    </form>
+    </div>
 
 
   </div>
@@ -72,9 +73,12 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
 
 <script src="script.js"></script>
+<script src="fuse.min.js"></script>
+<script src="toc.js"></script>
+<script src="search.js"></script>
 
 </body>
 
@@ -93,7 +97,7 @@
     <div class="sectionContent"></div>
   </div>
 
-  <div id="classMethodTemplate">
+  <div id="classMethodTemplate" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox">
         <span class="type"></span>
