@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap 101 Template</title>
+  <title>ofDoc</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -26,22 +26,44 @@
 <body>
 
 
-<div class="container">
-    <div class="quicknav"><a href="index.html">ofDoc</a> > <a id="categoryQuickNav"></a> > <span id="classQuickNav"></span></div>
-    <nav class="navigator" role="navigation">
-      <ul id="nav-parts">
-        <li class="group selected">
-          Topics
-          <ul id="topics">
-            <!--<li class="chapter"><a href="asd">sad</a></li>-->
-          </ul>
-      </ul>
-    </nav>
-    <div class="main">
-      <div class="content">
-
-      </div>
+<nav class="navbar navbar-fixed-top header" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">ofDoc</a>
     </div>
+
+
+    <form class="navbar-form navbar-right" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+
+    </form>
+
+
+  </div>
+</nav>
+
+
+<div class="container">
+    <div class="quicknav">
+      <a href="index.html">ofDoc</a> > <a id="categoryQuickNav"></a> > <span id="classQuickNav"></span>
+    </div>
+
+  <nav class="navigator" role="navigation">
+    <ul id="nav-parts">
+      <li class="group selected">
+        Topics
+        <ul id="topics">
+        </ul>
+    </ul>
+  </nav>
+  <div class="main">
+    <div class="content">
+
+    </div>
+  </div>
 
 </div>
 
@@ -73,10 +95,12 @@
 
   <div id="classMethodTemplate">
     <div class="methodHeader">
-      <span class="type"></span>
-      <a class="name"></a>
-      <span class="args"></span>
-      <span class="note"></span>
+      <div class="methodHeaderBox">
+        <span class="type"></span>
+        <a class="name"></a>
+        <span class="args"></span>
+        <span class="note"></span>
+      </div>
     </div>
 
     <div class="methodDescription"  style="display:none">

@@ -4,7 +4,7 @@ var fs = require('fs-extra'),
   xml2js = require('xml2js'),
   cheerio = require('cheerio')
 
-var filterGroup = '';
+var filterGroup = 'gl';
 
 try {
   var sass = require('node-sass');
@@ -35,6 +35,8 @@ if(fs.existsSync('output'))
   fs.removeSync('output');
 fs.mkdirSync('output');
 fs.copySync('assets/script.js', 'output/script.js');
+fs.copySync('assets/search.js', 'output/search.js');
+fs.copySync('assets/fuse.min.js', 'output/fuse.min.js');
 
 //Create the css file from the scss file in assets
 /*
@@ -44,23 +46,32 @@ fs.copySync('assets/script.js', 'output/script.js');
 // Load the doc structure
 //var structure = require("./structure.json");
 var tocInfo = {};
+var searchToc = [];
 
 loadStructure()
   .then(function(structure){
     // Generate the docs
-    console.log(structure);
+    //console.log(structure);
+
+    var promises = [];
 
     for(var category in structure['core']){
       structure['core'][category].forEach(function(file){
         try {
-          generateDoc(file, category);
+          promises.push(generateDoc(file, category));
         } catch(e){
-          console.log(e)
+          console.error(e)
         }
       })
     }
-    // Generate the TOC (index.html)
-    generateToc(structure, tocInfo);
+
+    Q.all(promises).then(function(){
+      console.log("Generate toc");
+      // Generate the TOC (index.html)
+      generateToc(structure, tocInfo);
+      generateSearchTocJSON(structure, searchToc);
+    });
+
   });
 
 
@@ -85,7 +96,7 @@ function loadStructure(){
 
         // Filter out the root dir xml that descripes the openframeworks base folder
         if(!compoundname.match(/openframeworks$/i)) {
-          console.log('"' + compoundname + '"', '"' + filterGroup + '"', filterGroup != compoundname);
+          //console.log('"' + compoundname + '"', '"' + filterGroup + '"', filterGroup != compoundname);
           if (filterGroup && filterGroup != compoundname) {
 
           } else {
@@ -136,11 +147,18 @@ function generateDoc(fileDescription, category) {
    els*e*/
   console.log("Generate "+className)
 
-  parseDoxygenXml(doxygenName)
+  return parseDoxygenXml(doxygenName)
     .then(function(parseData) {
       console.log("Scrape "+className)
 
       return scrapeDoxygenHtml(parseData);
+    })
+
+    // Generate search toc object
+    .then(function(parsedData){
+      addObjectToSearch(parsedData);
+
+      return parsedData;
     })
     .then(function(parseData){
       console.log("Generate html "+className)
@@ -165,16 +183,6 @@ function generateDoc(fileDescription, category) {
 function parseDoxygenXml(doxygenName){
   var deferred = Q.defer();
 
-
-  /*  if(fs.existsSync(dir + "xml/"+doxygenName+ "_8h.xml")){
-   doxygenName = doxygenName+"_8h";
-   }
-   else {
-   console.error("NO XML FOR "+className);
-   return;
-   }*/
-
-
   var ret = {
     classes: [],
     sections: [],
@@ -183,27 +191,35 @@ function parseDoxygenXml(doxygenName){
     htmlPath: dir + "html/" + doxygenName + ".html"
   };
 
+  //Load the doxygen xml file
   var xmlData = fs.readFileSync(ret.xmlPath);
   var xmlParser = new xml2js.Parser();
   xmlParser.parseString(xmlData, function (err, result) {
 
     var promises = [];
 
-
+    // The compounds in the XML
     var compounds = result['doxygen']['compounddef'];
 
+    // compounds.length is always 1
     for (var i = 0; i < compounds.length; i++) {
       var compound = compounds[i];
 
+      // Object name
+      ret.name = compound['compoundname'][0].replace(".h","");
+
+      // Object url
+      ret.url = compound['location'][0]['$']['file'].match(/\/(\w+).h$/)[1]+".html";
+
+      // Object type
+      ret.type = compound['$'].kind;
 
 
-      // Site name
-      ret.name = compound['compoundname'][0];
-
-      // Bried description
+      // Brief description
       if (compound['briefdescription'].length == 1
         && compound['briefdescription'][0]['para']) {
         tocInfo[ret.name] = compound['briefdescription'][0]['para'][0];
+        ret.briefDescription = compound['briefdescription'][0]['para'][0];
       } else {
         console.error("Missing briefDescription on " + ret.name);
       }
@@ -213,7 +229,6 @@ function parseDoxygenXml(doxygenName){
 
         compound['innerclass'].forEach(function (innerclass) {
           var classDoxygenName = innerclass['$']['refid'];
-          var className = innerclass['_'];
 
           var p = parseDoxygenXml(classDoxygenName).then(function(classData){
             ret.classes.push(classData);
@@ -320,9 +335,8 @@ function parseDoxygenXml(doxygenName){
               argsstring: member.argsstring ? member.argsstring[0] : ""
             };
 
-            /*if(member.type['ref']){
-
-             }*/
+            // Member ref (anchor)
+            m.ref = m.info.id.replace(doxygenName + "_1", "");
 
             if (m.name.match(/^@/g)) {
               m.name = "Anonymous " + m.info.kind;
@@ -345,31 +359,26 @@ function parseDoxygenXml(doxygenName){
                 m.name = funcRegex[2].trim();
                 m.argsstring = funcRegex[3].trim();
               } catch (e) {
-                console.log(m.argsstring);
+                //console.log(m.argsstring);
                 console.error(e);
               }
               //console.log(m.type, m.name, m.argsstring)
             }
 
-            console.log(lastName,m.name);
-            if(lastName != m.name) {
+            // Group functions with the same name under one method as different implementations
+            if (lastName != m.name) {
               section.methods.push({implementations: [m]});
             } else {
-              section.methods[section.methods.length-1].implementations.push(m);
+              section.methods[section.methods.length - 1].implementations.push(m);
             }
             lastName = m.name;
-
-            //console.log(memberType,name)
-            // console.log(util.inspect(member, false, null))
           });
 
           // Add the section
           ret.sections.push(section);
 
-          //console.log(util.inspect(section, false, null))
         });
       }
-      //console.log(util.inspect(compound, false, null))
     }
 
 
@@ -457,6 +466,31 @@ function scrapeDoxygenHtml(parsedData){
   });
 }
 
+// ----------
+
+function addObjectToSearch(parsedData){
+  searchToc.push({name:parsedData.name, type:parsedData.type, ref:parsedData.url})
+
+  parsedData.sections.forEach(function (section) {
+    section.methods.forEach(function(method){
+      var ref = method.implementations[0].ref;
+      searchToc.push({
+        name:method.implementations[0].name,
+        type:method.implementations[0].info.kind,
+        ref:parsedData.url+"#"+ref
+      })
+    });
+
+    // Inner classes
+    parsedData.classes.forEach(function(innerclass){
+      addObjectToSearch(innerclass);
+    });
+
+  });
+
+
+}
+
 // -----------
 
 function generateHtml(parsedData, category){
@@ -516,17 +550,15 @@ function generateHtmlContent(parsedData, $){
     }
     section.methods.forEach(function (memberGroup) {
       var method = memberGroup.implementations[0];
-      var ref = method.info.id.replace(parsedData.doxygenName + "_1", "");
+      var ref = method.ref;// method.info.id.replace(parsedData.doxygenName + "_1", "");
 
 
       var m = $('#classMethodTemplate').clone().attr('id', ref);
 
-      var header = m.find(".methodHeader");
+      var header = m.find(".methodHeader").find('.methodHeaderBox');
 
       // Type
       header.children('.arg').html(getTypeHtml(method.type));
-
-
 
       // Name
       header.children('.name').text(method.name);
@@ -547,8 +579,6 @@ function generateHtmlContent(parsedData, $){
       // Description
 
       // Find the coresponding description in the doxygen generated html
-
-
       var methodDescription = m.find(".methodDescription");
       methodDescription.attr('id', ref + "_description");
 
@@ -563,7 +593,6 @@ function generateHtmlContent(parsedData, $){
         variantDesc.append('<span class="name">'+method.name+'</span>');
         variantDesc.append('<span class="args">'+method.argsstring+'</span>');
 
-        console.log(variantDesc.html())
         methodDescription.append('<div class="memberDocumentation">'+method.htmlDescription+"</div>");
 
         first = false;
@@ -598,13 +627,16 @@ function generateToc(structure, tocInfo){
 
   var c = $(".content");
   for(var category in structure['core']){
-    c.append('<h3>'+category+"</h3>");
+    var elm = c.append('<div class="section">').children().last();
+    c.append(elm);
+
+    elm.append('<h3>'+category+"</h3>");
     structure['core'][category].forEach(function(file){
       var desc = '';
       if(tocInfo[file]){
         desc = ' - '+tocInfo[file.name];
       }
-      c.append('<a href="'+file.name+'.html">'+file.name+"</a>"+desc+"<br>");
+      elm.append('<a href="'+file.name+'.html">'+file.name+"</a>"+desc+"<br>");
     })
   }
   // Write the file
@@ -614,6 +646,13 @@ function generateToc(structure, tocInfo){
 
 // -----------
 
+function generateSearchTocJSON(structure, tocInfo){
+  // Write the file
+  fs.writeFile("output/toc.js", "var ofToc = "+JSON.stringify(searchToc));
+
+}
+
+// -----------
 function getTypeHtml(type){
   if (typeof type == "string") {
     //header.children('.type').text(method.type + " ");
