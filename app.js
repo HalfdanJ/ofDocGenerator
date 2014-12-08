@@ -6,7 +6,7 @@ var fs = require('fs-extra'),
 
 // Set this to the section you work on to speed up the generation.
 // But remember to remove it again! :)
-var filterGroup = 'utils';
+var filterGroup = 'math';
 
 // Check for sass compatibility (it does not work on Travis-ci)
 try {
@@ -35,9 +35,14 @@ console.log("Openframeworks root: "+root);
 if(fs.existsSync('output'))
   fs.removeSync('output');
 fs.mkdirSync('output');
+
+// Copy assets
 fs.copySync('assets/script.js', 'output/script.js');
 fs.copySync('assets/search.js', 'output/search.js');
 fs.copySync('assets/fuse.min.js', 'output/fuse.min.js');
+
+// Copy the images over from the docs folder
+fs.copySync(root+'/docs/images', 'output/images');
 
 
 
@@ -580,6 +585,12 @@ function generateHtml(parsedData, category){
     updateLink($(this));
   });
 
+  // update images
+  var images = $('img');
+  images.each(function(i,elm){
+    updateImageHref($(this));
+  });
+
   return $.html();
 }
 
@@ -779,6 +790,18 @@ function updateLink(elm){
   ref = getLinkUrlFromDoxygenUrl(ref);
 
   elm.attr('href',ref);
+}
+
+
+function updateImageHref(elm){
+  var src = elm.attr('src');
+
+
+  // Check if the file is a local file
+  if (!/^(?:[a-z]+:)?\/\//i.test(src)){
+    elm.attr('src', "images/"+src);
+
+  }
 }
 
 // ---------
