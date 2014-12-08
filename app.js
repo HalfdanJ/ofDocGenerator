@@ -272,19 +272,19 @@ function parseDoxygenXml(doxygenName){
             // Default names
             switch (s['$'].kind) {
               case 'public-func':
-                section.name = "Public Functions";
+                section.name = "Functions";
                 break;
               case 'public-type':
-                section.name = "Public Types";
+                section.name = "Types";
                 break;
               case 'public-attrib':
-                section.name = "Public Attributes";
+                section.name = "Attributes";
                 break;
               case 'public-static-func':
-                section.name = "Public Static Functions";
+                section.name = "Static Functions";
                 break;
               case 'public-static-attrib':
-                section.name = "Public Static Attributes";
+                section.name = "Static Attributes";
                 break;
 
               case 'protected-attrib':
