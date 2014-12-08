@@ -794,11 +794,11 @@
 </table>
 <p>in memory though both are layed in the same way so when uploading a matrix it just works without needing to transpose</p>
 <p>so although opengl docs explain transformations like:</p>
-<div class="fragment"><div class="line"><a class="code" href="ofVec3f.html">ofVec3f</a> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a> = rotateZ 30&#xBA; <a class="code" href="ofVec3f.html">ofVec3f</a> <a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a> around <a class="code" href="ofVec3f.html">ofVec3f</a> b</div>
+<div class="fragment"><div class="line"><a class="code" href="ofVec3f.html">ofVec3f</a> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a> = rotateZ 30&#xBA; <a class="code" href="ofVec3f.html">ofVec3f</a> <a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a> around <a class="code" href="ofVec3f.html">ofVec3f</a> <a class="code" href="of_matrix4x4_8cpp.html#ab2d05693952610f937e5acb3c4a8fa1b">b</a></div>
 </div><!-- fragment --><p>openGL docs says: <code>c = T(b)*R(30)*a</code></p>
 <p>with <a class="el" href="ofMatrix4x4.html" title="The ofMatrix4x4 is the big class of the math part of openFrameworks. You&apos;ll sometimes see it used for...">ofMatrix4x4</a>: </p>
 <div class="fragment"><div class="line"><a class="code" href="ofMatrix4x4.html">ofMatrix4x4</a> R = <a class="code" href="ofMatrix4x4.html#a78591c4c4b5e56f950bc7e00f377fde7">ofMatrix4x4::newRotationMatrix</a>(30,0,0,1);</div>
-<div class="line"><a class="code" href="ofMatrix4x4.html">ofMatrix4x4</a> T = ofMatrix4x4::newTranlationMatrix(b);</div>
+<div class="line"><a class="code" href="ofMatrix4x4.html">ofMatrix4x4</a> T = ofMatrix4x4::newTranlationMatrix(<a class="code" href="of_matrix4x4_8cpp.html#ab2d05693952610f937e5acb3c4a8fa1b">b</a>);</div>
 <div class="line"><a class="code" href="ofVec3f.html">ofVec3f</a> c = <a class="code" href="of_matrix4x4_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>*R*T;</div>
 </div><!-- fragment --><p> where <code>*</code> is calling <a class="el" href="ofMatrix4x4.html#a23de2543b0d37aff68c23948f483a45a" title="Vector multiplication although opengl uses premultiplication because of the way matrices are used in ...">postMult()</a> </p>
 

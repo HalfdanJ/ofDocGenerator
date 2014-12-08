@@ -67,54 +67,55 @@
     <div class="classHeader">
       <h1 class="classTitle">ofLog<small>file</small></h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p><a class="el" href="ofLog.html" title="a streaming log interface ">ofLog</a> provides an interface for writing text output from your app. It&apos;s basically a more useful version of <code>cout</code> or <code>printf</code> where the output can be filtered and written to the console or to a file.</p>
+    <div class="classDescription"><div class="textblock"><p><a class="el" href="ofLog.html" title="A C++ stream-style logging interface. ">ofLog</a> provides an interface for writing text output from your app. It&apos;s basically a more useful version of <code>std::cout</code> or <code>printf</code> where the output can be filtered and written to the console a file, or even a custom logging module.</p>
 <p>Sometimes you want to be able to see when something has happened inside the code, but don&apos;t need to draw something visually. Oftentimes it&apos;s more then enough to print out the state of a few variables when debugging. Other times you need to know if a crash happened while your app was running somewhere, so you log messages and variables to a file you can read after the program crashes.</p>
 <h3>Log Levels</h3>
-<p>You can set the logging level so only messages above a certain priority are shown. This is useful if you want see lots of messages when debugging, but then set a higher level so only warnings and errors appear for users.</p>
-<p>See <a class="el" href="ofLog.html#a7a1aca68c925a0cf024a14fc70fb7417" title="Sets the logging level so only messages above a certain priority are shown. ">ofSetLogLevel(ofLogLevel level)</a> for more details</p>
+<p>You can set the logging level so only messages above a certain level are shown. This is useful if you want see lots of messages when debugging, but then set a higher level so only warnings and errors appear for users.</p>
+<p>See <a class="el" href="ofLog.html#a7a1aca68c925a0cf024a14fc70fb7417" title="Sets the logging level to selectively show log messages. ">ofSetLogLevel(ofLogLevel level)</a> for more details.</p>
 <h3>Usage</h3>
-<p>There are 2 ways you can use <a class="el" href="ofLog.html" title="a streaming log interface ">ofLog</a>:</p>
+<p>There are 2 ways you can use <a class="el" href="ofLog.html" title="A C++ stream-style logging interface. ">ofLog</a>:</p>
 <h4>Functional: as a function taking a message</h4>
-<div class="fragment"><div class="line"><span class="comment">// send a single string message, setting the log level</span></div>
+<div class="fragment"><div class="line"><span class="comment">// Send a single string message, setting the log level.</span></div>
 <div class="line"><a class="code" href="ofLog.html">ofLog</a>(<a class="code" href="ofLog.html#a6b3aba959377cae6ed3afbb9d5826fe4ae694d6f9c9ad50b955aa85ded74c41bc">OF_LOG_NOTICE</a>, <span class="stringliteral">&quot;the number is &quot;</span> + <a class="code" href="of_pixels_8cpp.html#a0bdb3162be2ff8c1541a42f3c8f5ac1c">ofToString</a>(10));</div>
 <div class="line"></div>
-<div class="line"><span class="comment">// the legacy printf style</span></div>
+<div class="line"><span class="comment">// The legacy printf style.</span></div>
 <div class="line"><a class="code" href="ofLog.html">ofLog</a>(<a class="code" href="ofLog.html#a6b3aba959377cae6ed3afbb9d5826fe4ae694d6f9c9ad50b955aa85ded74c41bc">OF_LOG_NOTICE</a>, <span class="stringliteral">&quot;the number is %d&quot;</span>, 10); </div>
 </div><!-- fragment --><h4>Stream: as a stream using the &lt;&lt; stream operator</h4>
-<div class="fragment"><div class="line"><span class="comment">// the stream style, setting the log level</span></div>
-<div class="line"><a class="code" href="ofLog.html">ofLog</a>(<a class="code" href="ofLog.html#a6b3aba959377cae6ed3afbb9d5826fe4ae694d6f9c9ad50b955aa85ded74c41bc">OF_LOG_NOTICE</a>) &lt;&lt; <span class="stringliteral">&quot;the number is &quot;</span> &lt;&lt; 10;</div>
+<div class="fragment"><div class="line"><span class="comment">// The stream style, setting the log level to OF_LOG_WARNING.</span></div>
+<div class="line"><a class="code" href="ofLog.html">ofLog</a>(<a class="code" href="ofLog.html#a6b3aba959377cae6ed3afbb9d5826fe4a0ece8203f15199db94060ba73e974635">OF_LOG_WARNING</a>) &lt;&lt; <span class="stringliteral">&quot;the number is &quot;</span> &lt;&lt; 10;</div>
 <div class="line"></div>
-<div class="line"><span class="comment">// this is the same as the last line, but only sends at log level notice</span></div>
+<div class="line"><span class="comment">// This is the same as the last line, except it uses the default OF_LOG_NOTICE.</span></div>
 <div class="line"><a class="code" href="ofLog.html">ofLog</a>() &lt;&lt; <span class="stringliteral">&quot;the number is &quot;</span> &lt;&lt; 10;</div>
 <div class="line"></div>
-<div class="line"><span class="comment">// there are also log level specific stream objects,</span></div>
-<div class="line"><span class="comment">// one for each level except OF_LOG_SILENT</span></div>
-<div class="line"><a class="code" href="ofLogVerbose.html">ofLogVerbose</a>() &lt;&lt; <span class="stringliteral">&quot;a verbose print&quot;</span></div>
-<div class="line"><a class="code" href="ofLogNotice.html">ofLogNotice</a>() &lt;&lt; <span class="stringliteral">&quot;a regular notice print&quot;</span>;</div>
-<div class="line"><a class="code" href="ofLogWarning.html">ofLogWarning</a>() &lt;&lt; <span class="stringliteral">&quot;uh oh, a warning&quot;</span>;</div>
-<div class="line"><a class="code" href="ofLogError.html">ofLogError</a>() &lt;&lt; <span class="stringliteral">&quot;oh no, an error occurred!&quot;</span>;</div>
-<div class="line"><a class="code" href="ofLogFatalError.html">ofLogFatalError</a>() &lt;&lt; <span class="stringliteral">&quot;accckkk, a fatal error!!&quot;</span>;</div>
+<div class="line"><span class="comment">// There are also log level-specific stream objects, one for each level</span></div>
+<div class="line"><span class="comment">// except OF_LOG_SILENT.</span></div>
+<div class="line"><a class="code" href="ofLogVerbose.html">ofLogVerbose</a>() &lt;&lt; <span class="stringliteral">&quot;A verbose message.&quot;</span></div>
+<div class="line"><a class="code" href="ofLogNotice.html">ofLogNotice</a>() &lt;&lt; <span class="stringliteral">&quot;A regular notice message.&quot;</span>;</div>
+<div class="line"><a class="code" href="ofLogWarning.html">ofLogWarning</a>() &lt;&lt; <span class="stringliteral">&quot;Uh oh, a warning!&quot;</span>;</div>
+<div class="line"><a class="code" href="ofLogError.html">ofLogError</a>() &lt;&lt; <span class="stringliteral">&quot;Oh no, an error occurred!&quot;</span>;</div>
+<div class="line"><a class="code" href="ofLogFatalError.html">ofLogFatalError</a>() &lt;&lt; <span class="stringliteral">&quot;Accckkk, a fatal error!!&quot;</span>;</div>
 </div><!-- fragment --><p><b>Note</b>: The log level specific stream objects also take a string argument for the &quot;module&quot;. A module is a string that is added to the beginning of the log line and can be used to separate logging messages by setting an independent log level for <b>that module only</b>. This module-specific log level has no effect on other modules.</p>
-<p>See <a class="el" href="ofLog.html#a09c666d27421420d54459f65bf69562f" title="set the logging level for only a specific module ">ofSetLogLevel(string module, ofLogLevel level)</a> for more details.</p>
+<p>See <a class="el" href="ofLog.html#a09c666d27421420d54459f65bf69562f" title="Set the logging level for a specific module. ">ofSetLogLevel(string module, ofLogLevel level)</a> for more details.</p>
 <p>Example of logging to a specific module: </p>
 <div class="fragment"><div class="line"><span class="comment">// log to a module called &quot;Hello&quot;</span></div>
-<div class="line"><a class="code" href="ofLogWarning.html">ofLogWarning</a>(<span class="stringliteral">&quot;Hello&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;a warning print&quot;</span>;</div>
-</div><!-- fragment --><p> <b>Warning</b>: It is important to understand that the log level specific stream objects take the module name as an argument and the log messages via the &lt;&lt; operator. Putting your message as a string argument inside the parentheses uses that message as a <em>module</em> and so nothing will be printed:</p>
-<div class="fragment"><div class="line"><span class="comment">// this prints a warning message</span></div>
-<div class="line"><a class="code" href="ofLogWarning.html">ofLogWarning</a>() &lt;&lt; <span class="stringliteral">&quot;a warning print&quot;</span>;</div>
+<div class="line"><a class="code" href="ofLogWarning.html">ofLogWarning</a>(<span class="stringliteral">&quot;Hello&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;A warning message.&quot;</span>;</div>
+</div><!-- fragment --><p><b>Warning</b>: It is important to understand that the log level specific stream objects take the module name as an argument and the log messages via the &lt;&lt; operator. Putting your message as a string argument inside the parentheses uses that message as a <em>module</em> and so nothing will be printed:</p>
+<div class="fragment"><div class="line"><span class="comment">// This prints a warning message.</span></div>
+<div class="line"><a class="code" href="ofLogWarning.html">ofLogWarning</a>() &lt;&lt; <span class="stringliteral">&quot;A warning message.&quot;</span>;</div>
 <div class="line"></div>
-<div class="line"><span class="comment">// !!! this does not print a message as the string &quot;a warning print&quot; is the module argument !!!</span></div>
-<div class="line"><a class="code" href="ofLogWarning.html">ofLogWarning</a>(<span class="stringliteral">&quot;a warning print&quot;</span>);</div>
+<div class="line"><span class="comment">// !!! This does not print a message because the string &quot;a warning print&quot;</span></div>
+<div class="line"><span class="comment">// is the module argument !!!</span></div>
+<div class="line"><a class="code" href="ofLogWarning.html">ofLogWarning</a>(<span class="stringliteral">&quot;A warning print&quot;</span>);</div>
 <div class="line"></div>
-<div class="line"><span class="comment">// this prints a warning message to the &quot;Hello&quot; module</span></div>
-<div class="line"><a class="code" href="ofLogWarning.html">ofLogWarning</a>(<span class="stringliteral">&quot;Hello&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;a warning print&quot;</span>;</div>
+<div class="line"><span class="comment">// This prints a warning message to the &quot;Hello&quot; module.</span></div>
+<div class="line"><a class="code" href="ofLogWarning.html">ofLogWarning</a>(<span class="stringliteral">&quot;Hello&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;A warning message.&quot;</span>;</div>
 </div><!-- fragment --><h4>Log Message Redirection</h4>
 <p>It&apos;s useful to be able to record log messages to a file or send them to a custom destination.</p>
 <p>For log redirection see</p>
 <ul>
-<li><a class="el" href="ofLog.html#a1ed956aa67bdd9871b2839ead0dc1191" title="Set the looging to output to a file instead of the console. ">ofLogToFile(const string &amp; path, bool append)</a></li>
+<li><a class="el" href="ofLog.html#a1ed956aa67bdd9871b2839ead0dc1191" title="Set the logging to output to a file instead of the console. ">ofLogToFile()</a></li>
 <li><a class="el" href="ofLog.html#aeaeb5016cb838a99e88502a57d8b2cb6" title="Set the logging to ouptut to the console. ">ofLogToConsole()</a></li>
-<li><a class="el" href="ofLog.html#aa88c7cbf28c4fd02fa688f537b41df18" title="Set the logger to use a custom logger channel. ">ofSetLoggerChannel(shared_ptr&lt;ofBaseLoggerChannel&gt; loggerChannel)</a> </li>
+<li><a class="el" href="ofLog.html#aa88c7cbf28c4fd02fa688f537b41df18" title="Set the logger to use a custom logger channel. ">ofSetLoggerChannel()</a> </li>
 </ul>
 </div></div>
     <div class="classMethods"><div id="Globallogginglevel">
@@ -133,7 +134,7 @@
 
     <div class="methodDescription" style="display:none" id="a6b3aba959377cae6ed3afbb9d5826fe4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofLogLevel</span><span class="args"></span></div><div class="memberDocumentation">
 
-<p>The supported logging levels. Default is <code>OF_LOG_NOTICE</code> </p>
+<p>The supported logging levels. Default is <code>OF_LOG_NOTICE</code>. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4a344bd0fb24d6bd1f23f6d7e09a1ada2f"></a>OF_LOG_VERBOSE</em>&#xA0;</td><td class="fielddoc">
 </td></tr>
@@ -146,6 +147,7 @@
 <tr><td class="fieldname"><em><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4a5379d861c8b09cd189567f6779256dd2"></a>OF_LOG_FATAL_ERROR</em>&#xA0;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="a6b3aba959377cae6ed3afbb9d5826fe4ad2f1bd16f52d94ab0ff47f9095d4a7f3"></a>OF_LOG_SILENT</em>&#xA0;</td><td class="fielddoc">
+<p>ofSetLogLevel(OF_LOG_SILENT). </p>
 </td></tr>
 </table>
 
@@ -163,19 +165,19 @@
 
     <div class="methodDescription" style="display:none" id="a7a1aca68c925a0cf024a14fc70fb7417_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">ofSetLogLevel</span><span class="args">(ofLogLevel level)</span></div><div class="memberDocumentation">
 
-<p>Sets the logging level so only messages above a certain priority are shown. </p>
+<p>Sets the logging level to selectively show log messages. </p>
 <p>This is useful if you want see lots of messages when debugging, but then set a higher level so only warnings and errors appear for users.</p>
-<p>ofLogLevel values are (in order of priority):</p>
+<p>ofLogLevel values in order from lowest to highest level are:</p>
 <ul>
-<li><code>OF_LOG_VERBOSE</code></li>
+<li><code>OF_LOG_VERBOSE</code> (lowest level)</li>
 <li><code>OF_LOG_NOTICE</code></li>
 <li><code>OF_LOG_WARNING</code></li>
 <li><code>OF_LOG_ERROR</code></li>
 <li><code>OF_LOG_FATAL_ERROR</code></li>
-<li><code>OF_LOG_SILENT</code></li>
+<li><code>OF_LOG_SILENT</code> (highest level)</li>
 </ul>
-<p>Following priority, setting a log level of <code>OF_LOG_ERROR</code>, means only error and fatal error messages will be printed. Conversely, setting OF_LOG_VERBOSE means all log level messages will be printed.</p>
-<p>Default ofLogLevel is <code>OF_LOG_NOTICE</code> </p>
+<p>Thus, setting a log level of <code>OF_LOG_ERROR</code>, means only logging messages marked OF_LOG_ERROR and OF_LOG_FATAL_ERROR will be printed. Conversely, setting OF_LOG_VERBOSE means all log level messages, including OF_LOG_VERBOSE, will be printed. Finally, setting a log level of OF_LOG_SILENT will prevent any messages from being printed.</p>
+<p>The default ofLogLevel is <code>OF_LOG_NOTICE</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">level</td><td>the ofLogLevel (and below) you want to show </td></tr>
@@ -185,10 +187,26 @@
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">ofSetLogLevel</span><span class="args">(string module, ofLogLevel level)</span></div><div class="memberDocumentation">
 
-<p>set the logging level for only a specific module </p>
-<p>Example of logging to a specific module: </p>
-<div class="fragment"><div class="line"><span class="comment">// log to a module called &quot;Hello&quot;</span></div>
-<div class="line"><a class="code" href="ofLogWarning.html">ofLogWarning</a>(<span class="stringliteral">&quot;Hello&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;a warning print&quot;</span>;</div>
+<p>Set the logging level for a specific module. </p>
+<p>When a module name is supplied to ofSetLogLevel, the provided ofLogLevel is selectively applied only to <a class="el" href="ofLog.html" title="A C++ stream-style logging interface. ">ofLog</a> messages marked with the specified module.</p>
+<p>This is particularly useful when the user desires to, for example, log at an OF_LOG_VERBOSE level for one module and then log at OF_LOG_ERROR for another module.</p>
+<p>Example of logging to a specific module:</p>
+<div class="fragment"><div class="line"><span class="comment">// Set the default log level for all logging.</span></div>
+<div class="line"><a class="code" href="of_log_8cpp.html#a7a1aca68c925a0cf024a14fc70fb7417">ofSetLogLevel</a>(<a class="code" href="ofLog.html#a6b3aba959377cae6ed3afbb9d5826fe4a64e5a9d8e8727e95ec14005ffd896a6d">OF_LOG_ERROR</a>);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Selectively enable verbose logging for the MyClass module.</span></div>
+<div class="line"><a class="code" href="of_log_8cpp.html#a7a1aca68c925a0cf024a14fc70fb7417">ofSetLogLevel</a>(<span class="stringliteral">&quot;MyClass&quot;</span>, <a class="code" href="ofLog.html#a6b3aba959377cae6ed3afbb9d5826fe4a344bd0fb24d6bd1f23f6d7e09a1ada2f">OF_LOG_VERBOSE</a>);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// If we then log the following ...</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Log a vermose message to a module called &quot;MyClass&quot;.</span></div>
+<div class="line"><a class="code" href="ofLogVerbose.html">ofLogVerbose</a>(<span class="stringliteral">&quot;MyClass&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;A verbose message from MyClass.&quot;</span>;</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Log a verbose message to a module called &quot;MyOtherClass&quot;.</span></div>
+<div class="line"><a class="code" href="ofLogVerbose.html">ofLogVerbose</a>(<span class="stringliteral">&quot;MyOtherClass&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;A verbose message from MyOtherClass.&quot;</span>;</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// In this case, we will see the verbose message from &quot;MyClass&quot;, but not</span></div>
+<div class="line"><span class="comment">// the message from &quot;MyOtherClass&quot;.</span></div>
 </div><!-- fragment --> 
 </div></div>
   </div><div id="ac6e0d81bf5142843892fe54908399794" class="method">
@@ -205,6 +223,7 @@
     <div class="methodDescription" style="display:none" id="ac6e0d81bf5142843892fe54908399794_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofLog.html#1a6b3aba959377cae6ed3afbb9d5826fe4">ofLogLevel</a> </span><span class="name">ofGetLogLevel</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Get the currently set global logging level. </p>
+<dl class="section return"><dt>Returns</dt><dd>The currently set global logging level. </dd></dl>
 
 </div></div>
   </div><div id="a18730a546b3c27723dc95ecf1a5e55b7" class="method">
@@ -223,11 +242,12 @@
 <p>Get log level name as a string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">level</td><td>The ofLogLevel you want the name of </td></tr>
-    <tr><td class="paramname">pad</td><td>set to true if you want all log level names to be the same length </td></tr>
+    <tr><td class="paramname">level</td><td>The ofLogLevel you want as a string. </td></tr>
+    <tr><td class="paramname">pad</td><td>True if you want all log level names to be the same length. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>The log level name as a string. </dd></dl>
 
 </div></div>
   </div></div>
@@ -247,11 +267,11 @@
 
     <div class="methodDescription" style="display:none" id="a1ed956aa67bdd9871b2839ead0dc1191_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">ofLogToFile</span><span class="args">(const string &amp;path, bool append=false)</span></div><div class="memberDocumentation">
 
-<p>Set the looging to output to a file instead of the console. </p>
+<p>Set the logging to output to a file instead of the console. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>The path to the file to save the logging to </td></tr>
-    <tr><td class="paramname">append</td><td>Set to true if you want to append to the existing file </td></tr>
+    <tr><td class="paramname">path</td><td>The path to the log file to use. </td></tr>
+    <tr><td class="paramname">append</td><td>True if you want to append to the existing file. </td></tr>
   </table>
   </dd>
 </dl>
@@ -271,7 +291,7 @@
     <div class="methodDescription" style="display:none" id="aeaeb5016cb838a99e88502a57d8b2cb6_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">ofLogToConsole</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Set the logging to ouptut to the console. </p>
-<p>This is the default state, and is only needed to be called in case <a class="el" href="ofLog.html#a1ed956aa67bdd9871b2839ead0dc1191" title="Set the looging to output to a file instead of the console. ">ofLogToFile()</a> has been called </p>
+<p>This is the default state and can be called to reset console logging after ofLogToFile or ofSetLoggerChannel has been called. </p>
 
 </div></div>
   </div><div id="aa88c7cbf28c4fd02fa688f537b41df18" class="method">
@@ -288,6 +308,13 @@
     <div class="methodDescription" style="display:none" id="aa88c7cbf28c4fd02fa688f537b41df18_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">ofSetLoggerChannel</span><span class="args">(shared_ptr&lt; ofBaseLoggerChannel &gt; loggerChannel)</span></div><div class="memberDocumentation">
 
 <p>Set the logger to use a custom logger channel. </p>
+<p>Custom logger channels must extend ofBaseLoggerChannel. Custom log channels can be useful for combining logging methods, logging to a server, logging to email or even Twitter.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loggerChannel</td><td>A shared pointer to the logger channel. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div></div>
   </div></div>
@@ -296,12 +323,12 @@
     <div class="classHeader">
       <h1 class="classTitle">ofLog<small>class</small></h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>a streaming log interface </p>
-<p><a class="el" href="ofLog.html" title="a streaming log interface ">ofLog</a> accepts variables via the ostream operator &lt;&lt; and builds a string and logs it when the stream is finished (via the destructor). A newline is printed automatically and all the stream controls (endl, flush, hex, etc) work normally. The log level is explicitly <code>OF_LOG_NOTICE</code> unless set.</p>
-<p>Basic usage: </p>
-<div class="fragment"><div class="line"><a class="code" href="ofLog.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>() &lt;&lt; <span class="stringliteral">&quot;a string&quot;</span> &lt;&lt; 100 &lt;&lt; 20.234f;</div>
-</div><!-- fragment --><p>It also accepts the legacy <a class="el" href="ofLog.html" title="a streaming log interface ">ofLog</a> interface: <a class="el" href="ofLog.html" title="a streaming log interface ">ofLog(ofLogLevel level, string message)</a>: </p>
-<div class="fragment"><div class="line"><a class="code" href="ofLog.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>(<a class="code" href="ofLog.html#a6b3aba959377cae6ed3afbb9d5826fe4a64e5a9d8e8727e95ec14005ffd896a6d">OF_LOG_ERROR</a>, <span class="stringliteral">&quot;another string&quot;</span>);</div>
+    <div class="classDescription"><div class="textblock"><p>A C++ stream-style logging interface. </p>
+<p><a class="el" href="ofLog.html" title="A C++ stream-style logging interface. ">ofLog</a> accepts variables via the std::ostream operator &lt;&lt; and builds a string and logs it when the stream is finished (via the destructor). A newline is printed automatically and all the stream controls (std::endl, std::flush, std::hex, etc) work normally. The default log level is <code>OF_LOG_NOTICE</code>.</p>
+<p>Basic usage:</p>
+<div class="fragment"><div class="line"><a class="code" href="ofLog.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>() &lt;&lt; <span class="stringliteral">&quot;My integer is &quot;</span> &lt;&lt; 100 &lt;&lt; <span class="stringliteral">&quot; and my float is &quot;</span> &lt;&lt; 20.234f;</div>
+</div><!-- fragment --><p>It also accepts the legacy <a class="el" href="ofLog.html" title="A C++ stream-style logging interface. ">ofLog</a> interface: <a class="el" href="ofLog.html" title="A C++ stream-style logging interface. ">ofLog(ofLogLevel level, string message)</a>:</p>
+<div class="fragment"><div class="line"><a class="code" href="ofLog.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>(<a class="code" href="ofLog.html#a6b3aba959377cae6ed3afbb9d5826fe4a64e5a9d8e8727e95ec14005ffd896a6d">OF_LOG_ERROR</a>, <span class="stringliteral">&quot;Another string.&quot;</span>);</div>
 </div><!-- fragment --><dl class="section author"><dt>Author</dt><dd>Dan Wilcox <a href="#" onclick="location.href=&apos;mai&apos;+&apos;lto:&apos;+&apos;dan&apos;+&apos;om&apos;+&apos;ati&apos;+&apos;ka&apos;+&apos;@gm&apos;+&apos;ai&apos;+&apos;l.c&apos;+&apos;om&apos;; return false;">danom<span style="display: none;">.nosp@m.</span>atik<span style="display: none;">.nosp@m.</span>a@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a> danomatika.com </dd></dl>
 </div></div>
     <div class="classMethods"><div id="Logging">
@@ -321,31 +348,32 @@
     <div class="methodDescription" style="display:none" id="a11a926adbe4ef4bfbee393345f5df1cc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofLog</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Start logging on notice level. </p>
-<p><a class="el" href="ofLog.html" title="a streaming log interface ">ofLog</a> provides a streaming log interface by accepting variables via the ostream operator <code>&lt;&lt;</code> similar to cout and cerr.</p>
-<p>It builds a string and logs it when the stream is finished. A newline is printed automatically and all the stream controls (<code>endl</code>, <code>flush</code>, <code>hex</code>, etc) work normally.</p>
-<div class="fragment"><div class="line"><span class="comment">// converts incoming primitive types (int, float, etc) to strings automatically</span></div>
-<div class="line"><a class="code" href="ofLog.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>() &lt;&lt; <span class="stringliteral">&quot;a string&quot;</span> &lt;&lt; 100 &lt;&lt; 20.234f;</div>
-</div><!-- fragment --><p>The log level is explicitly <code>OF_LOG_NOTICE</code>. </p>
+<p><a class="el" href="ofLog.html" title="A C++ stream-style logging interface. ">ofLog</a> provides a streaming log interface by accepting variables via the <code>std::ostream</code> operator <code>&lt;&lt;</code> similar to <code>std::cout</code> and <code>std::cerr</code>.</p>
+<p>It builds a string and logs it when the stream is finished. A newline is printed automatically and all the stream controls (<code>std::endl</code>, <code>std::flush</code>, <code>std::hex</code>, etc) work normally.</p>
+<div class="fragment"><div class="line"><span class="comment">// Converts primitive types (int, float, etc) to strings automatically.</span></div>
+<div class="line"><a class="code" href="ofLog.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>() &lt;&lt; <span class="stringliteral">&quot;a string &quot;</span> &lt;&lt; 100 &lt;&lt; 20.234f;</div>
+</div><!-- fragment --><p>The log level is <code>OF_LOG_NOTICE</code> by default. </p>
 
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofLog</span><span class="args">(ofLogLevel level)</span></div><div class="memberDocumentation">
-<p>Start logging on a specific ofLogLevel</p>
+
+<p>Start logging on a specific ofLogLevel. </p>
 <p>Example: </p>
-<div class="fragment"><div class="line"><span class="comment">// set the log level</span></div>
-<div class="line"><a class="code" href="ofLog.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>(<a class="code" href="ofLog.html#a6b3aba959377cae6ed3afbb9d5826fe4a0ece8203f15199db94060ba73e974635">OF_LOG_WARNING</a>) &lt;&lt; <span class="stringliteral">&quot;a string&quot;</span> &lt;&lt; 100 &lt;&lt; 20.234f;</div>
+<div class="fragment"><div class="line"><span class="comment">// Set the log level.</span></div>
+<div class="line"><a class="code" href="ofLog.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>(<a class="code" href="ofLog.html#a6b3aba959377cae6ed3afbb9d5826fe4a0ece8203f15199db94060ba73e974635">OF_LOG_WARNING</a>) &lt;&lt; <span class="stringliteral">&quot;a string &quot;</span> &lt;&lt; 100 &lt;&lt; 20.234f;</div>
 </div><!-- fragment --><p>You can use the derived convenience classes as an alternative for specific log levels: </p>
 <pre class="fragment">ofLogVerbose()
 ofLogNotice()
 ofLogWarning()
 ofLogError()
 ofLogFatalError()
-</pre><div class="fragment"><div class="line"><span class="comment">// set the log level</span></div>
-<div class="line"><a class="code" href="ofLog.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>(<a class="code" href="ofLog.html#a6b3aba959377cae6ed3afbb9d5826fe4a0ece8203f15199db94060ba73e974635">OF_LOG_WARNING</a>) &lt;&lt; <span class="stringliteral">&quot;a string&quot;</span> &lt;&lt; 100 &lt;&lt; 20.234f;</div>
+</pre><div class="fragment"><div class="line"><span class="comment">// Set the log level.</span></div>
+<div class="line"><a class="code" href="ofLog.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>(<a class="code" href="ofLog.html#a6b3aba959377cae6ed3afbb9d5826fe4a0ece8203f15199db94060ba73e974635">OF_LOG_WARNING</a>) &lt;&lt; <span class="stringliteral">&quot;a string &quot;</span> &lt;&lt; 100 &lt;&lt; 20.234f;</div>
 <div class="line"></div>
-<div class="line"><span class="comment">// this is the same as above</span></div>
-<div class="line"><a class="code" href="ofLogWarning.html">ofLogWarning</a>() &lt;&lt; <span class="stringliteral">&quot;a string&quot;</span> &lt;&lt; 100 &lt;&lt; 20.234f;</div>
-</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+<div class="line"><span class="comment">// This is the same as above.</span></div>
+<div class="line"><a class="code" href="ofLogWarning.html">ofLogWarning</a>() &lt;&lt; <span class="stringliteral">&quot;a string &quot;</span> &lt;&lt; 100 &lt;&lt; 20.234f;</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">level</td><td>The ofLogLevel to log on </td></tr>
+    <tr><td class="paramname">level</td><td>The ofLogLevel for this log message. </td></tr>
   </table>
   </dd>
 </dl>
@@ -355,10 +383,17 @@ ofLogFatalError()
 <p>Log a string at a specific log level. </p>
 <p>Supply the logging message as a parameter to the function instead of as a stream.</p>
 <p>The string message can be concatenated using the <a class="el" href="ofUtils.html#a31a70a3bfddaf5bd90084e59188f9d59" title="Convert a value to a string. ">ofToString(const T&amp; value)</a> conversion function:</p>
-<div class="fragment"><div class="line"><span class="comment">// build a single string message</span></div>
+<div class="fragment"><div class="line"><span class="comment">// Build a single string message.</span></div>
 <div class="line"><a class="code" href="ofLog.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>(<a class="code" href="ofLog.html#a6b3aba959377cae6ed3afbb9d5826fe4ae694d6f9c9ad50b955aa85ded74c41bc">OF_LOG_NOTICE</a>, <span class="stringliteral">&quot;the number is &quot;</span> </div>
 <div class="line">+ <a class="code" href="of_pixels_8cpp.html#a0bdb3162be2ff8c1541a42f3c8f5ac1c">ofToString</a>(10) + <span class="stringliteral">&quot; and I have a float too &quot;</span> + <a class="code" href="of_pixels_8cpp.html#a0bdb3162be2ff8c1541a42f3c8f5ac1c">ofToString</a>(123.45f));</div>
-</div><!-- fragment --> 
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>The ofLogLevel for this log message. </td></tr>
+    <tr><td class="paramname">message</td><td>The log message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofLog</span><span class="args">(ofLogLevel level, const char *format,...) OF_PRINTF_ATTR(3</span></div><div class="memberDocumentation">
 
 <p>Logs a message at a specific log level using the printf interface. </p>
@@ -374,18 +409,26 @@ ofLogFatalError()
 </ul>
 <p>The specifier should match the variable type as it is used to tell the function how to convert that primitive type (int, float, character, etc) into a string.</p>
 <p>For instance, let&apos;s say we want to print two messages, a salutation and the value of an int, a float, and a string variable:</p>
-<div class="fragment"><div class="line"><span class="comment">// print a simple message with no variables</span></div>
-<div class="line"><a class="code" href="ofLog.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>(<a class="code" href="ofLog.html#a6b3aba959377cae6ed3afbb9d5826fe4a0ece8203f15199db94060ba73e974635">OF_LOG_WARNING</a>, <span class="stringliteral">&quot;welcome to the jungle&quot;</span>);</div>
+<div class="fragment"><div class="line"><span class="comment">// Print a simple message with no variables.</span></div>
+<div class="line"><a class="code" href="ofLog.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>(<a class="code" href="ofLog.html#a6b3aba959377cae6ed3afbb9d5826fe4a0ece8203f15199db94060ba73e974635">OF_LOG_WARNING</a>, <span class="stringliteral">&quot;Welcome to the jungle.&quot;</span>);</div>
 <div class="line"></div>
-<div class="line"><span class="comment">// our variables</span></div>
+<div class="line"><span class="comment">// Our variables.</span></div>
 <div class="line"><span class="keywordtype">float</span> fun = 11.11;</div>
 <div class="line"><span class="keywordtype">int</span> games = 100;</div>
 <div class="line"><span class="keywordtype">string</span> theNames = <span class="stringliteral">&quot;Dan, Kyle, &amp; Golan&quot;</span>;</div>
 <div class="line"></div>
-<div class="line"><span class="comment">// print a message with variables, sets the message format in the format string</span></div>
+<div class="line"><span class="comment">// Print a message with variables, sets the message format in the</span></div>
+<div class="line"><span class="comment">// format string.</span></div>
 <div class="line"><a class="code" href="ofLog.html#a11a926adbe4ef4bfbee393345f5df1cc">ofLog</a>(<a class="code" href="ofLog.html#a6b3aba959377cae6ed3afbb9d5826fe4ae694d6f9c9ad50b955aa85ded74c41bc">OF_LOG_NOTICE</a>, <span class="stringliteral">&quot;we&apos;ve got %d &amp; %f, we got everything you want honey, we know %s&quot;</span>, fun, games, theNames.c_str());</div>
 </div><!-- fragment --><p>Note: <code>theNames.c_str()</code> returns a C string from theNames which is a C++ string object.</p>
-<p>There are other formatting options such as setting the decimal precision of float objects and the forward padding of numbers (i.e. 0001 instead of 1). See the <a href="http://en.wikipedia.org/wiki/Printf_format_string">Wikipedia printf format string article</a> for more detailed information. </p>
+<p>There are other formatting options such as setting the decimal precision of float objects and the forward padding of numbers (i.e. 0001 instead of 1). See the <a href="http://en.wikipedia.org/wiki/Printf_format_string">Wikipedia printf format string article</a> for more detailed information.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>The ofLogLevel for this log message. </td></tr>
+    <tr><td class="paramname">format</td><td>The printf-style format string. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div></div>
   </div></div>
@@ -404,7 +447,9 @@ ofLogFatalError()
     </div>
 
     <div class="methodDescription" style="display:none" id="acd753685ca548b145fd33301abe63433_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setAutoSpace</span><span class="args">(bool autoSpace)</span></div><div class="memberDocumentation">
-<p>Let the logger automaticly add spaces between messages. Default is <code>false</code>. </p>
+
+<p>Let the logger automaticly add spaces between messages. </p>
+<p>Default is <code>false</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">autoSpace</td><td>Set to true to add spaces between messages </td></tr>
@@ -425,8 +470,16 @@ ofLogFatalError()
     </div>
 
     <div class="methodDescription" style="display:none" id="a25da93787b658473a679ba3096407270_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setChannel</span><span class="args">(shared_ptr&lt; ofBaseLoggerChannel &gt; channel)</span></div><div class="memberDocumentation">
-<p>Set the logging channel destinations for messages. This can be used to output to files instead of stdout. </p>
+
+<p>Set the logging channel destinations for messages. </p>
+<p>This can be used to output to files instead of stdout.</p>
 <dl class="section see"><dt>See Also</dt><dd>ofFileLoggerChannel ofConsoleLoggerChannel </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>The channel to log to. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div></div>
   </div></div>
@@ -435,7 +488,8 @@ ofLogFatalError()
     <div class="classHeader">
       <h1 class="classTitle">ofLogVerbose<small>class</small></h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>Derived log class for easy verbose logging. Example: <code><a class="el" href="ofLogVerbose.html">ofLogVerbose</a>(&quot;Log message&quot;)</code> </p>
+    <div class="classDescription"><div class="textblock"><p>Derived log class for easy verbose logging. </p>
+<p>Example: <code><a class="el" href="ofLogVerbose.html" title="Derived log class for easy verbose logging. ">ofLogVerbose</a>(&quot;Log message&quot;)</code>. </p>
 </div></div>
     <div class="classMethods"><div id="Functions">
     <h3 class="sectionHeader">Functions</h3>
@@ -453,9 +507,35 @@ ofLogFatalError()
 
     <div class="methodDescription" style="display:none" id="a285461612136b05e9b9abbc9ebd2a0f3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofLogVerbose</span><span class="args">(const string &amp;module=&quot;&quot;)</span></div><div class="memberDocumentation">
 
+<p>Create a verbose log message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">module</td><td>The target module. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofLogVerbose</span><span class="args">(const string &amp;module, const string &amp;message)</span></div><div class="memberDocumentation">
 
+<p>Create a verbose log message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">module</td><td>The target module. </td></tr>
+    <tr><td class="paramname">message</td><td>The log message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofLogVerbose</span><span class="args">(const string &amp;module, const char *format,...) OF_PRINTF_ATTR(3</span></div><div class="memberDocumentation">
+
+<p>Create a verbose log message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">module</td><td>The target module. </td></tr>
+    <tr><td class="paramname">format</td><td>The printf-style format string. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div></div>
   </div></div>
@@ -464,7 +544,8 @@ ofLogFatalError()
     <div class="classHeader">
       <h1 class="classTitle">ofLogNotice<small>class</small></h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>Derived log class for easy notice logging. Example: <code><a class="el" href="ofLogNotice.html">ofLogNotice</a>(&quot;Log message&quot;)</code> </p>
+    <div class="classDescription"><div class="textblock"><p>Derived log class for easy notice logging. </p>
+<p>Example: <code><a class="el" href="ofLogNotice.html" title="Derived log class for easy notice logging. ">ofLogNotice</a>(&quot;Log message&quot;)</code>. </p>
 </div></div>
     <div class="classMethods"><div id="Functions">
     <h3 class="sectionHeader">Functions</h3>
@@ -482,9 +563,35 @@ ofLogFatalError()
 
     <div class="methodDescription" style="display:none" id="a6729c589b2c946748c9b59015a1328e5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofLogNotice</span><span class="args">(const string &amp;module=&quot;&quot;)</span></div><div class="memberDocumentation">
 
+<p>Create a notice log message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">module</td><td>The target module. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofLogNotice</span><span class="args">(const string &amp;module, const string &amp;message)</span></div><div class="memberDocumentation">
 
+<p>Create a notice log message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">module</td><td>The target module. </td></tr>
+    <tr><td class="paramname">message</td><td>The log message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofLogNotice</span><span class="args">(const string &amp;module, const char *format,...) OF_PRINTF_ATTR(3</span></div><div class="memberDocumentation">
+
+<p>Create a notice log message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">module</td><td>The target module. </td></tr>
+    <tr><td class="paramname">format</td><td>The printf-style format string. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div></div>
   </div></div>
@@ -493,7 +600,8 @@ ofLogFatalError()
     <div class="classHeader">
       <h1 class="classTitle">ofLogWarning<small>class</small></h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>Derived log class for easy warning logging. Example: <code><a class="el" href="ofLogWarning.html">ofLogWarning</a>(&quot;Log message&quot;)</code> </p>
+    <div class="classDescription"><div class="textblock"><p>Derived log class for easy warning logging. </p>
+<p>Example: <code><a class="el" href="ofLogWarning.html" title="Derived log class for easy warning logging. ">ofLogWarning</a>(&quot;Log message&quot;)</code>. </p>
 </div></div>
     <div class="classMethods"><div id="Functions">
     <h3 class="sectionHeader">Functions</h3>
@@ -511,9 +619,35 @@ ofLogFatalError()
 
     <div class="methodDescription" style="display:none" id="a9679a4b19eb6707ae13aa644daf56b42_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofLogWarning</span><span class="args">(const string &amp;module=&quot;&quot;)</span></div><div class="memberDocumentation">
 
+<p>Create a verbose log message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">module</td><td>The target module. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofLogWarning</span><span class="args">(const string &amp;module, const string &amp;message)</span></div><div class="memberDocumentation">
 
+<p>Create a verbose log message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">module</td><td>The target module. </td></tr>
+    <tr><td class="paramname">message</td><td>The log message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofLogWarning</span><span class="args">(const string &amp;module, const char *format,...) OF_PRINTF_ATTR(3</span></div><div class="memberDocumentation">
+
+<p>Create a verbose log message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">module</td><td>The target module. </td></tr>
+    <tr><td class="paramname">format</td><td>The printf-style format string. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div></div>
   </div></div>
@@ -522,7 +656,8 @@ ofLogFatalError()
     <div class="classHeader">
       <h1 class="classTitle">ofLogError<small>class</small></h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>Derived log class for easy error logging. Example: <code><a class="el" href="ofLogError.html">ofLogError</a>(&quot;Log message&quot;)</code> </p>
+    <div class="classDescription"><div class="textblock"><p>Derived log class for easy error logging. </p>
+<p>Example: <code><a class="el" href="ofLogError.html" title="Derived log class for easy error logging. ">ofLogError</a>(&quot;Log message&quot;)</code>. </p>
 </div></div>
     <div class="classMethods"><div id="Functions">
     <h3 class="sectionHeader">Functions</h3>
@@ -540,9 +675,35 @@ ofLogFatalError()
 
     <div class="methodDescription" style="display:none" id="a5d595a6ff1fd74b962dc90a410d5e956_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofLogError</span><span class="args">(const string &amp;module=&quot;&quot;)</span></div><div class="memberDocumentation">
 
+<p>Create a error log message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">module</td><td>The target module. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofLogError</span><span class="args">(const string &amp;module, const string &amp;message)</span></div><div class="memberDocumentation">
 
+<p>Create a error log message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">module</td><td>The target module. </td></tr>
+    <tr><td class="paramname">message</td><td>The log message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofLogError</span><span class="args">(const string &amp;module, const char *format,...) OF_PRINTF_ATTR(3</span></div><div class="memberDocumentation">
+
+<p>Create a error log message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">module</td><td>The target module. </td></tr>
+    <tr><td class="paramname">format</td><td>The printf-style format string. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div></div>
   </div></div>
@@ -551,7 +712,8 @@ ofLogFatalError()
     <div class="classHeader">
       <h1 class="classTitle">ofLogFatalError<small>class</small></h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>Derived log class for easy fatal error logging. Example: <code><a class="el" href="ofLogFatalError.html">ofLogFatalError</a>(&quot;Log message&quot;)</code> </p>
+    <div class="classDescription"><div class="textblock"><p>Derived log class for easy fatal error logging. </p>
+<p>Example: <code><a class="el" href="ofLogFatalError.html" title="Derived log class for easy fatal error logging. ">ofLogFatalError</a>(&quot;Log message&quot;)</code>. </p>
 </div></div>
     <div class="classMethods"><div id="Functions">
     <h3 class="sectionHeader">Functions</h3>
@@ -569,9 +731,35 @@ ofLogFatalError()
 
     <div class="methodDescription" style="display:none" id="a36491d3a10c051583e400b032e24ab1a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofLogFatalError</span><span class="args">(const string &amp;module=&quot;&quot;)</span></div><div class="memberDocumentation">
 
+<p>Create a fatal error log message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">module</td><td>The target module. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofLogFatalError</span><span class="args">(const string &amp;module, const string &amp;message)</span></div><div class="memberDocumentation">
 
+<p>Create a fatal error log message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">module</td><td>The target module. </td></tr>
+    <tr><td class="paramname">message</td><td>The log message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofLogFatalError</span><span class="args">(const string &amp;module, const char *format,...) OF_PRINTF_ATTR(3</span></div><div class="memberDocumentation">
+
+<p>Create a fatal error log message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">module</td><td>The target module. </td></tr>
+    <tr><td class="paramname">format</td><td>The printf-style format string. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div></div>
   </div></div>

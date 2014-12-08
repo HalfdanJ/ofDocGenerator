@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <li class="chapter"><a href="#Typedefs">Typedefs</a></li><span class="class">ofColor_</span><li class="chapter"><a href="#CreateanofColor">Create an ofColor</a></li><li class="chapter"><a href="#Setters">Setters</a></li><li class="chapter"><a href="#Modifiers">Modifiers</a></li><li class="chapter"><a href="#Getters">Getters</a></li><li class="chapter"><a href="#Predefinedcolors">Predefined colors</a></li><li class="chapter"><a href="#Operators">Operators</a></li><li class="chapter"><a href="#Attributes">Attributes</a></li><li class="chapter"><a href="#StaticFunctions">Static Functions</a></li></ul>
+        <li class="chapter"><a href="#Typedefs">Typedefs</a></li><span class="class">ofColor_</span><li class="chapter"><a href="#StaticAttributes">Static Attributes</a></li><li class="chapter"><a href="#Attributes">Attributes</a></li><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#StaticFunctions">Static Functions</a></li><li class="chapter"><a href="#Friends">Friends</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -140,9 +140,9 @@ class ofColor_&lt; T &gt;</h3>
 <tr>
 <td><code>ofFloatColor</code></td><td><code>float</code> </td><td><em>varies</em> </td><td>0.0 </td><td>1.0 </td></tr>
 </table>
-<p>For integral PixelTypes (e.g. <code>unsigned char</code> and <code>unsigned short</code>), the minimum is zero and the maximum is given by:</p>
-<div class="fragment"><div class="line">std::numeric_limits&lt;PixelType&gt;::max();</div>
-</div><!-- fragment --><p>For floating point PixelsTypes, the maximum is 1.0.</p>
+<p>For integral PixelTypes (e.g. <code>unsigned char</code> and <code>unsigned short</code>), the minimum is zero and the maximum is given by: </p>
+<pre class="fragment">std::numeric_limits&lt;PixelType&gt;::max();
+</pre><p>For floating point PixelsTypes, the maximum is 1.0.</p>
 <p>The ofColor typedef represents an 8-bit RGBA color. Thus, each component has a maximum value of 255 and a minimum value of 0. The ofColor typedef is the default color type in openFrameworks and will work for most user applications.</p>
 <p>The ofFloatColor and ofShortColor represent higher precision representations of a given color and are used in special cases where precision color math is required. ofFloatColor might be used for specialized image processing, such as image averaging where rounding errors might otherwise introduce unaccaptable visual artifacts. ofShortColor might be used with depth camera images that can represent the &quot;depth&quot; of each pixel with greater than 256 unique levels.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -152,640 +152,9 @@ class ofColor_&lt; T &gt;</h3>
   </dd>
 </dl>
 </div></div>
-    <div class="classMethods"><div id="CreateanofColor">
-    <h3 class="sectionHeader">Create an ofColor</h3>
+    <div class="classMethods"><div id="StaticAttributes">
+    <h3 class="sectionHeader">Static Attributes</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a894f8070c4bbe3a98f5702a11440beb3" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a894f8070c4bbe3a98f5702a11440beb3&quot;)">
-        <span class="type"></span>
-        <a class="name">ofColor_</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a894f8070c4bbe3a98f5702a11440beb3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> instance. </p>
-
-</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(float red, float green, float blue, float alpha=limit())</span></div><div class="memberDocumentation">
-
-<p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by using channel values. </p>
-<p>When creating an instance of <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> the channel values must fall within the range represented by the PixelType. By default, the alpha component will take the PixelType&apos;s maximum, producing an opaque color.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">red</td><td>The red component. </td></tr>
-    <tr><td class="paramname">green</td><td>The green component. </td></tr>
-    <tr><td class="paramname">blue</td><td>The blue component. </td></tr>
-    <tr><td class="paramname">alpha</td><td>The alpha component. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color, float alpha)</span></div><div class="memberDocumentation">
-
-<p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an existing <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>. </p>
-<p>This constructor will use the R, G and B components from the passed color ignoring its alpha channel. The provided alpha channel will be used instead.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">color</td><td>The <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> to copy. </td></tr>
-    <tr><td class="paramname">alpha</td><td>The new alpha value to replace the alpha value in color. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(float gray, float alpha=limit())</span></div><div class="memberDocumentation">
-
-<p>Construct a grayscale <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by specifiying a single number. </p>
-<p>This constructor will use a single value to describe a grayscale color. This single value will be taken by each of the R, G and B components. The alpha channel is specified separately and will and will default to the PixelType&apos;s maximum resulting in an opaque color.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">gray</td><td>A grayscale value. </td></tr>
-    <tr><td class="paramname">alpha</td><td>The opacity of the color. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(const ofColor_&lt; SrcType &gt; &amp;color)</span></div><div class="memberDocumentation">
-
-<p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an existing <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>. </p>
-<p>This constructor will attempt to convert between color instances of differing precision.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Depending on the PixelType and SrcType used, color precision may be lost when converting a higher precision to a lower precision representation.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">color</td><td>The <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> to copy. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="a298d1603eb1628dcb5f71906b581dd5c" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a298d1603eb1628dcb5f71906b581dd5c&quot;)">
-        <span class="type"></span>
-        <a class="name">fromHsb</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a298d1603eb1628dcb5f71906b581dd5c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">fromHsb</span><span class="args">(float hue, float saturation, float brightness, float alpha=limit())</span></div><div class="memberDocumentation">
-
-<p>Create an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an HSB representation. </p>
-<p>While <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> represents color using R, G, B, and A components, other representations are available. This method allows the user to construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from a Hue (H), Saturation (S), and Brightness (B) and an optional alpha value.</p>
-<p>The alpha channel is specified separately and will default to the PixelType&apos;s maximum, resulting in an opaque color.</p>
-<p>For more information about HSB, see: <a href="http://en.wikipedia.org/wiki/HSV_color_space">http://en.wikipedia.org/wiki/HSV_color_space</a></p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hue</td><td>The hue of the color. </td></tr>
-    <tr><td class="paramname">saturation</td><td>The saturation of the color. </td></tr>
-    <tr><td class="paramname">brightness</td><td>The brightness of the color. </td></tr>
-    <tr><td class="paramname">alpha</td><td>The alpha value of the color. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="aa14c7cb5a9912e22887db4e87c4f85b4" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa14c7cb5a9912e22887db4e87c4f85b4&quot;)">
-        <span class="type"></span>
-        <a class="name">fromHex</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa14c7cb5a9912e22887db4e87c4f85b4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">fromHex</span><span class="args">(int hexColor, float alpha=limit())</span></div><div class="memberDocumentation">
-
-<p>Create an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from a hexadecimal value. </p>
-<p>In some cases, it is convenient to represent colors using a hexadecimal number. In this case, red, green and blue values are packed into a single integer.</p>
-<p>The alpha channel is specified separately and will default to the PixelType&apos;s maximum, resulting in an opaque color.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hexColor</td><td>A color in hexadecimal form. </td></tr>
-    <tr><td class="paramname">alpha</td><td>The alpha value of the color. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div></div>
-  </div><div id="Setters">
-    <h3 class="sectionHeader">Setters</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="ac5454aed599639ab6d1748b08301a992" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac5454aed599639ab6d1748b08301a992&quot;)">
-        <span class="type"></span>
-        <a class="name">set</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ac5454aed599639ab6d1748b08301a992_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float red, float green, float blue, float alpha=limit())</span></div><div class="memberDocumentation">
-
-<p>Set an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by using channel values. </p>
-<p>When modifying an instance of <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> the channel values must fall within the range represented by the PixelType. By default, the alpha component will take the PixelType&apos;s maximum, producing an opaque color.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">red</td><td>The red component. </td></tr>
-    <tr><td class="paramname">green</td><td>The green component. </td></tr>
-    <tr><td class="paramname">blue</td><td>The blue component. </td></tr>
-    <tr><td class="paramname">alpha</td><td>The alpha component. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float gray, float alpha=limit())</span></div><div class="memberDocumentation">
-
-<p>Set a grayscale <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by specifiying a single number. </p>
-<p>When modifying an instance of <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> you can use a single value to describe a grayscale color. This single value will be taken by each of the R, G and B components. The alpha channel is specified separately and will and will default to the PixelType&apos;s maximum resulting in an opaque color.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">gray</td><td>A grayscale value. </td></tr>
-    <tr><td class="paramname">alpha</td><td>The opacity of the color. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
-
-<p>Set an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an existing <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>. </p>
-<p>This will use the R, G, B and A components from the passed color.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">color</td><td>The <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> to copy. </td></tr>
-    <tr><td class="paramname">alpha</td><td>The new alpha value to replace the alpha value in color. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="ad6e89a08aa11f2d2815ba9be89033ccf" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad6e89a08aa11f2d2815ba9be89033ccf&quot;)">
-        <span class="type"></span>
-        <a class="name">setHex</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ad6e89a08aa11f2d2815ba9be89033ccf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setHex</span><span class="args">(int hexColor, float alpha=limit())</span></div><div class="memberDocumentation">
-
-<p>Set an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from a hexadecimal representation. </p>
-<p>In some cases, it is convenient to represent colors using a hexadecimal number. In this case, red, green and blue values are packed into a integer.</p>
-<p>The alpha channel is specified separately and will default to the PixelType&apos;s maximum, resulting in an opaque color.</p>
-<dl class="section warning"><dt>Warning</dt><dd>The alpha value <em>should not</em> be packed in the hexColor and must be specified separately.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hexColor</td><td>An RGB color in hexadecimal form. </td></tr>
-    <tr><td class="paramname">alpha</td><td>The alpha value of the color. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="a2b20f282fa99ff0fb540bcf8718863eb" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2b20f282fa99ff0fb540bcf8718863eb&quot;)">
-        <span class="type"></span>
-        <a class="name">setHue</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a2b20f282fa99ff0fb540bcf8718863eb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setHue</span><span class="args">(float hue)</span></div><div class="memberDocumentation">
-
-<p>Set the hue of this color. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hue</td><td>A hue value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="a5c845f2850cff57da1cda13a34412b51" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5c845f2850cff57da1cda13a34412b51&quot;)">
-        <span class="type"></span>
-        <a class="name">setHueAngle</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a5c845f2850cff57da1cda13a34412b51_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setHueAngle</span><span class="args">(float angle)</span></div><div class="memberDocumentation">
-
-<p>Set the hue angle of this color. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hue</td><td>A hue angle value to set in the range of 0 - 360 degrees. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="aa3301f40e7f4dc0bd1563f32cba9def7" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa3301f40e7f4dc0bd1563f32cba9def7&quot;)">
-        <span class="type"></span>
-        <a class="name">setSaturation</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa3301f40e7f4dc0bd1563f32cba9def7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setSaturation</span><span class="args">(float saturation)</span></div><div class="memberDocumentation">
-
-<p>Set the saturation this color. </p>
-<p>This method uses HSB not HSL. So red desaturated is white, not gray</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">saturation</td><td>A saturation value value in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See Also</dt><dd><a href="http://en.wikipedia.org/wiki/HSL_and_HSV">http://en.wikipedia.org/wiki/HSL_and_HSV</a> </dd></dl>
-
-</div></div>
-  </div><div id="ae316135040740fb2f37f6cd8d23454bb" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae316135040740fb2f37f6cd8d23454bb&quot;)">
-        <span class="type"></span>
-        <a class="name">setBrightness</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ae316135040740fb2f37f6cd8d23454bb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setBrightness</span><span class="args">(float brightness)</span></div><div class="memberDocumentation">
-
-<p>Set the brightness of this color. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">brightness</td><td>A brightness value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="a3b670043729b209994985c1b458ab5cd" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3b670043729b209994985c1b458ab5cd&quot;)">
-        <span class="type"></span>
-        <a class="name">setHsb</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a3b670043729b209994985c1b458ab5cd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setHsb</span><span class="args">(float hue, float saturation, float brightness, float alpha=limit())</span></div><div class="memberDocumentation">
-
-<p>Set the color using HSB components. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hue</td><td>A hue value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
-    <tr><td class="paramname">saturation</td><td>A saturation value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
-    <tr><td class="paramname">brightness</td><td>A brightness value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div></div>
-  </div><div id="Modifiers">
-    <h3 class="sectionHeader">Modifiers</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a90df86b31f2d2411deeca42b228d5381" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a90df86b31f2d2411deeca42b228d5381&quot;)">
-        <span class="type"></span>
-        <a class="name">clamp</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a90df86b31f2d2411deeca42b228d5381_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">clamp</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Clamp values between 0 and the <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </p>
-<p>Clamps the value of each component, R, G, B and A to a maximum of <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a> and a minimum of zero.</p>
-<dl class="section return"><dt>Returns</dt><dd>A reference to itself. </dd></dl>
-
-</div></div>
-  </div><div id="ac7dab5a53453d15d18b3c486ee655103" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac7dab5a53453d15d18b3c486ee655103&quot;)">
-        <span class="type"></span>
-        <a class="name">invert</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ac7dab5a53453d15d18b3c486ee655103_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">invert</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Invert the R, G and B components. </p>
-<p>Performs an inversion operation on the color by replacing the red, green and blue components with their original value subtracted from the <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. For example, an ofColor value of:</p>
-<div class="fragment"><div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> maxValue = <a class="code" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f">limit</a>(); <span class="comment">// would return 255</span></div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="ofColor.html#aab3965044572c4f8f44d0502340bff15">r</a> = 255;</div>
-<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="ofColor.html#adf8807e0648ac5089cfba86029cb1ea5">g</a> = 255;</div>
-<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="ofColor.html#a837af41c32c453d99395229441ad5f68">b</a> = 0;</div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> rNew = maxValue - <a class="code" href="ofColor.html#aab3965044572c4f8f44d0502340bff15">r</a>; <span class="comment">// 255 - 255 = 0</span></div>
-<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> gNew = maxValue - <a class="code" href="ofColor.html#adf8807e0648ac5089cfba86029cb1ea5">g</a>; <span class="comment">// 255 - 255 = 0</span></div>
-<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> bNew = maxValue - <a class="code" href="ofColor.html#a837af41c32c453d99395229441ad5f68">b</a>; <span class="comment">// 255 - 0   = 255;</span></div>
-</div><!-- fragment --><p>Thus the inversion of <code>ofColor(255, 255, 0)</code> is <code>ofColor(0, 0, 255);</code></p>
-<dl class="section return"><dt>Returns</dt><dd>A reference to itself. </dd></dl>
-
-</div></div>
-  </div><div id="a383be8c22b569253381ea7e5ed80f51d" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a383be8c22b569253381ea7e5ed80f51d&quot;)">
-        <span class="type"></span>
-        <a class="name">normalize</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a383be8c22b569253381ea7e5ed80f51d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">normalize</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Normalize the R, G and B components. </p>
-<p>Performs a normalization operation on the red, green and blue components by scaling them by brightness of the original color divided by the <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. The brightness is calculated by finding the maximum of original red, green and blue components. This operation is equivalent to the following:</p>
-<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> myColor(127, 0, 0, 127);</div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">float</span> brightness = myColor.<a class="code" href="ofColor.html#a7b73e7b52d0e967277c034d9e539d7b7">getBrightness</a>(); <span class="comment">// returns 127.</span></div>
-<div class="line"><span class="keywordtype">float</span> scaleFactor = brightness / <a class="code" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f">limit</a>();   <span class="comment">// returns 127 / 255.</span></div>
-<div class="line"></div>
-<div class="line"><a class="code" href="ofColor.html">ofColor</a> myNormalizedColor = myColor / scaleFactor;</div>
-<div class="line">                            <span class="comment">// Divides the red, green and blue</span></div>
-<div class="line">                            <span class="comment">// components by the scale factor.</span></div>
-</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>A reference to itself. </dd></dl>
-
-</div></div>
-  </div><div id="a777831b6851dbc27fd7d2d4b5288d16b" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a777831b6851dbc27fd7d2d4b5288d16b&quot;)">
-        <span class="type"></span>
-        <a class="name">lerp</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a777831b6851dbc27fd7d2d4b5288d16b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">lerp</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;target, float amount)</span></div><div class="memberDocumentation">
-
-<p>A linear interpolation between all components of two colors. </p>
-<p>The lerp method performs a linear interpolation (or <a href="http://en.wikipedia.org/wiki/Lerp_(computing)" title="Lerp">lerp</a>) between this color and a target color. In contrast to many of the mathematical functions found in <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>, The linear interpolation is carried out on <em>all</em> components, R, G, B <em>and</em> A. The amount is typically a value between 0.0 and 1.0, with 0.0 yielding an unchanged color and 1.0 yielding a color identical to the target color.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">target</td><td>The target color corresponding to an amount of 1.0. </td></tr>
-    <tr><td class="paramname">amount</td><td>The amount (between 0.0 and 1.0) to interpolate. A value of 0.0 will yield an unchanged color. A value of 1.0 will yield the target color. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A reference to itself. </dd></dl>
-
-</div></div>
-  </div><div id="a756c104c401ec4e42d27ee5b7d8a3912" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a756c104c401ec4e42d27ee5b7d8a3912&quot;)">
-        <span class="type"></span>
-        <a class="name">getClamped</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a756c104c401ec4e42d27ee5b7d8a3912_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">getClamped</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>A non-destructive version of <a class="el" href="ofColor.html#a90df86b31f2d2411deeca42b228d5381" title="Clamp values between 0 and the limit(). ">clamp()</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of this color, clamped. </dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofColor.html#a90df86b31f2d2411deeca42b228d5381" title="Clamp values between 0 and the limit(). ">clamp()</a> </dd></dl>
-
-</div></div>
-  </div><div id="a11bc8c7ef629174d09fd3168c18660e9" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a11bc8c7ef629174d09fd3168c18660e9&quot;)">
-        <span class="type"></span>
-        <a class="name">getInverted</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a11bc8c7ef629174d09fd3168c18660e9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">getInverted</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>A non-destructive version of <a class="el" href="ofColor.html#ac7dab5a53453d15d18b3c486ee655103" title="Invert the R, G and B components. ">invert()</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of this color, inverted. </dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofColor.html#ac7dab5a53453d15d18b3c486ee655103" title="Invert the R, G and B components. ">invert()</a> </dd></dl>
-
-</div></div>
-  </div><div id="a371c0b6475599a3191d2f08672d8b771" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a371c0b6475599a3191d2f08672d8b771&quot;)">
-        <span class="type"></span>
-        <a class="name">getNormalized</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a371c0b6475599a3191d2f08672d8b771_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">getNormalized</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>A non-destructive version of <a class="el" href="ofColor.html#a383be8c22b569253381ea7e5ed80f51d" title="Normalize the R, G and B components. ">normalize()</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of this color, normalized. </dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofColor.html#a383be8c22b569253381ea7e5ed80f51d" title="Normalize the R, G and B components. ">normalize()</a> </dd></dl>
-
-</div></div>
-  </div><div id="a070e475f03ccfee7eb0ecd47443fbe07" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a070e475f03ccfee7eb0ecd47443fbe07&quot;)">
-        <span class="type"></span>
-        <a class="name">getLerped</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a070e475f03ccfee7eb0ecd47443fbe07_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">getLerped</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;target, float amount) const </span></div><div class="memberDocumentation">
-
-<p>A non-destructive version of <a class="el" href="ofColor.html#a777831b6851dbc27fd7d2d4b5288d16b" title="A linear interpolation between all components of two colors. ">lerp()</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of this color, lerped. </dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofColor.html#a777831b6851dbc27fd7d2d4b5288d16b" title="A linear interpolation between all components of two colors. ">lerp()</a> </dd></dl>
-
-</div></div>
-  </div></div>
-  </div><div id="Getters">
-    <h3 class="sectionHeader">Getters</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a7a721db7497d984c3ee81002bcd7237b" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7a721db7497d984c3ee81002bcd7237b&quot;)">
-        <span class="type"></span>
-        <a class="name">getHex</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a7a721db7497d984c3ee81002bcd7237b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getHex</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>Get a hexadecimal representation of the RGB color. </p>
-<dl class="section warning"><dt>Warning</dt><dd>This method does <em>not</em> encode the alpha component.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>An integer representing an RGB color. </dd></dl>
-
-</div></div>
-  </div><div id="a59959aa62173b96f31d0833327e2772f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a59959aa62173b96f31d0833327e2772f&quot;)">
-        <span class="type"></span>
-        <a class="name">getHue</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a59959aa62173b96f31d0833327e2772f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getHue</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>Get the Hue of this color. </p>
-<p>The color is converted from the default RGB to an HSB colorspace and the resulting Hue value is returned. The resulting hue value will always be returned in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>.</p>
-<dl class="section return"><dt>Returns</dt><dd>The Hue value in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </dd></dl>
-
-</div></div>
-  </div><div id="ac6db0677624242a46690352660254f18" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac6db0677624242a46690352660254f18&quot;)">
-        <span class="type"></span>
-        <a class="name">getHueAngle</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ac6db0677624242a46690352660254f18_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getHueAngle</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>Get the Hue angle of this color. </p>
-<p>The color is converted from the default RGB to an HSB colorspace and the resulting Hue angle is returned. The resulting hue value will always be returned in degrees in the range 0 - 360.</p>
-<dl class="section return"><dt>Returns</dt><dd>The Hue angle in the range 0 - 360. </dd></dl>
-
-</div></div>
-  </div><div id="a0569370be88bfa5fddbd6529b5230de3" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a0569370be88bfa5fddbd6529b5230de3&quot;)">
-        <span class="type"></span>
-        <a class="name">getSaturation</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a0569370be88bfa5fddbd6529b5230de3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getSaturation</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>Get the Saturation of this color. </p>
-<p>The color is converted from the default RGB to an HSB colorspace and the resulting saturation is returned. The resulting saturation value will always be returned in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>.</p>
-<dl class="section return"><dt>Returns</dt><dd>The saturation in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </dd></dl>
-
-</div></div>
-  </div><div id="a7b73e7b52d0e967277c034d9e539d7b7" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7b73e7b52d0e967277c034d9e539d7b7&quot;)">
-        <span class="type"></span>
-        <a class="name">getBrightness</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a7b73e7b52d0e967277c034d9e539d7b7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getBrightness</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>Calculate the brightness of of the R, G and B components. </p>
-<p>Brightness is simply the maximum of the three color components. This method of calculating brightness is used by Photoshop (HSB) and Processing (HSB). Note that brightness is also called &quot;Value&quot;.</p>
-<dl class="section return"><dt>Returns</dt><dd>returns the brightness in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </dd></dl>
-
-</div></div>
-  </div><div id="ada21fed669a9f098466643e044ca2ada" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ada21fed669a9f098466643e044ca2ada&quot;)">
-        <span class="type"></span>
-        <a class="name">getLightness</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ada21fed669a9f098466643e044ca2ada_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getLightness</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>Calculate the lightness of the R, G and B components. </p>
-<p>Lightness is simply the average of the three color components. This method of calculating lightness is used by the Lab and HSL color spaces.</p>
-<p>returns the lightness in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </p>
-
-</div></div>
-  </div><div id="a6c340043e0fa64d77a2688709f7c0787" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6c340043e0fa64d77a2688709f7c0787&quot;)">
-        <span class="type"></span>
-        <a class="name">getHsb</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a6c340043e0fa64d77a2688709f7c0787_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">getHsb</span><span class="args">(float &amp;hue, float &amp;saturation, float &amp;brightness) const </span></div><div class="memberDocumentation">
-
-<p>Extract the hue, saturation and brightness from this color. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hue</td><td>A reference to the hue to fill. Will be in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
-    <tr><td class="paramname">hue</td><td>A reference to the saturation to fill. Will be in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
-    <tr><td class="paramname">brightness</td><td>A reference to the brightness to fill. Will be in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div></div>
-  </div><div id="Predefinedcolors">
-    <h3 class="sectionHeader">Predefined colors</h3>
-    <div class="sectionDescription"><p>A collection of static colors defined by name.</p>
-<p>These constants allow the user to access colors by name. For example, if using ofColor, one might set a color in the following way:</p>
-<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> myColor = <a class="code" href="ofColor.html#a57f71c445227e5daac21c776b867472c">ofColor::white</a>;</div>
-</div><!-- fragment --><p>This will result in myColor being set to a fully opaque white.</p>
-<dl class="section note"><dt>Note</dt><dd>The list of colors is based upon the CSS names colors and can be viewed <a href="http://www.w3schools.com/cssref/css_colornames.asp">here</a> </dd></dl>
-</div>
     <div class="sectionContent"><div id="a57f71c445227e5daac21c776b867472c" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a57f71c445227e5daac21c776b867472c&quot;)">
@@ -798,6 +167,11 @@ class ofColor_&lt; T &gt;</h3>
     </div>
 
     <div class="methodDescription" style="display:none" id="a57f71c445227e5daac21c776b867472c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">white</span><span class="args"></span></div><div class="memberDocumentation">
+
+<p>A collection of static colors defined by name. </p>
+<p>These constants allow the user to access colors by name. For example, if using ofColor, one might set a color in the following way: </p>
+<pre class="fragment">ofColor myColor = ofColor::white;
+</pre><p>This will result in myColor being set to a fully opaque white. The list of colors is based upon the CSS names colors and can be viewed here: <a href="http://www.w3schools.com/cssref/css_colornames.asp">http://www.w3schools.com/cssref/css_colornames.asp</a> </p>
 
 </div></div>
   </div><div id="a3cc97e269364093d7eb42d86fc5a7ad0" class="method">
@@ -2859,10 +2233,665 @@ class ofColor_&lt; T &gt;</h3>
 
 </div></div>
   </div></div>
-  </div><div id="Operators">
-    <h3 class="sectionHeader">Operators</h3>
+  </div><div id="Attributes">
+    <h3 class="sectionHeader">Attributes</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a1d1f3958d35604bbb566ab665d2a3911" class="method">
+    <div class="sectionContent"><div id="aab3965044572c4f8f44d0502340bff15" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aab3965044572c4f8f44d0502340bff15&quot;)">
+        <span class="type"></span>
+        <a class="name">r</a>
+        <span class="args"></span>
+        <span class="kind">variable</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aab3965044572c4f8f44d0502340bff15_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType </span><span class="name">r</span><span class="args"></span></div><div class="memberDocumentation">
+
+<p>The red color component. </p>
+
+</div></div>
+  </div><div id="adf8807e0648ac5089cfba86029cb1ea5" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#adf8807e0648ac5089cfba86029cb1ea5&quot;)">
+        <span class="type"></span>
+        <a class="name">g</a>
+        <span class="args"></span>
+        <span class="kind">variable</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="adf8807e0648ac5089cfba86029cb1ea5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType </span><span class="name">g</span><span class="args"></span></div><div class="memberDocumentation">
+
+<p>The green color component. </p>
+
+</div></div>
+  </div><div id="a837af41c32c453d99395229441ad5f68" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a837af41c32c453d99395229441ad5f68&quot;)">
+        <span class="type"></span>
+        <a class="name">b</a>
+        <span class="args"></span>
+        <span class="kind">variable</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a837af41c32c453d99395229441ad5f68_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType </span><span class="name">b</span><span class="args"></span></div><div class="memberDocumentation">
+
+<p>The blue color component. </p>
+
+</div></div>
+  </div><div id="a08e3f8c336defe949356a68125e366ca" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a08e3f8c336defe949356a68125e366ca&quot;)">
+        <span class="type"></span>
+        <a class="name">a</a>
+        <span class="args"></span>
+        <span class="kind">variable</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a08e3f8c336defe949356a68125e366ca_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType </span><span class="name">a</span><span class="args"></span></div><div class="memberDocumentation">
+
+<p>The alpha color component. </p>
+
+</div></div>
+  </div><div id="ab9ff1ead578d9b6861d81b9b227bebf3" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab9ff1ead578d9b6861d81b9b227bebf3&quot;)">
+        <span class="type"></span>
+        <a class="name">v</a>
+        <span class="args"></span>
+        <span class="kind">variable</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ab9ff1ead578d9b6861d81b9b227bebf3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType </span><span class="name">v</span><span class="args">[4]</span></div><div class="memberDocumentation">
+
+<p>The pixel values as an array. </p>
+
+</div></div>
+  </div><div id="a21867b7cba4d68c5737334e0610dfe36" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a21867b7cba4d68c5737334e0610dfe36&quot;)">
+        <span class="type"></span>
+        <a class="name">Anonymous variable</a>
+        <span class="args"></span>
+        <span class="kind">variable</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a21867b7cba4d68c5737334e0610dfe36_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">union ofColor_::@3 </span><span class="name">Anonymous variable</span><span class="args"></span></div><div class="memberDocumentation">
+
+</div></div>
+  </div></div>
+  </div><div id="Functions">
+    <h3 class="sectionHeader">Functions</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a894f8070c4bbe3a98f5702a11440beb3" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a894f8070c4bbe3a98f5702a11440beb3&quot;)">
+        <span class="type"></span>
+        <a class="name">ofColor_</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a894f8070c4bbe3a98f5702a11440beb3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> instance. </p>
+
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(float red, float green, float blue, float alpha=limit())</span></div><div class="memberDocumentation">
+
+<p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by using channel values. </p>
+<p>When creating an instance of <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> the channel values must fall within the range represented by the PixelType. By default, the alpha component will take the PixelType&apos;s maximum, producing an opaque color.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">red</td><td>The red component. </td></tr>
+    <tr><td class="paramname">green</td><td>The green component. </td></tr>
+    <tr><td class="paramname">blue</td><td>The blue component. </td></tr>
+    <tr><td class="paramname">alpha</td><td>The alpha component. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color, float alpha)</span></div><div class="memberDocumentation">
+
+<p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an existing <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>. </p>
+<p>This constructor will use the R, G and B components from the passed color ignoring its alpha channel. The provided alpha channel will be used instead.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> to copy. </td></tr>
+    <tr><td class="paramname">alpha</td><td>The new alpha value to replace the alpha value in color. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(float gray, float alpha=limit())</span></div><div class="memberDocumentation">
+
+<p>Construct a grayscale <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by specifiying a single number. </p>
+<p>This constructor will use a single value to describe a grayscale color. This single value will be taken by each of the R, G and B components. The alpha channel is specified separately and will and will default to the PixelType&apos;s maximum resulting in an opaque color.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gray</td><td>A grayscale value. </td></tr>
+    <tr><td class="paramname">alpha</td><td>The opacity of the color. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(const ofColor_&lt; SrcType &gt; &amp;color)</span></div><div class="memberDocumentation">
+
+<p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an existing <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>. </p>
+<p>This constructor will attempt to convert between color instances of differing precision.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Depending on the PixelType and SrcType used, color precision may be lost when converting a higher precision to a lower precision representation.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> to copy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="ac5454aed599639ab6d1748b08301a992" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac5454aed599639ab6d1748b08301a992&quot;)">
+        <span class="type"></span>
+        <a class="name">set</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ac5454aed599639ab6d1748b08301a992_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float red, float green, float blue, float alpha=limit())</span></div><div class="memberDocumentation">
+
+<p>Set an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by using channel values. </p>
+<p>When modifying an instance of <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> the channel values must fall within the range represented by the PixelType. By default, the alpha component will take the PixelType&apos;s maximum, producing an opaque color.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">red</td><td>The red component. </td></tr>
+    <tr><td class="paramname">green</td><td>The green component. </td></tr>
+    <tr><td class="paramname">blue</td><td>The blue component. </td></tr>
+    <tr><td class="paramname">alpha</td><td>The alpha component. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float gray, float alpha=limit())</span></div><div class="memberDocumentation">
+
+<p>Set a grayscale <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by specifiying a single number. </p>
+<p>When modifying an instance of <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> you can use a single value to describe a grayscale color. This single value will be taken by each of the R, G and B components. The alpha channel is specified separately and will and will default to the PixelType&apos;s maximum resulting in an opaque color.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gray</td><td>A grayscale value. </td></tr>
+    <tr><td class="paramname">alpha</td><td>The opacity of the color. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
+
+<p>Set an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an existing <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>. </p>
+<p>This will use the R, G, B and A components from the passed color.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> to copy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="ad6e89a08aa11f2d2815ba9be89033ccf" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad6e89a08aa11f2d2815ba9be89033ccf&quot;)">
+        <span class="type"></span>
+        <a class="name">setHex</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ad6e89a08aa11f2d2815ba9be89033ccf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setHex</span><span class="args">(int hexColor, float alpha=limit())</span></div><div class="memberDocumentation">
+
+<p>Set an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from a hexadecimal representation. </p>
+<p>In some cases, it is convenient to represent colors using a hexadecimal number. In this case, red, green and blue values are packed into a integer.</p>
+<p>The alpha channel is specified separately and will default to the PixelType&apos;s maximum, resulting in an opaque color.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The alpha value <em>should not</em> be packed in the hexColor and must be specified separately.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hexColor</td><td>An RGB color in hexadecimal form. </td></tr>
+    <tr><td class="paramname">alpha</td><td>The alpha value of the color. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="a7a721db7497d984c3ee81002bcd7237b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7a721db7497d984c3ee81002bcd7237b&quot;)">
+        <span class="type"></span>
+        <a class="name">getHex</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a7a721db7497d984c3ee81002bcd7237b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getHex</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Get a hexadecimal representation of the RGB color. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This method does <em>not</em> encode the alpha component.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An integer representing an RGB color. </dd></dl>
+
+</div></div>
+  </div><div id="a90df86b31f2d2411deeca42b228d5381" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a90df86b31f2d2411deeca42b228d5381&quot;)">
+        <span class="type"></span>
+        <a class="name">clamp</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a90df86b31f2d2411deeca42b228d5381_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">clamp</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Clamp values between 0 and the <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </p>
+<p>Clamps the value of each component, R, G, B and A to a maximum of <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a> and a minimum of zero.</p>
+<dl class="section return"><dt>Returns</dt><dd>A reference to itself. </dd></dl>
+
+</div></div>
+  </div><div id="ac7dab5a53453d15d18b3c486ee655103" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac7dab5a53453d15d18b3c486ee655103&quot;)">
+        <span class="type"></span>
+        <a class="name">invert</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ac7dab5a53453d15d18b3c486ee655103_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">invert</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Invert the R, G and B components. </p>
+<p>Performs an inversion operation on the color by replacing the red, green and blue components with their original value subtracted from the <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. For example, an ofColor value of: </p>
+<pre class="fragment">unsigned char maxValue = limit(); // would return 255
+
+unsigned char r = 255;
+unsigned char g = 255;
+unsigned char b = 0;
+
+unsigned char rNew = maxValue - r; // 255 - 255 = 0
+unsigned char gNew = maxValue - g; // 255 - 255 = 0
+unsigned char bNew = maxValue - b; // 255 - 0   = 255;
+</pre><p>Thus the inversion of <code>ofColor(255, 255, 0)</code> is <code>ofColor(0, 0, 255);</code></p>
+<dl class="section return"><dt>Returns</dt><dd>A reference to itself. </dd></dl>
+
+</div></div>
+  </div><div id="a383be8c22b569253381ea7e5ed80f51d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a383be8c22b569253381ea7e5ed80f51d&quot;)">
+        <span class="type"></span>
+        <a class="name">normalize</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a383be8c22b569253381ea7e5ed80f51d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">normalize</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Normalize the R, G and B components. </p>
+<p>Performs a normalization operation on the red, green and blue components by scaling them by brightness of the original color divided by the <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. The brightness is calculated by finding the maximum of original red, green and blue components. This operation is equivalent to the following: </p>
+<pre class="fragment">ofColor myColor(127, 0, 0, 127);
+
+float brightness = myColor.getBrightness(); // returns 127.
+float scaleFactor = brightness / limit();   // returns 127 / 255.
+
+ofColor myNormalizedColor = myColor / scaleFactor;
+                            // Divides the red, green and blue
+                            // components by the scale factor.
+</pre><dl class="section return"><dt>Returns</dt><dd>A reference to itself. </dd></dl>
+
+</div></div>
+  </div><div id="a777831b6851dbc27fd7d2d4b5288d16b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a777831b6851dbc27fd7d2d4b5288d16b&quot;)">
+        <span class="type"></span>
+        <a class="name">lerp</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a777831b6851dbc27fd7d2d4b5288d16b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">lerp</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;target, float amount)</span></div><div class="memberDocumentation">
+
+<p>A linear interpolation between all components of two colors. </p>
+<p>The lerp method performs a linear interpolation (or <a href="http://en.wikipedia.org/wiki/Lerp_(computing)" title="Lerp">lerp</a>) between this color and a target color. In contrast to many of the mathematical functions found in <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>, The linear interpolation is carried out on <em>all</em> components, R, G, B <em>and</em> A. The amount is typically a value between 0.0 and 1.0, with 0.0 yielding an unchanged color and 1.0 yielding a color identical to the target color.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>The target color corresponding to an amount of 1.0. </td></tr>
+    <tr><td class="paramname">amount</td><td>The amount (between 0.0 and 1.0) to interpolate. A value of 0.0 will yield an unchanged color. A value of 1.0 will yield the target color. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to itself. </dd></dl>
+
+</div></div>
+  </div><div id="a756c104c401ec4e42d27ee5b7d8a3912" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a756c104c401ec4e42d27ee5b7d8a3912&quot;)">
+        <span class="type"></span>
+        <a class="name">getClamped</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a756c104c401ec4e42d27ee5b7d8a3912_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">getClamped</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>A non-destructive version of <a class="el" href="ofColor.html#a90df86b31f2d2411deeca42b228d5381" title="Clamp values between 0 and the limit(). ">clamp()</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>A copy of this color, clamped. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofColor.html#a90df86b31f2d2411deeca42b228d5381" title="Clamp values between 0 and the limit(). ">clamp()</a> </dd></dl>
+
+</div></div>
+  </div><div id="a11bc8c7ef629174d09fd3168c18660e9" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a11bc8c7ef629174d09fd3168c18660e9&quot;)">
+        <span class="type"></span>
+        <a class="name">getInverted</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a11bc8c7ef629174d09fd3168c18660e9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">getInverted</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>A non-destructive version of <a class="el" href="ofColor.html#ac7dab5a53453d15d18b3c486ee655103" title="Invert the R, G and B components. ">invert()</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>A copy of this color, inverted. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofColor.html#ac7dab5a53453d15d18b3c486ee655103" title="Invert the R, G and B components. ">invert()</a> </dd></dl>
+
+</div></div>
+  </div><div id="a371c0b6475599a3191d2f08672d8b771" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a371c0b6475599a3191d2f08672d8b771&quot;)">
+        <span class="type"></span>
+        <a class="name">getNormalized</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a371c0b6475599a3191d2f08672d8b771_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">getNormalized</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>A non-destructive version of <a class="el" href="ofColor.html#a383be8c22b569253381ea7e5ed80f51d" title="Normalize the R, G and B components. ">normalize()</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>A copy of this color, normalized. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofColor.html#a383be8c22b569253381ea7e5ed80f51d" title="Normalize the R, G and B components. ">normalize()</a> </dd></dl>
+
+</div></div>
+  </div><div id="a070e475f03ccfee7eb0ecd47443fbe07" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a070e475f03ccfee7eb0ecd47443fbe07&quot;)">
+        <span class="type"></span>
+        <a class="name">getLerped</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a070e475f03ccfee7eb0ecd47443fbe07_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">getLerped</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;target, float amount) const </span></div><div class="memberDocumentation">
+
+<p>A non-destructive version of <a class="el" href="ofColor.html#a777831b6851dbc27fd7d2d4b5288d16b" title="A linear interpolation between all components of two colors. ">lerp()</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>A copy of this color, lerped. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofColor.html#a777831b6851dbc27fd7d2d4b5288d16b" title="A linear interpolation between all components of two colors. ">lerp()</a> </dd></dl>
+
+</div></div>
+  </div><div id="a59959aa62173b96f31d0833327e2772f" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a59959aa62173b96f31d0833327e2772f&quot;)">
+        <span class="type"></span>
+        <a class="name">getHue</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a59959aa62173b96f31d0833327e2772f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getHue</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Get the Hue of this color. </p>
+<p>The color is converted from the default RGB to an HSB colorspace and the resulting Hue value is returned. The resulting hue value will always be returned in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>The Hue value in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </dd></dl>
+
+</div></div>
+  </div><div id="ac6db0677624242a46690352660254f18" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac6db0677624242a46690352660254f18&quot;)">
+        <span class="type"></span>
+        <a class="name">getHueAngle</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ac6db0677624242a46690352660254f18_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getHueAngle</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Get the Hue angle of this color. </p>
+<p>The color is converted from the default RGB to an HSB colorspace and the resulting Hue angle is returned. The resulting hue value will always be returned in degrees in the range 0 - 360.</p>
+<dl class="section return"><dt>Returns</dt><dd>The Hue angle in the range 0 - 360. </dd></dl>
+
+</div></div>
+  </div><div id="a0569370be88bfa5fddbd6529b5230de3" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a0569370be88bfa5fddbd6529b5230de3&quot;)">
+        <span class="type"></span>
+        <a class="name">getSaturation</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a0569370be88bfa5fddbd6529b5230de3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getSaturation</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Get the Saturation of this color. </p>
+<p>The color is converted from the default RGB to an HSB colorspace and the resulting saturation is returned. The resulting saturation value will always be returned in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>The saturation in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </dd></dl>
+
+</div></div>
+  </div><div id="a7b73e7b52d0e967277c034d9e539d7b7" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7b73e7b52d0e967277c034d9e539d7b7&quot;)">
+        <span class="type"></span>
+        <a class="name">getBrightness</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a7b73e7b52d0e967277c034d9e539d7b7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getBrightness</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Calculate the brightness of of the R, G and B components. </p>
+<p>Brightness is simply the maximum of the three color components. This method of calculating brightness is used by Photoshop (HSB) and Processing (HSB). Note that brightness is also called &quot;Value&quot;.</p>
+<p>returns the brightness in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </p>
+
+</div></div>
+  </div><div id="ada21fed669a9f098466643e044ca2ada" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ada21fed669a9f098466643e044ca2ada&quot;)">
+        <span class="type"></span>
+        <a class="name">getLightness</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ada21fed669a9f098466643e044ca2ada_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getLightness</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Calculate the lightness of the R, G and B components. </p>
+<p>Lightness is simply the average of the three color components. This method of calculating lightness is used by the Lab and HSL color spaces.</p>
+<dl class="section return"><dt>Returns</dt><dd>the lightness in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </dd></dl>
+
+</div></div>
+  </div><div id="a6c340043e0fa64d77a2688709f7c0787" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6c340043e0fa64d77a2688709f7c0787&quot;)">
+        <span class="type"></span>
+        <a class="name">getHsb</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a6c340043e0fa64d77a2688709f7c0787_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">getHsb</span><span class="args">(float &amp;hue, float &amp;saturation, float &amp;brightness) const </span></div><div class="memberDocumentation">
+
+<p>Extract the hue, saturation and brightness from this color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hue</td><td>A reference to the hue to fill. Will be in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
+    <tr><td class="paramname">hue</td><td>A reference to the saturation to fill. Will be in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
+    <tr><td class="paramname">brightness</td><td>A reference to the brightness to fill. Will be in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="a2b20f282fa99ff0fb540bcf8718863eb" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2b20f282fa99ff0fb540bcf8718863eb&quot;)">
+        <span class="type"></span>
+        <a class="name">setHue</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a2b20f282fa99ff0fb540bcf8718863eb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setHue</span><span class="args">(float hue)</span></div><div class="memberDocumentation">
+
+<p>Set the hue of this color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hue</td><td>A hue value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="a5c845f2850cff57da1cda13a34412b51" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5c845f2850cff57da1cda13a34412b51&quot;)">
+        <span class="type"></span>
+        <a class="name">setHueAngle</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a5c845f2850cff57da1cda13a34412b51_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setHueAngle</span><span class="args">(float angle)</span></div><div class="memberDocumentation">
+
+<p>Set the hue angle of this color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>A hue angle value to set in the range of 0 - 360 degrees. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="aa3301f40e7f4dc0bd1563f32cba9def7" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa3301f40e7f4dc0bd1563f32cba9def7&quot;)">
+        <span class="type"></span>
+        <a class="name">setSaturation</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aa3301f40e7f4dc0bd1563f32cba9def7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setSaturation</span><span class="args">(float saturation)</span></div><div class="memberDocumentation">
+
+<p>Set the saturation this color. </p>
+<p>This method uses HSB not HSL. So red desaturated is white, not gray</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">saturation</td><td>A saturation value value in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://en.wikipedia.org/wiki/HSL_and_HSV">http://en.wikipedia.org/wiki/HSL_and_HSV</a> </dd></dl>
+
+</div></div>
+  </div><div id="ae316135040740fb2f37f6cd8d23454bb" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae316135040740fb2f37f6cd8d23454bb&quot;)">
+        <span class="type"></span>
+        <a class="name">setBrightness</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ae316135040740fb2f37f6cd8d23454bb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setBrightness</span><span class="args">(float brightness)</span></div><div class="memberDocumentation">
+
+<p>Set the brightness of this color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brightness</td><td>A brightness value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="a3b670043729b209994985c1b458ab5cd" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3b670043729b209994985c1b458ab5cd&quot;)">
+        <span class="type"></span>
+        <a class="name">setHsb</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a3b670043729b209994985c1b458ab5cd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setHsb</span><span class="args">(float hue, float saturation, float brightness, float alpha=limit())</span></div><div class="memberDocumentation">
+
+<p>Set the color using HSB components. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hue</td><td>A hue value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
+    <tr><td class="paramname">saturation</td><td>A saturation value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
+    <tr><td class="paramname">brightness</td><td>A brightness value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
+    <tr><td class="paramname">alpha</td><td>An alpha value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="a1d1f3958d35604bbb566ab665d2a3911" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1d1f3958d35604bbb566ab665d2a3911&quot;)">
         <span class="type"></span>
@@ -3080,7 +3109,85 @@ class ofColor_&lt; T &gt;</h3>
 </div><hr><div class="memberVariant"><span class="type">PixelType &amp; </span><span class="name">operator[]</span><span class="args">(int n)</span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="a555fbf0f2cce3a33dae1e873f11d4883" class="method">
+  </div></div>
+  </div><div id="StaticFunctions">
+    <h3 class="sectionHeader">Static Functions</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a298d1603eb1628dcb5f71906b581dd5c" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a298d1603eb1628dcb5f71906b581dd5c&quot;)">
+        <span class="type"></span>
+        <a class="name">fromHsb</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a298d1603eb1628dcb5f71906b581dd5c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">fromHsb</span><span class="args">(float hue, float saturation, float brightness, float alpha=limit())</span></div><div class="memberDocumentation">
+
+<p>Create an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an HSB representation. </p>
+<p>While <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> represents color using R, G, B, and A components, other representations are available. This method allows the user to construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from a Hue (H), Saturation (S), and Brightness (B) and an optional alpha value.</p>
+<p>The alpha channel is specified separately and will default to the PixelType&apos;s maximum, resulting in an opaque color.</p>
+<p>For more information about HSB, see: <a href="http://en.wikipedia.org/wiki/HSV_color_space">http://en.wikipedia.org/wiki/HSV_color_space</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hue</td><td>The hue of the color. </td></tr>
+    <tr><td class="paramname">saturation</td><td>The saturation of the color. </td></tr>
+    <tr><td class="paramname">brightness</td><td>The brightness of the color. </td></tr>
+    <tr><td class="paramname">alpha</td><td>The alpha value of the color. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="aa14c7cb5a9912e22887db4e87c4f85b4" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa14c7cb5a9912e22887db4e87c4f85b4&quot;)">
+        <span class="type"></span>
+        <a class="name">fromHex</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aa14c7cb5a9912e22887db4e87c4f85b4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">fromHex</span><span class="args">(int hexColor, float alpha=limit())</span></div><div class="memberDocumentation">
+
+<p>Create an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from a hexadecimal value. </p>
+<p>In some cases, it is convenient to represent colors using a hexadecimal number. In this case, red, green and blue values are packed into a single integer.</p>
+<p>The alpha channel is specified separately and will default to the PixelType&apos;s maximum, resulting in an opaque color.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hexColor</td><td>A color in hexadecimal form. </td></tr>
+    <tr><td class="paramname">alpha</td><td>The alpha value of the color. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="aef7c0aabbaab6d6ac09cf60080eb5b6f" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aef7c0aabbaab6d6ac09cf60080eb5b6f&quot;)">
+        <span class="type"></span>
+        <a class="name">limit</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aef7c0aabbaab6d6ac09cf60080eb5b6f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">limit</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Return the maximum value of a color. </p>
+<dl class="section return"><dt>Returns</dt><dd>The value associated with a fully saturated color component. </dd></dl>
+
+</div></div>
+  </div></div>
+  </div><div id="Friends">
+    <h3 class="sectionHeader">Friends</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a555fbf0f2cce3a33dae1e873f11d4883" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a555fbf0f2cce3a33dae1e873f11d4883&quot;)">
         <span class="type"></span>
@@ -3096,17 +3203,17 @@ class ofColor_&lt; T &gt;</h3>
 <p>An output stream operator. </p>
 <p>Colors can be serialized into comma separated values (CSV) using the output stream operator. Input stream values are written in the following form </p>
 <pre class="fragment">RED_VALUE, GREEN_VALUE, BLUE_VALUE, ALPHA_VALUE
-</pre><p>For example, to write output into a std::stringstream for later retrieval using the <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> input stream operator one might use the following:</p>
-<div class="fragment"><div class="line">std::stringstream ss;     <span class="comment">// Create an empty std::string stream.</span></div>
-<div class="line">                          <span class="comment">// Note: std::stringstream is just one</span></div>
-<div class="line">                          <span class="comment">// option for an output stream.  Another</span></div>
-<div class="line">                          <span class="comment">// popular output stream std::cout.</span></div>
-<div class="line"></div>
-<div class="line"><a class="code" href="ofColor.html">ofColor</a> myColor(255, 255, 0, 255);</div>
-<div class="line">                          <span class="comment">// Create an ofColor to output.</span></div>
-<div class="line"></div>
-<div class="line">ss &lt;&lt; myColor;            <span class="comment">// Write the color to the output stream.</span></div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+</pre><p>For example, to write output into a std::stringstream for later retrieval using the <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> input stream operator one might use the following: </p>
+<pre class="fragment">std::stringstream ss;     // Create an empty std::string stream.
+                          // Note: std::stringstream is just one
+                          // option for an output stream.  Another
+                          // popular output stream std::cout.
+
+ofColor myColor(255, 255, 0, 255);
+                          // Create an ofColor to output.
+
+ss &lt;&lt; myColor;            // Write the color to the output stream.
+</pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">os</td><td>An output stream reference. </td></tr>
     <tr><td class="paramname">color</td><td>The color to write to the output stream. </td></tr>
@@ -3132,14 +3239,14 @@ class ofColor_&lt; T &gt;</h3>
 <p>An input stream operator. </p>
 <p>Colors can be deserialized from comma separated values (CSV) input stream using the input stream operator. Input stream values are read in the following form </p>
 <pre class="fragment">RED_VALUE, GREEN_VALUE, BLUE_VALUE, ALPHA_VALUE
-</pre><p>For example, to read input from a std::stringstream into an ofColor one might use the following:</p>
-<div class="fragment"><div class="line">std::stringstream ss;     <span class="comment">// Create an empty std::string stream.</span></div>
-<div class="line">                          <span class="comment">// Note: std::stringstream is just one</span></div>
-<div class="line">                          <span class="comment">// option for an input stream.</span></div>
-<div class="line">ss &lt;&lt; <span class="stringliteral">&quot;255, 255, 0, 255&quot;</span>; <span class="comment">// Write the color to the stringstream.</span></div>
-<div class="line"><a class="code" href="ofColor.html">ofColor</a> myColor;          <span class="comment">// Create an ofColor instance to fill.</span></div>
-<div class="line">ss &gt;&gt; myColor;            <span class="comment">// myColor is now filled with a yellow.</span></div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+</pre><p>For example, to read input from a std::stringstream into an ofColor one might use the following: </p>
+<pre class="fragment">std::stringstream ss;     // Create an empty std::string stream.
+                          // Note: std::stringstream is just one
+                          // option for an input stream.
+ss &lt;&lt; &quot;255, 255, 0, 255&quot;; // Write the color to the stringstream.
+ofColor myColor;          // Create an ofColor instance to fill.
+ss &gt;&gt; myColor;            // myColor is now filled with a yellow.
+</pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">is</td><td>An input stream reference. </td></tr>
     <tr><td class="paramname">color</td><td>The color to fill with the input stream. </td></tr>
@@ -3147,125 +3254,6 @@ class ofColor_&lt; T &gt;</h3>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The passed input stream reference, useful for method chaining. </dd></dl>
-
-</div></div>
-  </div></div>
-  </div><div id="Attributes">
-    <h3 class="sectionHeader">Attributes</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="aab3965044572c4f8f44d0502340bff15" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aab3965044572c4f8f44d0502340bff15&quot;)">
-        <span class="type"></span>
-        <a class="name">r</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aab3965044572c4f8f44d0502340bff15_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType </span><span class="name">r</span><span class="args"></span></div><div class="memberDocumentation">
-
-<p>The red color component. </p>
-
-</div></div>
-  </div><div id="adf8807e0648ac5089cfba86029cb1ea5" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#adf8807e0648ac5089cfba86029cb1ea5&quot;)">
-        <span class="type"></span>
-        <a class="name">g</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="adf8807e0648ac5089cfba86029cb1ea5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType </span><span class="name">g</span><span class="args"></span></div><div class="memberDocumentation">
-
-<p>The green color component. </p>
-
-</div></div>
-  </div><div id="a837af41c32c453d99395229441ad5f68" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a837af41c32c453d99395229441ad5f68&quot;)">
-        <span class="type"></span>
-        <a class="name">b</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a837af41c32c453d99395229441ad5f68_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType </span><span class="name">b</span><span class="args"></span></div><div class="memberDocumentation">
-
-<p>The blue color component. </p>
-
-</div></div>
-  </div><div id="a08e3f8c336defe949356a68125e366ca" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a08e3f8c336defe949356a68125e366ca&quot;)">
-        <span class="type"></span>
-        <a class="name">a</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a08e3f8c336defe949356a68125e366ca_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType </span><span class="name">a</span><span class="args"></span></div><div class="memberDocumentation">
-
-<p>The alpha color component. </p>
-
-</div></div>
-  </div><div id="ab9ff1ead578d9b6861d81b9b227bebf3" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab9ff1ead578d9b6861d81b9b227bebf3&quot;)">
-        <span class="type"></span>
-        <a class="name">v</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ab9ff1ead578d9b6861d81b9b227bebf3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType </span><span class="name">v</span><span class="args">[4]</span></div><div class="memberDocumentation">
-
-<p>The pixel values as an array. </p>
-
-</div></div>
-  </div><div id="a21867b7cba4d68c5737334e0610dfe36" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a21867b7cba4d68c5737334e0610dfe36&quot;)">
-        <span class="type"></span>
-        <a class="name">Anonymous variable</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a21867b7cba4d68c5737334e0610dfe36_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">union ofColor_::@3 </span><span class="name">Anonymous variable</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div><div id="StaticFunctions">
-    <h3 class="sectionHeader">Static Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="aef7c0aabbaab6d6ac09cf60080eb5b6f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aef7c0aabbaab6d6ac09cf60080eb5b6f&quot;)">
-        <span class="type"></span>
-        <a class="name">limit</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aef7c0aabbaab6d6ac09cf60080eb5b6f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">limit</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Return the maximum value of a color. </p>
-<dl class="section return"><dt>Returns</dt><dd>The value associated with a fully saturated color component. </dd></dl>
 
 </div></div>
   </div></div>

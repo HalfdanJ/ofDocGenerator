@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <li class="chapter"><a href="#Typedefs">Typedefs</a></li><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofImage_</span><li class="chapter"><a href="#Attributes">Attributes</a></li><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li><span class="class">ofColor_</span><li class="chapter"><a href="#CreateanofColor">Create an ofColor</a></li><li class="chapter"><a href="#Setters">Setters</a></li><li class="chapter"><a href="#Modifiers">Modifiers</a></li><li class="chapter"><a href="#Getters">Getters</a></li><li class="chapter"><a href="#Predefinedcolors">Predefined colors</a></li><li class="chapter"><a href="#Operators">Operators</a></li><li class="chapter"><a href="#Attributes">Attributes</a></li><li class="chapter"><a href="#StaticFunctions">Static Functions</a></li><span class="class">ofBaseDraws</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseUpdates</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseHasTexture</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseHasTexturePlanes</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofAbstractHasPixels</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseHasPixels_</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofAbstractImage</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseImage_</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseSoundInput</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseSoundOutput</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseVideo</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseVideoDraws</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseVideoGrabber</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseVideoPlayer</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseRenderer</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseGLRenderer</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseSerializer</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseFileSerializer</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseURLFileLoader</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseMaterial</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofPixels_</span><li class="chapter"><a href="#Types">Types</a></li><li class="chapter"><a href="#Functions">Functions</a></li></ul>
+        <li class="chapter"><a href="#Typedefs">Typedefs</a></li><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofImage_</span><li class="chapter"><a href="#Attributes">Attributes</a></li><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li><span class="class">ofColor_</span><li class="chapter"><a href="#StaticAttributes">Static Attributes</a></li><li class="chapter"><a href="#Attributes">Attributes</a></li><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#StaticFunctions">Static Functions</a></li><li class="chapter"><a href="#Friends">Friends</a></li><span class="class">ofBaseDraws</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseUpdates</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseHasTexture</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseHasTexturePlanes</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofAbstractHasPixels</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseHasPixels_</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofAbstractImage</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseImage_</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseSoundInput</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseSoundOutput</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseVideo</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseVideoDraws</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseVideoGrabber</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseVideoPlayer</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseRenderer</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseGLRenderer</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseSerializer</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseFileSerializer</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseURLFileLoader</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofBaseMaterial</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofPixels_</span><li class="chapter"><a href="#Types">Types</a></li><li class="chapter"><a href="#Functions">Functions</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -513,7 +513,7 @@ class ofImage_&lt; PixelType &gt;</h3>
   <table class="params">
     <tr><td class="paramname">w</td><td>Width of image to allocate. </td></tr>
     <tr><td class="paramname">h</td><td>Height of image to allocate. </td></tr>
-    <tr><td class="paramname">type</td><td>The type can be of three types: OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, OF_IMAGE_COLOR_ALPHA. </td></tr>
+    <tr><td class="paramname">type</td><td>The ofImageType. </td></tr>
   </table>
   </dd>
 </dl>
@@ -842,8 +842,7 @@ class ofImage_&lt; PixelType &gt;</h3>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fileName</td><td>Saves image to this path, relative to the data folder. </td></tr>
-    <tr><td class="paramname">compressionLevel</td><td>The different compression levels are: OF_IMAGE_QUALITY_BEST, OF_IMAGE_QUALITY_HIGH, </td></tr>
-    <tr><td class="paramname">OF_IMAGE_QUALITY_MEDIUM,OF_IMAGE_QUALITY_LOW,OF_IMAGE_QUALITY_WORST</td><td></td></tr>
+    <tr><td class="paramname">compressionLevel</td><td>The ofImageQualityType. </td></tr>
   </table>
   </dd>
 </dl>
@@ -879,9 +878,8 @@ class ofImage_&lt; PixelType &gt;</h3>
 <p>This saves the image to the <a class="el" href="ofBuffer.html">ofBuffer</a> passed with the image quality specified by compressionLevel. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">buffer</td><td><a class="el" href="ofBuffer.html">ofBuffer</a> to save image to </td></tr>
-    <tr><td class="paramname">compressionLevel</td><td>The different compression levels are: OF_IMAGE_QUALITY_BEST, OF_IMAGE_QUALITY_HIGH, </td></tr>
-    <tr><td class="paramname">OF_IMAGE_QUALITY_MEDIUM,OF_IMAGE_QUALITY_LOW,OF_IMAGE_QUALITY_WORST</td><td></td></tr>
+    <tr><td class="paramname">buffer</td><td><a class="el" href="ofBuffer.html">ofBuffer</a> to save image to. </td></tr>
+    <tr><td class="paramname">compressionLevel</td><td>The ofImageQualityType. </td></tr>
   </table>
   </dd>
 </dl>
@@ -917,7 +915,7 @@ class ofImage_&lt; PixelType &gt;</h3>
 <p>This saves the image to the <a class="el" href="ofFile.html">ofFile</a> passed with the image quality specified by compressionLevel. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file</td><td><a class="el" href="ofFile.html">ofFile</a> to save image to </td></tr>
+    <tr><td class="paramname">file</td><td><a class="el" href="ofFile.html">ofFile</a> to save image to. </td></tr>
     <tr><td class="paramname">compressionLevel</td><td>The different compression levels are: OF_IMAGE_QUALITY_BEST, OF_IMAGE_QUALITY_HIGH, </td></tr>
     <tr><td class="paramname">OF_IMAGE_QUALITY_MEDIUM,OF_IMAGE_QUALITY_LOW,OF_IMAGE_QUALITY_WORST</td><td></td></tr>
   </table>
@@ -955,8 +953,7 @@ class ofImage_&lt; PixelType &gt;</h3>
 <p>This sets the compression level used when creating mipmaps for the <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> contained by the ofImage. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">compression</td><td>The different texture compression levels are: OF_COMPRESS_NONE, </td></tr>
-    <tr><td class="paramname">OF_COMPRESS_SRGB,OF_COMPRESS_ARB</td><td></td></tr>
+    <tr><td class="paramname">compression</td><td>The ofTexCompression to set. </td></tr>
   </table>
   </dd>
 </dl>
@@ -978,7 +975,7 @@ class ofImage_&lt; PixelType &gt;</h3>
 <p>Returns a raw pointer to the pixel data. </p>
 <p>This function will give you access to a continuous block of pixels. you can grab the data and do what you like with it. If you have a grayscale image, you will have (width*height) number of pixels. Color images will have (width*height*3) number of pixels (interlaced R,G,B), and coloralpha images will have (width*height*4) number of pixels (interlaced R,G,B,A).</p>
 <dl class="section warning"><dt>Warning</dt><dd>This is a raw pointer. It&apos;s up to you to get this right.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns a raw pointer to the pixel data. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A raw pointer to the pixel data. </dd></dl>
 
 <p>Implements <a class="el" href="ofBaseHasPixels.html#abf6bc60c9addfbbcc5372ecce0019224">ofBaseHasPixels_&lt; PixelType &gt;</a>.</p>
 
@@ -1005,7 +1002,7 @@ class ofImage_&lt; PixelType &gt;</h3>
 
 <p>This returns an ofPixels reference that you can use to manipulate the raw pixel data of the ofImage. </p>
 <p>Make sure you call either <a class="el" href="ofImage.html#ae05e8a23c92e28bc4aa8f79621d27dda" title="Call to ensure that changes to pixels are reflected in the ofTexture of the image. ">update()</a> or <a class="el" href="ofImage.html#a39101e7401e3708dba08bba4c95b46de" title="Loads ofPixels data into ofTexture so that draw() calls reflect changes to the pixels. ">reloadTexture()</a> after making changes to the ofPixels.</p>
-<dl class="section return"><dt>Returns</dt><dd>Returns an ofPixels reference that you can use to manipulate the raw pixel data of the ofImage. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An ofPixels reference that you can use to manipulate the raw pixel data of the ofImage. </dd></dl>
 
 </div><hr><div class="memberVariant"><span class="type">const ofPixels_&lt; PixelType &gt; </span><span class="name">getPixelsRef</span><span class="args">()</span></div><div class="memberDocumentation">
 
@@ -1045,7 +1042,7 @@ class ofImage_&lt; PixelType &gt;</h3>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>This returns the ofColor representing the pixels at the x and y position passed in. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The ofColor representing the pixels at the x and y position passed in. </dd></dl>
 
 </div></div>
   </div><div id="a3c73d9de844a5c836196e33b9b7f02d8" class="method">
@@ -1690,9 +1687,9 @@ class ofColor_&lt; T &gt;</h3>
 <tr>
 <td><code>ofFloatColor</code></td><td><code>float</code> </td><td><em>varies</em> </td><td>0.0 </td><td>1.0 </td></tr>
 </table>
-<p>For integral PixelTypes (e.g. <code>unsigned char</code> and <code>unsigned short</code>), the minimum is zero and the maximum is given by:</p>
-<div class="fragment"><div class="line">std::numeric_limits&lt;PixelType&gt;::max();</div>
-</div><!-- fragment --><p>For floating point PixelsTypes, the maximum is 1.0.</p>
+<p>For integral PixelTypes (e.g. <code>unsigned char</code> and <code>unsigned short</code>), the minimum is zero and the maximum is given by: </p>
+<pre class="fragment">std::numeric_limits&lt;PixelType&gt;::max();
+</pre><p>For floating point PixelsTypes, the maximum is 1.0.</p>
 <p>The ofColor typedef represents an 8-bit RGBA color. Thus, each component has a maximum value of 255 and a minimum value of 0. The ofColor typedef is the default color type in openFrameworks and will work for most user applications.</p>
 <p>The ofFloatColor and ofShortColor represent higher precision representations of a given color and are used in special cases where precision color math is required. ofFloatColor might be used for specialized image processing, such as image averaging where rounding errors might otherwise introduce unaccaptable visual artifacts. ofShortColor might be used with depth camera images that can represent the &quot;depth&quot; of each pixel with greater than 256 unique levels.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -1702,640 +1699,9 @@ class ofColor_&lt; T &gt;</h3>
   </dd>
 </dl>
 </div></div>
-    <div class="classMethods"><div id="CreateanofColor">
-    <h3 class="sectionHeader">Create an ofColor</h3>
+    <div class="classMethods"><div id="StaticAttributes">
+    <h3 class="sectionHeader">Static Attributes</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a894f8070c4bbe3a98f5702a11440beb3" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a894f8070c4bbe3a98f5702a11440beb3&quot;)">
-        <span class="type"></span>
-        <a class="name">ofColor_</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a894f8070c4bbe3a98f5702a11440beb3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> instance. </p>
-
-</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(float red, float green, float blue, float alpha=limit())</span></div><div class="memberDocumentation">
-
-<p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by using channel values. </p>
-<p>When creating an instance of <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> the channel values must fall within the range represented by the PixelType. By default, the alpha component will take the PixelType&apos;s maximum, producing an opaque color.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">red</td><td>The red component. </td></tr>
-    <tr><td class="paramname">green</td><td>The green component. </td></tr>
-    <tr><td class="paramname">blue</td><td>The blue component. </td></tr>
-    <tr><td class="paramname">alpha</td><td>The alpha component. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color, float alpha)</span></div><div class="memberDocumentation">
-
-<p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an existing <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>. </p>
-<p>This constructor will use the R, G and B components from the passed color ignoring its alpha channel. The provided alpha channel will be used instead.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">color</td><td>The <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> to copy. </td></tr>
-    <tr><td class="paramname">alpha</td><td>The new alpha value to replace the alpha value in color. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(float gray, float alpha=limit())</span></div><div class="memberDocumentation">
-
-<p>Construct a grayscale <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by specifiying a single number. </p>
-<p>This constructor will use a single value to describe a grayscale color. This single value will be taken by each of the R, G and B components. The alpha channel is specified separately and will and will default to the PixelType&apos;s maximum resulting in an opaque color.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">gray</td><td>A grayscale value. </td></tr>
-    <tr><td class="paramname">alpha</td><td>The opacity of the color. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(const ofColor_&lt; SrcType &gt; &amp;color)</span></div><div class="memberDocumentation">
-
-<p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an existing <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>. </p>
-<p>This constructor will attempt to convert between color instances of differing precision.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Depending on the PixelType and SrcType used, color precision may be lost when converting a higher precision to a lower precision representation.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">color</td><td>The <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> to copy. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="a298d1603eb1628dcb5f71906b581dd5c" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a298d1603eb1628dcb5f71906b581dd5c&quot;)">
-        <span class="type"></span>
-        <a class="name">fromHsb</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a298d1603eb1628dcb5f71906b581dd5c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">fromHsb</span><span class="args">(float hue, float saturation, float brightness, float alpha=limit())</span></div><div class="memberDocumentation">
-
-<p>Create an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an HSB representation. </p>
-<p>While <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> represents color using R, G, B, and A components, other representations are available. This method allows the user to construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from a Hue (H), Saturation (S), and Brightness (B) and an optional alpha value.</p>
-<p>The alpha channel is specified separately and will default to the PixelType&apos;s maximum, resulting in an opaque color.</p>
-<p>For more information about HSB, see: <a href="http://en.wikipedia.org/wiki/HSV_color_space">http://en.wikipedia.org/wiki/HSV_color_space</a></p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hue</td><td>The hue of the color. </td></tr>
-    <tr><td class="paramname">saturation</td><td>The saturation of the color. </td></tr>
-    <tr><td class="paramname">brightness</td><td>The brightness of the color. </td></tr>
-    <tr><td class="paramname">alpha</td><td>The alpha value of the color. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="aa14c7cb5a9912e22887db4e87c4f85b4" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa14c7cb5a9912e22887db4e87c4f85b4&quot;)">
-        <span class="type"></span>
-        <a class="name">fromHex</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa14c7cb5a9912e22887db4e87c4f85b4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">fromHex</span><span class="args">(int hexColor, float alpha=limit())</span></div><div class="memberDocumentation">
-
-<p>Create an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from a hexadecimal value. </p>
-<p>In some cases, it is convenient to represent colors using a hexadecimal number. In this case, red, green and blue values are packed into a single integer.</p>
-<p>The alpha channel is specified separately and will default to the PixelType&apos;s maximum, resulting in an opaque color.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hexColor</td><td>A color in hexadecimal form. </td></tr>
-    <tr><td class="paramname">alpha</td><td>The alpha value of the color. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div></div>
-  </div><div id="Setters">
-    <h3 class="sectionHeader">Setters</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="ac5454aed599639ab6d1748b08301a992" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac5454aed599639ab6d1748b08301a992&quot;)">
-        <span class="type"></span>
-        <a class="name">set</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ac5454aed599639ab6d1748b08301a992_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float red, float green, float blue, float alpha=limit())</span></div><div class="memberDocumentation">
-
-<p>Set an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by using channel values. </p>
-<p>When modifying an instance of <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> the channel values must fall within the range represented by the PixelType. By default, the alpha component will take the PixelType&apos;s maximum, producing an opaque color.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">red</td><td>The red component. </td></tr>
-    <tr><td class="paramname">green</td><td>The green component. </td></tr>
-    <tr><td class="paramname">blue</td><td>The blue component. </td></tr>
-    <tr><td class="paramname">alpha</td><td>The alpha component. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float gray, float alpha=limit())</span></div><div class="memberDocumentation">
-
-<p>Set a grayscale <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by specifiying a single number. </p>
-<p>When modifying an instance of <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> you can use a single value to describe a grayscale color. This single value will be taken by each of the R, G and B components. The alpha channel is specified separately and will and will default to the PixelType&apos;s maximum resulting in an opaque color.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">gray</td><td>A grayscale value. </td></tr>
-    <tr><td class="paramname">alpha</td><td>The opacity of the color. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
-
-<p>Set an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an existing <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>. </p>
-<p>This will use the R, G, B and A components from the passed color.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">color</td><td>The <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> to copy. </td></tr>
-    <tr><td class="paramname">alpha</td><td>The new alpha value to replace the alpha value in color. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="ad6e89a08aa11f2d2815ba9be89033ccf" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad6e89a08aa11f2d2815ba9be89033ccf&quot;)">
-        <span class="type"></span>
-        <a class="name">setHex</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ad6e89a08aa11f2d2815ba9be89033ccf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setHex</span><span class="args">(int hexColor, float alpha=limit())</span></div><div class="memberDocumentation">
-
-<p>Set an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from a hexadecimal representation. </p>
-<p>In some cases, it is convenient to represent colors using a hexadecimal number. In this case, red, green and blue values are packed into a integer.</p>
-<p>The alpha channel is specified separately and will default to the PixelType&apos;s maximum, resulting in an opaque color.</p>
-<dl class="section warning"><dt>Warning</dt><dd>The alpha value <em>should not</em> be packed in the hexColor and must be specified separately.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hexColor</td><td>An RGB color in hexadecimal form. </td></tr>
-    <tr><td class="paramname">alpha</td><td>The alpha value of the color. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="a2b20f282fa99ff0fb540bcf8718863eb" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2b20f282fa99ff0fb540bcf8718863eb&quot;)">
-        <span class="type"></span>
-        <a class="name">setHue</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a2b20f282fa99ff0fb540bcf8718863eb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setHue</span><span class="args">(float hue)</span></div><div class="memberDocumentation">
-
-<p>Set the hue of this color. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hue</td><td>A hue value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="a5c845f2850cff57da1cda13a34412b51" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5c845f2850cff57da1cda13a34412b51&quot;)">
-        <span class="type"></span>
-        <a class="name">setHueAngle</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a5c845f2850cff57da1cda13a34412b51_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setHueAngle</span><span class="args">(float angle)</span></div><div class="memberDocumentation">
-
-<p>Set the hue angle of this color. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hue</td><td>A hue angle value to set in the range of 0 - 360 degrees. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="aa3301f40e7f4dc0bd1563f32cba9def7" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa3301f40e7f4dc0bd1563f32cba9def7&quot;)">
-        <span class="type"></span>
-        <a class="name">setSaturation</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa3301f40e7f4dc0bd1563f32cba9def7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setSaturation</span><span class="args">(float saturation)</span></div><div class="memberDocumentation">
-
-<p>Set the saturation this color. </p>
-<p>This method uses HSB not HSL. So red desaturated is white, not gray</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">saturation</td><td>A saturation value value in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See Also</dt><dd><a href="http://en.wikipedia.org/wiki/HSL_and_HSV">http://en.wikipedia.org/wiki/HSL_and_HSV</a> </dd></dl>
-
-</div></div>
-  </div><div id="ae316135040740fb2f37f6cd8d23454bb" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae316135040740fb2f37f6cd8d23454bb&quot;)">
-        <span class="type"></span>
-        <a class="name">setBrightness</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ae316135040740fb2f37f6cd8d23454bb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setBrightness</span><span class="args">(float brightness)</span></div><div class="memberDocumentation">
-
-<p>Set the brightness of this color. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">brightness</td><td>A brightness value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="a3b670043729b209994985c1b458ab5cd" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3b670043729b209994985c1b458ab5cd&quot;)">
-        <span class="type"></span>
-        <a class="name">setHsb</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a3b670043729b209994985c1b458ab5cd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setHsb</span><span class="args">(float hue, float saturation, float brightness, float alpha=limit())</span></div><div class="memberDocumentation">
-
-<p>Set the color using HSB components. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hue</td><td>A hue value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
-    <tr><td class="paramname">saturation</td><td>A saturation value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
-    <tr><td class="paramname">brightness</td><td>A brightness value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div></div>
-  </div><div id="Modifiers">
-    <h3 class="sectionHeader">Modifiers</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a90df86b31f2d2411deeca42b228d5381" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a90df86b31f2d2411deeca42b228d5381&quot;)">
-        <span class="type"></span>
-        <a class="name">clamp</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a90df86b31f2d2411deeca42b228d5381_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">clamp</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Clamp values between 0 and the <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </p>
-<p>Clamps the value of each component, R, G, B and A to a maximum of <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a> and a minimum of zero.</p>
-<dl class="section return"><dt>Returns</dt><dd>A reference to itself. </dd></dl>
-
-</div></div>
-  </div><div id="ac7dab5a53453d15d18b3c486ee655103" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac7dab5a53453d15d18b3c486ee655103&quot;)">
-        <span class="type"></span>
-        <a class="name">invert</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ac7dab5a53453d15d18b3c486ee655103_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">invert</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Invert the R, G and B components. </p>
-<p>Performs an inversion operation on the color by replacing the red, green and blue components with their original value subtracted from the <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. For example, an ofColor value of:</p>
-<div class="fragment"><div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> maxValue = <a class="code" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f">limit</a>(); <span class="comment">// would return 255</span></div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="ofColor.html#aab3965044572c4f8f44d0502340bff15">r</a> = 255;</div>
-<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="ofColor.html#adf8807e0648ac5089cfba86029cb1ea5">g</a> = 255;</div>
-<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="ofColor.html#a837af41c32c453d99395229441ad5f68">b</a> = 0;</div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> rNew = maxValue - <a class="code" href="ofColor.html#aab3965044572c4f8f44d0502340bff15">r</a>; <span class="comment">// 255 - 255 = 0</span></div>
-<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> gNew = maxValue - <a class="code" href="ofColor.html#adf8807e0648ac5089cfba86029cb1ea5">g</a>; <span class="comment">// 255 - 255 = 0</span></div>
-<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> bNew = maxValue - <a class="code" href="ofColor.html#a837af41c32c453d99395229441ad5f68">b</a>; <span class="comment">// 255 - 0   = 255;</span></div>
-</div><!-- fragment --><p>Thus the inversion of <code>ofColor(255, 255, 0)</code> is <code>ofColor(0, 0, 255);</code></p>
-<dl class="section return"><dt>Returns</dt><dd>A reference to itself. </dd></dl>
-
-</div></div>
-  </div><div id="a383be8c22b569253381ea7e5ed80f51d" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a383be8c22b569253381ea7e5ed80f51d&quot;)">
-        <span class="type"></span>
-        <a class="name">normalize</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a383be8c22b569253381ea7e5ed80f51d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">normalize</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Normalize the R, G and B components. </p>
-<p>Performs a normalization operation on the red, green and blue components by scaling them by brightness of the original color divided by the <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. The brightness is calculated by finding the maximum of original red, green and blue components. This operation is equivalent to the following:</p>
-<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> myColor(127, 0, 0, 127);</div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">float</span> brightness = myColor.<a class="code" href="ofColor.html#a7b73e7b52d0e967277c034d9e539d7b7">getBrightness</a>(); <span class="comment">// returns 127.</span></div>
-<div class="line"><span class="keywordtype">float</span> scaleFactor = brightness / <a class="code" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f">limit</a>();   <span class="comment">// returns 127 / 255.</span></div>
-<div class="line"></div>
-<div class="line"><a class="code" href="ofColor.html">ofColor</a> myNormalizedColor = myColor / scaleFactor;</div>
-<div class="line">                            <span class="comment">// Divides the red, green and blue</span></div>
-<div class="line">                            <span class="comment">// components by the scale factor.</span></div>
-</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>A reference to itself. </dd></dl>
-
-</div></div>
-  </div><div id="a777831b6851dbc27fd7d2d4b5288d16b" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a777831b6851dbc27fd7d2d4b5288d16b&quot;)">
-        <span class="type"></span>
-        <a class="name">lerp</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a777831b6851dbc27fd7d2d4b5288d16b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">lerp</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;target, float amount)</span></div><div class="memberDocumentation">
-
-<p>A linear interpolation between all components of two colors. </p>
-<p>The lerp method performs a linear interpolation (or <a href="http://en.wikipedia.org/wiki/Lerp_(computing)" title="Lerp">lerp</a>) between this color and a target color. In contrast to many of the mathematical functions found in <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>, The linear interpolation is carried out on <em>all</em> components, R, G, B <em>and</em> A. The amount is typically a value between 0.0 and 1.0, with 0.0 yielding an unchanged color and 1.0 yielding a color identical to the target color.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">target</td><td>The target color corresponding to an amount of 1.0. </td></tr>
-    <tr><td class="paramname">amount</td><td>The amount (between 0.0 and 1.0) to interpolate. A value of 0.0 will yield an unchanged color. A value of 1.0 will yield the target color. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A reference to itself. </dd></dl>
-
-</div></div>
-  </div><div id="a756c104c401ec4e42d27ee5b7d8a3912" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a756c104c401ec4e42d27ee5b7d8a3912&quot;)">
-        <span class="type"></span>
-        <a class="name">getClamped</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a756c104c401ec4e42d27ee5b7d8a3912_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">getClamped</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>A non-destructive version of <a class="el" href="ofColor.html#a90df86b31f2d2411deeca42b228d5381" title="Clamp values between 0 and the limit(). ">clamp()</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of this color, clamped. </dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofColor.html#a90df86b31f2d2411deeca42b228d5381" title="Clamp values between 0 and the limit(). ">clamp()</a> </dd></dl>
-
-</div></div>
-  </div><div id="a11bc8c7ef629174d09fd3168c18660e9" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a11bc8c7ef629174d09fd3168c18660e9&quot;)">
-        <span class="type"></span>
-        <a class="name">getInverted</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a11bc8c7ef629174d09fd3168c18660e9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">getInverted</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>A non-destructive version of <a class="el" href="ofColor.html#ac7dab5a53453d15d18b3c486ee655103" title="Invert the R, G and B components. ">invert()</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of this color, inverted. </dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofColor.html#ac7dab5a53453d15d18b3c486ee655103" title="Invert the R, G and B components. ">invert()</a> </dd></dl>
-
-</div></div>
-  </div><div id="a371c0b6475599a3191d2f08672d8b771" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a371c0b6475599a3191d2f08672d8b771&quot;)">
-        <span class="type"></span>
-        <a class="name">getNormalized</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a371c0b6475599a3191d2f08672d8b771_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">getNormalized</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>A non-destructive version of <a class="el" href="ofColor.html#a383be8c22b569253381ea7e5ed80f51d" title="Normalize the R, G and B components. ">normalize()</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of this color, normalized. </dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofColor.html#a383be8c22b569253381ea7e5ed80f51d" title="Normalize the R, G and B components. ">normalize()</a> </dd></dl>
-
-</div></div>
-  </div><div id="a070e475f03ccfee7eb0ecd47443fbe07" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a070e475f03ccfee7eb0ecd47443fbe07&quot;)">
-        <span class="type"></span>
-        <a class="name">getLerped</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a070e475f03ccfee7eb0ecd47443fbe07_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">getLerped</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;target, float amount) const </span></div><div class="memberDocumentation">
-
-<p>A non-destructive version of <a class="el" href="ofColor.html#a777831b6851dbc27fd7d2d4b5288d16b" title="A linear interpolation between all components of two colors. ">lerp()</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of this color, lerped. </dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofColor.html#a777831b6851dbc27fd7d2d4b5288d16b" title="A linear interpolation between all components of two colors. ">lerp()</a> </dd></dl>
-
-</div></div>
-  </div></div>
-  </div><div id="Getters">
-    <h3 class="sectionHeader">Getters</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a7a721db7497d984c3ee81002bcd7237b" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7a721db7497d984c3ee81002bcd7237b&quot;)">
-        <span class="type"></span>
-        <a class="name">getHex</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a7a721db7497d984c3ee81002bcd7237b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getHex</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>Get a hexadecimal representation of the RGB color. </p>
-<dl class="section warning"><dt>Warning</dt><dd>This method does <em>not</em> encode the alpha component.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>An integer representing an RGB color. </dd></dl>
-
-</div></div>
-  </div><div id="a59959aa62173b96f31d0833327e2772f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a59959aa62173b96f31d0833327e2772f&quot;)">
-        <span class="type"></span>
-        <a class="name">getHue</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a59959aa62173b96f31d0833327e2772f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getHue</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>Get the Hue of this color. </p>
-<p>The color is converted from the default RGB to an HSB colorspace and the resulting Hue value is returned. The resulting hue value will always be returned in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>.</p>
-<dl class="section return"><dt>Returns</dt><dd>The Hue value in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </dd></dl>
-
-</div></div>
-  </div><div id="ac6db0677624242a46690352660254f18" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac6db0677624242a46690352660254f18&quot;)">
-        <span class="type"></span>
-        <a class="name">getHueAngle</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ac6db0677624242a46690352660254f18_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getHueAngle</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>Get the Hue angle of this color. </p>
-<p>The color is converted from the default RGB to an HSB colorspace and the resulting Hue angle is returned. The resulting hue value will always be returned in degrees in the range 0 - 360.</p>
-<dl class="section return"><dt>Returns</dt><dd>The Hue angle in the range 0 - 360. </dd></dl>
-
-</div></div>
-  </div><div id="a0569370be88bfa5fddbd6529b5230de3" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a0569370be88bfa5fddbd6529b5230de3&quot;)">
-        <span class="type"></span>
-        <a class="name">getSaturation</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a0569370be88bfa5fddbd6529b5230de3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getSaturation</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>Get the Saturation of this color. </p>
-<p>The color is converted from the default RGB to an HSB colorspace and the resulting saturation is returned. The resulting saturation value will always be returned in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>.</p>
-<dl class="section return"><dt>Returns</dt><dd>The saturation in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </dd></dl>
-
-</div></div>
-  </div><div id="a7b73e7b52d0e967277c034d9e539d7b7" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7b73e7b52d0e967277c034d9e539d7b7&quot;)">
-        <span class="type"></span>
-        <a class="name">getBrightness</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a7b73e7b52d0e967277c034d9e539d7b7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getBrightness</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>Calculate the brightness of of the R, G and B components. </p>
-<p>Brightness is simply the maximum of the three color components. This method of calculating brightness is used by Photoshop (HSB) and Processing (HSB). Note that brightness is also called &quot;Value&quot;.</p>
-<dl class="section return"><dt>Returns</dt><dd>returns the brightness in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </dd></dl>
-
-</div></div>
-  </div><div id="ada21fed669a9f098466643e044ca2ada" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ada21fed669a9f098466643e044ca2ada&quot;)">
-        <span class="type"></span>
-        <a class="name">getLightness</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ada21fed669a9f098466643e044ca2ada_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getLightness</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>Calculate the lightness of the R, G and B components. </p>
-<p>Lightness is simply the average of the three color components. This method of calculating lightness is used by the Lab and HSL color spaces.</p>
-<p>returns the lightness in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </p>
-
-</div></div>
-  </div><div id="a6c340043e0fa64d77a2688709f7c0787" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6c340043e0fa64d77a2688709f7c0787&quot;)">
-        <span class="type"></span>
-        <a class="name">getHsb</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a6c340043e0fa64d77a2688709f7c0787_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">getHsb</span><span class="args">(float &amp;hue, float &amp;saturation, float &amp;brightness) const </span></div><div class="memberDocumentation">
-
-<p>Extract the hue, saturation and brightness from this color. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hue</td><td>A reference to the hue to fill. Will be in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
-    <tr><td class="paramname">hue</td><td>A reference to the saturation to fill. Will be in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
-    <tr><td class="paramname">brightness</td><td>A reference to the brightness to fill. Will be in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div></div>
-  </div><div id="Predefinedcolors">
-    <h3 class="sectionHeader">Predefined colors</h3>
-    <div class="sectionDescription"><p>A collection of static colors defined by name.</p>
-<p>These constants allow the user to access colors by name. For example, if using ofColor, one might set a color in the following way:</p>
-<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> myColor = <a class="code" href="ofColor.html#a57f71c445227e5daac21c776b867472c">ofColor::white</a>;</div>
-</div><!-- fragment --><p>This will result in myColor being set to a fully opaque white.</p>
-<dl class="section note"><dt>Note</dt><dd>The list of colors is based upon the CSS names colors and can be viewed <a href="http://www.w3schools.com/cssref/css_colornames.asp">here</a> </dd></dl>
-</div>
     <div class="sectionContent"><div id="a57f71c445227e5daac21c776b867472c" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a57f71c445227e5daac21c776b867472c&quot;)">
@@ -2348,6 +1714,11 @@ class ofColor_&lt; T &gt;</h3>
     </div>
 
     <div class="methodDescription" style="display:none" id="a57f71c445227e5daac21c776b867472c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">white</span><span class="args"></span></div><div class="memberDocumentation">
+
+<p>A collection of static colors defined by name. </p>
+<p>These constants allow the user to access colors by name. For example, if using ofColor, one might set a color in the following way: </p>
+<pre class="fragment">ofColor myColor = ofColor::white;
+</pre><p>This will result in myColor being set to a fully opaque white. The list of colors is based upon the CSS names colors and can be viewed here: <a href="http://www.w3schools.com/cssref/css_colornames.asp">http://www.w3schools.com/cssref/css_colornames.asp</a> </p>
 
 </div></div>
   </div><div id="a3cc97e269364093d7eb42d86fc5a7ad0" class="method">
@@ -4409,10 +3780,665 @@ class ofColor_&lt; T &gt;</h3>
 
 </div></div>
   </div></div>
-  </div><div id="Operators">
-    <h3 class="sectionHeader">Operators</h3>
+  </div><div id="Attributes">
+    <h3 class="sectionHeader">Attributes</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a1d1f3958d35604bbb566ab665d2a3911" class="method">
+    <div class="sectionContent"><div id="aab3965044572c4f8f44d0502340bff15" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aab3965044572c4f8f44d0502340bff15&quot;)">
+        <span class="type"></span>
+        <a class="name">r</a>
+        <span class="args"></span>
+        <span class="kind">variable</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aab3965044572c4f8f44d0502340bff15_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType </span><span class="name">r</span><span class="args"></span></div><div class="memberDocumentation">
+
+<p>The red color component. </p>
+
+</div></div>
+  </div><div id="adf8807e0648ac5089cfba86029cb1ea5" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#adf8807e0648ac5089cfba86029cb1ea5&quot;)">
+        <span class="type"></span>
+        <a class="name">g</a>
+        <span class="args"></span>
+        <span class="kind">variable</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="adf8807e0648ac5089cfba86029cb1ea5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType </span><span class="name">g</span><span class="args"></span></div><div class="memberDocumentation">
+
+<p>The green color component. </p>
+
+</div></div>
+  </div><div id="a837af41c32c453d99395229441ad5f68" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a837af41c32c453d99395229441ad5f68&quot;)">
+        <span class="type"></span>
+        <a class="name">b</a>
+        <span class="args"></span>
+        <span class="kind">variable</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a837af41c32c453d99395229441ad5f68_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType </span><span class="name">b</span><span class="args"></span></div><div class="memberDocumentation">
+
+<p>The blue color component. </p>
+
+</div></div>
+  </div><div id="a08e3f8c336defe949356a68125e366ca" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a08e3f8c336defe949356a68125e366ca&quot;)">
+        <span class="type"></span>
+        <a class="name">a</a>
+        <span class="args"></span>
+        <span class="kind">variable</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a08e3f8c336defe949356a68125e366ca_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType </span><span class="name">a</span><span class="args"></span></div><div class="memberDocumentation">
+
+<p>The alpha color component. </p>
+
+</div></div>
+  </div><div id="ab9ff1ead578d9b6861d81b9b227bebf3" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab9ff1ead578d9b6861d81b9b227bebf3&quot;)">
+        <span class="type"></span>
+        <a class="name">v</a>
+        <span class="args"></span>
+        <span class="kind">variable</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ab9ff1ead578d9b6861d81b9b227bebf3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType </span><span class="name">v</span><span class="args">[4]</span></div><div class="memberDocumentation">
+
+<p>The pixel values as an array. </p>
+
+</div></div>
+  </div><div id="a21867b7cba4d68c5737334e0610dfe36" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a21867b7cba4d68c5737334e0610dfe36&quot;)">
+        <span class="type"></span>
+        <a class="name">Anonymous variable</a>
+        <span class="args"></span>
+        <span class="kind">variable</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a21867b7cba4d68c5737334e0610dfe36_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">union ofColor_::@3 </span><span class="name">Anonymous variable</span><span class="args"></span></div><div class="memberDocumentation">
+
+</div></div>
+  </div></div>
+  </div><div id="Functions">
+    <h3 class="sectionHeader">Functions</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a894f8070c4bbe3a98f5702a11440beb3" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a894f8070c4bbe3a98f5702a11440beb3&quot;)">
+        <span class="type"></span>
+        <a class="name">ofColor_</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a894f8070c4bbe3a98f5702a11440beb3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> instance. </p>
+
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(float red, float green, float blue, float alpha=limit())</span></div><div class="memberDocumentation">
+
+<p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by using channel values. </p>
+<p>When creating an instance of <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> the channel values must fall within the range represented by the PixelType. By default, the alpha component will take the PixelType&apos;s maximum, producing an opaque color.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">red</td><td>The red component. </td></tr>
+    <tr><td class="paramname">green</td><td>The green component. </td></tr>
+    <tr><td class="paramname">blue</td><td>The blue component. </td></tr>
+    <tr><td class="paramname">alpha</td><td>The alpha component. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color, float alpha)</span></div><div class="memberDocumentation">
+
+<p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an existing <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>. </p>
+<p>This constructor will use the R, G and B components from the passed color ignoring its alpha channel. The provided alpha channel will be used instead.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> to copy. </td></tr>
+    <tr><td class="paramname">alpha</td><td>The new alpha value to replace the alpha value in color. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(float gray, float alpha=limit())</span></div><div class="memberDocumentation">
+
+<p>Construct a grayscale <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by specifiying a single number. </p>
+<p>This constructor will use a single value to describe a grayscale color. This single value will be taken by each of the R, G and B components. The alpha channel is specified separately and will and will default to the PixelType&apos;s maximum resulting in an opaque color.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gray</td><td>A grayscale value. </td></tr>
+    <tr><td class="paramname">alpha</td><td>The opacity of the color. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(const ofColor_&lt; SrcType &gt; &amp;color)</span></div><div class="memberDocumentation">
+
+<p>Construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an existing <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>. </p>
+<p>This constructor will attempt to convert between color instances of differing precision.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Depending on the PixelType and SrcType used, color precision may be lost when converting a higher precision to a lower precision representation.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> to copy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="ac5454aed599639ab6d1748b08301a992" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac5454aed599639ab6d1748b08301a992&quot;)">
+        <span class="type"></span>
+        <a class="name">set</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ac5454aed599639ab6d1748b08301a992_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float red, float green, float blue, float alpha=limit())</span></div><div class="memberDocumentation">
+
+<p>Set an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by using channel values. </p>
+<p>When modifying an instance of <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> the channel values must fall within the range represented by the PixelType. By default, the alpha component will take the PixelType&apos;s maximum, producing an opaque color.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">red</td><td>The red component. </td></tr>
+    <tr><td class="paramname">green</td><td>The green component. </td></tr>
+    <tr><td class="paramname">blue</td><td>The blue component. </td></tr>
+    <tr><td class="paramname">alpha</td><td>The alpha component. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float gray, float alpha=limit())</span></div><div class="memberDocumentation">
+
+<p>Set a grayscale <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> by specifiying a single number. </p>
+<p>When modifying an instance of <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> you can use a single value to describe a grayscale color. This single value will be taken by each of the R, G and B components. The alpha channel is specified separately and will and will default to the PixelType&apos;s maximum resulting in an opaque color.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gray</td><td>A grayscale value. </td></tr>
+    <tr><td class="paramname">alpha</td><td>The opacity of the color. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
+
+<p>Set an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an existing <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>. </p>
+<p>This will use the R, G, B and A components from the passed color.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> to copy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="ad6e89a08aa11f2d2815ba9be89033ccf" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad6e89a08aa11f2d2815ba9be89033ccf&quot;)">
+        <span class="type"></span>
+        <a class="name">setHex</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ad6e89a08aa11f2d2815ba9be89033ccf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setHex</span><span class="args">(int hexColor, float alpha=limit())</span></div><div class="memberDocumentation">
+
+<p>Set an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from a hexadecimal representation. </p>
+<p>In some cases, it is convenient to represent colors using a hexadecimal number. In this case, red, green and blue values are packed into a integer.</p>
+<p>The alpha channel is specified separately and will default to the PixelType&apos;s maximum, resulting in an opaque color.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The alpha value <em>should not</em> be packed in the hexColor and must be specified separately.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hexColor</td><td>An RGB color in hexadecimal form. </td></tr>
+    <tr><td class="paramname">alpha</td><td>The alpha value of the color. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="a7a721db7497d984c3ee81002bcd7237b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7a721db7497d984c3ee81002bcd7237b&quot;)">
+        <span class="type"></span>
+        <a class="name">getHex</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a7a721db7497d984c3ee81002bcd7237b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getHex</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Get a hexadecimal representation of the RGB color. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This method does <em>not</em> encode the alpha component.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An integer representing an RGB color. </dd></dl>
+
+</div></div>
+  </div><div id="a90df86b31f2d2411deeca42b228d5381" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a90df86b31f2d2411deeca42b228d5381&quot;)">
+        <span class="type"></span>
+        <a class="name">clamp</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a90df86b31f2d2411deeca42b228d5381_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">clamp</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Clamp values between 0 and the <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </p>
+<p>Clamps the value of each component, R, G, B and A to a maximum of <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a> and a minimum of zero.</p>
+<dl class="section return"><dt>Returns</dt><dd>A reference to itself. </dd></dl>
+
+</div></div>
+  </div><div id="ac7dab5a53453d15d18b3c486ee655103" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac7dab5a53453d15d18b3c486ee655103&quot;)">
+        <span class="type"></span>
+        <a class="name">invert</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ac7dab5a53453d15d18b3c486ee655103_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">invert</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Invert the R, G and B components. </p>
+<p>Performs an inversion operation on the color by replacing the red, green and blue components with their original value subtracted from the <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. For example, an ofColor value of: </p>
+<pre class="fragment">unsigned char maxValue = limit(); // would return 255
+
+unsigned char r = 255;
+unsigned char g = 255;
+unsigned char b = 0;
+
+unsigned char rNew = maxValue - r; // 255 - 255 = 0
+unsigned char gNew = maxValue - g; // 255 - 255 = 0
+unsigned char bNew = maxValue - b; // 255 - 0   = 255;
+</pre><p>Thus the inversion of <code>ofColor(255, 255, 0)</code> is <code>ofColor(0, 0, 255);</code></p>
+<dl class="section return"><dt>Returns</dt><dd>A reference to itself. </dd></dl>
+
+</div></div>
+  </div><div id="a383be8c22b569253381ea7e5ed80f51d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a383be8c22b569253381ea7e5ed80f51d&quot;)">
+        <span class="type"></span>
+        <a class="name">normalize</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a383be8c22b569253381ea7e5ed80f51d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">normalize</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Normalize the R, G and B components. </p>
+<p>Performs a normalization operation on the red, green and blue components by scaling them by brightness of the original color divided by the <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. The brightness is calculated by finding the maximum of original red, green and blue components. This operation is equivalent to the following: </p>
+<pre class="fragment">ofColor myColor(127, 0, 0, 127);
+
+float brightness = myColor.getBrightness(); // returns 127.
+float scaleFactor = brightness / limit();   // returns 127 / 255.
+
+ofColor myNormalizedColor = myColor / scaleFactor;
+                            // Divides the red, green and blue
+                            // components by the scale factor.
+</pre><dl class="section return"><dt>Returns</dt><dd>A reference to itself. </dd></dl>
+
+</div></div>
+  </div><div id="a777831b6851dbc27fd7d2d4b5288d16b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a777831b6851dbc27fd7d2d4b5288d16b&quot;)">
+        <span class="type"></span>
+        <a class="name">lerp</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a777831b6851dbc27fd7d2d4b5288d16b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">lerp</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;target, float amount)</span></div><div class="memberDocumentation">
+
+<p>A linear interpolation between all components of two colors. </p>
+<p>The lerp method performs a linear interpolation (or <a href="http://en.wikipedia.org/wiki/Lerp_(computing)" title="Lerp">lerp</a>) between this color and a target color. In contrast to many of the mathematical functions found in <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a>, The linear interpolation is carried out on <em>all</em> components, R, G, B <em>and</em> A. The amount is typically a value between 0.0 and 1.0, with 0.0 yielding an unchanged color and 1.0 yielding a color identical to the target color.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>The target color corresponding to an amount of 1.0. </td></tr>
+    <tr><td class="paramname">amount</td><td>The amount (between 0.0 and 1.0) to interpolate. A value of 0.0 will yield an unchanged color. A value of 1.0 will yield the target color. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to itself. </dd></dl>
+
+</div></div>
+  </div><div id="a756c104c401ec4e42d27ee5b7d8a3912" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a756c104c401ec4e42d27ee5b7d8a3912&quot;)">
+        <span class="type"></span>
+        <a class="name">getClamped</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a756c104c401ec4e42d27ee5b7d8a3912_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">getClamped</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>A non-destructive version of <a class="el" href="ofColor.html#a90df86b31f2d2411deeca42b228d5381" title="Clamp values between 0 and the limit(). ">clamp()</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>A copy of this color, clamped. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofColor.html#a90df86b31f2d2411deeca42b228d5381" title="Clamp values between 0 and the limit(). ">clamp()</a> </dd></dl>
+
+</div></div>
+  </div><div id="a11bc8c7ef629174d09fd3168c18660e9" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a11bc8c7ef629174d09fd3168c18660e9&quot;)">
+        <span class="type"></span>
+        <a class="name">getInverted</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a11bc8c7ef629174d09fd3168c18660e9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">getInverted</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>A non-destructive version of <a class="el" href="ofColor.html#ac7dab5a53453d15d18b3c486ee655103" title="Invert the R, G and B components. ">invert()</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>A copy of this color, inverted. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofColor.html#ac7dab5a53453d15d18b3c486ee655103" title="Invert the R, G and B components. ">invert()</a> </dd></dl>
+
+</div></div>
+  </div><div id="a371c0b6475599a3191d2f08672d8b771" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a371c0b6475599a3191d2f08672d8b771&quot;)">
+        <span class="type"></span>
+        <a class="name">getNormalized</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a371c0b6475599a3191d2f08672d8b771_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">getNormalized</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>A non-destructive version of <a class="el" href="ofColor.html#a383be8c22b569253381ea7e5ed80f51d" title="Normalize the R, G and B components. ">normalize()</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>A copy of this color, normalized. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofColor.html#a383be8c22b569253381ea7e5ed80f51d" title="Normalize the R, G and B components. ">normalize()</a> </dd></dl>
+
+</div></div>
+  </div><div id="a070e475f03ccfee7eb0ecd47443fbe07" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a070e475f03ccfee7eb0ecd47443fbe07&quot;)">
+        <span class="type"></span>
+        <a class="name">getLerped</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a070e475f03ccfee7eb0ecd47443fbe07_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">getLerped</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;target, float amount) const </span></div><div class="memberDocumentation">
+
+<p>A non-destructive version of <a class="el" href="ofColor.html#a777831b6851dbc27fd7d2d4b5288d16b" title="A linear interpolation between all components of two colors. ">lerp()</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>A copy of this color, lerped. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofColor.html#a777831b6851dbc27fd7d2d4b5288d16b" title="A linear interpolation between all components of two colors. ">lerp()</a> </dd></dl>
+
+</div></div>
+  </div><div id="a59959aa62173b96f31d0833327e2772f" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a59959aa62173b96f31d0833327e2772f&quot;)">
+        <span class="type"></span>
+        <a class="name">getHue</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a59959aa62173b96f31d0833327e2772f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getHue</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Get the Hue of this color. </p>
+<p>The color is converted from the default RGB to an HSB colorspace and the resulting Hue value is returned. The resulting hue value will always be returned in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>The Hue value in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </dd></dl>
+
+</div></div>
+  </div><div id="ac6db0677624242a46690352660254f18" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac6db0677624242a46690352660254f18&quot;)">
+        <span class="type"></span>
+        <a class="name">getHueAngle</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ac6db0677624242a46690352660254f18_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getHueAngle</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Get the Hue angle of this color. </p>
+<p>The color is converted from the default RGB to an HSB colorspace and the resulting Hue angle is returned. The resulting hue value will always be returned in degrees in the range 0 - 360.</p>
+<dl class="section return"><dt>Returns</dt><dd>The Hue angle in the range 0 - 360. </dd></dl>
+
+</div></div>
+  </div><div id="a0569370be88bfa5fddbd6529b5230de3" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a0569370be88bfa5fddbd6529b5230de3&quot;)">
+        <span class="type"></span>
+        <a class="name">getSaturation</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a0569370be88bfa5fddbd6529b5230de3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getSaturation</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Get the Saturation of this color. </p>
+<p>The color is converted from the default RGB to an HSB colorspace and the resulting saturation is returned. The resulting saturation value will always be returned in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>The saturation in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </dd></dl>
+
+</div></div>
+  </div><div id="a7b73e7b52d0e967277c034d9e539d7b7" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7b73e7b52d0e967277c034d9e539d7b7&quot;)">
+        <span class="type"></span>
+        <a class="name">getBrightness</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a7b73e7b52d0e967277c034d9e539d7b7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getBrightness</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Calculate the brightness of of the R, G and B components. </p>
+<p>Brightness is simply the maximum of the three color components. This method of calculating brightness is used by Photoshop (HSB) and Processing (HSB). Note that brightness is also called &quot;Value&quot;.</p>
+<p>returns the brightness in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </p>
+
+</div></div>
+  </div><div id="ada21fed669a9f098466643e044ca2ada" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ada21fed669a9f098466643e044ca2ada&quot;)">
+        <span class="type"></span>
+        <a class="name">getLightness</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ada21fed669a9f098466643e044ca2ada_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getLightness</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Calculate the lightness of the R, G and B components. </p>
+<p>Lightness is simply the average of the three color components. This method of calculating lightness is used by the Lab and HSL color spaces.</p>
+<dl class="section return"><dt>Returns</dt><dd>the lightness in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </dd></dl>
+
+</div></div>
+  </div><div id="a6c340043e0fa64d77a2688709f7c0787" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6c340043e0fa64d77a2688709f7c0787&quot;)">
+        <span class="type"></span>
+        <a class="name">getHsb</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a6c340043e0fa64d77a2688709f7c0787_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">getHsb</span><span class="args">(float &amp;hue, float &amp;saturation, float &amp;brightness) const </span></div><div class="memberDocumentation">
+
+<p>Extract the hue, saturation and brightness from this color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hue</td><td>A reference to the hue to fill. Will be in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
+    <tr><td class="paramname">hue</td><td>A reference to the saturation to fill. Will be in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
+    <tr><td class="paramname">brightness</td><td>A reference to the brightness to fill. Will be in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="a2b20f282fa99ff0fb540bcf8718863eb" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2b20f282fa99ff0fb540bcf8718863eb&quot;)">
+        <span class="type"></span>
+        <a class="name">setHue</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a2b20f282fa99ff0fb540bcf8718863eb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setHue</span><span class="args">(float hue)</span></div><div class="memberDocumentation">
+
+<p>Set the hue of this color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hue</td><td>A hue value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="a5c845f2850cff57da1cda13a34412b51" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5c845f2850cff57da1cda13a34412b51&quot;)">
+        <span class="type"></span>
+        <a class="name">setHueAngle</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a5c845f2850cff57da1cda13a34412b51_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setHueAngle</span><span class="args">(float angle)</span></div><div class="memberDocumentation">
+
+<p>Set the hue angle of this color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>A hue angle value to set in the range of 0 - 360 degrees. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="aa3301f40e7f4dc0bd1563f32cba9def7" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa3301f40e7f4dc0bd1563f32cba9def7&quot;)">
+        <span class="type"></span>
+        <a class="name">setSaturation</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aa3301f40e7f4dc0bd1563f32cba9def7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setSaturation</span><span class="args">(float saturation)</span></div><div class="memberDocumentation">
+
+<p>Set the saturation this color. </p>
+<p>This method uses HSB not HSL. So red desaturated is white, not gray</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">saturation</td><td>A saturation value value in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://en.wikipedia.org/wiki/HSL_and_HSV">http://en.wikipedia.org/wiki/HSL_and_HSV</a> </dd></dl>
+
+</div></div>
+  </div><div id="ae316135040740fb2f37f6cd8d23454bb" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae316135040740fb2f37f6cd8d23454bb&quot;)">
+        <span class="type"></span>
+        <a class="name">setBrightness</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ae316135040740fb2f37f6cd8d23454bb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setBrightness</span><span class="args">(float brightness)</span></div><div class="memberDocumentation">
+
+<p>Set the brightness of this color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brightness</td><td>A brightness value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="a3b670043729b209994985c1b458ab5cd" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3b670043729b209994985c1b458ab5cd&quot;)">
+        <span class="type"></span>
+        <a class="name">setHsb</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a3b670043729b209994985c1b458ab5cd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setHsb</span><span class="args">(float hue, float saturation, float brightness, float alpha=limit())</span></div><div class="memberDocumentation">
+
+<p>Set the color using HSB components. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hue</td><td>A hue value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
+    <tr><td class="paramname">saturation</td><td>A saturation value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
+    <tr><td class="paramname">brightness</td><td>A brightness value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
+    <tr><td class="paramname">alpha</td><td>An alpha value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Return the maximum value of a color. ">limit()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="a1d1f3958d35604bbb566ab665d2a3911" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1d1f3958d35604bbb566ab665d2a3911&quot;)">
         <span class="type"></span>
@@ -4630,7 +4656,85 @@ class ofColor_&lt; T &gt;</h3>
 </div><hr><div class="memberVariant"><span class="type">PixelType &amp; </span><span class="name">operator[]</span><span class="args">(int n)</span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="a555fbf0f2cce3a33dae1e873f11d4883" class="method">
+  </div></div>
+  </div><div id="StaticFunctions">
+    <h3 class="sectionHeader">Static Functions</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a298d1603eb1628dcb5f71906b581dd5c" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a298d1603eb1628dcb5f71906b581dd5c&quot;)">
+        <span class="type"></span>
+        <a class="name">fromHsb</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a298d1603eb1628dcb5f71906b581dd5c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">fromHsb</span><span class="args">(float hue, float saturation, float brightness, float alpha=limit())</span></div><div class="memberDocumentation">
+
+<p>Create an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from an HSB representation. </p>
+<p>While <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> represents color using R, G, B, and A components, other representations are available. This method allows the user to construct an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from a Hue (H), Saturation (S), and Brightness (B) and an optional alpha value.</p>
+<p>The alpha channel is specified separately and will default to the PixelType&apos;s maximum, resulting in an opaque color.</p>
+<p>For more information about HSB, see: <a href="http://en.wikipedia.org/wiki/HSV_color_space">http://en.wikipedia.org/wiki/HSV_color_space</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hue</td><td>The hue of the color. </td></tr>
+    <tr><td class="paramname">saturation</td><td>The saturation of the color. </td></tr>
+    <tr><td class="paramname">brightness</td><td>The brightness of the color. </td></tr>
+    <tr><td class="paramname">alpha</td><td>The alpha value of the color. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="aa14c7cb5a9912e22887db4e87c4f85b4" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa14c7cb5a9912e22887db4e87c4f85b4&quot;)">
+        <span class="type"></span>
+        <a class="name">fromHex</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aa14c7cb5a9912e22887db4e87c4f85b4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">fromHex</span><span class="args">(int hexColor, float alpha=limit())</span></div><div class="memberDocumentation">
+
+<p>Create an <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> from a hexadecimal value. </p>
+<p>In some cases, it is convenient to represent colors using a hexadecimal number. In this case, red, green and blue values are packed into a single integer.</p>
+<p>The alpha channel is specified separately and will default to the PixelType&apos;s maximum, resulting in an opaque color.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hexColor</td><td>A color in hexadecimal form. </td></tr>
+    <tr><td class="paramname">alpha</td><td>The alpha value of the color. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="aef7c0aabbaab6d6ac09cf60080eb5b6f" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aef7c0aabbaab6d6ac09cf60080eb5b6f&quot;)">
+        <span class="type"></span>
+        <a class="name">limit</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aef7c0aabbaab6d6ac09cf60080eb5b6f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">limit</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Return the maximum value of a color. </p>
+<dl class="section return"><dt>Returns</dt><dd>The value associated with a fully saturated color component. </dd></dl>
+
+</div></div>
+  </div></div>
+  </div><div id="Friends">
+    <h3 class="sectionHeader">Friends</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a555fbf0f2cce3a33dae1e873f11d4883" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a555fbf0f2cce3a33dae1e873f11d4883&quot;)">
         <span class="type"></span>
@@ -4646,17 +4750,17 @@ class ofColor_&lt; T &gt;</h3>
 <p>An output stream operator. </p>
 <p>Colors can be serialized into comma separated values (CSV) using the output stream operator. Input stream values are written in the following form </p>
 <pre class="fragment">RED_VALUE, GREEN_VALUE, BLUE_VALUE, ALPHA_VALUE
-</pre><p>For example, to write output into a std::stringstream for later retrieval using the <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> input stream operator one might use the following:</p>
-<div class="fragment"><div class="line">std::stringstream ss;     <span class="comment">// Create an empty std::string stream.</span></div>
-<div class="line">                          <span class="comment">// Note: std::stringstream is just one</span></div>
-<div class="line">                          <span class="comment">// option for an output stream.  Another</span></div>
-<div class="line">                          <span class="comment">// popular output stream std::cout.</span></div>
-<div class="line"></div>
-<div class="line"><a class="code" href="ofColor.html">ofColor</a> myColor(255, 255, 0, 255);</div>
-<div class="line">                          <span class="comment">// Create an ofColor to output.</span></div>
-<div class="line"></div>
-<div class="line">ss &lt;&lt; myColor;            <span class="comment">// Write the color to the output stream.</span></div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+</pre><p>For example, to write output into a std::stringstream for later retrieval using the <a class="el" href="ofColor.html" title="A class template to represent a color with variable precision. ">ofColor_</a> input stream operator one might use the following: </p>
+<pre class="fragment">std::stringstream ss;     // Create an empty std::string stream.
+                          // Note: std::stringstream is just one
+                          // option for an output stream.  Another
+                          // popular output stream std::cout.
+
+ofColor myColor(255, 255, 0, 255);
+                          // Create an ofColor to output.
+
+ss &lt;&lt; myColor;            // Write the color to the output stream.
+</pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">os</td><td>An output stream reference. </td></tr>
     <tr><td class="paramname">color</td><td>The color to write to the output stream. </td></tr>
@@ -4682,14 +4786,14 @@ class ofColor_&lt; T &gt;</h3>
 <p>An input stream operator. </p>
 <p>Colors can be deserialized from comma separated values (CSV) input stream using the input stream operator. Input stream values are read in the following form </p>
 <pre class="fragment">RED_VALUE, GREEN_VALUE, BLUE_VALUE, ALPHA_VALUE
-</pre><p>For example, to read input from a std::stringstream into an ofColor one might use the following:</p>
-<div class="fragment"><div class="line">std::stringstream ss;     <span class="comment">// Create an empty std::string stream.</span></div>
-<div class="line">                          <span class="comment">// Note: std::stringstream is just one</span></div>
-<div class="line">                          <span class="comment">// option for an input stream.</span></div>
-<div class="line">ss &lt;&lt; <span class="stringliteral">&quot;255, 255, 0, 255&quot;</span>; <span class="comment">// Write the color to the stringstream.</span></div>
-<div class="line"><a class="code" href="ofColor.html">ofColor</a> myColor;          <span class="comment">// Create an ofColor instance to fill.</span></div>
-<div class="line">ss &gt;&gt; myColor;            <span class="comment">// myColor is now filled with a yellow.</span></div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+</pre><p>For example, to read input from a std::stringstream into an ofColor one might use the following: </p>
+<pre class="fragment">std::stringstream ss;     // Create an empty std::string stream.
+                          // Note: std::stringstream is just one
+                          // option for an input stream.
+ss &lt;&lt; &quot;255, 255, 0, 255&quot;; // Write the color to the stringstream.
+ofColor myColor;          // Create an ofColor instance to fill.
+ss &gt;&gt; myColor;            // myColor is now filled with a yellow.
+</pre><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">is</td><td>An input stream reference. </td></tr>
     <tr><td class="paramname">color</td><td>The color to fill with the input stream. </td></tr>
@@ -4697,125 +4801,6 @@ class ofColor_&lt; T &gt;</h3>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The passed input stream reference, useful for method chaining. </dd></dl>
-
-</div></div>
-  </div></div>
-  </div><div id="Attributes">
-    <h3 class="sectionHeader">Attributes</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="aab3965044572c4f8f44d0502340bff15" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aab3965044572c4f8f44d0502340bff15&quot;)">
-        <span class="type"></span>
-        <a class="name">r</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aab3965044572c4f8f44d0502340bff15_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType </span><span class="name">r</span><span class="args"></span></div><div class="memberDocumentation">
-
-<p>The red color component. </p>
-
-</div></div>
-  </div><div id="adf8807e0648ac5089cfba86029cb1ea5" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#adf8807e0648ac5089cfba86029cb1ea5&quot;)">
-        <span class="type"></span>
-        <a class="name">g</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="adf8807e0648ac5089cfba86029cb1ea5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType </span><span class="name">g</span><span class="args"></span></div><div class="memberDocumentation">
-
-<p>The green color component. </p>
-
-</div></div>
-  </div><div id="a837af41c32c453d99395229441ad5f68" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a837af41c32c453d99395229441ad5f68&quot;)">
-        <span class="type"></span>
-        <a class="name">b</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a837af41c32c453d99395229441ad5f68_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType </span><span class="name">b</span><span class="args"></span></div><div class="memberDocumentation">
-
-<p>The blue color component. </p>
-
-</div></div>
-  </div><div id="a08e3f8c336defe949356a68125e366ca" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a08e3f8c336defe949356a68125e366ca&quot;)">
-        <span class="type"></span>
-        <a class="name">a</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a08e3f8c336defe949356a68125e366ca_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType </span><span class="name">a</span><span class="args"></span></div><div class="memberDocumentation">
-
-<p>The alpha color component. </p>
-
-</div></div>
-  </div><div id="ab9ff1ead578d9b6861d81b9b227bebf3" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab9ff1ead578d9b6861d81b9b227bebf3&quot;)">
-        <span class="type"></span>
-        <a class="name">v</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ab9ff1ead578d9b6861d81b9b227bebf3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType </span><span class="name">v</span><span class="args">[4]</span></div><div class="memberDocumentation">
-
-<p>The pixel values as an array. </p>
-
-</div></div>
-  </div><div id="a21867b7cba4d68c5737334e0610dfe36" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a21867b7cba4d68c5737334e0610dfe36&quot;)">
-        <span class="type"></span>
-        <a class="name">Anonymous variable</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a21867b7cba4d68c5737334e0610dfe36_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">union ofColor_::@3 </span><span class="name">Anonymous variable</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div><div id="StaticFunctions">
-    <h3 class="sectionHeader">Static Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="aef7c0aabbaab6d6ac09cf60080eb5b6f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aef7c0aabbaab6d6ac09cf60080eb5b6f&quot;)">
-        <span class="type"></span>
-        <a class="name">limit</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aef7c0aabbaab6d6ac09cf60080eb5b6f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">limit</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Return the maximum value of a color. </p>
-<dl class="section return"><dt>Returns</dt><dd>The value associated with a fully saturated color component. </dd></dl>
 
 </div></div>
   </div></div>
@@ -4841,6 +4826,8 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="af97993d6809a3a3bce934ce2d1fc3fc4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">~ofBaseDraws</span><span class="args">()</span></div><div class="memberDocumentation">
 
+<p>Destroy the abstract object. </p>
+
 </div></div>
   </div><div id="ae333985db65e3ec75bf80267c5bc3fc4" class="method">
     <div class="methodHeader">
@@ -4855,17 +4842,65 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="ae333985db65e3ec75bf80267c5bc3fc4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y) const =0</span></div><div class="memberDocumentation">
 
+<p>Draw at a position at the native size. </p>
+<p>Native size is determined by <a class="el" href="ofBaseDraws.html#a0513ff59c024202df4cfd31e1244ac4b" title="Get the width. ">getWidth()</a> and <a class="el" href="ofBaseDraws.html#a65f504e6dec109161334138f17b19402" title="Get the height. ">getHeight()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Draw position on the x axis. </td></tr>
+    <tr><td class="paramname">y</td><td>Draw position on the y axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implemented in <a class="el" href="ofTexture.html#af187694221f5112048bebaf9c78d86cb">ofTexture</a>, <a class="el" href="ofImage.html#a2a3bba7e2686869c793102b2e432c9ba">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="ofImage.html#a2a3bba7e2686869c793102b2e432c9ba">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="ofVideoPlayer.html#adfff2727745ae87054945131fba51f9a">ofVideoPlayer</a>, <a class="el" href="ofVideoGrabber.html#a4f4de45b222e62a518f79d0654905008">ofVideoGrabber</a>, and <a class="el" href="ofFbo.html#a5147bb2cf2fe8c869f3364cb32b67335">ofFbo</a>.</p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y, float w, float h) const =0</span></div><div class="memberDocumentation">
+
+<p>Draw at a position with the specified size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Draw position on the x axis. </td></tr>
+    <tr><td class="paramname">y</td><td>Draw position on the y axis. </td></tr>
+    <tr><td class="paramname">w</td><td>Draw width. </td></tr>
+    <tr><td class="paramname">h</td><td>Draw height. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="ofTexture.html#a93625f13f765773e58f1682ed180d0a3">ofTexture</a>, <a class="el" href="ofImage.html#ada6acb4a471b8e4eedd01a38ae77b6d2">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="ofImage.html#ada6acb4a471b8e4eedd01a38ae77b6d2">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="ofVideoPlayer.html#a2bae2b7f18753f64f087b23c694a6dcc">ofVideoPlayer</a>, <a class="el" href="ofVideoGrabber.html#aeb3b98d6c2277f76dcb8b807b2539fb8">ofVideoGrabber</a>, and <a class="el" href="ofFbo.html#ac5e5a10b68a960332dce5770bc925259">ofFbo</a>.</p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofPoint &amp;point) const </span></div><div class="memberDocumentation">
 
+<p>Draw at a position at the native size. </p>
+<p>Native size is determined by <a class="el" href="ofBaseDraws.html#a0513ff59c024202df4cfd31e1244ac4b" title="Get the width. ">getWidth()</a> and <a class="el" href="ofBaseDraws.html#a65f504e6dec109161334138f17b19402" title="Get the height. ">getHeight()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>Draw position. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofRectangle &amp;rect) const </span></div><div class="memberDocumentation">
 
+<p>Draw at a position and size specified by a rectangle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td>Draw position and size. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofPoint &amp;point, float w, float h) const </span></div><div class="memberDocumentation">
+
+<p>Draw at a position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>Draw position. </td></tr>
+    <tr><td class="paramname">w</td><td>Draw width. </td></tr>
+    <tr><td class="paramname">h</td><td>Draw height. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div></div>
   </div><div id="a65f504e6dec109161334138f17b19402" class="method">
@@ -4880,6 +4915,9 @@ class ofColor_&lt; T &gt;</h3>
     </div>
 
     <div class="methodDescription" style="display:none" id="a65f504e6dec109161334138f17b19402_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getHeight</span><span class="args">() const =0</span></div><div class="memberDocumentation">
+
+<p>Get the height. </p>
+<dl class="section return"><dt>Returns</dt><dd>the height. </dd></dl>
 
 <p>Implemented in <a class="el" href="ofTexture.html#a371f406a32606790780e2bec430bd2ad">ofTexture</a>, <a class="el" href="ofImage.html#aaae4e82c34ea8bd5db88450d962b949d">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="ofImage.html#aaae4e82c34ea8bd5db88450d962b949d">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="ofVideoPlayer.html#a1b634c2e67c30c63e53e34358a9a161a">ofVideoPlayer</a>, <a class="el" href="ofVideoGrabber.html#a501acc21b4621f080c83dee2ce863dc4">ofVideoGrabber</a>, and <a class="el" href="ofFbo.html#a0cc15979daa4883e3935dc9376e19b1e">ofFbo</a>.</p>
 
@@ -4897,6 +4935,9 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a0513ff59c024202df4cfd31e1244ac4b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getWidth</span><span class="args">() const =0</span></div><div class="memberDocumentation">
 
+<p>Get the width. </p>
+<dl class="section return"><dt>Returns</dt><dd>the width. </dd></dl>
+
 <p>Implemented in <a class="el" href="ofTexture.html#aa309ccb3cfff6a5de49f7bc287dfeddf">ofTexture</a>, <a class="el" href="ofImage.html#a98f459baa33ff4383310011457671cbf">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="ofImage.html#a98f459baa33ff4383310011457671cbf">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="ofVideoPlayer.html#a1600d2939487636b8e7829bf34f3b0e3">ofVideoPlayer</a>, <a class="el" href="ofVideoGrabber.html#ad587ca6905c4f41ce9e7423818e97f01">ofVideoGrabber</a>, and <a class="el" href="ofFbo.html#a4d4e638253c264e21ed35dc46634efbb">ofFbo</a>.</p>
 
 </div></div>
@@ -4912,6 +4953,16 @@ class ofColor_&lt; T &gt;</h3>
     </div>
 
     <div class="methodDescription" style="display:none" id="a3cf9dd7a898b3503ac0509574eaaeff3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setAnchorPercent</span><span class="args">(float xPct, float yPct)</span></div><div class="memberDocumentation">
+
+<p>Set the anchor point the item is drawn around as a percentage. </p>
+<p>This can be useful if you want to rotate an image around a particular point.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xPct</td><td>Horizontal position as a percentage (0 - 1). </td></tr>
+    <tr><td class="paramname">yPct</td><td>Vertical position as a percentage (0 - 1). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Reimplemented in <a class="el" href="ofTexture.html#a5409b3dfe503bc05d7e06c1977ead2ac">ofTexture</a>, <a class="el" href="ofImage.html#a9339282eaa5f99419cdc25e739680f65">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="ofImage.html#a9339282eaa5f99419cdc25e739680f65">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="ofVideoPlayer.html#a79ca310c6bf6a1db4eef74594f1e2b81">ofVideoPlayer</a>, <a class="el" href="ofVideoGrabber.html#a542277985c3820a48801c1502827c9b4">ofVideoGrabber</a>, and <a class="el" href="ofFbo.html#a8750a2af0540fac6b7b36cfa795a5570">ofFbo</a>.</p>
 
@@ -4929,6 +4980,16 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="aefa6eaad3d976a6c1717105ea4443e56_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setAnchorPoint</span><span class="args">(float x, float y)</span></div><div class="memberDocumentation">
 
+<p>Set the anchor point the item is drawn around in pixels. </p>
+<p>This can be useful if you want to rotate an image around a particular point.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Horizontal texture position in pixels. </td></tr>
+    <tr><td class="paramname">y</td><td>Vertical texture position in pixels. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Reimplemented in <a class="el" href="ofTexture.html#a294061077b44d033ee778615679d5b78">ofTexture</a>, <a class="el" href="ofImage.html#afb1368077f520e88abae9b4d60870247">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="ofImage.html#afb1368077f520e88abae9b4d60870247">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="ofVideoPlayer.html#a42462f21cc6ce547c0525928cd814e67">ofVideoPlayer</a>, <a class="el" href="ofVideoGrabber.html#ac1680df9d3d19130af0594e37b80487f">ofVideoGrabber</a>, and <a class="el" href="ofFbo.html#a8d72faa9d813033b4fad5e5bdf0edc4a">ofFbo</a>.</p>
 
 </div></div>
@@ -4944,6 +5005,8 @@ class ofColor_&lt; T &gt;</h3>
     </div>
 
     <div class="methodDescription" style="display:none" id="a8e60af373caa636320b505ca07f274ae_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">resetAnchor</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Reset the anchor point to (0, 0). </p>
 
 <p>Reimplemented in <a class="el" href="ofTexture.html#abc09e6df3f365142faff8b929a846bab">ofTexture</a>, <a class="el" href="ofImage.html#a40741723f2ef1f969e7fbba3fa20c29c">ofImage_&lt; PixelType &gt;</a>, <a class="el" href="ofImage.html#a40741723f2ef1f969e7fbba3fa20c29c">ofImage_&lt; unsigned char &gt;</a>, <a class="el" href="ofVideoPlayer.html#a6e1feaa83809bdc5b8b412b77b645597">ofVideoPlayer</a>, <a class="el" href="ofVideoGrabber.html#a6ed806a21364bca25177b2b178ecb0db">ofVideoGrabber</a>, and <a class="el" href="ofFbo.html#adc4416303195844582849bd0c879c142">ofFbo</a>.</p>
 
@@ -5349,8 +5412,10 @@ class ofBaseImage_&lt; T &gt;</h3>
     </div>
 
     <div class="methodDescription" style="display:none" id="a27614c83263da3af6ba55f91ec651b70_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioIn</span><span class="args">(float *input, int bufferSize, int nChannels, int deviceID, long unsigned long tickCount)</span></div><div class="memberDocumentation">
+<dl class="todo"><dt><b><a class="el" href="">Todo:</a></b></dt><dd></dd></dl>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">audioIn</span><span class="args">(float *input, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">
+<dl class="todo"><dt><b><a class="el" href="">Todo:</a></b></dt><dd></dd></dl>
 
 </div></div>
   </div><div id="aa25595a25f26bade23a380ec76a52849" class="method">
@@ -5365,6 +5430,7 @@ class ofBaseImage_&lt; T &gt;</h3>
     </div>
 
     <div class="methodDescription" style="display:none" id="aa25595a25f26bade23a380ec76a52849_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioReceived</span><span class="args">(float *input, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">
+<dl class="todo"><dt><b><a class="el" href="">Todo:</a></b></dt><dd></dd></dl>
 
 </div></div>
   </div></div>
@@ -5406,8 +5472,10 @@ class ofBaseImage_&lt; T &gt;</h3>
     </div>
 
     <div class="methodDescription" style="display:none" id="affbe31ef262e3fad9bbb70538523c191_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(float *output, int bufferSize, int nChannels, int deviceID, long unsigned long tickCount)</span></div><div class="memberDocumentation">
+<dl class="todo"><dt><b><a class="el" href="">Todo:</a></b></dt><dd></dd></dl>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(float *output, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">
+<dl class="todo"><dt><b><a class="el" href="">Todo:</a></b></dt><dd></dd></dl>
 
 </div></div>
   </div><div id="a5736b7e23b8a8c563aeaae27d97c75ff" class="method">
@@ -5422,6 +5490,8 @@ class ofBaseImage_&lt; T &gt;</h3>
     </div>
 
     <div class="methodDescription" style="display:none" id="a5736b7e23b8a8c563aeaae27d97c75ff_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioRequested</span><span class="args">(float *output, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">
+<dl class="todo"><dt><b><a class="el" href="">Todo:</a></b></dt><dd><dl class="section note"><dt>Note</dt><dd>This is a legacy method. </dd></dl>
+</dd></dl>
 
 </div></div>
   </div></div>
@@ -6671,7 +6741,7 @@ class ofBaseImage_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a862e53de47f09c89aed5cfa3a1083d20_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMatrix4x4.html">ofMatrix4x4</a> </span><span class="name">getCurrentMatrix</span><span class="args">(ofMatrixMode matrixMode_) const =0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#a8dbc0e03229d3c53472281b6078a5741">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a8661b597a453c632072b35781a6cf0d3">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a2f8928e224059452055c72085a0fe47f">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a121e59f387e38e12ac430a770f2c9095">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#a8dbc0e03229d3c53472281b6078a5741">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#a2f8928e224059452055c72085a0fe47f">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#a8661b597a453c632072b35781a6cf0d3">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#a121e59f387e38e12ac430a770f2c9095">ofGLRenderer</a>.</p>
 
 </div></div>
   </div><div id="aa7ca2400b85c6f0673bc1c2fe02dfeb4" class="method">
@@ -7163,23 +7233,23 @@ class ofBaseImage_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a3e5b528f4bed33456561e9b948e2580f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(int r, int g, int b)=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#a716ce382e6ac92a64cc5d62c46cbc3d9">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#aae49df33ec0e2e50b192d02bc9254329">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a1f7ca4cbe94d014246f6dfe807ff1bf9">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a3c1195df49743118619b099a77a74a11">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#a716ce382e6ac92a64cc5d62c46cbc3d9">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#a1f7ca4cbe94d014246f6dfe807ff1bf9">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#aae49df33ec0e2e50b192d02bc9254329">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#a3c1195df49743118619b099a77a74a11">ofGLRenderer</a>.</p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(int r, int g, int b, int a)=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#ac7eb16d71c34915a020b45e66dbde7b2">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#ae73b748777bf75fb64ed1d5f6f5db023">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a9804ea8b061bc1f813e10e88646112a8">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a0ea5b1baf697b63cd38d9fe0e5ea88e8">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#ac7eb16d71c34915a020b45e66dbde7b2">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#a9804ea8b061bc1f813e10e88646112a8">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#ae73b748777bf75fb64ed1d5f6f5db023">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#a0ea5b1baf697b63cd38d9fe0e5ea88e8">ofGLRenderer</a>.</p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(const ofColor &amp;color)=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#a7af63c0b192fca3b52780884b812c11d">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a1cf81f64f592e2277b88bfeb5cbd6aa7">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a5f7045cb762cfd9491104416395ce4f2">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a43aca9fa8ea97a1db2ed51c7b2b6b0d6">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#a7af63c0b192fca3b52780884b812c11d">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#a5f7045cb762cfd9491104416395ce4f2">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#a1cf81f64f592e2277b88bfeb5cbd6aa7">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#a43aca9fa8ea97a1db2ed51c7b2b6b0d6">ofGLRenderer</a>.</p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(const ofColor &amp;color, int _a)=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#aa825e39c553e6b7967fa7d1adb2a1a7c">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a0912699ae36ae6108f65e0c271a13b31">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a3f6e9dc3159eb790066081c6a3af3e2f">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a7d256ba490f4afc6214ca203b2750473">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#aa825e39c553e6b7967fa7d1adb2a1a7c">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#a3f6e9dc3159eb790066081c6a3af3e2f">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#a0912699ae36ae6108f65e0c271a13b31">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#a7d256ba490f4afc6214ca203b2750473">ofGLRenderer</a>.</p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(int gray)=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#aa0841ea3dd7853753afe816a80c51cbc">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#aaf5079ce467b4741ee9beea895e09109">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#af9a4cf313e6acd6626f919df241b5ddb">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a12b306db178d8ddca5c3976dbbd7956e">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#aa0841ea3dd7853753afe816a80c51cbc">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#af9a4cf313e6acd6626f919df241b5ddb">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#aaf5079ce467b4741ee9beea895e09109">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#a12b306db178d8ddca5c3976dbbd7956e">ofGLRenderer</a>.</p>
 
 </div></div>
   </div><div id="a028f175f51f2e3d0122e509a1e43fc7e" class="method">
@@ -7195,7 +7265,7 @@ class ofBaseImage_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a028f175f51f2e3d0122e509a1e43fc7e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setHexColor</span><span class="args">(int hexColor)=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#aa701e4549e4597ba2c70a3b8ad9876a5">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a12eb0672c7053617129837077700fbe4">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a75fda5c23db3663198bb90ef997a6d10">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#accb8795036878d6c3b32283b31746967">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#aa701e4549e4597ba2c70a3b8ad9876a5">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#a75fda5c23db3663198bb90ef997a6d10">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#a12eb0672c7053617129837077700fbe4">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#accb8795036878d6c3b32283b31746967">ofGLRenderer</a>.</p>
 
 </div></div>
   </div><div id="a5d4154042da4dad28342545f90a05208" class="method">
@@ -7211,7 +7281,7 @@ class ofBaseImage_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a5d4154042da4dad28342545f90a05208_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1ace59f9421b921c3344fa20972e515912">ofColor</a> </span><span class="name">getBackgroundColor</span><span class="args">()=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#a5105f3eac1fbef381a6568ec0d43d08e">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#adfaf1f27e2dffa0b72bb43292150142f">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a5dc84b36e6d3f65ab6856f22b997ac47">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#ab63cf290983e9fa1a77fef05ee58b988">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#a5105f3eac1fbef381a6568ec0d43d08e">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#a5dc84b36e6d3f65ab6856f22b997ac47">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#adfaf1f27e2dffa0b72bb43292150142f">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#ab63cf290983e9fa1a77fef05ee58b988">ofGLRenderer</a>.</p>
 
 </div></div>
   </div><div id="abd67913d5ef5fb26afcdcdc5fe9da804" class="method">
@@ -7227,7 +7297,7 @@ class ofBaseImage_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="abd67913d5ef5fb26afcdcdc5fe9da804_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setBackgroundColor</span><span class="args">(const ofColor &amp;c)=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#a162a27f20d082266a4b564ebe86b209a">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a5ed0f1a2a963678d89b181a116f4659a">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#aa92ce6cf84f3ec82eeb582a895f04881">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a4ebe3990abb1ba7ceee6b006aed069ac">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#a162a27f20d082266a4b564ebe86b209a">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#aa92ce6cf84f3ec82eeb582a895f04881">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#a5ed0f1a2a963678d89b181a116f4659a">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#a4ebe3990abb1ba7ceee6b006aed069ac">ofGLRenderer</a>.</p>
 
 </div></div>
   </div><div id="a124ea8620eb6faa5bdb4d0fa7bf85afe" class="method">
@@ -7243,19 +7313,19 @@ class ofBaseImage_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a124ea8620eb6faa5bdb4d0fa7bf85afe_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">background</span><span class="args">(const ofColor &amp;c)=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#a7c660859c37d6ce0d87ff287f0153a3b">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#afe6b29f670e797e1cab85562ae365372">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a7d1ecf5b46be4597b203f657e9ddaa17">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#af6e5ccbc3e326071a7cbc6ddc3396e5e">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#a7c660859c37d6ce0d87ff287f0153a3b">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#a7d1ecf5b46be4597b203f657e9ddaa17">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#afe6b29f670e797e1cab85562ae365372">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#af6e5ccbc3e326071a7cbc6ddc3396e5e">ofGLRenderer</a>.</p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">background</span><span class="args">(float brightness)=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#ad72e46c9c739c319cebef3cba720cdf2">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a55ee27e3f9b943c50d011ff5a038e995">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#acce70f81673b24b4fcfa71761c1e5e3e">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a85246318e21a701975ffb7653821c175">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#ad72e46c9c739c319cebef3cba720cdf2">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#acce70f81673b24b4fcfa71761c1e5e3e">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#a55ee27e3f9b943c50d011ff5a038e995">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#a85246318e21a701975ffb7653821c175">ofGLRenderer</a>.</p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">background</span><span class="args">(int hexColor, float _a=255.0f)=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#a399467b010c7bffb8c68f6254cd1403b">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a8fa6a2ca6fdefd7008eb85cffef2447a">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#acb60d89fbbee2e5ea7bfb02afd523a63">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a0ca4eb5d33451a27bc3ecfbee06ba8d4">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#a399467b010c7bffb8c68f6254cd1403b">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#acb60d89fbbee2e5ea7bfb02afd523a63">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#a8fa6a2ca6fdefd7008eb85cffef2447a">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#a0ca4eb5d33451a27bc3ecfbee06ba8d4">ofGLRenderer</a>.</p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">background</span><span class="args">(int r, int g, int b, int a=255)=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#abfad33e9148287de46953db0443d0d3d">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a1e21b211773d1dd77d668835f964e811">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a8eaa71b129cd681b725c760f86fd246b">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#ad83bc3d1980ee121f9936b0ef20207b1">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#abfad33e9148287de46953db0443d0d3d">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#a8eaa71b129cd681b725c760f86fd246b">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#a1e21b211773d1dd77d668835f964e811">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#ad83bc3d1980ee121f9936b0ef20207b1">ofGLRenderer</a>.</p>
 
 </div></div>
   </div><div id="a3f9a941d408f2fceebbce6671acfa606" class="method">
@@ -7271,7 +7341,7 @@ class ofBaseImage_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a3f9a941d408f2fceebbce6671acfa606_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setBackgroundAuto</span><span class="args">(bool bManual)=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#aa275d00cea2a518a86524ca275fd5d19">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a3c095b39a1fa8f7af272331c88a559c0">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a63625fb7cfd8500a8f14de6f2ba18668">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a0e52b69e3652bf1d72e1736b52cc9886">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#aa275d00cea2a518a86524ca275fd5d19">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#a63625fb7cfd8500a8f14de6f2ba18668">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#a3c095b39a1fa8f7af272331c88a559c0">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#a0e52b69e3652bf1d72e1736b52cc9886">ofGLRenderer</a>.</p>
 
 </div></div>
   </div><div id="a435b1412891939d0b021990bcd27133f" class="method">
@@ -7287,7 +7357,7 @@ class ofBaseImage_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a435b1412891939d0b021990bcd27133f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">getBackgroundAuto</span><span class="args">()=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#a85fceb1ee6fafd8b52be69eceaa91ed1">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#aa936433c48685e77b3d277b21b002a2b">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a45d79bcf5e14074b7a3deec1943eadeb">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a58e8b027aa2682a26bf47e8d60d3160b">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#a85fceb1ee6fafd8b52be69eceaa91ed1">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#a45d79bcf5e14074b7a3deec1943eadeb">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#aa936433c48685e77b3d277b21b002a2b">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#a58e8b027aa2682a26bf47e8d60d3160b">ofGLRenderer</a>.</p>
 
 </div></div>
   </div><div id="aa952f366b2a77399ebdd428d6118d912" class="method">
@@ -7303,15 +7373,15 @@ class ofBaseImage_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="aa952f366b2a77399ebdd428d6118d912_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clear</span><span class="args">()=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#a20795a03b7086b44ef40d8e88a0b3333">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a2f8fc392d9aedffe1a0bccea1ce5b142">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a34e40686ce81f218c8274fe62129649f">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a5598717cc64ef307209be32e755192a9">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#a20795a03b7086b44ef40d8e88a0b3333">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#a34e40686ce81f218c8274fe62129649f">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#a2f8fc392d9aedffe1a0bccea1ce5b142">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#a5598717cc64ef307209be32e755192a9">ofGLRenderer</a>.</p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">clear</span><span class="args">(float r, float g, float b, float a=0)=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#a7940fb36045037c38c0a8706968735e2">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a08f08fcdb8864fde81872d1f3b2308c9">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#ab2961fb8b54755dcb3cd53568314be77">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#ab0a453bcb7d5c7b981a0c01104735633">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#a7940fb36045037c38c0a8706968735e2">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#ab2961fb8b54755dcb3cd53568314be77">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#a08f08fcdb8864fde81872d1f3b2308c9">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#ab0a453bcb7d5c7b981a0c01104735633">ofGLRenderer</a>.</p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">clear</span><span class="args">(float brightness, float a=0)=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#a9b492380fb0424bb838c1a67d279b886">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a475f7c41e13ffe154ed353c4b2e836e9">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a534f3fd18ac2991ae33e80d013d7eda6">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a6b2b684fb5450c3ac1e196927dac6be9">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#a9b492380fb0424bb838c1a67d279b886">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#a534f3fd18ac2991ae33e80d013d7eda6">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#a475f7c41e13ffe154ed353c4b2e836e9">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#a6b2b684fb5450c3ac1e196927dac6be9">ofGLRenderer</a>.</p>
 
 </div></div>
   </div><div id="a56b08e73b2f30b4cc06c48582aa6fce0" class="method">
@@ -7327,7 +7397,7 @@ class ofBaseImage_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a56b08e73b2f30b4cc06c48582aa6fce0_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clearAlpha</span><span class="args">()=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#a5980b28671336d94afcf9a513c747797">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#ad3a309e756af77fa962928018e1caeee">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a5bde54faac8cc1afcc672695d3a046fb">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a9c39e468eb9116eeb69ea41676fbe68e">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#a5980b28671336d94afcf9a513c747797">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#a5bde54faac8cc1afcc672695d3a046fb">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#ad3a309e756af77fa962928018e1caeee">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#a9c39e468eb9116eeb69ea41676fbe68e">ofGLRenderer</a>.</p>
 
 </div></div>
   </div><div id="a88e533aef9bd60b8bbda790f9a9d67bf" class="method">
@@ -7343,7 +7413,7 @@ class ofBaseImage_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a88e533aef9bd60b8bbda790f9a9d67bf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawLine</span><span class="args">(float x1, float y1, float z1, float x2, float y2, float z2)=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#a6dd8837b75c9db536f1ae0fa5e48465b">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#af8f5534e273d3e480e983e49cb25416b">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a500bbefad08e52a475fb92ebb99085d7">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#ad99745cf58b3d20fd4aa6a875f5b631c">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#a6dd8837b75c9db536f1ae0fa5e48465b">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#a500bbefad08e52a475fb92ebb99085d7">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#af8f5534e273d3e480e983e49cb25416b">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#ad99745cf58b3d20fd4aa6a875f5b631c">ofGLRenderer</a>.</p>
 
 </div></div>
   </div><div id="a69581b0027e9c27b76acf1b947ace1a9" class="method">
@@ -7359,7 +7429,7 @@ class ofBaseImage_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a69581b0027e9c27b76acf1b947ace1a9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawRectangle</span><span class="args">(float x, float y, float z, float w, float h)=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#aa6bed8a7799f27fc5a301c3f362fcf26">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a87ca38cd07aad94f36d3bc0aa9bab757">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a24cb2f798f7c05b6694f0c279421ff0f">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a4641d1dad06be90318f95bd134bd8070">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#aa6bed8a7799f27fc5a301c3f362fcf26">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#a24cb2f798f7c05b6694f0c279421ff0f">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#a87ca38cd07aad94f36d3bc0aa9bab757">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#a4641d1dad06be90318f95bd134bd8070">ofGLRenderer</a>.</p>
 
 </div></div>
   </div><div id="aaf947850edf68e5a92da374d4347492d" class="method">
@@ -7375,7 +7445,7 @@ class ofBaseImage_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="aaf947850edf68e5a92da374d4347492d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawTriangle</span><span class="args">(float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3)=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#a34aedb0a2eb0d855d1a96945e602559b">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a7437fda0cc3291a4734c30d5215cb304">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a2c33dd48745f8dbdb71fd3a0546358f4">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#aa6d9513ab328063dc0a13975ff0bf196">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#a34aedb0a2eb0d855d1a96945e602559b">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#a2c33dd48745f8dbdb71fd3a0546358f4">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#a7437fda0cc3291a4734c30d5215cb304">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#aa6d9513ab328063dc0a13975ff0bf196">ofGLRenderer</a>.</p>
 
 </div></div>
   </div><div id="a9858e271b9a3e53c79a3e7b4b495ca93" class="method">
@@ -7391,7 +7461,7 @@ class ofBaseImage_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a9858e271b9a3e53c79a3e7b4b495ca93_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawCircle</span><span class="args">(float x, float y, float z, float radius)=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#a00e13ab5e85c771e8753563de38e3b49">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a92e52d81d4aee42ee2444a82bf85d748">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#afbd46d94d13679c0505a4051c971c427">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a8995251bacac0eca21a1586794f99dfc">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#a00e13ab5e85c771e8753563de38e3b49">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#afbd46d94d13679c0505a4051c971c427">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#a92e52d81d4aee42ee2444a82bf85d748">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#a8995251bacac0eca21a1586794f99dfc">ofGLRenderer</a>.</p>
 
 </div></div>
   </div><div id="a71a1a82945587067107f6dbae14e95a6" class="method">
@@ -7407,7 +7477,7 @@ class ofBaseImage_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a71a1a82945587067107f6dbae14e95a6_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawEllipse</span><span class="args">(float x, float y, float z, float width, float height)=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#a4f22b60a3a88f5aa23b3b15e685db047">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a8641b0baf1a323a1371a025ecc844eb5">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#a6e4c61a77b51c0f9d9fef3d2642f34f9">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a38808615f4653987ca0cb206c727d800">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#a4f22b60a3a88f5aa23b3b15e685db047">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#a6e4c61a77b51c0f9d9fef3d2642f34f9">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#a8641b0baf1a323a1371a025ecc844eb5">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#a38808615f4653987ca0cb206c727d800">ofGLRenderer</a>.</p>
 
 </div></div>
   </div><div id="a29897c32df48511a61d32a1bf8ae614a" class="method">
@@ -7423,7 +7493,7 @@ class ofBaseImage_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a29897c32df48511a61d32a1bf8ae614a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawString</span><span class="args">(string text, float x, float y, float z, ofDrawBitmapMode mode)=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofRendererCollection.html#a1393cf51a9b203b88dcedc2235fdb7da">ofRendererCollection</a>, <a class="el" href="ofCairoRenderer.html#a686cd4854a5e1fb94a16386728d6c695">ofCairoRenderer</a>, <a class="el" href="ofGLProgrammableRenderer.html#aa11a68ba61473d2dc82383d0f693b885">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#a6f724c04b47a855d528e489d68054678">ofGLRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofRendererCollection.html#a1393cf51a9b203b88dcedc2235fdb7da">ofRendererCollection</a>, <a class="el" href="ofGLProgrammableRenderer.html#aa11a68ba61473d2dc82383d0f693b885">ofGLProgrammableRenderer</a>, <a class="el" href="ofCairoRenderer.html#a686cd4854a5e1fb94a16386728d6c695">ofCairoRenderer</a>, and <a class="el" href="ofGLRenderer.html#a6f724c04b47a855d528e489d68054678">ofGLRenderer</a>.</p>
 
 </div></div>
   </div><div id="abdaece01a43329ef7769615cd958b7e2" class="method">
@@ -7849,7 +7919,7 @@ class ofBaseImage_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a0eafce0c02a59aa727cc1ad03c12ea8e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setCurrentMaterial</span><span class="args">(ofBaseMaterial *material)=0</span></div><div class="memberDocumentation">
 
-<p>Implemented in <a class="el" href="ofGLRenderer.html#ad8660ba5beed74723a4e8a67b7dd33af">ofGLRenderer</a>, and <a class="el" href="ofGLProgrammableRenderer.html#aa493f5d7affc233fb5ae589687a2ed01">ofGLProgrammableRenderer</a>.</p>
+<p>Implemented in <a class="el" href="ofGLProgrammableRenderer.html#aa493f5d7affc233fb5ae589687a2ed01">ofGLProgrammableRenderer</a>, and <a class="el" href="ofGLRenderer.html#ad8660ba5beed74723a4e8a67b7dd33af">ofGLRenderer</a>.</p>
 
 </div></div>
   </div></div>
@@ -8098,6 +8168,22 @@ class ofBaseImage_&lt; T &gt;</h3>
     <div class="methodDescription" style="display:none" id="a27f86f2e379866d12ef66176b1cfc7db_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">stop</span><span class="args">()=0</span></div><div class="memberDocumentation">
 
 <p>Implemented in <a class="el" href="ofURLFileLoaderImpl.html#af876e3b02363fbaa7b79fa0aa17b96cb">ofURLFileLoaderImpl</a>.</p>
+
+</div></div>
+  </div><div id="a02aa19e52dd91586b3e38ea9ddd92193" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a02aa19e52dd91586b3e38ea9ddd92193&quot;)">
+        <span class="type"></span>
+        <a class="name">handleRequest</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a02aa19e52dd91586b3e38ea9ddd92193_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofHttpResponse.html">ofHttpResponse</a> </span><span class="name">handleRequest</span><span class="args">(ofHttpRequest request)=0</span></div><div class="memberDocumentation">
+
+<p>Implemented in <a class="el" href="ofURLFileLoaderImpl.html#a30d5f3ebd9b7ec83b4584eefdea27814">ofURLFileLoaderImpl</a>.</p>
 
 </div></div>
   </div></div>

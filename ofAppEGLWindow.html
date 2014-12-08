@@ -1356,29 +1356,28 @@
 
 <p>The thread&apos;s run function. </p>
 <p>Users must overide this in your their derived class and then implement their threaded activity inside the loop. If the the users&apos;s threadedFunction does not have a loop, the contents of the threadedFunction will be executed once and the thread will then exit.</p>
-<p>For tasks that must be repeated, the user can use a while loop that will run repeatedly until the thread&apos;s threadRunning is set to false via the <a class="el" href="ofThread.html#a3102a3bf7897f579d70a418ae3ed010b" title="Stop the thread. ">stopThread()</a> method.</p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> MyThreadedClass::threadedFunction()</div>
-<div class="line">{</div>
-<div class="line">    <span class="comment">// Start the loop and continue until</span></div>
-<div class="line">    <span class="comment">// isThreadRunning() returns false.</span></div>
-<div class="line">    <span class="keywordflow">while</span>(<a class="code" href="ofThread.html#a07a51505ea9f5407e8c5999368bd54e2">isThreadRunning</a>())</div>
-<div class="line">    {</div>
-<div class="line">        <span class="comment">// Do activity repeatedly here:</span></div>
-<div class="line"></div>
-<div class="line">        <span class="comment">// int j = 1 + 1;</span></div>
-<div class="line"></div>
-<div class="line">        <span class="comment">// This while loop will run as fast as it possibly</span></div>
-<div class="line">        <span class="comment">// can, consuming as much processor speed as it can.</span></div>
-<div class="line">        <span class="comment">// To help the processor stay cool, users are</span></div>
-<div class="line">        <span class="comment">// encouraged to let the while loop sleep via the</span></div>
-<div class="line">        <span class="comment">// sleep() method, or call the yield() method to let</span></div>
-<div class="line">        <span class="comment">// other threads have a turn.  See the sleep() and</span></div>
-<div class="line">        <span class="comment">// yield() methods for more information.</span></div>
-<div class="line"></div>
-<div class="line">        <span class="comment">// sleep(100);</span></div>
-<div class="line">    }</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
+<p>For tasks that must be repeated, the user can use a while loop that will run repeatedly until the thread&apos;s threadRunning is set to false via the <a class="el" href="ofThread.html#a3102a3bf7897f579d70a418ae3ed010b" title="Stop the thread. ">stopThread()</a> method. </p>
+<pre class="fragment">void MyThreadedClass::threadedFunction()
+{
+    // Start the loop and continue until
+    // isThreadRunning() returns false.
+    while(isThreadRunning())
+    {
+        // Do activity repeatedly here:
+
+        // int j = 1 + 1;
+
+        // This while loop will run as fast as it possibly
+        // can, consuming as much processor speed as it can.
+        // To help the processor stay cool, users are
+        // encouraged to let the while loop sleep via the
+        // sleep() method, or call the yield() method to let
+        // other threads have a turn.  See the sleep() and
+        // yield() methods for more information.
+
+        // sleep(100);
+    }
+</pre> 
 <p>Reimplemented from <a class="el" href="ofThread.html#a7e90ddaf0113435c451e6daf600c33f1">ofThread</a>.</p>
 
 </div></div>

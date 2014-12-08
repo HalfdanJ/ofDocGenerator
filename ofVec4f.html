@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofVec4f</span><li class="chapter"><a href="#Attributes">Attributes</a></li><li class="chapter"><a href="#StaticAttributes">Static Attributes</a></li><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#Friends">Friends</a></li><li class="chapter"><a href="#StaticFunctions">Static Functions</a></li></ul>
+        <span class="class">ofVec4f</span><li class="chapter"><a href="#Constructa4Dvector">Construct a 4D vector</a></li><li class="chapter"><a href="#Accesscomponents">Access components</a></li><li class="chapter"><a href="#Comparison">Comparison</a></li><li class="chapter"><a href="#Operators">Operators</a></li><li class="chapter"><a href="#Simplemanipulations">Simple manipulations</a></li><li class="chapter"><a href="#Distance">Distance</a></li><li class="chapter"><a href="#Interpolation">Interpolation</a></li><li class="chapter"><a href="#Limit">Limit</a></li><li class="chapter"><a href="#Measurement">Measurement</a></li><li class="chapter"><a href="#Calculations">Calculations</a></li><li class="chapter"><a href="#Attributes">Attributes</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -68,12 +68,144 @@
       <h1 class="classTitle">ofVec4f<small>file</small></h1>
     </div>
     <div class="classDescription"></div>
-    <div class="classMethods"><div id="Functions">
-    <h3 class="sectionHeader">Functions</h3>
+    <div class="classMethods"></div>
+  </div><div id="" class="classBlock">
+    <div class="classHeader">
+      <h1 class="classTitle">ofVec4f<small>class</small></h1>
+    </div>
+    <div class="classDescription"></div>
+    <div class="classMethods"><div id="Constructa4Dvector">
+    <h3 class="sectionHeader">Construct a 4D vector</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a29548a594e0f8f2a71df6d92934c129b" class="method">
+    <div class="sectionContent"><div id="a0e6f7d1bc21f84231571afb174293117" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a29548a594e0f8f2a71df6d92934c129b&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a0e6f7d1bc21f84231571afb174293117&quot;)">
+        <span class="type"></span>
+        <a class="name">ofVec4f</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a0e6f7d1bc21f84231571afb174293117_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofVec4f</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofVec4f</span><span class="args">(float _scalar)</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofVec4f</span><span class="args">(float _x, float _y, float _z, float _w)</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofVec4f</span><span class="args">(const ofVec2f &amp;vec)</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofVec4f</span><span class="args">(const ofVec3f &amp;vec)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div></div>
+  </div><div id="Accesscomponents">
+    <h3 class="sectionHeader">Access components</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a80c0c2753d5c6980457ebcbc3ce9ac91" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a80c0c2753d5c6980457ebcbc3ce9ac91&quot;)">
+        <span class="type"></span>
+        <a class="name">getPtr</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a80c0c2753d5c6980457ebcbc3ce9ac91_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float * </span><span class="name">getPtr</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type">const float * </span><span class="name">getPtr</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a1f3321d0e6712fc18d879a74f00313f6" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1f3321d0e6712fc18d879a74f00313f6&quot;)">
+        <span class="type"></span>
+        <a class="name">operator[]</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a1f3321d0e6712fc18d879a74f00313f6_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float &amp; </span><span class="name">operator[]</span><span class="args">(int n)</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type">float </span><span class="name">operator[]</span><span class="args">(int n) const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a9a6c3667280f7c5b2106d1fa08b82020" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9a6c3667280f7c5b2106d1fa08b82020&quot;)">
+        <span class="type"></span>
+        <a class="name">set</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a9a6c3667280f7c5b2106d1fa08b82020_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float _scalar)</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float _x, float _y, float _z, float _w)</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(const ofVec4f &amp;vec)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div></div>
+  </div><div id="Comparison">
+    <h3 class="sectionHeader">Comparison</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="aff4072323903139109b35c1e14d4cc39" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aff4072323903139109b35c1e14d4cc39&quot;)">
+        <span class="type"></span>
+        <a class="name">operator==</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aff4072323903139109b35c1e14d4cc39_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">operator==</span><span class="args">(const ofVec4f &amp;vec) const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="aa6bf6b7595bee62833bd45474f376f8a" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa6bf6b7595bee62833bd45474f376f8a&quot;)">
+        <span class="type"></span>
+        <a class="name">operator!=</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aa6bf6b7595bee62833bd45474f376f8a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">operator!=</span><span class="args">(const ofVec4f &amp;vec) const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a2bcfc49975b13b1c6cd920c5dd105120" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2bcfc49975b13b1c6cd920c5dd105120&quot;)">
+        <span class="type"></span>
+        <a class="name">match</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a2bcfc49975b13b1c6cd920c5dd105120_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">match</span><span class="args">(const ofVec4f &amp;vec, float tolerance=0.0001) const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div></div>
+  </div><div id="Operators">
+    <h3 class="sectionHeader">Operators</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a6538a9a00a2dc33d7dfef1edd32cffa6" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6538a9a00a2dc33d7dfef1edd32cffa6&quot;)">
         <span class="type"></span>
         <a class="name">operator+</a>
         <span class="args"></span>
@@ -82,12 +214,30 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a29548a594e0f8f2a71df6d92934c129b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator+</span><span class="args">(float f, const ofVec4f &amp;vec)</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a6538a9a00a2dc33d7dfef1edd32cffa6_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator+</span><span class="args">(const ofVec4f &amp;vec) const </span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator+</span><span class="args">(const float f) const </span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="aaa28bd3d8e1a3b3ac1f3d1a07796ac0e" class="method">
+  </div><div id="a38388d2eb927685fd96224e04b5e0c63" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aaa28bd3d8e1a3b3ac1f3d1a07796ac0e&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a38388d2eb927685fd96224e04b5e0c63&quot;)">
+        <span class="type"></span>
+        <a class="name">operator+=</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a38388d2eb927685fd96224e04b5e0c63_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator+=</span><span class="args">(const ofVec4f &amp;vec)</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator+=</span><span class="args">(const float f)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a18403fdda86f8dcc7179a159ae0f14e1" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a18403fdda86f8dcc7179a159ae0f14e1&quot;)">
         <span class="type"></span>
         <a class="name">operator-</a>
         <span class="args"></span>
@@ -96,12 +246,32 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="aaa28bd3d8e1a3b3ac1f3d1a07796ac0e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator-</span><span class="args">(float f, const ofVec4f &amp;vec)</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a18403fdda86f8dcc7179a159ae0f14e1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator-</span><span class="args">(const float f) const </span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator-</span><span class="args">(const ofVec4f &amp;vec) const </span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator-</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="a9760891cfe5db0e55a73b7a97a6d39d4" class="method">
+  </div><div id="a6849aa20d5b6a6a26a16f0e1182f7aa9" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9760891cfe5db0e55a73b7a97a6d39d4&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6849aa20d5b6a6a26a16f0e1182f7aa9&quot;)">
+        <span class="type"></span>
+        <a class="name">operator-=</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a6849aa20d5b6a6a26a16f0e1182f7aa9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator-=</span><span class="args">(const float f)</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator-=</span><span class="args">(const ofVec4f &amp;vec)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a45fac834ed07e3f9698177d48b18807a" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a45fac834ed07e3f9698177d48b18807a&quot;)">
         <span class="type"></span>
         <a class="name">operator*</a>
         <span class="args"></span>
@@ -110,12 +280,30 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a9760891cfe5db0e55a73b7a97a6d39d4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator*</span><span class="args">(float f, const ofVec4f &amp;vec)</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a45fac834ed07e3f9698177d48b18807a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator*</span><span class="args">(const ofVec4f &amp;vec) const </span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator*</span><span class="args">(const float f) const </span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="a8247407c772261b6490e4d572d10d820" class="method">
+  </div><div id="ac23a239314d2d9446f24b5bd0ac0f4d5" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8247407c772261b6490e4d572d10d820&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac23a239314d2d9446f24b5bd0ac0f4d5&quot;)">
+        <span class="type"></span>
+        <a class="name">operator*=</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ac23a239314d2d9446f24b5bd0ac0f4d5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator*=</span><span class="args">(const ofVec4f &amp;vec)</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator*=</span><span class="args">(const float f)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="af6442ec4e3e525fdc48a5d849779913d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af6442ec4e3e525fdc48a5d849779913d&quot;)">
         <span class="type"></span>
         <a class="name">operator/</a>
         <span class="args"></span>
@@ -124,45 +312,386 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a8247407c772261b6490e4d572d10d820_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator/</span><span class="args">(float f, const ofVec4f &amp;vec)</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="af6442ec4e3e525fdc48a5d849779913d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator/</span><span class="args">(const ofVec4f &amp;vec) const </span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator/</span><span class="args">(const float f) const </span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="a8289bccf1213ee971abf219d35a3cd5b" class="method">
+  </div><div id="af8f90f340260002a24d5362e9e8d823a" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8289bccf1213ee971abf219d35a3cd5b&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af8f90f340260002a24d5362e9e8d823a&quot;)">
         <span class="type"></span>
-        <a class="name">operator&lt;&lt;</a>
+        <a class="name">operator/=</a>
         <span class="args"></span>
         <span class="kind">()</span>
         <span class="note"></span>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a8289bccf1213ee971abf219d35a3cd5b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">ostream &amp; </span><span class="name">operator&lt;&lt;</span><span class="args">(ostream &amp;os, const ofVec4f &amp;vec)</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="af8f90f340260002a24d5362e9e8d823a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator/=</span><span class="args">(const ofVec4f &amp;vec)</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator/=</span><span class="args">(const float f)</span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="a10031564d03c096fb82d9f4b0cf6005b" class="method">
+  </div></div>
+  </div><div id="Simplemanipulations">
+    <h3 class="sectionHeader">Simple manipulations</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a92b84576ebb89dfa74a5f1b206089992" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a10031564d03c096fb82d9f4b0cf6005b&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a92b84576ebb89dfa74a5f1b206089992&quot;)">
         <span class="type"></span>
-        <a class="name">operator&gt;&gt;</a>
+        <a class="name">getScaled</a>
         <span class="args"></span>
         <span class="kind">()</span>
         <span class="note"></span>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a10031564d03c096fb82d9f4b0cf6005b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">istream &amp; </span><span class="name">operator&gt;&gt;</span><span class="args">(istream &amp;is, ofVec4f &amp;vec)</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a92b84576ebb89dfa74a5f1b206089992_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">getScaled</span><span class="args">(const float length) const </span></div><div class="memberDocumentation">
+
+<p>Returns a new <a class="el" href="ofVec4f.html">ofVec4f</a> that is the result of scaling this vector up or down so that it has the requested length. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">length</td><td>The desired length of the new <a class="el" href="ofVec4f.html">ofVec4f</a> object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result of scaling the this vector up or down. </dd></dl>
+
+</div></div>
+  </div><div id="aa62048a7701e01fb7892b62980253676" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa62048a7701e01fb7892b62980253676&quot;)">
+        <span class="type"></span>
+        <a class="name">scale</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aa62048a7701e01fb7892b62980253676_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">scale</span><span class="args">(const float length)</span></div><div class="memberDocumentation">
+
+<p>Scales this vector up or down so that it has the requested length. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">length</td><td>The desired length of the vector. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div></div>
   </div></div>
-  </div></div>
-  </div><div id="" class="classBlock">
-    <div class="classHeader">
-      <h1 class="classTitle">ofVec4f<small>class</small></h1>
+  </div><div id="Distance">
+    <h3 class="sectionHeader">Distance</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="acf7295629b24fe56614d2a36d7aa5a2c" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#acf7295629b24fe56614d2a36d7aa5a2c&quot;)">
+        <span class="type"></span>
+        <a class="name">distance</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
     </div>
-    <div class="classDescription"></div>
-    <div class="classMethods"><div id="Attributes">
+
+    <div class="methodDescription" style="display:none" id="acf7295629b24fe56614d2a36d7aa5a2c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">distance</span><span class="args">(const ofVec4f &amp;pnt) const </span></div><div class="memberDocumentation">
+
+<p>Treats this vector and &apos;pnt&apos; as points in 4D space and calculates the distance between them. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pnt</td><td>The vector used in the distance calculation with the current vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The distance between the two vectors in 4D space. </dd></dl>
+
+</div></div>
+  </div><div id="acd8a82f308191fed71bb2b504f3c8153" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#acd8a82f308191fed71bb2b504f3c8153&quot;)">
+        <span class="type"></span>
+        <a class="name">squareDistance</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="acd8a82f308191fed71bb2b504f3c8153_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">squareDistance</span><span class="args">(const ofVec4f &amp;pnt) const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div></div>
+  </div><div id="Interpolation">
+    <h3 class="sectionHeader">Interpolation</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a72fe00f9dc3ef8a29b687276a0d967ed" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a72fe00f9dc3ef8a29b687276a0d967ed&quot;)">
+        <span class="type"></span>
+        <a class="name">getInterpolated</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a72fe00f9dc3ef8a29b687276a0d967ed_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">getInterpolated</span><span class="args">(const ofVec4f &amp;pnt, float p) const </span></div><div class="memberDocumentation">
+
+<p>Performs a linear interpolation of this vector towards &apos;pnt&apos;. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pnt</td><td>The vector the interpolation will be performed on. </td></tr>
+    <tr><td class="paramname">p</td><td>The amount to move towards &apos;pnt&apos;; &apos;p&apos; is normally between 0 and 1 and where 0 means stay the original position and 1 means move all the way to &apos;pnt&apos;, but you can also have &apos;p&apos; greater than 1 overshoot &apos;pnt&apos;, or less than 0 to move backwards away from &apos;pnt&apos;. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The interpolation as an <a class="el" href="ofVec4f.html">ofVec4f</a>. </dd></dl>
+
+</div></div>
+  </div><div id="a4cc33914e3029a305e2fca016b13bba4" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4cc33914e3029a305e2fca016b13bba4&quot;)">
+        <span class="type"></span>
+        <a class="name">interpolate</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a4cc33914e3029a305e2fca016b13bba4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">interpolate</span><span class="args">(const ofVec4f &amp;pnt, float p)</span></div><div class="memberDocumentation">
+
+<p>Performs a linear interpolation of this vector towards &apos;pnt&apos;. This modifies the current vector to the interpolated value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pnt</td><td>The vector the interpolation will be performed on. </td></tr>
+    <tr><td class="paramname">p</td><td>The amount to move towards &apos;pnt&apos;; &apos;p&apos; is normally between 0 and 1 and where 0 means stay the original position and 1 means move all the way to &apos;pnt&apos;, but you can also have &apos;p&apos; greater than 1 overshoot &apos;pnt&apos;, or less than 0 to move backwards away from &apos;pnt&apos;. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="a1cfeb2672d0063eb6e490afbab9793d0" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1cfeb2672d0063eb6e490afbab9793d0&quot;)">
+        <span class="type"></span>
+        <a class="name">getMiddle</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a1cfeb2672d0063eb6e490afbab9793d0_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">getMiddle</span><span class="args">(const ofVec4f &amp;pnt) const </span></div><div class="memberDocumentation">
+
+<p>Calculates and returns the midpoint (as a vector) between this vector and &apos;pnt&apos;. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pnt</td><td>The vector used in the midpoint calculation with this vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The midpoint between this vector and &apos;pnt&apos; as an <a class="el" href="ofVec4f.html">ofVec4f</a>. </dd></dl>
+
+</div></div>
+  </div><div id="a8b140736692f96014c2d9fed85207c49" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8b140736692f96014c2d9fed85207c49&quot;)">
+        <span class="type"></span>
+        <a class="name">middle</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a8b140736692f96014c2d9fed85207c49_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">middle</span><span class="args">(const ofVec4f &amp;pnt)</span></div><div class="memberDocumentation">
+
+<p>Calculates and returns the midpoint (as a vector) between this vector and &apos;pnt&apos;. This modifies the current vector to the midpoint value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pnt</td><td>The vector used in the midpoint calculation with this vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The midpoint between this vector and &apos;pnt&apos; as an <a class="el" href="ofVec4f.html">ofVec4f</a>. </dd></dl>
+
+</div></div>
+  </div><div id="aee91ea62feae5a6c9b35490646cf0fd6" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aee91ea62feae5a6c9b35490646cf0fd6&quot;)">
+        <span class="type"></span>
+        <a class="name">average</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aee91ea62feae5a6c9b35490646cf0fd6_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">average</span><span class="args">(const ofVec4f *points, int num)</span></div><div class="memberDocumentation">
+
+<p>Sets this vector to be the average (center of gravity or centroid) of a given array of &apos;<a class="el" href="ofVec4f.html">ofVec4f</a>&apos;s. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">points</td><td>The array of &apos;<a class="el" href="ofVec4f.html">ofVec4f</a>&apos;s used in the average calculation. </td></tr>
+    <tr><td class="paramname">num</td><td>The number of <a class="el" href="ofVec4f.html">ofVec4f</a> objects in the array. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div></div>
+  </div><div id="Limit">
+    <h3 class="sectionHeader">Limit</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a9a5c8cfce6b0cb25ffbc5b2db74de307" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9a5c8cfce6b0cb25ffbc5b2db74de307&quot;)">
+        <span class="type"></span>
+        <a class="name">getNormalized</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a9a5c8cfce6b0cb25ffbc5b2db74de307_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">getNormalized</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Returns a normalized copy of this vector. </p>
+<p>Normalization means to scale the vector so that its length (magnitude) is exactly 1, at which stage all that is left is the direction. A normalized vector is usually called a unit vector, and can be used to represent a pure direction (heading).</p>
+<dl class="section return"><dt>Returns</dt><dd>The normalized copy of the current vector. </dd></dl>
+
+</div></div>
+  </div><div id="ada0931b83cdeb7b5132388f248622993" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ada0931b83cdeb7b5132388f248622993&quot;)">
+        <span class="type"></span>
+        <a class="name">normalize</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ada0931b83cdeb7b5132388f248622993_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">normalize</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Normalizes the vector. This changes the current vector to its normalized value. </p>
+<p>Normalization means to scale the vector so that its length (magnitude) is exactly 1, at which stage all that is left is the direction. A normalized vector is usually called a unit vector, and can be used to represent a pure direction (heading). </p>
+
+</div></div>
+  </div><div id="a6f5f8d26e632775eefdece73d02d354a" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6f5f8d26e632775eefdece73d02d354a&quot;)">
+        <span class="type"></span>
+        <a class="name">getLimited</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a6f5f8d26e632775eefdece73d02d354a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">getLimited</span><span class="args">(float max) const </span></div><div class="memberDocumentation">
+
+<p>Returns a copy of this vector with its length (magnitude) restricted to a maximum of &apos;max&apos; units by scaling down if necessary. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max</td><td>The maximum length of the new vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A copy of the current vector that is at most &apos;max&apos; units long. </dd></dl>
+
+</div></div>
+  </div><div id="ad9f9accea04d88e9a0e328c590e9ecd1" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad9f9accea04d88e9a0e328c590e9ecd1&quot;)">
+        <span class="type"></span>
+        <a class="name">limit</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ad9f9accea04d88e9a0e328c590e9ecd1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">limit</span><span class="args">(float max)</span></div><div class="memberDocumentation">
+
+<p>Restrict the length (magnitude) of this vector to a maximum of &apos;max&apos; units by scaling down if necessary. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max</td><td>The maximum length of the current vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div></div>
+  </div><div id="Measurement">
+    <h3 class="sectionHeader">Measurement</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="abac74250789cbd6fc69c2ca37f5a29dc" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#abac74250789cbd6fc69c2ca37f5a29dc&quot;)">
+        <span class="type"></span>
+        <a class="name">length</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="abac74250789cbd6fc69c2ca37f5a29dc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">length</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Returns the length (magnitude) of this vector. </p>
+<dl class="section return"><dt>Returns</dt><dd>The magnitude of the current vector. </dd></dl>
+
+</div></div>
+  </div><div id="a4d3b0cde8a6d349677c03c7826edbde5" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4d3b0cde8a6d349677c03c7826edbde5&quot;)">
+        <span class="type"></span>
+        <a class="name">lengthSquared</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a4d3b0cde8a6d349677c03c7826edbde5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">lengthSquared</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div></div>
+  </div><div id="Calculations">
+    <h3 class="sectionHeader">Calculations</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="ad8d85bd705f13b402fef9f3f9433bd5f" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad8d85bd705f13b402fef9f3f9433bd5f&quot;)">
+        <span class="type"></span>
+        <a class="name">dot</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ad8d85bd705f13b402fef9f3f9433bd5f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">dot</span><span class="args">(const ofVec4f &amp;vec) const </span></div><div class="memberDocumentation">
+
+<p>Calculates and returns the dot product of this vector with &apos;vec&apos;. </p>
+<p>Dot product (less commonly known as Euclidean inner product) expresses the angular relationship between two vectors. In other words it is a measure of how parallel two vectors are. If they are completely perpendicular the dot product is 0; if they are completely parallel their dot product is either 1 if they are pointing in the same direction, or -1 if they are pointing in opposite directions.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>The vector used in the dot product calculation with this vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The dot product of this vector with &apos;vec&apos;. </dd></dl>
+
+</div></div>
+  </div></div>
+  </div><div id="Attributes">
     <h3 class="sectionHeader">Attributes</h3>
     <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a20598461757aaad1950614d7b42954d7" class="method">
@@ -219,877 +748,6 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a0b55d23e9fa321c34a60752605c19bae_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">w</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div><div id="StaticAttributes">
-    <h3 class="sectionHeader">Static Attributes</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a3632c4cd50429dda0d01e053d6f55677" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3632c4cd50429dda0d01e053d6f55677&quot;)">
-        <span class="type"></span>
-        <a class="name">DIM</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a3632c4cd50429dda0d01e053d6f55677_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">const int </span><span class="name">DIM</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div><div id="Functions">
-    <h3 class="sectionHeader">Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a0e6f7d1bc21f84231571afb174293117" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a0e6f7d1bc21f84231571afb174293117&quot;)">
-        <span class="type"></span>
-        <a class="name">ofVec4f</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a0e6f7d1bc21f84231571afb174293117_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofVec4f</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofVec4f</span><span class="args">(float _scalar)</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofVec4f</span><span class="args">(float _x, float _y, float _z, float _w)</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofVec4f</span><span class="args">(const ofVec2f &amp;vec)</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofVec4f</span><span class="args">(const ofVec3f &amp;vec)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a9a6c3667280f7c5b2106d1fa08b82020" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9a6c3667280f7c5b2106d1fa08b82020&quot;)">
-        <span class="type"></span>
-        <a class="name">set</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a9a6c3667280f7c5b2106d1fa08b82020_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float _scalar)</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float _x, float _y, float _z, float _w)</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(const ofVec4f &amp;vec)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a80c0c2753d5c6980457ebcbc3ce9ac91" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a80c0c2753d5c6980457ebcbc3ce9ac91&quot;)">
-        <span class="type"></span>
-        <a class="name">getPtr</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a80c0c2753d5c6980457ebcbc3ce9ac91_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float * </span><span class="name">getPtr</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type">const float * </span><span class="name">getPtr</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a1f3321d0e6712fc18d879a74f00313f6" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1f3321d0e6712fc18d879a74f00313f6&quot;)">
-        <span class="type"></span>
-        <a class="name">operator[]</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a1f3321d0e6712fc18d879a74f00313f6_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float &amp; </span><span class="name">operator[]</span><span class="args">(int n)</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type">float </span><span class="name">operator[]</span><span class="args">(int n) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aff4072323903139109b35c1e14d4cc39" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aff4072323903139109b35c1e14d4cc39&quot;)">
-        <span class="type"></span>
-        <a class="name">operator==</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aff4072323903139109b35c1e14d4cc39_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">operator==</span><span class="args">(const ofVec4f &amp;vec) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aa6bf6b7595bee62833bd45474f376f8a" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa6bf6b7595bee62833bd45474f376f8a&quot;)">
-        <span class="type"></span>
-        <a class="name">operator!=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa6bf6b7595bee62833bd45474f376f8a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">operator!=</span><span class="args">(const ofVec4f &amp;vec) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a2bcfc49975b13b1c6cd920c5dd105120" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2bcfc49975b13b1c6cd920c5dd105120&quot;)">
-        <span class="type"></span>
-        <a class="name">match</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a2bcfc49975b13b1c6cd920c5dd105120_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">match</span><span class="args">(const ofVec4f &amp;vec, float tolerance=0.0001) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a6538a9a00a2dc33d7dfef1edd32cffa6" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6538a9a00a2dc33d7dfef1edd32cffa6&quot;)">
-        <span class="type"></span>
-        <a class="name">operator+</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a6538a9a00a2dc33d7dfef1edd32cffa6_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator+</span><span class="args">(const ofVec4f &amp;vec) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aecf77fd4b4168c45dec5481d94cd36e3" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aecf77fd4b4168c45dec5481d94cd36e3&quot;)">
-        <span class="type"></span>
-        <a class="name">operator+=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aecf77fd4b4168c45dec5481d94cd36e3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator+=</span><span class="args">(const ofVec4f &amp;vec)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a18403fdda86f8dcc7179a159ae0f14e1" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a18403fdda86f8dcc7179a159ae0f14e1&quot;)">
-        <span class="type"></span>
-        <a class="name">operator-</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a18403fdda86f8dcc7179a159ae0f14e1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator-</span><span class="args">(const float f) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ab8efb9ca9d366e6aad93f1bef4cbcb6a" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab8efb9ca9d366e6aad93f1bef4cbcb6a&quot;)">
-        <span class="type"></span>
-        <a class="name">operator-=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ab8efb9ca9d366e6aad93f1bef4cbcb6a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator-=</span><span class="args">(const float f)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aaa0f0c9b4d7b689758659c9d3bb8d84f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aaa0f0c9b4d7b689758659c9d3bb8d84f&quot;)">
-        <span class="type"></span>
-        <a class="name">operator-</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aaa0f0c9b4d7b689758659c9d3bb8d84f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator-</span><span class="args">(const ofVec4f &amp;vec) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="adc73ca3763dd6fed322c064d881e8c23" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#adc73ca3763dd6fed322c064d881e8c23&quot;)">
-        <span class="type"></span>
-        <a class="name">operator-=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="adc73ca3763dd6fed322c064d881e8c23_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator-=</span><span class="args">(const ofVec4f &amp;vec)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a0b7c2e0013a78d7435368e69534e809d" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a0b7c2e0013a78d7435368e69534e809d&quot;)">
-        <span class="type"></span>
-        <a class="name">operator+</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a0b7c2e0013a78d7435368e69534e809d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator+</span><span class="args">(const float f) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a7b1e79d778131298315d496cada97ad3" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7b1e79d778131298315d496cada97ad3&quot;)">
-        <span class="type"></span>
-        <a class="name">operator+=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a7b1e79d778131298315d496cada97ad3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator+=</span><span class="args">(const float f)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a1b947d9a8197b3cc19d7909dcb7f850f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1b947d9a8197b3cc19d7909dcb7f850f&quot;)">
-        <span class="type"></span>
-        <a class="name">operator-</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a1b947d9a8197b3cc19d7909dcb7f850f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator-</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a45fac834ed07e3f9698177d48b18807a" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a45fac834ed07e3f9698177d48b18807a&quot;)">
-        <span class="type"></span>
-        <a class="name">operator*</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a45fac834ed07e3f9698177d48b18807a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator*</span><span class="args">(const ofVec4f &amp;vec) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a426cb99901d3adf0530cb43b225aad50" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a426cb99901d3adf0530cb43b225aad50&quot;)">
-        <span class="type"></span>
-        <a class="name">operator*=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a426cb99901d3adf0530cb43b225aad50_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator*=</span><span class="args">(const ofVec4f &amp;vec)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aa21a775b91c7584a488d310881dd2be3" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa21a775b91c7584a488d310881dd2be3&quot;)">
-        <span class="type"></span>
-        <a class="name">operator*</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa21a775b91c7584a488d310881dd2be3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator*</span><span class="args">(const float f) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a7fdf1c8068347b6f70391783a6869065" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7fdf1c8068347b6f70391783a6869065&quot;)">
-        <span class="type"></span>
-        <a class="name">operator*=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a7fdf1c8068347b6f70391783a6869065_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator*=</span><span class="args">(const float f)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="af6442ec4e3e525fdc48a5d849779913d" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af6442ec4e3e525fdc48a5d849779913d&quot;)">
-        <span class="type"></span>
-        <a class="name">operator/</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="af6442ec4e3e525fdc48a5d849779913d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator/</span><span class="args">(const ofVec4f &amp;vec) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a67a97e91f6eb607fb5c73584fb65e3cd" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a67a97e91f6eb607fb5c73584fb65e3cd&quot;)">
-        <span class="type"></span>
-        <a class="name">operator/=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a67a97e91f6eb607fb5c73584fb65e3cd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator/=</span><span class="args">(const ofVec4f &amp;vec)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a1a04d592b63fbcf6bca402be0e033aa9" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1a04d592b63fbcf6bca402be0e033aa9&quot;)">
-        <span class="type"></span>
-        <a class="name">operator/</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a1a04d592b63fbcf6bca402be0e033aa9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator/</span><span class="args">(const float f) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a7263ac24cbba962a1758a895d8b6c73a" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7263ac24cbba962a1758a895d8b6c73a&quot;)">
-        <span class="type"></span>
-        <a class="name">operator/=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a7263ac24cbba962a1758a895d8b6c73a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">operator/=</span><span class="args">(const float f)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a92b84576ebb89dfa74a5f1b206089992" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a92b84576ebb89dfa74a5f1b206089992&quot;)">
-        <span class="type"></span>
-        <a class="name">getScaled</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a92b84576ebb89dfa74a5f1b206089992_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">getScaled</span><span class="args">(const float length) const </span></div><div class="memberDocumentation">
-
-<p>Returns a new <a class="el" href="ofVec4f.html">ofVec4f</a> that is the result of scaling this vector up or down so that it has the requested length. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">length</td><td>The desired length of the new <a class="el" href="ofVec4f.html">ofVec4f</a> object. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The result of scaling the this vector up or down. </dd></dl>
-
-</div></div>
-  </div><div id="a1577980e0718b63eaaa9b00039b8ecbb" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1577980e0718b63eaaa9b00039b8ecbb&quot;)">
-        <span class="type"></span>
-        <a class="name">scale</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a1577980e0718b63eaaa9b00039b8ecbb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">scale</span><span class="args">(const float length)</span></div><div class="memberDocumentation">
-
-<p>Scales this vector up or down so that it has the requested length. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">length</td><td>The desired length of the vector. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="acf7295629b24fe56614d2a36d7aa5a2c" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#acf7295629b24fe56614d2a36d7aa5a2c&quot;)">
-        <span class="type"></span>
-        <a class="name">distance</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="acf7295629b24fe56614d2a36d7aa5a2c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">distance</span><span class="args">(const ofVec4f &amp;pnt) const </span></div><div class="memberDocumentation">
-
-<p>Treats this vector and &apos;pnt&apos; as points in 4D space and calculates the distance between them. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pnt</td><td>The vector used in the distance calculation with the current vector. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The distance between the two vectors in 4D space. </dd></dl>
-
-</div></div>
-  </div><div id="acd8a82f308191fed71bb2b504f3c8153" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#acd8a82f308191fed71bb2b504f3c8153&quot;)">
-        <span class="type"></span>
-        <a class="name">squareDistance</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="acd8a82f308191fed71bb2b504f3c8153_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">squareDistance</span><span class="args">(const ofVec4f &amp;pnt) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a72fe00f9dc3ef8a29b687276a0d967ed" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a72fe00f9dc3ef8a29b687276a0d967ed&quot;)">
-        <span class="type"></span>
-        <a class="name">getInterpolated</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a72fe00f9dc3ef8a29b687276a0d967ed_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">getInterpolated</span><span class="args">(const ofVec4f &amp;pnt, float p) const </span></div><div class="memberDocumentation">
-
-<p>Performs a linear interpolation of this vector towards &apos;pnt&apos;. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pnt</td><td>The vector the interpolation will be performed on. </td></tr>
-    <tr><td class="paramname">p</td><td>The amount to move towards &apos;pnt&apos;; &apos;p&apos; is normally between 0 and 1 and where 0 means stay the original position and 1 means move all the way to &apos;pnt&apos;, but you can also have &apos;p&apos; greater than 1 overshoot &apos;pnt&apos;, or less than 0 to move backwards away from &apos;pnt&apos;. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The interpolation as an <a class="el" href="ofVec4f.html">ofVec4f</a>. </dd></dl>
-
-</div></div>
-  </div><div id="ace6ade1099e07eb2b2d8bffb36c7d3eb" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ace6ade1099e07eb2b2d8bffb36c7d3eb&quot;)">
-        <span class="type"></span>
-        <a class="name">interpolate</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ace6ade1099e07eb2b2d8bffb36c7d3eb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">interpolate</span><span class="args">(const ofVec4f &amp;pnt, float p)</span></div><div class="memberDocumentation">
-
-<p>Performs a linear interpolation of this vector towards &apos;pnt&apos;. This modifies the current vector to the interpolated value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pnt</td><td>The vector the interpolation will be performed on. </td></tr>
-    <tr><td class="paramname">p</td><td>The amount to move towards &apos;pnt&apos;; &apos;p&apos; is normally between 0 and 1 and where 0 means stay the original position and 1 means move all the way to &apos;pnt&apos;, but you can also have &apos;p&apos; greater than 1 overshoot &apos;pnt&apos;, or less than 0 to move backwards away from &apos;pnt&apos;. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="a1cfeb2672d0063eb6e490afbab9793d0" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1cfeb2672d0063eb6e490afbab9793d0&quot;)">
-        <span class="type"></span>
-        <a class="name">getMiddle</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a1cfeb2672d0063eb6e490afbab9793d0_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">getMiddle</span><span class="args">(const ofVec4f &amp;pnt) const </span></div><div class="memberDocumentation">
-
-<p>Calculates and returns the midpoint (as a vector) between this vector and &apos;pnt&apos;. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pnt</td><td>The vector used in the midpoint calculation with this vector. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The midpoint between this vector and &apos;pnt&apos; as an <a class="el" href="ofVec4f.html">ofVec4f</a>. </dd></dl>
-
-</div></div>
-  </div><div id="aa034f7b9d951a49475ce0173a2074405" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa034f7b9d951a49475ce0173a2074405&quot;)">
-        <span class="type"></span>
-        <a class="name">middle</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa034f7b9d951a49475ce0173a2074405_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">middle</span><span class="args">(const ofVec4f &amp;pnt)</span></div><div class="memberDocumentation">
-
-<p>Calculates and returns the midpoint (as a vector) between this vector and &apos;pnt&apos;. This modifies the current vector to the midpoint value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pnt</td><td>The vector used in the midpoint calculation with this vector. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The midpoint between this vector and &apos;pnt&apos; as an <a class="el" href="ofVec4f.html">ofVec4f</a>. </dd></dl>
-
-</div></div>
-  </div><div id="a530bf756668142598effd132e6eebd29" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a530bf756668142598effd132e6eebd29&quot;)">
-        <span class="type"></span>
-        <a class="name">average</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a530bf756668142598effd132e6eebd29_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">average</span><span class="args">(const ofVec4f *points, int num)</span></div><div class="memberDocumentation">
-
-<p>Sets this vector to be the average (center of gravity or centroid) of a given array of &apos;<a class="el" href="ofVec4f.html">ofVec4f</a>&apos;s. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">points</td><td>The array of &apos;<a class="el" href="ofVec4f.html">ofVec4f</a>&apos;s used in the average calculation. </td></tr>
-    <tr><td class="paramname">num</td><td>The number of <a class="el" href="ofVec4f.html">ofVec4f</a> objects in the array. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="a9a5c8cfce6b0cb25ffbc5b2db74de307" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9a5c8cfce6b0cb25ffbc5b2db74de307&quot;)">
-        <span class="type"></span>
-        <a class="name">getNormalized</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a9a5c8cfce6b0cb25ffbc5b2db74de307_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">getNormalized</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>Returns a normalized copy of this vector. </p>
-<p>Normalization means to scale the vector so that its length (magnitude) is exactly 1, at which stage all that is left is the direction. A normalized vector is usually called a unit vector, and can be used to represent a pure direction (heading).</p>
-<dl class="section return"><dt>Returns</dt><dd>The normalized copy of the current vector. </dd></dl>
-
-</div></div>
-  </div><div id="a0901c68e2a9a4095221dfb7c5de1ef87" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a0901c68e2a9a4095221dfb7c5de1ef87&quot;)">
-        <span class="type"></span>
-        <a class="name">normalize</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a0901c68e2a9a4095221dfb7c5de1ef87_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">normalize</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Normalizes the vector. This changes the current vector to its normalized value. </p>
-<p>Normalization means to scale the vector so that its length (magnitude) is exactly 1, at which stage all that is left is the direction. A normalized vector is usually called a unit vector, and can be used to represent a pure direction (heading). </p>
-
-</div></div>
-  </div><div id="a6f5f8d26e632775eefdece73d02d354a" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6f5f8d26e632775eefdece73d02d354a&quot;)">
-        <span class="type"></span>
-        <a class="name">getLimited</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a6f5f8d26e632775eefdece73d02d354a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">getLimited</span><span class="args">(float max) const </span></div><div class="memberDocumentation">
-
-<p>Returns a copy of this vector with its length (magnitude) restricted to a maximum of &apos;max&apos; units by scaling down if necessary. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">max</td><td>The maximum length of the new vector. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A copy of the current vector that is at most &apos;max&apos; units long. </dd></dl>
-
-</div></div>
-  </div><div id="a0097d55fb369a685b559c8214c5086b2" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a0097d55fb369a685b559c8214c5086b2&quot;)">
-        <span class="type"></span>
-        <a class="name">limit</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a0097d55fb369a685b559c8214c5086b2_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">limit</span><span class="args">(float max)</span></div><div class="memberDocumentation">
-
-<p>Restrict the length (magnitude) of this vector to a maximum of &apos;max&apos; units by scaling down if necessary. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">max</td><td>The maximum length of the current vector. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="abac74250789cbd6fc69c2ca37f5a29dc" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#abac74250789cbd6fc69c2ca37f5a29dc&quot;)">
-        <span class="type"></span>
-        <a class="name">length</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="abac74250789cbd6fc69c2ca37f5a29dc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">length</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>Returns the length (magnitude) of this vector. </p>
-<dl class="section return"><dt>Returns</dt><dd>The magnitude of the current vector. </dd></dl>
-
-</div></div>
-  </div><div id="a4d3b0cde8a6d349677c03c7826edbde5" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4d3b0cde8a6d349677c03c7826edbde5&quot;)">
-        <span class="type"></span>
-        <a class="name">lengthSquared</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a4d3b0cde8a6d349677c03c7826edbde5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">lengthSquared</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ad8d85bd705f13b402fef9f3f9433bd5f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad8d85bd705f13b402fef9f3f9433bd5f&quot;)">
-        <span class="type"></span>
-        <a class="name">dot</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ad8d85bd705f13b402fef9f3f9433bd5f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">dot</span><span class="args">(const ofVec4f &amp;vec) const </span></div><div class="memberDocumentation">
-
-<p>Calculates and returns the dot product of this vector with &apos;vec&apos;. </p>
-<p>Dot product (less commonly known as Euclidean inner product) expresses the angular relationship between two vectors. In other words it is a measure of how parallel two vectors are. If they are completely perpendicular the dot product is 0; if they are completely parallel their dot product is either 1 if they are pointing in the same direction, or -1 if they are pointing in opposite directions.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">vec</td><td>The vector used in the dot product calculation with this vector. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The dot product of this vector with &apos;vec&apos;.</dd></dl>
-<p>Dot Product. </p>
-
-</div></div>
-  </div><div id="aa45517bb850b6730027f896b147aaa3d" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa45517bb850b6730027f896b147aaa3d&quot;)">
-        <span class="type"></span>
-        <a class="name">rescaled</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa45517bb850b6730027f896b147aaa3d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">rescaled</span><span class="args">(const float length) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aef73185fb09653228e7e7f47b6bc69bb" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aef73185fb09653228e7e7f47b6bc69bb&quot;)">
-        <span class="type"></span>
-        <a class="name">rescale</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aef73185fb09653228e7e7f47b6bc69bb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">rescale</span><span class="args">(const float length)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a1520795684fd967171758cdea8180212" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1520795684fd967171758cdea8180212&quot;)">
-        <span class="type"></span>
-        <a class="name">normalized</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a1520795684fd967171758cdea8180212_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">normalized</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="afaa6929e3fb81779b13706bdf6c591de" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#afaa6929e3fb81779b13706bdf6c591de&quot;)">
-        <span class="type"></span>
-        <a class="name">limited</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="afaa6929e3fb81779b13706bdf6c591de_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">limited</span><span class="args">(float max) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aa1f7285a10e5d200473ddfddb60fdb15" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa1f7285a10e5d200473ddfddb60fdb15&quot;)">
-        <span class="type"></span>
-        <a class="name">distanceSquared</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa1f7285a10e5d200473ddfddb60fdb15_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">distanceSquared</span><span class="args">(const ofVec4f &amp;pnt) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ace6d99961a6dc0427d5125541b1f8017" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ace6d99961a6dc0427d5125541b1f8017&quot;)">
-        <span class="type"></span>
-        <a class="name">interpolated</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ace6d99961a6dc0427d5125541b1f8017_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">interpolated</span><span class="args">(const ofVec4f &amp;pnt, float p) const </span></div><div class="memberDocumentation">
-<p>p==0.0 results in this point, p==0.5 results in the midpoint, and p==1.0 results in pnt being returned. </p>
-
-</div></div>
-  </div><div id="a87a51bc0b2ea6d05c78cf8dca2c06d9b" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a87a51bc0b2ea6d05c78cf8dca2c06d9b&quot;)">
-        <span class="type"></span>
-        <a class="name">middled</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a87a51bc0b2ea6d05c78cf8dca2c06d9b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">middled</span><span class="args">(const ofVec4f &amp;pnt) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div><div id="Friends">
-    <h3 class="sectionHeader">Friends</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a8289bccf1213ee971abf219d35a3cd5b" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8289bccf1213ee971abf219d35a3cd5b&quot;)">
-        <span class="type"></span>
-        <a class="name">operator&lt;&lt;</a>
-        <span class="args"></span>
-        <span class="kind">friend</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a8289bccf1213ee971abf219d35a3cd5b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">friend ostream &amp; </span><span class="name">operator&lt;&lt;</span><span class="args">(ostream &amp;os, const ofVec4f &amp;vec)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a91a9875bc771f0efb76517899a35a554" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a91a9875bc771f0efb76517899a35a554&quot;)">
-        <span class="type"></span>
-        <a class="name">operator&gt;&gt;</a>
-        <span class="args"></span>
-        <span class="kind">friend</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a91a9875bc771f0efb76517899a35a554_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">friend istream &amp; </span><span class="name">operator&gt;&gt;</span><span class="args">(istream &amp;is, const ofVec4f &amp;vec)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div><div id="StaticFunctions">
-    <h3 class="sectionHeader">Static Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a770f6869e892d8f148f231eede543dc1" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a770f6869e892d8f148f231eede543dc1&quot;)">
-        <span class="type"></span>
-        <a class="name">zero</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a770f6869e892d8f148f231eede543dc1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">zero</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a8bc553181beaa78e90c050229a6f1795" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8bc553181beaa78e90c050229a6f1795&quot;)">
-        <span class="type"></span>
-        <a class="name">one</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a8bc553181beaa78e90c050229a6f1795_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec4f.html">ofVec4f</a> </span><span class="name">one</span><span class="args">()</span></div><div class="memberDocumentation">
 
 </div></div>
   </div></div>

@@ -624,9 +624,30 @@
 
     <div class="methodDescription" style="display:none" id="a2bae2b7f18753f64f087b23c694a6dcc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y, float w, float h) const </span></div><div class="memberDocumentation">
 
+<p>Draw at a position with the specified size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Draw position on the x axis. </td></tr>
+    <tr><td class="paramname">y</td><td>Draw position on the y axis. </td></tr>
+    <tr><td class="paramname">w</td><td>Draw width. </td></tr>
+    <tr><td class="paramname">h</td><td>Draw height. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implements <a class="el" href="ofBaseDraws.html#a60aab39e0163a542ef18a466633d1372">ofBaseDraws</a>.</p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y) const </span></div><div class="memberDocumentation">
+
+<p>Draw at a position at the native size. </p>
+<p>Native size is determined by <a class="el" href="ofVideoPlayer.html#a1600d2939487636b8e7829bf34f3b0e3">getWidth()</a> and <a class="el" href="ofVideoPlayer.html#a1b634c2e67c30c63e53e34358a9a161a">getHeight()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Draw position on the x axis. </td></tr>
+    <tr><td class="paramname">y</td><td>Draw position on the y axis. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="ofBaseDraws.html#ae333985db65e3ec75bf80267c5bc3fc4">ofBaseDraws</a>.</p>
 
@@ -672,6 +693,16 @@
 
     <div class="methodDescription" style="display:none" id="a79ca310c6bf6a1db4eef74594f1e2b81_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setAnchorPercent</span><span class="args">(float xPct, float yPct)</span></div><div class="memberDocumentation">
 
+<p>Set the anchor point the item is drawn around as a percentage. </p>
+<p>This can be useful if you want to rotate an image around a particular point.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xPct</td><td>Horizontal position as a percentage (0 - 1). </td></tr>
+    <tr><td class="paramname">yPct</td><td>Vertical position as a percentage (0 - 1). </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Reimplemented from <a class="el" href="ofBaseDraws.html#a3cf9dd7a898b3503ac0509574eaaeff3">ofBaseDraws</a>.</p>
 
 </div></div>
@@ -688,6 +719,16 @@
 
     <div class="methodDescription" style="display:none" id="a42462f21cc6ce547c0525928cd814e67_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setAnchorPoint</span><span class="args">(float x, float y)</span></div><div class="memberDocumentation">
 
+<p>Set the anchor point the item is drawn around in pixels. </p>
+<p>This can be useful if you want to rotate an image around a particular point.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Horizontal texture position in pixels. </td></tr>
+    <tr><td class="paramname">y</td><td>Vertical texture position in pixels. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Reimplemented from <a class="el" href="ofBaseDraws.html#aefa6eaad3d976a6c1717105ea4443e56">ofBaseDraws</a>.</p>
 
 </div></div>
@@ -703,6 +744,8 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a6e1feaa83809bdc5b8b412b77b645597_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">resetAnchor</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Reset the anchor point to (0, 0). </p>
 
 <p>Reimplemented from <a class="el" href="ofBaseDraws.html#a8e60af373caa636320b505ca07f274ae">ofBaseDraws</a>.</p>
 

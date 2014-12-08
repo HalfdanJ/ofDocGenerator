@@ -124,6 +124,9 @@ class ofThreadChannel&lt; T &gt;</h3>
     <div class="methodDescription" style="display:none" id="a81704cdc915a75e177375450841b1e97_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">tryReceive</span><span class="args">(T &amp;ret)</span></div><div class="memberDocumentation">
 <p>receives a new value in the passed parameter and returns true or returns false if there is no data available or the channel was closed </p>
 
+</div><hr><div class="memberVariant"><span class="type">bool </span><span class="name">tryReceive</span><span class="args">(T &amp;ret, int64_t timeoutMs)</span></div><div class="memberDocumentation">
+<p>receives a new value in the passed parameter and returns true or returns false if there after the specified timeout in ms there is no data available or the channel was closed </p>
+
 </div></div>
   </div><div id="af9584218dd9427c0d019ff65ff87bd0c" class="method">
     <div class="methodHeader">

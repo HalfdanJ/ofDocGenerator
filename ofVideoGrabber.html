@@ -557,9 +557,30 @@
 
     <div class="methodDescription" style="display:none" id="aeb3b98d6c2277f76dcb8b807b2539fb8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y, float w, float h) const </span></div><div class="memberDocumentation">
 
+<p>Draw at a position with the specified size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Draw position on the x axis. </td></tr>
+    <tr><td class="paramname">y</td><td>Draw position on the y axis. </td></tr>
+    <tr><td class="paramname">w</td><td>Draw width. </td></tr>
+    <tr><td class="paramname">h</td><td>Draw height. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implements <a class="el" href="ofBaseDraws.html#a60aab39e0163a542ef18a466633d1372">ofBaseDraws</a>.</p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y) const </span></div><div class="memberDocumentation">
+
+<p>Draw at a position at the native size. </p>
+<p>Native size is determined by <a class="el" href="ofVideoGrabber.html#ad587ca6905c4f41ce9e7423818e97f01" title="Get the video grabber&apos;s width. ">getWidth()</a> and <a class="el" href="ofVideoGrabber.html#a501acc21b4621f080c83dee2ce863dc4" title="Get the video grabber&apos;s height. ">getHeight()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Draw position on the x axis. </td></tr>
+    <tr><td class="paramname">y</td><td>Draw position on the y axis. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="ofBaseDraws.html#ae333985db65e3ec75bf80267c5bc3fc4">ofBaseDraws</a>.</p>
 
@@ -605,6 +626,16 @@
 
     <div class="methodDescription" style="display:none" id="a542277985c3820a48801c1502827c9b4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setAnchorPercent</span><span class="args">(float xPct, float yPct)</span></div><div class="memberDocumentation">
 
+<p>Set the anchor point the item is drawn around as a percentage. </p>
+<p>This can be useful if you want to rotate an image around a particular point.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xPct</td><td>Horizontal position as a percentage (0 - 1). </td></tr>
+    <tr><td class="paramname">yPct</td><td>Vertical position as a percentage (0 - 1). </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Reimplemented from <a class="el" href="ofBaseDraws.html#a3cf9dd7a898b3503ac0509574eaaeff3">ofBaseDraws</a>.</p>
 
 </div></div>
@@ -621,6 +652,16 @@
 
     <div class="methodDescription" style="display:none" id="ac1680df9d3d19130af0594e37b80487f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setAnchorPoint</span><span class="args">(float x, float y)</span></div><div class="memberDocumentation">
 
+<p>Set the anchor point the item is drawn around in pixels. </p>
+<p>This can be useful if you want to rotate an image around a particular point.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Horizontal texture position in pixels. </td></tr>
+    <tr><td class="paramname">y</td><td>Vertical texture position in pixels. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Reimplemented from <a class="el" href="ofBaseDraws.html#aefa6eaad3d976a6c1717105ea4443e56">ofBaseDraws</a>.</p>
 
 </div></div>
@@ -636,6 +677,8 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a6ed806a21364bca25177b2b178ecb0db_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">resetAnchor</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Reset the anchor point to (0, 0). </p>
 
 <p>Reimplemented from <a class="el" href="ofBaseDraws.html#a8e60af373caa636320b505ca07f274ae">ofBaseDraws</a>.</p>
 

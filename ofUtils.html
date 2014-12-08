@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <li class="chapter"><a href="#Elapsedtime">Elapsed time</a></li><li class="chapter"><a href="#Systemtime">System time</a></li><li class="chapter"><a href="#Datapath">Data path</a></li><li class="chapter"><a href="#Vectors">Vectors</a></li><li class="chapter"><a href="#Stringmanipulation">String manipulation</a></li><li class="chapter"><a href="#Stringconversion">String conversion</a></li><li class="chapter"><a href="#Numberconversion">Number conversion</a></li><li class="chapter"><a href="#openFrameworksversion">openFrameworks version</a></li><li class="chapter"><a href="#Framesaving">Frame saving</a></li><li class="chapter"><a href="#System">System</a></li></ul>
+        <li class="chapter"><a href="#ElapsedTime">Elapsed Time</a></li><li class="chapter"><a href="#Systemtime">System time</a></li><li class="chapter"><a href="#DataPath">Data Path</a></li><li class="chapter"><a href="#Vectors">Vectors</a></li><li class="chapter"><a href="#StringManipulation">String Manipulation</a></li><li class="chapter"><a href="#Stringconversion">String conversion</a></li><li class="chapter"><a href="#Numberconversion">Number conversion</a></li><li class="chapter"><a href="#openFrameworksversion">openFrameworks version</a></li><li class="chapter"><a href="#Framesaving">Frame saving</a></li><li class="chapter"><a href="#System">System</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -68,8 +68,8 @@
       <h1 class="classTitle">ofUtils<small>file</small></h1>
     </div>
     <div class="classDescription"></div>
-    <div class="classMethods"><div id="Elapsedtime">
-    <h3 class="sectionHeader">Elapsed time</h3>
+    <div class="classMethods"><div id="ElapsedTime">
+    <h3 class="sectionHeader">Elapsed Time</h3>
     <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="aea0bc115291cf9119ea1b9f5ac70ca56" class="method">
     <div class="methodHeader">
@@ -85,7 +85,7 @@
     <div class="methodDescription" style="display:none" id="aea0bc115291cf9119ea1b9f5ac70ca56_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">ofResetElapsedTimeCounter</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Reset the elapsed time counter. </p>
-<p>This method resets the times returned by <a class="el" href="ofUtils.html#afe74f75f42101a88aa6b91f684484c78" title="Return the elapsed time in seconds. ">ofGetElapsedTimef()</a>, <a class="el" href="ofUtils.html#a4db11980dc3c16e67a5c1e47353fa0a0" title="Return the elapsed time in milliseconds. ">ofGetElapsedTimeMillis()</a> and <a class="el" href="ofUtils.html#aca893d16029cf789079b1bb01d63afb6" title="Return the elapsed time in microseconds. ">ofGetElapsedTimeMicros()</a> to zero.</p>
+<p>This method resets the times returned by <a class="el" href="ofUtils.html#afe74f75f42101a88aa6b91f684484c78" title="Get the elapsed time in seconds. ">ofGetElapsedTimef()</a>, <a class="el" href="ofUtils.html#a4db11980dc3c16e67a5c1e47353fa0a0" title="Get the elapsed time in milliseconds. ">ofGetElapsedTimeMillis()</a> and <a class="el" href="ofUtils.html#aca893d16029cf789079b1bb01d63afb6" title="Get the elapsed time in microseconds. ">ofGetElapsedTimeMicros()</a> to zero.</p>
 <dl class="section note"><dt>Note</dt><dd>This is called on the first frame during app startup. </dd></dl>
 
 </div></div>
@@ -102,7 +102,7 @@
 
     <div class="methodDescription" style="display:none" id="afe74f75f42101a88aa6b91f684484c78_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">ofGetElapsedTimef</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>Return the elapsed time in seconds. </p>
+<p>Get the elapsed time in seconds. </p>
 <p>This returns the elapsed time since <a class="el" href="ofUtils.html#aea0bc115291cf9119ea1b9f5ac70ca56" title="Reset the elapsed time counter. ">ofResetElapsedTimeCounter()</a> was called. Usually <a class="el" href="ofUtils.html#aea0bc115291cf9119ea1b9f5ac70ca56" title="Reset the elapsed time counter. ">ofResetElapsedTimeCounter()</a> is called automatically once during program startup.</p>
 <dl class="section return"><dt>Returns</dt><dd>the floating point elapsed time in seconds. </dd></dl>
 
@@ -120,7 +120,7 @@
 
     <div class="methodDescription" style="display:none" id="a4db11980dc3c16e67a5c1e47353fa0a0_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">unsigned long long </span><span class="name">ofGetElapsedTimeMillis</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>Return the elapsed time in milliseconds. </p>
+<p>Get the elapsed time in milliseconds. </p>
 <p>This returns the elapsed time since <a class="el" href="ofUtils.html#aea0bc115291cf9119ea1b9f5ac70ca56" title="Reset the elapsed time counter. ">ofResetElapsedTimeCounter()</a> was called. Usually <a class="el" href="ofUtils.html#aea0bc115291cf9119ea1b9f5ac70ca56" title="Reset the elapsed time counter. ">ofResetElapsedTimeCounter()</a> is called automatically once during program startup.</p>
 <dl class="section return"><dt>Returns</dt><dd>the elapsed time in milliseconds (1000 milliseconds = 1 second). </dd></dl>
 
@@ -138,7 +138,7 @@
 
     <div class="methodDescription" style="display:none" id="aca893d16029cf789079b1bb01d63afb6_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">unsigned long long </span><span class="name">ofGetElapsedTimeMicros</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>Return the elapsed time in microseconds. </p>
+<p>Get the elapsed time in microseconds. </p>
 <p>This returns the elapsed time since <a class="el" href="ofUtils.html#aea0bc115291cf9119ea1b9f5ac70ca56" title="Reset the elapsed time counter. ">ofResetElapsedTimeCounter()</a> was called. Usually <a class="el" href="ofUtils.html#aea0bc115291cf9119ea1b9f5ac70ca56" title="Reset the elapsed time counter. ">ofResetElapsedTimeCounter()</a> is called automatically upon program startup.</p>
 <dl class="section return"><dt>Returns</dt><dd>the elapsed time in microseconds (1000000 microseconds = 1 second). </dd></dl>
 
@@ -228,8 +228,9 @@
 
     <div class="methodDescription" style="display:none" id="adf108cb5b8cbd5cf5b70aeb472d390df_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">unsigned int </span><span class="name">ofGetUnixTime</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>Get the number of seconds since 1970. </p>
-<dl class="section return"><dt>Returns</dt><dd>the number of seconds since 1970 (aka epoch time). </dd></dl>
+<p>Get the number of seconds since Midnight, January 1, 1970. </p>
+<p>Resolution is in seconds.</p>
+<dl class="section return"><dt>Returns</dt><dd>the number of seconds since Midnight, January 1, 1970 (epoch time). </dd></dl>
 
 </div></div>
   </div><div id="a5401277d4f55a5fb2ce9d06b882ffd6a" class="method">
@@ -279,7 +280,13 @@
 
     <div class="methodDescription" style="display:none" id="a58fb7f5c12bf9d507f09da1a41041312_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">ofSleepMillis</span><span class="args">(int millis)</span></div><div class="memberDocumentation">
 
-<p>Sleeps the current thread for the specified amount of ms. </p>
+<p>Sleeps the current thread for the specified amount of milliseconds. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">millis</td><td>The number of millseconds to sleep. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div></div>
   </div><div id="a5b56fd313fa71344f9040a636289f586" class="method">
@@ -297,7 +304,7 @@
 
 <p>Formats the current system time according to the given format. </p>
 <p>The default timestamp format is &quot;%Y-%m-%d-%H-%M-%S-%i&quot; (e.g. 2011-01-15-18-29-35-299).</p>
-<dl class="section return"><dt>Returns</dt><dd>the current time with the given format. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the current time as a string with the default format. </dd></dl>
 
 </div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofGetTimestampString</span><span class="args">(const string &#xD7;tampFormat)</span></div><div class="memberDocumentation">
 
@@ -336,7 +343,7 @@
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the formatted timestamp as a std::string. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the formatted timestamp as a string. </dd></dl>
 
 </div></div>
   </div><div id="a5e8e9c0b83e712a9a69c6a50f21a3950" class="method">
@@ -409,8 +416,8 @@
 
 </div></div>
   </div></div>
-  </div><div id="Datapath">
-    <h3 class="sectionHeader">Data path</h3>
+  </div><div id="DataPath">
+    <h3 class="sectionHeader">Data Path</h3>
     <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a5dd69e44833bd031c2c776804d535146" class="method">
     <div class="methodHeader">
@@ -426,7 +433,7 @@
     <div class="methodDescription" style="display:none" id="a5dd69e44833bd031c2c776804d535146_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">ofEnableDataPath</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Enable the use of the data path. </p>
-<p>This function causes <a class="el" href="ofUtils.html#ad323a280c0604e6d7eea98d7047d9a1e" title="Convert a given path to a path relative to the location of the data/ folder. ">ofToDataPath()</a> to respect the relative path set with <a class="el" href="ofUtils.html#a02916303aa128f885443701a9c2c72e4" title="Set the relative path to the data/ folder from the executable. ">ofSetDataPathRoot()</a>. This is enabled by default. </p>
+<p>This function causes <a class="el" href="ofUtils.html#ad323a280c0604e6d7eea98d7047d9a1e" title="Make a path relative to the location of the data/ folder. ">ofToDataPath()</a> to respect the relative path set with <a class="el" href="ofUtils.html#a02916303aa128f885443701a9c2c72e4" title="Set the relative path to the data/ folder from the executable. ">ofSetDataPathRoot()</a>. This is enabled by default. </p>
 
 </div></div>
   </div><div id="abc29e22b96ebfb8d5c7588181469cad9" class="method">
@@ -443,7 +450,7 @@
     <div class="methodDescription" style="display:none" id="abc29e22b96ebfb8d5c7588181469cad9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">ofDisableDataPath</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Disable the use of the data path. </p>
-<p>This function causes <a class="el" href="ofUtils.html#ad323a280c0604e6d7eea98d7047d9a1e" title="Convert a given path to a path relative to the location of the data/ folder. ">ofToDataPath()</a> to ignore the relative path set with <a class="el" href="ofUtils.html#a02916303aa128f885443701a9c2c72e4" title="Set the relative path to the data/ folder from the executable. ">ofSetDataPathRoot()</a>. </p>
+<p>This function causes <a class="el" href="ofUtils.html#ad323a280c0604e6d7eea98d7047d9a1e" title="Make a path relative to the location of the data/ folder. ">ofToDataPath()</a> to ignore the relative path set with <a class="el" href="ofUtils.html#a02916303aa128f885443701a9c2c72e4" title="Set the relative path to the data/ folder from the executable. ">ofSetDataPathRoot()</a>. </p>
 
 </div></div>
   </div><div id="ad323a280c0604e6d7eea98d7047d9a1e" class="method">
@@ -459,16 +466,17 @@
 
     <div class="methodDescription" style="display:none" id="ad323a280c0604e6d7eea98d7047d9a1e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">string </span><span class="name">ofToDataPath</span><span class="args">(const string &amp;path, bool absolute=false)</span></div><div class="memberDocumentation">
 
-<p>Convert a given path to a path relative to the location of the data/ folder. </p>
-<p>This funtion returns path unchanged if <a class="el" href="ofUtils.html#abc29e22b96ebfb8d5c7588181469cad9" title="Disable the use of the data path. ">ofDisableDataPath()</a> was called first. Users might want absolute paths for non-openFrameworks functions that are unaware of the data/ path&apos;s location.</p>
+<p>Make a path relative to the location of the data/ folder. </p>
+<p>This funtion returns path unchanged if <a class="el" href="ofUtils.html#abc29e22b96ebfb8d5c7588181469cad9" title="Disable the use of the data path. ">ofDisableDataPath()</a> was called first.</p>
+<p>By default, a relative path is returned. Users requiring absolute paths for (e.g. for non-openFrameworks functions), can specify that an absolute path be returned.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>The path to prepend. </td></tr>
+    <tr><td class="paramname">path</td><td>The path to make relative to the data/ folder. </td></tr>
     <tr><td class="paramname">absolute</td><td>Set to true to return an absolute path. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the converted path. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the new path, unless paths were disabled with <a class="el" href="ofUtils.html#abc29e22b96ebfb8d5c7588181469cad9" title="Disable the use of the data path. ">ofDisableDataPath()</a>. </dd></dl>
 
 </div></div>
   </div><div id="a1d2223607b65d45e548b331223e7277f" class="method">
@@ -485,6 +493,7 @@
     <div class="methodDescription" style="display:none" id="a1d2223607b65d45e548b331223e7277f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">ofSetWorkingDirectoryToDefault</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Reset the working directory to the platform default. </p>
+<p>The default working directory is usually in a data/ folder next to the openFrameworks application. </p>
 
 </div></div>
   </div><div id="a02916303aa128f885443701a9c2c72e4" class="method">
@@ -501,6 +510,7 @@
     <div class="methodDescription" style="display:none" id="a02916303aa128f885443701a9c2c72e4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">ofSetDataPathRoot</span><span class="args">(const string &amp;root)</span></div><div class="memberDocumentation">
 
 <p>Set the relative path to the data/ folder from the executable. </p>
+<p>This method can be useful when users want to embed the data as a resource folder within an *.app bundle on OSX or perhaps work from a shared data folder in the user&apos;s Documents directory.</p>
 <dl class="section warning"><dt>Warning</dt><dd>The provided path must have a trailing slash (/). </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -528,12 +538,19 @@
     <div class="methodDescription" style="display:none" id="aa6d24b46978740bfa122a77d52af6346_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">ofRandomize</span><span class="args">(vector&lt; T &gt; &amp;values)</span></div><div class="memberDocumentation">
 
 <p>Randomly reorder the values in a vector. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>the type contained by the vector. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">values</td><td>The vector of values to modify. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://www.cplusplus.com/reference/algorithm/random_shuffle/">http://www.cplusplus.com/reference/algorithm/random_shuffle/</a> </dd></dl>
 
 </div></div>
   </div><div id="aad01f059019f70fdb4c1ef7bb31c5fd4" class="method">
@@ -550,13 +567,13 @@
     <div class="methodDescription" style="display:none" id="aad01f059019f70fdb4c1ef7bb31c5fd4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">ofRemove</span><span class="args">(vector&lt; T &gt; &amp;values, BoolFunction shouldErase)</span></div><div class="memberDocumentation">
 
 <p>Conditionally remove values from a vector. </p>
-<p>Values are removed if, when passed to the BoolFunction, the BoolFunction function returns true. The give BoolFunction can be a custom function or a built-in function.</p>
-<p>Example of a custom function to remove odd numbers from a vector&lt;int&gt; of integers:</p>
+<p>Values are removed if, when passed to the BoolFunction, the BoolFunction function returns true. The given BoolFunction can be a custom function or a built-in function.</p>
+<p>Example of a custom function to remove odd numbers from a std::vector&lt;int&gt; of integers:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">bool</span> IsOdd(<span class="keywordtype">int</span> i) {</div>
 <div class="line">    <span class="keywordflow">return</span> ((i % 2) == 1);</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>To call the function, one might use:</p>
-<div class="fragment"><div class="line">vector&lt;int&gt; myInts;</div>
+<div class="fragment"><div class="line">std::vector&lt;int&gt; myInts;</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Fill the vector with integers.</span></div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; ++i)</div>
@@ -577,7 +594,7 @@
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">values</td><td>The vector of values to modify. </td></tr>
-    <tr><td class="paramname">shouldErase</td><td>a boolean function as described above. </td></tr>
+    <tr><td class="paramname">shouldErase</td><td>A boolean function as described above. </td></tr>
   </table>
   </dd>
 </dl>
@@ -617,7 +634,7 @@
 
 <p>Sort a vector of values into an order defined by a comparator. </p>
 <p>Example of a custom function to sort descending of integers:</p>
-<div class="fragment"><div class="line"><span class="keywordtype">bool</span> sortDescending(<span class="keywordtype">int</span> i,<span class="keywordtype">int</span> j)</div>
+<div class="fragment"><div class="line"><span class="keywordtype">bool</span> sortDescending(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j)</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">return</span> (j &lt; i);</div>
 <div class="line">}</div>
@@ -678,6 +695,7 @@
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true the index of the first target value found. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://www.cplusplus.com/reference/iterator/distance/">http://www.cplusplus.com/reference/iterator/distance/</a> </dd></dl>
 
 </div></div>
   </div><div id="ad039a52955251f83c2d7c7c4f8920573" class="method">
@@ -707,12 +725,12 @@
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true iff at least one value equal to the target value is found. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if at least one value equal to the target value is found. </dd></dl>
 
 </div></div>
   </div></div>
-  </div><div id="Stringmanipulation">
-    <h3 class="sectionHeader">String manipulation</h3>
+  </div><div id="StringManipulation">
+    <h3 class="sectionHeader">String Manipulation</h3>
     <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="ab145673fc8b58076ed7a55eb26911a08" class="method">
     <div class="methodHeader">
@@ -727,22 +745,23 @@
 
     <div class="methodDescription" style="display:none" id="ab145673fc8b58076ed7a55eb26911a08_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">vector&lt; string &gt; </span><span class="name">ofSplitString</span><span class="args">(const string &amp;source, const string &amp;delimiter, bool ignoreEmpty=false, bool trim=false)</span></div><div class="memberDocumentation">
 
-<p>Splits a given string using delimiter and returns the resulting parts of the string as vector. </p>
-<p>&#xA0; A useful application is to use delimiter <code>&quot; &quot;</code>: </p>
+<p>Splits a string using a delimiter. </p>
+<p>&#xA0; ofSplitString splits a string and returns the collection of string tokens inside of a std::vector&lt;std::string&gt;.</p>
+<p>A useful application is to use delimiter <code>&quot; &quot;</code>:</p>
 <div class="fragment"><div class="line">result = <a class="code" href="of_utils_8cpp.html#a98dd60cdd03981911102688dd6f1662d">ofSplitString</a>(<span class="stringliteral">&quot;of rocks&quot;</span>, <span class="stringliteral">&quot; &quot;</span>);</div>
 <div class="line"><span class="comment">// result[0] = &quot;of&quot;</span></div>
 <div class="line"><span class="comment">// result[1] = &quot;rocks&quot;</span></div>
-</div><!-- fragment --><p> Like this a big string can be &quot;cut&quot; and turned it into a vector of words.</p>
+</div><!-- fragment --><p>Like this a big string can be &quot;cut&quot; and turned it into a collection of words. The user can also ignore empty tokens. Empty tokens occur when a there are multiple delimiters in a row (e.g. &quot;of,rocks,,!&quot;). The user can also &quot;trim&quot; the tokens. This will remove whitespace from before and after each token. This might be useful when a delimted string is padded with with spaces (e.g. &quot;of    ,   rocks   ,!&quot;).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">source</td><td>The string to split </td></tr>
-    <tr><td class="paramname">delimiter</td><td>The string to split on </td></tr>
-    <tr><td class="paramname">ignoreEmpty</td><td>Set to true to remove empty results </td></tr>
-    <tr><td class="paramname">trim</td><td>Set to true to trim the resulting strings </td></tr>
+    <tr><td class="paramname">source</td><td>The string to split. </td></tr>
+    <tr><td class="paramname">delimiter</td><td>The delimiter string. </td></tr>
+    <tr><td class="paramname">ignoreEmpty</td><td>Set to true to remove empty tokens. </td></tr>
+    <tr><td class="paramname">trim</td><td>Set to true to trim the resulting tokens. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A vector of string split on the delimiter </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector of strings split with the delimiter. </dd></dl>
 
 </div></div>
   </div><div id="a81c81f7ad8939f65f767f9e57fe622e0" class="method">
@@ -758,11 +777,11 @@
 
     <div class="methodDescription" style="display:none" id="a81c81f7ad8939f65f767f9e57fe622e0_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">string </span><span class="name">ofJoinString</span><span class="args">(const vector&lt; string &gt; &amp;stringElements, const string &amp;delimiter)</span></div><div class="memberDocumentation">
 
-<p>Join a vector of string together to one string. </p>
+<p>Join a vector of strings together into one string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stringElements</td><td>The vector of strings to join </td></tr>
-    <tr><td class="paramname">delimiter</td><td>The delimiter to put betweeen each string </td></tr>
+    <tr><td class="paramname">stringElements</td><td>The vector of strings to join. </td></tr>
+    <tr><td class="paramname">delimiter</td><td>The delimiter to put betweeen each string. </td></tr>
   </table>
   </dd>
 </dl>
@@ -781,12 +800,13 @@
 
     <div class="methodDescription" style="display:none" id="a26fd9920684a6e6c397cfe3a1fee2aea_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">ofStringReplace</span><span class="args">(string &amp;input, const string &amp;searchStr, const string &amp;replaceStr)</span></div><div class="memberDocumentation">
 
-<p>Replace occurrences of a string with another string. </p>
+<p>Replace all occurrences of a string with another string. </p>
+<dl class="section note"><dt>Note</dt><dd>The input string is passed by reference, so it will be modified. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">input</td><td>The string to run the replacement on </td></tr>
-    <tr><td class="paramname">searchStr</td><td>The string to be replaced </td></tr>
-    <tr><td class="paramname">replaceStr</td><td>The string to put in place </td></tr>
+    <tr><td class="paramname">input</td><td>The string to run the replacement on. </td></tr>
+    <tr><td class="paramname">searchStr</td><td>The string to be replaced. </td></tr>
+    <tr><td class="paramname">replaceStr</td><td>The string to put in place. </td></tr>
   </table>
   </dd>
 </dl>
@@ -807,14 +827,14 @@
 
 <p>Check if string contains another string. </p>
 <p>Example: </p>
-<div class="fragment"><div class="line"><span class="keywordtype">string</span> haystack = <span class="stringliteral">&quot;foobar&quot;</span>;</div>
-<div class="line"><a class="code" href="ofLog.html">ofLog</a>() &lt;&lt; <a class="code" href="of_utils_8cpp.html#a63097e6fed943b5aba952cdf193f5f7d">ofIsStringInString</a>(haystack, <span class="stringliteral">&quot;foo&quot;</span>); <span class="comment">// outputs 1</span></div>
-<div class="line"><a class="code" href="ofLog.html">ofLog</a>() &lt;&lt; <a class="code" href="of_utils_8cpp.html#a63097e6fed943b5aba952cdf193f5f7d">ofIsStringInString</a>(haystack,<span class="stringliteral">&quot;bar&quot;</span>); <span class="comment">// outputs 1</span></div>
-<div class="line"><a class="code" href="ofLog.html">ofLog</a>() &lt;&lt; <a class="code" href="of_utils_8cpp.html#a63097e6fed943b5aba952cdf193f5f7d">ofIsStringInString</a>(haystack, <span class="stringliteral">&quot;something else&quot;</span>); <span class="comment">// outputs 0</span></div>
+<div class="fragment"><div class="line">std::string haystack = <span class="stringliteral">&quot;foobar&quot;</span>;</div>
+<div class="line"><a class="code" href="ofLog.html">ofLog</a>() &lt;&lt; <a class="code" href="of_utils_8cpp.html#a63097e6fed943b5aba952cdf193f5f7d">ofIsStringInString</a>(haystack, <span class="stringliteral">&quot;foo&quot;</span>); <span class="comment">// Outputs 1.</span></div>
+<div class="line"><a class="code" href="ofLog.html">ofLog</a>() &lt;&lt; <a class="code" href="of_utils_8cpp.html#a63097e6fed943b5aba952cdf193f5f7d">ofIsStringInString</a>(haystack,<span class="stringliteral">&quot;bar&quot;</span>); <span class="comment">// Outputs 1.</span></div>
+<div class="line"><a class="code" href="ofLog.html">ofLog</a>() &lt;&lt; <a class="code" href="of_utils_8cpp.html#a63097e6fed943b5aba952cdf193f5f7d">ofIsStringInString</a>(haystack, <span class="stringliteral">&quot;something else&quot;</span>); <span class="comment">// Outputs 0.</span></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">haystack</td><td>The string to check for occurrence in </td></tr>
-    <tr><td class="paramname">needle</td><td>The string to check for </td></tr>
+    <tr><td class="paramname">haystack</td><td>The string to check for occurrence in. </td></tr>
+    <tr><td class="paramname">needle</td><td>The string to check for. </td></tr>
   </table>
   </dd>
 </dl>
@@ -836,8 +856,8 @@
 <p>Check how many times a string contains another string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">haystack</td><td>The string to check for occurrence in </td></tr>
-    <tr><td class="paramname">needle</td><td>The string to check for </td></tr>
+    <tr><td class="paramname">haystack</td><td>The string to check for occurrence in . </td></tr>
+    <tr><td class="paramname">needle</td><td>The string to check for. </td></tr>
   </table>
   </dd>
 </dl>
@@ -856,7 +876,18 @@
 
     <div class="methodDescription" style="display:none" id="a92c303a15a7649f987b8dce1e5eec26c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">string </span><span class="name">ofToLower</span><span class="args">(const string &amp;src)</span></div><div class="memberDocumentation">
 
-<p>Converts all characters in the string to lowercase. </p>
+<p>Converts all characters in a string to lowercase. </p>
+<p>This function expects a UTF-8 encoded multi-byte string to be passed. Resulting strings will be returned as UTF-8 encoded multi-byte strings.</p>
+<div class="fragment"><div class="line">std::string enthusiasticGreeting = <span class="stringliteral">&quot;HELLO, WORLD!&quot;</span>;</div>
+<div class="line">std::string politeGreeting = <a class="code" href="of_utils_8cpp.html#a92c303a15a7649f987b8dce1e5eec26c">ofToLower</a>(enthusiasticGreeting);</div>
+<div class="line"><a class="code" href="ofLog.html">ofLog</a>() &lt;&lt; politeGreeting; <span class="comment">// Returns &quot;hello, world!&quot;</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>The UTF-8 encoded string to convert to lowercase. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the UTF-8 encoded string as all lowercase characters. </dd></dl>
 
 </div></div>
   </div><div id="ac90c47cb2710aa90def41ddef75d5adf" class="method">
@@ -873,10 +904,18 @@
     <div class="methodDescription" style="display:none" id="ac90c47cb2710aa90def41ddef75d5adf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">string </span><span class="name">ofToUpper</span><span class="args">(const string &amp;src)</span></div><div class="memberDocumentation">
 
 <p>Converts all characters in the string to uppercase. </p>
-<div class="fragment"><div class="line"><span class="keywordtype">string</span> politeGreeting = <span class="stringliteral">&quot;Hello, World!&quot;</span>;</div>
-<div class="line"><span class="keywordtype">string</span> enthusiasticGreeting = <a class="code" href="of_utils_8cpp.html#ac90c47cb2710aa90def41ddef75d5adf">ofToUpper</a>(politeGreeting); </div>
-<div class="line"><a class="code" href="ofLog.html">ofLog</a>() &lt;&lt; enthusiasticGreeting; <span class="comment">// returns &quot;HELLO, WORLD!&quot;</span></div>
-</div><!-- fragment --> 
+<p>This function expects a UTF-8 encoded multi-byte string to be passed. Resulting strings will be returned as UTF-8 encoded multi-byte strings.</p>
+<div class="fragment"><div class="line">std::string politeGreeting = <span class="stringliteral">&quot;Hello, World!&quot;</span>;</div>
+<div class="line">std::string enthusiasticGreeting = <a class="code" href="of_utils_8cpp.html#ac90c47cb2710aa90def41ddef75d5adf">ofToUpper</a>(politeGreeting);</div>
+<div class="line"><a class="code" href="ofLog.html">ofLog</a>() &lt;&lt; enthusiasticGreeting; <span class="comment">// Returns &quot;HELLO, WORLD!&quot;</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>The UTF-8 encoded string to convert to uppercase. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the UTF-8 encoded string as all uppercase characters. </dd></dl>
+
 </div></div>
   </div><div id="a666d0d4cc9f1781386de7a678618b35e" class="method">
     <div class="methodHeader">
@@ -891,7 +930,26 @@
 
     <div class="methodDescription" style="display:none" id="a666d0d4cc9f1781386de7a678618b35e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">string </span><span class="name">ofVAArgsToString</span><span class="args">(const char *format,...)</span></div><div class="memberDocumentation">
 
+<p>Convert a variable length argument to a string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>a printf-style format string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A string representation of the argument list. </dd></dl>
+
 </div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofVAArgsToString</span><span class="args">(const char *format, va_list args)</span></div><div class="memberDocumentation">
+
+<p>Convert a variable length argument to a string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>A printf-style format string. </td></tr>
+    <tr><td class="paramname">args</td><td>A variable argument list. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A string representation of the argument list. </dd></dl>
 
 </div></div>
   </div></div>
@@ -912,29 +970,102 @@
     <div class="methodDescription" style="display:none" id="a31a70a3bfddaf5bd90084e59188f9d59_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">string </span><span class="name">ofToString</span><span class="args">(const T &amp;value)</span></div><div class="memberDocumentation">
 
 <p>Convert a value to a string. </p>
+<p>ofToString does its best to convert any value to a string. If the data type implements a stream &lt;&lt; operator, then it will be converted.</p>
 <p>Example: </p>
-<div class="fragment"><div class="line"><span class="keywordtype">string</span> str = <span class="stringliteral">&quot;framerate is &quot;</span>;                       </div>
-<div class="line">str += <a class="code" href="of_pixels_8cpp.html#a0bdb3162be2ff8c1541a42f3c8f5ac1c">ofToString</a>(<a class="code" href="ofAppRunner.html#a01080ea3b88e20894224b28caa46fd25">ofGetFrameRate</a>())+<span class="stringliteral">&quot;fps&quot;</span>; </div>
-<div class="line"><span class="comment">// returns something like &quot;framerate is 60 fps&quot;</span></div>
-</div><!-- fragment --> 
+<div class="fragment"><div class="line">std::string str = <span class="stringliteral">&quot;framerate is &quot;</span>;</div>
+<div class="line">str += <a class="code" href="of_pixels_8cpp.html#a0bdb3162be2ff8c1541a42f3c8f5ac1c">ofToString</a>(<a class="code" href="ofAppRunner.html#a01080ea3b88e20894224b28caa46fd25">ofGetFrameRate</a>()) + <span class="stringliteral">&quot; fps&quot;</span>;</div>
+<div class="line"><span class="comment">// The string now containes something like &quot;framerate is 60 fps&quot;.</span></div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The data type of the value to convert to a string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to convert to a string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A string representing the value or an empty string on failure. </dd></dl>
+
 </div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofToString</span><span class="args">(const T &amp;value, int precision)</span></div><div class="memberDocumentation">
 
 <p>Convert a value to a string with a specific precision. </p>
-<p>Like sprintf &quot;%4f&quot; format, in this example precision=4 </p>
+<p>Like sprintf &quot;%4f&quot; format, in this example precision=4</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The data type of the value to convert to a string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to convert to a string. </td></tr>
+    <tr><td class="paramname">precision</td><td>The precision to use when converting to a string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The string representation of the value. </dd></dl>
 
 </div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofToString</span><span class="args">(const T &amp;value, int width, char fill)</span></div><div class="memberDocumentation">
 
 <p>Convert a value to a string with a specific width and fill. </p>
-<p>Like sprintf &quot;% 4d&quot; or &quot;% 4f&quot; format, in this example width=4, fill=&apos; &apos; </p>
+<p>Like sprintf &quot;% 4d&quot; or &quot;% 4f&quot; format, in this example width=4, fill=&apos; &apos;</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The data type of the value to convert to a string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to convert to a string. </td></tr>
+    <tr><td class="paramname">width</td><td>The width of the value to use when converting to a string. </td></tr>
+    <tr><td class="paramname">fill</td><td>The character to use when padding the converted string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The string representation of the value. </dd></dl>
 
 </div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofToString</span><span class="args">(const T &amp;value, int precision, int width, char fill)</span></div><div class="memberDocumentation">
 
 <p>Convert a value to a string with a specific precision, width and filll. </p>
-<p>Like sprintf &quot;%04.2d&quot; or &quot;%04.2f&quot; format, in this example precision=2, width=4, fill=&apos;0&apos; </p>
+<p>Like sprintf &quot;%04.2d&quot; or &quot;%04.2f&quot; format, in this example precision=2, width=4, fill=&apos;0&apos;</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The data type of the value to convert to a string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to convert to a string. </td></tr>
+    <tr><td class="paramname">precision</td><td>The precision to use when converting to a string. </td></tr>
+    <tr><td class="paramname">width</td><td>The width of the value to use when converting to a string. </td></tr>
+    <tr><td class="paramname">fill</td><td>The character to use when padding the converted string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The string representation of the value. </dd></dl>
 
 </div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofToString</span><span class="args">(const vector&lt; T &gt; &amp;values)</span></div><div class="memberDocumentation">
 
-<p>Convert a vector of values to a string. </p>
+<p>Convert a vector of values to a comma-delimited string. </p>
+<p>This method will take any vector of values and output a list of the values as a comma-delimited string.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The data type held by the vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">values</td><td>The vector of values to be converted to a string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a comma-delimited string representation of the intput values. </dd></dl>
 
 </div></div>
   </div><div id="aa65109e95b2ea4dd339cdfb819265e40" class="method">
@@ -950,9 +1081,82 @@
 
     <div class="methodDescription" style="display:none" id="aa65109e95b2ea4dd339cdfb819265e40_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">T </span><span class="name">ofFromString</span><span class="args">(const string &amp;value)</span></div><div class="memberDocumentation">
 
+<p>Convert a string represetnation to another type. </p>
+<p>Convert a string represetnation to another string.</p>
+<p>Often, this method will be used to convert a string to a numerical type.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The target data type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The string value to convert to type T. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the string converted to the target data type T. </dd></dl>
+
 </div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofFromString</span><span class="args">(const string &amp;value)</span></div><div class="memberDocumentation">
 
+<p>Convert a string represetnation to another string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The string value to convert to another string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the string converted to another string.</dd></dl>
+<p>Convert a string represetnation to another string.</p>
+<p>Often, this method will be used to convert a string to a numerical type.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The target data type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The string value to convert to type T. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the string converted to the target data type T. </dd></dl>
+
 </div><hr><div class="memberVariant"><span class="type">const char * </span><span class="name">ofFromString</span><span class="args">(const string &amp;value)</span></div><div class="memberDocumentation">
+
+<p>Convert a string represetnation to another string. </p>
+<p>Equivalent to calling the <code>.c_str()</code> on a std::string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The string value to convert to another string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the string converted to a c-style string.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The string value to convert to another string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the string converted to another string.</dd></dl>
+<p>Convert a string represetnation to another string.</p>
+<p>Often, this method will be used to convert a string to a numerical type.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The target data type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The string value to convert to type T. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the string converted to the target data type T. </dd></dl>
 
 </div></div>
   </div></div>
@@ -972,7 +1176,15 @@
 
     <div class="methodDescription" style="display:none" id="a02ff3334da0e43587cc19190433fa77b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">ofToInt</span><span class="args">(const string &amp;intString)</span></div><div class="memberDocumentation">
 
-<p>Converts a string representation of an int (e.g., <code>&quot;3&quot;</code>) to an actual int. </p>
+<p>Convert a string to an integer. </p>
+<p>Converts a <code>std::string</code> representation of an int (e.g., <code>&quot;3&quot;</code>) to an actual <code>int</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">The</td><td>string representation of the integer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the integer represented by the string or 0 on failure. </dd></dl>
 
 </div></div>
   </div><div id="a9b92372035fbb1582c8d8a4fc0bcb132" class="method">
@@ -988,7 +1200,15 @@
 
     <div class="methodDescription" style="display:none" id="a9b92372035fbb1582c8d8a4fc0bcb132_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">ofToFloat</span><span class="args">(const string &amp;floatString)</span></div><div class="memberDocumentation">
 
-<p>Converts a string representation of a float (e.g., <code>&quot;3.14&quot;</code>) to an actual float. </p>
+<p>Convert a string to a float. </p>
+<p>Converts a std::string representation of a float (e.g., <code>&quot;3.14&quot;</code>) to an actual <code>float</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">The</td><td>string representation of the float. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the float represented by the string or 0 on failure. </dd></dl>
 
 </div></div>
   </div><div id="a508566c98064b13201ba05760d71d110" class="method">
@@ -1004,7 +1224,15 @@
 
     <div class="methodDescription" style="display:none" id="a508566c98064b13201ba05760d71d110_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">double </span><span class="name">ofToDouble</span><span class="args">(const string &amp;doubleString)</span></div><div class="memberDocumentation">
 
-<p>Converts a string representation of a double (e.g., <code>&quot;3.14&quot;</code>) to an actual double. </p>
+<p>Convert a string to a double. </p>
+<p>Converts a std::string representation of a double (e.g., <code>&quot;3.14&quot;</code>) to an actual <code>double</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">The</td><td>string representation of the double. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the double represented by the string or 0 on failure. </dd></dl>
 
 </div></div>
   </div><div id="acd94e88f1393f0a00e4e6a3c85d88433" class="method">
@@ -1020,7 +1248,15 @@
 
     <div class="methodDescription" style="display:none" id="acd94e88f1393f0a00e4e6a3c85d88433_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">ofToBool</span><span class="args">(const string &amp;boolString)</span></div><div class="memberDocumentation">
 
-<p>Converts a string representation of a boolean (e.g., <code>&quot;TRUE&quot;</code>) to an actual bool using a case-insensitive comparison against the words <code>&quot;true&quot;</code> and <code>&quot;false&quot;</code>. </p>
+<p>Convert a string to a boolean. </p>
+<p>Converts a std::string representation of a boolean (e.g., <code>&quot;TRUE&quot;</code>) to an actual <code>bool</code> using a case-insensitive comparison against the words <code>&quot;true&quot;</code> and <code>&quot;false&quot;</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">The</td><td>string representation of the boolean. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the boolean represented by the string or 0 on failure. </dd></dl>
 
 </div></div>
   </div><div id="aaaebd3cb263c8e3da496a9c5e243e7fa" class="method">
@@ -1036,15 +1272,45 @@
 
     <div class="methodDescription" style="display:none" id="aaaebd3cb263c8e3da496a9c5e243e7fa_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">string </span><span class="name">ofToHex</span><span class="args">(const T &amp;value)</span></div><div class="memberDocumentation">
 
-<p>Converts any value to its equivalent hexadecimal representation corresponding to the way it is stored in memory. </p>
+<p>Converts any value to its equivalent hexadecimal representation. </p>
+<p>The hexadecimal representation corresponds to the way a number is stored in memory.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The data type of the value to convert to a hexadecimal string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to convert to a hexadecimal string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the hexadecimal string representation of the value. </dd></dl>
 
 </div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofToHex</span><span class="args">(const string &amp;value)</span></div><div class="memberDocumentation">
 
-<p>Converts a string (e.g., <code>&quot;abc&quot;</code>) to its equivalent hexadecimal representation (e.g., <code>&quot;616263&quot;</code>). </p>
+<p>Convert a string to a hexadecimal string. </p>
+<p>Converts a string (e.g., <code>&quot;abc&quot;</code>) to its equivalent hexadecimal representation (e.g., <code>&quot;616263&quot;</code>).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to convert to a hexadecimal string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a hexadecimal string. </dd></dl>
 
 </div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofToHex</span><span class="args">(const char *value)</span></div><div class="memberDocumentation">
 
-<p>Converts a c-style string (e.g., <code>&quot;abc&quot;</code>) to its equivalent hexadecimal representation (e.g., <code>&quot;616263&quot;</code>). </p>
+<p>Convert a c-style string to a hexadecimal string. </p>
+<p>Converts a string (e.g., <code>&quot;abc&quot;</code>) to its equivalent hexadecimal representation (e.g., <code>&quot;616263&quot;</code>).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value to convert to a hexadecimal string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a hexadecimal string. </dd></dl>
 
 </div></div>
   </div><div id="a15c08362f3a3a08b564a03f8198e0c91" class="method">
@@ -1060,7 +1326,15 @@
 
     <div class="methodDescription" style="display:none" id="a15c08362f3a3a08b564a03f8198e0c91_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">ofHexToInt</span><span class="args">(const string &amp;intHexString)</span></div><div class="memberDocumentation">
 
-<p>Converts a hexadecimal representation of an int (little-endian, 32-bit, e.g., <code>&quot;0xbadf00d&quot;</code> or <code>&quot;badf00d&quot;</code>) to an actual int. </p>
+<p>Convert a string representing an integer in hexadecimal to a string. </p>
+<p>Converts a hexadecimal representation of an int (little-endian, 32-bit, e.g., <code>&quot;0xbadf00d&quot;</code> or <code>&quot;badf00d&quot;</code>) to an actual <code>int</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">intHexString</td><td>The string representing an integer in hexadecimal. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the integer represented by the string. </dd></dl>
 
 </div></div>
   </div><div id="af10a159a72a7ffe2e21a7f0e524d2647" class="method">
@@ -1076,7 +1350,15 @@
 
     <div class="methodDescription" style="display:none" id="af10a159a72a7ffe2e21a7f0e524d2647_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">char </span><span class="name">ofHexToChar</span><span class="args">(const string &amp;charHexString)</span></div><div class="memberDocumentation">
 
-<p>Converts a hexadecimal representation of an char (e.g., <code>&quot;61&quot;</code>) to an actual char (e.g., <code>a</code>). </p>
+<p>Convert a string representing an char in hexadecimal to a char. </p>
+<p>Converts a hexadecimal representation of an char (e.g., <code>&quot;61&quot;</code>) to an actual <code>char</code> (e.g., <code>a</code>).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">charHexString</td><td>The string representing an char in hexadecimal. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the char represented by the string. </dd></dl>
 
 </div></div>
   </div><div id="a1c2be299902ddf28f9f3880562137ab2" class="method">
@@ -1092,7 +1374,15 @@
 
     <div class="methodDescription" style="display:none" id="a1c2be299902ddf28f9f3880562137ab2_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">ofHexToFloat</span><span class="args">(const string &amp;floatHexString)</span></div><div class="memberDocumentation">
 
-<p>Converts a hexadecimal representation of an float (little-endian, 32-bit IEEE 754, e.g., <code>&quot;4060000000000000&quot;</code>) to an actual float (e.g., <code>128.f</code>). </p>
+<p>Convert a string representing an float in hexadecimal to a float. </p>
+<p>Converts a hexadecimal representation of an float (little-endian, 32-bit IEEE 754, e.g., <code>&quot;4060000000000000&quot;</code>) to an actual float (e.g., <code>128.f</code>).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">floatHexString</td><td>The string representing an float in hexadecimal. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the float represented by the string. </dd></dl>
 
 </div></div>
   </div><div id="afcdc71a74c9249e72d93097701fed3ec" class="method">
@@ -1108,7 +1398,15 @@
 
     <div class="methodDescription" style="display:none" id="afcdc71a74c9249e72d93097701fed3ec_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">string </span><span class="name">ofHexToString</span><span class="args">(const string &amp;stringHexString)</span></div><div class="memberDocumentation">
 
-<p>Converts a hexadecimal representation of an string (e.g., <code>&quot;61626364656667&quot;</code>) to an actual string (<code>&quot;abcdefg&quot;</code>) </p>
+<p>Convert a string representing an string in hexadecimal to a string. </p>
+<p>Converts a hexadecimal representation of an string (e.g., <code>&quot;61626364656667&quot;</code>) to an actual string (<code>&quot;abcdefg&quot;</code>).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stringHexString</td><td>The string representing an string in hexadecimal. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the string represented by the string. </dd></dl>
 
 </div></div>
   </div><div id="a4b1ca14d38d0fd9f224de0d9c7c4df80" class="method">
@@ -1124,7 +1422,16 @@
 
     <div class="methodDescription" style="display:none" id="a4b1ca14d38d0fd9f224de0d9c7c4df80_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">char </span><span class="name">ofToChar</span><span class="args">(const string &amp;charString)</span></div><div class="memberDocumentation">
 
-<p>Converts a string representation of a single char (e.g., <code>&quot;c&quot;</code>) to an actual char. </p>
+<p>Convert a string representation of a char to a actual char. </p>
+<p>Converts a string representation of a single char (e.g., <code>&quot;c&quot;</code>) to an actual <code>char</code>.</p>
+<dl class="section note"><dt>Note</dt><dd>Multi-byte chars and multi-char strings are not supported.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">charString</td><td>The char string to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The string as a char or 0 on failure. </dd></dl>
 
 </div></div>
   </div><div id="a8faf52968694f975c39c45fab82aa0bc" class="method">
@@ -1140,15 +1447,45 @@
 
     <div class="methodDescription" style="display:none" id="a8faf52968694f975c39c45fab82aa0bc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">string </span><span class="name">ofToBinary</span><span class="args">(const T &amp;value)</span></div><div class="memberDocumentation">
 
-<p>Converts any datatype value to a string of only 1s and 0s corresponding to the way value is stored in memory. </p>
+<p>Converts any datatype value to a string of only 1s and 0s. </p>
+<p>The corresponding string of 1s and 0s corresponds to the way value is stored in memory.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The data type of the value to convert to a binary string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The data to convert to a binary string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a binary string. </dd></dl>
 
 </div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofToBinary</span><span class="args">(const string &amp;value)</span></div><div class="memberDocumentation">
 
-<p>Converts a string value to a string of only 1s and 0s corresponding to the way value is stored in memory. </p>
+<p>Converts a string value to a string of only 1s and 0s. </p>
+<p>The corresponding string of 1s and 0s corresponds to the way value is stored in memory.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The string to convert to a binary string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a binary string. </dd></dl>
 
 </div><hr><div class="memberVariant"><span class="type">string </span><span class="name">ofToBinary</span><span class="args">(const char *value)</span></div><div class="memberDocumentation">
 
-<p>Converts any C-style string value to a string of only 1s and 0s corresponding to the way value is stored in memory. </p>
+<p>Converts a c-style string to a string of only 1s and 0s. </p>
+<p>The corresponding string of 1s and 0s corresponds to the way value is stored in memory.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The c-style string to convert to a binary string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a binary string. </dd></dl>
 
 </div></div>
   </div><div id="ae3860664864159916164ed9ab1608339" class="method">
@@ -1164,7 +1501,10 @@
 
     <div class="methodDescription" style="display:none" id="ae3860664864159916164ed9ab1608339_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">ofBinaryToInt</span><span class="args">(const string &amp;value)</span></div><div class="memberDocumentation">
 
-<p>Interprets a string consisting only of 1s and 0s as an int (little-endian, 32-bit), and returns the corresponding int value. </p>
+<p>Convert a binary string to an int. </p>
+<p>Interprets a string consisting only of 1s and 0s as an int (little-endian, 32-bit), and returns the corresponding int value.</p>
+<p>The binary string. </p>
+<dl class="section return"><dt>Returns</dt><dd>the integer represented by the string or 0 on failure. </dd></dl>
 
 </div></div>
   </div><div id="ade60b17beae5e41cd433975998fef037" class="method">
@@ -1180,7 +1520,10 @@
 
     <div class="methodDescription" style="display:none" id="ade60b17beae5e41cd433975998fef037_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">char </span><span class="name">ofBinaryToChar</span><span class="args">(const string &amp;value)</span></div><div class="memberDocumentation">
 
-<p>Interprets a string consisting only of 1s and 0s as a char, and returns the corresponding char value. </p>
+<p>Convert a binary string to an char. </p>
+<p>Interprets a string consisting only of 1s and 0s as an char and returns the corresponding int value.</p>
+<p>The binary string. </p>
+<dl class="section return"><dt>Returns</dt><dd>the char represented by the string or 0 on failure. </dd></dl>
 
 </div></div>
   </div><div id="a3399487cdb9e2808b3fc380d7c5645dc" class="method">
@@ -1196,7 +1539,10 @@
 
     <div class="methodDescription" style="display:none" id="a3399487cdb9e2808b3fc380d7c5645dc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">ofBinaryToFloat</span><span class="args">(const string &amp;value)</span></div><div class="memberDocumentation">
 
-<p>Interprets a string consisting only of 1s and 0s as a float (little-endian, 32-bit IEEE 754), and returns the corresponding float value. </p>
+<p>Convert a binary string to a float. </p>
+<p>Interprets a string consisting only of 1s and 0s as an a float (little-endian, 32-bit IEEE 754), and returns the corresponding float value.</p>
+<p>The binary string. </p>
+<dl class="section return"><dt>Returns</dt><dd>the float represented by the string or 0 on failure. </dd></dl>
 
 </div></div>
   </div><div id="ad930367d2a3bd2514f0a6d5516fd855e" class="method">
@@ -1212,7 +1558,10 @@
 
     <div class="methodDescription" style="display:none" id="ad930367d2a3bd2514f0a6d5516fd855e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">string </span><span class="name">ofBinaryToString</span><span class="args">(const string &amp;value)</span></div><div class="memberDocumentation">
 
-<p>Interprets a string consisting only of 1s and 0s as 8-bit ASCII characters, and returns the corresponding string. </p>
+<p>Convert a binary string to ASCII characters. </p>
+<p>Interprets a string consisting only of 1s and 0s as 8-bit ASCII characters and returns the corresponding string.</p>
+<p>The binary string. </p>
+<dl class="section return"><dt>Returns</dt><dd>the ASCII string represented by the string. </dd></dl>
 
 </div></div>
   </div></div>
@@ -1232,7 +1581,10 @@
 
     <div class="methodDescription" style="display:none" id="ace6bb3ddbbe185712808047277dab043_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">string </span><span class="name">ofGetVersionInfo</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>Get the current version of openFrameworks with dot delimeter. For example <code>0.9.0</code>. </p>
+<p>Get the current version of openFrameworks as a string. </p>
+<p>openFrameworks uses the semantic versioning system.</p>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://semver.org/">http://semver.org/</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The string representation of the version (e.g. <code>0.9.0</code>). </dd></dl>
 
 </div></div>
   </div><div id="a6bcb56c4f4d807b22afea5b178f65bdc" class="method">
@@ -1248,7 +1600,10 @@
 
     <div class="methodDescription" style="display:none" id="a6bcb56c4f4d807b22afea5b178f65bdc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">unsigned int </span><span class="name">ofGetVersionMajor</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>Get the major of the current version number of openFrameworks (the first digit) </p>
+<p>Get the major version number of openFrameworks. </p>
+<p>openFrameworks uses the semantic versioning system.</p>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://semver.org/">http://semver.org/</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The major version number. </dd></dl>
 
 </div></div>
   </div><div id="aacd9f2aaab3c32a0ef2fa0389ad80c58" class="method">
@@ -1264,7 +1619,10 @@
 
     <div class="methodDescription" style="display:none" id="aacd9f2aaab3c32a0ef2fa0389ad80c58_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">unsigned int </span><span class="name">ofGetVersionMinor</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>Get the minor of the current version number of openFrameworks (the middle digit) </p>
+<p>Get the minor version number of openFrameworks. </p>
+<p>openFrameworks uses the semantic versioning system.</p>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://semver.org/">http://semver.org/</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The minor version number. </dd></dl>
 
 </div></div>
   </div><div id="ad7fce5c6b942eb31e468bf3431c1b343" class="method">
@@ -1280,7 +1638,10 @@
 
     <div class="methodDescription" style="display:none" id="ad7fce5c6b942eb31e468bf3431c1b343_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">unsigned int </span><span class="name">ofGetVersionPatch</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>Get the patch number of the current version number of openFrameworks (the last digit) </p>
+<p>Get the patch version number of openFrameworks. </p>
+<p>openFrameworks uses the semantic versioning system.</p>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://semver.org/">http://semver.org/</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The patch version number. </dd></dl>
 
 </div></div>
   </div></div>
@@ -1300,12 +1661,13 @@
 
     <div class="methodDescription" style="display:none" id="a02cd3d33fdbe6ce4757563de082c5e04_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">ofSaveScreen</span><span class="args">(const string &amp;filename)</span></div><div class="memberDocumentation">
 
-<p>Saves the current screen image into a given file. </p>
+<p>Saves the current screen image to a file on disk. </p>
 <p>Example: </p>
-<div class="fragment"><div class="line"><a class="code" href="of_utils_8cpp.html#a02cd3d33fdbe6ce4757563de082c5e04">ofSaveScreen</a>(<span class="stringliteral">&quot;screen1.png&quot;</span>); <span class="comment">// Will save screen1.png in the /data folder</span></div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+<div class="fragment"><div class="line"><a class="code" href="of_utils_8cpp.html#a02cd3d33fdbe6ce4757563de082c5e04">ofSaveScreen</a>(<span class="stringliteral">&quot;screen.png&quot;</span>); <span class="comment">// Will save screen.png in the /data folder.</span></div>
+</div><!-- fragment --><p>The output file type will be deduced from the given file name.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">filename</td><td>The filename to save the image in </td></tr>
+    <tr><td class="paramname">filename</td><td>The image output file. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1325,6 +1687,13 @@
     <div class="methodDescription" style="display:none" id="aab3fb9d1d4dbd94705f8853d4288dbf0_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">ofSaveFrame</span><span class="args">(bool bUseViewport=false)</span></div><div class="memberDocumentation">
 
 <p>Saves the current frame as a PNG image. </p>
+<p>The PNG image will be named according to an internal counter in sequence. The count will be restarted each time the program is restarted.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bUseViewport</td><td>Set to true if the current viewport should be used. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div></div>
   </div><div id="af1f49b16d155ddad73e8f36e242463be" class="method">
@@ -1339,6 +1708,15 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="af1f49b16d155ddad73e8f36e242463be_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">ofSaveViewport</span><span class="args">(const string &amp;filename)</span></div><div class="memberDocumentation">
+
+<p>Saves the current viewport as an image. </p>
+<p>The output file type will be deduced from the given file name.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>The image output file. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div></div>
   </div></div>
@@ -1400,6 +1778,7 @@
     <div class="methodDescription" style="display:none" id="ab790b10d5c2913ddb8d29b7e272f24d3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1a5d9ba7e6cff71339c6f437f75e2678b5">ofTargetPlatform</a> </span><span class="name">ofGetTargetPlatform</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Get the target platform of the current system. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current ofTargetPlatform. </dd></dl>
 
 </div></div>
   </div></div>
