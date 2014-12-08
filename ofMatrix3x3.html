@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <span class="class">ofMatrix3x3</span><li class="chapter"><a href="#PublicAttributes">Public Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#Friends">Friends</a></li></ul>
+        <span class="class">ofMatrix3x3</span><li class="chapter"><a href="#Constructor">Constructor</a></li><li class="chapter"><a href="#Matrixaccess">Matrix access</a></li><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#Operators">Operators</a></li><li class="chapter"><a href="#Attributes">Attributes</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -73,10 +73,339 @@
     <div class="classHeader">
       <h1 class="classTitle">ofMatrix3x3<small>class</small></h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>Credits: Code adopted from Lode Vandevenne <a href="http://student.kuleuven.be/~m0216922/CG/">http://student.kuleuven.be/~m0216922/CG/</a> </p>
+    <div class="classDescription"><div class="textblock"><p>A 3x3 Matrix. </p>
+<p>The layout is like this: </p>
+<pre class="fragment">[ a b c ]
+[ d e f ]
+[ g h i ]  </pre> </div></div>
+    <div class="classMethods"><div id="Constructor">
+    <h3 class="sectionHeader">Constructor</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="aa39ac80972bf70055f8a7f7c35e6be4e" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa39ac80972bf70055f8a7f7c35e6be4e&quot;)">
+        <span class="type"></span>
+        <a class="name">ofMatrix3x3</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aa39ac80972bf70055f8a7f7c35e6be4e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofMatrix3x3</span><span class="args">(float _a=0.0, float _b=0.0, float _c=0.0, float _d=0.0, float _e=0.0, float _f=0.0, float _g=0.0, float _h=0.0, float _i=0.0)</span></div><div class="memberDocumentation">
+
 </div></div>
-    <div class="classMethods"><div id="PublicAttributes">
-    <h3 class="sectionHeader">Public Attributes</h3>
+  </div></div>
+  </div><div id="Matrixaccess">
+    <h3 class="sectionHeader">Matrix access</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a2d3575fb8d483aec537feb0c53716856" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2d3575fb8d483aec537feb0c53716856&quot;)">
+        <span class="type"></span>
+        <a class="name">set</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a2d3575fb8d483aec537feb0c53716856_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float _a, float _b, float _c, float _d, float _e, float _f, float _g, float _h, float _i)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="ae5bcdcb54eca1001086d3e763e3cd01d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae5bcdcb54eca1001086d3e763e3cd01d&quot;)">
+        <span class="type"></span>
+        <a class="name">operator[]</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ae5bcdcb54eca1001086d3e763e3cd01d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float &amp; </span><span class="name">operator[]</span><span class="args">(const int &amp;index)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div></div>
+  </div><div id="Functions">
+    <h3 class="sectionHeader">Functions</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="ab6a97a494d36b7839f7476caeb4b3de4" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab6a97a494d36b7839f7476caeb4b3de4&quot;)">
+        <span class="type"></span>
+        <a class="name">transpose</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ab6a97a494d36b7839f7476caeb4b3de4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">transpose</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Transpose the matrix. </p>
+<p>This changes the matrix. </p>
+<pre class="fragment">[ a b c ]T    [ a d g ]
+[ d e f ]  =  [ b e h ]
+[ g h i ]     [ c f i ]  </pre> 
+</div><hr><div class="memberVariant"><span class="type"><a href="ofMatrix3x3.html">ofMatrix3x3</a> </span><span class="name">transpose</span><span class="args">(const ofMatrix3x3 &amp;A)</span></div><div class="memberDocumentation">
+
+<p>Transpose without changing the matrix. Uses the &quot;swap&quot; method with additions and subtractions to swap the elements that aren&apos;t on the main diagonal. </p>
+<dl class="section return"><dt>Returns</dt><dd>transposed matrix. </dd></dl>
+
+</div></div>
+  </div><div id="a9033ce258911253884a6876ef19f2f24" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9033ce258911253884a6876ef19f2f24&quot;)">
+        <span class="type"></span>
+        <a class="name">determinant</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a9033ce258911253884a6876ef19f2f24_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">determinant</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Find the determinant of the matrix. </p>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://mathworld.wolfram.com/Determinant.html">Wolfram explanation</a> </dd></dl>
+
+</div><hr><div class="memberVariant"><span class="type">float </span><span class="name">determinant</span><span class="args">(const ofMatrix3x3 &amp;A)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a491fd57f5c610f54464bef4424398979" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a491fd57f5c610f54464bef4424398979&quot;)">
+        <span class="type"></span>
+        <a class="name">inverse</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a491fd57f5c610f54464bef4424398979_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMatrix3x3.html">ofMatrix3x3</a> </span><span class="name">inverse</span><span class="args">(const ofMatrix3x3 &amp;A)</span></div><div class="memberDocumentation">
+
+<p>Inverse of a 3x3 matrix. </p>
+<p>the inverse is the adjoint divided through the determinant find the matrix of minors (minor = determinant of 2x2 matrix of the 2 rows/colums current element is NOT in) turn them in cofactors (= change some of the signs) find the adjoint by transposing the matrix of cofactors divide this through the determinant to get the inverse</p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofMatrix3x3.html#a6769d224cf5ac39ca3d2d96decdca0a5">invert()</a>; </dd></dl>
+
+</div></div>
+  </div><div id="a6769d224cf5ac39ca3d2d96decdca0a5" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6769d224cf5ac39ca3d2d96decdca0a5&quot;)">
+        <span class="type"></span>
+        <a class="name">invert</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a6769d224cf5ac39ca3d2d96decdca0a5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">invert</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="ab631a19db59ea167d18bbe4cd4a5e5fe" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab631a19db59ea167d18bbe4cd4a5e5fe&quot;)">
+        <span class="type"></span>
+        <a class="name">entrywiseTimes</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ab631a19db59ea167d18bbe4cd4a5e5fe_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMatrix3x3.html">ofMatrix3x3</a> </span><span class="name">entrywiseTimes</span><span class="args">(const ofMatrix3x3 &amp;A)</span></div><div class="memberDocumentation">
+
+<p>Multiply a matrix by a matrix entry by entry (i.e. a*a, b*b, c*c...) </p>
+<p>This is referred to as an entrywise, Hadamard, or Schur product </p>
+
+</div></div>
+  </div></div>
+  </div><div id="Operators">
+    <h3 class="sectionHeader">Operators</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="ae671d83fa87bea0a606b3e2076afaa38" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae671d83fa87bea0a606b3e2076afaa38&quot;)">
+        <span class="type"></span>
+        <a class="name">operator+</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ae671d83fa87bea0a606b3e2076afaa38_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMatrix3x3.html">ofMatrix3x3</a> </span><span class="name">operator+</span><span class="args">(const ofMatrix3x3 &amp;B)</span></div><div class="memberDocumentation">
+
+<p>Add two matrices. </p>
+
+</div></div>
+  </div><div id="af6f2911e272cf537159886be3a54a2d5" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af6f2911e272cf537159886be3a54a2d5&quot;)">
+        <span class="type"></span>
+        <a class="name">operator+=</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="af6f2911e272cf537159886be3a54a2d5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">operator+=</span><span class="args">(const ofMatrix3x3 &amp;B)</span></div><div class="memberDocumentation">
+
+<p>Add matrix to existing matrix. </p>
+
+</div></div>
+  </div><div id="a6c5c067925a3d87bdf30e0ed85b86613" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6c5c067925a3d87bdf30e0ed85b86613&quot;)">
+        <span class="type"></span>
+        <a class="name">operator-</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a6c5c067925a3d87bdf30e0ed85b86613_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMatrix3x3.html">ofMatrix3x3</a> </span><span class="name">operator-</span><span class="args">(const ofMatrix3x3 &amp;B)</span></div><div class="memberDocumentation">
+
+<p>Subtract two matrices. </p>
+
+</div></div>
+  </div><div id="a59f42dee005190722b8e54355836ca74" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a59f42dee005190722b8e54355836ca74&quot;)">
+        <span class="type"></span>
+        <a class="name">operator-=</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a59f42dee005190722b8e54355836ca74_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">operator-=</span><span class="args">(const ofMatrix3x3 &amp;B)</span></div><div class="memberDocumentation">
+
+<p>Subtract matrix from existing matrix. </p>
+
+</div></div>
+  </div><div id="a14ed2bf93542c3d540365443df6ae95a" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a14ed2bf93542c3d540365443df6ae95a&quot;)">
+        <span class="type"></span>
+        <a class="name">operator*</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a14ed2bf93542c3d540365443df6ae95a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMatrix3x3.html">ofMatrix3x3</a> </span><span class="name">operator*</span><span class="args">(float scalar)</span></div><div class="memberDocumentation">
+
+<p>Multiply a matrix with a scalar. </p>
+
+</div></div>
+  </div><div id="a86c70609d64198aa25d9d24bdd437610" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a86c70609d64198aa25d9d24bdd437610&quot;)">
+        <span class="type"></span>
+        <a class="name">operator*=</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a86c70609d64198aa25d9d24bdd437610_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">operator*=</span><span class="args">(const ofMatrix3x3 &amp;B)</span></div><div class="memberDocumentation">
+
+<p>Multiply a matrix by a matrix this = this*B (in that order) </p>
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">operator*=</span><span class="args">(float scalar)</span></div><div class="memberDocumentation">
+
+<p>Multiply a matrix by a scalar (multiples all entries by scalar) </p>
+
+</div></div>
+  </div><div id="a5a7b30409c9121080666229a17f3eba5" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5a7b30409c9121080666229a17f3eba5&quot;)">
+        <span class="type"></span>
+        <a class="name">operator*</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a5a7b30409c9121080666229a17f3eba5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMatrix3x3.html">ofMatrix3x3</a> </span><span class="name">operator*</span><span class="args">(const ofMatrix3x3 &amp;B)</span></div><div class="memberDocumentation">
+
+<p>Multiply a 3x3 matrix with a 3x3 matrix. </p>
+
+</div></div>
+  </div><div id="adcf2270544195d4f525ceb741b9319d5" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#adcf2270544195d4f525ceb741b9319d5&quot;)">
+        <span class="type"></span>
+        <a class="name">operator/</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="adcf2270544195d4f525ceb741b9319d5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMatrix3x3.html">ofMatrix3x3</a> </span><span class="name">operator/</span><span class="args">(float scalar)</span></div><div class="memberDocumentation">
+
+<p>Divide a matrix through a scalar. </p>
+
+</div></div>
+  </div><div id="ac4ad50cae99696ab3514fa2ab44c94be" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac4ad50cae99696ab3514fa2ab44c94be&quot;)">
+        <span class="type"></span>
+        <a class="name">operator/=</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ac4ad50cae99696ab3514fa2ab44c94be_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">operator/=</span><span class="args">(const ofMatrix3x3 &amp;B)</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">operator/=</span><span class="args">(float scalar)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a3a751851e70f7d08933a8bb74ae79b7d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3a751851e70f7d08933a8bb74ae79b7d&quot;)">
+        <span class="type"></span>
+        <a class="name">operator&lt;&lt;</a>
+        <span class="args"></span>
+        <span class="kind">friend</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a3a751851e70f7d08933a8bb74ae79b7d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">friend ostream &amp; </span><span class="name">operator&lt;&lt;</span><span class="args">(ostream &amp;os, const ofMatrix3x3 &amp;M)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="abf46313577c6b9cd10201245f1e46f87" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#abf46313577c6b9cd10201245f1e46f87&quot;)">
+        <span class="type"></span>
+        <a class="name">operator&gt;&gt;</a>
+        <span class="args"></span>
+        <span class="kind">friend</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="abf46313577c6b9cd10201245f1e46f87_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">friend istream &amp; </span><span class="name">operator&gt;&gt;</span><span class="args">(istream &amp;is, ofMatrix3x3 &amp;M)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div></div>
+  </div><div id="Attributes">
+    <h3 class="sectionHeader">Attributes</h3>
     <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="afe58dfb5d5e8b1c2c27e552e7895bbc1" class="method">
     <div class="methodHeader">
@@ -90,7 +419,6 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="afe58dfb5d5e8b1c2c27e552e7895bbc1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">a</span><span class="args"></span></div><div class="memberDocumentation">
-<p>[ a b c ] [ d e f ] [ g h i ] </p>
 
 </div></div>
   </div><div id="af5e92e450e2c886f009351fe55937ec7" class="method">
@@ -203,313 +531,6 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="ae59b727db6bd3fce4cc55c019f1605f3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">i</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div><div id="PublicFunctions">
-    <h3 class="sectionHeader">Public Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="aa39ac80972bf70055f8a7f7c35e6be4e" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa39ac80972bf70055f8a7f7c35e6be4e&quot;)">
-        <span class="type"></span>
-        <a class="name">ofMatrix3x3</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa39ac80972bf70055f8a7f7c35e6be4e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofMatrix3x3</span><span class="args">(float _a=0.0, float _b=0.0, float _c=0.0, float _d=0.0, float _e=0.0, float _f=0.0, float _g=0.0, float _h=0.0, float _i=0.0)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a2d3575fb8d483aec537feb0c53716856" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2d3575fb8d483aec537feb0c53716856&quot;)">
-        <span class="type"></span>
-        <a class="name">set</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a2d3575fb8d483aec537feb0c53716856_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float _a, float _b, float _c, float _d, float _e, float _f, float _g, float _h, float _i)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ae5bcdcb54eca1001086d3e763e3cd01d" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae5bcdcb54eca1001086d3e763e3cd01d&quot;)">
-        <span class="type"></span>
-        <a class="name">operator[]</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ae5bcdcb54eca1001086d3e763e3cd01d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float &amp; </span><span class="name">operator[]</span><span class="args">(const int &amp;index)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ab6a97a494d36b7839f7476caeb4b3de4" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab6a97a494d36b7839f7476caeb4b3de4&quot;)">
-        <span class="type"></span>
-        <a class="name">transpose</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ab6a97a494d36b7839f7476caeb4b3de4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">transpose</span><span class="args">()</span></div><div class="memberDocumentation">
-<p>Transpose: This changes the matrix. [ a b c ]T [ a d g ] [ d e f ] = [ b e h ] [ g h i ] [ c f i ] </p>
-
-</div><hr><div class="memberVariant"><span class="type"><a href="ofMatrix3x3.html">ofMatrix3x3</a> </span><span class="name">transpose</span><span class="args">(const ofMatrix3x3 &amp;A)</span></div><div class="memberDocumentation">
-<p>Transpose without changing the matrix. Uses the &quot;swap&quot; method with additions and subtractions to swap the elements that aren&apos;t on the main diagonal. </p>
-<dl class="section return"><dt>Returns</dt><dd>transposed matrix. </dd></dl>
-
-</div></div>
-  </div><div id="a9033ce258911253884a6876ef19f2f24" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9033ce258911253884a6876ef19f2f24&quot;)">
-        <span class="type"></span>
-        <a class="name">determinant</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a9033ce258911253884a6876ef19f2f24_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">determinant</span><span class="args">() const </span></div><div class="memberDocumentation">
-<p>Determinant: <a href="http://mathworld.wolfram.com/Determinant.html">http://mathworld.wolfram.com/Determinant.html</a> </p>
-
-</div><hr><div class="memberVariant"><span class="type">float </span><span class="name">determinant</span><span class="args">(const ofMatrix3x3 &amp;A)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a6769d224cf5ac39ca3d2d96decdca0a5" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6769d224cf5ac39ca3d2d96decdca0a5&quot;)">
-        <span class="type"></span>
-        <a class="name">invert</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a6769d224cf5ac39ca3d2d96decdca0a5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">invert</span><span class="args">()</span></div><div class="memberDocumentation">
-<p>Inverse of a 3x3 matrix the inverse is the adjoint divided through the determinant find the matrix of minors (minor = determinant of 2x2 matrix of the 2 rows/colums current element is NOT in) turn them in cofactors (= change some of the signs) find the adjoint by transposing the matrix of cofactors divide this through the determinant to get the inverse </p>
-
-</div></div>
-  </div><div id="a491fd57f5c610f54464bef4424398979" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a491fd57f5c610f54464bef4424398979&quot;)">
-        <span class="type"></span>
-        <a class="name">inverse</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a491fd57f5c610f54464bef4424398979_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMatrix3x3.html">ofMatrix3x3</a> </span><span class="name">inverse</span><span class="args">(const ofMatrix3x3 &amp;A)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ae671d83fa87bea0a606b3e2076afaa38" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae671d83fa87bea0a606b3e2076afaa38&quot;)">
-        <span class="type"></span>
-        <a class="name">operator+</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ae671d83fa87bea0a606b3e2076afaa38_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMatrix3x3.html">ofMatrix3x3</a> </span><span class="name">operator+</span><span class="args">(const ofMatrix3x3 &amp;B)</span></div><div class="memberDocumentation">
-<p>Add two matrices </p>
-
-</div></div>
-  </div><div id="af6f2911e272cf537159886be3a54a2d5" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af6f2911e272cf537159886be3a54a2d5&quot;)">
-        <span class="type"></span>
-        <a class="name">operator+=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="af6f2911e272cf537159886be3a54a2d5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">operator+=</span><span class="args">(const ofMatrix3x3 &amp;B)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a6c5c067925a3d87bdf30e0ed85b86613" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6c5c067925a3d87bdf30e0ed85b86613&quot;)">
-        <span class="type"></span>
-        <a class="name">operator-</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a6c5c067925a3d87bdf30e0ed85b86613_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMatrix3x3.html">ofMatrix3x3</a> </span><span class="name">operator-</span><span class="args">(const ofMatrix3x3 &amp;B)</span></div><div class="memberDocumentation">
-<p>Subtract two matrices </p>
-
-</div></div>
-  </div><div id="a59f42dee005190722b8e54355836ca74" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a59f42dee005190722b8e54355836ca74&quot;)">
-        <span class="type"></span>
-        <a class="name">operator-=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a59f42dee005190722b8e54355836ca74_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">operator-=</span><span class="args">(const ofMatrix3x3 &amp;B)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a14ed2bf93542c3d540365443df6ae95a" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a14ed2bf93542c3d540365443df6ae95a&quot;)">
-        <span class="type"></span>
-        <a class="name">operator*</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a14ed2bf93542c3d540365443df6ae95a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMatrix3x3.html">ofMatrix3x3</a> </span><span class="name">operator*</span><span class="args">(float scalar)</span></div><div class="memberDocumentation">
-<p>Multiply a matrix with a scalar </p>
-
-</div></div>
-  </div><div id="a86c70609d64198aa25d9d24bdd437610" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a86c70609d64198aa25d9d24bdd437610&quot;)">
-        <span class="type"></span>
-        <a class="name">operator*=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a86c70609d64198aa25d9d24bdd437610_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">operator*=</span><span class="args">(const ofMatrix3x3 &amp;B)</span></div><div class="memberDocumentation">
-<p>Multiply a matrix by a matrix this = this*B (in that order) </p>
-
-</div></div>
-  </div><div id="ab631a19db59ea167d18bbe4cd4a5e5fe" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab631a19db59ea167d18bbe4cd4a5e5fe&quot;)">
-        <span class="type"></span>
-        <a class="name">entrywiseTimes</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ab631a19db59ea167d18bbe4cd4a5e5fe_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMatrix3x3.html">ofMatrix3x3</a> </span><span class="name">entrywiseTimes</span><span class="args">(const ofMatrix3x3 &amp;A)</span></div><div class="memberDocumentation">
-<p>Multiply a matrix by a matrix entry by entry (i.e. a*a, b*b, c*c...) This is referred to as an entrywise, Hadamard, or Schur product </p>
-
-</div></div>
-  </div><div id="a527b5b937243b20adde4b709c2cd96b5" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a527b5b937243b20adde4b709c2cd96b5&quot;)">
-        <span class="type"></span>
-        <a class="name">operator*=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a527b5b937243b20adde4b709c2cd96b5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">operator*=</span><span class="args">(float scalar)</span></div><div class="memberDocumentation">
-<p>Multiply a matrix by a scalar (multiples all entries by scalar) </p>
-
-</div></div>
-  </div><div id="a5a7b30409c9121080666229a17f3eba5" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5a7b30409c9121080666229a17f3eba5&quot;)">
-        <span class="type"></span>
-        <a class="name">operator*</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a5a7b30409c9121080666229a17f3eba5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMatrix3x3.html">ofMatrix3x3</a> </span><span class="name">operator*</span><span class="args">(const ofMatrix3x3 &amp;B)</span></div><div class="memberDocumentation">
-<p>Multiply a 3x3 matrix with a 3x3 matrix </p>
-
-</div></div>
-  </div><div id="adcf2270544195d4f525ceb741b9319d5" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#adcf2270544195d4f525ceb741b9319d5&quot;)">
-        <span class="type"></span>
-        <a class="name">operator/</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="adcf2270544195d4f525ceb741b9319d5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMatrix3x3.html">ofMatrix3x3</a> </span><span class="name">operator/</span><span class="args">(float scalar)</span></div><div class="memberDocumentation">
-<p>Divide a matrix through a scalar </p>
-
-</div></div>
-  </div><div id="ac4ad50cae99696ab3514fa2ab44c94be" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac4ad50cae99696ab3514fa2ab44c94be&quot;)">
-        <span class="type"></span>
-        <a class="name">operator/=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ac4ad50cae99696ab3514fa2ab44c94be_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">operator/=</span><span class="args">(const ofMatrix3x3 &amp;B)</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">operator/=</span><span class="args">(float scalar)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div><div id="Friends">
-    <h3 class="sectionHeader">Friends</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a3a751851e70f7d08933a8bb74ae79b7d" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3a751851e70f7d08933a8bb74ae79b7d&quot;)">
-        <span class="type"></span>
-        <a class="name">operator&lt;&lt;</a>
-        <span class="args"></span>
-        <span class="kind">friend</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a3a751851e70f7d08933a8bb74ae79b7d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">friend ostream &amp; </span><span class="name">operator&lt;&lt;</span><span class="args">(ostream &amp;os, const ofMatrix3x3 &amp;M)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="abf46313577c6b9cd10201245f1e46f87" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#abf46313577c6b9cd10201245f1e46f87&quot;)">
-        <span class="type"></span>
-        <a class="name">operator&gt;&gt;</a>
-        <span class="args"></span>
-        <span class="kind">friend</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="abf46313577c6b9cd10201245f1e46f87_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">friend istream &amp; </span><span class="name">operator&gt;&gt;</span><span class="args">(istream &amp;is, ofMatrix3x3 &amp;M)</span></div><div class="memberDocumentation">
 
 </div></div>
   </div></div>

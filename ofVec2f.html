@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <span class="class">ofVec2f</span><li class="chapter"><a href="#Constructa2Dvector">Construct a 2D vector</a></li><li class="chapter"><a href="#Accesscomponents">Access components</a></li><li class="chapter"><a href="#Comparison">Comparison</a></li><li class="chapter"><a href="#Operators">Operators</a></li><li class="chapter"><a href="#Simplemanipulations">Simple manipulations</a></li><li class="chapter"><a href="#Distance">Distance</a></li><li class="chapter"><a href="#Interpolation">Interpolation</a></li><li class="chapter"><a href="#Limit">Limit</a></li><li class="chapter"><a href="#Measurement">Measurement</a></li><li class="chapter"><a href="#Perpendicular">Perpendicular</a></li><li class="chapter"><a href="#PublicAttributes">Public Attributes</a></li></ul>
+        <span class="class">ofVec2f</span><li class="chapter"><a href="#Constructa2Dvector">Construct a 2D vector</a></li><li class="chapter"><a href="#Accesscomponents">Access components</a></li><li class="chapter"><a href="#Comparison">Comparison</a></li><li class="chapter"><a href="#Operators">Operators</a></li><li class="chapter"><a href="#Simplemanipulations">Simple manipulations</a></li><li class="chapter"><a href="#Distance">Distance</a></li><li class="chapter"><a href="#Interpolation">Interpolation</a></li><li class="chapter"><a href="#Limit">Limit</a></li><li class="chapter"><a href="#Measurement">Measurement</a></li><li class="chapter"><a href="#Perpendicular">Perpendicular</a></li><li class="chapter"><a href="#Attributes">Attributes</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -79,11 +79,11 @@
 <p><em>You will also see the term vector used to describe an array of objects in C++ (such as text strings). Don&apos;t let this confuse you, they are quite different: one of them is a mathematical term for a fixed-length list of numbers that you can do mathematical operations on, the other is a C++-specific term that means &apos;dynamically sizeable array&apos;.</em></p>
 <p><a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> has two member variables, x and y, which allow to conveniently store 2D properties of an object such as its position, velocity, or acceleration.</p>
 <div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1; <span class="comment">// v1.x is 0, v1.y is 0</span></div>
-<div class="line">v1.<a class="code" href="ofVec2f.html#aed59b5a86ed33d97e72e601a69d870ad">set</a>( 10, 50 ); <span class="comment">// now v1.x is 10, v1.y is 50</span></div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#a9963691296ed6bfbde8e3d8fbfe58e5d">set</a>( 10, 50 ); <span class="comment">// now v1.x is 10, v1.y is 50</span></div>
 </div><!-- fragment --><p>Using <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> greatly simplifies arithmetic operations in two dimensions. For example if you have two vectors v1 and v2, both of which represent a 2D change in position, you can find the total change of position of both of them just by doing an addition v1 + v2:</p>
 <div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(5, 2); <span class="comment">// v1 represents walking 5 steps forward then 2 steps sideways</span></div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2;</div>
-<div class="line">v2.<a class="code" href="ofVec2f.html#aed59b5a86ed33d97e72e601a69d870ad">set</a>(1, 1); <span class="comment">// v2 represents walking 1 step forward then 1 step sideways</span></div>
+<div class="line">v2.<a class="code" href="ofVec2f.html#a9963691296ed6bfbde8e3d8fbfe58e5d">set</a>(1, 1); <span class="comment">// v2 represents walking 1 step forward then 1 step sideways</span></div>
 <div class="line"><span class="comment">// what happens if you do v1 followed by v2? just add v1 and v2 together:</span></div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> result = v1 + v2; <span class="comment">// result is 6 steps forward then 3 steps sideways</span></div>
 </div><!-- fragment --><p>You can scale an <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> by multiplying it with a float:</p>
@@ -92,7 +92,7 @@
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> result = v1 * 3; <span class="comment">// result is 15 steps forward and 6 steps right</span></div>
 </div><!-- fragment --><p>This also works for subtraction and division.</p>
 <p>As you can see this really makes dealing with vectors as easy as dealing with single floats or ints, and can reduce the number of lines of code you have to write by half, at the same time making your code much easier to read and understand!</p>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec3f.html">ofVec3f</a> for 3D vectors </dd>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVec3f.html" title="ofVec3f is a class for storing a three dimensional vector. ">ofVec3f</a> for 3D vectors </dd>
 <dd>
 <a class="el" href="ofVec4f.html">ofVec4f</a> for 4D vectors </dd></dl>
 </div></div>
@@ -146,7 +146,7 @@
 
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofVec2f</span><span class="args">(const ofVec3f &amp;vec)</span></div><div class="memberDocumentation">
 
-<p>Create a 2D vector (<a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a>) from a 3D vector (<a class="el" href="ofVec3f.html">ofVec3f</a>) by  away the z component of the 3D vector. </p>
+<p>Create a 2D vector (<a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a>) from a 3D vector (<a class="el" href="ofVec3f.html" title="ofVec3f is a class for storing a three dimensional vector. ">ofVec3f</a>) by  away the z component of the 3D vector. </p>
 <div class="fragment"><div class="line"><a class="code" href="ofVec3f.html">ofVec3f</a> mom3d(40, 20, 50); <span class="comment">// 3d vector </span></div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v(mom3d); <span class="comment">// v.x is 40, v.y is 20</span></div>
 </div><!-- fragment --> 
@@ -206,9 +206,9 @@
 </div><hr><div class="memberVariant"><span class="type">float </span><span class="name">operator[]</span><span class="args">(int n) const </span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="aed59b5a86ed33d97e72e601a69d870ad" class="method">
+  </div><div id="a9963691296ed6bfbde8e3d8fbfe58e5d" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aed59b5a86ed33d97e72e601a69d870ad&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9963691296ed6bfbde8e3d8fbfe58e5d&quot;)">
         <span class="type"></span>
         <a class="name">set</a>
         <span class="args"></span>
@@ -217,21 +217,21 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="aed59b5a86ed33d97e72e601a69d870ad_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float scalar)</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float x, float y)</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a9963691296ed6bfbde8e3d8fbfe58e5d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float x, float y)</span></div><div class="memberDocumentation">
 
 <p>Set x and y components of this vector with just one function call. </p>
 <div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1;</div>
-<div class="line">v1.<a class="code" href="ofVec2f.html#aed59b5a86ed33d97e72e601a69d870ad">set</a>(40, 20);</div>
+<div class="line">v1.<a class="code" href="ofVec2f.html#a9963691296ed6bfbde8e3d8fbfe58e5d">set</a>(40, 20);</div>
 </div><!-- fragment --> 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(const ofVec2f &amp;vec)</span></div><div class="memberDocumentation">
 
 <p>Set the x and y components of this vector by copying the corresponding values from vec. </p>
 <div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1(40, 20);</div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v2;</div>
-<div class="line">v2.<a class="code" href="ofVec2f.html#aed59b5a86ed33d97e72e601a69d870ad">set</a>(v1); <span class="comment">// v2.x is 40, v2.y is 20</span></div>
+<div class="line">v2.<a class="code" href="ofVec2f.html#a9963691296ed6bfbde8e3d8fbfe58e5d">set</a>(v1); <span class="comment">// v2.x is 40, v2.y is 20</span></div>
 </div><!-- fragment --> 
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float scalar)</span></div><div class="memberDocumentation">
+
 </div></div>
   </div></div>
   </div><div id="Comparison">
@@ -974,7 +974,7 @@
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> numPoints = 10;</div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> points[numPoints];</div>
 <div class="line"><span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i=0; i&lt;numPoints; i++ ) {</div>
-<div class="line">    points[i].<a class="code" href="ofVec2f.html#aed59b5a86ed33d97e72e601a69d870ad">set</a>( <a class="code" href="of_math_8cpp.html#ae93bfe2a2080f0e2a03df835e72c7521">ofRandom</a>(0,100), <a class="code" href="of_math_8cpp.html#ae93bfe2a2080f0e2a03df835e72c7521">ofRandom</a>(0,100) );</div>
+<div class="line">    points[i].<a class="code" href="ofVec2f.html#a9963691296ed6bfbde8e3d8fbfe58e5d">set</a>( <a class="code" href="of_math_8cpp.html#ae93bfe2a2080f0e2a03df835e72c7521">ofRandom</a>(0,100), <a class="code" href="of_math_8cpp.html#ae93bfe2a2080f0e2a03df835e72c7521">ofRandom</a>(0,100) );</div>
 <div class="line">}</div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> centroid;</div>
 <div class="line">centroid.<a class="code" href="ofVec2f.html#a293c557f3a72c96536cc138fede7d5e3">average</a>( points, numPoints ); </div>
@@ -1279,8 +1279,8 @@
 
 </div></div>
   </div></div>
-  </div><div id="PublicAttributes">
-    <h3 class="sectionHeader">Public Attributes</h3>
+  </div><div id="Attributes">
+    <h3 class="sectionHeader">Attributes</h3>
     <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a81763bfaf27b7db5f734055212ca6ec5" class="method">
     <div class="methodHeader">

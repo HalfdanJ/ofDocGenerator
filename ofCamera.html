@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <span class="class">ofCamera</span><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#PublicFunctions">Public Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li></ul>
+        <span class="class">ofCamera</span><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -206,8 +206,8 @@
 
 </div></div>
   </div></div>
-  </div><div id="PublicFunctions">
-    <h3 class="sectionHeader">Public Functions</h3>
+  </div><div id="Functions">
+    <h3 class="sectionHeader">Functions</h3>
     <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="abd30fe5920612bd673a7a7af7991fc4a" class="method">
     <div class="methodHeader">
@@ -688,7 +688,7 @@ frustum&quot; and is used (for example) in stereo views. It is acheived by apply
     <div class="methodDescription" style="display:none" id="a7b5e9d4853d39a23fa836dcec18d7ae7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">worldToScreen</span><span class="args">(ofVec3f WorldXYZ, ofRectangle viewport=ofGetCurrentViewport()) const </span></div><div class="memberDocumentation">
 
 <p>Obtain the screen coordinates of a point in the 3D world. </p>
-<p>Takes an (X,Y,Z) point in your 3D world, encoded as an <a class="el" href="ofVec3f.html">ofVec3f</a>, and returns the location (also as an <a class="el" href="ofVec3f.html">ofVec3f</a>) where this point would appear on your (two-dimensional) display. The screen position&apos;s &quot;Z
+<p>Takes an (X,Y,Z) point in your 3D world, encoded as an <a class="el" href="ofVec3f.html" title="ofVec3f is a class for storing a three dimensional vector. ">ofVec3f</a>, and returns the location (also as an <a class="el" href="ofVec3f.html" title="ofVec3f is a class for storing a three dimensional vector. ">ofVec3f</a>) where this point would appear on your (two-dimensional) display. The screen position&apos;s &quot;Z
 coordinate&quot; is set to be the same as your camera&apos;s.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -697,7 +697,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>An <a class="el" href="ofVec3f.html">ofVec3f</a> containing the screen coordinates of your 3D point of interest. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An <a class="el" href="ofVec3f.html" title="ofVec3f is a class for storing a three dimensional vector. ">ofVec3f</a> containing the screen coordinates of your 3D point of interest. </dd></dl>
 
 </div></div>
   </div><div id="a2d561fd8fb958c9512d576ed54129a73" class="method">
@@ -714,7 +714,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
     <div class="methodDescription" style="display:none" id="a2d561fd8fb958c9512d576ed54129a73_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">screenToWorld</span><span class="args">(ofVec3f ScreenXYZ, ofRectangle viewport=ofGetCurrentViewport()) const </span></div><div class="memberDocumentation">
 
 <p>Obtain the coordinates, in the 3D world, of a 2D point presumed to be on your screen. </p>
-<p>Takes a pixel location on your screen, encoded in an <a class="el" href="ofVec3f.html">ofVec3f</a>, and returns (also as an <a class="el" href="ofVec3f.html">ofVec3f</a>) the 3D world coordinates of that point. You&apos;ll also need to specify a Z value when providing your screen point. This Z value is interpreted as a distance into or away from the screen.</p>
+<p>Takes a pixel location on your screen, encoded in an <a class="el" href="ofVec3f.html" title="ofVec3f is a class for storing a three dimensional vector. ">ofVec3f</a>, and returns (also as an <a class="el" href="ofVec3f.html" title="ofVec3f is a class for storing a three dimensional vector. ">ofVec3f</a>) the 3D world coordinates of that point. You&apos;ll also need to specify a Z value when providing your screen point. This Z value is interpreted as a distance into or away from the screen.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ScreenXYZ</td><td>A point on your screen, whose 3D world coordinates you wish to know. </td></tr>
