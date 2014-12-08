@@ -183,6 +183,15 @@ function generateDoc(fileDescription) {
       return scrapeDoxygenHtml(parseData);
     })
 
+    .then(function(parsedData){
+      var stats = getStatsOnObject(parsedData);
+      fileDescription.stats = stats;
+
+      console.log(doxygenName+" completion rate: "+stats.docRate+"%");
+
+      return parsedData;
+    })
+
     // Then generate search toc object
     .then(function(parsedData){
       addObjectToSearch(parsedData);
@@ -713,11 +722,20 @@ function generateToc(structure, tocInfo){
 
     elm.append('<h3>'+category+"</h3>");
     structure['core'][category].forEach(function(file){
-      var desc = '';
+      if(file.stats.docRate > 0.8){
+        l = 'label-success';
+      } else if(file.stats.docRate > 0.3) {
+        l = 'label-warning';
+      } else {
+        l = 'label-danger';
+      }
+
+      var pct = " <span class='label "+l+"'> "+Math.round(file.stats.docRate*100)+"%"+"</span>";
+      var desc = "";
       if(tocInfo[file]){
         desc = ' - '+tocInfo[file.name];
       }
-      elm.append('<a href="'+file.name+'.html">'+file.name+"</a>"+desc+"<br>");
+      elm.append(pct+' <a href="'+file.name+'.html">'+file.name+"</a>"+desc+"<br>");
     })
   }
   // Write the file
@@ -752,6 +770,33 @@ function getTypeHtml(type){
     url = getLinkUrlFromDoxygenUrl(url);
     return ("<a href='"+url+"'>" + type.ref[0]._ + "</a> ");
   }
+}
+
+// -----------
+
+function getStatsOnObject(parsedData){
+
+  var numMembers = 0;
+  var numMembersWithDoc = 0;
+
+  parsedData.sections.forEach(function (section) {
+    section.methods.forEach(function (memberGroup) {
+      memberGroup.implementations.forEach(function(method) {
+        if(method.htmlDescription.trim().length > 0){
+          numMembersWithDoc ++;
+        }
+        numMembers++;
+      });
+    });
+  });
+
+  parsedData.classes.forEach(function(innerclass) {
+    var stats = getStatsOnObject(innerclass);
+    numMembers += stats.numMembers;
+    numMembersWithDoc += stats.numMembersWithDoc;
+  });
+
+  return { numMembers: numMembers, numMembersWithDoc: numMembersWithDoc, docRate: numMembersWithDoc/numMembers}
 }
 
 // -----------
