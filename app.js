@@ -6,7 +6,7 @@ var fs = require('fs-extra'),
 
 // Set this to the section you work on to speed up the generation.
 // But remember to remove it again! :)
-var filterGroup = 'math';
+var filterGroup = 'types';
 
 // Check for sass compatibility (it does not work on Travis-ci)
 try {
@@ -859,7 +859,12 @@ function getLinkUrlFromDoxygenUrl(ref){
     ref = ref.replace(/_\w/g, function(v){ return v.toUpperCase() });
     ref = ref.replace(/_/g,'');
   }
-  if(ref.match(/^struct/g)){
+  else if(ref.match(/^singleton/g)){
+    ref = ref.replace(/^singleton/g,'');
+    ref = ref.replace(/_\w/g, function(v){ return v.toUpperCase() });
+    ref = ref.replace(/_/g,'');
+  }
+  else if(ref.match(/^struct/g)){
     ref = ref.replace(/^struct/g,'');
     ref = ref.replace(/_\w/g, function(v){ return v.toUpperCase() });
     ref = ref.replace(/_/g,'');
