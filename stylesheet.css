@@ -151,26 +151,21 @@ nav.navigator {
 #templates {
   display: none; }
 
-p {
-  margin-bottom: 20px; }
-
-h1 {
-  font-weight: 200;
-  font-size: 40px;
-  margin-bottom: 30px; }
-
 .sectionHeader, h3 {
   font-weight: 200;
   font-size: 25px;
   margin-bottom: 20px;
-  padding-top: 70px;
+  padding-top: 20px;
   margin-top: -20px; }
+
+h1 {
+  font-weight: 200;
+  font-size: 40px;
+  margin-bottom: 20px; }
 
 h4 {
   font-weight: 200;
-  font-size: 20px;
-  margin-top: 30px;
-  margin-bottom: 10px; }
+  font-size: 20px; }
 
 .methodHeader {
   font-family: 'Inconsolata', monospace;
@@ -209,6 +204,9 @@ h4 {
 .open .methodHeader .note {
   color: red; }
 
+.sectionContent {
+  margin-bottom: 30px; }
+
 .methodDescription {
   background-color: #f8f8f8;
   border: 1px solid #e6e6e6;
@@ -226,11 +224,17 @@ h4 {
     padding-left: 25px;
     margin-bottom: 8px; }
 
+.classDescription {
+  margin-bottom: 40px; }
+
 .methodDescription hr, .classDescription hr {
   border-top: 1px solid #e2e2e2; }
 .methodDescription img, .classDescription img {
   max-width: 640px;
   margin-bottom: 8px; }
+.methodDescription p, .classDescription p {
+  margin-top: 10px;
+  margin-bottom: 10px; }
 .methodDescription .memberVariant, .classDescription .memberVariant {
   margin-left: 10px;
   margin-bottom: 8px;

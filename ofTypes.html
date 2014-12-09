@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <li class="chapter"><a href="#Typedefs">Typedefs</a></li><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofSerialDeviceInfo</span><li class="chapter"><a href="#Friends">Friends</a></li><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofStyle</span><li class="chapter"><a href="#Attributes">Attributes</a></li><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofVideoFormat</span><li class="chapter"><a href="#Attributes">Attributes</a></li><span class="class">ofVideoDevice</span><li class="chapter"><a href="#Attributes">Attributes</a></li><span class="class">ofPtr</span><li class="chapter"><a href="#Functions">Functions</a></li></ul>
+        <li class="chapter"><a href="#Typedefs">Typedefs</a></li><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofSerialDeviceInfo</span><li class="chapter"><a href="#Friends">Friends</a></li><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofStyle</span><li class="chapter"><a href="#Attributes">Attributes</a></li><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofVideoFormat</span><li class="chapter"><a href="#Attributes">Attributes</a></li><span class="class">ofVideoDevice</span><li class="chapter"><a href="#Attributes">Attributes</a></li><span class="class">ofPtr</span><li class="chapter"><a href="#Functions">Functions</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -123,7 +123,8 @@
     <div class="classHeader">
       <h1 class="classTitle">ofSerialDeviceInfo<small>class</small></h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>Describes a Serial device, what ID it has, what name it has, and the path to the device. </p>
+</div></div>
     <div class="classMethods"><div id="Friends">
     <h3 class="sectionHeader">Friends</h3>
     <div class="sectionDescription"></div>
@@ -139,52 +140,6 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a738b5a6b2bbb311ba6946feda233b755_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">friend class </span><span class="name">ofSerial</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div><div id="ProtectedAttributes">
-    <h3 class="sectionHeader">Protected Attributes</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a1deaf8b2c01372d41c2df925160bd7e7" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1deaf8b2c01372d41c2df925160bd7e7&quot;)">
-        <span class="type"></span>
-        <a class="name">devicePath</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a1deaf8b2c01372d41c2df925160bd7e7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">string </span><span class="name">devicePath</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a0f79add7e2658721d4dda9b9417a27e8" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a0f79add7e2658721d4dda9b9417a27e8&quot;)">
-        <span class="type"></span>
-        <a class="name">deviceName</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a0f79add7e2658721d4dda9b9417a27e8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">string </span><span class="name">deviceName</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a66fce352d89f67409c40e4a767cfb7f7" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a66fce352d89f67409c40e4a767cfb7f7&quot;)">
-        <span class="type"></span>
-        <a class="name">deviceID</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a66fce352d89f67409c40e4a767cfb7f7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">deviceID</span><span class="args"></span></div><div class="memberDocumentation">
 
 </div></div>
   </div></div>
@@ -204,7 +159,21 @@
 
     <div class="methodDescription" style="display:none" id="a8450a8c81f18cadec7be90a87f81ccfa_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofSerialDeviceInfo</span><span class="args">(string devicePathIn, string deviceNameIn, int deviceIDIn)</span></div><div class="memberDocumentation">
 
+<p>Constructor. </p>
+<p>&#xA0; </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">devicePathIn</td><td>The path to the device </td></tr>
+    <tr><td class="paramname">deviceNameIn</td><td>The name of the device </td></tr>
+    <tr><td class="paramname">deviceIDIn</td><td>The ID of the device </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofSerialDeviceInfo</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>&#xA0;. </p>
+<p>Constructs a undefined serial device </p>
 
 </div></div>
   </div><div id="a9456ff5a5b06dac481c287c65e6557e4" class="method">
@@ -220,6 +189,9 @@
 
     <div class="methodDescription" style="display:none" id="a9456ff5a5b06dac481c287c65e6557e4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">string </span><span class="name">getDevicePath</span><span class="args">()</span></div><div class="memberDocumentation">
 
+<p>Gets the path to the device. </p>
+<p>Example: <code>/dev/tty.cu/usbdevice-a440</code> </p>
+
 </div></div>
   </div><div id="ace475223571db70566eb7cb50e2b5928" class="method">
     <div class="methodHeader">
@@ -233,6 +205,9 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="ace475223571db70566eb7cb50e2b5928_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">string </span><span class="name">getDeviceName</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Gets the name of the device. </p>
+<p>Example: <code>usbdevice-a440</code> / <code>COM4</code> </p>
 
 </div></div>
   </div><div id="a00b99cf903d54bfd118d149fddb24328" class="method">
@@ -248,6 +223,9 @@
 
     <div class="methodDescription" style="display:none" id="a00b99cf903d54bfd118d149fddb24328_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getDeviceID</span><span class="args">()</span></div><div class="memberDocumentation">
 
+<p>Gets the ID of the device. </p>
+<p>Example: <code>0</code>,<code>1</code>,<code>2</code>,<code>3</code> etc </p>
+
 </div></div>
   </div></div>
   </div></div>
@@ -255,7 +233,8 @@
     <div class="classHeader">
       <h1 class="classTitle">ofStyle<small>class</small></h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>Contains general information about the style of ofGraphics elements such as color, line width and others. </p>
+</div></div>
     <div class="classMethods"><div id="Attributes">
     <h3 class="sectionHeader">Attributes</h3>
     <div class="sectionDescription"></div>
@@ -272,6 +251,8 @@
 
     <div class="methodDescription" style="display:none" id="a71c0e855729b8db2f0aec16a939051dd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1ace59f9421b921c3344fa20972e515912">ofColor</a> </span><span class="name">color</span><span class="args"></span></div><div class="memberDocumentation">
 
+<p>Contains the color information for the style object. </p>
+
 </div></div>
   </div><div id="a1d062d4e7b15eaa061c133595ef3cc54" class="method">
     <div class="methodHeader">
@@ -285,6 +266,8 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a1d062d4e7b15eaa061c133595ef3cc54_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1ace59f9421b921c3344fa20972e515912">ofColor</a> </span><span class="name">bgColor</span><span class="args"></span></div><div class="memberDocumentation">
+
+<p>Contains the background color information for the style object. </p>
 
 </div></div>
   </div><div id="ae49fd93f032dbfddea280745482c93bd" class="method">
@@ -300,6 +283,16 @@
 
     <div class="methodDescription" style="display:none" id="ae49fd93f032dbfddea280745482c93bd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1aca8e53bffcbd2dd34e724531d8a0f375">ofPolyWindingMode</a> </span><span class="name">polyMode</span><span class="args"></span></div><div class="memberDocumentation">
 
+<p>Contains information about the drawing behavior for ovelapping parts of the same polygon when a shape is created. </p>
+<p>Possible modes are:</p>
+<ul>
+<li><code>OF_POLY_WINDING_ODD</code></li>
+<li><code>OF_POLY_WINDING_NONZERO</code></li>
+<li><code>OF_POLY_WINDING_POSITIVE</code></li>
+<li><code>OF_POLY_WINDING_NEGATIVE</code></li>
+<li><code>OF_POLY_WINDING_ABS_GEQ_TWO</code> </li>
+</ul>
+
 </div></div>
   </div><div id="ab9a5fe8d4375c9ccc9eb4a69c8476eb5" class="method">
     <div class="methodHeader">
@@ -313,6 +306,9 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="ab9a5fe8d4375c9ccc9eb4a69c8476eb5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1a52116548570a64993cbe3be944443fce">ofRectMode</a> </span><span class="name">rectMode</span><span class="args"></span></div><div class="memberDocumentation">
+
+<p>Contains information about the mode for drawing rectangles. </p>
+<p>If they are corner aligned, or drawn so that the x,y position is the center of the rectangle. Possible options are <code>OF_RECTMODE_CENTER</code> and <code>OF_RECTMODE_CORNER</code> </p>
 
 </div></div>
   </div><div id="ac97172bc5d117d91fa7fef18b91b58af" class="method">
@@ -328,6 +324,8 @@
 
     <div class="methodDescription" style="display:none" id="ac97172bc5d117d91fa7fef18b91b58af_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">bFill</span><span class="args"></span></div><div class="memberDocumentation">
 
+<p>Contains information about how the graphics have to be drawed: Fill or noFill(empty) </p>
+
 </div></div>
   </div><div id="a3ce923c648343d755c14b1e9992d4ad9" class="method">
     <div class="methodHeader">
@@ -341,6 +339,8 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a3ce923c648343d755c14b1e9992d4ad9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1a14966be842b99f71080a7444cebbc0b7">ofDrawBitmapMode</a> </span><span class="name">drawBitmapMode</span><span class="args"></span></div><div class="memberDocumentation">
+
+<p>Contains the ofDrawBitmapMode information. </p>
 
 </div></div>
   </div><div id="aa899b9218eabf5feff0729fba2956e46" class="method">
@@ -356,6 +356,9 @@
 
     <div class="methodDescription" style="display:none" id="aa899b9218eabf5feff0729fba2956e46_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1a5f194ae56b1bc61651eac7184ed1ad2e">ofBlendMode</a> </span><span class="name">blendingMode</span><span class="args"></span></div><div class="memberDocumentation">
 
+<p>&#xA0;. </p>
+<p>Contains the blending mode information </p>
+
 </div></div>
   </div><div id="ad2dbc3547e6bd9fdeb2557edda376ebd" class="method">
     <div class="methodHeader">
@@ -369,6 +372,8 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="ad2dbc3547e6bd9fdeb2557edda376ebd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">smoothing</span><span class="args"></span></div><div class="memberDocumentation">
+
+<p>Contains the information about if smoothing effect is activated or not. </p>
 
 </div></div>
   </div><div id="a3cf3da499b39eea0fd403627f5b7cb1d" class="method">
@@ -426,6 +431,8 @@
 
     <div class="methodDescription" style="display:none" id="ad49415259a79caf71e3317949ad7c26b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">lineWidth</span><span class="args"></span></div><div class="memberDocumentation">
 
+<p>Contains information about the width of the line for our ofLine. </p>
+
 </div></div>
   </div></div>
   </div><div id="Functions">
@@ -444,6 +451,8 @@
 
     <div class="methodDescription" style="display:none" id="a7d1443b11025e5321d810a618491e79a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofStyle</span><span class="args">()</span></div><div class="memberDocumentation">
 
+<p>Constructor for <a class="el" href="ofStyle.html" title="Contains general information about the style of ofGraphics elements such as color, line width and others. ">ofStyle</a>. </p>
+
 </div></div>
   </div><div id="a8996b948ae6c54f588c9be80bb04da0f" class="method">
     <div class="methodHeader">
@@ -457,6 +466,9 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a8996b948ae6c54f588c9be80bb04da0f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">~ofStyle</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>&#xA0;. </p>
+<p>Destructor of <a class="el" href="ofStyle.html" title="Contains general information about the style of ofGraphics elements such as color, line width and others. ">ofStyle</a> </p>
 
 </div></div>
   </div></div>
