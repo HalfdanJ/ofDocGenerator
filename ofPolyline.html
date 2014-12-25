@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <span class="class">ofPolyline</span><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#StaticFunctions">Static Functions</a></li></ul>
+        <span class="class">ofPolyline</span><li class="chapter"><a href="#Constructors">Constructors</a></li><li class="chapter"><a href="#AddandRemoveVertices">Add and Remove Vertices</a></li><li class="chapter"><a href="#AccessVertices">Access Vertices</a></li><li class="chapter"><a href="#LinesandCurves">Lines and Curves</a></li><li class="chapter"><a href="#SmoothingandResampling">Smoothing and Resampling</a></li><li class="chapter"><a href="#PolylineState">Polyline State</a></li><li class="chapter"><a href="#GeometricFunctions">Geometric Functions</a></li><li class="chapter"><a href="#OtherFunctions">Other Functions</a></li><li class="chapter"><a href="#Drawing">Drawing</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -67,15 +67,35 @@
     <div class="classHeader">
       <h1 class="classTitle">ofPolyline<small>file</small></h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>ofPolyLine allows you to combine multiple points into a single vector data object that can be drawn to the screen, manipulated point by point, and combined with other <a class="el" href="ofPolyline.html">ofPolyline</a> instances. It is less complex than the <a class="el" href="ofPath.html" title="ofPath is a way to create a path or multiple paths consisting of points. It allows you to combine mul...">ofPath</a> and generally represents a single line or vector shape rather than multiple lines or shapes.</p>
+<p>You can add points to an <a class="el" href="ofPolyline.html">ofPolyline</a> by adding vertices: </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> i = 0;</div>
+<div class="line"><span class="keywordflow">while</span> (i &lt; <a class="code" href="ofConstants.html#a3b947f4b635461030ff2d87833e5049e">TWO_PI</a>) { <span class="comment">// make a heart</span></div>
+<div class="line">    <span class="keywordtype">float</span> r = (2-2*sin(i) + sin(i)*sqrt(abs(cos(i))) / (sin(i)+1.4)) * -80;</div>
+<div class="line">    <span class="keywordtype">float</span> x = <a class="code" href="of_app_runner_8cpp.html#a28bb1c518b5c68ee2eae655bd4e56445">ofGetWidth</a>()/2 + cos(i) * r;</div>
+<div class="line">    <span class="keywordtype">float</span> y = <a class="code" href="of_app_runner_8cpp.html#a415b5eadf885ebd1f4799cc40e5db137">ofGetHeight</a>()/2 + sin(i) * r;</div>
+<div class="line">    line.addVertex(<a class="code" href="ofVec2f.html">ofVec2f</a>(x,y));</div>
+<div class="line">    i+=0.005*<a class="code" href="ofConstants.html#ae3ec3219e4eee3b0992bfd59c2e2bc42">HALF_PI</a>*0.5;</div>
+<div class="line">}</div>
+<div class="line">line.close(); <span class="comment">// close the shape</span></div>
+</div><!-- fragment --><p>Or you can draw lines or curves: </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> angle = 0;</div>
+<div class="line"><span class="keywordflow">while</span> (angle &lt; <a class="code" href="ofConstants.html#a3b947f4b635461030ff2d87833e5049e">TWO_PI</a> ) {</div>
+<div class="line">    <a class="code" href="of_matrix4x4_8cpp.html#ab2d05693952610f937e5acb3c4a8fa1b">b</a>.curveTo(100*cos(angle), 0, 100*sin(angle));</div>
+<div class="line">    <a class="code" href="of_matrix4x4_8cpp.html#ab2d05693952610f937e5acb3c4a8fa1b">b</a>.curveTo(300*cos(angle), 300, 300*sin(angle));</div>
+<div class="line">    angle += <a class="code" href="ofConstants.html#a3b947f4b635461030ff2d87833e5049e">TWO_PI</a> / 30;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><a class="el" href="ofPolyline.html">ofPolyline</a> also includes methods to get the closest point, determine whether a point is inside shape, and resample shapes. Along with the <a class="el" href="ofPath.html" title="ofPath is a way to create a path or multiple paths consisting of points. It allows you to combine mul...">ofPath</a> class, it&apos;s the best way to draw and manipulate 2D and 3D vector graphics that you&apos;ll need to update and manipulate frequently.</p>
+<p>If you use the lineTo() or curveTo() or bezierTo() functions, you move the drawing point, so that drawing a line to 100,100 means a line from 0,0 to 100, 100. The next line would be a line from 100,100 to wherever you go next. Storing this position means that you can easily create continuous drawings without difficulty. </p>
+</div></div>
     <div class="classMethods"></div>
   </div><div id="" class="classBlock">
     <div class="classHeader">
       <h1 class="classTitle">ofPolyline<small>class</small></h1>
     </div>
     <div class="classDescription"></div>
-    <div class="classMethods"><div id="Functions">
-    <h3 class="sectionHeader">Functions</h3>
+    <div class="classMethods"><div id="Constructors">
+    <h3 class="sectionHeader">Constructors</h3>
     <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="ab8b6c33d5cb672d393aa107434d908c2" class="method">
     <div class="methodHeader">
@@ -90,10 +110,32 @@
 
     <div class="methodDescription" style="display:none" id="ab8b6c33d5cb672d393aa107434d908c2_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofPolyline</span><span class="args">()</span></div><div class="memberDocumentation">
 
+<p>Creates an <a class="el" href="ofPolyline.html">ofPolyline</a>. </p>
+
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofPolyline</span><span class="args">(const vector&lt; ofPoint &gt; &amp;verts)</span></div><div class="memberDocumentation">
 
+<p>Creates an <a class="el" href="ofPolyline.html">ofPolyline</a> from a vector of <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> or ofPoint objects. </p>
+
 </div></div>
-  </div><div id="a8087ebabf60380f8736282d0e98118bc" class="method">
+  </div><div id="a8e8213a2ad5b9ddc293d9708a5296009" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8e8213a2ad5b9ddc293d9708a5296009&quot;)">
+        <span class="type"></span>
+        <a class="name">fromRectangle</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a8e8213a2ad5b9ddc293d9708a5296009_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPolyline.html">ofPolyline</a> </span><span class="name">fromRectangle</span><span class="args">(const ofRectangle &amp;rect)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div></div>
+  </div><div id="AddandRemoveVertices">
+    <h3 class="sectionHeader">Add and Remove Vertices</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a8087ebabf60380f8736282d0e98118bc" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8087ebabf60380f8736282d0e98118bc&quot;)">
         <span class="type"></span>
@@ -106,7 +148,7 @@
 
     <div class="methodDescription" style="display:none" id="a8087ebabf60380f8736282d0e98118bc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clear</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>remove all the points </p>
+<p>Removes all the points from the <a class="el" href="ofPolyline.html">ofPolyline</a>. </p>
 
 </div></div>
   </div><div id="a39230dd712cb2e9647ed0679eef06124" class="method">
@@ -122,9 +164,11 @@
 
     <div class="methodDescription" style="display:none" id="a39230dd712cb2e9647ed0679eef06124_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addVertex</span><span class="args">(const ofPoint &amp;p)</span></div><div class="memberDocumentation">
 
-<p>add a vertex </p>
+<p>Adds a point using an ofPoint at the end of the <a class="el" href="ofPolyline.html">ofPolyline</a>. </p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">addVertex</span><span class="args">(float x, float y, float z=0)</span></div><div class="memberDocumentation">
+
+<p>Adds a point using floats at the end of the <a class="el" href="ofPolyline.html">ofPolyline</a>. </p>
 
 </div></div>
   </div><div id="a0825db11f31148731aecf1cbb33450de" class="method">
@@ -140,23 +184,25 @@
 
     <div class="methodDescription" style="display:none" id="a0825db11f31148731aecf1cbb33450de_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addVertices</span><span class="args">(const vector&lt; ofPoint &gt; &amp;verts)</span></div><div class="memberDocumentation">
 
+<p>Add multiple points at the end of the <a class="el" href="ofPolyline.html">ofPolyline</a> using a vector of ofPoint objects. </p>
+<div class="fragment"><div class="line">vector&lt;ofPoint&gt; verts;</div>
+<div class="line"><span class="comment">// make a pentagon</span></div>
+<div class="line"><span class="keywordtype">float</span> <a class="code" href="ofPolyline.html#ad88dd26a8298d54abb9dd3b1f55d00f8">size</a> = 80.f;</div>
+<div class="line"><span class="keywordtype">float</span> X1 = 0.125*sqrt(10 + 2*sqrt(5)) * <a class="code" href="ofPolyline.html#ad88dd26a8298d54abb9dd3b1f55d00f8">size</a>;</div>
+<div class="line"><span class="keywordtype">float</span> X2 = 0.125*sqrt(10 - 2*sqrt(5)) * <a class="code" href="ofPolyline.html#ad88dd26a8298d54abb9dd3b1f55d00f8">size</a>;</div>
+<div class="line"><span class="keywordtype">float</span> Y1 = 0.125*(sqrt(5) - 1) * size;</div>
+<div class="line"><span class="keywordtype">float</span> Y2 = 0.125*(sqrt(5) + 1) * size;</div>
+<div class="line">verts.push_back(<a class="code" href="ofBaseTypes.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a>(0, -0.5 * size));</div>
+<div class="line">verts.push_back(<a class="code" href="ofBaseTypes.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a>(-X1, -Y1));</div>
+<div class="line">verts.push_back(<a class="code" href="ofBaseTypes.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a>(-X2, Y2));</div>
+<div class="line">verts.push_back(<a class="code" href="ofBaseTypes.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a>(X2, Y2));</div>
+<div class="line">verts.push_back(<a class="code" href="ofBaseTypes.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a>(X1, -Y1));</div>
+<div class="line"><a class="code" href="ofPolyline.html">ofPolyline</a> p;</div>
+<div class="line">p.<a class="code" href="ofPolyline.html#a0825db11f31148731aecf1cbb33450de">addVertices</a>(verts);</div>
+</div><!-- fragment --> 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">addVertices</span><span class="args">(const ofPoint *verts, int numverts)</span></div><div class="memberDocumentation">
 
-</div></div>
-  </div><div id="a4c7d5b95780ebf1aefb079f55bcf8d7a" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4c7d5b95780ebf1aefb079f55bcf8d7a&quot;)">
-        <span class="type"></span>
-        <a class="name">lineTo</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a4c7d5b95780ebf1aefb079f55bcf8d7a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">lineTo</span><span class="args">(const ofPoint &amp;to)</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">lineTo</span><span class="args">(float x, float y, float z=0)</span></div><div class="memberDocumentation">
+<p>Adds multiple points at the end of the <a class="el" href="ofPolyline.html">ofPolyline</a> using a pointer to an array of ofPoint objects. </p>
 
 </div></div>
   </div><div id="afa7b17651f31e3c2e86f62ffec7ce256" class="method">
@@ -175,6 +221,172 @@
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">insertVertex</span><span class="args">(float x, float y, float z, int index)</span></div><div class="memberDocumentation">
 
 </div></div>
+  </div><div id="a49e172bae1f49fce0b763fe05b33c53e" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a49e172bae1f49fce0b763fe05b33c53e&quot;)">
+        <span class="type"></span>
+        <a class="name">resize</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a49e172bae1f49fce0b763fe05b33c53e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">resize</span><span class="args">(size_t size)</span></div><div class="memberDocumentation">
+
+<p>Resize the number of points in the <a class="el" href="ofPolyline.html">ofPolyline</a> to the value passed in. </p>
+
+</div></div>
+  </div></div>
+  </div><div id="AccessVertices">
+    <h3 class="sectionHeader">Access Vertices</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="ad88dd26a8298d54abb9dd3b1f55d00f8" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad88dd26a8298d54abb9dd3b1f55d00f8&quot;)">
+        <span class="type"></span>
+        <a class="name">size</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ad88dd26a8298d54abb9dd3b1f55d00f8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">size_t </span><span class="name">size</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>The number of points in the <a class="el" href="ofPolyline.html">ofPolyline</a>. </p>
+
+</div></div>
+  </div><div id="a2ad4d76dc14ddaa777e5326466bc43ef" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2ad4d76dc14ddaa777e5326466bc43ef&quot;)">
+        <span class="type"></span>
+        <a class="name">operator[]</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a2ad4d76dc14ddaa777e5326466bc43ef_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">operator[]</span><span class="args">(int index) const </span></div><div class="memberDocumentation">
+<p>Allows you to access the points of the <a class="el" href="ofPolyline.html">ofPolyline</a> just like you would in an array, so to make the points of a line follow the mouse movement, you could do:</p>
+<div class="fragment"><div class="line">line[0].set(mouseX, mouseY);</div>
+<div class="line"><span class="keywordtype">int</span> i = 1;</div>
+<div class="line"><span class="keywordflow">while</span> ( i&lt;bounds.size()) {</div>
+<div class="line">    <span class="keywordtype">float</span> angle = atan2(line[i-1].y - line[i].y, line[i-1].x - line[i].x);  </div>
+<div class="line">    bounds[i].set(bounds[i-1].x - cos(angle) * 20, bounds[i-1].y - sin(angle) * 20);</div>
+<div class="line">    i++;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div><hr><div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">operator[]</span><span class="args">(int index)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a193202a0774fe5509f3b90827201fe8a" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a193202a0774fe5509f3b90827201fe8a&quot;)">
+        <span class="type"></span>
+        <a class="name">getVertices</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a193202a0774fe5509f3b90827201fe8a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">getVertices</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Gets a vector of vertices that the line contains. </p>
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">getVertices</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a802b0d169de8df5196c01d42f8fe5eac" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a802b0d169de8df5196c01d42f8fe5eac&quot;)">
+        <span class="type"></span>
+        <a class="name">begin</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a802b0d169de8df5196c01d42f8fe5eac_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">begin</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">begin</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="ae0fbc2e6bc72ca8581f1f94b538cc076" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae0fbc2e6bc72ca8581f1f94b538cc076&quot;)">
+        <span class="type"></span>
+        <a class="name">rbegin</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ae0fbc2e6bc72ca8581f1f94b538cc076_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">rbegin</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">rbegin</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a45102a0a5ce470d325951a6a9356738e" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a45102a0a5ce470d325951a6a9356738e&quot;)">
+        <span class="type"></span>
+        <a class="name">end</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a45102a0a5ce470d325951a6a9356738e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">end</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">end</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a03bbf99ccc826413481fbd32dda50a54" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a03bbf99ccc826413481fbd32dda50a54&quot;)">
+        <span class="type"></span>
+        <a class="name">rend</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a03bbf99ccc826413481fbd32dda50a54_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">rend</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">rend</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div></div>
+  </div><div id="LinesandCurves">
+    <h3 class="sectionHeader">Lines and Curves</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a4c7d5b95780ebf1aefb079f55bcf8d7a" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4c7d5b95780ebf1aefb079f55bcf8d7a&quot;)">
+        <span class="type"></span>
+        <a class="name">lineTo</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a4c7d5b95780ebf1aefb079f55bcf8d7a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">lineTo</span><span class="args">(const ofPoint &amp;to)</span></div><div class="memberDocumentation">
+
+<p>Add a straight line from the last point added, or from 0,0 if no point is set, to the point indicated by the ofPoint passesd in. </p>
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">lineTo</span><span class="args">(float x, float y, float z=0)</span></div><div class="memberDocumentation">
+
+<p>Add a straight line from the last point added, or from 0,0 if no point is set, to the point indicated by the floats x,y,z passesd in. </p>
+
+</div></div>
   </div><div id="a9cd721b87265d0e7b9fa0cd1581f0dd5" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9cd721b87265d0e7b9fa0cd1581f0dd5&quot;)">
@@ -188,11 +400,41 @@
 
     <div class="methodDescription" style="display:none" id="a9cd721b87265d0e7b9fa0cd1581f0dd5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">arc</span><span class="args">(const ofPoint &#xA2;er, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise, int circleResolution=20)</span></div><div class="memberDocumentation">
 
+<p>Adds an arc around the ofPoint <code>center</code> with the width of <code>radiusX</code> and the height of <code>radiusY</code> to the polyline. </p>
+<p>The <code>angleBegin</code> and <code>angleEnd</code> indicate the start and end angles of the arc in degrees measured clockwise from the x-axis.</p>
+<p>The <code>clockwise</code> boolean sets the drawing direction. Passing &apos;false&apos; to it will draw the arc counter-clockwise.</p>
+<p>Optionally, you can specify <code>circleResolution</code>, which is the number of line segments a circle would be drawn with.</p>
+<p>If the arc doesn&apos;t start at the same point the last vertex finished a straight line will be created to join both </p>
+
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">arc</span><span class="args">(const ofPoint &#xA2;er, float radiusX, float radiusY, float angleBegin, float angleEnd, int circleResolution=20)</span></div><div class="memberDocumentation">
 
+<p>Adds an arc around the ofPoint <code>center</code> with the width of <code>radiusX</code> and the height of <code>radiusY</code>. </p>
+<p>The <code>angleBegin</code> and <code>angleEnd</code> indicate the start and end angles of the arc in degrees measured clockwise from the x-axis.</p>
+<p>Optionally, you can specify <code>circleResolution</code>, which is the number of line segments a circle would be drawn with. A partial arc will be drawn with the same resolution: if circleResolution == 20, a half- circle will be drawn with 10 segments.</p>
+<p>If there are already vertexes in the <a class="el" href="ofPolyline.html">ofPolyline</a> the arc will extend them; a line will be created from the endmost point on the <a class="el" href="ofPolyline.html">ofPolyline</a> to the beginning point of the arc.</p>
+<div class="fragment"><div class="line"><a class="code" href="ofPolyline.html">ofPolyline</a> polyline1, polyline2;</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// draw an line, then an semi-circle in red</span></div>
+<div class="line">polyline2.<a class="code" href="ofPolyline.html#a4c7d5b95780ebf1aefb079f55bcf8d7a">lineTo</a>(300, 50);</div>
+<div class="line"><a class="code" href="ofVec3f.html">ofPoint</a> point2(450,120);</div>
+<div class="line">polyline2.<a class="code" href="ofPolyline.html#a9cd721b87265d0e7b9fa0cd1581f0dd5">arc</a>(point2,100,100,0,180);</div>
+<div class="line"><a class="code" href="of_graphics_8cpp.html#abf32a6859916c39dfe5e4835c725fb6d">ofSetColor</a>(<a class="code" href="ofColor.html#ac367432852af8ffd84574c6bdb6dba74">ofColor::red</a>);</div>
+<div class="line">polyline2.<a class="code" href="ofPolyline.html#a6d415613566855f7460012f48d25a537">draw</a>();</div>
+</div><!-- fragment --><div class="image">
+<img src="images/graphics/ofpolyline_arc.jpg" alt="Arc Example">
+</div>
+ 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">arc</span><span class="args">(float x, float y, float radiusX, float radiusY, float angleBegin, float angleEnd, int circleResolution=20)</span></div><div class="memberDocumentation">
 
+<p>Adds an arc around the coordinates (<code>x</code>,<code>y</code>) with the width of <code>radiusX</code> and the height of <code>radiusY</code>. </p>
+<p>The <code>angleBegin</code> and <code>angleEnd</code> indicate the start and end angles of the arc in degrees measured clockwise from the x-axis.</p>
+<p>Optionally, you can specify <code>circleResolution</code>, which is the number of line segments a circle would be drawn with. </p>
+
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">arc</span><span class="args">(float x, float y, float z, float radiusX, float radiusY, float angleBegin, float angleEnd, int circleResolution=20)</span></div><div class="memberDocumentation">
+
+<p>Adds an arc around the coordinates (<code>x</code>,<code>y</code>,<code>z</code>) with the width of <code>radiusX</code> and the height of <code>radiusY</code>. </p>
+<p>The <code>angleBegin</code> and <code>angleEnd</code> indicate the start and end angles of the arc in degrees measured clockwise from the x-axis.</p>
+<p>Optionally, you can specify <code>circleResolution</code>, which is the number of line segments a circle would be drawn with. </p>
 
 </div></div>
   </div><div id="a79cdf2e59d8666befde309b0cb49f181" class="method">
@@ -226,7 +468,19 @@
 
     <div class="methodDescription" style="display:none" id="a566c26e3765c088511f654b7d9f1f5b2_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">curveTo</span><span class="args">(const ofPoint &amp;to, int curveResolution=20)</span></div><div class="memberDocumentation">
 
+<p>Adds a curve to an ofPoint object passed in. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> angle = 0;</div>
+<div class="line"><span class="keywordflow">while</span> (angle &lt; <a class="code" href="ofConstants.html#a3b947f4b635461030ff2d87833e5049e">TWO_PI</a> ) {</div>
+<div class="line">    b.curveTo( <a class="code" href="ofBaseTypes.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a>(100*cos(angle), 100*sin(angle)));</div>
+<div class="line">    b.curveTo( <a class="code" href="ofBaseTypes.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a>(300*cos(angle), 300*sin(angle)));</div>
+<div class="line">    angle += <a class="code" href="ofConstants.html#a3b947f4b635461030ff2d87833e5049e">TWO_PI</a> / 30;</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>You need at least 4 points to be able to use <a class="el" href="ofPolyline.html#a566c26e3765c088511f654b7d9f1f5b2" title="Adds a curve to an ofPoint object passed in. ">curveTo()</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://en.wikipedia.org/wiki/Centripetal_Catmull%E2%80%93Rom_spline">Catmull-Rom splines wiki</a> </dd></dl>
+
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">curveTo</span><span class="args">(float x, float y, float z=0, int curveResolution=20)</span></div><div class="memberDocumentation">
+
+<p>Adds a curve to the x,y,z points passed in with the optional resolution. </p>
 
 </div></div>
   </div><div id="aaccdc777a1b32940484f1a780acb1492" class="method">
@@ -242,11 +496,21 @@
 
     <div class="methodDescription" style="display:none" id="aaccdc777a1b32940484f1a780acb1492_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">bezierTo</span><span class="args">(const ofPoint &amp;cp1, const ofPoint &amp;cp2, const ofPoint &amp;to, int curveResolution=20)</span></div><div class="memberDocumentation">
 
-<p>cubic bezier </p>
+<p>Adds a cubic bezier line from the current drawing point with the 2 control points indicated by ofPoint cp1 and cp2, that ends at ofPoint to. </p>
+<div class="fragment"><div class="line">line.addVertex(<a class="code" href="ofBaseTypes.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a>(200, 400));</div>
+<div class="line">line.bezierTo(100, 100, 800, 100, 700, 400);</div>
+</div><!-- fragment --> <div class="image">
+<img src="images/bezier.jpg" alt="polyline bezier">
+</div>
+<p> The control points are shown in red. </p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">bezierTo</span><span class="args">(float cx1, float cy1, float cx2, float cy2, float x, float y, int curveResolution=20)</span></div><div class="memberDocumentation">
 
+<p>Adds a cubic bezier line from the current drawing point with the 2 control points indicated by the coordinates cx1, cy1 and cx2, cy2, that ends at the coordinates x, y. </p>
+
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">bezierTo</span><span class="args">(float cx1, float cy1, float cz1, float cx2, float cy2, float cz2, float x, float y, float z, int curveResolution=20)</span></div><div class="memberDocumentation">
+
+<p>Adds a cubic bezier line in 3D space from the current drawing point with the 2 control points indicated by the coordinates cx1, cy1, cz1 and cx2, cy2, cz2, that ends at the coordinates x, y, z. </p>
 
 </div></div>
   </div><div id="a532915efc6f31d1f3968a96026ae20ff" class="method">
@@ -262,14 +526,25 @@
 
     <div class="methodDescription" style="display:none" id="a532915efc6f31d1f3968a96026ae20ff_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">quadBezierTo</span><span class="args">(float cx1, float cy1, float cz1, float cx2, float cy2, float cz2, float x, float y, float z, int curveResolution=20)</span></div><div class="memberDocumentation">
 
-<p>quadratic bezier (lower resolution than cubic) </p>
-
+<p>Adds a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, cz1, the control point at cx2, cy2, cz2, and that ends at the coordinates x, y, z. </p>
+<div class="image">
+<img src="images/graphics/curves.png" alt="polyline curves">
+</div>
+ 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">quadBezierTo</span><span class="args">(const ofPoint &amp;p1, const ofPoint &amp;p2, const ofPoint &amp;p3, int curveResolution=20)</span></div><div class="memberDocumentation">
+
+<p>Adds a quadratic bezier line in 2D space from the current drawing point with the beginning indicated by the point p1, the control point at p2, and that ends at the point p3. </p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">quadBezierTo</span><span class="args">(float cx1, float cy1, float cx2, float cy2, float x, float y, int curveResolution=20)</span></div><div class="memberDocumentation">
 
+<p>Adds a quadratic bezier line in 2D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, the control point at cx2, cy2, and that ends at the coordinates x, y. </p>
+
 </div></div>
-  </div><div id="a210cb3ce4ff24dbc32204e98f4ab6c6d" class="method">
+  </div></div>
+  </div><div id="SmoothingandResampling">
+    <h3 class="sectionHeader">Smoothing and Resampling</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a210cb3ce4ff24dbc32204e98f4ab6c6d" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a210cb3ce4ff24dbc32204e98f4ab6c6d&quot;)">
         <span class="type"></span>
@@ -281,6 +556,9 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a210cb3ce4ff24dbc32204e98f4ab6c6d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPolyline.html">ofPolyline</a> </span><span class="name">getSmoothed</span><span class="args">(int smoothingSize, float smoothingShape=0) const </span></div><div class="memberDocumentation">
+
+<p>Gets a smoothed version of the <a class="el" href="ofPolyline.html">ofPolyline</a>. </p>
+<p><code>smoothingSize</code> is the size of the smoothing window. So if <code>smoothingSize</code> is 2, then 2 points from the left, 1 in the center, and 2 on the right (5 total) will be used for smoothing each point. <code>smoothingShape</code> describes whether to use a triangular window (0) or box window (1) or something in between (for example, .5). </p>
 
 </div></div>
   </div><div id="a0987281d3104d0d3a5d820972e7f3a0f" class="method">
@@ -296,6 +574,14 @@
 
     <div class="methodDescription" style="display:none" id="a0987281d3104d0d3a5d820972e7f3a0f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPolyline.html">ofPolyline</a> </span><span class="name">getResampledBySpacing</span><span class="args">(float spacing) const </span></div><div class="memberDocumentation">
 
+<p>Resamples the line based on the spacing passed in. The larger the spacing, the more points will be eliminated. </p>
+<div class="fragment"><div class="line">line.draw();</div>
+<div class="line"><a class="code" href="of_graphics_8cpp.html#af8406ae299b6ddfe7c4885eefae8c48a">ofTranslate</a>(400, 0);</div>
+<div class="line">line.getResampledBySpacing(100).draw();</div>
+</div><!-- fragment --> <div class="image">
+<img src="images/graphics/resample.jpg" alt="polyline resample">
+</div>
+ 
 </div></div>
   </div><div id="a9356891853d247bfb7ecb6fce9226ecb" class="method">
     <div class="methodHeader">
@@ -310,49 +596,8 @@
 
     <div class="methodDescription" style="display:none" id="a9356891853d247bfb7ecb6fce9226ecb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPolyline.html">ofPolyline</a> </span><span class="name">getResampledByCount</span><span class="args">(int count) const </span></div><div class="memberDocumentation">
 
-</div></div>
-  </div><div id="a99254796152ccddebb114dc743a11f7c" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a99254796152ccddebb114dc743a11f7c&quot;)">
-        <span class="type"></span>
-        <a class="name">getBoundingBox</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a99254796152ccddebb114dc743a11f7c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofRectangle.html">ofRectangle</a> </span><span class="name">getBoundingBox</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a635a23041c5458fc958b7856ec1c849c" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a635a23041c5458fc958b7856ec1c849c&quot;)">
-        <span class="type"></span>
-        <a class="name">getClosestPoint</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a635a23041c5458fc958b7856ec1c849c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">getClosestPoint</span><span class="args">(const ofPoint &amp;target, unsigned int *nearestIndex=NULL) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a8d10c5c4bd02dc66fc6836de10901768" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8d10c5c4bd02dc66fc6836de10901768&quot;)">
-        <span class="type"></span>
-        <a class="name">inside</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a8d10c5c4bd02dc66fc6836de10901768_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">inside</span><span class="args">(float x, float y) const </span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type">bool </span><span class="name">inside</span><span class="args">(const ofPoint &amp;p) const </span></div><div class="memberDocumentation">
+<p>Resamples the line based on the count passed in. The lower the count passed in, the more points will be eliminated. </p>
+<p>This doesn&apos;t add new points to the line. </p>
 
 </div></div>
   </div><div id="ab5fcfc5805b9d37836d829ecc5ddd28f" class="method">
@@ -368,163 +613,33 @@
 
     <div class="methodDescription" style="display:none" id="ab5fcfc5805b9d37836d829ecc5ddd28f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">simplify</span><span class="args">(float tolerance=0.3f)</span></div><div class="memberDocumentation">
 
+<p>Simplifies the polyline, removing un-necessary vertices. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tolerance</td><td>determines how dis-similar points need to be to stay in the line. Higher tolerance means more points removed, lower tolerance means less points removed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div></div>
-  </div><div id="ad88dd26a8298d54abb9dd3b1f55d00f8" class="method">
+  </div></div>
+  </div><div id="PolylineState">
+    <h3 class="sectionHeader">Polyline State</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a1de14888c9c361bbe772789a69dd5e45" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad88dd26a8298d54abb9dd3b1f55d00f8&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1de14888c9c361bbe772789a69dd5e45&quot;)">
         <span class="type"></span>
-        <a class="name">size</a>
+        <a class="name">close</a>
         <span class="args"></span>
         <span class="kind">()</span>
         <span class="note"></span>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="ad88dd26a8298d54abb9dd3b1f55d00f8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">size_t </span><span class="name">size</span><span class="args">() const </span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a1de14888c9c361bbe772789a69dd5e45_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">close</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>points vector access </p>
-
-</div></div>
-  </div><div id="a2ad4d76dc14ddaa777e5326466bc43ef" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2ad4d76dc14ddaa777e5326466bc43ef&quot;)">
-        <span class="type"></span>
-        <a class="name">operator[]</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a2ad4d76dc14ddaa777e5326466bc43ef_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">operator[]</span><span class="args">(int index) const </span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">operator[]</span><span class="args">(int index)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a49e172bae1f49fce0b763fe05b33c53e" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a49e172bae1f49fce0b763fe05b33c53e&quot;)">
-        <span class="type"></span>
-        <a class="name">resize</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a49e172bae1f49fce0b763fe05b33c53e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">resize</span><span class="args">(size_t size)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a802b0d169de8df5196c01d42f8fe5eac" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a802b0d169de8df5196c01d42f8fe5eac&quot;)">
-        <span class="type"></span>
-        <a class="name">begin</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a802b0d169de8df5196c01d42f8fe5eac_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">begin</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a45102a0a5ce470d325951a6a9356738e" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a45102a0a5ce470d325951a6a9356738e&quot;)">
-        <span class="type"></span>
-        <a class="name">end</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a45102a0a5ce470d325951a6a9356738e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">end</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a83d1542473a479905b12aa1889923c3f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a83d1542473a479905b12aa1889923c3f&quot;)">
-        <span class="type"></span>
-        <a class="name">begin</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a83d1542473a479905b12aa1889923c3f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">begin</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a66fb9f49511a0f2b379f446b6a029099" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a66fb9f49511a0f2b379f446b6a029099&quot;)">
-        <span class="type"></span>
-        <a class="name">end</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a66fb9f49511a0f2b379f446b6a029099_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">end</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ae0fbc2e6bc72ca8581f1f94b538cc076" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae0fbc2e6bc72ca8581f1f94b538cc076&quot;)">
-        <span class="type"></span>
-        <a class="name">rbegin</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ae0fbc2e6bc72ca8581f1f94b538cc076_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">rbegin</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a03bbf99ccc826413481fbd32dda50a54" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a03bbf99ccc826413481fbd32dda50a54&quot;)">
-        <span class="type"></span>
-        <a class="name">rend</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a03bbf99ccc826413481fbd32dda50a54_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">rend</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ac96b28c4fb42358e5b708b2b621d10b2" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac96b28c4fb42358e5b708b2b621d10b2&quot;)">
-        <span class="type"></span>
-        <a class="name">rbegin</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ac96b28c4fb42358e5b708b2b621d10b2_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">rbegin</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aa5b8f0cb850d5ee5a95b66c6efcae9e8" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa5b8f0cb850d5ee5a95b66c6efcae9e8&quot;)">
-        <span class="type"></span>
-        <a class="name">rend</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa5b8f0cb850d5ee5a95b66c6efcae9e8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">rend</span><span class="args">() const </span></div><div class="memberDocumentation">
+<p>Closes the <a class="el" href="ofPolyline.html">ofPolyline</a>, meaning that all the vertices will be linked and can be &quot;walked&quot;. </p>
 
 </div></div>
   </div><div id="a2b7d22e0d3c5dfed22ebefcd7e79c35f" class="method">
@@ -540,7 +655,7 @@
 
     <div class="methodDescription" style="display:none" id="a2b7d22e0d3c5dfed22ebefcd7e79c35f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setClosed</span><span class="args">(bool tf)</span></div><div class="memberDocumentation">
 
-<p>closed </p>
+<p>Closes the <a class="el" href="ofPolyline.html">ofPolyline</a>, meaning that all the vertices will be linked and can be &quot;walked&quot;. </p>
 
 </div></div>
   </div><div id="a166b386bb2b1bd7225e05ff67528cd2a" class="method">
@@ -557,20 +672,6 @@
     <div class="methodDescription" style="display:none" id="a166b386bb2b1bd7225e05ff67528cd2a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">isClosed</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="a1de14888c9c361bbe772789a69dd5e45" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1de14888c9c361bbe772789a69dd5e45&quot;)">
-        <span class="type"></span>
-        <a class="name">close</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a1de14888c9c361bbe772789a69dd5e45_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">close</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
   </div><div id="abd08a523635b4a9203fb08a1447e9e38" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#abd08a523635b4a9203fb08a1447e9e38&quot;)">
@@ -583,6 +684,8 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="abd08a523635b4a9203fb08a1447e9e38_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">hasChanged</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Returns whether the vertices within the line have changed. </p>
 
 </div></div>
   </div><div id="ae2b523cd1d6fb0d422a7f791cd6b3f99" class="method">
@@ -599,20 +702,44 @@
     <div class="methodDescription" style="display:none" id="ae2b523cd1d6fb0d422a7f791cd6b3f99_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">flagHasChanged</span><span class="args">()</span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="a193202a0774fe5509f3b90827201fe8a" class="method">
+  </div></div>
+  </div><div id="GeometricFunctions">
+    <h3 class="sectionHeader">Geometric Functions</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a8d10c5c4bd02dc66fc6836de10901768" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a193202a0774fe5509f3b90827201fe8a&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8d10c5c4bd02dc66fc6836de10901768&quot;)">
         <span class="type"></span>
-        <a class="name">getVertices</a>
+        <a class="name">inside</a>
         <span class="args"></span>
         <span class="kind">()</span>
         <span class="note"></span>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a193202a0774fe5509f3b90827201fe8a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">getVertices</span><span class="args">()</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a8d10c5c4bd02dc66fc6836de10901768_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">inside</span><span class="args">(float x, float y) const </span></div><div class="memberDocumentation">
 
-</div><hr><div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">getVertices</span><span class="args">() const </span></div><div class="memberDocumentation">
+<p>Tests whether the x,y coordinates are within a closed <a class="el" href="ofPolyline.html">ofPolyline</a>. </p>
+
+</div><hr><div class="memberVariant"><span class="type">bool </span><span class="name">inside</span><span class="args">(const ofPoint &amp;p) const </span></div><div class="memberDocumentation">
+
+<p>Tests whether the ofPoint is within a closed <a class="el" href="ofPolyline.html">ofPolyline</a>. </p>
+
+</div></div>
+  </div><div id="a99254796152ccddebb114dc743a11f7c" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a99254796152ccddebb114dc743a11f7c&quot;)">
+        <span class="type"></span>
+        <a class="name">getBoundingBox</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a99254796152ccddebb114dc743a11f7c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofRectangle.html">ofRectangle</a> </span><span class="name">getBoundingBox</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Get the bounding box of the polyline , taking into account all the points to determine the extents of the polyline. </p>
 
 </div></div>
   </div><div id="adbf01c8cdc85d3f1d88b2bc985498159" class="method">
@@ -628,6 +755,8 @@
 
     <div class="methodDescription" style="display:none" id="adbf01c8cdc85d3f1d88b2bc985498159_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getPerimeter</span><span class="args">() const </span></div><div class="memberDocumentation">
 
+<p>Gets the size of the perimeter of the polyline, good for determining length of the line, rather than just the bounding box shape. </p>
+
 </div></div>
   </div><div id="af6b1b7fc338691bcc897329f2f5137a6" class="method">
     <div class="methodHeader">
@@ -641,6 +770,8 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="af6b1b7fc338691bcc897329f2f5137a6_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getArea</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Gets the precise area bounded by the line. </p>
 
 </div></div>
   </div><div id="a95c7c97460efb5f91e752ec05dac7897" class="method">
@@ -656,19 +787,305 @@
 
     <div class="methodDescription" style="display:none" id="a95c7c97460efb5f91e752ec05dac7897_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">getCentroid2D</span><span class="args">() const </span></div><div class="memberDocumentation">
 
+<p>Get the center of the area bounded by the line. </p>
+
 </div></div>
-  </div><div id="a6d415613566855f7460012f48d25a537" class="method">
+  </div><div id="a635a23041c5458fc958b7856ec1c849c" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6d415613566855f7460012f48d25a537&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a635a23041c5458fc958b7856ec1c849c&quot;)">
         <span class="type"></span>
-        <a class="name">draw</a>
+        <a class="name">getClosestPoint</a>
         <span class="args"></span>
         <span class="kind">()</span>
         <span class="note"></span>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a6d415613566855f7460012f48d25a537_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">() const </span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a635a23041c5458fc958b7856ec1c849c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">getClosestPoint</span><span class="args">(const ofPoint &amp;target, unsigned int *nearestIndex=NULL) const </span></div><div class="memberDocumentation">
+
+<p>Gets the point on the line closest to the target. You can also optionally pass a pointer to/address of an unsigned int to get the index of the closest vertex. </p>
+
+</div></div>
+  </div><div id="ab4c8495d2bee752b9c4054ea5776cf80" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab4c8495d2bee752b9c4054ea5776cf80&quot;)">
+        <span class="type"></span>
+        <a class="name">inside</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ab4c8495d2bee752b9c4054ea5776cf80_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">inside</span><span class="args">(float x, float y, const ofPolyline &amp;polyline)</span></div><div class="memberDocumentation">
+
+<p>Tests whether the x,y coordinates are within a closed <a class="el" href="ofPolyline.html">ofPolyline</a>. </p>
+
+</div><hr><div class="memberVariant"><span class="type">bool </span><span class="name">inside</span><span class="args">(const ofPoint &amp;p, const ofPolyline &amp;polyline)</span></div><div class="memberDocumentation">
+
+<p>Tests whether the ofPoint is within a closed <a class="el" href="ofPolyline.html">ofPolyline</a>. </p>
+
+</div></div>
+  </div></div>
+  </div><div id="OtherFunctions">
+    <h3 class="sectionHeader">Other Functions</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a1438a222bebc830c432c08596082bc94" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1438a222bebc830c432c08596082bc94&quot;)">
+        <span class="type"></span>
+        <a class="name">getIndexAtLength</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a1438a222bebc830c432c08596082bc94_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getIndexAtLength</span><span class="args">(float f) const </span></div><div class="memberDocumentation">
+
+<p>Get (interpolated) index at given length along the path. </p>
+<p>Includes info on percentage along segment, e.g. <code>ret=5.75</code> =&gt; 75% along the path between 5th and 6th points </p>
+
+</div></div>
+  </div><div id="aca299cdaacbe35c3e969d5d8c1b51b6c" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aca299cdaacbe35c3e969d5d8c1b51b6c&quot;)">
+        <span class="type"></span>
+        <a class="name">getIndexAtPercent</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aca299cdaacbe35c3e969d5d8c1b51b6c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getIndexAtPercent</span><span class="args">(float f) const </span></div><div class="memberDocumentation">
+
+<p>Get (interpolated) index at given percentage along the path. </p>
+<p>Includes info on percentage along segment, e.g. <code>ret=5.75</code> =&gt; 75% along the path between 5th and 6th points </p>
+
+</div></div>
+  </div><div id="afda6a7e35eeef92e57c6e9e00e712d2f" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#afda6a7e35eeef92e57c6e9e00e712d2f&quot;)">
+        <span class="type"></span>
+        <a class="name">getLengthAtIndex</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="afda6a7e35eeef92e57c6e9e00e712d2f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getLengthAtIndex</span><span class="args">(int index) const </span></div><div class="memberDocumentation">
+
+<p>Get length along path at index. </p>
+
+</div></div>
+  </div><div id="ae8174ffb2486f8f2558d4b237c8f60e7" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae8174ffb2486f8f2558d4b237c8f60e7&quot;)">
+        <span class="type"></span>
+        <a class="name">getLengthAtIndexInterpolated</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ae8174ffb2486f8f2558d4b237c8f60e7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getLengthAtIndexInterpolated</span><span class="args">(float findex) const </span></div><div class="memberDocumentation">
+
+<p>Get length along path at interpolated index (e.g. <code>f=5.75</code> =&gt; 75% along the path between 5th and 6th points) </p>
+
+</div></div>
+  </div><div id="ad1273aba9390bdfc92dc22007ec17a76" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad1273aba9390bdfc92dc22007ec17a76&quot;)">
+        <span class="type"></span>
+        <a class="name">getPointAtLength</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ad1273aba9390bdfc92dc22007ec17a76_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">getPointAtLength</span><span class="args">(float f) const </span></div><div class="memberDocumentation">
+
+<p>Get point long the path at a given length (e.g. <code>f=150</code> =&gt; 150 units along the path) </p>
+
+</div></div>
+  </div><div id="a37ceb4a7bd30ee829a88a3f4f140eafe" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a37ceb4a7bd30ee829a88a3f4f140eafe&quot;)">
+        <span class="type"></span>
+        <a class="name">getPointAtPercent</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a37ceb4a7bd30ee829a88a3f4f140eafe_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">getPointAtPercent</span><span class="args">(float f) const </span></div><div class="memberDocumentation">
+
+<p>Get point along the path at a given percentage (e.g. <code>f=0.25</code> =&gt; 25% along the path) </p>
+
+</div></div>
+  </div><div id="a9dd4cdc0902517dea9e5111fa0844adb" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9dd4cdc0902517dea9e5111fa0844adb&quot;)">
+        <span class="type"></span>
+        <a class="name">getPointAtIndexInterpolated</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a9dd4cdc0902517dea9e5111fa0844adb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">getPointAtIndexInterpolated</span><span class="args">(float findex) const </span></div><div class="memberDocumentation">
+
+<p>Get point along the path at interpolated index (e.g. <code>f=5.75</code> =&gt; 75% along the path between 5th and 6th points) </p>
+
+</div></div>
+  </div><div id="aeccc459317884111a98da76df6f0405b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aeccc459317884111a98da76df6f0405b&quot;)">
+        <span class="type"></span>
+        <a class="name">getAngleAtIndex</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aeccc459317884111a98da76df6f0405b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getAngleAtIndex</span><span class="args">(int index) const </span></div><div class="memberDocumentation">
+
+<p>Get angle (degrees) of the path at index. </p>
+
+</div></div>
+  </div><div id="aaa29b1f5bce663ab90aaa7a46870b77c" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aaa29b1f5bce663ab90aaa7a46870b77c&quot;)">
+        <span class="type"></span>
+        <a class="name">getAngleAtIndexInterpolated</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aaa29b1f5bce663ab90aaa7a46870b77c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getAngleAtIndexInterpolated</span><span class="args">(float findex) const </span></div><div class="memberDocumentation">
+
+<p>Get angle (degrees) at interpolated index (interpolated between neighboring indices) </p>
+
+</div></div>
+  </div><div id="ab8b2974144ee3f4e3a5f06c661b092ab" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab8b2974144ee3f4e3a5f06c661b092ab&quot;)">
+        <span class="type"></span>
+        <a class="name">getRotationAtIndex</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ab8b2974144ee3f4e3a5f06c661b092ab_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getRotationAtIndex</span><span class="args">(int index) const </span></div><div class="memberDocumentation">
+
+<p>Get rotation vector at index (magnitude is sin of angle) </p>
+
+</div></div>
+  </div><div id="ac759341115effbf3234a73d161729f10" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac759341115effbf3234a73d161729f10&quot;)">
+        <span class="type"></span>
+        <a class="name">getRotationAtIndexInterpolated</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ac759341115effbf3234a73d161729f10_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getRotationAtIndexInterpolated</span><span class="args">(float findex) const </span></div><div class="memberDocumentation">
+
+<p>Get rotation vector at interpolated index (interpolated between neighboring indices) (magnitude is sin of angle) </p>
+
+</div></div>
+  </div><div id="aef401c1ace69cd969a8eb339b2e4225c" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aef401c1ace69cd969a8eb339b2e4225c&quot;)">
+        <span class="type"></span>
+        <a class="name">getTangentAtIndex</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aef401c1ace69cd969a8eb339b2e4225c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getTangentAtIndex</span><span class="args">(int index) const </span></div><div class="memberDocumentation">
+
+<p>Get tangent vector at index. </p>
+
+</div></div>
+  </div><div id="a105f490faa3aeb504f8e439f13646859" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a105f490faa3aeb504f8e439f13646859&quot;)">
+        <span class="type"></span>
+        <a class="name">getTangentAtIndexInterpolated</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a105f490faa3aeb504f8e439f13646859_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getTangentAtIndexInterpolated</span><span class="args">(float findex) const </span></div><div class="memberDocumentation">
+
+<p>Get tangent vector at interpolated index (interpolated between neighboring indices) </p>
+
+</div></div>
+  </div><div id="aa63d7ccb1eae31feaa16ddfafe28595b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa63d7ccb1eae31feaa16ddfafe28595b&quot;)">
+        <span class="type"></span>
+        <a class="name">getNormalAtIndex</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aa63d7ccb1eae31feaa16ddfafe28595b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getNormalAtIndex</span><span class="args">(int index) const </span></div><div class="memberDocumentation">
+
+<p>Get normal vector at index. </p>
+
+</div></div>
+  </div><div id="a4eddc4b543100b15388a33d62e7cc8a4" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4eddc4b543100b15388a33d62e7cc8a4&quot;)">
+        <span class="type"></span>
+        <a class="name">getNormalAtIndexInterpolated</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a4eddc4b543100b15388a33d62e7cc8a4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getNormalAtIndexInterpolated</span><span class="args">(float findex) const </span></div><div class="memberDocumentation">
+
+<p>Get normal vector at interpolated index (interpolated between neighboring indices) </p>
+
+</div></div>
+  </div><div id="aff40c0656eea2064a2e2a2fd1d64fc1c" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aff40c0656eea2064a2e2a2fd1d64fc1c&quot;)">
+        <span class="type"></span>
+        <a class="name">getWrappedIndex</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aff40c0656eea2064a2e2a2fd1d64fc1c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getWrappedIndex</span><span class="args">(int index) const </span></div><div class="memberDocumentation">
+
+<p>Get wrapped index depending on whether poly is closed or not. </p>
 
 </div></div>
   </div><div id="a21af340a3554e972843e343cb1ad119e" class="method">
@@ -699,262 +1116,25 @@
     <div class="methodDescription" style="display:none" id="a3b055ecaca7740143cf64e70a3a0c01f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getRightVector</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="a1438a222bebc830c432c08596082bc94" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1438a222bebc830c432c08596082bc94&quot;)">
-        <span class="type"></span>
-        <a class="name">getIndexAtLength</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a1438a222bebc830c432c08596082bc94_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getIndexAtLength</span><span class="args">(float f) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aca299cdaacbe35c3e969d5d8c1b51b6c" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aca299cdaacbe35c3e969d5d8c1b51b6c&quot;)">
-        <span class="type"></span>
-        <a class="name">getIndexAtPercent</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aca299cdaacbe35c3e969d5d8c1b51b6c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getIndexAtPercent</span><span class="args">(float f) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="afda6a7e35eeef92e57c6e9e00e712d2f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#afda6a7e35eeef92e57c6e9e00e712d2f&quot;)">
-        <span class="type"></span>
-        <a class="name">getLengthAtIndex</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="afda6a7e35eeef92e57c6e9e00e712d2f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getLengthAtIndex</span><span class="args">(int index) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ae8174ffb2486f8f2558d4b237c8f60e7" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae8174ffb2486f8f2558d4b237c8f60e7&quot;)">
-        <span class="type"></span>
-        <a class="name">getLengthAtIndexInterpolated</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ae8174ffb2486f8f2558d4b237c8f60e7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getLengthAtIndexInterpolated</span><span class="args">(float findex) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ad1273aba9390bdfc92dc22007ec17a76" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad1273aba9390bdfc92dc22007ec17a76&quot;)">
-        <span class="type"></span>
-        <a class="name">getPointAtLength</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ad1273aba9390bdfc92dc22007ec17a76_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">getPointAtLength</span><span class="args">(float f) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a37ceb4a7bd30ee829a88a3f4f140eafe" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a37ceb4a7bd30ee829a88a3f4f140eafe&quot;)">
-        <span class="type"></span>
-        <a class="name">getPointAtPercent</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a37ceb4a7bd30ee829a88a3f4f140eafe_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">getPointAtPercent</span><span class="args">(float f) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a9dd4cdc0902517dea9e5111fa0844adb" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9dd4cdc0902517dea9e5111fa0844adb&quot;)">
-        <span class="type"></span>
-        <a class="name">getPointAtIndexInterpolated</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a9dd4cdc0902517dea9e5111fa0844adb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1a0e9c5f9596918593de99ee1bd275476f">ofPoint</a> </span><span class="name">getPointAtIndexInterpolated</span><span class="args">(float findex) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aeccc459317884111a98da76df6f0405b" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aeccc459317884111a98da76df6f0405b&quot;)">
-        <span class="type"></span>
-        <a class="name">getAngleAtIndex</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aeccc459317884111a98da76df6f0405b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getAngleAtIndex</span><span class="args">(int index) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aaa29b1f5bce663ab90aaa7a46870b77c" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aaa29b1f5bce663ab90aaa7a46870b77c&quot;)">
-        <span class="type"></span>
-        <a class="name">getAngleAtIndexInterpolated</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aaa29b1f5bce663ab90aaa7a46870b77c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getAngleAtIndexInterpolated</span><span class="args">(float findex) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ab8b2974144ee3f4e3a5f06c661b092ab" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab8b2974144ee3f4e3a5f06c661b092ab&quot;)">
-        <span class="type"></span>
-        <a class="name">getRotationAtIndex</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ab8b2974144ee3f4e3a5f06c661b092ab_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getRotationAtIndex</span><span class="args">(int index) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ac759341115effbf3234a73d161729f10" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac759341115effbf3234a73d161729f10&quot;)">
-        <span class="type"></span>
-        <a class="name">getRotationAtIndexInterpolated</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ac759341115effbf3234a73d161729f10_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getRotationAtIndexInterpolated</span><span class="args">(float findex) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aef401c1ace69cd969a8eb339b2e4225c" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aef401c1ace69cd969a8eb339b2e4225c&quot;)">
-        <span class="type"></span>
-        <a class="name">getTangentAtIndex</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aef401c1ace69cd969a8eb339b2e4225c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getTangentAtIndex</span><span class="args">(int index) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a105f490faa3aeb504f8e439f13646859" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a105f490faa3aeb504f8e439f13646859&quot;)">
-        <span class="type"></span>
-        <a class="name">getTangentAtIndexInterpolated</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a105f490faa3aeb504f8e439f13646859_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getTangentAtIndexInterpolated</span><span class="args">(float findex) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aa63d7ccb1eae31feaa16ddfafe28595b" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa63d7ccb1eae31feaa16ddfafe28595b&quot;)">
-        <span class="type"></span>
-        <a class="name">getNormalAtIndex</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa63d7ccb1eae31feaa16ddfafe28595b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getNormalAtIndex</span><span class="args">(int index) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a4eddc4b543100b15388a33d62e7cc8a4" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4eddc4b543100b15388a33d62e7cc8a4&quot;)">
-        <span class="type"></span>
-        <a class="name">getNormalAtIndexInterpolated</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a4eddc4b543100b15388a33d62e7cc8a4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getNormalAtIndexInterpolated</span><span class="args">(float findex) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aff40c0656eea2064a2e2a2fd1d64fc1c" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aff40c0656eea2064a2e2a2fd1d64fc1c&quot;)">
-        <span class="type"></span>
-        <a class="name">getWrappedIndex</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aff40c0656eea2064a2e2a2fd1d64fc1c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getWrappedIndex</span><span class="args">(int index) const </span></div><div class="memberDocumentation">
-
-</div></div>
   </div></div>
-  </div><div id="StaticFunctions">
-    <h3 class="sectionHeader">Static Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a8e8213a2ad5b9ddc293d9708a5296009" class="method">
+  </div><div id="Drawing">
+    <h3 class="sectionHeader">Drawing</h3>
+    <div class="sectionDescription"><p>&#xA0; </p>
+</div>
+    <div class="sectionContent"><div id="a6d415613566855f7460012f48d25a537" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8e8213a2ad5b9ddc293d9708a5296009&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6d415613566855f7460012f48d25a537&quot;)">
         <span class="type"></span>
-        <a class="name">fromRectangle</a>
+        <a class="name">draw</a>
         <span class="args"></span>
         <span class="kind">()</span>
         <span class="note"></span>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a8e8213a2ad5b9ddc293d9708a5296009_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPolyline.html">ofPolyline</a> </span><span class="name">fromRectangle</span><span class="args">(const ofRectangle &amp;rect)</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a6d415613566855f7460012f48d25a537_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-</div></div>
-  </div><div id="ab4c8495d2bee752b9c4054ea5776cf80" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab4c8495d2bee752b9c4054ea5776cf80&quot;)">
-        <span class="type"></span>
-        <a class="name">inside</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ab4c8495d2bee752b9c4054ea5776cf80_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">inside</span><span class="args">(float x, float y, const ofPolyline &amp;polyline)</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type">bool </span><span class="name">inside</span><span class="args">(const ofPoint &amp;p, const ofPolyline &amp;polyline)</span></div><div class="memberDocumentation">
+<p>Draw the line using the current renderer. </p>
 
 </div></div>
   </div></div>

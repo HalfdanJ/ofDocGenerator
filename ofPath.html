@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <span class="class">ofPath::Command</span><li class="chapter"><a href="#Types">Types</a></li><li class="chapter"><a href="#Attributes">Attributes</a></li><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofPath</span><li class="chapter"><a href="#Types">Types</a></li><li class="chapter"><a href="#Functions">Functions</a></li></ul>
+        <span class="class">ofPath::Command</span><li class="chapter"><a href="#Types">Types</a></li><li class="chapter"><a href="#Attributes">Attributes</a></li><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofPath</span><li class="chapter"><a href="#Createandremovepathsandsubpaths">Create and remove paths and sub paths</a></li><li class="chapter"><a href="#Subpaths">Sub paths</a></li><li class="chapter"><a href="#WindingMode">Winding Mode</a></li><li class="chapter"><a href="#DrawingMode">Drawing Mode</a></li><li class="chapter"><a href="#Drawing">Drawing</a></li><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#PathMode">Path Mode</a></li><li class="chapter"><a href="#PathCommands">Path Commands</a></li><li class="chapter"><a href="#Types">Types</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -263,33 +263,17 @@
     <div class="classHeader">
       <h1 class="classTitle">ofPath<small>class</small></h1>
     </div>
-    <div class="classDescription"></div>
-    <div class="classMethods"><div id="Types">
-    <h3 class="sectionHeader">Types</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="aa20ad057e28b19dfa200361fba0bb343" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa20ad057e28b19dfa200361fba0bb343&quot;)">
-        <span class="type"></span>
-        <a class="name">Mode</a>
-        <span class="args"></span>
-        <span class="kind">enum</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa20ad057e28b19dfa200361fba0bb343_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">Mode</span><span class="args"></span></div><div class="memberDocumentation">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="aa20ad057e28b19dfa200361fba0bb343a763df1901ccbc234ab1207896ab69eec"></a>COMMANDS</em>&#xA0;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="aa20ad057e28b19dfa200361fba0bb343a8d1ec0889c2c552c7638db8355fcca95"></a>POLYLINES</em>&#xA0;</td><td class="fielddoc">
-</td></tr>
-</table>
-
-</div></div>
-  </div></div>
-  </div><div id="Functions">
-    <h3 class="sectionHeader">Functions</h3>
+    <div class="classDescription"><div class="textblock"><p><a class="el" href="ofPath.html" title="ofPath is a way to create a path or multiple paths consisting of points. It allows you to combine mul...">ofPath</a> is a way to create a path or multiple paths consisting of points. It allows you to combine multiple paths consisting of points into a single vector data object that can be drawn to the screen, manipulated point by point, or manipulated with it&apos;s child subpaths. It is better at representing and manipulating complex shapes than the <a class="el" href="ofPolyline.html">ofPolyline</a> and more easily represents multiple child lines or shapes as either ofSubPath or <a class="el" href="ofPolyline.html">ofPolyline</a> instances. By default <a class="el" href="ofPath.html" title="ofPath is a way to create a path or multiple paths consisting of points. It allows you to combine mul...">ofPath</a> uses ofSubPath instances. Closing the path automatically creates a new path: </p>
+<div class="fragment"><div class="line"><span class="keywordflow">for</span>( <span class="keywordtype">int</span> i = 0; i &lt; 5; i++) {</div>
+<div class="line">    <span class="comment">// create a new ofSubPath</span></div>
+<div class="line">    path.arc( i * 50 + 20, i * 50 + 20, i * 40 + 10, i * 40 + 10, 0, 360); </div>
+<div class="line">    path.close();</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>To use <a class="el" href="ofPolyline.html">ofPolyline</a> instances, simply set the mode to POLYLINES</p>
+<div class="fragment"><div class="line">path.setMode(<a class="code" href="ofPath.html#aa20ad057e28b19dfa200361fba0bb343a8d1ec0889c2c552c7638db8355fcca95">POLYLINES</a>);</div>
+</div><!-- fragment --> </div></div>
+    <div class="classMethods"><div id="Createandremovepathsandsubpaths">
+    <h3 class="sectionHeader">Create and remove paths and sub paths</h3>
     <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="abf008d9a4e5d2ba92e5046286acebe29" class="method">
     <div class="methodHeader">
@@ -303,6 +287,8 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="abf008d9a4e5d2ba92e5046286acebe29_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofPath</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Create a new <a class="el" href="ofPath.html" title="ofPath is a way to create a path or multiple paths consisting of points. It allows you to combine mul...">ofPath</a> instance. </p>
 
 </div></div>
   </div><div id="a52ee0333f743cc11c4d450cac3fe60b4" class="method">
@@ -318,6 +304,8 @@
 
     <div class="methodDescription" style="display:none" id="a52ee0333f743cc11c4d450cac3fe60b4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clear</span><span class="args">()</span></div><div class="memberDocumentation">
 
+<p>Remove all subpaths from the <a class="el" href="ofPath.html" title="ofPath is a way to create a path or multiple paths consisting of points. It allows you to combine mul...">ofPath</a> instance. </p>
+
 </div></div>
   </div><div id="abfe7284268e42ffcea066c9ffbe9a596" class="method">
     <div class="methodHeader">
@@ -331,6 +319,8 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="abfe7284268e42ffcea066c9ffbe9a596_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">newSubPath</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Create a new subpath, either an <a class="el" href="ofPolyline.html">ofPolyline</a> instance or an ofSubPath instance. All points added after a call to ofSubPath will be done in the newly created subpath. Calling <a class="el" href="ofPath.html#a01ecb50374aa3158db59186684b3e781" title="Close the current subpath and create a new subpath, either an ofPolyline or ofSubPath by calling newS...">close()</a> automatically calls create <a class="el" href="ofPath.html#abfe7284268e42ffcea066c9ffbe9a596" title="Create a new subpath, either an ofPolyline instance or an ofSubPath instance. All points added after ...">newSubPath()</a>, ensuring that the closed path doesn&apos;t have new points added to it. </p>
 
 </div></div>
   </div><div id="a01ecb50374aa3158db59186684b3e781" class="method">
@@ -346,8 +336,15 @@
 
     <div class="methodDescription" style="display:none" id="a01ecb50374aa3158db59186684b3e781_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">close</span><span class="args">()</span></div><div class="memberDocumentation">
 
+<p>Close the current subpath and create a new subpath, either an <a class="el" href="ofPolyline.html">ofPolyline</a> or ofSubPath by calling <a class="el" href="ofPath.html#abfe7284268e42ffcea066c9ffbe9a596" title="Create a new subpath, either an ofPolyline instance or an ofSubPath instance. All points added after ...">newSubPath()</a>, ensuring that the closed path doesn&apos;t have new points added to it. </p>
+
 </div></div>
-  </div><div id="aebe447c51e0a62dc3dba6355cea6c587" class="method">
+  </div></div>
+  </div><div id="Subpaths">
+    <h3 class="sectionHeader">Sub paths</h3>
+    <div class="sectionDescription"><p>&#xA0; </p>
+</div>
+    <div class="sectionContent"><div id="aebe447c51e0a62dc3dba6355cea6c587" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aebe447c51e0a62dc3dba6355cea6c587&quot;)">
         <span class="type"></span>
@@ -360,9 +357,15 @@
 
     <div class="methodDescription" style="display:none" id="aebe447c51e0a62dc3dba6355cea6c587_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">lineTo</span><span class="args">(const ofPoint &amp;p)</span></div><div class="memberDocumentation">
 
+<p>Draw a straight line from the current drawing position to the location indicated by p. </p>
+
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">lineTo</span><span class="args">(float x, float y)</span></div><div class="memberDocumentation">
 
+<p>Draw a straight line from the current drawing position to the location indicated by x,y. </p>
+
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">lineTo</span><span class="args">(float x, float y, float z)</span></div><div class="memberDocumentation">
+
+<p>Draw a straight line from the current drawing position to the location indicated by x,y,z. </p>
 
 </div></div>
   </div><div id="a4bee384547bd5540dd79da32dca4d829" class="method">
@@ -378,7 +381,11 @@
 
     <div class="methodDescription" style="display:none" id="a4bee384547bd5540dd79da32dca4d829_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">moveTo</span><span class="args">(const ofPoint &amp;p)</span></div><div class="memberDocumentation">
 
+<p>Move the drawing position to p. This means that a subsequent calls to, for instance, <a class="el" href="ofPath.html#aebe447c51e0a62dc3dba6355cea6c587" title="Draw a straight line from the current drawing position to the location indicated by p...">lineTo()</a> or <a class="el" href="ofPath.html#a7b5e77990781a76bdf99074205ba5669" title="Draws a curve to p from the current drawing position. ">curveTo()</a> will connect the location p to the new location. </p>
+
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">moveTo</span><span class="args">(float x, float y, float z=0)</span></div><div class="memberDocumentation">
+
+<p>Move the drawing position to x,y.z. This means that a subsequent calls to, for instance, <a class="el" href="ofPath.html#aebe447c51e0a62dc3dba6355cea6c587" title="Draw a straight line from the current drawing position to the location indicated by p...">lineTo()</a> or <a class="el" href="ofPath.html#a7b5e77990781a76bdf99074205ba5669" title="Draws a curve to p from the current drawing position. ">curveTo()</a> will connect the location x,y,z to the new location. </p>
 
 </div></div>
   </div><div id="a7b5e77990781a76bdf99074205ba5669" class="method">
@@ -394,9 +401,15 @@
 
     <div class="methodDescription" style="display:none" id="a7b5e77990781a76bdf99074205ba5669_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">curveTo</span><span class="args">(const ofPoint &amp;p)</span></div><div class="memberDocumentation">
 
+<p>Draws a curve to p from the current drawing position. </p>
+
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">curveTo</span><span class="args">(float x, float y)</span></div><div class="memberDocumentation">
 
+<p>Draws a curve to x,y from the current drawing position. </p>
+
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">curveTo</span><span class="args">(float x, float y, float z)</span></div><div class="memberDocumentation">
+
+<p>Draws a curve to x,y,z from the current drawing position. </p>
 
 </div></div>
   </div><div id="abe2206bc8cf9431dcf19528f43a07355" class="method">
@@ -412,9 +425,21 @@
 
     <div class="methodDescription" style="display:none" id="abe2206bc8cf9431dcf19528f43a07355_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">bezierTo</span><span class="args">(const ofPoint &amp;cp1, const ofPoint &amp;cp2, const ofPoint &amp;p)</span></div><div class="memberDocumentation">
 
+<p>Create a cubic bezier line from the current drawing point with the 2 control points indicated by ofPoint <code>cp1</code> and <code>cp2</code>, that ends at ofPoint to. </p>
+<div class="fragment"><div class="line">line.addVertex(<a class="code" href="ofBaseTypes.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a>(200, 400));</div>
+<div class="line">line.bezierTo(100, 100, 800, 100, 700, 400);</div>
+</div><!-- fragment --> <div class="image">
+<img src="images/graphics/bezier.jpg" alt="polyline bezier">
+</div>
+<p> The control points are shown in red. </p>
+
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">bezierTo</span><span class="args">(float cx1, float cy1, float cx2, float cy2, float x, float y)</span></div><div class="memberDocumentation">
 
+<p>Create a cubic bezier line from the current drawing point with the 2 control points indicated by the coordinates cx1, cy1 and cx2, cy2, that ends at the coordinates x, y. </p>
+
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">bezierTo</span><span class="args">(float cx1, float cy1, float cz1, float cx2, float cy2, float cz2, float x, float y, float z)</span></div><div class="memberDocumentation">
+
+<p>Create a cubic bezier line in 3D space from the current drawing point with the 2 control points indicated by the coordinates cx1, cy1, cz1 and cx2, cy2, cz2, that ends at the coordinates x, y, z. </p>
 
 </div></div>
   </div><div id="a14bc5570b79816809d85fb4f1fb51ff8" class="method">
@@ -430,14 +455,24 @@
 
     <div class="methodDescription" style="display:none" id="a14bc5570b79816809d85fb4f1fb51ff8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">quadBezierTo</span><span class="args">(const ofPoint &amp;cp1, const ofPoint &amp;cp2, const ofPoint &amp;p)</span></div><div class="memberDocumentation">
 
+<p>Create a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, cz1, the control point at cx2, cy2, cz2, and that ends at the coordinates x, y, z. </p>
+<div class="image">
+<img src="images/graphics/curves.jpg" alt="Curves">
+</div>
+ <p></p>
+
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">quadBezierTo</span><span class="args">(float cx1, float cy1, float cx2, float cy2, float x, float y)</span></div><div class="memberDocumentation">
+
+<p>Creates a quadratic bezier line in 2D space from the current drawing point with the beginning indicated by the point p1, the control point at p2, and that ends at the point p3. </p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">quadBezierTo</span><span class="args">(float cx1, float cy1, float cz1, float cx2, float cy2, float cz2, float x, float y, float z)</span></div><div class="memberDocumentation">
 
+<p>Creates a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, the control point at cx2, cy2, and that ends at the coordinates x, y. </p>
+
 </div></div>
-  </div><div id="abcd906445552db3357d21ad3fa65b331" class="method">
+  </div><div id="a4cc251c298d9c257aa7d97ccb43fd6fd" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#abcd906445552db3357d21ad3fa65b331&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4cc251c298d9c257aa7d97ccb43fd6fd&quot;)">
         <span class="type"></span>
         <a class="name">arc</a>
         <span class="args"></span>
@@ -446,13 +481,26 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="abcd906445552db3357d21ad3fa65b331_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">arc</span><span class="args">(const ofPoint &#xA2;re, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise)</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a4cc251c298d9c257aa7d97ccb43fd6fd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">arc</span><span class="args">(const ofPoint &#xA2;re, float radiusX, float radiusY, float angleBegin, float angleEnd)</span></div><div class="memberDocumentation">
 
-</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">arc</span><span class="args">(const ofPoint &#xA2;re, float radiusX, float radiusY, float angleBegin, float angleEnd)</span></div><div class="memberDocumentation">
+<p>Create an arc at centre, which has the radiusX, radiusY, and begins at angleBegin and ends at angleEnd. To draw a circle with a radius of 50 pixels at 100, 100: </p>
+<dl class="section note"><dt>Note</dt><dd>angleBegin needs to be larger than angleEnd, i.e. 0,180 is ok, while 180,0 is not. </dd></dl>
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">arc</span><span class="args">(const ofPoint &#xA2;re, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise)</span></div><div class="memberDocumentation">
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">arc</span><span class="args">(float x, float y, float radiusX, float radiusY, float angleBegin, float angleEnd)</span></div><div class="memberDocumentation">
 
+<p>Create an arc at x,y, which has the radiusX, radiusY, and begins at angleBegin and ends at angleEnd. To draws a shape with a radius of 200 pixels at 300, 300: </p>
+<div class="fragment"><div class="line">path.moveTo(300, 300);</div>
+<div class="line">path.arc( 300, 300, 200, 200, 0, 271); <span class="comment">// note 271, not 270 for precision</span></div>
+</div><!-- fragment --><div class="image">
+<img src="images/graphics/ofPath_arc.jpg" alt="ofPath arc">
+</div>
+<dl class="section note"><dt>Note</dt><dd>angleBegin needs to be larger than angleEnd, i.e. 0, 180 is ok, while 180,0 is not. </dd></dl>
+
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">arc</span><span class="args">(float x, float y, float z, float radiusX, float radiusY, float angleBegin, float angleEnd)</span></div><div class="memberDocumentation">
+
+<p>Create an arc at x,y,z, which has the radiusX, radiusY, and begins at angleBegin and ends at angleEnd. </p>
 
 </div></div>
   </div><div id="a5e52e3e8101149fba99929642b939195" class="method">
@@ -571,7 +619,11 @@
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">rectRounded</span><span class="args">(float x, float y, float z, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius)</span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="a29f7455bf947e50f5bbb9ffcae925ef2" class="method">
+  </div></div>
+  </div><div id="WindingMode">
+    <h3 class="sectionHeader">Winding Mode</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a29f7455bf947e50f5bbb9ffcae925ef2" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a29f7455bf947e50f5bbb9ffcae925ef2&quot;)">
         <span class="type"></span>
@@ -584,8 +636,36 @@
 
     <div class="methodDescription" style="display:none" id="a29f7455bf947e50f5bbb9ffcae925ef2_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setPolyWindingMode</span><span class="args">(ofPolyWindingMode mode)</span></div><div class="memberDocumentation">
 
+<p>Set the way that the points in the sub paths are connected. </p>
+<p>OpenGL can only render convex polygons which means that any shape that isn&apos;t convex, i.e. that has points which are concave, going inwards, need to be tessellated into triangles so that OpenGL can render them. If you&apos;re using filled shapes with your <a class="el" href="ofPath.html" title="ofPath is a way to create a path or multiple paths consisting of points. It allows you to combine mul...">ofPath</a> this is done automatically for you.</p>
+<p>The possible options you can pass in are: </p>
+<pre class="fragment">OF_POLY_WINDING_ODD
+OF_POLY_WINDING_NONZERO
+OF_POLY_WINDING_POSITIVE
+OF_POLY_WINDING_NEGATIVE
+OF_POLY_WINDING_ABS_GEQ_TWO  </pre> 
 </div></div>
-  </div><div id="aa470f0d1cc5af2369a96e1fcd8e223ed" class="method">
+  </div><div id="a3e9e31ca27d8bac11a52de7f057acd9e" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3e9e31ca27d8bac11a52de7f057acd9e&quot;)">
+        <span class="type"></span>
+        <a class="name">getWindingMode</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a3e9e31ca27d8bac11a52de7f057acd9e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1aca8e53bffcbd2dd34e724531d8a0f375">ofPolyWindingMode</a> </span><span class="name">getWindingMode</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Get the poly winding mode currently in use. </p>
+
+</div></div>
+  </div></div>
+  </div><div id="DrawingMode">
+    <h3 class="sectionHeader">Drawing Mode</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="aa470f0d1cc5af2369a96e1fcd8e223ed" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa470f0d1cc5af2369a96e1fcd8e223ed&quot;)">
         <span class="type"></span>
@@ -597,6 +677,8 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="aa470f0d1cc5af2369a96e1fcd8e223ed_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setFilled</span><span class="args">(bool hasFill)</span></div><div class="memberDocumentation">
+
+<p>Set whether the path should be drawn as wireframes or filled. </p>
 
 </div></div>
   </div><div id="a5407cf0f483c657aca3d7b82cee5c0b6" class="method">
@@ -612,6 +694,8 @@
 
     <div class="methodDescription" style="display:none" id="a5407cf0f483c657aca3d7b82cee5c0b6_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setStrokeWidth</span><span class="args">(float width)</span></div><div class="memberDocumentation">
 
+<p>Set the stroke width of the line if the <a class="el" href="ofPath.html" title="ofPath is a way to create a path or multiple paths consisting of points. It allows you to combine mul...">ofPath</a> is to be drawn not in wireframe. </p>
+
 </div></div>
   </div><div id="a9bc4e6a5ce711a5082edba79d1ae34e2" class="method">
     <div class="methodHeader">
@@ -625,6 +709,8 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a9bc4e6a5ce711a5082edba79d1ae34e2_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(const ofColor &amp;color)</span></div><div class="memberDocumentation">
+
+<p>Set the color of the path. This affects both the line if the path is drawn as wireframe and the fill if the path is drawn with fill. All subpaths are affected. </p>
 
 </div></div>
   </div><div id="afe58c52513af6a02b55ca5332e65fa45" class="method">
@@ -640,6 +726,8 @@
 
     <div class="methodDescription" style="display:none" id="afe58c52513af6a02b55ca5332e65fa45_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setHexColor</span><span class="args">(int hex)</span></div><div class="memberDocumentation">
 
+<p>Set the color of the path. This affects both the line if the path is drawn as wireframe and the fill if the path is drawn with fill. All subpaths are affected. </p>
+
 </div></div>
   </div><div id="a827a468d423f0adf57f46205f1808b49" class="method">
     <div class="methodHeader">
@@ -653,6 +741,8 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a827a468d423f0adf57f46205f1808b49_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setFillColor</span><span class="args">(const ofColor &amp;color)</span></div><div class="memberDocumentation">
+
+<p>Set the fill color of the path. This has no affect if the path is drawn as wireframe. </p>
 
 </div></div>
   </div><div id="a769ad92764c815e76072ba9db3e63704" class="method">
@@ -668,6 +758,8 @@
 
     <div class="methodDescription" style="display:none" id="a769ad92764c815e76072ba9db3e63704_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setFillHexColor</span><span class="args">(int hex)</span></div><div class="memberDocumentation">
 
+<p>Set the fill color of the path. This has no affect if the path is drawn as wireframe. </p>
+
 </div></div>
   </div><div id="a8b695fd0491198313b70a76e20788d44" class="method">
     <div class="methodHeader">
@@ -681,6 +773,8 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a8b695fd0491198313b70a76e20788d44_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setStrokeColor</span><span class="args">(const ofColor &amp;color)</span></div><div class="memberDocumentation">
+
+<p>Set the stroke color of the path. This has no affect if the path is drawn filled. </p>
 
 </div></div>
   </div><div id="aa55475fa84607cc9a53c9c8225d775cb" class="method">
@@ -696,19 +790,7 @@
 
     <div class="methodDescription" style="display:none" id="aa55475fa84607cc9a53c9c8225d775cb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setStrokeHexColor</span><span class="args">(int hex)</span></div><div class="memberDocumentation">
 
-</div></div>
-  </div><div id="a3e9e31ca27d8bac11a52de7f057acd9e" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3e9e31ca27d8bac11a52de7f057acd9e&quot;)">
-        <span class="type"></span>
-        <a class="name">getWindingMode</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a3e9e31ca27d8bac11a52de7f057acd9e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1aca8e53bffcbd2dd34e724531d8a0f375">ofPolyWindingMode</a> </span><span class="name">getWindingMode</span><span class="args">() const </span></div><div class="memberDocumentation">
+<p>Set the stroke color of the path. This has no affect if the path is drawn filled. </p>
 
 </div></div>
   </div><div id="af19c58151d77de3a6892388ba9e207fc" class="method">
@@ -724,6 +806,9 @@
 
     <div class="methodDescription" style="display:none" id="af19c58151d77de3a6892388ba9e207fc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">isFilled</span><span class="args">() const </span></div><div class="memberDocumentation">
 
+<p>Get whether the path is using a fill or not. </p>
+<p>The default value is <code>true</code> </p>
+
 </div></div>
   </div><div id="a0ea62d736ab934fdf0e9c3e2a52a55c6" class="method">
     <div class="methodHeader">
@@ -737,6 +822,8 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a0ea62d736ab934fdf0e9c3e2a52a55c6_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1ace59f9421b921c3344fa20972e515912">ofColor</a> </span><span class="name">getFillColor</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Get the ofColor fill of the <a class="el" href="ofPath.html" title="ofPath is a way to create a path or multiple paths consisting of points. It allows you to combine mul...">ofPath</a>. </p>
 
 </div></div>
   </div><div id="a3aae4f748cdc408e1f61458b3572e56f" class="method">
@@ -752,6 +839,8 @@
 
     <div class="methodDescription" style="display:none" id="a3aae4f748cdc408e1f61458b3572e56f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1ace59f9421b921c3344fa20972e515912">ofColor</a> </span><span class="name">getStrokeColor</span><span class="args">() const </span></div><div class="memberDocumentation">
 
+<p>Get the stroke color of the <a class="el" href="ofPath.html" title="ofPath is a way to create a path or multiple paths consisting of points. It allows you to combine mul...">ofPath</a>. </p>
+
 </div></div>
   </div><div id="adf29ae43e44502ac1554457f232f8538" class="method">
     <div class="methodHeader">
@@ -766,6 +855,9 @@
 
     <div class="methodDescription" style="display:none" id="adf29ae43e44502ac1554457f232f8538_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getStrokeWidth</span><span class="args">() const </span></div><div class="memberDocumentation">
 
+<p>Get the stroke width of the <a class="el" href="ofPath.html" title="ofPath is a way to create a path or multiple paths consisting of points. It allows you to combine mul...">ofPath</a>. </p>
+<p>The default value is `0 </p>
+
 </div></div>
   </div><div id="af4ae5d63424ab2d5ed2fba9477887a4b" class="method">
     <div class="methodHeader">
@@ -779,124 +871,6 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="af4ae5d63424ab2d5ed2fba9477887a4b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">hasOutline</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a982c7b6f6c0970e2b69b6b100c724c60" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a982c7b6f6c0970e2b69b6b100c724c60&quot;)">
-        <span class="type"></span>
-        <a class="name">draw</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a982c7b6f6c0970e2b69b6b100c724c60_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y)</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a9b5304ad80fd0a9a2891d72f1d602e27" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9b5304ad80fd0a9a2891d72f1d602e27&quot;)">
-        <span class="type"></span>
-        <a class="name">getOutline</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a9b5304ad80fd0a9a2891d72f1d602e27_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPolyline.html">ofPolyline</a> </span><span class="name">getOutline</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type"><a href="ofPolyline.html">ofPolyline</a> </span><span class="name">getOutline</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a16310bf2bdf92f89eca68440f36b5f05" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a16310bf2bdf92f89eca68440f36b5f05&quot;)">
-        <span class="type"></span>
-        <a class="name">getTessellation</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a16310bf2bdf92f89eca68440f36b5f05_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">getTessellation</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">getTessellation</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a7fb4475f27f424887fd3739066b180ad" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7fb4475f27f424887fd3739066b180ad&quot;)">
-        <span class="type"></span>
-        <a class="name">simplify</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a7fb4475f27f424887fd3739066b180ad_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">simplify</span><span class="args">(float tolerance=0.3)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a740471f9e57701c0af59f9b6abc38787" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a740471f9e57701c0af59f9b6abc38787&quot;)">
-        <span class="type"></span>
-        <a class="name">flagShapeChanged</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a740471f9e57701c0af59f9b6abc38787_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">flagShapeChanged</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aedc78d9b0f4f4f8f475aa6b39ff6ef54" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aedc78d9b0f4f4f8f475aa6b39ff6ef54&quot;)">
-        <span class="type"></span>
-        <a class="name">hasChanged</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aedc78d9b0f4f4f8f475aa6b39ff6ef54_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">hasChanged</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a95bdbcb31dee7fd65c0f02ce0be29834" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a95bdbcb31dee7fd65c0f02ce0be29834&quot;)">
-        <span class="type"></span>
-        <a class="name">setMode</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a95bdbcb31dee7fd65c0f02ce0be29834_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setMode</span><span class="args">(Mode mode)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a2c31c00931b89c4f579f2ce0fc917b80" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2c31c00931b89c4f579f2ce0fc917b80&quot;)">
-        <span class="type"></span>
-        <a class="name">getMode</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a2c31c00931b89c4f579f2ce0fc917b80_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPath.html#1aa20ad057e28b19dfa200361fba0bb343">Mode</a> </span><span class="name">getMode</span><span class="args">()</span></div><div class="memberDocumentation">
 
 </div></div>
   </div><div id="a5a2aa3d688dd5a0d8cc40f131c86dc6d" class="method">
@@ -1011,6 +985,52 @@
     <div class="methodDescription" style="display:none" id="a0c004a84e56d29ff87dd61e5cfefde86_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">getUseShapeColor</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 </div></div>
+  </div></div>
+  </div><div id="Drawing">
+    <h3 class="sectionHeader">Drawing</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a08d62c014fddc97736be9459e7a585c4" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a08d62c014fddc97736be9459e7a585c4&quot;)">
+        <span class="type"></span>
+        <a class="name">draw</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a08d62c014fddc97736be9459e7a585c4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Draws the path at 0,0. Calling <a class="el" href="ofPath.html#a08d62c014fddc97736be9459e7a585c4" title="Draws the path at 0,0. Calling draw() also calls tessellate() ">draw()</a> also calls <a class="el" href="ofPath.html#a0af9ebdbe2bc60422fdd3b3cd05dd870">tessellate()</a> </p>
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(float x, float y)</span></div><div class="memberDocumentation">
+
+<p>Draws the path at x,y. Calling <a class="el" href="ofPath.html#a08d62c014fddc97736be9459e7a585c4" title="Draws the path at 0,0. Calling draw() also calls tessellate() ">draw()</a> also calls <a class="el" href="ofPath.html#a0af9ebdbe2bc60422fdd3b3cd05dd870">tessellate()</a> </p>
+
+</div></div>
+  </div></div>
+  </div><div id="Functions">
+    <h3 class="sectionHeader">Functions</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a9b5304ad80fd0a9a2891d72f1d602e27" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9b5304ad80fd0a9a2891d72f1d602e27&quot;)">
+        <span class="type"></span>
+        <a class="name">getOutline</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a9b5304ad80fd0a9a2891d72f1d602e27_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPolyline.html">ofPolyline</a> </span><span class="name">getOutline</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Get an <a class="el" href="ofPolyline.html">ofPolyline</a> representing the outline of the <a class="el" href="ofPath.html" title="ofPath is a way to create a path or multiple paths consisting of points. It allows you to combine mul...">ofPath</a>. </p>
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofPolyline.html">ofPolyline</a> </span><span class="name">getOutline</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="a0af9ebdbe2bc60422fdd3b3cd05dd870" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a0af9ebdbe2bc60422fdd3b3cd05dd870&quot;)">
@@ -1023,6 +1043,64 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a0af9ebdbe2bc60422fdd3b3cd05dd870_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">tessellate</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a16310bf2bdf92f89eca68440f36b5f05" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a16310bf2bdf92f89eca68440f36b5f05&quot;)">
+        <span class="type"></span>
+        <a class="name">getTessellation</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a16310bf2bdf92f89eca68440f36b5f05_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">getTessellation</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">getTessellation</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a7fb4475f27f424887fd3739066b180ad" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7fb4475f27f424887fd3739066b180ad&quot;)">
+        <span class="type"></span>
+        <a class="name">simplify</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a7fb4475f27f424887fd3739066b180ad_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">simplify</span><span class="args">(float tolerance=0.3)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a740471f9e57701c0af59f9b6abc38787" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a740471f9e57701c0af59f9b6abc38787&quot;)">
+        <span class="type"></span>
+        <a class="name">flagShapeChanged</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a740471f9e57701c0af59f9b6abc38787_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">flagShapeChanged</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="aedc78d9b0f4f4f8f475aa6b39ff6ef54" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aedc78d9b0f4f4f8f475aa6b39ff6ef54&quot;)">
+        <span class="type"></span>
+        <a class="name">hasChanged</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aedc78d9b0f4f4f8f475aa6b39ff6ef54_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">hasChanged</span><span class="args">()</span></div><div class="memberDocumentation">
 
 </div></div>
   </div><div id="a32ca65c1f1043662292888982cca526a" class="method">
@@ -1066,8 +1144,66 @@
 
     <div class="methodDescription" style="display:none" id="a74449f5b6f444b881a7671dc12a4d40b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">scale</span><span class="args">(float x, float y)</span></div><div class="memberDocumentation">
 
+<p>Change the size of either the <a class="el" href="ofPolyline.html">ofPolyline</a> or ofSubPath instances that the <a class="el" href="ofPath.html" title="ofPath is a way to create a path or multiple paths consisting of points. It allows you to combine mul...">ofPath</a> contains. These changes are non-reversible, so for instance scaling by 0,0 zeros out all data. </p>
+
 </div></div>
-  </div><div id="a3fb89b82aba288cd77d9c2a7688a7756" class="method">
+  </div></div>
+  </div><div id="PathMode">
+    <h3 class="sectionHeader">Path Mode</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="aa20ad057e28b19dfa200361fba0bb343" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa20ad057e28b19dfa200361fba0bb343&quot;)">
+        <span class="type"></span>
+        <a class="name">Mode</a>
+        <span class="args"></span>
+        <span class="kind">enum</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aa20ad057e28b19dfa200361fba0bb343_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">Mode</span><span class="args"></span></div><div class="memberDocumentation">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="aa20ad057e28b19dfa200361fba0bb343a763df1901ccbc234ab1207896ab69eec"></a>COMMANDS</em>&#xA0;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="aa20ad057e28b19dfa200361fba0bb343a8d1ec0889c2c552c7638db8355fcca95"></a>POLYLINES</em>&#xA0;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div></div>
+  </div><div id="a95bdbcb31dee7fd65c0f02ce0be29834" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a95bdbcb31dee7fd65c0f02ce0be29834&quot;)">
+        <span class="type"></span>
+        <a class="name">setMode</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a95bdbcb31dee7fd65c0f02ce0be29834_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setMode</span><span class="args">(Mode mode)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a2c31c00931b89c4f579f2ce0fc917b80" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2c31c00931b89c4f579f2ce0fc917b80&quot;)">
+        <span class="type"></span>
+        <a class="name">getMode</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a2c31c00931b89c4f579f2ce0fc917b80_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPath.html#1aa20ad057e28b19dfa200361fba0bb343">Mode</a> </span><span class="name">getMode</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div></div>
+  </div><div id="PathCommands">
+    <h3 class="sectionHeader">Path Commands</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a3fb89b82aba288cd77d9c2a7688a7756" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3fb89b82aba288cd77d9c2a7688a7756&quot;)">
         <span class="type"></span>
@@ -1084,6 +1220,10 @@
 
 </div></div>
   </div></div>
+  </div><div id="Types">
+    <h3 class="sectionHeader">Types</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"></div>
   </div></div>
   </div></div>
   </div>

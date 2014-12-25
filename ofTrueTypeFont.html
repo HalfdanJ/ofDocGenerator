@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <li class="chapter"><a href="#Defines">Defines</a></li><li class="chapter"><a href="#Typedefs">Typedefs</a></li><li class="chapter"><a href="#Variables">Variables</a></li><span class="class">charProps</span><li class="chapter"><a href="#Attributes">Attributes</a></li><span class="class">ofTrueTypeFont</span><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#StaticFunctions">Static Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li><li class="chapter"><a href="#Friends">Friends</a></li></ul>
+        <li class="chapter"><a href="#Fonts">Fonts</a></li><span class="class">ofTrueTypeFont</span><li class="chapter"><a href="#LoadFont">Load Font</a></li><li class="chapter"><a href="#FontSettings">Font Settings</a></li><li class="chapter"><a href="#FontSize">Font Size</a></li><li class="chapter"><a href="#Drawing">Drawing</a></li><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#Friends">Friends</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -67,59 +67,10 @@
     <div class="classHeader">
       <h1 class="classTitle">ofTrueTypeFont<small>file</small></h1>
     </div>
-    <div class="classDescription"></div>
-    <div class="classMethods"><div id="Defines">
-    <h3 class="sectionHeader">Defines</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="aec1a226195492bc6c95e886123155ff0" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aec1a226195492bc6c95e886123155ff0&quot;)">
-        <span class="type"></span>
-        <a class="name">NUM_CHARACTER_TO_START</a>
-        <span class="args"></span>
-        <span class="kind">define</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aec1a226195492bc6c95e886123155ff0_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">NUM_CHARACTER_TO_START</span><span class="args"></span></div><div class="memberDocumentation">
-
+    <div class="classDescription"><div class="textblock"><p>The <a class="el" href="ofTrueTypeFont.html">ofTrueTypeFont</a> class provides an interface to load fonts into openFrameworks. The fonts are converted to textures, and can be drawn on screen. There are some options when you load the font - what size the font is rendered at, whether or not it is anti-aliased, and whether the font object will be the full character set or a subset (i.e., extended ASCII, which can include diacritics like umlauts, or ASCII). The default is anti-aliased, non-full character set. The library uses freetype, which has certain patent problems in regards to true type hinting, especially at small sizes, so non-anti-aliased type doesn&apos;t always render beautifully. But we find it quite adequate, and at larger sizes it seems to works well. </p>
 </div></div>
-  </div></div>
-  </div><div id="Typedefs">
-    <h3 class="sectionHeader">Typedefs</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a82ccc235db2f74dfdc922b67748791cf" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a82ccc235db2f74dfdc922b67748791cf&quot;)">
-        <span class="type"></span>
-        <a class="name">ofTTFCharacter</a>
-        <span class="args"></span>
-        <span class="kind">typedef</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a82ccc235db2f74dfdc922b67748791cf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPath.html">ofPath</a> </span><span class="name">ofTTFCharacter</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a7eba045ee20968354fa1bff0f69740fa" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7eba045ee20968354fa1bff0f69740fa&quot;)">
-        <span class="type"></span>
-        <a class="name">FT_Face</a>
-        <span class="args"></span>
-        <span class="kind">typedef</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a7eba045ee20968354fa1bff0f69740fa_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">struct FT_FaceRec_ * </span><span class="name">FT_Face</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div><div id="Variables">
-    <h3 class="sectionHeader">Variables</h3>
+    <div class="classMethods"><div id="Fonts">
+    <h3 class="sectionHeader">Fonts</h3>
     <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="af759299331dfc667c769640018bee096" class="method">
     <div class="methodHeader">
@@ -161,601 +112,13 @@
   </div></div>
   </div><div id="" class="classBlock">
     <div class="classHeader">
-      <h1 class="classTitle">charProps<small>struct</small></h1>
-    </div>
-    <div class="classDescription"></div>
-    <div class="classMethods"><div id="Attributes">
-    <h3 class="sectionHeader">Attributes</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="aa6738e081ad2c51458de816a4d13eb6f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa6738e081ad2c51458de816a4d13eb6f&quot;)">
-        <span class="type"></span>
-        <a class="name">characterIndex</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa6738e081ad2c51458de816a4d13eb6f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">characterIndex</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a5487d22f904371491985d414dcc91fc4" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5487d22f904371491985d414dcc91fc4&quot;)">
-        <span class="type"></span>
-        <a class="name">glyph</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a5487d22f904371491985d414dcc91fc4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">glyph</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a5f699d8851a3bc09494e10da688f1071" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5f699d8851a3bc09494e10da688f1071&quot;)">
-        <span class="type"></span>
-        <a class="name">height</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a5f699d8851a3bc09494e10da688f1071_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">height</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="abfc5bd615c705713bda6c79691fb5189" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#abfc5bd615c705713bda6c79691fb5189&quot;)">
-        <span class="type"></span>
-        <a class="name">width</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="abfc5bd615c705713bda6c79691fb5189_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">width</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aad25badef75f5b2a5077df5c37629939" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aad25badef75f5b2a5077df5c37629939&quot;)">
-        <span class="type"></span>
-        <a class="name">bearingX</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aad25badef75f5b2a5077df5c37629939_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">bearingX</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a527ee11a04f003626c68e94ea7e5c494" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a527ee11a04f003626c68e94ea7e5c494&quot;)">
-        <span class="type"></span>
-        <a class="name">bearingY</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a527ee11a04f003626c68e94ea7e5c494_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">bearingY</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a532dfecf84621a73f2e024e1bf84c572" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a532dfecf84621a73f2e024e1bf84c572&quot;)">
-        <span class="type"></span>
-        <a class="name">xmin</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a532dfecf84621a73f2e024e1bf84c572_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">xmin</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="acc7067ad51d48e17c9137d77f084fed3" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#acc7067ad51d48e17c9137d77f084fed3&quot;)">
-        <span class="type"></span>
-        <a class="name">xmax</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="acc7067ad51d48e17c9137d77f084fed3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">xmax</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a85969b09511f4786ad1bd45003aa74fc" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a85969b09511f4786ad1bd45003aa74fc&quot;)">
-        <span class="type"></span>
-        <a class="name">ymin</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a85969b09511f4786ad1bd45003aa74fc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">ymin</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a61475715240a333304483e199e96b1b4" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a61475715240a333304483e199e96b1b4&quot;)">
-        <span class="type"></span>
-        <a class="name">ymax</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a61475715240a333304483e199e96b1b4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">ymax</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a9036848afb0143846726319ed15ad589" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9036848afb0143846726319ed15ad589&quot;)">
-        <span class="type"></span>
-        <a class="name">advance</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a9036848afb0143846726319ed15ad589_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">advance</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ab4a2338ad06a1418bd8fe44c125b9b47" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab4a2338ad06a1418bd8fe44c125b9b47&quot;)">
-        <span class="type"></span>
-        <a class="name">tW</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ab4a2338ad06a1418bd8fe44c125b9b47_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">tW</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aec99e0549b216c92c4b969ccdc0d106b" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aec99e0549b216c92c4b969ccdc0d106b&quot;)">
-        <span class="type"></span>
-        <a class="name">tH</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aec99e0549b216c92c4b969ccdc0d106b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">tH</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="af254bc00d36df02fc24d06cbc0879eef" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af254bc00d36df02fc24d06cbc0879eef&quot;)">
-        <span class="type"></span>
-        <a class="name">t1</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="af254bc00d36df02fc24d06cbc0879eef_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">t1</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ac8f15861f1a6e11bbee14868fdb85e6b" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac8f15861f1a6e11bbee14868fdb85e6b&quot;)">
-        <span class="type"></span>
-        <a class="name">t2</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ac8f15861f1a6e11bbee14868fdb85e6b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">t2</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ab3b0790ac65d76a004108c9a0f648671" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab3b0790ac65d76a004108c9a0f648671&quot;)">
-        <span class="type"></span>
-        <a class="name">v1</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ab3b0790ac65d76a004108c9a0f648671_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">v1</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a2e9e6d82f173a66318ebcb9aabc20042" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2e9e6d82f173a66318ebcb9aabc20042&quot;)">
-        <span class="type"></span>
-        <a class="name">v2</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a2e9e6d82f173a66318ebcb9aabc20042_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">v2</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div></div>
-  </div><div id="" class="classBlock">
-    <div class="classHeader">
       <h1 class="classTitle">ofTrueTypeFont<small>class</small></h1>
     </div>
     <div class="classDescription"></div>
-    <div class="classMethods"><div id="ProtectedAttributes">
-    <h3 class="sectionHeader">Protected Attributes</h3>
+    <div class="classMethods"><div id="LoadFont">
+    <h3 class="sectionHeader">Load Font</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="ae1b94826e0a87e7a9057b2285d1d8f4d" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae1b94826e0a87e7a9057b2285d1d8f4d&quot;)">
-        <span class="type"></span>
-        <a class="name">bLoadedOk</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ae1b94826e0a87e7a9057b2285d1d8f4d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">bLoadedOk</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ae0529672211eb65fb3d52d0c3555e764" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae0529672211eb65fb3d52d0c3555e764&quot;)">
-        <span class="type"></span>
-        <a class="name">bAntiAliased</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ae0529672211eb65fb3d52d0c3555e764_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">bAntiAliased</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ab174a525150961a41183ef4c0603806b" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab174a525150961a41183ef4c0603806b&quot;)">
-        <span class="type"></span>
-        <a class="name">bFullCharacterSet</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ab174a525150961a41183ef4c0603806b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">bFullCharacterSet</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aac4b8c9259c44c1f8cb8f38c884a94c1" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aac4b8c9259c44c1f8cb8f38c884a94c1&quot;)">
-        <span class="type"></span>
-        <a class="name">nCharacters</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aac4b8c9259c44c1f8cb8f38c884a94c1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">nCharacters</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a0d2c3da16937f1b2be80a02c055f12b4" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a0d2c3da16937f1b2be80a02c055f12b4&quot;)">
-        <span class="type"></span>
-        <a class="name">charOutlines</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a0d2c3da16937f1b2be80a02c055f12b4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofTrueTypeFont.html#1a82ccc235db2f74dfdc922b67748791cf">ofTTFCharacter</a> </span><span class="name">charOutlines</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aa988e4d74fd73397e17ce6ad23b4a924" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa988e4d74fd73397e17ce6ad23b4a924&quot;)">
-        <span class="type"></span>
-        <a class="name">charOutlinesNonVFlipped</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa988e4d74fd73397e17ce6ad23b4a924_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofTrueTypeFont.html#1a82ccc235db2f74dfdc922b67748791cf">ofTTFCharacter</a> </span><span class="name">charOutlinesNonVFlipped</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a013460cfe40116939f07374222cd3c17" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a013460cfe40116939f07374222cd3c17&quot;)">
-        <span class="type"></span>
-        <a class="name">lineHeight</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a013460cfe40116939f07374222cd3c17_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">lineHeight</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a2e296fae02702e32088767eb569639b7" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2e296fae02702e32088767eb569639b7&quot;)">
-        <span class="type"></span>
-        <a class="name">ascenderHeight</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a2e296fae02702e32088767eb569639b7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">ascenderHeight</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ab8eaa68358bf93679df40fd9de046830" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab8eaa68358bf93679df40fd9de046830&quot;)">
-        <span class="type"></span>
-        <a class="name">descenderHeight</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ab8eaa68358bf93679df40fd9de046830_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">descenderHeight</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aae8a79c4fa0caccf9029a2c738b8f7a9" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aae8a79c4fa0caccf9029a2c738b8f7a9&quot;)">
-        <span class="type"></span>
-        <a class="name">glyphBBox</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aae8a79c4fa0caccf9029a2c738b8f7a9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofRectangle.html">ofRectangle</a> </span><span class="name">glyphBBox</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a8cf821087583ddaba20d4318ff1374c3" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8cf821087583ddaba20d4318ff1374c3&quot;)">
-        <span class="type"></span>
-        <a class="name">letterSpacing</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a8cf821087583ddaba20d4318ff1374c3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">letterSpacing</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a54a51a4379f956872cf136cc8c59dd17" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a54a51a4379f956872cf136cc8c59dd17&quot;)">
-        <span class="type"></span>
-        <a class="name">spaceSize</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a54a51a4379f956872cf136cc8c59dd17_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">spaceSize</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a2d1b89d3dc046e97f4ee716b0e65cbf6" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2d1b89d3dc046e97f4ee716b0e65cbf6&quot;)">
-        <span class="type"></span>
-        <a class="name">cps</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a2d1b89d3dc046e97f4ee716b0e65cbf6_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="charProps.html">charProps</a> </span><span class="name">cps</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a5a6f8535815231d1f250c481ac5dfe6f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5a6f8535815231d1f250c481ac5dfe6f&quot;)">
-        <span class="type"></span>
-        <a class="name">fontSize</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a5a6f8535815231d1f250c481ac5dfe6f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">fontSize</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aca35042934d2b5f3cfb92b1a57591e87" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aca35042934d2b5f3cfb92b1a57591e87&quot;)">
-        <span class="type"></span>
-        <a class="name">bMakeContours</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aca35042934d2b5f3cfb92b1a57591e87_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">bMakeContours</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a8f97cd252e22e135aea3f87b0b18d5c8" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8f97cd252e22e135aea3f87b0b18d5c8&quot;)">
-        <span class="type"></span>
-        <a class="name">simplifyAmt</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a8f97cd252e22e135aea3f87b0b18d5c8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">simplifyAmt</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a090438504cff905e746f58c087d06944" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a090438504cff905e746f58c087d06944&quot;)">
-        <span class="type"></span>
-        <a class="name">dpi</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a090438504cff905e746f58c087d06944_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">dpi</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ae09bc97209804f330e79a68512e39520" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae09bc97209804f330e79a68512e39520&quot;)">
-        <span class="type"></span>
-        <a class="name">border</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ae09bc97209804f330e79a68512e39520_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">border</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a45ccd39c69fc58ad564474c995cce89a" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a45ccd39c69fc58ad564474c995cce89a&quot;)">
-        <span class="type"></span>
-        <a class="name">filename</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a45ccd39c69fc58ad564474c995cce89a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">string </span><span class="name">filename</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a456c0fc05723e715ccecd528c2bf9551" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a456c0fc05723e715ccecd528c2bf9551&quot;)">
-        <span class="type"></span>
-        <a class="name">texAtlas</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a456c0fc05723e715ccecd528c2bf9551_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofTexture.html">ofTexture</a> </span><span class="name">texAtlas</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a31d43872f74737dff07d7a7af8da0b37" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a31d43872f74737dff07d7a7af8da0b37&quot;)">
-        <span class="type"></span>
-        <a class="name">binded</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a31d43872f74737dff07d7a7af8da0b37_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">binded</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a3aa0ef4fbbac6fca3cdeb5a6345cfc37" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3aa0ef4fbbac6fca3cdeb5a6345cfc37&quot;)">
-        <span class="type"></span>
-        <a class="name">stringQuads</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a3aa0ef4fbbac6fca3cdeb5a6345cfc37_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">stringQuads</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div><div id="Functions">
-    <h3 class="sectionHeader">Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a5af9f717ceaa6f53e7b8c100b40ef923" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5af9f717ceaa6f53e7b8c100b40ef923&quot;)">
-        <span class="type"></span>
-        <a class="name">ofTrueTypeFont</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a5af9f717ceaa6f53e7b8c100b40ef923_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofTrueTypeFont</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aea0b8daaaaf2299caf6c9a57f57321ac" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aea0b8daaaaf2299caf6c9a57f57321ac&quot;)">
-        <span class="type"></span>
-        <a class="name">~ofTrueTypeFont</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aea0b8daaaaf2299caf6c9a57f57321ac_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">~ofTrueTypeFont</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a7b35bacb1b53d097eb5a36fddf6bbd17" class="method">
+    <div class="sectionContent"><div id="a7b35bacb1b53d097eb5a36fddf6bbd17" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7b35bacb1b53d097eb5a36fddf6bbd17&quot;)">
         <span class="type"></span>
@@ -769,15 +132,15 @@
     <div class="methodDescription" style="display:none" id="a7b35bacb1b53d097eb5a36fddf6bbd17_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">load</span><span class="args">(string filename, int fontsize, bool _bAntiAliased=true, bool _bFullCharacterSet=false, bool makeContours=false, float simplifyAmt=0.3, int dpi=0)</span></div><div class="memberDocumentation">
 
 <p>Loads the font specified by filename, allows you to control size, aliasing, and other parameters. </p>
-<p>loads a font, and allows you to set the following parameters: the filename, the size, if the font is anti-aliased, if it has a full character set, if you need it to have contours (for getStringPoints) and paramters that control the simplification amount for those contours and the dpi of the font.</p>
+<p>loads a font, and allows you to set the following parameters: the filename, the size, if the font is anti-aliased, if it has a full character set, if you need it to have contours (for getStringPoints) and parameters that control the simplification amount for those contours and the dpi of the font.</p>
 <p>default (without dpi), non-full char set, anti aliased, 96 dpi</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>The name of the font file to load. </td></tr>
     <tr><td class="paramname">fontsize</td><td>The size in pixels to load the font. </td></tr>
-    <tr><td class="paramname">_bAntiAliased</td><td>true iff the font should be anti-aliased. </td></tr>
-    <tr><td class="paramname">_bFullCharacterSet</td><td>true iff the full character set should be cached. </td></tr>
-    <tr><td class="paramname">makeControus</td><td>true iff the vector contours should be cached. </td></tr>
+    <tr><td class="paramname">_bAntiAliased</td><td>true if the font should be anti-aliased. </td></tr>
+    <tr><td class="paramname">_bFullCharacterSet</td><td>true if the full character set should be cached. </td></tr>
+    <tr><td class="paramname">makeControus</td><td>true if the vector contours should be cached. </td></tr>
     <tr><td class="paramname">simplifyAmt</td><td>the amount to simplify the vector contours. Larger number means more simplified. </td></tr>
     <tr><td class="paramname">dpi</td><td>the dots per inch used to specify rendering size. </td></tr>
   </table>
@@ -817,7 +180,11 @@
 <dl class="section return"><dt>Returns</dt><dd>true if the font was loaded. </dd></dl>
 
 </div></div>
-  </div><div id="ab565e2941f3d53d97f2292d07bf87b61" class="method">
+  </div></div>
+  </div><div id="FontSettings">
+    <h3 class="sectionHeader">Font Settings</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="ab565e2941f3d53d97f2292d07bf87b61" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab565e2941f3d53d97f2292d07bf87b61&quot;)">
         <span class="type"></span>
@@ -830,7 +197,7 @@
 
     <div class="methodDescription" style="display:none" id="ab565e2941f3d53d97f2292d07bf87b61_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">isAntiAliased</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>Is the font anit-aliased? </p>
+<p>Is the font anti-aliased? </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the font was set to be anti-aliased. </dd></dl>
 
 </div></div>
@@ -851,7 +218,87 @@
 <dl class="section return"><dt>Returns</dt><dd>true if the font was allocated with a full character set. </dd></dl>
 
 </div></div>
-  </div><div id="adbb80647aa21a907250af47d5a3fcc6f" class="method">
+  </div><div id="a37523f38c5be929f82d87bac15308f03" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a37523f38c5be929f82d87bac15308f03&quot;)">
+        <span class="type"></span>
+        <a class="name">getNumCharacters</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a37523f38c5be929f82d87bac15308f03_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getNumCharacters</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Get the number characters in the loaded character set. </p>
+<p>If you allocate the font using different parameters, you can load in partial and full character sets, this helps you know how many characters it can represent.</p>
+<dl class="section return"><dt>Returns</dt><dd>Number of characters in loaded character set. </dd></dl>
+
+</div></div>
+  </div><div id="a8ae68744a50f815cf68cc3836dfba94d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8ae68744a50f815cf68cc3836dfba94d&quot;)">
+        <span class="type"></span>
+        <a class="name">getEncoding</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a8ae68744a50f815cf68cc3836dfba94d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1ad4e6cefebff2917f91e999904fa9b17f">ofTextEncoding</a> </span><span class="name">getEncoding</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Get the current font encoding. </p>
+<p>This is set by <a class="el" href="ofTrueTypeFont.html#abcb3ec25a1d51bb2f6945742b71dda23" title="Sets the current font encoding. ">ofTrueTypeFont::setEncoding()</a> to either <code>OF_ENCODING_UTF8</code> or <code>OF_ENCODING_ISO_8859_15</code>. <code>OF_ENCODING_ISO_8859_15</code> is for an 8-bit single-byte coded graphic character sets, like ASCII while <code>OF_ENCODING_UTF8</code> is a variable-width encoding that can represent every character in the Unicode character set.</p>
+<dl class="section return"><dt>Returns</dt><dd>encoding used by the font object. </dd></dl>
+
+</div></div>
+  </div><div id="abcb3ec25a1d51bb2f6945742b71dda23" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#abcb3ec25a1d51bb2f6945742b71dda23&quot;)">
+        <span class="type"></span>
+        <a class="name">setEncoding</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="abcb3ec25a1d51bb2f6945742b71dda23_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setEncoding</span><span class="args">(ofTextEncoding encoding)</span></div><div class="memberDocumentation">
+
+<p>Sets the current font encoding. </p>
+<p>Can be set to either <code>OF_ENCODING_UTF8</code> or <code>OF_ENCODING_ISO_8859_15</code>. <code>OF_ENCODING_ISO_8859_15</code> is for an 8-bit single-byte coded graphic character sets, like ASCII while <code>OF_ENCODING_UTF8</code> is a variable-width encoding that can represent every character in the Unicode character set. This function is useful if you are trying to draw unicode strings.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">encoding</td><td>The encoding used by the font object, either `OF_ENCODING_UTF8 or </td></tr>
+    <tr><td class="paramname">OF_ENCODING_ISO_8859_15</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="a3fc29ab51f9fc87b321f9c70c2168aa5" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3fc29ab51f9fc87b321f9c70c2168aa5&quot;)">
+        <span class="type"></span>
+        <a class="name">setGlobalDpi</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a3fc29ab51f9fc87b321f9c70c2168aa5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setGlobalDpi</span><span class="args">(int newDpi)</span></div><div class="memberDocumentation">
+<dl class="todo"><dt><b><a class="el" href="">Todo:</a></b></dt><dd></dd></dl>
+
+</div></div>
+  </div></div>
+  </div><div id="FontSize">
+    <h3 class="sectionHeader">Font Size</h3>
+    <div class="sectionDescription"><p>&#xA0; </p>
+</div>
+    <div class="sectionContent"><div id="adbb80647aa21a907250af47d5a3fcc6f" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#adbb80647aa21a907250af47d5a3fcc6f&quot;)">
         <span class="type"></span>
@@ -1117,7 +564,11 @@
 <dl class="section return"><dt>Returns</dt><dd>Returns the bounding box of a string as a rectangle. </dd></dl>
 
 </div></div>
-  </div><div id="ad775d8f4f08a21356fb4323238430607" class="method">
+  </div></div>
+  </div><div id="Drawing">
+    <h3 class="sectionHeader">Drawing</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="ad775d8f4f08a21356fb4323238430607" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad775d8f4f08a21356fb4323238430607&quot;)">
         <span class="type"></span>
@@ -1165,66 +616,6 @@
 </dl>
 
 </div></div>
-  </div><div id="a37523f38c5be929f82d87bac15308f03" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a37523f38c5be929f82d87bac15308f03&quot;)">
-        <span class="type"></span>
-        <a class="name">getNumCharacters</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a37523f38c5be929f82d87bac15308f03_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getNumCharacters</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Get the num chars in the loaded character set. </p>
-<p>If you allocate the font using different paramters, you can load in partial and full character sets, this helps you know how many characters it can represent.</p>
-<dl class="section return"><dt>Returns</dt><dd>Number of characters in loaded character set. </dd></dl>
-
-</div></div>
-  </div><div id="a01515b9294356ddba2eae222c214fb95" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a01515b9294356ddba2eae222c214fb95&quot;)">
-        <span class="type"></span>
-        <a class="name">getCharacterAsPoints</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a01515b9294356ddba2eae222c214fb95_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofTrueTypeFont.html#1a82ccc235db2f74dfdc922b67748791cf">ofTTFCharacter</a> </span><span class="name">getCharacterAsPoints</span><span class="args">(int character, bool vflip=ofIsVFlipped())</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a6d020d826d0427240dcaf029d83dfd50" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6d020d826d0427240dcaf029d83dfd50&quot;)">
-        <span class="type"></span>
-        <a class="name">getStringAsPoints</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a6d020d826d0427240dcaf029d83dfd50_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofTrueTypeFont.html#1a82ccc235db2f74dfdc922b67748791cf">ofTTFCharacter</a> </span><span class="name">getStringAsPoints</span><span class="args">(string str, bool vflip=ofIsVFlipped())</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a54032e60371b4a8b854b9a91c3e46cd7" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a54032e60371b4a8b854b9a91c3e46cd7&quot;)">
-        <span class="type"></span>
-        <a class="name">getStringMesh</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a54032e60371b4a8b854b9a91c3e46cd7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">getStringMesh</span><span class="args">(string s, float x, float y)</span></div><div class="memberDocumentation">
-
-</div></div>
   </div><div id="a043c3e871e6d8c1b32e7697ac4411eb0" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a043c3e871e6d8c1b32e7697ac4411eb0&quot;)">
@@ -1267,124 +658,81 @@
     <div class="methodDescription" style="display:none" id="a1270a90ae2a39acd665f9187f5dbf6c3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">unbind</span><span class="args">()</span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="a8ae68744a50f815cf68cc3836dfba94d" class="method">
+  </div><div id="a01515b9294356ddba2eae222c214fb95" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8ae68744a50f815cf68cc3836dfba94d&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a01515b9294356ddba2eae222c214fb95&quot;)">
         <span class="type"></span>
-        <a class="name">getEncoding</a>
+        <a class="name">getCharacterAsPoints</a>
         <span class="args"></span>
         <span class="kind">()</span>
         <span class="note"></span>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a8ae68744a50f815cf68cc3836dfba94d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1ad4e6cefebff2917f91e999904fa9b17f">ofTextEncoding</a> </span><span class="name">getEncoding</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>Get the current font endcoding. </p>
-<p>This is set by <a class="el" href="ofTrueTypeFont.html#abcb3ec25a1d51bb2f6945742b71dda23" title="Sets the current font encoding. ">ofTrueTypeFont::setEncoding()</a> to either OF_ENCODING_UTF8 or OF_ENCODING_ISO_8859_15. OF_ENCODING_ISO_8859_15 is for an 8-bit single-byte coded graphic character sets, like ASCII while OF_ENCODING_UTF8 is a variable-width encoding that can represent every character in the Unicode character set.</p>
-<dl class="section return"><dt>Returns</dt><dd>encoding used by the font object. </dd></dl>
+    <div class="methodDescription" style="display:none" id="a01515b9294356ddba2eae222c214fb95_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">ofTTFCharacter </span><span class="name">getCharacterAsPoints</span><span class="args">(int character, bool vflip=ofIsVFlipped())</span></div><div class="memberDocumentation">
+<dl class="todo"><dt><b><a class="el" href="">Todo:</a></b></dt><dd></dd></dl>
 
 </div></div>
-  </div><div id="abcb3ec25a1d51bb2f6945742b71dda23" class="method">
+  </div><div id="a6d020d826d0427240dcaf029d83dfd50" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#abcb3ec25a1d51bb2f6945742b71dda23&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6d020d826d0427240dcaf029d83dfd50&quot;)">
         <span class="type"></span>
-        <a class="name">setEncoding</a>
+        <a class="name">getStringAsPoints</a>
         <span class="args"></span>
         <span class="kind">()</span>
         <span class="note"></span>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="abcb3ec25a1d51bb2f6945742b71dda23_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setEncoding</span><span class="args">(ofTextEncoding encoding)</span></div><div class="memberDocumentation">
-
-<p>Sets the current font encoding. </p>
-<p>Can be set to either OF_ENCODING_UTF8 or OF_ENCODING_ISO_8859_15. OF_ENCODING_ISO_8859_15 is for an 8-bit single-byte coded graphic character sets, like ASCII while OF_ENCODING_UTF8 is a variable-width encoding that can represent every character in the Unicode character set. This function is useful if you are trying to draw unicode strings.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">encoding</td><td>The encoding used by the font object, either OF_ENCODING_UTF8 or </td></tr>
-    <tr><td class="paramname">OF_ENCODING_ISO_8859_15</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
+    <div class="methodDescription" style="display:none" id="a6d020d826d0427240dcaf029d83dfd50_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">vector&lt; ofTTFCharacter &gt; </span><span class="name">getStringAsPoints</span><span class="args">(string str, bool vflip=ofIsVFlipped())</span></div><div class="memberDocumentation">
 
 </div></div>
-  </div></div>
-  </div><div id="StaticFunctions">
-    <h3 class="sectionHeader">Static Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a3fc29ab51f9fc87b321f9c70c2168aa5" class="method">
+  </div><div id="a54032e60371b4a8b854b9a91c3e46cd7" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3fc29ab51f9fc87b321f9c70c2168aa5&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a54032e60371b4a8b854b9a91c3e46cd7&quot;)">
         <span class="type"></span>
-        <a class="name">setGlobalDpi</a>
+        <a class="name">getStringMesh</a>
         <span class="args"></span>
         <span class="kind">()</span>
         <span class="note"></span>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a3fc29ab51f9fc87b321f9c70c2168aa5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setGlobalDpi</span><span class="args">(int newDpi)</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a54032e60371b4a8b854b9a91c3e46cd7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">getStringMesh</span><span class="args">(string s, float x, float y)</span></div><div class="memberDocumentation">
 
 </div></div>
   </div></div>
-  </div><div id="ProtectedFunctions">
-    <h3 class="sectionHeader">Protected Functions</h3>
+  </div><div id="Functions">
+    <h3 class="sectionHeader">Functions</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="abe41ae828b466029c9f3389cf4cd4f29" class="method">
+    <div class="sectionContent"><div id="a5af9f717ceaa6f53e7b8c100b40ef923" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#abe41ae828b466029c9f3389cf4cd4f29&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5af9f717ceaa6f53e7b8c100b40ef923&quot;)">
         <span class="type"></span>
-        <a class="name">getKerning</a>
+        <a class="name">ofTrueTypeFont</a>
         <span class="args"></span>
         <span class="kind">()</span>
         <span class="note"></span>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="abe41ae828b466029c9f3389cf4cd4f29_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getKerning</span><span class="args">(int c, int prevC)</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a5af9f717ceaa6f53e7b8c100b40ef923_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofTrueTypeFont</span><span class="args">()</span></div><div class="memberDocumentation">
+<dl class="todo"><dt><b><a class="el" href="">Todo:</a></b></dt><dd></dd></dl>
 
 </div></div>
-  </div><div id="ad36450962da531f43d40bf3eea34619e" class="method">
+  </div><div id="aea0b8daaaaf2299caf6c9a57f57321ac" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad36450962da531f43d40bf3eea34619e&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aea0b8daaaaf2299caf6c9a57f57321ac&quot;)">
         <span class="type"></span>
-        <a class="name">drawChar</a>
+        <a class="name">~ofTrueTypeFont</a>
         <span class="args"></span>
         <span class="kind">()</span>
         <span class="note"></span>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="ad36450962da531f43d40bf3eea34619e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawChar</span><span class="args">(int c, float x, float y)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a2e6acb96718ed85be4a345c05203c3f3" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2e6acb96718ed85be4a345c05203c3f3&quot;)">
-        <span class="type"></span>
-        <a class="name">drawCharAsShape</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a2e6acb96718ed85be4a345c05203c3f3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawCharAsShape</span><span class="args">(int c, float x, float y)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aafa7bfe43f45c70e843eda0c5c321c63" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aafa7bfe43f45c70e843eda0c5c321c63&quot;)">
-        <span class="type"></span>
-        <a class="name">createStringMesh</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aafa7bfe43f45c70e843eda0c5c321c63_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">createStringMesh</span><span class="args">(string s, float x, float y)</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="aea0b8daaaaf2299caf6c9a57f57321ac_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">~ofTrueTypeFont</span><span class="args">()</span></div><div class="memberDocumentation">
+<dl class="todo"><dt><b><a class="el" href="">Todo:</a></b></dt><dd></dd></dl>
 
 </div></div>
   </div></div>

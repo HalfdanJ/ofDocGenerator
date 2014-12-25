@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <li class="chapter"><a href="#Enums">Enums</a></li><li class="chapter"><a href="#Typedefs">Typedefs</a></li><span class="class">ofPixels_::Pixel</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofPixels_::Pixels</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofPixels_::Line</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofPixels_::Lines</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofPixels_::ConstPixel</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofPixels_::ConstPixels</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofPixels_::ConstLine</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofPixels_::ConstLines</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofPixels_</span><li class="chapter"><a href="#Types">Types</a></li><li class="chapter"><a href="#Functions">Functions</a></li></ul>
+        <li class="chapter"><a href="#Enums">Enums</a></li><li class="chapter"><a href="#Typedefs">Typedefs</a></li><span class="class">ofPixels_</span><li class="chapter"><a href="#ConstructionAndAllocation">Construction And Allocation</a></li><li class="chapter"><a href="#SetPixelData">Set Pixel Data</a></li><li class="chapter"><a href="#ModifyExistingData">Modify Existing Data</a></li><li class="chapter"><a href="#PixelsAccess">Pixels Access</a></li><li class="chapter"><a href="#Getters">Getters</a></li><li class="chapter"><a href="#Setters">Setters</a></li><li class="chapter"><a href="#Iterator">Iterator</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -67,7 +67,25 @@
     <div class="classHeader">
       <h1 class="classTitle">ofPixels<small>file</small></h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>ofPixels is an object for working with blocks of pixels, those pixels can be copied from an image that you&apos;ve loaded, something that you&apos;ve drawn using ofGraphics, or a <a class="el" href="ofVideoGrabber.html">ofVideoGrabber</a> instance.</p>
+<p>You can create an image from pixels, using on ofPixels object like so:</p>
+<div class="fragment"><div class="line"><a class="code" href="ofPixels.html">ofPixels</a> p;</div>
+<div class="line"><a class="code" href="of_image_8cpp.html#aee9c5e6c0f5e0a76c12f5116d8e6869b">ofLoadImage</a>(p, <span class="stringliteral">&quot;pathToImage.jpg&quot;</span>);</div>
+</div><!-- fragment --><p>ofPixels represents pixels data on the CPU as opposed to an <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> which represents pixel data on the GPU. They can easily be made inter- operational though:</p>
+<div class="fragment"><div class="line"><a class="code" href="ofTexture.html">ofTexture</a> tex;</div>
+<div class="line"><span class="comment">// do some stuff with tex</span></div>
+<div class="line"><a class="code" href="ofPixels.html">ofPixels</a> pix;</div>
+<div class="line">tex.<a class="code" href="ofTexture.html#ab378e36d23c87c061913d07ba6653912">readToPixels</a>(pix); <span class="comment">// now all the pixels from tex are in pix</span></div>
+</div><!-- fragment --><p>You can access the pixels in an ofPixels object with the <code>[]</code> operator.</p>
+<div class="fragment"><div class="line"><a class="code" href="ofPixels.html">ofPixels</a> pix;</div>
+<div class="line"><span class="comment">// put some stuff in the pixels</span></div>
+<div class="line"><span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><span class="keywordflow">while</span>( i &lt; pix.<a class="code" href="ofPixels.html#a11f1c38cc853ffedd6b5a3ac1ccdde60">size</a>()) {</div>
+<div class="line">    <span class="keywordtype">char</span> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a> = pix[i];</div>
+<div class="line">    i++;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>You can think of the ofPixels as the CPU side representation of pixel data that can be sent to the GPU as an <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> object. To draw pixels, you need to put them into an <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> and to manipulate an ofTextures pixel data you need an ofPixels object. </p>
+</div></div>
     <div class="classMethods"><div id="Enums">
     <h3 class="sectionHeader">Enums</h3>
     <div class="sectionDescription"></div>
@@ -185,922 +203,6 @@
   </div></div>
   </div><div id="" class="classBlock">
     <div class="classHeader">
-      <h1 class="classTitle">ofPixels_::Pixel<small>struct</small></h1>
-    </div>
-    <div class="classDescription"></div>
-    <div class="classMethods"><div id="Functions">
-    <h3 class="sectionHeader">Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a28291a70e035113c35921e1dd2e51758" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a28291a70e035113c35921e1dd2e51758&quot;)">
-        <span class="type"></span>
-        <a class="name">Pixel</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a28291a70e035113c35921e1dd2e51758_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">Pixel</span><span class="args">(PixelType *pixel, int bytesPerPixel, ofPixelFormat pixelFormat)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a08022d8b790d9c34f2d92be98a7e18c1" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a08022d8b790d9c34f2d92be98a7e18c1&quot;)">
-        <span class="type"></span>
-        <a class="name">operator*</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a08022d8b790d9c34f2d92be98a7e18c1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11Pixel.html">Pixel</a> </span><span class="name">operator*</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a72632b036ea143b9daf9109418404430" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a72632b036ea143b9daf9109418404430&quot;)">
-        <span class="type"></span>
-        <a class="name">operator-&gt;</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a72632b036ea143b9daf9109418404430_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11Pixel.html">Pixel</a> </span><span class="name">operator-&gt;</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="af72c5e1d38015e062de57792bb68ce84" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af72c5e1d38015e062de57792bb68ce84&quot;)">
-        <span class="type"></span>
-        <a class="name">operator++</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="af72c5e1d38015e062de57792bb68ce84_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11Pixel.html">Pixel</a> </span><span class="name">operator++</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type"><a href="ofPixels11Pixel.html">Pixel</a> </span><span class="name">operator++</span><span class="args">(int)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a9b0814dae6bc2b5704f7665818534919" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9b0814dae6bc2b5704f7665818534919&quot;)">
-        <span class="type"></span>
-        <a class="name">operator+</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a9b0814dae6bc2b5704f7665818534919_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11Pixel.html">Pixel</a> </span><span class="name">operator+</span><span class="args">(int) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="adf40ee123cc49a2b49bf0fbaadb34ff8" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#adf40ee123cc49a2b49bf0fbaadb34ff8&quot;)">
-        <span class="type"></span>
-        <a class="name">operator+=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="adf40ee123cc49a2b49bf0fbaadb34ff8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11Pixel.html">Pixel</a> </span><span class="name">operator+=</span><span class="args">(int)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a1ab1e25f0884ff06982ff63b2e472bfb" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1ab1e25f0884ff06982ff63b2e472bfb&quot;)">
-        <span class="type"></span>
-        <a class="name">operator!=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a1ab1e25f0884ff06982ff63b2e472bfb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">operator!=</span><span class="args">(Pixel const &amp;rhs) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="afa92a634108d2be7bb24ce87c1a72315" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#afa92a634108d2be7bb24ce87c1a72315&quot;)">
-        <span class="type"></span>
-        <a class="name">operator&lt;</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="afa92a634108d2be7bb24ce87c1a72315_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">operator&lt;</span><span class="args">(Pixel const &amp;rhs) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a104d647b6b7bcc56fc5f5c9e7fe16293" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a104d647b6b7bcc56fc5f5c9e7fe16293&quot;)">
-        <span class="type"></span>
-        <a class="name">operator[]</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a104d647b6b7bcc56fc5f5c9e7fe16293_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType &amp; </span><span class="name">operator[]</span><span class="args">(int idx)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div></div>
-  </div><div id="" class="classBlock">
-    <div class="classHeader">
-      <h1 class="classTitle">ofPixels_::Pixels<small>struct</small></h1>
-    </div>
-    <div class="classDescription"></div>
-    <div class="classMethods"><div id="Functions">
-    <h3 class="sectionHeader">Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="aca2838b1401c462a27dba2ba81ff9e7b" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aca2838b1401c462a27dba2ba81ff9e7b&quot;)">
-        <span class="type"></span>
-        <a class="name">Pixels</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aca2838b1401c462a27dba2ba81ff9e7b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">Pixels</span><span class="args">(PixelType *begin, PixelType *end, int componentsPerPixel, ofPixelFormat pixelFormat)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ade4789769c646eb25c4cb12237e6773d" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ade4789769c646eb25c4cb12237e6773d&quot;)">
-        <span class="type"></span>
-        <a class="name">begin</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ade4789769c646eb25c4cb12237e6773d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11Pixel.html">Pixel</a> </span><span class="name">begin</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a4dfaf46bab2b152cca9541171f085c58" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4dfaf46bab2b152cca9541171f085c58&quot;)">
-        <span class="type"></span>
-        <a class="name">end</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a4dfaf46bab2b152cca9541171f085c58_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11Pixel.html">Pixel</a> </span><span class="name">end</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div></div>
-  </div><div id="" class="classBlock">
-    <div class="classHeader">
-      <h1 class="classTitle">ofPixels_::Line<small>struct</small></h1>
-    </div>
-    <div class="classDescription"></div>
-    <div class="classMethods"><div id="Functions">
-    <h3 class="sectionHeader">Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a9f3c7e95c28dc4bdba30bad2e29fb42f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9f3c7e95c28dc4bdba30bad2e29fb42f&quot;)">
-        <span class="type"></span>
-        <a class="name">Line</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a9f3c7e95c28dc4bdba30bad2e29fb42f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">Line</span><span class="args">(PixelType *_begin, int stride, int componentsPerPixel, int lineNum, ofPixelFormat pixelFormat)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="af5edb29b776342033f4f1a6933f32106" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af5edb29b776342033f4f1a6933f32106&quot;)">
-        <span class="type"></span>
-        <a class="name">operator*</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="af5edb29b776342033f4f1a6933f32106_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11Line.html">Line</a> </span><span class="name">operator*</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ae46b078357d37c4a5d27cc2c024fbb2a" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae46b078357d37c4a5d27cc2c024fbb2a&quot;)">
-        <span class="type"></span>
-        <a class="name">operator-&gt;</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ae46b078357d37c4a5d27cc2c024fbb2a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11Line.html">Line</a> </span><span class="name">operator-&gt;</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ad38ce9dd5968d68c926e72ae9f83e65d" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad38ce9dd5968d68c926e72ae9f83e65d&quot;)">
-        <span class="type"></span>
-        <a class="name">operator++</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ad38ce9dd5968d68c926e72ae9f83e65d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11Line.html">Line</a> </span><span class="name">operator++</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type"><a href="ofPixels11Line.html">Line</a> </span><span class="name">operator++</span><span class="args">(int)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="af89ac38836a2ebb9310c825b8dbfa267" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af89ac38836a2ebb9310c825b8dbfa267&quot;)">
-        <span class="type"></span>
-        <a class="name">operator+</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="af89ac38836a2ebb9310c825b8dbfa267_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11Line.html">Line</a> </span><span class="name">operator+</span><span class="args">(int) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a8a2519b1f51b82f920f0d2e365fd4e67" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8a2519b1f51b82f920f0d2e365fd4e67&quot;)">
-        <span class="type"></span>
-        <a class="name">operator+=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a8a2519b1f51b82f920f0d2e365fd4e67_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11Line.html">Line</a> </span><span class="name">operator+=</span><span class="args">(int)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a4d8ff4ee7c8917001a9790b4ac608c2b" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4d8ff4ee7c8917001a9790b4ac608c2b&quot;)">
-        <span class="type"></span>
-        <a class="name">operator!=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a4d8ff4ee7c8917001a9790b4ac608c2b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">operator!=</span><span class="args">(Line const &amp;rhs) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a36bec987264d19a3364a50652f36b7bd" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a36bec987264d19a3364a50652f36b7bd&quot;)">
-        <span class="type"></span>
-        <a class="name">operator&lt;</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a36bec987264d19a3364a50652f36b7bd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">operator&lt;</span><span class="args">(Line const &amp;rhs) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a5f63439167ef0eed8e2cc8a781993610" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5f63439167ef0eed8e2cc8a781993610&quot;)">
-        <span class="type"></span>
-        <a class="name">begin</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a5f63439167ef0eed8e2cc8a781993610_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType * </span><span class="name">begin</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a114134c3f643b9835bea5b556e415a6f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a114134c3f643b9835bea5b556e415a6f&quot;)">
-        <span class="type"></span>
-        <a class="name">end</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a114134c3f643b9835bea5b556e415a6f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType * </span><span class="name">end</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a89d1b9bd8fe0e5555533d5fdc87937af" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a89d1b9bd8fe0e5555533d5fdc87937af&quot;)">
-        <span class="type"></span>
-        <a class="name">begin</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a89d1b9bd8fe0e5555533d5fdc87937af_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">const PixelType * </span><span class="name">begin</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="afdeea1a5efd30b9ba5a0dba73bc083d6" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#afdeea1a5efd30b9ba5a0dba73bc083d6&quot;)">
-        <span class="type"></span>
-        <a class="name">end</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="afdeea1a5efd30b9ba5a0dba73bc083d6_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">const PixelType * </span><span class="name">end</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a11737b95c78bd33a249c0c68bdd32cc8" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a11737b95c78bd33a249c0c68bdd32cc8&quot;)">
-        <span class="type"></span>
-        <a class="name">getLineNum</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a11737b95c78bd33a249c0c68bdd32cc8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getLineNum</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a2ad9050e10e31ab8b810870618908355" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2ad9050e10e31ab8b810870618908355&quot;)">
-        <span class="type"></span>
-        <a class="name">asPixels</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a2ad9050e10e31ab8b810870618908355_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels.html">ofPixels_</a> </span><span class="name">asPixels</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type"><a href="ofPixels.html">ofPixels_</a> </span><span class="name">asPixels</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a161e69e00418a62af15d0f52eca80849" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a161e69e00418a62af15d0f52eca80849&quot;)">
-        <span class="type"></span>
-        <a class="name">getStride</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a161e69e00418a62af15d0f52eca80849_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getStride</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ad50468b5e17bfa9e7b98c33c3863b55d" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad50468b5e17bfa9e7b98c33c3863b55d&quot;)">
-        <span class="type"></span>
-        <a class="name">getPixels</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ad50468b5e17bfa9e7b98c33c3863b55d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11Pixels.html">Pixels</a> </span><span class="name">getPixels</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div></div>
-  </div><div id="" class="classBlock">
-    <div class="classHeader">
-      <h1 class="classTitle">ofPixels_::Lines<small>struct</small></h1>
-    </div>
-    <div class="classDescription"></div>
-    <div class="classMethods"><div id="Functions">
-    <h3 class="sectionHeader">Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a99f0e3d0ccdc7c739a54754adc0dbd3e" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a99f0e3d0ccdc7c739a54754adc0dbd3e&quot;)">
-        <span class="type"></span>
-        <a class="name">Lines</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a99f0e3d0ccdc7c739a54754adc0dbd3e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">Lines</span><span class="args">(PixelType *_begin, PixelType *_end, int stride, int componentsPerPixel, int lines, ofPixelFormat pixelFormat)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="acafe71da50e5b9c5013f240b83beb5d4" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#acafe71da50e5b9c5013f240b83beb5d4&quot;)">
-        <span class="type"></span>
-        <a class="name">begin</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="acafe71da50e5b9c5013f240b83beb5d4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11Line.html">Line</a> </span><span class="name">begin</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ae757ba77d61c9dcfaf31cd99cad433b7" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae757ba77d61c9dcfaf31cd99cad433b7&quot;)">
-        <span class="type"></span>
-        <a class="name">end</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ae757ba77d61c9dcfaf31cd99cad433b7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11Line.html">Line</a> </span><span class="name">end</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div></div>
-  </div><div id="" class="classBlock">
-    <div class="classHeader">
-      <h1 class="classTitle">ofPixels_::ConstPixel<small>struct</small></h1>
-    </div>
-    <div class="classDescription"></div>
-    <div class="classMethods"><div id="Functions">
-    <h3 class="sectionHeader">Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a7694178e3623c031059f8b1c1b78f6cc" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7694178e3623c031059f8b1c1b78f6cc&quot;)">
-        <span class="type"></span>
-        <a class="name">ConstPixel</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a7694178e3623c031059f8b1c1b78f6cc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ConstPixel</span><span class="args">(const PixelType *pixel, int bytesPerPixel, ofPixelFormat pixelFormat)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a13d109402304ce845429c810ef6c8823" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a13d109402304ce845429c810ef6c8823&quot;)">
-        <span class="type"></span>
-        <a class="name">operator*</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a13d109402304ce845429c810ef6c8823_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11ConstPixel.html">ConstPixel</a> </span><span class="name">operator*</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a811501088b0baee1e38b4d629ca80921" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a811501088b0baee1e38b4d629ca80921&quot;)">
-        <span class="type"></span>
-        <a class="name">operator-&gt;</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a811501088b0baee1e38b4d629ca80921_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11ConstPixel.html">ConstPixel</a> </span><span class="name">operator-&gt;</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a66ac761e4965f1853d96a80c1e1c3dc9" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a66ac761e4965f1853d96a80c1e1c3dc9&quot;)">
-        <span class="type"></span>
-        <a class="name">operator++</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a66ac761e4965f1853d96a80c1e1c3dc9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11ConstPixel.html">ConstPixel</a> </span><span class="name">operator++</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type"><a href="ofPixels11ConstPixel.html">ConstPixel</a> </span><span class="name">operator++</span><span class="args">(int)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a62973ac0f46d3e032a168adda3c4f988" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a62973ac0f46d3e032a168adda3c4f988&quot;)">
-        <span class="type"></span>
-        <a class="name">operator+</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a62973ac0f46d3e032a168adda3c4f988_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11ConstPixel.html">ConstPixel</a> </span><span class="name">operator+</span><span class="args">(int) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a6d6aabf4590218569c8af6e4fce4518c" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6d6aabf4590218569c8af6e4fce4518c&quot;)">
-        <span class="type"></span>
-        <a class="name">operator+=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a6d6aabf4590218569c8af6e4fce4518c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11ConstPixel.html">ConstPixel</a> </span><span class="name">operator+=</span><span class="args">(int)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a91f18fc05605aafb512ca22fb3ff4912" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a91f18fc05605aafb512ca22fb3ff4912&quot;)">
-        <span class="type"></span>
-        <a class="name">operator!=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a91f18fc05605aafb512ca22fb3ff4912_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">operator!=</span><span class="args">(ConstPixel const &amp;rhs) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="af0f58b208139a08e78980970121d4847" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af0f58b208139a08e78980970121d4847&quot;)">
-        <span class="type"></span>
-        <a class="name">operator&lt;</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="af0f58b208139a08e78980970121d4847_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">operator&lt;</span><span class="args">(ConstPixel const &amp;rhs) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a1c6f891593d47f1e998570dee76ec04e" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1c6f891593d47f1e998570dee76ec04e&quot;)">
-        <span class="type"></span>
-        <a class="name">operator[]</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a1c6f891593d47f1e998570dee76ec04e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">const PixelType &amp; </span><span class="name">operator[]</span><span class="args">(int idx) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div></div>
-  </div><div id="" class="classBlock">
-    <div class="classHeader">
-      <h1 class="classTitle">ofPixels_::ConstPixels<small>struct</small></h1>
-    </div>
-    <div class="classDescription"></div>
-    <div class="classMethods"><div id="Functions">
-    <h3 class="sectionHeader">Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="aa116013443aa713894fea75e8f6c15f2" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa116013443aa713894fea75e8f6c15f2&quot;)">
-        <span class="type"></span>
-        <a class="name">ConstPixels</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa116013443aa713894fea75e8f6c15f2_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ConstPixels</span><span class="args">(const PixelType *begin, const PixelType *end, int componentsPerPixel, ofPixelFormat pixelFormat)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a3b7a3ff58aae7092c431105e08107e8d" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3b7a3ff58aae7092c431105e08107e8d&quot;)">
-        <span class="type"></span>
-        <a class="name">begin</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a3b7a3ff58aae7092c431105e08107e8d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11ConstPixel.html">ConstPixel</a> </span><span class="name">begin</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a6e9db4fc3c59e0b2c71a230cefa22c2e" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6e9db4fc3c59e0b2c71a230cefa22c2e&quot;)">
-        <span class="type"></span>
-        <a class="name">end</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a6e9db4fc3c59e0b2c71a230cefa22c2e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11ConstPixel.html">ConstPixel</a> </span><span class="name">end</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div></div>
-  </div><div id="" class="classBlock">
-    <div class="classHeader">
-      <h1 class="classTitle">ofPixels_::ConstLine<small>struct</small></h1>
-    </div>
-    <div class="classDescription"></div>
-    <div class="classMethods"><div id="Functions">
-    <h3 class="sectionHeader">Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="af54a9d56445970ce1168dd2df4fc5521" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af54a9d56445970ce1168dd2df4fc5521&quot;)">
-        <span class="type"></span>
-        <a class="name">ConstLine</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="af54a9d56445970ce1168dd2df4fc5521_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ConstLine</span><span class="args">(const PixelType *_begin, int stride, int componentsPerPixel, int lineNum, ofPixelFormat pixelFormat)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a37d9de538ebb856648b83bd90ac85783" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a37d9de538ebb856648b83bd90ac85783&quot;)">
-        <span class="type"></span>
-        <a class="name">operator*</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a37d9de538ebb856648b83bd90ac85783_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11ConstLine.html">ConstLine</a> </span><span class="name">operator*</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a30eaafb6a946884788b44a3d5be36ed0" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a30eaafb6a946884788b44a3d5be36ed0&quot;)">
-        <span class="type"></span>
-        <a class="name">operator-&gt;</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a30eaafb6a946884788b44a3d5be36ed0_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11ConstLine.html">ConstLine</a> </span><span class="name">operator-&gt;</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a12862681f254399fa85c08e7f8984ace" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a12862681f254399fa85c08e7f8984ace&quot;)">
-        <span class="type"></span>
-        <a class="name">operator++</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a12862681f254399fa85c08e7f8984ace_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11ConstLine.html">ConstLine</a> </span><span class="name">operator++</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type"><a href="ofPixels11ConstLine.html">ConstLine</a> </span><span class="name">operator++</span><span class="args">(int)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a8a871ec04f19279d665447acb8847c98" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8a871ec04f19279d665447acb8847c98&quot;)">
-        <span class="type"></span>
-        <a class="name">operator+</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a8a871ec04f19279d665447acb8847c98_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11ConstLine.html">ConstLine</a> </span><span class="name">operator+</span><span class="args">(int) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a84b3c0dd4cb637c4da86070214379f6f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a84b3c0dd4cb637c4da86070214379f6f&quot;)">
-        <span class="type"></span>
-        <a class="name">operator+=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a84b3c0dd4cb637c4da86070214379f6f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11ConstLine.html">ConstLine</a> </span><span class="name">operator+=</span><span class="args">(int)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a7a5b4324ad1f0d2fa9df67a71e9f18a2" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7a5b4324ad1f0d2fa9df67a71e9f18a2&quot;)">
-        <span class="type"></span>
-        <a class="name">operator!=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a7a5b4324ad1f0d2fa9df67a71e9f18a2_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">operator!=</span><span class="args">(ConstLine const &amp;rhs) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a0ff8cf8667c6ab2350e6054b260966f4" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a0ff8cf8667c6ab2350e6054b260966f4&quot;)">
-        <span class="type"></span>
-        <a class="name">operator&lt;</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a0ff8cf8667c6ab2350e6054b260966f4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">operator&lt;</span><span class="args">(ConstLine const &amp;rhs) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aa9b8bf6356a5a29f3ff6b92a6ef71bc3" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa9b8bf6356a5a29f3ff6b92a6ef71bc3&quot;)">
-        <span class="type"></span>
-        <a class="name">begin</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa9b8bf6356a5a29f3ff6b92a6ef71bc3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">const PixelType * </span><span class="name">begin</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a3cd3a3a235b727bb766ff46cbdc9b902" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3cd3a3a235b727bb766ff46cbdc9b902&quot;)">
-        <span class="type"></span>
-        <a class="name">end</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a3cd3a3a235b727bb766ff46cbdc9b902_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">const PixelType * </span><span class="name">end</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a103fad5afff400e6d3d3fc818d3787ae" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a103fad5afff400e6d3d3fc818d3787ae&quot;)">
-        <span class="type"></span>
-        <a class="name">getLineNum</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a103fad5afff400e6d3d3fc818d3787ae_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getLineNum</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ab52c531859f95fca2574e837f20ba1ec" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab52c531859f95fca2574e837f20ba1ec&quot;)">
-        <span class="type"></span>
-        <a class="name">getStride</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ab52c531859f95fca2574e837f20ba1ec_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getStride</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a7a6825a2cf62566251bfcd8b59ba8156" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7a6825a2cf62566251bfcd8b59ba8156&quot;)">
-        <span class="type"></span>
-        <a class="name">getPixels</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a7a6825a2cf62566251bfcd8b59ba8156_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11ConstPixels.html">ConstPixels</a> </span><span class="name">getPixels</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div></div>
-  </div><div id="" class="classBlock">
-    <div class="classHeader">
-      <h1 class="classTitle">ofPixels_::ConstLines<small>struct</small></h1>
-    </div>
-    <div class="classDescription"></div>
-    <div class="classMethods"><div id="Functions">
-    <h3 class="sectionHeader">Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="afa5ef6b0f3151be4b4a72ab9d409d468" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#afa5ef6b0f3151be4b4a72ab9d409d468&quot;)">
-        <span class="type"></span>
-        <a class="name">ConstLines</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="afa5ef6b0f3151be4b4a72ab9d409d468_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ConstLines</span><span class="args">(const PixelType *_begin, const PixelType *_end, int stride, int componentsPerPixel, int lines, ofPixelFormat pixelFormat)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ab6b7af1e0f9cb98403b981a5bb248b0f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab6b7af1e0f9cb98403b981a5bb248b0f&quot;)">
-        <span class="type"></span>
-        <a class="name">begin</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ab6b7af1e0f9cb98403b981a5bb248b0f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11ConstLine.html">ConstLine</a> </span><span class="name">begin</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ad9e812ccce0c515aad1683f0cf128fa1" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad9e812ccce0c515aad1683f0cf128fa1&quot;)">
-        <span class="type"></span>
-        <a class="name">end</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ad9e812ccce0c515aad1683f0cf128fa1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11ConstLine.html">ConstLine</a> </span><span class="name">end</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div></div>
-  </div><div id="" class="classBlock">
-    <div class="classHeader">
       <h1 class="classTitle">ofPixels_<small>class</small></h1>
     </div>
     <div class="classDescription"><div class="textblock"><h3>template&lt;typename PixelType&gt;<br>
@@ -1108,68 +210,8 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
 <p>A class representing a collection of pixels. </p>
 </div></div>
-    <div class="classMethods"><div id="Types">
-    <h3 class="sectionHeader">Types</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a049e1b9585e1f91acbcc10334e3c569a" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a049e1b9585e1f91acbcc10334e3c569a&quot;)">
-        <span class="type"></span>
-        <a class="name">iterator</a>
-        <span class="args"></span>
-        <span class="kind">typedef</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a049e1b9585e1f91acbcc10334e3c569a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType * </span><span class="name">iterator</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a2e7512153e7d83ba9a92e7364d814083" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2e7512153e7d83ba9a92e7364d814083&quot;)">
-        <span class="type"></span>
-        <a class="name">const_iterator</a>
-        <span class="args"></span>
-        <span class="kind">typedef</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a2e7512153e7d83ba9a92e7364d814083_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">const PixelType * </span><span class="name">const_iterator</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="adeae25d196c8df0440cc423e244c8783" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#adeae25d196c8df0440cc423e244c8783&quot;)">
-        <span class="type"></span>
-        <a class="name">reverse_iterator</a>
-        <span class="args"></span>
-        <span class="kind">typedef</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="adeae25d196c8df0440cc423e244c8783_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType * </span><span class="name">reverse_iterator</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aa48d890c44457380b1dd52343a38fdb4" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa48d890c44457380b1dd52343a38fdb4&quot;)">
-        <span class="type"></span>
-        <a class="name">const_reverse_iterator</a>
-        <span class="args"></span>
-        <span class="kind">typedef</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa48d890c44457380b1dd52343a38fdb4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">const PixelType * </span><span class="name">const_reverse_iterator</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div><div id="Functions">
-    <h3 class="sectionHeader">Functions</h3>
+    <div class="classMethods"><div id="ConstructionAndAllocation">
+    <h3 class="sectionHeader">Construction And Allocation</h3>
     <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="af108a001c5dab31e348d39d21cd90798" class="method">
     <div class="methodHeader">
@@ -1212,47 +254,7 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a12593d65b8154e1d107fd05f162e0829_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofPixels_</span><span class="args">(const ofPixels_&lt; PixelType &gt; &amp;mom)</span></div><div class="memberDocumentation">
 
-</div></div>
-  </div><div id="af2d2767e42fdae80b312fde713ded3ee" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af2d2767e42fdae80b312fde713ded3ee&quot;)">
-        <span class="type"></span>
-        <a class="name">operator=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="af2d2767e42fdae80b312fde713ded3ee_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels.html">ofPixels_</a> </span><span class="name">operator=</span><span class="args">(const ofPixels_&lt; PixelType &gt; &amp;mom)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ac1a64dfcc699d0e404a21a363b8733e7" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac1a64dfcc699d0e404a21a363b8733e7&quot;)">
-        <span class="type"></span>
-        <a class="name">ofPixels_</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ac1a64dfcc699d0e404a21a363b8733e7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofPixels_</span><span class="args">(const ofPixels_&lt; SrcType &gt; &amp;mom)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a35977692439e2876f79fb0caded22ec7" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a35977692439e2876f79fb0caded22ec7&quot;)">
-        <span class="type"></span>
-        <a class="name">operator=</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a35977692439e2876f79fb0caded22ec7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels.html">ofPixels_</a> </span><span class="name">operator=</span><span class="args">(const ofPixels_&lt; SrcType &gt; &amp;mom)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofPixels_</span><span class="args">(const ofPixels_&lt; SrcType &gt; &amp;mom)</span></div><div class="memberDocumentation">
 
 </div></div>
   </div><div id="a02b8aa5dd03f4403e37186c8eadaa872" class="method">
@@ -1268,12 +270,104 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a02b8aa5dd03f4403e37186c8eadaa872_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, int channels)</span></div><div class="memberDocumentation">
 
-</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, ofPixelFormat type)</span></div><div class="memberDocumentation">
+<p>Allocates space for pixel data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">w</td><td>Width of pixel array </td></tr>
+    <tr><td class="paramname">h</td><td>Height of pixel array </td></tr>
+    <tr><td class="paramname">channels</td><td>Number of channels per pixel </td></tr>
+  </table>
+  </dd>
+</dl>
 
-</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, ofImageType type)</span></div><div class="memberDocumentation">
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, ofPixelFormat pixelFormat)</span></div><div class="memberDocumentation">
+
+<p>Allocates space for pixel data. </p>
+<p>The pixelFormat can be one of the following: </p>
+<pre class="fragment">OF_PIXELS_RGB
+OF_PIXELS_RGBA
+OF_PIXELS_BGRA
+OF_PIXELS_MONO
+</pre><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">w</td><td>Width of pixel array </td></tr>
+    <tr><td class="paramname">h</td><td>Height of pixel array </td></tr>
+    <tr><td class="paramname">pixelFormat</td><td>ofPixelFormat defining number of channels per pixel </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(int w, int h, ofImageType imageType)</span></div><div class="memberDocumentation">
+
+<p>Allocates space for pixel data. </p>
+<p>The imageType can be one of the following: </p>
+<pre class="fragment">OF_IMAGE_GRAYSCALE
+OF_IMAGE_COLOR
+OF_IMAGE_COLOR_ALPHA
+</pre><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">w</td><td>Width of pixel array </td></tr>
+    <tr><td class="paramname">h</td><td>Height of pixel array </td></tr>
+    <tr><td class="paramname">imageType</td><td>ofImageType defining number of channels per pixel </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div></div>
-  </div><div id="aa14e0f35caf352220a96bfb5cdea1327" class="method">
+  </div><div id="a55124dbd4cf544b651074a8afba69840" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a55124dbd4cf544b651074a8afba69840&quot;)">
+        <span class="type"></span>
+        <a class="name">isAllocated</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a55124dbd4cf544b651074a8afba69840_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">isAllocated</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Get whether memory has been allocated for an ofPixels object or not. </p>
+<p>Many operations like copying pixels, etc, automatically allocate the memory needed, but it&apos;s sometimes good to check. </p>
+
+</div></div>
+  </div><div id="a4a9f443ed29eed90fb2ad44515328dbe" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4a9f443ed29eed90fb2ad44515328dbe&quot;)">
+        <span class="type"></span>
+        <a class="name">clear</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a4a9f443ed29eed90fb2ad44515328dbe_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clear</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Clear all the data from the ofPixels objects. After calling this you&apos;ll need to <a class="el" href="ofPixels.html#a02b8aa5dd03f4403e37186c8eadaa872" title="Allocates space for pixel data. ">allocate()</a> the ofPixels object again to use it. </p>
+
+</div></div>
+  </div><div id="af2d2767e42fdae80b312fde713ded3ee" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af2d2767e42fdae80b312fde713ded3ee&quot;)">
+        <span class="type"></span>
+        <a class="name">operator=</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="af2d2767e42fdae80b312fde713ded3ee_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels.html">ofPixels_</a> </span><span class="name">operator=</span><span class="args">(const ofPixels_&lt; PixelType &gt; &amp;mom)</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofPixels.html">ofPixels_</a> </span><span class="name">operator=</span><span class="args">(const ofPixels_&lt; SrcType &gt; &amp;mom)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div></div>
+  </div><div id="SetPixelData">
+    <h3 class="sectionHeader">Set Pixel Data</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="aa14e0f35caf352220a96bfb5cdea1327" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa14e0f35caf352220a96bfb5cdea1327&quot;)">
         <span class="type"></span>
@@ -1353,7 +447,11 @@ class ofPixels_&lt; PixelType &gt;</h3>
     <div class="methodDescription" style="display:none" id="a4660494e40e0891e40133f7cd5e6e5dc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">swap</span><span class="args">(ofPixels_&lt; PixelType &gt; &amp;pix)</span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="afd50b91ada0eaa98218fab6626dccb40" class="method">
+  </div></div>
+  </div><div id="ModifyExistingData">
+    <h3 class="sectionHeader">Modify Existing Data</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="afd50b91ada0eaa98218fab6626dccb40" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#afd50b91ada0eaa98218fab6626dccb40&quot;)">
         <span class="type"></span>
@@ -1366,10 +464,13 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="afd50b91ada0eaa98218fab6626dccb40_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">crop</span><span class="args">(int x, int y, int width, int height)</span></div><div class="memberDocumentation">
 
+<p>Crop the pixels to a new width and height. </p>
+<p>As a word of caution this reallocates memory and can be a bit expensive if done a lot. </p>
+
 </div></div>
-  </div><div id="acd9cea547dffced0bc1cdd3b032e2b78" class="method">
+  </div><div id="acd70e625d553dd5ccaaad721ab6a53d4" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#acd9cea547dffced0bc1cdd3b032e2b78&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#acd70e625d553dd5ccaaad721ab6a53d4&quot;)">
         <span class="type"></span>
         <a class="name">cropTo</a>
         <span class="args"></span>
@@ -1378,7 +479,10 @@ class ofPixels_&lt; PixelType &gt;</h3>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="acd9cea547dffced0bc1cdd3b032e2b78_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">cropTo</span><span class="args">(ofPixels_&lt; PixelType &gt; &amp;toPix, int x, int y, int _width, int _height) const </span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="acd70e625d553dd5ccaaad721ab6a53d4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">cropTo</span><span class="args">(ofPixels_&lt; PixelType &gt; &amp;toPix, int x, int y, int width, int height) const </span></div><div class="memberDocumentation">
+
+<p>Crop the pixels into the ofPixels reference passed in by <code>toPix. at the</code>x<code>and</code>y` and width the new width and height. </p>
+<p>As a word of caution this reallocates memory and can be a bit expensive if done a lot. </p>
 
 </div></div>
   </div><div id="a3c1bae7e9a6df9f4b221842a347ab1e6" class="method">
@@ -1436,6 +540,15 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a3e65f083698f7f4cee1d528bcea4c073_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">mirror</span><span class="args">(bool vertically, bool horizontal)</span></div><div class="memberDocumentation">
 
+<p>Mirror the pixels across the vertical and/or horizontal axis. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertically</td><td>Set to true to mirror vertically </td></tr>
+    <tr><td class="paramname">horizontal</td><td>Set to true to mirror horizontal </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div></div>
   </div><div id="acc59c5ccd146c119de24192ee8d9864d" class="method">
     <div class="methodHeader">
@@ -1450,6 +563,11 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="acc59c5ccd146c119de24192ee8d9864d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">resize</span><span class="args">(int dstWidth, int dstHeight, ofInterpolationMethod interpMethod=OF_INTERPOLATE_NEAREST_NEIGHBOR)</span></div><div class="memberDocumentation">
 
+<p>Resize the ofPixels instance to the dstHeight and dstWidth. </p>
+<p>The options for the interpolation methods are as follows: </p>
+<pre class="fragment">OF_INTERPOLATE_NEAREST_NEIGHBOR
+OF_INTERPOLATE_BILINEAR     
+OF_INTERPOLATE_BICUBIC        </pre> 
 </div></div>
   </div><div id="abe1d244ed0098f849138c48ee46380ca" class="method">
     <div class="methodHeader">
@@ -1464,6 +582,11 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="abe1d244ed0098f849138c48ee46380ca_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">resizeTo</span><span class="args">(ofPixels_&lt; PixelType &gt; &amp;dst, ofInterpolationMethod interpMethod=OF_INTERPOLATE_NEAREST_NEIGHBOR) const </span></div><div class="memberDocumentation">
 
+<p>Resize the ofPixels instance to the size of the ofPixels object passed in dst. </p>
+<p>The options for the interpolation methods are as follows: </p>
+<pre class="fragment">OF_INTERPOLATE_NEAREST_NEIGHBOR
+OF_INTERPOLATE_BILINEAR     
+OF_INTERPOLATE_BICUBIC        </pre> 
 </div></div>
   </div><div id="a22e2dc1e3abe7900bf6f4bae8cd95575" class="method">
     <div class="methodHeader">
@@ -1477,6 +600,8 @@ class ofPixels_&lt; PixelType &gt;</h3>
     </div>
 
     <div class="methodDescription" style="display:none" id="a22e2dc1e3abe7900bf6f4bae8cd95575_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">pasteInto</span><span class="args">(ofPixels_&lt; PixelType &gt; &amp;dst, int x, int y) const </span></div><div class="memberDocumentation">
+
+<p>Paste the ofPixels object into another ofPixels object at the specified index, copying data from the ofPixels that the method is being called on to the ofPixels object at <code>&amp;dst</code>. If the data being copied doesn&apos;t fit into the destination then the image is cropped. </p>
 
 </div></div>
   </div><div id="ab0228cce4f8c6da57775a842fe36fb83" class="method">
@@ -1492,19 +617,30 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="ab0228cce4f8c6da57775a842fe36fb83_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">swapRgb</span><span class="args">()</span></div><div class="memberDocumentation">
 
+<p>Swaps the R and B channels of an image, leaving the G and A channels as is. </p>
+
 </div></div>
-  </div><div id="a4a9f443ed29eed90fb2ad44515328dbe" class="method">
+  </div></div>
+  </div><div id="PixelsAccess">
+    <h3 class="sectionHeader">Pixels Access</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a4a5a350c779c3ef5de5c0bd8c4eac2e2" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4a9f443ed29eed90fb2ad44515328dbe&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4a5a350c779c3ef5de5c0bd8c4eac2e2&quot;)">
         <span class="type"></span>
-        <a class="name">clear</a>
+        <a class="name">getData</a>
         <span class="args"></span>
         <span class="kind">()</span>
         <span class="note"></span>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a4a9f443ed29eed90fb2ad44515328dbe_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clear</span><span class="args">()</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a4a5a350c779c3ef5de5c0bd8c4eac2e2_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType * </span><span class="name">getData</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Retrieves pixel data from the ofPixel object. </p>
+<dl class="section return"><dt>Returns</dt><dd>A raw pointer to the pixel data. </dd></dl>
+
+</div><hr><div class="memberVariant"><span class="type">const PixelType * </span><span class="name">getData</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 </div></div>
   </div><div id="a496221ae66847950c3c70c416fb8bf6c" class="method">
@@ -1520,26 +656,7 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a496221ae66847950c3c70c416fb8bf6c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType </span><span class="name">getPixels</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>Retrieves pixel data from the ofPixel object. </p>
-<dl class="section return"><dt>Returns</dt><dd>A raw pointer to the pixel data. </dd></dl>
-
 </div><hr><div class="memberVariant"><span class="type">const PixelType </span><span class="name">getPixels</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a4a5a350c779c3ef5de5c0bd8c4eac2e2" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4a5a350c779c3ef5de5c0bd8c4eac2e2&quot;)">
-        <span class="type"></span>
-        <a class="name">getData</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a4a5a350c779c3ef5de5c0bd8c4eac2e2_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType * </span><span class="name">getData</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div><hr><div class="memberVariant"><span class="type">const PixelType * </span><span class="name">getData</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 </div></div>
   </div><div id="a031e0f9abd0066c8cfce38160efdcff9" class="method">
@@ -1571,6 +688,11 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a4c9bd76b744cb393e3ee8fc425ccd0d1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getPixelIndex</span><span class="args">(int x, int y) const </span></div><div class="memberDocumentation">
 
+<p>Get the pixel index at a x,y position. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> yellow = <a class="code" href="ofColor.html#a9105f57222e87b3d0762936f646db8f1">ofColor::yellow</a>;</div>
+<div class="line"><span class="keywordtype">int</span> ind = pix.getPixelIndex(mouseX, mouseY);</div>
+<div class="line">pix.setPixel(ind, yellow);</div>
+</div><!-- fragment --> 
 </div></div>
   </div><div id="a32eba650aa1300338ea910bb434f1522" class="method">
     <div class="methodHeader">
@@ -1584,6 +706,8 @@ class ofPixels_&lt; PixelType &gt;</h3>
     </div>
 
     <div class="methodDescription" style="display:none" id="a32eba650aa1300338ea910bb434f1522_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">getColor</span><span class="args">(int x, int y) const </span></div><div class="memberDocumentation">
+
+<p>Get the color at a x,y position. </p>
 
 </div></div>
   </div><div id="a1f8d537a4d8e7af99bd2096f244fab3d" class="method">
@@ -1599,9 +723,15 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a1f8d537a4d8e7af99bd2096f244fab3d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(int x, int y, const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
+<p>Set the color of the pixel at the x,y location. </p>
+
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(int index, const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
+<p>Set the color of the pixel at a specific index. </p>
+
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
+
+<p>Set the color of all pixels. </p>
 
 </div></div>
   </div><div id="ad7b5fa45ae78789c5b2fed1a9d82dc67" class="method">
@@ -1617,24 +747,16 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="ad7b5fa45ae78789c5b2fed1a9d82dc67_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">const PixelType &amp; </span><span class="name">operator[]</span><span class="args">(int pos) const </span></div><div class="memberDocumentation">
 
+<p>Provides access to each channel of each pixel. If you have RGB pixel data, then you&apos;ll have 3 values for each pixel, if you have RGBA, you&apos;ll have 4. </p>
+
 </div><hr><div class="memberVariant"><span class="type">PixelType &amp; </span><span class="name">operator[]</span><span class="args">(int pos)</span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="a55124dbd4cf544b651074a8afba69840" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a55124dbd4cf544b651074a8afba69840&quot;)">
-        <span class="type"></span>
-        <a class="name">isAllocated</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a55124dbd4cf544b651074a8afba69840_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">isAllocated</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a4bd70bd65600e800cbe7e4368c7343ed" class="method">
+  </div></div>
+  </div><div id="Getters">
+    <h3 class="sectionHeader">Getters</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a4bd70bd65600e800cbe7e4368c7343ed" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4bd70bd65600e800cbe7e4368c7343ed&quot;)">
         <span class="type"></span>
@@ -1646,6 +768,8 @@ class ofPixels_&lt; PixelType &gt;</h3>
     </div>
 
     <div class="methodDescription" style="display:none" id="a4bd70bd65600e800cbe7e4368c7343ed_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getWidth</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Get the width of the pixel array. </p>
 
 </div></div>
   </div><div id="a3c01aa308c3888e3cd3d479861922f74" class="method">
@@ -1661,6 +785,8 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a3c01aa308c3888e3cd3d479861922f74_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getHeight</span><span class="args">() const </span></div><div class="memberDocumentation">
 
+<p>Get the height of the pixel array. </p>
+
 </div></div>
   </div><div id="a66f09e90ae12d0aec01ec243d5fdb33a" class="method">
     <div class="methodHeader">
@@ -1674,6 +800,8 @@ class ofPixels_&lt; PixelType &gt;</h3>
     </div>
 
     <div class="methodDescription" style="display:none" id="a66f09e90ae12d0aec01ec243d5fdb33a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getBytesPerPixel</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Get the number of bytes per pixel. </p>
 
 </div></div>
   </div><div id="a3ca4f9d3e99c837403e1fa0502cd9349" class="method">
@@ -1689,6 +817,9 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a3ca4f9d3e99c837403e1fa0502cd9349_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getBitsPerPixel</span><span class="args">() const </span></div><div class="memberDocumentation">
 
+<p>Get number of bits per pixel. </p>
+<p>If you have RGB pixel data, this will return 3, if you have RGBA, you&apos;ll have 4, if you have grayscale, this will return 1. </p>
+
 </div></div>
   </div><div id="ac91a10893be297b566c32e979ff88f3c" class="method">
     <div class="methodHeader">
@@ -1703,6 +834,10 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="ac91a10893be297b566c32e979ff88f3c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getBytesPerChannel</span><span class="args">() const </span></div><div class="memberDocumentation">
 
+<p>Get how large each channel of a pixel is. </p>
+<p>ofPixels objects that store pixel data as unsigned char are smaller than ofPixels objects that store pixel data as floats.</p>
+<dl class="section note"><dt>Note</dt><dd>This returns bytes, not bits, so you should see ofPixels&lt;float&gt; return 4 and ofPixels&lt;unsigned char&gt; return 1. </dd></dl>
+
 </div></div>
   </div><div id="affd985c1637d8a601db45bcdb6bb9646" class="method">
     <div class="methodHeader">
@@ -1716,6 +851,10 @@ class ofPixels_&lt; PixelType &gt;</h3>
     </div>
 
     <div class="methodDescription" style="display:none" id="affd985c1637d8a601db45bcdb6bb9646_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getBitsPerChannel</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Get how large each channel of a pixels is. </p>
+<p>ofPixels objects that store pixel data as <code>unsigned char</code> are smaller than ofPixels objects that store pixel data as &apos;float`.</p>
+<dl class="section note"><dt>Note</dt><dd>This returns bits, not bytes, so you should see ofPixels&lt;float&gt; return 32 and ofPixels&lt;unsigned char&gt; return 8. </dd></dl>
 
 </div></div>
   </div><div id="a99542983111d15ffc1a2642d52ecdbd2" class="method">
@@ -1744,6 +883,8 @@ class ofPixels_&lt; PixelType &gt;</h3>
     </div>
 
     <div class="methodDescription" style="display:none" id="a72d8f39a66fd3d37db5aeab113676439_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getNumChannels</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Get the number of channels that the ofPixels object contains. RGB is 3 channels, RGBA is 4, and grayscale is 1. </p>
 
 </div></div>
   </div><div id="a4b0359d3c29a3a1276fa380e5d5de4c5" class="method">
@@ -1801,8 +942,51 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="accb34589c1e0413470a8076868e50907_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels.html">ofPixels_</a> </span><span class="name">getChannel</span><span class="args">(int channel) const </span></div><div class="memberDocumentation">
 
+<p>Get all values of one channel. </p>
+<p>For instance, the Red pixel values, from the ofPixels object, this gives you a grayscale representation of the specific channel</p>
+<div class="fragment"><div class="line"><span class="comment">// Get red pixels</span></div>
+<div class="line"><a class="code" href="ofPixels.html">ofPixels</a> rpix = pix.<a class="code" href="ofPixels.html#accb34589c1e0413470a8076868e50907">getChannel</a>(0);</div>
+<div class="line"><span class="comment">// Get green pixels</span></div>
+<div class="line"><a class="code" href="ofPixels.html">ofPixels</a> gpix = pix.<a class="code" href="ofPixels.html#accb34589c1e0413470a8076868e50907">getChannel</a>(1);</div>
+<div class="line"><span class="comment">// Get blue pixels</span></div>
+<div class="line"><a class="code" href="ofPixels.html">ofPixels</a> bpix = pix.<a class="code" href="ofPixels.html#accb34589c1e0413470a8076868e50907">getChannel</a>(2);</div>
+</div><!-- fragment --> 
 </div></div>
-  </div><div id="adeb3c08b1e8e85e27c95c4efb893fccf" class="method">
+  </div><div id="a25f312c5540be6b69d36a6d1c7f04bcc" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a25f312c5540be6b69d36a6d1c7f04bcc&quot;)">
+        <span class="type"></span>
+        <a class="name">getPixelFormat</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a25f312c5540be6b69d36a6d1c7f04bcc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1ae227396622740556688053d3dc0f1693">ofPixelFormat</a> </span><span class="name">getPixelFormat</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a11f1c38cc853ffedd6b5a3ac1ccdde60" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a11f1c38cc853ffedd6b5a3ac1ccdde60&quot;)">
+        <span class="type"></span>
+        <a class="name">size</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a11f1c38cc853ffedd6b5a3ac1ccdde60_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">size</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Get the number of values that the ofPixels object contains, so an RGB data 400x400 would be 480.000, whereas RGBA data of the same dimensions would be 640.000. </p>
+
+</div></div>
+  </div></div>
+  </div><div id="Setters">
+    <h3 class="sectionHeader">Setters</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="adeb3c08b1e8e85e27c95c4efb893fccf" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#adeb3c08b1e8e85e27c95c4efb893fccf&quot;)">
         <span class="type"></span>
@@ -1815,19 +999,7 @@ class ofPixels_&lt; PixelType &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="adeb3c08b1e8e85e27c95c4efb893fccf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setChannel</span><span class="args">(int channel, const ofPixels_&lt; PixelType &gt; channelPixels)</span></div><div class="memberDocumentation">
 
-</div></div>
-  </div><div id="a958efb35639925f9ce95b01f379970e8" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a958efb35639925f9ce95b01f379970e8&quot;)">
-        <span class="type"></span>
-        <a class="name">getImageType</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a958efb35639925f9ce95b01f379970e8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1a9760b6b0bec0314fdc85f44793bbe951">ofImageType</a> </span><span class="name">getImageType</span><span class="args">() const </span></div><div class="memberDocumentation">
+<p>Set all the pixel data for a single channel, for instance, the Red pixel values, from an ofPixels object assumed to be a grayscale representation of the data that should go into that one channel. </p>
 
 </div></div>
   </div><div id="a31d9a9fef5840dbd03d43abb3190d2d6" class="method">
@@ -1852,20 +1024,6 @@ class ofPixels_&lt; PixelType &gt;</h3>
 </dl>
 
 </div></div>
-  </div><div id="a25f312c5540be6b69d36a6d1c7f04bcc" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a25f312c5540be6b69d36a6d1c7f04bcc&quot;)">
-        <span class="type"></span>
-        <a class="name">getPixelFormat</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a25f312c5540be6b69d36a6d1c7f04bcc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1ae227396622740556688053d3dc0f1693">ofPixelFormat</a> </span><span class="name">getPixelFormat</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
   </div><div id="a572bbb86935dbeb8b2405038664a085b" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a572bbb86935dbeb8b2405038664a085b&quot;)">
@@ -1880,18 +1038,64 @@ class ofPixels_&lt; PixelType &gt;</h3>
     <div class="methodDescription" style="display:none" id="a572bbb86935dbeb8b2405038664a085b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setNumChannels</span><span class="args">(int numChannels)</span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="a11f1c38cc853ffedd6b5a3ac1ccdde60" class="method">
+  </div></div>
+  </div><div id="Iterator">
+    <h3 class="sectionHeader">Iterator</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a049e1b9585e1f91acbcc10334e3c569a" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a11f1c38cc853ffedd6b5a3ac1ccdde60&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a049e1b9585e1f91acbcc10334e3c569a&quot;)">
         <span class="type"></span>
-        <a class="name">size</a>
+        <a class="name">iterator</a>
         <span class="args"></span>
-        <span class="kind">()</span>
+        <span class="kind">typedef</span>
         <span class="note"></span>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a11f1c38cc853ffedd6b5a3ac1ccdde60_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">size</span><span class="args">() const </span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a049e1b9585e1f91acbcc10334e3c569a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType * </span><span class="name">iterator</span><span class="args"></span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a2e7512153e7d83ba9a92e7364d814083" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2e7512153e7d83ba9a92e7364d814083&quot;)">
+        <span class="type"></span>
+        <a class="name">const_iterator</a>
+        <span class="args"></span>
+        <span class="kind">typedef</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a2e7512153e7d83ba9a92e7364d814083_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">const PixelType * </span><span class="name">const_iterator</span><span class="args"></span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="adeae25d196c8df0440cc423e244c8783" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#adeae25d196c8df0440cc423e244c8783&quot;)">
+        <span class="type"></span>
+        <a class="name">reverse_iterator</a>
+        <span class="args"></span>
+        <span class="kind">typedef</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="adeae25d196c8df0440cc423e244c8783_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">PixelType * </span><span class="name">reverse_iterator</span><span class="args"></span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="aa48d890c44457380b1dd52343a38fdb4" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa48d890c44457380b1dd52343a38fdb4&quot;)">
+        <span class="type"></span>
+        <a class="name">const_reverse_iterator</a>
+        <span class="args"></span>
+        <span class="kind">typedef</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aa48d890c44457380b1dd52343a38fdb4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">const PixelType * </span><span class="name">const_reverse_iterator</span><span class="args"></span></div><div class="memberDocumentation">
 
 </div></div>
   </div><div id="abefe4695b89d59f8810d5a8716003918" class="method">
@@ -2004,90 +1208,6 @@ class ofPixels_&lt; PixelType &gt;</h3>
     </div>
 
     <div class="methodDescription" style="display:none" id="a604857979e6e145b1a41d43c0d44c322_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels.html#1aa48d890c44457380b1dd52343a38fdb4">const_reverse_iterator</a> </span><span class="name">rend</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a29045b0b5e1660caed957f65f2d64471" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a29045b0b5e1660caed957f65f2d64471&quot;)">
-        <span class="type"></span>
-        <a class="name">getLine</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a29045b0b5e1660caed957f65f2d64471_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11Line.html">Line</a> </span><span class="name">getLine</span><span class="args">(int line)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a664229571dbcffedd62a85d8b58f26b6" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a664229571dbcffedd62a85d8b58f26b6&quot;)">
-        <span class="type"></span>
-        <a class="name">getLines</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a664229571dbcffedd62a85d8b58f26b6_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11Lines.html">Lines</a> </span><span class="name">getLines</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a516c8795752eaf42f0b4f3152e13627f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a516c8795752eaf42f0b4f3152e13627f&quot;)">
-        <span class="type"></span>
-        <a class="name">getPixelsIter</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a516c8795752eaf42f0b4f3152e13627f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11Pixels.html">Pixels</a> </span><span class="name">getPixelsIter</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a4a0f69602ae352d3b5b657ca9047ab7e" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4a0f69602ae352d3b5b657ca9047ab7e&quot;)">
-        <span class="type"></span>
-        <a class="name">getConstLine</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a4a0f69602ae352d3b5b657ca9047ab7e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11ConstLine.html">ConstLine</a> </span><span class="name">getConstLine</span><span class="args">(int line) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a2371b207bf2ac32a12513c2ce02f6e1a" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2371b207bf2ac32a12513c2ce02f6e1a&quot;)">
-        <span class="type"></span>
-        <a class="name">getConstLines</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a2371b207bf2ac32a12513c2ce02f6e1a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11ConstLines.html">ConstLines</a> </span><span class="name">getConstLines</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ae21eaa7f347677adbc4a3140b8d0905b" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae21eaa7f347677adbc4a3140b8d0905b&quot;)">
-        <span class="type"></span>
-        <a class="name">getConstPixelsIter</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ae21eaa7f347677adbc4a3140b8d0905b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofPixels11ConstPixels.html">ConstPixels</a> </span><span class="name">getConstPixelsIter</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 </div></div>
   </div></div>
