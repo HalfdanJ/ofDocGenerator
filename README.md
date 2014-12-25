@@ -19,3 +19,8 @@ See work in progress [here](http://halfdanj.github.io/ofDocGenerator/ofThread.ht
 - Generate doxygen docs with `npm run doxygen`
 - Generate html docs with `npm run parse`
 - Now the output is in the folder `output`
+
+
+## ToDo
+- Parse the arguments with better html
+- ofColor union

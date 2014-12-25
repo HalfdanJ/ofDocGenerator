@@ -6,7 +6,7 @@ var fs = require('fs-extra'),
 
 // Set this to the section you work on to speed up the generation.
 // But remember to remove it again! :)
-var filterGroup = 'types';
+var filterGroup = 'graphics';
 
 // Check for sass compatibility (it does not work on Travis-ci)
 try {
@@ -59,7 +59,6 @@ loadStructure()
 
     // Iterate over the categories
     for (var category in structure['core']) {
-
       structure['core'][category].forEach(function (file) {
         file.category = category;
 
@@ -70,7 +69,7 @@ loadStructure()
           })
           // If the doc fails, remove it from the structure so it's not shown on the frontpage
           .fail(function (e) {
-            console.error("Error generatic doc:", e, file, file.category)
+            console.error("Error generating doc:", e, file, file.category)
             var index = structure['core'][file.category].indexOf(file);
             structure['core'][file.category].splice(index, 1);
           });
@@ -130,7 +129,7 @@ function loadStructure(){
           } else {
 
             //    console.log(f, compoundname);
-            //  console.log(result['doxygen']['compounddef'][0]['innerfile']);
+             // console.log(result['doxygen']['compounddef'][0]['innerfile']);
 
             structure.core[compoundname] = [];
             result['doxygen']['compounddef'][0]['innerfile'].forEach(function (innerfile) {
@@ -351,57 +350,59 @@ function parseDoxygenXml(doxygenName){
 
           // Members in the section
           var lastName = '';
-          s.memberdef.forEach(function (member) {
-            var m = {
-              info: member['$'],
-              name: member.name[0],
-              type: member.type ? member.type[0] : "",
-              definition: member.definition ? member.definition[0] : "",
-              argsstring: member.argsstring ? member.argsstring[0] : ""
-            };
+          if(s['memberdef']) {
+            s['memberdef'].forEach(function (member) {
+              var m = {
+                info: member['$'],
+                name: member.name[0],
+                type: member.type ? member.type[0] : "",
+                definition: member.definition ? member.definition[0] : "",
+                argsstring: member.argsstring ? member.argsstring[0] : ""
+              };
 
-            // Member ref (anchor)
-            m.ref = m.info.id.replace(doxygenName + "_1", "");
+              // Member ref (anchor)
+              m.ref = m.info.id.replace(doxygenName + "_1", "");
 
-            // Member kind
-            m.kind = m.info.kind;
+              // Member kind
+              m.kind = m.info.kind;
 
-            // Member name
-            if (m.name.match(/^@/g)) {
-              m.name = "Anonymous " + m.info.kind;
-            }
-
-            // Handle deprecated functions
-            if (m.name == "OF_DEPRECATED_MSG") {
-              m.deprecated = true;
-              try {
-                //      (" msg"   ,   bla  )
-                var deprecatedRegex = m.argsstring.match(/^\("(.*)"\s*,\s*(.*)\)$/i)
-                //console.log(deprecatedRegex[2]);
-
-                var funcRegex = deprecatedRegex[2].match(/(?:(.*)[\s&\*])?(\w*)(\(.*\))/i)
-                //console.log(funcRegex);
-
-                m.note = deprecatedRegex[1];
-
-                m.type = (funcRegex[1] ? funcRegex[1] : 'void').trim();
-                m.name = funcRegex[2].trim();
-                m.argsstring = funcRegex[3].trim();
-              } catch (e) {
-                //console.log(m.argsstring);
-                console.error("Error parsing deprecated message", e);
+              // Member name
+              if (m.name.match(/^@/g)) {
+                m.name = "Anonymous " + m.info.kind;
               }
-              //console.log(m.type, m.name, m.argsstring)
-            }
 
-            // Group functions with the same name under one method as different implementations
-            if (lastName != m.name) {
-              section.methods.push({implementations: [m]});
-            } else {
-              section.methods[section.methods.length - 1].implementations.push(m);
-            }
-            lastName = m.name;
-          });
+              // Handle deprecated functions
+              if (m.name == "OF_DEPRECATED_MSG") {
+                m.deprecated = true;
+                try {
+                  //      (" msg"   ,   bla  )
+                  var deprecatedRegex = m.argsstring.match(/^\("(.*)"\s*,\s*(.*)\)$/i)
+                  //console.log(deprecatedRegex[2]);
+
+                  var funcRegex = deprecatedRegex[2].match(/(?:(.*)[\s&\*])?(\w*)(\(.*\))/i)
+                  //console.log(funcRegex);
+
+                  m.note = deprecatedRegex[1];
+
+                  m.type = (funcRegex[1] ? funcRegex[1] : 'void').trim();
+                  m.name = funcRegex[2].trim();
+                  m.argsstring = funcRegex[3].trim();
+                } catch (e) {
+                  //console.log(m.argsstring);
+                  console.error("Error parsing deprecated message", e);
+                }
+                //console.log(m.type, m.name, m.argsstring)
+              }
+
+              // Group functions with the same name under one method as different implementations
+              if (lastName != m.name) {
+                section.methods.push({implementations: [m]});
+              } else {
+                section.methods[section.methods.length - 1].implementations.push(m);
+              }
+              lastName = m.name;
+            });
+          }
 
           // Add the section
           ret.sections.push(section);
@@ -411,7 +412,6 @@ function parseDoxygenXml(doxygenName){
 
       // Inner classes
       if (compound['innerclass']) {
-
         compound['innerclass'].forEach(function (innerclass) {
           var p = Q.defer();
 
@@ -782,7 +782,7 @@ function getStatsOnObject(parsedData){
   parsedData.sections.forEach(function (section) {
     section.methods.forEach(function (memberGroup) {
       memberGroup.implementations.forEach(function(method) {
-        if(method.htmlDescription.trim().length > 0){
+        if(method.htmlDescription && method.htmlDescription.trim().length > 0){
           numMembersWithDoc ++;
         }
         numMembers++;
