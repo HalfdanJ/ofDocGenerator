@@ -6,7 +6,7 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "doxygen": "cd ../../libs/openFrameworksCompiled/project/doxygen/; doxygen Doxyfile",
+    "doxygen": "doxygen Doxyfile",
     "parse": "node app.js",
     "sass": "sass assets/stylesheet.scss output/stylesheet.css",
     "start": "npm run doxygen; npm run parse; npm run sass"

@@ -6,7 +6,7 @@ var fs = require('fs-extra'),
 
 // Set this to the section you work on to speed up the generation.
 // But remember to remove it again! :)
-var filterGroup = 'graphics';
+var filterGroup = '';
 
 // Check for sass compatibility (it does not work on Travis-ci)
 try {
@@ -28,7 +28,8 @@ try {
 
 
 var root =  process.argv[2] || "../..";
-var dir = root + "/libs/openFrameworksCompiled/project/doxygen/build/";
+//var dir = root + "/libs/openFrameworksCompiled/project/doxygen/build/";
+var dir = "doxygen_build/";
 console.log("Openframeworks root: "+root);
 
 //Create the output folder
@@ -128,23 +129,25 @@ function loadStructure(){
 
           } else {
 
-            //    console.log(f, compoundname);
+                console.log(f, compoundname);
              // console.log(result['doxygen']['compounddef'][0]['innerfile']);
 
             structure.core[compoundname] = [];
-            result['doxygen']['compounddef'][0]['innerfile'].forEach(function (innerfile) {
-              var filename = innerfile['_'];
-              var refid = innerfile['$']['refid']
+            if(result['doxygen']['compounddef'][0]['innerfile']) {
+              result['doxygen']['compounddef'][0]['innerfile'].forEach(function (innerfile) {
+                var filename = innerfile['_'];
+                var refid = innerfile['$']['refid']
 
-              //Is it a headerfile?
-              if (filename.match(/\.h$/)) {
-                structure.core[compoundname].push({
-                  name: filename.replace(/\.h$/, ""),
-                  ref: refid
-                })
-              }
+                //Is it a headerfile?
+                if (filename.match(/\.h$/)) {
+                  structure.core[compoundname].push({
+                    name: filename.replace(/\.h$/, ""),
+                    ref: refid
+                  })
+                }
 
-            })
+              })
+            }
           }
         }
 
@@ -252,7 +255,6 @@ function parseDoxygenXml(doxygenName){
 
       // Object type
       ret.kind = compound['$'].kind;
-
 
       // Brief description
       if (compound['briefdescription'].length == 1
@@ -482,6 +484,8 @@ function scrapeDoxygenHtml(parsedData){
   $input(".groupheader").each(function (i, elm) {
     if ($input(elm).text() == "Detailed Description") {
       parsedData.description = $input(elm).next();
+
+      console.log(parsedData.name , parsedData.description);
     }
   });
 
