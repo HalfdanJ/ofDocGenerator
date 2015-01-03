@@ -84,6 +84,25 @@
 
     <div class="methodDescription" style="display:none" id="a14d0290b2d9067f9b5c30fa5e4e56927_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">Poco::FastMutex </span><span class="name">ofMutex</span><span class="args"></span></div><div class="memberDocumentation">
 
+<p>A typedef for a cross-platform mutex. </p>
+<p>A mutex is used to lock data when it is accessible from multiple threads. Locking data with a mutex prevents data-races, deadlocks and other problems associated with concurrent access to data.</p>
+<p>The mutex can be locked with a call to ofMutex::lock(). All calls to ofMutex::lock() must be paired with a call to ofMutex::unlock().</p>
+<div class="fragment"><div class="line"><a class="code" href="ofTypes.html#a14d0290b2d9067f9b5c30fa5e4e56927">ofMutex</a> myMutex; <span class="comment">// Your member mutex.</span></div>
+<div class="line"><span class="keywordtype">int</span> mySharedData; <span class="comment">// Your member shared data.</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// ...</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// A method to modify some shared data.</span></div>
+<div class="line"><span class="keywordtype">void</span> modifyMySharedData() {</div>
+<div class="line">    myMutex.lock(); <span class="comment">// Lock the mutex.</span></div>
+<div class="line">    mySharedData++; <span class="comment">// Modify the shared data.</span></div>
+<div class="line">    myMutex.unlock(); <span class="comment">// Unlock the mutex;</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>Currently ofMutex is a typedef for Poco::FastMutex a fast cross- platform mutex. In a future version of OF, Poco::FastMutex will be replaced by std::mutex.</dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://www.cplusplus.com/reference/mutex/mutex/">http://www.cplusplus.com/reference/mutex/mutex/</a> </dd>
+<dd>
+<a href="http://www.appinf.com/docs/poco/Poco.FastMutex.html">http://www.appinf.com/docs/poco/Poco.FastMutex.html</a> </dd></dl>
+
 </div></div>
   </div><div id="ae3d951970b0edc67af1ebed4aebf815e" class="method">
     <div class="methodHeader">
@@ -97,6 +116,28 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="ae3d951970b0edc67af1ebed4aebf815e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">Poco::FastMutex::ScopedLock </span><span class="name">ofScopedLock</span><span class="args"></span></div><div class="memberDocumentation">
+
+<p>A typedef for a cross-platform scoped mutex. </p>
+<p>Normally ofMutex requres explicit calls to ofMutex::lock() and ofMutex::unlock() to lock and release the mutex. Sometimes, despite best efforts, developers forget to unlock a mutex, leaving the data inaccessible. ofScopedLock makes ofMutex easier to use by calling ofMutex::unlock when the scoped lock&apos;s destructor is called. Since the destructor is called when a variable goes out of scope, we call this a &quot;scoped lock&quot;. A &quot;scoped lock&quot; is sometimes known as a &quot;lock guard&quot; as well.</p>
+<p>ofScopedLock is used to lock and unlock an existing ofMutex.</p>
+<div class="fragment"><div class="line"><a class="code" href="ofTypes.html#a14d0290b2d9067f9b5c30fa5e4e56927">ofMutex</a> myMutex; <span class="comment">// Your member mutex.</span></div>
+<div class="line"><span class="keywordtype">int</span> mySharedData; <span class="comment">// Your member shared data.</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// ...</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// A method to modify some shared data.</span></div>
+<div class="line"><span class="keywordtype">void</span> modifyMySharedData() {</div>
+<div class="line">    <a class="code" href="ofTypes.html#ae3d951970b0edc67af1ebed4aebf815e">ofScopedLock</a> lock(myMutex); <span class="comment">// Lock the mutex.</span></div>
+<div class="line">    mySharedData++; <span class="comment">// Modify the shared data.</span></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// `lock` will unlock the mutex when it goes out of scope. </span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>Currently ofScopedLock is a typedef for Poco::FastMutex::ScopedLock a convenient wrapper fo Poco::FastMutex. In a future version of OF, Poco::FastMutex::ScopedLock by std::lock_guard.</dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://en.cppreference.com/w/cpp/thread/lock_guard">http://en.cppreference.com/w/cpp/thread/lock_guard</a> </dd>
+<dd>
+<a href="http://www.appinf.com/docs/poco/Poco.ScopedLock.html">http://www.appinf.com/docs/poco/Poco.ScopedLock.html</a> </dd>
+<dd>
+<a class="el" href="ofTypes.html#a14d0290b2d9067f9b5c30fa5e4e56927" title="A typedef for a cross-platform mutex. ">ofMutex</a> </dd></dl>
 
 </div></div>
   </div></div>
@@ -123,7 +164,7 @@
     <div class="classHeader">
       <h1 class="classTitle">ofSerialDeviceInfo<small>class</small></h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>Describes a Serial device, what ID it has, what name it has, and the path to the device. </p>
+    <div class="classDescription"><div class="textblock"><p>Describes a Serial device, including ID, name and path. </p>
 </div></div>
     <div class="classMethods"><div id="Friends">
     <h3 class="sectionHeader">Friends</h3>
@@ -139,9 +180,7 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a738b5a6b2bbb311ba6946feda233b755_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">friend class </span><span class="name">ofSerial</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
+    <div class="methodDescription" style="display:none" id="a738b5a6b2bbb311ba6946feda233b755_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">friend class </span><span class="name">ofSerial</span><span class="args"></span></div><div class="memberDocumentation">undefined</div></div>
   </div></div>
   </div><div id="Functions">
     <h3 class="sectionHeader">Functions</h3>
@@ -159,13 +198,13 @@
 
     <div class="methodDescription" style="display:none" id="a8450a8c81f18cadec7be90a87f81ccfa_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofSerialDeviceInfo</span><span class="args">(string devicePathIn, string deviceNameIn, int deviceIDIn)</span></div><div class="memberDocumentation">
 
-<p>Constructor. </p>
+<p>Construct an <a class="el" href="ofSerialDeviceInfo.html" title="Describes a Serial device, including ID, name and path. ">ofSerialDeviceInfo</a> with parameters. </p>
 <p>&#xA0; </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">devicePathIn</td><td>The path to the device </td></tr>
-    <tr><td class="paramname">deviceNameIn</td><td>The name of the device </td></tr>
-    <tr><td class="paramname">deviceIDIn</td><td>The ID of the device </td></tr>
+    <tr><td class="paramname">devicePathIn</td><td>The path to the device. </td></tr>
+    <tr><td class="paramname">deviceNameIn</td><td>The name of the device. </td></tr>
+    <tr><td class="paramname">deviceIDIn</td><td>The ID of the device. </td></tr>
   </table>
   </dd>
 </dl>
@@ -173,7 +212,7 @@
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofSerialDeviceInfo</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>&#xA0;. </p>
-<p>Constructs a undefined serial device </p>
+<p>Construct an undefined serial device. </p>
 
 </div></div>
   </div><div id="a9456ff5a5b06dac481c287c65e6557e4" class="method">
@@ -190,7 +229,8 @@
     <div class="methodDescription" style="display:none" id="a9456ff5a5b06dac481c287c65e6557e4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">string </span><span class="name">getDevicePath</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Gets the path to the device. </p>
-<p>Example: <code>/dev/tty.cu/usbdevice-a440</code> </p>
+<p>Example: <code>/dev/tty.cu/usbdevice-a440</code>.</p>
+<dl class="section return"><dt>Returns</dt><dd>the device path. </dd></dl>
 
 </div></div>
   </div><div id="ace475223571db70566eb7cb50e2b5928" class="method">
@@ -207,7 +247,8 @@
     <div class="methodDescription" style="display:none" id="ace475223571db70566eb7cb50e2b5928_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">string </span><span class="name">getDeviceName</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Gets the name of the device. </p>
-<p>Example: <code>usbdevice-a440</code> / <code>COM4</code> </p>
+<p>Example: <code>usbdevice-a440</code> or <code>COM4</code>.</p>
+<dl class="section return"><dt>Returns</dt><dd>the device name. </dd></dl>
 
 </div></div>
   </div><div id="a00b99cf903d54bfd118d149fddb24328" class="method">
@@ -224,7 +265,8 @@
     <div class="methodDescription" style="display:none" id="a00b99cf903d54bfd118d149fddb24328_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getDeviceID</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Gets the ID of the device. </p>
-<p>Example: <code>0</code>,<code>1</code>,<code>2</code>,<code>3</code> etc </p>
+<p>Example: <code>0</code>,<code>1</code>,<code>2</code>,<code>3</code> etc.</p>
+<dl class="section return"><dt>Returns</dt><dd>the device ID. </dd></dl>
 
 </div></div>
   </div></div>
@@ -251,7 +293,8 @@
 
     <div class="methodDescription" style="display:none" id="a71c0e855729b8db2f0aec16a939051dd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1ace59f9421b921c3344fa20972e515912">ofColor</a> </span><span class="name">color</span><span class="args"></span></div><div class="memberDocumentation">
 
-<p>Contains the color information for the style object. </p>
+<p>The color used when rendering. </p>
+<p>This style depends on the state of the <a class="el" href="ofStyle.html#ac97172bc5d117d91fa7fef18b91b58af" title="True if the renderer should fill a rendered shape. ">ofStyle::bFill</a>. </p>
 
 </div></div>
   </div><div id="a1d062d4e7b15eaa061c133595ef3cc54" class="method">
@@ -267,7 +310,7 @@
 
     <div class="methodDescription" style="display:none" id="a1d062d4e7b15eaa061c133595ef3cc54_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseTypes.html#1ace59f9421b921c3344fa20972e515912">ofColor</a> </span><span class="name">bgColor</span><span class="args"></span></div><div class="memberDocumentation">
 
-<p>Contains the background color information for the style object. </p>
+<p>The background color used when rendering. </p>
 
 </div></div>
   </div><div id="ae49fd93f032dbfddea280745482c93bd" class="method">
@@ -283,15 +326,9 @@
 
     <div class="methodDescription" style="display:none" id="ae49fd93f032dbfddea280745482c93bd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1aca8e53bffcbd2dd34e724531d8a0f375">ofPolyWindingMode</a> </span><span class="name">polyMode</span><span class="args"></span></div><div class="memberDocumentation">
 
-<p>Contains information about the drawing behavior for ovelapping parts of the same polygon when a shape is created. </p>
-<p>Possible modes are:</p>
-<ul>
-<li><code>OF_POLY_WINDING_ODD</code></li>
-<li><code>OF_POLY_WINDING_NONZERO</code></li>
-<li><code>OF_POLY_WINDING_POSITIVE</code></li>
-<li><code>OF_POLY_WINDING_NEGATIVE</code></li>
-<li><code>OF_POLY_WINDING_ABS_GEQ_TWO</code> </li>
-</ul>
+<p>The current rendering mode for polygons. </p>
+<p>ofPolyWindingMode determines how ovelapping parts of the same polygon are rendered.</p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofConstants.html#aca8e53bffcbd2dd34e724531d8a0f375">ofPolyWindingMode</a> </dd></dl>
 
 </div></div>
   </div><div id="ab9a5fe8d4375c9ccc9eb4a69c8476eb5" class="method">
@@ -307,8 +344,8 @@
 
     <div class="methodDescription" style="display:none" id="ab9a5fe8d4375c9ccc9eb4a69c8476eb5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1a52116548570a64993cbe3be944443fce">ofRectMode</a> </span><span class="name">rectMode</span><span class="args"></span></div><div class="memberDocumentation">
 
-<p>Contains information about the mode for drawing rectangles. </p>
-<p>If they are corner aligned, or drawn so that the x,y position is the center of the rectangle. Possible options are <code>OF_RECTMODE_CENTER</code> and <code>OF_RECTMODE_CORNER</code> </p>
+<p>Determine how some shapes are anchored (e.g. ofDrawEllipse). </p>
+<p>The rectMode applies to several shapes, including ofDrawRectangle and ofDrawEllipse. If the current rectMode is <code>OF_RECTMODE_CENTER</code>, the rendered shape will be drawn with x, y in the center of the shape. If the current rectMode is <code>OF_RECTMODE_CORNER</code>, the rendered shape will be drawn with the x, y in the upper-left-hand corner of the shape. </p>
 
 </div></div>
   </div><div id="ac97172bc5d117d91fa7fef18b91b58af" class="method">
@@ -324,7 +361,8 @@
 
     <div class="methodDescription" style="display:none" id="ac97172bc5d117d91fa7fef18b91b58af_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">bFill</span><span class="args"></span></div><div class="memberDocumentation">
 
-<p>Contains information about how the graphics have to be drawed: Fill or noFill(empty) </p>
+<p>True if the renderer should fill a rendered shape. </p>
+<p>If true, the renderer will fill the rendered shape. If false, the renderer will draw the outline of the rendered shape. </p>
 
 </div></div>
   </div><div id="a3ce923c648343d755c14b1e9992d4ad9" class="method">
@@ -340,7 +378,8 @@
 
     <div class="methodDescription" style="display:none" id="a3ce923c648343d755c14b1e9992d4ad9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1a14966be842b99f71080a7444cebbc0b7">ofDrawBitmapMode</a> </span><span class="name">drawBitmapMode</span><span class="args"></span></div><div class="memberDocumentation">
 
-<p>Contains the ofDrawBitmapMode information. </p>
+<p>The render mode for bitmaps (e.g. ofDrawBitmapString). </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofGraphics.html#aaeb202d737b426c8d5bdb6b86edfd6d7">ofDrawBitmapString(const T&amp; textString, float x, float y)</a> </dd></dl>
 
 </div></div>
   </div><div id="aa899b9218eabf5feff0729fba2956e46" class="method">
@@ -357,7 +396,7 @@
     <div class="methodDescription" style="display:none" id="aa899b9218eabf5feff0729fba2956e46_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1a5f194ae56b1bc61651eac7184ed1ad2e">ofBlendMode</a> </span><span class="name">blendingMode</span><span class="args"></span></div><div class="memberDocumentation">
 
 <p>&#xA0;. </p>
-<p>Contains the blending mode information </p>
+<p>The blending mode. </p>
 
 </div></div>
   </div><div id="ad2dbc3547e6bd9fdeb2557edda376ebd" class="method">
@@ -373,7 +412,7 @@
 
     <div class="methodDescription" style="display:none" id="ad2dbc3547e6bd9fdeb2557edda376ebd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">smoothing</span><span class="args"></span></div><div class="memberDocumentation">
 
-<p>Contains the information about if smoothing effect is activated or not. </p>
+<p>True if anti-aliasing is enabled. </p>
 
 </div></div>
   </div><div id="a3cf3da499b39eea0fd403627f5b7cb1d" class="method">
@@ -431,7 +470,8 @@
 
     <div class="methodDescription" style="display:none" id="ad49415259a79caf71e3317949ad7c26b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">lineWidth</span><span class="args"></span></div><div class="memberDocumentation">
 
-<p>Contains information about the width of the line for our ofLine. </p>
+<p>The width of rendered lines. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This is not currently implemented in modern OF renderers. </dd></dl>
 
 </div></div>
   </div></div>
@@ -451,7 +491,7 @@
 
     <div class="methodDescription" style="display:none" id="a7d1443b11025e5321d810a618491e79a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofStyle</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>Constructor for <a class="el" href="ofStyle.html" title="Contains general information about the style of ofGraphics elements such as color, line width and others. ">ofStyle</a>. </p>
+<p>Create a default <a class="el" href="ofStyle.html" title="Contains general information about the style of ofGraphics elements such as color, line width and others. ">ofStyle</a>. </p>
 
 </div></div>
   </div><div id="a8996b948ae6c54f588c9be80bb04da0f" class="method">
@@ -468,7 +508,7 @@
     <div class="methodDescription" style="display:none" id="a8996b948ae6c54f588c9be80bb04da0f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">~ofStyle</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>&#xA0;. </p>
-<p>Destructor of <a class="el" href="ofStyle.html" title="Contains general information about the style of ofGraphics elements such as color, line width and others. ">ofStyle</a> </p>
+<p>Destroy the <a class="el" href="ofStyle.html" title="Contains general information about the style of ofGraphics elements such as color, line width and others. ">ofStyle</a>. </p>
 
 </div></div>
   </div></div>
@@ -477,7 +517,10 @@
     <div class="classHeader">
       <h1 class="classTitle">ofVideoFormat<small>class</small></h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>A structure describing attributes of a video format. </p>
+<p>An <a class="el" href="ofVideoFormat.html" title="A structure describing attributes of a video format. ">ofVideoFormat</a> is used to describe the size, pixel&#xA0;format and frame rates offered by a video device.</p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVideoDevice.html" title="A structure describing attributes of a video device. ">ofVideoDevice</a> </dd></dl>
+</div></div>
     <div class="classMethods"><div id="Attributes">
     <h3 class="sectionHeader">Attributes</h3>
     <div class="sectionDescription"></div>
@@ -494,6 +537,8 @@
 
     <div class="methodDescription" style="display:none" id="a2b1420518f3cd2a35e9aa30e3c225079_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1ae227396622740556688053d3dc0f1693">ofPixelFormat</a> </span><span class="name">pixelFormat</span><span class="args"></span></div><div class="memberDocumentation">
 
+<p>The pixel format of the video format. </p>
+
 </div></div>
   </div><div id="a7845583ee39df945eb3a1cdbe6baeeed" class="method">
     <div class="methodHeader">
@@ -507,6 +552,8 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a7845583ee39df945eb3a1cdbe6baeeed_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">width</span><span class="args"></span></div><div class="memberDocumentation">
+
+<p>The width of the video format in pixels. </p>
 
 </div></div>
   </div><div id="ad99f9adae6d3310fc38ff79711410b46" class="method">
@@ -522,6 +569,8 @@
 
     <div class="methodDescription" style="display:none" id="ad99f9adae6d3310fc38ff79711410b46_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">height</span><span class="args"></span></div><div class="memberDocumentation">
 
+<p>The height of the video format in pixels. </p>
+
 </div></div>
   </div><div id="acdf4f87963e1892b68a600c52be289ff" class="method">
     <div class="methodHeader">
@@ -536,6 +585,8 @@
 
     <div class="methodDescription" style="display:none" id="acdf4f87963e1892b68a600c52be289ff_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">vector&lt; float &gt; </span><span class="name">framerates</span><span class="args"></span></div><div class="memberDocumentation">
 
+<p>A list of framerates for this video format in frames per second. </p>
+
 </div></div>
   </div></div>
   </div></div>
@@ -543,7 +594,9 @@
     <div class="classHeader">
       <h1 class="classTitle">ofVideoDevice<small>class</small></h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>A structure describing attributes of a video device. </p>
+<p>An <a class="el" href="ofVideoDevice.html" title="A structure describing attributes of a video device. ">ofVideoDevice</a> can represent a camera, grabber or other frame source. </p>
+</div></div>
     <div class="classMethods"><div id="Attributes">
     <h3 class="sectionHeader">Attributes</h3>
     <div class="sectionDescription"></div>
@@ -560,6 +613,8 @@
 
     <div class="methodDescription" style="display:none" id="ab38dcd00b739ab634ff51ae029af529c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">id</span><span class="args"></span></div><div class="memberDocumentation">
 
+<p>The video device ID. </p>
+
 </div></div>
   </div><div id="a861349ee34e086a121f9d2a8eee44131" class="method">
     <div class="methodHeader">
@@ -573,6 +628,8 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a861349ee34e086a121f9d2a8eee44131_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">string </span><span class="name">deviceName</span><span class="args"></span></div><div class="memberDocumentation">
+
+<p>The video device name. </p>
 
 </div></div>
   </div><div id="a73aa6942d2356cdabc086427e1a23e2b" class="method">
@@ -588,6 +645,8 @@
 
     <div class="methodDescription" style="display:none" id="a73aa6942d2356cdabc086427e1a23e2b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">string </span><span class="name">hardwareName</span><span class="args"></span></div><div class="memberDocumentation">
 
+<p>The video device hardware name. </p>
+
 </div></div>
   </div><div id="a6765705e77203ac980595ec2dca1f4cd" class="method">
     <div class="methodHeader">
@@ -601,6 +660,9 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a6765705e77203ac980595ec2dca1f4cd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVideoFormat.html">ofVideoFormat</a> </span><span class="name">formats</span><span class="args"></span></div><div class="memberDocumentation">
+
+<p>A list of video device formats provided by the device. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofVideoFormat.html" title="A structure describing attributes of a video format. ">ofVideoFormat</a> </dd></dl>
 
 </div></div>
   </div><div id="aacb49834ee06a03cb60d322d217b6ac9" class="method">
@@ -616,6 +678,8 @@
 
     <div class="methodDescription" style="display:none" id="aacb49834ee06a03cb60d322d217b6ac9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">bAvailable</span><span class="args"></span></div><div class="memberDocumentation">
 
+<p>Is true if this video device is available. </p>
+
 </div></div>
   </div></div>
   </div></div>
@@ -627,18 +691,18 @@
     <div class="classMethods"><div id="Functions">
     <h3 class="sectionHeader">Functions</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a0230c238901f27b459bfc30dc002b068" class="method">
+    <div class="sectionContent"><div id="a3f453ada032d456eac9764ee3814ea64" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox deprecatedMethod" onClick="toggleDescription(&quot;#a0230c238901f27b459bfc30dc002b068&quot;)">
+      <div class="methodHeaderBox deprecatedMethod" onClick="toggleDescription(&quot;#a3f453ada032d456eac9764ee3814ea64&quot;)">
         <span class="type"></span>
         <a class="name">ofPtr</a>
         <span class="args"></span>
         <span class="kind">()</span>
-        <span class="note">Use shared_ptr instead</span>
+        <span class="note">Use std::shared_ptr instead</span>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a0230c238901f27b459bfc30dc002b068_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">ofPtr</span><span class="args">()</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a3f453ada032d456eac9764ee3814ea64_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">ofPtr</span><span class="args">()</span></div><div class="memberDocumentation">
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">ofPtr</span><span class="args">(Tp1 *__p)</span></div><div class="memberDocumentation">
 

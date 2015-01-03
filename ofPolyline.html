@@ -67,7 +67,7 @@
     <div class="classHeader">
       <h1 class="classTitle">ofPolyline<small>file</small></h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>ofPolyLine allows you to combine multiple points into a single vector data object that can be drawn to the screen, manipulated point by point, and combined with other <a class="el" href="ofPolyline.html">ofPolyline</a> instances. It is less complex than the <a class="el" href="ofPath.html" title="ofPath is a way to create a path or multiple paths consisting of points. It allows you to combine mul...">ofPath</a> and generally represents a single line or vector shape rather than multiple lines or shapes.</p>
+    <div class="classDescription"><div class="textblock"><p>ofPolyLine allows you to combine multiple points into a single vector data object that can be drawn to the screen, manipulated point by point, and combined with other <a class="el" href="ofPolyline.html">ofPolyline</a> instances. It is less complex than the <a class="el" href="ofPath.html">ofPath</a> and generally represents a single line or vector shape rather than multiple lines or shapes.</p>
 <p>You can add points to an <a class="el" href="ofPolyline.html">ofPolyline</a> by adding vertices: </p>
 <div class="fragment"><div class="line"><span class="keywordtype">float</span> i = 0;</div>
 <div class="line"><span class="keywordflow">while</span> (i &lt; <a class="code" href="ofConstants.html#a3b947f4b635461030ff2d87833e5049e">TWO_PI</a>) { <span class="comment">// make a heart</span></div>
@@ -85,7 +85,7 @@
 <div class="line">    <a class="code" href="of_matrix4x4_8cpp.html#ab2d05693952610f937e5acb3c4a8fa1b">b</a>.curveTo(300*cos(angle), 300, 300*sin(angle));</div>
 <div class="line">    angle += <a class="code" href="ofConstants.html#a3b947f4b635461030ff2d87833e5049e">TWO_PI</a> / 30;</div>
 <div class="line">}</div>
-</div><!-- fragment --><p><a class="el" href="ofPolyline.html">ofPolyline</a> also includes methods to get the closest point, determine whether a point is inside shape, and resample shapes. Along with the <a class="el" href="ofPath.html" title="ofPath is a way to create a path or multiple paths consisting of points. It allows you to combine mul...">ofPath</a> class, it&apos;s the best way to draw and manipulate 2D and 3D vector graphics that you&apos;ll need to update and manipulate frequently.</p>
+</div><!-- fragment --><p><a class="el" href="ofPolyline.html">ofPolyline</a> also includes methods to get the closest point, determine whether a point is inside shape, and resample shapes. Along with the <a class="el" href="ofPath.html">ofPath</a> class, it&apos;s the best way to draw and manipulate 2D and 3D vector graphics that you&apos;ll need to update and manipulate frequently.</p>
 <p>If you use the lineTo() or curveTo() or bezierTo() functions, you move the drawing point, so that drawing a line to 100,100 means a line from 0,0 to 100, 100. The next line would be a line from 100,100 to wherever you go next. Storing this position means that you can easily create continuous drawings without difficulty. </p>
 </div></div>
     <div class="classMethods"></div>

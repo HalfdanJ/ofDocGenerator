@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ofSoundBuffer</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheet.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+
+  <link href="http://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet" type="text/css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+
+<nav class="navbar navbar-fixed-top header" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">ofDoc</a>
+    </div>
+
+
+    <div class="navbar-form navbar-right" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search" id="search" autocomplete="off">
+      </div>
+      <ul class="searchResult hidden"></ul>
+
+    </div>
+
+
+  </div>
+</nav>
+
+
+<div class="container">
+    <div class="quicknav">
+      <a href="index.html">ofDoc</a> &gt; <a id="categoryQuickNav">sound</a> &gt; <span id="classQuickNav">ofSoundBuffer</span>
+    </div>
+
+  <nav class="navigator" role="navigation">
+    <ul id="nav-parts">
+      <li class="group selected">
+        Topics
+        <ul id="topics">
+        <span class="class">ofSoundBuffer</span><li class="chapter"><a href="#Types">Types</a></li><li class="chapter"><a href="#StaticAttributes">Static Attributes</a></li><li class="chapter"><a href="#Friends">Friends</a></li><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li></ul>
+    </li></ul>
+  </nav>
+  <div class="main">
+    <div class="content">
+
+    <div id="" class="classBlock">
+    <div class="classHeader">
+      <h1 class="classTitle">ofSoundBuffer<small>file</small></h1>
+    </div>
+    <div class="classDescription"></div>
+    <div class="classMethods"></div>
+  </div><div id="" class="classBlock">
+    <div class="classHeader">
+      <h1 class="classTitle">ofSoundBuffer<small>class</small></h1>
+    </div>
+    <div class="classDescription"><div class="textblock"><p>Buffer for audio samples and associated metadata. </p>
+<p><a class="el" href="ofSoundBuffer.html" title="Buffer for audio samples and associated metadata. ">ofSoundBuffer</a> stores audio as an array of interleaved floating point samples, with a given sample rate for playback.</p>
+<h4>How sound recording works</h4>
+<p>Physically speaking, what we call <em>sound</em> is simply changes in air pressure perceived by a listener. These changes in sound pressure are converted by a microphone into changes in voltage that can be recorded, making a <em>sound recording</em>. A sound recording is therefore a recording of changes in air pressure at a particular point in space (ie where the microphone was positioned). When it is played back through a speaker, the speaker reproduces the same pattern of changes in air pressure as were recorded by the microphone, but this time at a different point in space (ie where the speaker is positioned).</p>
+<p>In digital audio these changes in air pressure are recorded as a set of discrete numbers (<em>samples</em>), each number representing a snapshot of the air pressure at a particular point in time. For high quality audio there are typically 44,100 snapshots recorded every second. This is called the <em>sample rate</em> and is expressed in <em>Hz</em> (44100Hz) or <em>kHz</em> (44.1kHz).</p>
+<p>Because humans have two ears, rather than one, sound is usually recorded in stereo. The simplest stereo sound recording is two <em>channels</em> of sound recorded by two microphones at two different points in space. More channels can also be recorded (eg with 5.1 surround sound systems or Ambisonics).</p>
+<h4>Frames, channels and samples</h4>
+<p>Data in an <a class="el" href="ofSoundBuffer.html" title="Buffer for audio samples and associated metadata. ">ofSoundBuffer</a> is stored <em>interleaved</em> as an array of floats. Interleaved audio is analogous to how different color channels are stored side by side in an ofImage or ofPixels object.</p>
+<p>The functions and function arguments in <a class="el" href="ofSoundBuffer.html" title="Buffer for audio samples and associated metadata. ">ofSoundBuffer</a> that deal with this interleaved data are based on 3 key terms:</p>
+<p><em>channels</em> refers to the number of channels or individual streams of interleaved audio samples in the buffer. A mono recording has 1 channel, a stereo recording has 2 channels.</p>
+<p><em>samples</em> refers to the actual raw data. One <em>sample</em> is a single floating point number between -1 and 1, which represents a snapshot of sound pressure at a single moment in time. A 0.1 second long buffer at 44100Hz contains 4410 <em>samples</em> if it has 1 channel, 8820 <em>samples</em> if it has 2 channels, 13230 <em>samples</em> if it has 3 channels, and so on.</p>
+<p><em>frames</em> refers to the number of multi-channel sets of interleaved sample data there are in the buffer. A 0.1 second long buffer at 44100Hz always has 4410 <em>frames</em>, regardless of how many channels it has. To get the number of <em>samples</em> in a buffer you multiply the number of <em>channels</em> by the number of <em>frames</em>.</p>
+<p>If I have an <a class="el" href="ofSoundBuffer.html" title="Buffer for audio samples and associated metadata. ">ofSoundBuffer</a> with 8 <em>frames</em> of mono (1 <em>channel</em>) audio, the underlying array contains 8 <em>samples</em> (ie it is 8 floats long), and the samples are arranged like this: </p>
+<pre class="fragment"> L L L L L L L L 
+</pre><p>where <code>L</code> represents a single sample.</p>
+<p>If I have an <a class="el" href="ofSoundBuffer.html" title="Buffer for audio samples and associated metadata. ">ofSoundBuffer</a> with 8 <em>frames</em> of stereo (2 <em>channel</em>) audio, then the underlying array contains 16 <em>samples</em> ((<a class="el" href="ofSoundBuffer.html#a6402ce0e9ceb4dae21ac8d185749668a" title="the number of frames, ie the number of sets of (getNumChannels()) samples ">getNumFrames()</a>*getNumChannels(), ie 8*2) arranged in an <em>interleaved</em> pattern: </p>
+<pre class="fragment">    L R L R L R L R L R L R L R L R
+</pre><p>where <code>L</code> represents a single sample for the left channel, and <code>R</code> represents a single sample for the right channel. Grouping the frames together for clarity: </p>
+<pre class="fragment"> LR LR LR LR LR LR LR LR
+</pre><p>If I have an <a class="el" href="ofSoundBuffer.html" title="Buffer for audio samples and associated metadata. ">ofSoundBuffer</a> with 8 frames of 5.1 surround (6 <em>channel</em>) audio, then the underlying array of floats contains 48 <em>samples</em> (<a class="el" href="ofSoundBuffer.html#a6402ce0e9ceb4dae21ac8d185749668a" title="the number of frames, ie the number of sets of (getNumChannels()) samples ">getNumFrames()</a>*getNumChannels(), ie 8*6) and is usually arranged in an <em>interleaved</em> pattern like this: </p>
+<pre class="fragment">    L C R Ls Rs Lfe L C R Ls Rs Lfe L C R Ls Rs Lfe L C R Ls Rs Lfe L C R Ls Rs Lfe L C R Ls Rs Lfe L C R Ls Rs Lfe L C R Ls Rs Lfe 
+</pre><p>where <code>L</code> represents a single sample for the left channel, <code>C</code> for centre, <code>R</code> for right, <code>Ls</code> for left surround, <code>Rs</code> for right surround and <code>Lfe</code> for the subwoofer. Grouping the frames together for clarity: </p>
+<pre class="fragment"> LCRLsRsLfe LCRLsRsLfe LCRLsRsLfe LCRLsRsLfe LCRLsRsLfe LCRLsRsLfe LCRLsRsLfe LCRLsRsLfe </pre> </div></div>
+    <div class="classMethods"><div id="Types">
+    <h3 class="sectionHeader">Types</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a7b810afb93d75a6e338371cfb6bb0446" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7b810afb93d75a6e338371cfb6bb0446&quot;)">
+        <span class="type"></span>
+        <a class="name">InterpolationAlgorithm</a>
+        <span class="args"></span>
+        <span class="kind">enum</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a7b810afb93d75a6e338371cfb6bb0446_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">InterpolationAlgorithm</span><span class="args"></span></div><div class="memberDocumentation">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a7b810afb93d75a6e338371cfb6bb0446aa9a9609f87b1d531458f774ea6a562eb"></a>Linear</em>&#xA0;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a7b810afb93d75a6e338371cfb6bb0446af5ab0426cf8c7ba2c717ee759cf8607d"></a>Hermite</em>&#xA0;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div></div>
+  </div></div>
+  </div><div id="StaticAttributes">
+    <h3 class="sectionHeader">Static Attributes</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a29f59e4909c48bc78fcd666ea695f639" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a29f59e4909c48bc78fcd666ea695f639&quot;)">
+        <span class="type"></span>
+        <a class="name">defaultAlgorithm</a>
+        <span class="args"></span>
+        <span class="kind">variable</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a29f59e4909c48bc78fcd666ea695f639_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundBuffer.html#1a7b810afb93d75a6e338371cfb6bb0446">InterpolationAlgorithm</a> </span><span class="name">defaultAlgorithm</span><span class="args"></span></div><div class="memberDocumentation">
+
+</div></div>
+  </div></div>
+  </div><div id="Friends">
+    <h3 class="sectionHeader">Friends</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="ada91287115acb3660adf84de62211aea" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ada91287115acb3660adf84de62211aea&quot;)">
+        <span class="type"></span>
+        <a class="name">ofBaseSoundStream</a>
+        <span class="args"></span>
+        <span class="kind">friend</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ada91287115acb3660adf84de62211aea_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">friend class </span><span class="name">ofBaseSoundStream</span><span class="args"></span></div><div class="memberDocumentation">undefined</div></div>
+  </div></div>
+  </div><div id="ProtectedAttributes">
+    <h3 class="sectionHeader">Protected Attributes</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="ad3d1f49e0e0a97b2999ad49ae300edb0" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad3d1f49e0e0a97b2999ad49ae300edb0&quot;)">
+        <span class="type"></span>
+        <a class="name">buffer</a>
+        <span class="args"></span>
+        <span class="kind">variable</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ad3d1f49e0e0a97b2999ad49ae300edb0_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">vector&lt; float &gt; </span><span class="name">buffer</span><span class="args"></span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a570ef75c2d3bec163edd67879a49b101" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a570ef75c2d3bec163edd67879a49b101&quot;)">
+        <span class="type"></span>
+        <a class="name">channels</a>
+        <span class="args"></span>
+        <span class="kind">variable</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a570ef75c2d3bec163edd67879a49b101_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">std::size_t </span><span class="name">channels</span><span class="args"></span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="ad8981fc3beb7b89abc8793f0e90f8a55" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad8981fc3beb7b89abc8793f0e90f8a55&quot;)">
+        <span class="type"></span>
+        <a class="name">samplerate</a>
+        <span class="args"></span>
+        <span class="kind">variable</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ad8981fc3beb7b89abc8793f0e90f8a55_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">unsigned int </span><span class="name">samplerate</span><span class="args"></span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a76eeb5001c03ed98420893277301fc0d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a76eeb5001c03ed98420893277301fc0d&quot;)">
+        <span class="type"></span>
+        <a class="name">tickCount</a>
+        <span class="args"></span>
+        <span class="kind">variable</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a76eeb5001c03ed98420893277301fc0d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">unsigned long long </span><span class="name">tickCount</span><span class="args"></span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a1eac53ca21a774b56c3eb44108399fcd" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1eac53ca21a774b56c3eb44108399fcd&quot;)">
+        <span class="type"></span>
+        <a class="name">soundStreamDeviceID</a>
+        <span class="args"></span>
+        <span class="kind">variable</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a1eac53ca21a774b56c3eb44108399fcd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">soundStreamDeviceID</span><span class="args"></span></div><div class="memberDocumentation">
+
+</div></div>
+  </div></div>
+  </div><div id="Functions">
+    <h3 class="sectionHeader">Functions</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="ad66909576fbe3a69db70b108323c6748" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad66909576fbe3a69db70b108323c6748&quot;)">
+        <span class="type"></span>
+        <a class="name">ofSoundBuffer</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ad66909576fbe3a69db70b108323c6748_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofSoundBuffer</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofSoundBuffer</span><span class="args">(const ofSoundBuffer &amp;other)</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofSoundBuffer</span><span class="args">(short *shortBuffer, std::size_t numFrames, std::size_t numChannels, unsigned int sampleRate)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a1769c7d550aa2b5b47339f8aae641640" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1769c7d550aa2b5b47339f8aae641640&quot;)">
+        <span class="type"></span>
+        <a class="name">operator=</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a1769c7d550aa2b5b47339f8aae641640_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundBuffer.html">ofSoundBuffer</a> </span><span class="name">operator=</span><span class="args">(ofSoundBuffer other)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a09dae9c7182c649f6812e8df92e51fd4" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a09dae9c7182c649f6812e8df92e51fd4&quot;)">
+        <span class="type"></span>
+        <a class="name">~ofSoundBuffer</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a09dae9c7182c649f6812e8df92e51fd4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">~ofSoundBuffer</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a9771171e99b1090b91f5ad96628fe339" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9771171e99b1090b91f5ad96628fe339&quot;)">
+        <span class="type"></span>
+        <a class="name">getSampleRate</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a9771171e99b1090b91f5ad96628fe339_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getSampleRate</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>sample rate of the audio in this buffer </p>
+
+</div></div>
+  </div><div id="a344dd1c2c671310124a3a71b6c8292c5" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a344dd1c2c671310124a3a71b6c8292c5&quot;)">
+        <span class="type"></span>
+        <a class="name">setSampleRate</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a344dd1c2c671310124a3a71b6c8292c5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setSampleRate</span><span class="args">(int rate)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="af4148e1f327ae87b031f06b6125863ac" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af4148e1f327ae87b031f06b6125863ac&quot;)">
+        <span class="type"></span>
+        <a class="name">resample</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="af4148e1f327ae87b031f06b6125863ac_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">resample</span><span class="args">(float speed, InterpolationAlgorithm algorithm=defaultAlgorithm)</span></div><div class="memberDocumentation">
+
+<p>resample by changing the playback speed, keeping the same sampleRate </p>
+
+</div></div>
+  </div><div id="aaa17806dc1b0a2afe72dad836874338e" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aaa17806dc1b0a2afe72dad836874338e&quot;)">
+        <span class="type"></span>
+        <a class="name">getNumChannels</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aaa17806dc1b0a2afe72dad836874338e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getNumChannels</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>the number of channels per frame </p>
+
+</div></div>
+  </div><div id="a32cd874c8f412c5fd6b931d42050156e" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a32cd874c8f412c5fd6b931d42050156e&quot;)">
+        <span class="type"></span>
+        <a class="name">setNumChannels</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a32cd874c8f412c5fd6b931d42050156e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setNumChannels</span><span class="args">(int channels)</span></div><div class="memberDocumentation">
+
+<p>set the number of channels. does not change the underlying data, ie causes <a class="el" href="ofSoundBuffer.html#a6402ce0e9ceb4dae21ac8d185749668a" title="the number of frames, ie the number of sets of (getNumChannels()) samples ">getNumFrames()</a> to return a different result. </p>
+
+</div></div>
+  </div><div id="a6402ce0e9ceb4dae21ac8d185749668a" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6402ce0e9ceb4dae21ac8d185749668a&quot;)">
+        <span class="type"></span>
+        <a class="name">getNumFrames</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a6402ce0e9ceb4dae21ac8d185749668a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">unsigned long </span><span class="name">getNumFrames</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>the number of frames, ie the number of sets of (<a class="el" href="ofSoundBuffer.html#aaa17806dc1b0a2afe72dad836874338e" title="the number of channels per frame ">getNumChannels()</a>) samples </p>
+
+</div></div>
+  </div><div id="a0737d6d19f23708066e7bf1a7df2e2e0" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a0737d6d19f23708066e7bf1a7df2e2e0&quot;)">
+        <span class="type"></span>
+        <a class="name">getTickCount</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a0737d6d19f23708066e7bf1a7df2e2e0_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">unsigned long long </span><span class="name">getTickCount</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>return the tickCount that was assigned by <a class="el" href="ofSoundStream.html" title="Gives access to audio input and output devices. ">ofSoundStream</a> (if this buffer originated from an <a class="el" href="ofSoundStream.html" title="Gives access to audio input and output devices. ">ofSoundStream</a>). </p>
+
+</div></div>
+  </div><div id="a799ebe8c47b6bf724a9f3ae2e6fb05fc" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a799ebe8c47b6bf724a9f3ae2e6fb05fc&quot;)">
+        <span class="type"></span>
+        <a class="name">getDurationMS</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a799ebe8c47b6bf724a9f3ae2e6fb05fc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">unsigned long </span><span class="name">getDurationMS</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>return the duration of audio in this buffer in milliseconds (==(<a class="el" href="ofSoundBuffer.html#a6402ce0e9ceb4dae21ac8d185749668a" title="the number of frames, ie the number of sets of (getNumChannels()) samples ">getNumFrames()</a>/getSampleRate())*1000) </p>
+
+</div></div>
+  </div><div id="ac1c721612388fe7968ebdf7c68777ea3" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac1c721612388fe7968ebdf7c68777ea3&quot;)">
+        <span class="type"></span>
+        <a class="name">getDeviceID</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ac1c721612388fe7968ebdf7c68777ea3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">unsigned int </span><span class="name">getDeviceID</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>return the ID of the device which generated this buffer </p>
+
+</div></div>
+  </div><div id="a9cf4c48991c2c7d0d3ea830104fe3c75" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9cf4c48991c2c7d0d3ea830104fe3c75&quot;)">
+        <span class="type"></span>
+        <a class="name">operator[]</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a9cf4c48991c2c7d0d3ea830104fe3c75_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float &amp; </span><span class="name">operator[]</span><span class="args">(std::size_t samplePos)</span></div><div class="memberDocumentation">
+<p>access the sample at the given position in the buffer. to retrieve the sample for channel channelIndex of frame frameIndex, do the following: <a class="el" href="ofSoundBuffer.html" title="Buffer for audio samples and associated metadata. ">ofSoundBuffer</a> myBuffer; ... float sample = myBuffer[(frameIndex*myBuffer.<a class="el" href="ofSoundBuffer.html#aaa17806dc1b0a2afe72dad836874338e" title="the number of channels per frame ">getNumChannels()</a>) + channelIndex]; </p>
+
+</div><hr><div class="memberVariant"><span class="type">const float &amp; </span><span class="name">operator[]</span><span class="args">(std::size_t samplePos) const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="ac288d23914eeac9c2347fb0c6fc2f449" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac288d23914eeac9c2347fb0c6fc2f449&quot;)">
+        <span class="type"></span>
+        <a class="name">getSample</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ac288d23914eeac9c2347fb0c6fc2f449_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float &amp; </span><span class="name">getSample</span><span class="args">(std::size_t frameIndex, std::size_t channel)</span></div><div class="memberDocumentation">
+
+<p>access the sample at frameIndex on a soecific channel </p>
+
+</div><hr><div class="memberVariant"><span class="type">const float &amp; </span><span class="name">getSample</span><span class="args">(std::size_t frameIndex, std::size_t channel) const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="afc0f6f6eaf940ee1bccd10ee6439ec52" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#afc0f6f6eaf940ee1bccd10ee6439ec52&quot;)">
+        <span class="type"></span>
+        <a class="name">operator*</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="afc0f6f6eaf940ee1bccd10ee6439ec52_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundBuffer.html">ofSoundBuffer</a> </span><span class="name">operator*</span><span class="args">(float value)</span></div><div class="memberDocumentation">
+
+<p>return a new buffer containing the contents of this buffer multiplied by value. </p>
+
+</div></div>
+  </div><div id="af01a1eab4122d93ceb9042f4288b5b64" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af01a1eab4122d93ceb9042f4288b5b64&quot;)">
+        <span class="type"></span>
+        <a class="name">operator*=</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="af01a1eab4122d93ceb9042f4288b5b64_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundBuffer.html">ofSoundBuffer</a> </span><span class="name">operator*=</span><span class="args">(float value)</span></div><div class="memberDocumentation">
+
+<p>multiply everything in this buffer by value, in-place. </p>
+
+</div></div>
+  </div><div id="a7c8aecffd4e7cd96be56ec69bf122499" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7c8aecffd4e7cd96be56ec69bf122499&quot;)">
+        <span class="type"></span>
+        <a class="name">stereoPan</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a7c8aecffd4e7cd96be56ec69bf122499_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">stereoPan</span><span class="args">(float left, float right)</span></div><div class="memberDocumentation">
+
+<p>assuming a 2-channel buffer, apply a stereo pan by multiplying channel 0 by left and channel 1 by right. </p>
+
+</div></div>
+  </div><div id="a98afab0e70684b3839706785caf68180" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a98afab0e70684b3839706785caf68180&quot;)">
+        <span class="type"></span>
+        <a class="name">copyFrom</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a98afab0e70684b3839706785caf68180_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">copyFrom</span><span class="args">(short *shortBuffer, std::size_t numFrames, std::size_t numChannels, unsigned int sampleRate)</span></div><div class="memberDocumentation">
+
+<p>copy length samples from shortBuffer and interpret as interleaved with the given number of channels at the given samplerate </p>
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">copyFrom</span><span class="args">(float *floatBuffer, std::size_t numFrames, std::size_t numChannels, unsigned int sampleRate)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a865c8e6a44ab095c9d9e339aa118ad3d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a865c8e6a44ab095c9d9e339aa118ad3d&quot;)">
+        <span class="type"></span>
+        <a class="name">copyTo</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a865c8e6a44ab095c9d9e339aa118ad3d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">copyTo</span><span class="args">(ofSoundBuffer &amp;outBuffer, std::size_t outNumFrames, std::size_t outNumChannels, std::size_t fromFrame, bool loop=false) const </span></div><div class="memberDocumentation">
+<p>resize outBuffer to outNumFrames with outNumChannels, and then copy outNumFrames of data from us to outBuffer. fromFrame is a frame offset. if we don&apos;t have enough source data, loop with fromFrame=0 until we have filled outBuffer. if outBuffer has fewer channels than our buffer, just copy the first outNumChannels of our data and skip the rest. if outBuffer has more channels than our buffer, loop through our channels repeatedly until done. </p>
+
+</div></div>
+  </div><div id="a584b7dd1dadbc122dd50bfefdc1dd42a" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a584b7dd1dadbc122dd50bfefdc1dd42a&quot;)">
+        <span class="type"></span>
+        <a class="name">addTo</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a584b7dd1dadbc122dd50bfefdc1dd42a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addTo</span><span class="args">(ofSoundBuffer &amp;outBuffer, std::size_t outNumFrames, std::size_t outNumChannels, std::size_t fromFrame, bool loop=false) const </span></div><div class="memberDocumentation">
+
+<p>as copyTo but mixes source audio with audio in <code>outBuffer</code> by adding samples together (+), instead of overwriting. </p>
+
+</div></div>
+  </div><div id="a8985ef8db72c77e47c59f4d81abaedaa" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8985ef8db72c77e47c59f4d81abaedaa&quot;)">
+        <span class="type"></span>
+        <a class="name">copyTo</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a8985ef8db72c77e47c59f4d81abaedaa_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">copyTo</span><span class="args">(ofSoundBuffer &amp;outBuffer, std::size_t frameFrame=0, bool loop=false) const </span></div><div class="memberDocumentation">
+
+<p>as copyTo above but reads outNumFrames and outNumChannels from outBuffer </p>
+
+</div></div>
+  </div><div id="ad1dd55219c7d530538cb972f2088088a" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad1dd55219c7d530538cb972f2088088a&quot;)">
+        <span class="type"></span>
+        <a class="name">addTo</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ad1dd55219c7d530538cb972f2088088a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addTo</span><span class="args">(ofSoundBuffer &amp;outBuffer, std::size_t fromFrame=0, bool loop=false) const </span></div><div class="memberDocumentation">
+
+<p>as addTo above but reads outNumFrames and outNumChannels from outBuffer </p>
+
+</div></div>
+  </div><div id="a8faf3736ec57e2c4913fde6a49fe7d5b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8faf3736ec57e2c4913fde6a49fe7d5b&quot;)">
+        <span class="type"></span>
+        <a class="name">copyTo</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a8faf3736ec57e2c4913fde6a49fe7d5b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">copyTo</span><span class="args">(float *outBuffer, std::size_t outNumFrames, std::size_t outNumChannels, std::size_t fromFrame, bool loop=false) const </span></div><div class="memberDocumentation">
+<p>copy sample data to out, where out is already allocated to match outNumFrames and outNumChannels (ie outNumFrames*outNumChannels samples). fromFrame is a frame offset. if we don&apos;t have enough source data, loop with fromFrame=0 until we have filled the out buffer. if out has fewer channels than our buffer, just copy the first outNumChannels of our data and skip the rest. if out has more channels than our buffer, loop through our channels repeatedly until done. </p>
+
+</div></div>
+  </div><div id="aadd73c858ef268b58ea84c2a403e4d0f" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aadd73c858ef268b58ea84c2a403e4d0f&quot;)">
+        <span class="type"></span>
+        <a class="name">addTo</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aadd73c858ef268b58ea84c2a403e4d0f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addTo</span><span class="args">(float *outBuffer, std::size_t outNumFrames, std::size_t outNumChannels, std::size_t fromFrame, bool loop=false) const </span></div><div class="memberDocumentation">
+
+<p>as copyTo but mixes source audio with audio in <code>out</code> by adding samples together (+), instead of overwriting </p>
+
+</div></div>
+  </div><div id="a8e15d0a021460027e0e674a2d27d0096" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8e15d0a021460027e0e674a2d27d0096&quot;)">
+        <span class="type"></span>
+        <a class="name">resampleTo</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a8e15d0a021460027e0e674a2d27d0096_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">resampleTo</span><span class="args">(ofSoundBuffer &amp;outBuffer, std::size_t fromFrame, std::size_t numFrames, float speed, bool loop=false, InterpolationAlgorithm algorithm=defaultAlgorithm) const </span></div><div class="memberDocumentation">
+<p>resample our data to outBuffer at the given target speed, starting at fromFrame and copying numFrames of data. resize outBuffer to fit. speed is relative to current speed (ie 1.0f == no change). lower speeds will give a larger outBuffer, higher speeds a smaller outBuffer. </p>
+
+</div></div>
+  </div><div id="af8d388fbe6c032ec58e3f709951c0e49" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af8d388fbe6c032ec58e3f709951c0e49&quot;)">
+        <span class="type"></span>
+        <a class="name">getChannel</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="af8d388fbe6c032ec58e3f709951c0e49_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">getChannel</span><span class="args">(ofSoundBuffer &amp;outBuffer, std::size_t sourceChannel) const </span></div><div class="memberDocumentation">
+
+<p>copy the requested channel of our data to outBuffer. resize outBuffer to fit. </p>
+
+</div></div>
+  </div><div id="a9bb21f23048dd7e9e999f351f5e3bb38" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9bb21f23048dd7e9e999f351f5e3bb38&quot;)">
+        <span class="type"></span>
+        <a class="name">setChannel</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a9bb21f23048dd7e9e999f351f5e3bb38_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setChannel</span><span class="args">(const ofSoundBuffer &amp;inBuffer, std::size_t channel)</span></div><div class="memberDocumentation">
+
+<p>copy data from inBuffer to the given channel. resize ourselves to match inBuffer&apos;s <a class="el" href="ofSoundBuffer.html#a6402ce0e9ceb4dae21ac8d185749668a" title="the number of frames, ie the number of sets of (getNumChannels()) samples ">getNumFrames()</a>. </p>
+
+</div></div>
+  </div><div id="a121b46a1db39ce488b33a2849f3bfcd7" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a121b46a1db39ce488b33a2849f3bfcd7&quot;)">
+        <span class="type"></span>
+        <a class="name">getRMSAmplitude</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a121b46a1db39ce488b33a2849f3bfcd7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getRMSAmplitude</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a1815f1cc7bc4a49b6c5566f08ec657ed" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1815f1cc7bc4a49b6c5566f08ec657ed&quot;)">
+        <span class="type"></span>
+        <a class="name">getRMSAmplitudeChannel</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a1815f1cc7bc4a49b6c5566f08ec657ed_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getRMSAmplitudeChannel</span><span class="args">(unsigned int channel) const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a855af032ebe19f7057d73f108e4d5ef7" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a855af032ebe19f7057d73f108e4d5ef7&quot;)">
+        <span class="type"></span>
+        <a class="name">linearResampleTo</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a855af032ebe19f7057d73f108e4d5ef7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">linearResampleTo</span><span class="args">(ofSoundBuffer &amp;buffer, unsigned int fromFrame, unsigned int numFrames, float speed, bool loop) const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="ae95b804e6c92f1dd29c79e41b6f9ab4b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae95b804e6c92f1dd29c79e41b6f9ab4b&quot;)">
+        <span class="type"></span>
+        <a class="name">hermiteResampleTo</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ae95b804e6c92f1dd29c79e41b6f9ab4b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">hermiteResampleTo</span><span class="args">(ofSoundBuffer &amp;buffer, unsigned int fromFrame, unsigned int numFrames, float speed, bool loop) const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a577127e5daeeb067076535daeb300f3f" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a577127e5daeeb067076535daeb300f3f&quot;)">
+        <span class="type"></span>
+        <a class="name">fillWithNoise</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a577127e5daeeb067076535daeb300f3f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">fillWithNoise</span><span class="args">(float amplitude=1)</span></div><div class="memberDocumentation">
+
+<p>fills the buffer with random noise between -amplitude and amplitude. useful for debugging. </p>
+
+</div></div>
+  </div><div id="a25afcacf691d3d59b54e855801046ea2" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a25afcacf691d3d59b54e855801046ea2&quot;)">
+        <span class="type"></span>
+        <a class="name">fillWithTone</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a25afcacf691d3d59b54e855801046ea2_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">fillWithTone</span><span class="args">(float pitchHz=440., float phase=0)</span></div><div class="memberDocumentation">
+
+<p>fills the buffer with a sine wave. useful for debugging. </p>
+
+</div></div>
+  </div><div id="ae73c0b14000f12a540867e06c38dac8b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae73c0b14000f12a540867e06c38dac8b&quot;)">
+        <span class="type"></span>
+        <a class="name">normalize</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ae73c0b14000f12a540867e06c38dac8b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">normalize</span><span class="args">(float level=1)</span></div><div class="memberDocumentation">
+
+<p>amplifies samples so that the maximum amplitude is equal to &apos;level&apos; </p>
+
+</div></div>
+  </div><div id="a91664094a2351dfb89a8ecc7c5a68948" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a91664094a2351dfb89a8ecc7c5a68948&quot;)">
+        <span class="type"></span>
+        <a class="name">trimSilence</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a91664094a2351dfb89a8ecc7c5a68948_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">trimSilence</span><span class="args">(float threshold=0.0001, bool trimStart=true, bool trimEnd=true)</span></div><div class="memberDocumentation">
+
+<p>removes initial / ending silence from the buffer </p>
+
+</div></div>
+  </div><div id="a4d1efe32477137c581da8bdb4e6c0c83" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4d1efe32477137c581da8bdb4e6c0c83&quot;)">
+        <span class="type"></span>
+        <a class="name">size</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a4d1efe32477137c581da8bdb4e6c0c83_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">std::size_t </span><span class="name">size</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>return the total number of samples in this buffer (==<a class="el" href="ofSoundBuffer.html#a6402ce0e9ceb4dae21ac8d185749668a" title="the number of frames, ie the number of sets of (getNumChannels()) samples ">getNumFrames()</a>*getNumChannels()) </p>
+
+</div></div>
+  </div><div id="acfeea24b5f167b8bf110ea7a79603aa0" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#acfeea24b5f167b8bf110ea7a79603aa0&quot;)">
+        <span class="type"></span>
+        <a class="name">resize</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="acfeea24b5f167b8bf110ea7a79603aa0_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">resize</span><span class="args">(std::size_t numSamples, float val=float())</span></div><div class="memberDocumentation">
+
+<p>resize this buffer to exactly this many samples. it&apos;s up to you make sure samples matches the channel count. </p>
+
+</div></div>
+  </div><div id="ae8801f5cfeef472d15f81ee0c1b2575a" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae8801f5cfeef472d15f81ee0c1b2575a&quot;)">
+        <span class="type"></span>
+        <a class="name">clear</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ae8801f5cfeef472d15f81ee0c1b2575a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clear</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>remove all samples, preserving channel count and sample rate. </p>
+
+</div></div>
+  </div><div id="ad05068fda1532010ed6c1b197f00738b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad05068fda1532010ed6c1b197f00738b&quot;)">
+        <span class="type"></span>
+        <a class="name">swap</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ad05068fda1532010ed6c1b197f00738b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">swap</span><span class="args">(ofSoundBuffer &amp;otherBuffer)</span></div><div class="memberDocumentation">
+
+<p>swap the contents of this buffer with otherBuffer </p>
+
+</div></div>
+  </div><div id="aa9c55ef9d05fc1adec87dd6e0c64d1dc" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa9c55ef9d05fc1adec87dd6e0c64d1dc&quot;)">
+        <span class="type"></span>
+        <a class="name">set</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aa9c55ef9d05fc1adec87dd6e0c64d1dc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float value)</span></div><div class="memberDocumentation">
+
+<p>set everything in this buffer to value, preserving size, channel count and sample rate. </p>
+
+</div></div>
+  </div><div id="aa7a1f7a1d914647dc86a8cc075ce1a63" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa7a1f7a1d914647dc86a8cc075ce1a63&quot;)">
+        <span class="type"></span>
+        <a class="name">getBuffer</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aa7a1f7a1d914647dc86a8cc075ce1a63_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">vector&lt; float &gt; &amp; </span><span class="name">getBuffer</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>return the underlying buffer. careful! </p>
+
+</div></div>
+  </div></div>
+  </div><div id="ProtectedFunctions">
+    <h3 class="sectionHeader">Protected Functions</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a01e032ef972297c9d04dfb2b43c8e6a6" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a01e032ef972297c9d04dfb2b43c8e6a6&quot;)">
+        <span class="type"></span>
+        <a class="name">checkSizeAndChannelsConsistency</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a01e032ef972297c9d04dfb2b43c8e6a6_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">checkSizeAndChannelsConsistency</span><span class="args">(string function=&quot;&quot;)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div></div>
+  </div></div>
+  </div></div>
+  </div>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+
+<script src="script.js"></script>
+<script src="fuse.min.js"></script>
+<script src="toc.js"></script>
+<script src="search.js"></script>
+
+</body>
+
+<!-- Templates - These are being used by the generator script -->
+<div id="templates">
+
+  <!-- Class template -->
+  <div id="classTemplate" class="classBlock">
+    <div class="classHeader">
+      <h1 class="classTitle"></h1>
+    </div>
+    <div class="classDescription"></div>
+    <div class="classMethods"></div>
+  </div>
+
+  <!-- Section template -->
+  <div id="sectionTemplate">
+    <h3 class="sectionHeader"></h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"></div>
+  </div>
+
+  <!-- Class method template -->
+  <div id="classMethodTemplate" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox">
+        <span class="type"></span>
+        <a class="name"></a>
+        <span class="args"></span>
+        <span class="kind"></span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none"> <!-- Description goes here --> </div>
+  </div>
+
+</div>
+
+</html>

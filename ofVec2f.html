@@ -177,8 +177,8 @@
 <p>Returns a pointer to the memory position of the first element of the vector (x); the second element (y) immediately follows it in memory. </p>
 <div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> v1 = <a class="code" href="ofVec2f.html#a47491f3530f42b816a9d9a5c09005b31">ofVec2f</a>(40, 20);</div>
 <div class="line"><span class="keywordtype">float</span> * v1Ptr = v1.<a class="code" href="ofVec2f.html#a136ca01a1e0ab4c7eeed7c9940ca0f00">getPtr</a>();</div>
-<div class="line"><span class="keywordtype">float</span> <a class="code" href="ofVec2f.html#a81763bfaf27b7db5f734055212ca6ec5">x</a> = *(v1Ptr); <span class="comment">// x is 40</span></div>
-<div class="line"><span class="keywordtype">float</span> <a class="code" href="ofVec2f.html#a4be985445b601e54d3ca5917c3d7ac8d">y</a> = *(v1Ptr+1); <span class="comment">// y is 20</span></div>
+<div class="line"><span class="keywordtype">float</span> x = *(v1Ptr); <span class="comment">// x is 40</span></div>
+<div class="line"><span class="keywordtype">float</span> y = *(v1Ptr+1); <span class="comment">// y is 20</span></div>
 </div><!-- fragment --><p>This is very useful when using arrays of ofVec2fs to store geometry information, as it allows the vector to be treated as a simple C array of floats that can be passed verbatim to OpenGL. </p>
 
 </div><hr><div class="memberVariant"><span class="type">const float * </span><span class="name">getPtr</span><span class="args">() const </span></div><div class="memberDocumentation">
@@ -812,7 +812,7 @@
 <p>Treats both this vector and pnt as points in 2D space, and calculates and returns the distance between them.</p>
 <div class="fragment"><div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> p1( 3, 4 );</div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> p2( 6, 8 );</div>
-<div class="line"><span class="keywordtype">float</span> <a class="code" href="ofVec2f.html#a7b0364dd393bb208c73157e0deee72c7">distance</a> = p1.distance( p2 ); <span class="comment">// distance is 5</span></div>
+<div class="line"><span class="keywordtype">float</span> distance = p1.distance( p2 ); <span class="comment">// distance is 5</span></div>
 </div><!-- fragment --><p>Distance involves a square root calculation, which is one of the slowest things you can do in programming. If you don&apos;t need an exact number but rather just a rough idea of distance (for example when finding the shortest distance of a bunch of points to a reference point, where it doesn&apos;t matter exactly what the distances are, you just want the shortest), you can use <a class="el" href="ofVec2f.html#a3ebd0b6fee431042976ec39811d02893" title="Distance between two points squared. ">squareDistance()</a> instead.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1260,12 +1260,12 @@
 <p> Image courtesy of Wikipedia</p>
 <div class="fragment"><div class="line">ofvec2f a1(1, 0);</div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> b1(0, 1); <span class="comment">// 90 degree angle to a1</span></div>
-<div class="line"><a class="code" href="ofVec2f.html#a0fd71d357ed6e594fd1a40ee92770a95">dot</a> = a1.dot(b1); <span class="comment">// dot is 0, ie cos(90)</span></div>
+<div class="line">dot = a1.dot(b1); <span class="comment">// dot is 0, ie cos(90)</span></div>
 <div class="line"></div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> a2(1, 0); </div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> b2(1, 1); <span class="comment">// 45 degree angle to a2</span></div>
 <div class="line">b2.normalize(); <span class="comment">// vectors should to be unit vectors (normalized)</span></div>
-<div class="line"><span class="keywordtype">float</span> <a class="code" href="ofVec2f.html#a0fd71d357ed6e594fd1a40ee92770a95">dot</a> = a2.dot(b2); <span class="comment">// dot is 0.707, ie cos(45)</span></div>
+<div class="line"><span class="keywordtype">float</span> dot = a2.dot(b2); <span class="comment">// dot is 0.707, ie cos(45)</span></div>
 <div class="line"></div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> a3(1, 0);</div>
 <div class="line"><a class="code" href="ofVec2f.html">ofVec2f</a> b3(-1, 0); <span class="comment">// 180 degree angle to a3</span></div>

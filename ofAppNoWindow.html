@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <span class="class">ofAppNoWindow</span><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#StaticFunctions">Static Functions</a></li></ul>
+        <span class="class">ofAppNoWindow</span><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#StaticFunctions">Static Functions</a></li><span class="class">ofNoopRenderer</span><li class="chapter"><a href="#Functions">Functions</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -105,37 +105,70 @@
     <div class="methodDescription" style="display:none" id="a9b90d97234b55a7be8bdafe61ad8ed73_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">~ofAppNoWindow</span><span class="args">()</span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="afbeafd41baf1f6a5aeb6b15b14b165f5" class="method">
+  </div><div id="a2b9d3a792f71568a3f7471bc022c532d" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#afbeafd41baf1f6a5aeb6b15b14b165f5&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2b9d3a792f71568a3f7471bc022c532d&quot;)">
         <span class="type"></span>
-        <a class="name">runAppViaInfiniteLoop</a>
+        <a class="name">run</a>
         <span class="args"></span>
         <span class="kind">()</span>
         <span class="note"></span>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="afbeafd41baf1f6a5aeb6b15b14b165f5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">runAppViaInfiniteLoop</span><span class="args">(ofBaseApp *appPtr)</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a2b9d3a792f71568a3f7471bc022c532d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">run</span><span class="args">(ofBaseApp *appPtr)</span></div><div class="memberDocumentation">
 <p>listen for escape </p>
 
-<p>Reimplemented from <a class="el" href="ofAppBaseWindow.html#a039ff5b4950c30ea0416dfa32031736e">ofAppBaseWindow</a>.</p>
+<p>Reimplemented from <a class="el" href="ofAppBaseWindow.html#ab9f379fcc7fa9da23ad558b50bb3e664">ofAppBaseWindow</a>.</p>
 
 </div></div>
-  </div><div id="a6e036ca738df3584718e9e8d671fb0d1" class="method">
+  </div><div id="a55a43bd125644b1c294ff5fcafedd332" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6e036ca738df3584718e9e8d671fb0d1&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a55a43bd125644b1c294ff5fcafedd332&quot;)">
         <span class="type"></span>
-        <a class="name">setupOpenGL</a>
+        <a class="name">setup</a>
         <span class="args"></span>
         <span class="kind">()</span>
         <span class="note"></span>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a6e036ca738df3584718e9e8d671fb0d1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setupOpenGL</span><span class="args">(int w, int h, ofWindowMode screenMode)</span></div><div class="memberDocumentation">
+    <div class="methodDescription" style="display:none" id="a55a43bd125644b1c294ff5fcafedd332_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setup</span><span class="args">(const ofWindowSettings &amp;settings)</span></div><div class="memberDocumentation">
 
-<p>Reimplemented from <a class="el" href="ofAppBaseWindow.html#a15791fd0b448e5575228c44ff7565f09">ofAppBaseWindow</a>.</p>
+<p>Implements <a class="el" href="ofAppBaseWindow.html#ae62e6d89d15896b31e4edd1bbb30b598">ofAppBaseWindow</a>.</p>
+
+</div></div>
+  </div><div id="af9950cb462b89d3f35a0b87c760e562d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#af9950cb462b89d3f35a0b87c760e562d&quot;)">
+        <span class="type"></span>
+        <a class="name">update</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="af9950cb462b89d3f35a0b87c760e562d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">update</span><span class="args">()</span></div><div class="memberDocumentation">
+<p>listen for escape </p>
+
+<p>Implements <a class="el" href="ofAppBaseWindow.html#a1ea4c6c129f3b7a13f7ef0a372ee3d59">ofAppBaseWindow</a>.</p>
+
+</div></div>
+  </div><div id="a673091b2fac631ce6c8cddc93c97fcc4" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a673091b2fac631ce6c8cddc93c97fcc4&quot;)">
+        <span class="type"></span>
+        <a class="name">draw</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a673091b2fac631ce6c8cddc93c97fcc4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Implements <a class="el" href="ofAppBaseWindow.html#a91ca55c3fdf2b84ee4761b7024141c31">ofAppBaseWindow</a>.</p>
 
 </div></div>
   </div><div id="a42f209f0f39a9f4af96349bd9bef0c56" class="method">
@@ -218,11 +251,349 @@
 <p>Reimplemented from <a class="el" href="ofAppBaseWindow.html#aef76e7138aef773ee573b23d42947ae9">ofAppBaseWindow</a>.</p>
 
 </div></div>
+  </div><div id="a5f42433753461aa365b08b97ed501fa7" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a5f42433753461aa365b08b97ed501fa7&quot;)">
+        <span class="type"></span>
+        <a class="name">events</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a5f42433753461aa365b08b97ed501fa7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofCoreEvents.html">ofCoreEvents</a> </span><span class="name">events</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Implements <a class="el" href="ofAppBaseWindow.html#a8d0bc822eee49d3607e6d3557493e8a4">ofAppBaseWindow</a>.</p>
+
+</div></div>
+  </div><div id="classof_app_base_window_1a906eef9d3e13f2708f5fb2d609b5d885" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_app_base_window_1a906eef9d3e13f2708f5fb2d609b5d885&quot;)">
+        <span class="type"></span>
+        <a class="name">getWindowShouldClose</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_app_base_window_1a906eef9d3e13f2708f5fb2d609b5d885_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">getWindowShouldClose</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_app_base_window_1ab60ce8d623030d217bd13f999fd4d2d8" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_app_base_window_1ab60ce8d623030d217bd13f999fd4d2d8&quot;)">
+        <span class="type"></span>
+        <a class="name">setWindowShouldClose</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_app_base_window_1ab60ce8d623030d217bd13f999fd4d2d8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setWindowShouldClose</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_app_base_window_1abbd1c04fb17418864a1639f8f4dafbb4" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_app_base_window_1abbd1c04fb17418864a1639f8f4dafbb4&quot;)">
+        <span class="type"></span>
+        <a class="name">close</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_app_base_window_1abbd1c04fb17418864a1639f8f4dafbb4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">close</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_app_base_window_1a3fafd7a497cd400c85b222abbeebe45b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_app_base_window_1a3fafd7a497cd400c85b222abbeebe45b&quot;)">
+        <span class="type"></span>
+        <a class="name">renderer</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_app_base_window_1a3fafd7a497cd400c85b222abbeebe45b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofBaseRenderer.html">ofBaseRenderer</a> </span><span class="name">renderer</span><span class="args">()=0</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_app_base_window_1af4ef05008c4f77e2a0f8c271268ecfc1" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_app_base_window_1af4ef05008c4f77e2a0f8c271268ecfc1&quot;)">
+        <span class="type"></span>
+        <a class="name">hideCursor</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_app_base_window_1af4ef05008c4f77e2a0f8c271268ecfc1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">hideCursor</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_app_base_window_1ac252b1bb722cc7b21b7c3629b7113c85" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_app_base_window_1ac252b1bb722cc7b21b7c3629b7113c85&quot;)">
+        <span class="type"></span>
+        <a class="name">showCursor</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_app_base_window_1ac252b1bb722cc7b21b7c3629b7113c85_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">showCursor</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_app_base_window_1a086fffc9787f57b808a82f47b33eada8" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_app_base_window_1a086fffc9787f57b808a82f47b33eada8&quot;)">
+        <span class="type"></span>
+        <a class="name">setWindowPosition</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_app_base_window_1a086fffc9787f57b808a82f47b33eada8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setWindowPosition</span><span class="args">(int x, int y)</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_app_base_window_1afb277ec2522adf086b5d7f3b954a1d15" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_app_base_window_1afb277ec2522adf086b5d7f3b954a1d15&quot;)">
+        <span class="type"></span>
+        <a class="name">setWindowShape</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_app_base_window_1afb277ec2522adf086b5d7f3b954a1d15_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setWindowShape</span><span class="args">(int w, int h)</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_app_base_window_1abf382ecbee7aaad01a699d19072f54d7" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_app_base_window_1abf382ecbee7aaad01a699d19072f54d7&quot;)">
+        <span class="type"></span>
+        <a class="name">setOrientation</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_app_base_window_1abf382ecbee7aaad01a699d19072f54d7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setOrientation</span><span class="args">(ofOrientation orientation)</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_app_base_window_1addb4b11af8f02dd874bc34deed4b207f" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_app_base_window_1addb4b11af8f02dd874bc34deed4b207f&quot;)">
+        <span class="type"></span>
+        <a class="name">getOrientation</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_app_base_window_1addb4b11af8f02dd874bc34deed4b207f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1a85ec4045e22bafeea5c561f9778c1f1c">ofOrientation</a> </span><span class="name">getOrientation</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_app_base_window_1a7bb214b855429ac2ddf1091d93cfb4a8" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_app_base_window_1a7bb214b855429ac2ddf1091d93cfb4a8&quot;)">
+        <span class="type"></span>
+        <a class="name">doesHWOrientation</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_app_base_window_1a7bb214b855429ac2ddf1091d93cfb4a8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">doesHWOrientation</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_app_base_window_1ae07e37bc05f8e58bdb836784f9405e10" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_app_base_window_1ae07e37bc05f8e58bdb836784f9405e10&quot;)">
+        <span class="type"></span>
+        <a class="name">setWindowTitle</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_app_base_window_1ae07e37bc05f8e58bdb836784f9405e10_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setWindowTitle</span><span class="args">(string title)</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_app_base_window_1ab756d5ba6a29a5f4a53fbd86a7061eed" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_app_base_window_1ab756d5ba6a29a5f4a53fbd86a7061eed&quot;)">
+        <span class="type"></span>
+        <a class="name">getWindowMode</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_app_base_window_1ab756d5ba6a29a5f4a53fbd86a7061eed_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1afa470c2b36b8378e2784faf85b4b11b8">ofWindowMode</a> </span><span class="name">getWindowMode</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_app_base_window_1a4d4f5560b718479f81d4cbdbd90e7f7d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_app_base_window_1a4d4f5560b718479f81d4cbdbd90e7f7d&quot;)">
+        <span class="type"></span>
+        <a class="name">setFullscreen</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_app_base_window_1a4d4f5560b718479f81d4cbdbd90e7f7d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setFullscreen</span><span class="args">(bool fullscreen)</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_app_base_window_1ad9164e5949d0c0f4a8b72e452fa9ce61" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_app_base_window_1ad9164e5949d0c0f4a8b72e452fa9ce61&quot;)">
+        <span class="type"></span>
+        <a class="name">toggleFullscreen</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_app_base_window_1ad9164e5949d0c0f4a8b72e452fa9ce61_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">toggleFullscreen</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_app_base_window_1ae5a096f8d1e8b367391fe2cf3ed86cfe" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_app_base_window_1ae5a096f8d1e8b367391fe2cf3ed86cfe&quot;)">
+        <span class="type"></span>
+        <a class="name">enableSetupScreen</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_app_base_window_1ae5a096f8d1e8b367391fe2cf3ed86cfe_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">enableSetupScreen</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_app_base_window_1aeb601b01dbfa47c94857512cbc3710c2" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_app_base_window_1aeb601b01dbfa47c94857512cbc3710c2&quot;)">
+        <span class="type"></span>
+        <a class="name">disableSetupScreen</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_app_base_window_1aeb601b01dbfa47c94857512cbc3710c2_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">disableSetupScreen</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_app_base_window_1a2dd72cfdb062e9d1cd92c38abb626780" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_app_base_window_1a2dd72cfdb062e9d1cd92c38abb626780&quot;)">
+        <span class="type"></span>
+        <a class="name">setVerticalSync</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_app_base_window_1a2dd72cfdb062e9d1cd92c38abb626780_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setVerticalSync</span><span class="args">(bool enabled)</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_app_base_window_1aecc9a8abb0cd9e1410c5144c5bdfe627" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_app_base_window_1aecc9a8abb0cd9e1410c5144c5bdfe627&quot;)">
+        <span class="type"></span>
+        <a class="name">setClipboardString</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_app_base_window_1aecc9a8abb0cd9e1410c5144c5bdfe627_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setClipboardString</span><span class="args">(const string &amp;text)</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_app_base_window_1afb99fe9124b900d1c3fab5f198eb8d80" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_app_base_window_1afb99fe9124b900d1c3fab5f198eb8d80&quot;)">
+        <span class="type"></span>
+        <a class="name">getClipboardString</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_app_base_window_1afb99fe9124b900d1c3fab5f198eb8d80_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">string </span><span class="name">getClipboardString</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_app_base_window_1a77bcfac7dc7e9edb876278ade76651f6" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_app_base_window_1a77bcfac7dc7e9edb876278ade76651f6&quot;)">
+        <span class="type"></span>
+        <a class="name">getWindowContext</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_app_base_window_1a77bcfac7dc7e9edb876278ade76651f6_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void * </span><span class="name">getWindowContext</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
   </div></div>
   </div><div id="StaticFunctions">
     <h3 class="sectionHeader">Static Functions</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="ad4c1978b6fa526433c479ab63461b919" class="method">
+    <div class="sectionContent"><div id="a6599d504378205de16a6d1399cc447ca" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6599d504378205de16a6d1399cc447ca&quot;)">
+        <span class="type"></span>
+        <a class="name">doesLoop</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a6599d504378205de16a6d1399cc447ca_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">doesLoop</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="aaf88780ef5836be0aeb9515f41bd049d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aaf88780ef5836be0aeb9515f41bd049d&quot;)">
+        <span class="type"></span>
+        <a class="name">allowsMultiWindow</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aaf88780ef5836be0aeb9515f41bd049d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">allowsMultiWindow</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a08b2ce184d4e753afb853456577e4bbd" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a08b2ce184d4e753afb853456577e4bbd&quot;)">
+        <span class="type"></span>
+        <a class="name">loop</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a08b2ce184d4e753afb853456577e4bbd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">loop</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a038f5d9878c281fb9493436cc178fcd4" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a038f5d9878c281fb9493436cc178fcd4&quot;)">
+        <span class="type"></span>
+        <a class="name">needsPolling</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a038f5d9878c281fb9493436cc178fcd4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">needsPolling</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a4c3771e56e8549f3618e2c3bcbd13f8e" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4c3771e56e8549f3618e2c3bcbd13f8e&quot;)">
+        <span class="type"></span>
+        <a class="name">pollEvents</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a4c3771e56e8549f3618e2c3bcbd13f8e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">pollEvents</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="ad4c1978b6fa526433c479ab63461b919" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad4c1978b6fa526433c479ab63461b919&quot;)">
         <span class="type"></span>
@@ -236,6 +607,318 @@
     <div class="methodDescription" style="display:none" id="ad4c1978b6fa526433c479ab63461b919_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">exitApp</span><span class="args">()</span></div><div class="memberDocumentation">
 
 </div></div>
+  </div></div>
+  </div></div>
+  </div><div id="" class="classBlock">
+    <div class="classHeader">
+      <h1 class="classTitle">ofNoopRenderer<small>class</small></h1>
+    </div>
+    <div class="classDescription"></div>
+    <div class="classMethods"><div id="Functions">
+    <h3 class="sectionHeader">Functions</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a3a4fa6ba6beea815b17e1eda20d4b559" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3a4fa6ba6beea815b17e1eda20d4b559&quot;)">
+        <span class="type"></span>
+        <a class="name">ofNoopRenderer</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a3a4fa6ba6beea815b17e1eda20d4b559_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofNoopRenderer</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="classof_base_renderer_1a0b234490a7117121e477f714c3f72af4" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1a0b234490a7117121e477f714c3f72af4&quot;)">
+        <span class="type"></span>
+        <a class="name">draw</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1a0b234490a7117121e477f714c3f72af4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofPath &amp;shape, float x, float y) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofMesh &amp;mesh, ofPolyRenderMode renderType) const </span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1a778e11930030a26fd06a2afe50194be8" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1a778e11930030a26fd06a2afe50194be8&quot;)">
+        <span class="type"></span>
+        <a class="name">setPlaneResolution</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1a778e11930030a26fd06a2afe50194be8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setPlaneResolution</span><span class="args">(int columns, int rows)</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1adb96a0c88b7e8173d4caf1f3d13b604e" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1adb96a0c88b7e8173d4caf1f3d13b604e&quot;)">
+        <span class="type"></span>
+        <a class="name">getPlaneResolution</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1adb96a0c88b7e8173d4caf1f3d13b604e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a> </span><span class="name">getPlaneResolution</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1a364591a5bf65360dfc7157df578a4878" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1a364591a5bf65360dfc7157df578a4878&quot;)">
+        <span class="type"></span>
+        <a class="name">drawPlane</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1a364591a5bf65360dfc7157df578a4878_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawPlane</span><span class="args">(float x, float y, float width, float height) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawPlane</span><span class="args">(float x, float y, float z, float width, float height) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawPlane</span><span class="args">(ofPoint &amp;position, float width, float height) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawPlane</span><span class="args">(float width, float height) const </span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1a9d1c271a9feb584a8ac5b5320099dd85" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1a9d1c271a9feb584a8ac5b5320099dd85&quot;)">
+        <span class="type"></span>
+        <a class="name">setSphereResolution</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1a9d1c271a9feb584a8ac5b5320099dd85_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setSphereResolution</span><span class="args">(int res)</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1a0db0a7ba7ef13705c4d260327a85cf9b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1a0db0a7ba7ef13705c4d260327a85cf9b&quot;)">
+        <span class="type"></span>
+        <a class="name">getSphereResolution</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1a0db0a7ba7ef13705c4d260327a85cf9b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getSphereResolution</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1aba02dae6c765dbc368e5b97c887fb122" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1aba02dae6c765dbc368e5b97c887fb122&quot;)">
+        <span class="type"></span>
+        <a class="name">drawSphere</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1aba02dae6c765dbc368e5b97c887fb122_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawSphere</span><span class="args">(float x, float y, float radius) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawSphere</span><span class="args">(const ofPoint &amp;position, float radius) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawSphere</span><span class="args">(float radius) const </span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1a1ce29aa914a1c4c72b3d90916bb216cb" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1a1ce29aa914a1c4c72b3d90916bb216cb&quot;)">
+        <span class="type"></span>
+        <a class="name">setIcoSphereResolution</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1a1ce29aa914a1c4c72b3d90916bb216cb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setIcoSphereResolution</span><span class="args">(int res)</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1a4e388bedafa16ebf05157445f09c5ca6" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1a4e388bedafa16ebf05157445f09c5ca6&quot;)">
+        <span class="type"></span>
+        <a class="name">getIcoSphereResolution</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1a4e388bedafa16ebf05157445f09c5ca6_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getIcoSphereResolution</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1a6aa4d13dfdf9d922ba6b20a7f08bdd5c" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1a6aa4d13dfdf9d922ba6b20a7f08bdd5c&quot;)">
+        <span class="type"></span>
+        <a class="name">drawIcoSphere</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1a6aa4d13dfdf9d922ba6b20a7f08bdd5c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawIcoSphere</span><span class="args">(float x, float y, float z, float radius) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawIcoSphere</span><span class="args">(float x, float y, float radius) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawIcoSphere</span><span class="args">(const ofPoint &amp;position, float radius) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawIcoSphere</span><span class="args">(float radius) const </span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1a5120a3e2d32df03274fa693e24d2ff0a" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1a5120a3e2d32df03274fa693e24d2ff0a&quot;)">
+        <span class="type"></span>
+        <a class="name">setCylinderResolution</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1a5120a3e2d32df03274fa693e24d2ff0a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setCylinderResolution</span><span class="args">(int radiusSegments, int heightSegments, int capSegments=2)</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1a27d513cf39eaa17ef14cb7dfdde285ae" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1a27d513cf39eaa17ef14cb7dfdde285ae&quot;)">
+        <span class="type"></span>
+        <a class="name">getCylinderResolution</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1a27d513cf39eaa17ef14cb7dfdde285ae_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getCylinderResolution</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1aed8e62e74cbfe67492e73cbba0c3a938" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1aed8e62e74cbfe67492e73cbba0c3a938&quot;)">
+        <span class="type"></span>
+        <a class="name">drawCylinder</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1aed8e62e74cbfe67492e73cbba0c3a938_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawCylinder</span><span class="args">(float x, float y, float radius, float height) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawCylinder</span><span class="args">(float x, float y, float z, float radius, float height) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawCylinder</span><span class="args">(const ofPoint &amp;position, float radius, float height) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawCylinder</span><span class="args">(float radius, float height) const </span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1afb39445f6faa72c8406523520d228e18" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1afb39445f6faa72c8406523520d228e18&quot;)">
+        <span class="type"></span>
+        <a class="name">setConeResolution</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1afb39445f6faa72c8406523520d228e18_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setConeResolution</span><span class="args">(int radiusSegments, int heightSegments, int capSegments=2)</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1a1857f39c4e7b9e2e6eeec1d0a833c73a" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1a1857f39c4e7b9e2e6eeec1d0a833c73a&quot;)">
+        <span class="type"></span>
+        <a class="name">getConeResolution</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1a1857f39c4e7b9e2e6eeec1d0a833c73a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getConeResolution</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1a7c09949a75b43c5d85a919725d327f3b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1a7c09949a75b43c5d85a919725d327f3b&quot;)">
+        <span class="type"></span>
+        <a class="name">drawCone</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1a7c09949a75b43c5d85a919725d327f3b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawCone</span><span class="args">(float x, float y, float z, float radius, float height) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawCone</span><span class="args">(float x, float y, float radius, float height) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawCone</span><span class="args">(const ofPoint &amp;position, float radius, float height) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawCone</span><span class="args">(float radius, float height) const </span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1ad4d0b03fb42a88dd283f613afe2f717e" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1ad4d0b03fb42a88dd283f613afe2f717e&quot;)">
+        <span class="type"></span>
+        <a class="name">setBoxResolution</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1ad4d0b03fb42a88dd283f613afe2f717e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setBoxResolution</span><span class="args">(int res)</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setBoxResolution</span><span class="args">(int resWidth, int resHeight, int resDepth)</span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1a9f6bd02f2abcaad2be4397cea15e6708" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1a9f6bd02f2abcaad2be4397cea15e6708&quot;)">
+        <span class="type"></span>
+        <a class="name">getBoxResolution</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1a9f6bd02f2abcaad2be4397cea15e6708_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getBoxResolution</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1adcaf6b4350867365e1710186b29df3cb" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1adcaf6b4350867365e1710186b29df3cb&quot;)">
+        <span class="type"></span>
+        <a class="name">drawBox</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1adcaf6b4350867365e1710186b29df3cb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawBox</span><span class="args">(float x, float y, float z, float width, float height, float depth) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawBox</span><span class="args">(float x, float y, float z, float size) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawBox</span><span class="args">(const ofPoint &amp;position, float width, float height, float depth) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawBox</span><span class="args">(const ofPoint &amp;position, float size) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawBox</span><span class="args">(float size) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">drawBox</span><span class="args">(float width, float height, float depth) const </span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1a5b07ce47a8461930c69f3c00e73bad1c" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1a5b07ce47a8461930c69f3c00e73bad1c&quot;)">
+        <span class="type"></span>
+        <a class="name">drawAxis</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1a5b07ce47a8461930c69f3c00e73bad1c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawAxis</span><span class="args">(float size) const </span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1a4bfee16ee4def9807f23a393f8fae4d1" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1a4bfee16ee4def9807f23a393f8fae4d1&quot;)">
+        <span class="type"></span>
+        <a class="name">drawGrid</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1a4bfee16ee4def9807f23a393f8fae4d1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawGrid</span><span class="args">(float stepSize, size_t numberOfSteps, bool labels, bool x, bool y, bool z) const </span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1ae06498a5f7d8f18c79405564560aa0fc" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1ae06498a5f7d8f18c79405564560aa0fc&quot;)">
+        <span class="type"></span>
+        <a class="name">drawGridPlane</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1ae06498a5f7d8f18c79405564560aa0fc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawGridPlane</span><span class="args">(float stepSize, size_t numberOfSteps, bool labels) const </span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1a2a9287b7bcbaa00c3a6519d6898ead1f" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1a2a9287b7bcbaa00c3a6519d6898ead1f&quot;)">
+        <span class="type"></span>
+        <a class="name">drawArrow</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1a2a9287b7bcbaa00c3a6519d6898ead1f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawArrow</span><span class="args">(const ofVec3f &amp;start, const ofVec3f &amp;end, float headSize) const </span></div><div class="memberDocumentation">undefined</div></div>
+  </div><div id="classof_base_renderer_1ab45657203ce83cc093b88525a51d85fb" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_renderer_1ab45657203ce83cc093b88525a51d85fb&quot;)">
+        <span class="type"></span>
+        <a class="name">drawRotationAxes</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_renderer_1ab45657203ce83cc093b88525a51d85fb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawRotationAxes</span><span class="args">(float radius, float stripWidth, int circleRes) const </span></div><div class="memberDocumentation">undefined</div></div>
   </div></div>
   </div></div>
   </div></div>

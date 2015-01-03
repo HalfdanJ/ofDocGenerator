@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <li class="chapter"><a href="#Variants">Variants</a></li><span class="class">ofColor_</span><li class="chapter"><a href="#CreateanofColor">Create an ofColor</a></li><li class="chapter"><a href="#DataAccessor">Data Accessor</a></li><li class="chapter"><a href="#Setters">Setters</a></li><li class="chapter"><a href="#Modifiers">Modifiers</a></li><li class="chapter"><a href="#Getters">Getters</a></li><li class="chapter"><a href="#Operators">Operators</a></li><li class="chapter"><a href="#PredefinedColors">Predefined Colors</a></li><li class="chapter"><a href="#Attributes">Attributes</a></li></ul>
+        <li class="chapter"><a href="#Variants">Variants</a></li><span class="class">ofColor_</span><li class="chapter"><a href="#CreateanofColor">Create an ofColor</a></li><li class="chapter"><a href="#DataAccessors">Data Accessors</a></li><li class="chapter"><a href="#Setters">Setters</a></li><li class="chapter"><a href="#Modifiers">Modifiers</a></li><li class="chapter"><a href="#Getters">Getters</a></li><li class="chapter"><a href="#Operators">Operators</a></li><li class="chapter"><a href="#PredefinedColors">Predefined Colors</a></li><li class="chapter"><a href="#Attributes">Attributes</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -126,24 +126,24 @@
     <div class="classDescription"><div class="textblock"><h3>template&lt;typename T&gt;<br>
 class ofColor_&lt; T &gt;</h3>
 
-<p>ofColor represents a color in openFrameworks. Colors are usually defined by specifying a red, green, and blue component (RGB), and a transparency (alpha) component. You can also specify colors using hue, saturation and brightness (HSB).</p>
+<p>ofColor represents a color in openFrameworks. Colors are usually defined by specifying a red, green, and blue component (RGB), and a transparency (alpha) component. You can also specify colors using hue, saturation, and brightness (HSB).</p>
 <p>For example: </p>
-<div class="fragment"><div class="line"><span class="comment">// set red, component by component</span></div>
+<div class="fragment"><div class="line"><span class="comment">// Set red, component by component</span></div>
 <div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="ofColor.html#ac367432852af8ffd84574c6bdb6dba74">red</a>;</div>
 <div class="line">red.<a class="code" href="ofColor.html#aab3965044572c4f8f44d0502340bff15">r</a>=255;</div>
 <div class="line">red.<a class="code" href="ofColor.html#adf8807e0648ac5089cfba86029cb1ea5">g</a>=0;</div>
 <div class="line">red.<a class="code" href="ofColor.html#a837af41c32c453d99395229441ad5f68">b</a>=0;</div>
-<div class="line"><a class="code" href="of_graphics_8cpp.html#abf32a6859916c39dfe5e4835c725fb6d">ofSetColor</a>(red); </div>
-<div class="line"><span class="comment">// draw color is now red</span></div>
+<div class="line"><a class="code" href="of_graphics_8cpp.html#abf32a6859916c39dfe5e4835c725fb6d">ofSetColor</a>(red);</div>
+<div class="line"><span class="comment">// Draw color is now red.</span></div>
 <div class="line"></div>
-<div class="line"><span class="comment">// shorter notation is also possible</span></div>
+<div class="line"><span class="comment">// Shorter notation is also possible.</span></div>
 <div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="ofColor.html#ab934ba3ea7932eff445de1863129ce58">green</a>(0, 255, 0);</div>
-<div class="line"><a class="code" href="of_graphics_8cpp.html#abf32a6859916c39dfe5e4835c725fb6d">ofSetColor</a>(<a class="code" href="ofColor.html#ab934ba3ea7932eff445de1863129ce58">green</a>); </div>
-<div class="line"><span class="comment">// draw color is now green</span></div>
+<div class="line"><a class="code" href="of_graphics_8cpp.html#abf32a6859916c39dfe5e4835c725fb6d">ofSetColor</a>(<a class="code" href="ofColor.html#ab934ba3ea7932eff445de1863129ce58">green</a>);</div>
+<div class="line"><span class="comment">// Draw color is now green.</span></div>
 <div class="line"></div>
-<div class="line"><span class="comment">// or even shorter </span></div>
-<div class="line"><a class="code" href="of_graphics_8cpp.html#abf32a6859916c39dfe5e4835c725fb6d">ofSetColor</a>( <a class="code" href="ofBaseTypes.html#ace59f9421b921c3344fa20972e515912">ofColor</a>(0, 0, <a class="code" href="of_math_8cpp.html#ae93bfe2a2080f0e2a03df835e72c7521">ofRandom</a>( 128, 255 ) ); </div>
-<div class="line"><span class="comment">// draw color is now a random blue</span></div>
+<div class="line"><span class="comment">// ... or even shorter.</span></div>
+<div class="line"><a class="code" href="of_graphics_8cpp.html#abf32a6859916c39dfe5e4835c725fb6d">ofSetColor</a>( <a class="code" href="ofBaseTypes.html#ace59f9421b921c3344fa20972e515912">ofColor</a>(0, 0, <a class="code" href="of_math_8cpp.html#ae93bfe2a2080f0e2a03df835e72c7521">ofRandom</a>( 128, 255 ) );</div>
+<div class="line"><span class="comment">// Draw color is now a random blue.</span></div>
 </div><!-- fragment --><p>ofColor also enables a lot of extra functionality like using HSB instead of color spectrums, lerping or linearly interpolating between colors, and inverting colors, among other things.</p>
 <p>ofColor is templated, which means that it has several different ways it can be created. These are probably best to leave as they are because there&apos;s already a few kinds typedefed for you. The default ofColor uses unsigned char values (0 to 255), but you can make an ofFloatColor if you want to work with floating point numbers between 0 and 1, or ofShortColor if you want to work with integers between 0 and 65,535.</p>
 <table class="doxtable">
@@ -199,16 +199,16 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a894f8070c4bbe3a98f5702a11440beb3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>Construct a white color. </p>
+<p>Construct a default white color. </p>
 <div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>;</div>
-<div class="line"><a class="code" href="of_graphics_8cpp.html#abf32a6859916c39dfe5e4835c725fb6d">ofSetColor</a>( c ); <span class="comment">// draw color is now white</span></div>
+<div class="line"><a class="code" href="of_graphics_8cpp.html#abf32a6859916c39dfe5e4835c725fb6d">ofSetColor</a>(c); <span class="comment">// Draw color is now white.</span></div>
 </div><!-- fragment --> 
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(float red, float green, float blue, float alpha=limit())</span></div><div class="memberDocumentation">
 
 <p>Construct an <a class="el" href="ofColor.html">ofColor_</a> by using channel values. </p>
 <p>When creating an instance of <a class="el" href="ofColor.html">ofColor_</a> the channel values must fall within the range represented by the PixelType. By default, the alpha component will take the PixelType&apos;s maximum, producing an opaque color.</p>
-<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> c1(255, 0, 0); <span class="comment">// red with 100% alpha</span></div>
-<div class="line"><a class="code" href="ofColor.html">ofColor</a> c2(255, 0, 0, 128); <span class="comment">// red with 50% alpha.</span></div>
+<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> c1(255, 0, 0); <span class="comment">// Red with 100% alpha.</span></div>
+<div class="line"><a class="code" href="ofColor.html">ofColor</a> c2(255, 0, 0, 128); <span class="comment">// Red with 50% alpha.</span></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">red</td><td>The red component. </td></tr>
@@ -221,9 +221,9 @@ class ofColor_&lt; T &gt;</h3>
 
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(float gray, float alpha=limit())</span></div><div class="memberDocumentation">
 
-<p>Construct a grayscale <a class="el" href="ofColor.html">ofColor_</a> by specifiying a single number. </p>
+<p>Construct a grayscale <a class="el" href="ofColor.html">ofColor_</a> by specifying a single number. </p>
 <p>This constructor will use a single value to describe a grayscale color. This single value will be taken by each of the R, G and B components. The alpha channel is specified separately and will and will default to the PixelType&apos;s maximum resulting in an opaque color.</p>
-<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>(0.5); <span class="comment">// c is now gray</span></div>
+<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>(0.5); <span class="comment">// c is now gray.</span></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">gray</td><td>A grayscale value. </td></tr>
@@ -237,7 +237,7 @@ class ofColor_&lt; T &gt;</h3>
 <p>Construct an <a class="el" href="ofColor.html">ofColor_</a> from an existing <a class="el" href="ofColor.html">ofColor_</a>. </p>
 <p>This constructor will attempt to convert between color instances of differing precision.</p>
 <div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> colorA(255, 0, 0);</div>
-<div class="line"><a class="code" href="ofColor.html">ofColor</a> colorB(colorA); <span class="comment">// colorB is now equal to colorA</span></div>
+<div class="line"><a class="code" href="ofColor.html">ofColor</a> colorB(colorA); <span class="comment">// colorB is now equal to colorA.</span></div>
 </div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>Depending on the PixelType and SrcType used, color precision may be lost when converting a higher precision to a lower precision representation.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -249,7 +249,7 @@ class ofColor_&lt; T &gt;</h3>
 </div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofColor_</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color, float alpha)</span></div><div class="memberDocumentation">
 
 <p>Construct an <a class="el" href="ofColor.html">ofColor_</a> from an existing <a class="el" href="ofColor.html">ofColor_</a>. </p>
-<p>This constructor will use the R, G and B components from the passed color ignoring its alpha channel. The provided alpha channel will be used instead.</p>
+<p>This constructor will use the R, G, and B components from the passed color ignoring its alpha channel. The provided alpha channel will be used instead.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">color</td><td>The <a class="el" href="ofColor.html">ofColor_</a> to copy. </td></tr>
@@ -275,8 +275,8 @@ class ofColor_&lt; T &gt;</h3>
 <p>Create an <a class="el" href="ofColor.html">ofColor_</a> from an HSB representation. </p>
 <p>While <a class="el" href="ofColor.html">ofColor_</a> represents color using R, G, B, and A components, other representations are available. This method allows the user to construct an <a class="el" href="ofColor.html">ofColor_</a> from a Hue (H), Saturation (S), and Brightness (B) and an optional alpha value.</p>
 <p>The alpha channel is specified separately and will default to the PixelType&apos;s maximum, resulting in an opaque color.</p>
-<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> c = <a class="code" href="ofColor.html#a298d1603eb1628dcb5f71906b581dd5c">ofColor::fromHsb</a>(128, 255, 255); </div>
-<div class="line"><span class="comment">// c is bright saturated cyan</span></div>
+<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> c = <a class="code" href="ofColor.html#a298d1603eb1628dcb5f71906b581dd5c">ofColor::fromHsb</a>(128, 255, 255);</div>
+<div class="line"><span class="comment">// c is bright saturated cyan.</span></div>
 </div><!-- fragment --><p>For more information about HSB, see: <a href="http://en.wikipedia.org/wiki/HSV_color_space">http://en.wikipedia.org/wiki/HSV_color_space</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -303,9 +303,9 @@ class ofColor_&lt; T &gt;</h3>
     <div class="methodDescription" style="display:none" id="aa14c7cb5a9912e22887db4e87c4f85b4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">fromHex</span><span class="args">(int hexColor, float alpha=limit())</span></div><div class="memberDocumentation">
 
 <p>Create an <a class="el" href="ofColor.html">ofColor_</a> from a hexadecimal value. </p>
-<p>In some cases, it is convenient to represent colors using a hexadecimal number. In this case, red, green and blue values are packed into a single integer.</p>
+<p>In some cases, it is convenient to represent colors using a hexadecimal number. In this case, red, green, and blue values are packed into a single integer.</p>
 <p>The alpha channel is specified separately and will default to the PixelType&apos;s maximum, resulting in an opaque color.</p>
-<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> c = <a class="code" href="ofColor.html#aa14c7cb5a9912e22887db4e87c4f85b4">ofColor::fromHex</a>(0xFFFF00); <span class="comment">// c is yellow</span></div>
+<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> c = <a class="code" href="ofColor.html#aa14c7cb5a9912e22887db4e87c4f85b4">ofColor::fromHex</a>(0xFFFF00); <span class="comment">// c is yellow.</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">hexColor</td><td>A color in hexadecimal form. </td></tr>
@@ -316,8 +316,8 @@ class ofColor_&lt; T &gt;</h3>
 
 </div></div>
   </div></div>
-  </div><div id="DataAccessor">
-    <h3 class="sectionHeader">Data Accessor</h3>
+  </div><div id="DataAccessors">
+    <h3 class="sectionHeader">Data Accessors</h3>
     <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a21867b7cba4d68c5737334e0610dfe36" class="method">
     <div class="methodHeader">
@@ -355,8 +355,8 @@ class ofColor_&lt; T &gt;</h3>
 
 <p>Set an <a class="el" href="ofColor.html">ofColor_</a> by using channel values. </p>
 <p>When modifying an instance of <a class="el" href="ofColor.html">ofColor_</a> the channel values must fall within the range represented by the PixelType. By default, the alpha component will take the PixelType&apos;s maximum, producing an opaque color.</p>
-<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>(255, 0, 0); <span class="comment">// red</span></div>
-<div class="line">c.<a class="code" href="ofColor.html#ac5454aed599639ab6d1748b08301a992">set</a>(0, 255, 0); <span class="comment">// and now green</span></div>
+<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>(255, 0, 0); <span class="comment">// Red ...</span></div>
+<div class="line">c.<a class="code" href="ofColor.html#ac5454aed599639ab6d1748b08301a992">set</a>(0, 255, 0); <span class="comment">// ... and now green.</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">red</td><td>The red component. </td></tr>
@@ -369,11 +369,11 @@ class ofColor_&lt; T &gt;</h3>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">set</span><span class="args">(float gray, float alpha=limit())</span></div><div class="memberDocumentation">
 
-<p>Set a grayscale <a class="el" href="ofColor.html">ofColor_</a> by specifiying a single number. </p>
+<p>Set a grayscale <a class="el" href="ofColor.html">ofColor_</a> by specifying a single number. </p>
 <p>When modifying an instance of <a class="el" href="ofColor.html">ofColor_</a> you can use a single value to describe a grayscale color. This single value will be taken by each of the R, G and B components. The alpha channel is specified separately and will and will default to the PixelType&apos;s maximum resulting in an opaque color.</p>
-<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>(255, 0, 0); <span class="comment">// red</span></div>
-<div class="line">c.<a class="code" href="ofColor.html#ac5454aed599639ab6d1748b08301a992">set</a>( 128, 128 ); <span class="comment">// now 50% gray with 50% alpha</span></div>
-</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>(255, 0, 0); <span class="comment">// Red ...</span></div>
+<div class="line">c.<a class="code" href="ofColor.html#ac5454aed599639ab6d1748b08301a992">set</a>(128, 128); <span class="comment">// ... and now 50% gray with 50% alpha.</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">gray</td><td>A grayscale value. </td></tr>
     <tr><td class="paramname">alpha</td><td>The opacity of the color. </td></tr>
@@ -410,9 +410,9 @@ class ofColor_&lt; T &gt;</h3>
 <p>In some cases, it is convenient to represent colors using a hexadecimal number. In this case, red, green and blue values are packed into a integer.</p>
 <p>The alpha channel is specified separately and will default to the PixelType&apos;s maximum, resulting in an opaque color.</p>
 <div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>;</div>
-<div class="line">c.<a class="code" href="ofColor.html#ad6e89a08aa11f2d2815ba9be89033ccf">setHex</a>( 0xFFFFFF ); <span class="comment">// white</span></div>
-<div class="line">c.<a class="code" href="ofColor.html#ad6e89a08aa11f2d2815ba9be89033ccf">setHex</a>( 0x00FF00 ); <span class="comment">// green</span></div>
-<div class="line">c.<a class="code" href="ofColor.html#ad6e89a08aa11f2d2815ba9be89033ccf">setHex</a>( 0xFF8000, 128 ); <span class="comment">// orange, 50% alpha</span></div>
+<div class="line">c.<a class="code" href="ofColor.html#ad6e89a08aa11f2d2815ba9be89033ccf">setHex</a>(0xFFFFFF); <span class="comment">// White.</span></div>
+<div class="line">c.<a class="code" href="ofColor.html#ad6e89a08aa11f2d2815ba9be89033ccf">setHex</a>(0x00FF00); <span class="comment">// Green.</span></div>
+<div class="line">c.<a class="code" href="ofColor.html#ad6e89a08aa11f2d2815ba9be89033ccf">setHex</a>(0xFF8000, 128); <span class="comment">// Orange, 50% alpha.</span></div>
 </div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>The alpha value <em>should not</em> be packed in the hexColor and must be specified separately.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -437,9 +437,9 @@ class ofColor_&lt; T &gt;</h3>
     <div class="methodDescription" style="display:none" id="a2b20f282fa99ff0fb540bcf8718863eb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setHue</span><span class="args">(float hue)</span></div><div class="memberDocumentation">
 
 <p>Set the hue of this color. </p>
-<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> c = <a class="code" href="ofColor.html#a298d1603eb1628dcb5f71906b581dd5c">ofColor::fromHsb</a>( 0, 255, 255 ); <span class="comment">// bright red</span></div>
-<div class="line">c.<a class="code" href="ofColor.html#a2b20f282fa99ff0fb540bcf8718863eb">setHue</a>( 128 ); <span class="comment">// now bright cyan</span></div>
-</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> c = <a class="code" href="ofColor.html#a298d1603eb1628dcb5f71906b581dd5c">ofColor::fromHsb</a>(0, 255, 255); <span class="comment">// Bright red ...</span></div>
+<div class="line">c.<a class="code" href="ofColor.html#a2b20f282fa99ff0fb540bcf8718863eb">setHue</a>(128); <span class="comment">// ... now bright cyan.</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">hue</td><td>A hue value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Get the maximum value of a color component. ">limit()</a>. </td></tr>
   </table>
@@ -482,11 +482,11 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="aa3301f40e7f4dc0bd1563f32cba9def7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setSaturation</span><span class="args">(float saturation)</span></div><div class="memberDocumentation">
 
-<p>Set the saturation this color. </p>
+<p>Set the saturation of this color. </p>
 <p>This method uses HSB not HSL. So red desaturated is white, not gray</p>
-<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>( 0, 0, 255 ); <span class="comment">// vibrant blue</span></div>
-<div class="line">c.<a class="code" href="ofColor.html#aa3301f40e7f4dc0bd1563f32cba9def7">setSaturation</a>( 128 ); <span class="comment">// pale blue</span></div>
-</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>(0, 0, 255); <span class="comment">// Vibrant blue ...</span></div>
+<div class="line">c.<a class="code" href="ofColor.html#aa3301f40e7f4dc0bd1563f32cba9def7">setSaturation</a>( 128 ); <span class="comment">// ... pale blue.</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">saturation</td><td>A saturation value value in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Get the maximum value of a color component. ">limit()</a>. </td></tr>
   </table>
@@ -509,9 +509,9 @@ class ofColor_&lt; T &gt;</h3>
     <div class="methodDescription" style="display:none" id="ae316135040740fb2f37f6cd8d23454bb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setBrightness</span><span class="args">(float brightness)</span></div><div class="memberDocumentation">
 
 <p>Set the brightness of this color. </p>
-<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>( 0, 0, 255 ); <span class="comment">// bright blue</span></div>
-<div class="line">c.<a class="code" href="ofColor.html#ae316135040740fb2f37f6cd8d23454bb">setBrightness</a>( 128 ); <span class="comment">// dark blue</span></div>
-</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>(0, 0, 255); <span class="comment">// Bright blue ...</span></div>
+<div class="line">c.<a class="code" href="ofColor.html#ae316135040740fb2f37f6cd8d23454bb">setBrightness</a>(128); <span class="comment">// ... dark blue.</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">brightness</td><td>A brightness value to set in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Get the maximum value of a color component. ">limit()</a>. </td></tr>
   </table>
@@ -564,7 +564,7 @@ class ofColor_&lt; T &gt;</h3>
 <p>Clamp values between 0 and the <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Get the maximum value of a color component. ">limit()</a>. </p>
 <p>Clamps the value of each component, R, G, B and A to a maximum of <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Get the maximum value of a color component. ">limit()</a> and a minimum of zero.</p>
 <div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>( 300, 0, 0 );</div>
-<div class="line"><span class="comment">// r component is above the limit() of 255</span></div>
+<div class="line"><span class="comment">// r component is above the limit() of 255.</span></div>
 <div class="line">c.<a class="code" href="ofColor.html#a90df86b31f2d2411deeca42b228d5381">clamp</a>(); <span class="comment">// c.r has now been clamped so its value is 255.</span></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>A reference to itself. </dd></dl>
 
@@ -594,8 +594,9 @@ class ofColor_&lt; T &gt;</h3>
 <div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> gNew = maxValue - <a class="code" href="ofColor.html#adf8807e0648ac5089cfba86029cb1ea5">g</a>; <span class="comment">// 255 - 255 = 0</span></div>
 <div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> bNew = maxValue - <a class="code" href="ofColor.html#a837af41c32c453d99395229441ad5f68">b</a>; <span class="comment">// 255 - 0   = 255;</span></div>
 </div><!-- fragment --><p>Example usage: </p>
-<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>(0, 0, 255); <span class="comment">// blue</span></div>
-<div class="line">c.<a class="code" href="ofColor.html#ac7dab5a53453d15d18b3c486ee655103">invert</a>(); <span class="comment">// c is now (255,255,0), or yellow, which is blue&apos;s complement</span></div>
+<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>(0, 0, 255); <span class="comment">// Blue.</span></div>
+<div class="line">c.<a class="code" href="ofColor.html#ac7dab5a53453d15d18b3c486ee655103">invert</a>();</div>
+<div class="line"><span class="comment">// c is now (255,255,0), or yellow, which is blue&apos;s complement.</span></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>A reference to itself. </dd></dl>
 
 </div></div>
@@ -616,8 +617,8 @@ class ofColor_&lt; T &gt;</h3>
 <p>Performs a normalization operation on the red, green and blue components by scaling them by brightness of the original color divided by the <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Get the maximum value of a color component. ">limit()</a>. The brightness is calculated by finding the maximum of original red, green and blue components. This operation is equivalent to the following:</p>
 <div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> myColor(127, 0, 0, 127);</div>
 <div class="line"></div>
-<div class="line"><span class="keywordtype">float</span> brightness = myColor.<a class="code" href="ofColor.html#a7b73e7b52d0e967277c034d9e539d7b7">getBrightness</a>(); <span class="comment">// returns 127.</span></div>
-<div class="line"><span class="keywordtype">float</span> scaleFactor = brightness / <a class="code" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f">limit</a>();   <span class="comment">// returns 127 / 255.</span></div>
+<div class="line"><span class="keywordtype">float</span> brightness = myColor.<a class="code" href="ofColor.html#a7b73e7b52d0e967277c034d9e539d7b7">getBrightness</a>(); <span class="comment">// Returns 127.</span></div>
+<div class="line"><span class="keywordtype">float</span> scaleFactor = brightness / <a class="code" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f">limit</a>();   <span class="comment">// Returns 127 / 255.</span></div>
 <div class="line"></div>
 <div class="line"><a class="code" href="ofColor.html">ofColor</a> myNormalizedColor = myColor / scaleFactor;</div>
 <div class="line">                            <span class="comment">// Divides the red, green and blue</span></div>
@@ -671,8 +672,8 @@ class ofColor_&lt; T &gt;</h3>
     <div class="methodDescription" style="display:none" id="a756c104c401ec4e42d27ee5b7d8a3912_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">getClamped</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 <p>A non-destructive version of <a class="el" href="ofColor.html#a90df86b31f2d2411deeca42b228d5381" title="Clamp values between 0 and the limit(). ">clamp()</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of this color, clamped. </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofColor.html#a90df86b31f2d2411deeca42b228d5381" title="Clamp values between 0 and the limit(). ">clamp()</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A copy of this color, clamped. </dd></dl>
 
 </div></div>
   </div><div id="a11bc8c7ef629174d09fd3168c18660e9" class="method">
@@ -689,8 +690,8 @@ class ofColor_&lt; T &gt;</h3>
     <div class="methodDescription" style="display:none" id="a11bc8c7ef629174d09fd3168c18660e9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">getInverted</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 <p>A non-destructive version of <a class="el" href="ofColor.html#ac7dab5a53453d15d18b3c486ee655103" title="Invert the R, G and B components. ">invert()</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of this color, inverted. </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofColor.html#ac7dab5a53453d15d18b3c486ee655103" title="Invert the R, G and B components. ">invert()</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A copy of this color, inverted. </dd></dl>
 
 </div></div>
   </div><div id="a371c0b6475599a3191d2f08672d8b771" class="method">
@@ -707,8 +708,8 @@ class ofColor_&lt; T &gt;</h3>
     <div class="methodDescription" style="display:none" id="a371c0b6475599a3191d2f08672d8b771_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">getNormalized</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 <p>A non-destructive version of <a class="el" href="ofColor.html#a383be8c22b569253381ea7e5ed80f51d" title="Normalize the R, G and B components. ">normalize()</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of this color, normalized. </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofColor.html#a383be8c22b569253381ea7e5ed80f51d" title="Normalize the R, G and B components. ">normalize()</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A copy of this color, normalized. </dd></dl>
 
 </div></div>
   </div><div id="a070e475f03ccfee7eb0ecd47443fbe07" class="method">
@@ -725,8 +726,8 @@ class ofColor_&lt; T &gt;</h3>
     <div class="methodDescription" style="display:none" id="a070e475f03ccfee7eb0ecd47443fbe07_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">getLerped</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;target, float amount) const </span></div><div class="memberDocumentation">
 
 <p>A non-destructive version of <a class="el" href="ofColor.html#a777831b6851dbc27fd7d2d4b5288d16b" title="A linear interpolation between all components of two colors. ">lerp()</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>A copy of this color, lerped. </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofColor.html#a777831b6851dbc27fd7d2d4b5288d16b" title="A linear interpolation between all components of two colors. ">lerp()</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A copy of this color, lerped. </dd></dl>
 
 </div></div>
   </div><div id="a7a721db7497d984c3ee81002bcd7237b" class="method">
@@ -743,8 +744,8 @@ class ofColor_&lt; T &gt;</h3>
     <div class="methodDescription" style="display:none" id="a7a721db7497d984c3ee81002bcd7237b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getHex</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 <p>Get a 24-bit hexadecimal representation of the RGB color. </p>
-<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>( 255, 255, 0 ); <span class="comment">// yellow</span></div>
-<div class="line"><span class="keywordtype">int</span> hex = c.<a class="code" href="ofColor.html#a7a721db7497d984c3ee81002bcd7237b">getHex</a>(); <span class="comment">// hex is 0xffff00 (or 16776960 in decimal)</span></div>
+<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>( 255, 255, 0 ); <span class="comment">// Yellow.</span></div>
+<div class="line"><span class="keywordtype">int</span> hex = c.<a class="code" href="ofColor.html#a7a721db7497d984c3ee81002bcd7237b">getHex</a>(); <span class="comment">// Hex is 0xffff00 (or 16776960 in decimal).</span></div>
 </div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>This method does <em>not</em> encode the alpha component.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>An integer representing an RGB color. </dd></dl>
 
@@ -763,7 +764,7 @@ class ofColor_&lt; T &gt;</h3>
     <div class="methodDescription" style="display:none" id="a59959aa62173b96f31d0833327e2772f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getHue</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 <p>Get the Hue of this color. </p>
-<p>The color is converted from the default RGB to an HSB colorspace and the resulting Hue value is returned. The resulting hue value will always be returned in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Get the maximum value of a color component. ">limit()</a>.</p>
+<p>The color is converted from the default RGB to an HSB color space and the&#xA0;resulting Hue value is returned. The resulting hue value will always be returned in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Get the maximum value of a color component. ">limit()</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>The Hue value in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Get the maximum value of a color component. ">limit()</a>. </dd></dl>
 
 </div></div>
@@ -781,7 +782,7 @@ class ofColor_&lt; T &gt;</h3>
     <div class="methodDescription" style="display:none" id="ac6db0677624242a46690352660254f18_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getHueAngle</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 <p>Get the Hue angle of this color. </p>
-<p>The color is converted from the default RGB to an HSB colorspace and the resulting Hue angle is returned. The resulting hue value will always be returned in degrees in the range 0 - 360.</p>
+<p>The color is converted from the default RGB to an HSB color space and the&#xA0;resulting Hue angle is returned. The resulting hue value will always be returned in degrees in the range 0 - 360.</p>
 <dl class="section return"><dt>Returns</dt><dd>The Hue angle in the range 0 - 360. </dd></dl>
 
 </div></div>
@@ -799,7 +800,7 @@ class ofColor_&lt; T &gt;</h3>
     <div class="methodDescription" style="display:none" id="a0569370be88bfa5fddbd6529b5230de3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getSaturation</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 <p>Get the Saturation of this color. </p>
-<p>The color is converted from the default RGB to an HSB colorspace and the resulting saturation is returned. The resulting saturation value will always be returned in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Get the maximum value of a color component. ">limit()</a>.</p>
+<p>The color is converted from the default RGB to an HSB color space and the&#xA0;resulting saturation is returned. The resulting saturation value will&#xA0;always be returned in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Get the maximum value of a color component. ">limit()</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>The saturation in the range 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Get the maximum value of a color component. ">limit()</a>. </dd></dl>
 
 </div></div>
@@ -854,9 +855,11 @@ class ofColor_&lt; T &gt;</h3>
 
 <p>Extract the hue, saturation and brightness (HSB) from this color. </p>
 <div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="ofColor.html#ac367432852af8ffd84574c6bdb6dba74">red</a>(255,0,0);</div>
-<div class="line"><span class="keywordtype">float</span> hue, saturation, brightness;</div>
-<div class="line">red.<a class="code" href="ofColor.html#a6c340043e0fa64d77a2688709f7c0787">getHsb</a>( hue, saturation, brightness );</div>
-<div class="line"><span class="comment">// hue is now 0 (for red), saturation is 255, brightness is 255</span></div>
+<div class="line"><span class="keywordtype">float</span> hue = 0;  <span class="comment">// The hue value to set.</span></div>
+<div class="line"><span class="keywordtype">float</span> saturation = 0; <span class="comment">// The saturation value to set.</span></div>
+<div class="line"><span class="keywordtype">float</span> brightness = 0; </div>
+<div class="line">red.<a class="code" href="ofColor.html#a6c340043e0fa64d77a2688709f7c0787">getHsb</a>(hue, saturation, brightness);</div>
+<div class="line"><span class="comment">// Hue is now 0 (for red), saturation is 255, brightness is 255.</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">hue</td><td>A reference to the hue to fill. Will be in the range of 0 - <a class="el" href="ofColor.html#aef7c0aabbaab6d6ac09cf60080eb5b6f" title="Get the maximum value of a color component. ">limit()</a>. </td></tr>
@@ -882,7 +885,7 @@ class ofColor_&lt; T &gt;</h3>
 
 <p>Get the maximum value of a color component. </p>
 <p>Based on the type of PixelType (whether its a ofColor, ofFloatColor or ofShortColor), the maximum value different. For a ofFloatColor the maximum is <code>1.0</code>, but for a ofColor it&apos;s <code>255</code>.</p>
-<p>Use this function to get this number out.</p>
+<p>Use this function to get this maximum number..</p>
 <dl class="section return"><dt>Returns</dt><dd>The value associated with a fully saturated color component. </dd></dl>
 
 </div></div>
@@ -977,7 +980,29 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a8763680d2c7474b30e06520b724edbbe_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">operator+</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color) const </span></div><div class="memberDocumentation">
 
+<p>Clamped addition operator. </p>
+<p>Add two colors by summing and clamping their R, G and B components.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The alpha component is ignored.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The color to add. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The new clamped color. </dd></dl>
+
 </div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">operator+</span><span class="args">(const float &amp;val) const </span></div><div class="memberDocumentation">
+
+<p>Clamped addition operator. </p>
+<p>Add a value to each of the R, G and B components and clamp each.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The alpha component is ignored.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The value to add. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The new clamped color. </dd></dl>
 
 </div></div>
   </div><div id="acba02c12ef30601506f635b379ed22b7" class="method">
@@ -993,7 +1018,29 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="acba02c12ef30601506f635b379ed22b7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">operator+=</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
+<p>Clamped addition operator. </p>
+<p>Add two colors by summing and clamping their R, G and B components.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The alpha component is ignored.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The color to add. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to itself, the new clamped color. </dd></dl>
+
 </div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">operator+=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
+
+<p>Clamped addition operator. </p>
+<p>Add a value to each of the R, G and B components and clamp each.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The alpha component is ignored.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The value to add. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to itself, the new clamped color. </dd></dl>
 
 </div></div>
   </div><div id="ab136e09e0af27003d59675c83653be95" class="method">
@@ -1009,7 +1056,29 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="ab136e09e0af27003d59675c83653be95_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">operator-</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color) const </span></div><div class="memberDocumentation">
 
+<p>Clamped subtraction operator. </p>
+<p>Subtract two colors by subtracting and clamping their R, G and B components.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The alpha component is ignored.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The color to subtract. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The new clamped color. </dd></dl>
+
 </div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">operator-</span><span class="args">(const float &amp;val) const </span></div><div class="memberDocumentation">
+
+<p>Clamped subtraction operator. </p>
+<p>Subtract a value from each of the R, G and B components and clamp each.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The alpha component is ignored.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The value to subtract. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The new clamped color. </dd></dl>
 
 </div></div>
   </div><div id="ae235b4efff5a81423e8ad5c47e63ae00" class="method">
@@ -1025,7 +1094,28 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="ae235b4efff5a81423e8ad5c47e63ae00_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">operator-=</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
+<p>Clamped subtraction operator. </p>
+<p>Add two colors by subtracting and clamping their R, G and B components.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The color to subtract. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to itself, the new clamped color. </dd></dl>
+
 </div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">operator-=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
+
+<p>Clamped subtraction operator. </p>
+<p>Subtract a value to each of the R, G and B components and clamp each.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The alpha component is ignored.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The value to subtract. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to itself, the new clamped color. </dd></dl>
 
 </div></div>
   </div><div id="a8f68a412170f2fc73ed2f4d13755f1da" class="method">
@@ -1041,7 +1131,29 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a8f68a412170f2fc73ed2f4d13755f1da_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">operator*</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color) const </span></div><div class="memberDocumentation">
 
+<p>Clamped multiplication operator. </p>
+<p>Multiply two colors by multiplying and clamping their R, G and B components.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The alpha component is ignored.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The color to multiply. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The new clamped color. </dd></dl>
+
 </div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">operator*</span><span class="args">(const float &amp;val) const </span></div><div class="memberDocumentation">
+
+<p>Clamped scalar multiplication operator. </p>
+<p>Multiply the R, G and B components by a scaler and clamp each.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The alpha component is ignored.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The value to multiply. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The new clamped color. </dd></dl>
 
 </div></div>
   </div><div id="a09e87b6bbd6aa3ef85f9c9e76d605526" class="method">
@@ -1057,7 +1169,29 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a09e87b6bbd6aa3ef85f9c9e76d605526_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">operator*=</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
+<p>Clamped multiplication operator. </p>
+<p>Multiply two colors by multiplying and clamping their R, G and B components.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The alpha component is ignored.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The color to multiply. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to itself, the new clamped color. </dd></dl>
+
 </div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">operator*=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
+
+<p>Clamped scalar multiplication operator. </p>
+<p>Multiply the R, G and B components by a scaler and clamp each.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The alpha component is ignored.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The scaler value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to itself, the new clamped color. </dd></dl>
 
 </div></div>
   </div><div id="a3956e06f7f5b5f7b7b7deab74f8fe1c8" class="method">
@@ -1073,7 +1207,29 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="a3956e06f7f5b5f7b7b7deab74f8fe1c8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">operator/</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color) const </span></div><div class="memberDocumentation">
 
+<p>Clamped division operator. </p>
+<p>Divide two colors by treating the passed color components as divisors.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The alpha component is ignored.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The divisor color. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The new clamped color. </dd></dl>
+
 </div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">operator/</span><span class="args">(const float &amp;val) const </span></div><div class="memberDocumentation">
+
+<p>Clamped scalar division operator. </p>
+<p>Divide each of the R, G and B components by a scalar and clamp each.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The alpha component is ignored.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>The divisor value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The new clamped color. </dd></dl>
 
 </div></div>
   </div><div id="acff1b18e8ada7e3ba3e938a135d0daff" class="method">
@@ -1089,7 +1245,28 @@ class ofColor_&lt; T &gt;</h3>
 
     <div class="methodDescription" style="display:none" id="acff1b18e8ada7e3ba3e938a135d0daff_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">operator/=</span><span class="args">(const ofColor_&lt; PixelType &gt; &amp;color)</span></div><div class="memberDocumentation">
 
+<p>Clamped division operator. </p>
+<p>Divide two colors by treating the passed color components as divisors.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The divisor color. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to itself, the new clamped color. </dd></dl>
+
 </div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html">ofColor_</a> </span><span class="name">operator/=</span><span class="args">(const float &amp;val)</span></div><div class="memberDocumentation">
+
+<p>Clamped scalar division operator. </p>
+<p>Divide each of the R, G and B components by a scalar and clamp each.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The alpha component is ignored.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">valu</td><td>The divisor value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to itself, the new clamped color. </dd></dl>
 
 </div></div>
   </div><div id="a4aa6cd7ee596bfcaa1504487349ec775" class="method">
@@ -1106,11 +1283,30 @@ class ofColor_&lt; T &gt;</h3>
     <div class="methodDescription" style="display:none" id="a4aa6cd7ee596bfcaa1504487349ec775_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">const PixelType &amp; </span><span class="name">operator[]</span><span class="args">(int n) const </span></div><div class="memberDocumentation">
 
 <p>Array subscript operator. </p>
-<p>If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns alpha. </p>
+<p>If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns alpha.</p>
 <div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>(128, 64, 255);</div>
-<div class="line"><span class="keywordtype">float</span> red = c[0]; <span class="comment">// red is 128</span></div>
-</div><!-- fragment --> 
+<div class="line"><span class="keywordtype">float</span> red = c[0]; <span class="comment">// Red is 128.</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>An index 0-3 of the component to get. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The value of the requested component. </dd></dl>
+
 </div><hr><div class="memberVariant"><span class="type">PixelType &amp; </span><span class="name">operator[]</span><span class="args">(int n)</span></div><div class="memberDocumentation">
+
+<p>Array subscript operator. </p>
+<p>If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns alpha.</p>
+<div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> <a class="code" href="of_matrix4x4_8cpp.html#aafc737ea9ef91f59cf9acd287fb8d085">c</a>(128, 64, 255);</div>
+<div class="line"><span class="keywordtype">float</span> red = c[0]; <span class="comment">// Red is 128.</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>An index 0-3 of the component to get. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The value of the requested component. </dd></dl>
 
 </div></div>
   </div><div id="a555fbf0f2cce3a33dae1e873f11d4883" class="method">
@@ -1188,7 +1384,7 @@ class ofColor_&lt; T &gt;</h3>
     <div class="sectionDescription"><p>A collection of static colors defined by name.</p>
 <p>&#xA0; These constants allow the user to access colors by name. For example, if using ofColor, one might set a color in the following way:</p>
 <div class="fragment"><div class="line"><a class="code" href="ofColor.html">ofColor</a> myColor = <a class="code" href="ofColor.html#a57f71c445227e5daac21c776b867472c">ofColor::white</a>;</div>
-<div class="line"><span class="comment">// myColor is now full white (255,255,255,255)</span></div>
+<div class="line"><span class="comment">// myColor is now full white (255,255,255,255).</span></div>
 </div><!-- fragment --><p>The list of colors is based upon the CSS names colors and can be viewed <a href="http://www.w3schools.com/cssref/css_colornames.asp">here</a>. </p>
 </div>
     <div class="sectionContent"><div id="a57f71c445227e5daac21c776b867472c" class="method">

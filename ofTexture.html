@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <li class="chapter"><a href="#Globaltexturesettings">Global texture settings</a></li><li class="chapter"><a href="#Enums">Enums</a></li><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofTexture</span><li class="chapter"><a href="#Constructionandallocation">Construction and allocation</a></li><li class="chapter"><a href="#Updatetexture">Update texture</a></li><li class="chapter"><a href="#Drawing">Drawing</a></li><li class="chapter"><a href="#Sizeandcoordinates">Size and coordinates</a></li><li class="chapter"><a href="#Texturesettings">Texture settings</a></li><li class="chapter"><a href="#Readpixeldata">Read pixel data</a></li><li class="chapter"><a href="#Texturedata">Texture data</a></li><li class="chapter"><a href="#Mipmapping">Mipmapping</a></li></ul>
+        <li class="chapter"><a href="#Globaltexturesettings">Global texture settings</a></li><li class="chapter"><a href="#Enums">Enums</a></li><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofTexture</span><li class="chapter"><a href="#Constructionandallocation">Construction and allocation</a></li><li class="chapter"><a href="#Updatetexture">Update texture</a></li><li class="chapter"><a href="#Drawing">Drawing</a></li><li class="chapter"><a href="#Sizeandcoordinates">Size and coordinates</a></li><li class="chapter"><a href="#Texturesettings">Texture settings</a></li><li class="chapter"><a href="#Readpixeldata">Read pixel data</a></li><li class="chapter"><a href="#Texturedata">Texture data</a></li><li class="chapter"><a href="#Mipmapping">Mipmapping</a></li><li class="chapter"><a href="#Functions">Functions</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -383,7 +383,6 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
     <div class="methodDescription" style="display:none" id="a1c85492981b1ecaa449f6a46b2a34673_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">ofDisableTextureEdgeHack</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Disable global texture &quot;edge hack&quot;. </p>
-<dl class="todo"><dt><b><a class="el" href="">Todo:</a></b></dt><dd>Add docs on why the &quot;edge hack&quot; is needed. </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ofTexture.html#af70a133cd74f4c448e841521287f16b2" title="Enable the global texture &quot;edge hack&quot; to compensate for edge artifacts. ">ofEnableTextureEdgeHack()</a> </dd></dl>
 
 </div></div>
@@ -543,7 +542,6 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">allocate</span><span class="args">(const ofPixels &amp;pix)</span></div><div class="memberDocumentation">
 
 <p>Allocate texture using an ofPixels instance. </p>
-<dl class="todo"><dt><b><a class="el" href="">Todo:</a></b></dt><dd>Not sure how the two texture format parameters are different: glFormat &amp; glInternalFormat. </dd></dl>
 <p>Pixel type and OpenGL format are determined from pixel settings.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -998,7 +996,7 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 <li><code>OF_RECT_MODE_CORNER</code>: drawn with the upper left corner = (x,y)</li>
 <li><code>OF_RECT_MODE_CENTER</code>: drawn centered on (x,y)</li>
 </ul>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="of_graphics_8cpp.html#aa3b1c1ceb97a0d2eb223c079f460239e" title="Sets the mode for drawing rectangles and other rectangular objects, if they are corner aligned...">ofSetRectMode()</a></dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="of_graphics_8cpp.html#aa3b1c1ceb97a0d2eb223c079f460239e">ofSetRectMode()</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>Draw position on the x axis. </td></tr>
@@ -1064,7 +1062,34 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
   </table>
   </dd>
 </dl>
-<p>ps: maybe if bUsingArbTex is enabled we should use glActiveTextureARB? </p>
+
+</div></div>
+  </div><div id="ac10030ea2df3d5e5e50ba4341e9288ab" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac10030ea2df3d5e5e50ba4341e9288ab&quot;)">
+        <span class="type"></span>
+        <a class="name">getMeshForSubsection</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ac10030ea2df3d5e5e50ba4341e9288ab_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">getMeshForSubsection</span><span class="args">(float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh, bool vflipped, ofRectMode rectMode) const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a022e9d3b0ac7f6ad47905ae20b09d836" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a022e9d3b0ac7f6ad47905ae20b09d836&quot;)">
+        <span class="type"></span>
+        <a class="name">getQuad</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a022e9d3b0ac7f6ad47905ae20b09d836_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">getQuad</span><span class="args">(const ofPoint &amp;p1, const ofPoint &amp;p2, const ofPoint &amp;p3, const ofPoint &amp;p4) const </span></div><div class="memberDocumentation">
 
 </div></div>
   </div><div id="ac66d271f8cf45edabd8e66ac2de20aa4" class="method">
@@ -1150,6 +1175,20 @@ GL_TEXTURE_RECTANGLE does not support mipmaps. </dd></dl>
 <p>Binds the texture as an read or write image, only available since OpenGL 4.2 </p>
 <dl class="section warning"><dt>Warning</dt><dd>This is not available in OpenGLES </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a href="http://www.opengl.org/wiki/GLAPI/glBindImageTexture">http://www.opengl.org/wiki/GLAPI/glBindImageTexture</a> </dd></dl>
+
+</div></div>
+  </div><div id="aca9c43e494a193368521f515bcb1016b" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aca9c43e494a193368521f515bcb1016b&quot;)">
+        <span class="type"></span>
+        <a class="name">getAlphaMask</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aca9c43e494a193368521f515bcb1016b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofTexture.html">ofTexture</a> </span><span class="name">getAlphaMask</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 </div></div>
   </div></div>
@@ -1437,6 +1476,34 @@ ofTextureSetMinMagFilters()</dd></dl>
 <p>Sets a texture matrix that will be uploaded whenever the texture is binded. </p>
 
 </div></div>
+  </div><div id="ac9fb2a06934e3b205c082a6f3a7e5b97" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac9fb2a06934e3b205c082a6f3a7e5b97&quot;)">
+        <span class="type"></span>
+        <a class="name">getTextureMatrix</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ac9fb2a06934e3b205c082a6f3a7e5b97_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMatrix4x4.html">ofMatrix4x4</a> </span><span class="name">getTextureMatrix</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="aafc893ba20c3802cb22dea14b02d7904" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aafc893ba20c3802cb22dea14b02d7904&quot;)">
+        <span class="type"></span>
+        <a class="name">isUsingTextureMatrix</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aafc893ba20c3802cb22dea14b02d7904_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">isUsingTextureMatrix</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="a607f48910f9e9e274249dd8ce4db19d9" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a607f48910f9e9e274249dd8ce4db19d9&quot;)">
@@ -1450,6 +1517,7 @@ ofTextureSetMinMagFilters()</dd></dl>
 
     <div class="methodDescription" style="display:none" id="a607f48910f9e9e274249dd8ce4db19d9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">disableTextureMatrix</span><span class="args">()</span></div><div class="memberDocumentation">
 
+<p>Disable the texture matrix. </p>
 <p>Disable the texture matrix. </p>
 
 </div></div>
@@ -1485,7 +1553,6 @@ ofTextureSetMinMagFilters()</dd></dl>
     <div class="methodDescription" style="display:none" id="a5831aacf2d29722b0f9a583f44745eff_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setRGToRGBASwizzles</span><span class="args">(bool rToRGBSwizzles)</span></div><div class="memberDocumentation">
 
 <p>Swizzle RGBA to grayscale with alpha in the red channel. </p>
-<dl class="todo"><dt><b><a class="el" href="">Todo:</a></b></dt><dd>Define Swizzle in the documentation. </dd></dl>
 <p>Use 1 channel GL_R as luminance instead of red channel in OpenGL 3+.</p>
 <dl class="section warning"><dt>Warning</dt><dd>This is not supported in OpenGL ES and does nothing. </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a href="https://en.wikipedia.org/wiki/Swizzling_(computer_graphics)">https://en.wikipedia.org/wiki/Swizzling_(computer_graphics)</a> </dd></dl>
@@ -1683,6 +1750,22 @@ ofTextureSetMinMagFilters()</dd></dl>
 <p>OpenGL supports mipmaps for additional texture targets: </p>
 
 </div></div>
+  </div></div>
+  </div><div id="Functions">
+    <h3 class="sectionHeader">Functions</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="classof_base_draws_1a041f709fcc67b8be6cc576629a332682" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_draws_1a041f709fcc67b8be6cc576629a332682&quot;)">
+        <span class="type"></span>
+        <a class="name">draw</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="classof_base_draws_1a041f709fcc67b8be6cc576629a332682_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofPoint &amp;point) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofRectangle &amp;rect) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofPoint &amp;point, float w, float h) const </span></div><div class="memberDocumentation">undefined</div></div>
   </div></div>
   </div></div>
   </div></div>
