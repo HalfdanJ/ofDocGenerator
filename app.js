@@ -6,7 +6,7 @@ var fs = require('fs-extra'),
 
 // Set this to the section you work on to speed up the generation.
 // But remember to remove it again! :)
-var filterGroup = '';
+var filterGroup = 'types';
 
 // Check for sass compatibility (it does not work on Travis-ci)
 try {
@@ -65,9 +65,9 @@ loadStructure()
 
         // Generate the doc of the file
         var p = generateDoc(file)
-          .then(function(){
+          /*.then(function(){
             console.log(file)
-          })
+          })*/
           // If the doc fails, remove it from the structure so it's not shown on the frontpage
           .fail(function (e) {
             console.error("Error generating doc:", e, file, file.category)
@@ -123,15 +123,12 @@ function loadStructure(){
         var compoundname = result['doxygen']['compounddef'][0]['compoundname'][0].match(/\/(\w+)$/)[1];
 
         // Filter out the root dir xml that descripes the openframeworks base folder
-        if(!compoundname.match(/openframeworks$/i)) {
+        if(!compoundname.match(/openframeworks$/i) && !compoundname.match(/libs$/i) ) {
           //console.log('"' + compoundname + '"', '"' + filterGroup + '"', filterGroup != compoundname);
+
           if (filterGroup && filterGroup != compoundname) {
 
           } else {
-
-                console.log(f, compoundname);
-             // console.log(result['doxygen']['compounddef'][0]['innerfile']);
-
             structure.core[compoundname] = [];
             if(result['doxygen']['compounddef'][0]['innerfile']) {
               result['doxygen']['compounddef'][0]['innerfile'].forEach(function (innerfile) {
@@ -180,8 +177,10 @@ function generateDoc(fileDescription) {
 
     // Then scrape the doxygen html for descriptions
     .then(function(parseData) {
-      console.log("Scrape "+className)
+      // If the XML marked the file as internal, then mark the file internal
+      fileDescription.internal = parseData.internal;
 
+      console.log("Scrape "+className)
       return scrapeDoxygenHtml(parseData);
     })
 
@@ -242,6 +241,12 @@ function parseDoxygenXml(doxygenName){
 
     // The compounds in the XML
     var compounds = result['doxygen']['compounddef'];
+
+    // Find the detailed description of the file, and see if its defined as Internal
+    var simpleDescriptionSet = getNested(compounds, 0, 'detaileddescription', 0, 'para', 0, 'simplesect',0,'title',0)
+    if(simpleDescriptionSet == 'Internal ') {
+      ret.internal = true;
+    }
 
     // compounds.length is always 1
     for (var i = 0; i < compounds.length; i++) {
@@ -485,7 +490,7 @@ function scrapeDoxygenHtml(parsedData){
     if ($input(elm).text() == "Detailed Description") {
       parsedData.description = $input(elm).next();
 
-      console.log(parsedData.name , parsedData.description);
+      //console.log(parsedData.name , parsedData.description);
     }
   });
 
@@ -544,26 +549,28 @@ function scrapeDoxygenHtml(parsedData){
 // ----------
 
 function addObjectToSearch(parsedData){
-  searchToc.push({name:parsedData.name, type:parsedData.kind, ref:parsedData.url})
+  if(!parsedData.internal) {
 
-  parsedData.sections.forEach(function (section) {
-    section.methods.forEach(function(method){
-      var ref = method.implementations[0].ref;
-      searchToc.push({
-        name:method.implementations[0].name,
-        type:method.implementations[0].info.kind,
-        ref:parsedData.url+"#"+ref
-      })
+    searchToc.push({name: parsedData.name, type: parsedData.kind, ref: parsedData.url})
+
+    parsedData.sections.forEach(function (section) {
+      section.methods.forEach(function (method) {
+        var ref = method.implementations[0].ref;
+        searchToc.push({
+          name: method.implementations[0].name,
+          type: method.implementations[0].info.kind,
+          ref: parsedData.url + "#" + ref
+        })
+      });
+
+      // Inner classes
+      parsedData.classes.forEach(function (innerclass) {
+        addObjectToSearch(innerclass);
+      });
+
     });
 
-    // Inner classes
-    parsedData.classes.forEach(function(innerclass){
-      addObjectToSearch(innerclass);
-    });
-
-  });
-
-
+  }
 }
 
 // -----------
@@ -726,20 +733,22 @@ function generateToc(structure, tocInfo){
 
     elm.append('<h3>'+category+"</h3>");
     structure['core'][category].forEach(function(file){
-      if(file.stats.docRate > 0.8){
-        l = 'label-success';
-      } else if(file.stats.docRate > 0.3) {
-        l = 'label-warning';
-      } else {
-        l = 'label-danger';
-      }
+      if(!file.internal) {
+        if (file.stats.docRate > 0.8) {
+          l = 'label-success';
+        } else if (file.stats.docRate > 0.3) {
+          l = 'label-warning';
+        } else {
+          l = 'label-danger';
+        }
 
-      var pct = " <span class='label "+l+"'> "+Math.round(file.stats.docRate*100)+"%"+"</span>";
-      var desc = "";
-      if(tocInfo[file]){
-        desc = ' - '+tocInfo[file.name];
+        var pct = " <span class='label " + l + "'> " + Math.round(file.stats.docRate * 100) + "%" + "</span>";
+        var desc = "";
+        if (tocInfo[file]) {
+          desc = ' - ' + tocInfo[file.name];
+        }
+        elm.append(pct + ' <a href="' + file.name + '.html">' + file.name + "</a>" + desc + "<br>");
       }
-      elm.append(pct+' <a href="'+file.name+'.html">'+file.name+"</a>"+desc+"<br>");
     })
   }
   // Write the file
@@ -886,4 +895,17 @@ function getLinkUrlFromDoxygenUrl(ref){
     return ref;
   }
   return ref;
+}
+
+function getNested(obj /*, level1, level2, ... levelN*/) {
+  var args = Array.prototype.slice.call(arguments),
+    obj = args.shift();
+
+  for (var i = 0; i < args.length; i++) {
+    if (!obj || !obj.hasOwnProperty(args[i])) {
+      return false;
+    }
+    obj = obj[args[i]];
+  }
+  return obj;
 }
