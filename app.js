@@ -525,7 +525,8 @@ function scrapeDoxygenHtml(fileDescription){
         // Description
 
         // Find the coresponding description in the doxygen generated html
-        var ref = method.info.id.replace(fileDescription.doxygen_ref + "_1", "");
+	//var ref = method.info.id.replace(fileDescription.doxygen_ref + "_1", "");
+	var ref = method.info.id.match(/^\w+_1([a-z0-9]+)$/)[1];
         var refElm = $input("#" + ref);
 
         if (!refElm) {
