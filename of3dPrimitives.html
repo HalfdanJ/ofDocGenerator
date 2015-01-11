@@ -73,7 +73,8 @@
     <div class="classHeader">
       <h1 class="classTitle">of3dPrimitive<small>class</small></h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>A class representing a 3d primitive. </p>
+</div></div>
     <div class="classMethods"><div id="ProtectedAttributes">
     <h3 class="sectionHeader">Protected Attributes</h3>
     <div class="sectionDescription"></div>
@@ -515,6 +516,8 @@
     <div class="methodDescription" style="display:none" id="a268a4d29f4475559e6da4fad55139357_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(ofPolyRenderMode renderType) const </span></div><div class="memberDocumentation">
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>draw function. do NOT override this transforms the node to its position+orientation+scale and calls the virtual &apos;customDraw&apos; method above which you CAN override </p>
 
 <p>Reimplemented from <a class="el" href="ofNode.html#a69ed7a21f7f8ee435fa6d8a99424e9ba">ofNode</a>.</p>
 
@@ -1213,7 +1216,29 @@
     <div class="classHeader">
       <h1 class="classTitle">ofPlanePrimitive<small>class</small></h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>The <a class="el" href="ofPlanePrimitive.html" title="The ofPlanePrimitive allows you to create an UV plane. Can be used for example as simple canvas for p...">ofPlanePrimitive</a> allows you to create an UV plane. Can be used for example as simple canvas for projecting simple texture . </p>
+<p>Like all primitives it allows you to set the size, in this case height and width, draw it, set positions, etc, as a simple example:</p>
+<div class="fragment"><div class="line"><a class="code" href="ofPlanePrimitive.html">ofPlanePrimitive</a> plane;</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> setup()</div>
+<div class="line">{</div>
+<div class="line"><span class="comment">// resolution 640x480...</span></div>
+<div class="line"></div>
+<div class="line">    plane.<a class="code" href="ofPlanePrimitive.html#a593cbfef5d536eb5939ab74dee4f4883">set</a>(640, 480);   </div>
+<div class="line">plane.<a class="code" href="ofNode.html#a6f5733da97701638ec9e089016d0381a">setPosition</a>(320, 240, 0); </div>
+<div class="line">plane.<a class="code" href="ofPlanePrimitive.html#af9c45bb2dc21b0a5ee799156d70969b8">setResolution</a>(2, 2); </div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> <a class="code" href="of3dPrimitive.html#aa6d2e5db5bee3196c2bcb13eb9e32d27">draw</a>()</div>
+<div class="line">{</div>
+<div class="line">plane.<a class="code" href="of3dPrimitive.html#a33e280c4ab52319d5689f0954047202f">drawWireframe</a>();</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> As you can see, plane is constructed from two triangles. To draw a texture over any primitive, simply bind the <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> instance and then draw your primitive:</p>
+<div class="fragment"><div class="line">texture.getTextureReference().bind();</div>
+<div class="line"><span class="comment">// now draw filled...</span></div>
+<div class="line">plane.<a class="code" href="of3dPrimitive.html#a268a4d29f4475559e6da4fad55139357">draw</a>();</div>
+</div><!-- fragment --><p>The plane primitive also allows you to simply pass an <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> to the plane and generate the texture coordinates from that texture so that the <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> fills the plane when it&apos;s drawn. This saves you the hassle of creating all the texture coordinates for each vertex, which is nice. </p>
+</div></div>
     <div class="classMethods"><div id="ProtectedAttributes">
     <h3 class="sectionHeader">Protected Attributes</h3>
     <div class="sectionDescription"></div>
@@ -2435,7 +2460,36 @@
     <div class="classHeader">
       <h1 class="classTitle">ofSpherePrimitive<small>class</small></h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>The <a class="el" href="ofSpherePrimitive.html" title="The ofSpherePrimitive allows you to create a UV sphere. A UV spherewhich is a sphere based on UV slic...">ofSpherePrimitive</a> allows you to create a UV sphere. A UV spherewhich is a sphere based on UV slices rather than faces like the <a class="el" href="ofIcoSpherePrimitive.html" title="The ofIcoSpherePrimitive allows you to create an icosphere. An icosphere is a sphere not based on UV ...">ofIcoSpherePrimitive</a>. Note this: </p>
+<p><a href="3d/spheretypes.png">IMG</a></p>
+<p>On the left is a UV sphere and on the right is an ICO sphere.</p>
+<p>Like all primitives it allows you to set the size (radius), draw it, set positions, etc, as a simple example:</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> setup()</div>
+<div class="line">{</div>
+<div class="line"></div>
+<div class="line">    sphere.setRadius( width );</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> <a class="code" href="of3dPrimitive.html#aa6d2e5db5bee3196c2bcb13eb9e32d27">draw</a>()</div>
+<div class="line">{</div>
+<div class="line"></div>
+<div class="line">    sphere.setPosition(<a class="code" href="of_app_runner_8cpp.html#a28bb1c518b5c68ee2eae655bd4e56445">ofGetWidth</a>()*.2, <a class="code" href="of_app_runner_8cpp.html#a415b5eadf885ebd1f4799cc40e5db137">ofGetHeight</a>()*.75, 0);</div>
+<div class="line">    sphere.rotate(spinX, 1.0, 0.0, 0.0);</div>
+<div class="line">    sphere.rotate(spinY, 0, 1.0, 0.0);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// get all the faces from the icoSphere, handy when you want to copy</span></div>
+<div class="line">    <span class="comment">// individual vertices or tweak them a little ;)</span></div>
+<div class="line">    vector&lt;ofMeshFace&gt; triangles = sphere.getMesh().getUniqueFaces();</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// now draw</span></div>
+<div class="line">    sphere.draw();</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>To draw a texture over any primitive, simply bind the <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> instance and then draw your primitive:</p>
+<div class="fragment"><div class="line">texture.getTextureReference().bind();</div>
+<div class="line"><span class="comment">// now draw</span></div>
+<div class="line">sphere.draw();</div>
+</div><!-- fragment --><p>The sphere can look a little weird if you don&apos;t do ofEnabledDepthTesting() and <a class="el" href="of_graphics_8cpp.html#ab45f91c85107f9ed11033605225334bc" title="Turn off alpha blending. void ofApp::draw(){     ofEnableAlphaBlending();    // turn on alpha blendin...">ofDisableAlphaBlending()</a>. </p>
+</div></div>
     <div class="classMethods"><div id="ProtectedAttributes">
     <h3 class="sectionHeader">Protected Attributes</h3>
     <div class="sectionDescription"></div>
@@ -3543,7 +3597,29 @@
     <div class="classHeader">
       <h1 class="classTitle">ofIcoSpherePrimitive<small>class</small></h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>The <a class="el" href="ofIcoSpherePrimitive.html" title="The ofIcoSpherePrimitive allows you to create an icosphere. An icosphere is a sphere not based on UV ...">ofIcoSpherePrimitive</a> allows you to create an icosphere. An icosphere is a sphere not based on UV slices like the <a class="el" href="ofSpherePrimitive.html" title="The ofSpherePrimitive allows you to create a UV sphere. A UV spherewhich is a sphere based on UV slic...">ofSpherePrimitive</a>, but rather faces. Like this: </p>
+<p>Like all primitives it allows you to set the radius, draw it, set positions, etc.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> setup()</div>
+<div class="line">{</div>
+<div class="line"></div>
+<div class="line">    icoSphere.setRadius( <a class="code" href="of_app_e_g_l_window_8cpp.html#aca34d28e3d8bcbcadb8edb4e3af24f8c">width</a> );</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> <a class="code" href="of3dPrimitive.html#aa6d2e5db5bee3196c2bcb13eb9e32d27">draw</a>()</div>
+<div class="line">{</div>
+<div class="line"></div>
+<div class="line">    icoSphere.setPosition(<a class="code" href="of_app_runner_8cpp.html#a28bb1c518b5c68ee2eae655bd4e56445">ofGetWidth</a>()*.2, <a class="code" href="of_app_runner_8cpp.html#a415b5eadf885ebd1f4799cc40e5db137">ofGetHeight</a>()*.75, 0);</div>
+<div class="line">    icoSphere.rotate(spinX, 1.0, 0.0, 0.0);</div>
+<div class="line">    icoSphere.rotate(spinY, 0, 1.0, 0.0);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// get all the faces from the icoSphere, handy when you want to copy</span></div>
+<div class="line">    <span class="comment">// individual vertices or tweak them a little ;)</span></div>
+<div class="line">    vector&lt;ofMeshFace&gt; triangles = icoSphere.getMesh().getUniqueFaces();</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// now draw</span></div>
+<div class="line">    icoSphere.draw();</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div>
     <div class="classMethods"><div id="ProtectedAttributes">
     <h3 class="sectionHeader">Protected Attributes</h3>
     <div class="sectionDescription"></div>
@@ -4651,7 +4727,33 @@
     <div class="classHeader">
       <h1 class="classTitle">ofCylinderPrimitive<small>class</small></h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>The <a class="el" href="ofCylinderPrimitive.html" title="The ofCylinderPrimitive allows you to create an cylinder mesh. ">ofCylinderPrimitive</a> allows you to create an cylinder mesh. </p>
+<p>Like all primitives it allows you to set the size, for the cylinder a radius and height, draw it, set positions, etc, as a simple example:</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> setup()</div>
+<div class="line">{</div>
+<div class="line"></div>
+<div class="line">    cylinder.set( cylinderRadius, cylinderHeight );</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> <a class="code" href="of3dPrimitive.html#aa6d2e5db5bee3196c2bcb13eb9e32d27">draw</a>()</div>
+<div class="line">{</div>
+<div class="line"></div>
+<div class="line">    cylinder.setPosition(<a class="code" href="of_app_runner_8cpp.html#a28bb1c518b5c68ee2eae655bd4e56445">ofGetWidth</a>()*.2, <a class="code" href="of_app_runner_8cpp.html#a415b5eadf885ebd1f4799cc40e5db137">ofGetHeight</a>()*.75, 0);</div>
+<div class="line">    cylinder.rotate(spinX, 1.0, 0.0, 0.0);</div>
+<div class="line">    cylinder.rotate(spinY, 0, 1.0, 0.0);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// get all the faces from the icoSphere, handy when you want to copy</span></div>
+<div class="line">    <span class="comment">// individual vertices or tweak them a little ;)</span></div>
+<div class="line">    vector&lt;ofMeshFace&gt; triangles = cylinder.getMesh().getUniqueFaces();</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// now draw</span></div>
+<div class="line">    cylinder.draw();</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>To draw a texture over any primitive, simply bind the <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> instance and then draw your primitive:</p>
+<div class="fragment"><div class="line">texture.getTextureReference().bind();</div>
+<div class="line"><span class="comment">// now draw</span></div>
+<div class="line">cylinder.draw();</div>
+</div><!-- fragment --> </div></div>
     <div class="classMethods"><div id="ProtectedAttributes">
     <h3 class="sectionHeader">Protected Attributes</h3>
     <div class="sectionDescription"></div>
@@ -6083,7 +6185,33 @@
     <div class="classHeader">
       <h1 class="classTitle">ofConePrimitive<small>class</small></h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>The <a class="el" href="ofConePrimitive.html" title="The ofConePrimitive allows you to create a 3D cone. Like all primitives it allows you to set the size...">ofConePrimitive</a> allows you to create a 3D cone. Like all primitives it allows you to set the size, draw it, set positions, etc, as a simple example: </p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> setup()</div>
+<div class="line">{</div>
+<div class="line"></div>
+<div class="line">    cone.set( coneRadius, coneHeight, coneRadiusSegments, coneHeightSegments );</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> <a class="code" href="of3dPrimitive.html#aa6d2e5db5bee3196c2bcb13eb9e32d27">draw</a>()</div>
+<div class="line">{</div>
+<div class="line"></div>
+<div class="line">    cone.setPosition(<a class="code" href="of_app_runner_8cpp.html#a28bb1c518b5c68ee2eae655bd4e56445">ofGetWidth</a>()*.2, <a class="code" href="of_app_runner_8cpp.html#a415b5eadf885ebd1f4799cc40e5db137">ofGetHeight</a>()*.75, 0);</div>
+<div class="line">    cone.rotate(spinX, 1.0, 0.0, 0.0);</div>
+<div class="line">    cone.rotate(spinY, 0, 1.0, 0.0);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// get all the faces from the cpme, handy when you want to copy</span></div>
+<div class="line">    <span class="comment">// individual vertices or tweak them a little ;)</span></div>
+<div class="line">    vector&lt;ofMeshFace&gt; triangles = cone.getMesh().getUniqueFaces();</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// now draw</span></div>
+<div class="line">    cone.draw();</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>To draw a texture over any primitive, simply bind the <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> instance and then draw your primitive:</p>
+<div class="fragment"><div class="line">texture.getTextureReference().bind();</div>
+<div class="line"><span class="comment">// now draw</span></div>
+<div class="line">cone.draw();</div>
+</div><!-- fragment --><p>Beware of the cone texture coordinates, they&apos;re a little strange. </p>
+</div></div>
     <div class="classMethods"><div id="ProtectedAttributes">
     <h3 class="sectionHeader">Protected Attributes</h3>
     <div class="sectionDescription"></div>
@@ -6405,6 +6533,7 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a617748a914ad26f3d642308078d124f2_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1ad4acc3774c730c65a67b4419154717d3">ofIndexType</a> </span><span class="name">getConeIndices</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>a vector of the indices of vertices that make up the cone (as opposed to the cap indices). </dd></dl>
 
 </div></div>
   </div><div id="a26dcac78af865dc0190cb3e64bb4aa33" class="method">
@@ -6419,6 +6548,7 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a26dcac78af865dc0190cb3e64bb4aa33_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">getConeMesh</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>This returns an <a class="el" href="ofMesh.html" title="Represents a set of vertices in 3D spaces with normals, colors, and texture coordinates at those poin...">ofMesh</a> made up of the cone (as opposed to the cap). </dd></dl>
 
 </div></div>
   </div><div id="a4c2bdba987d0ca08d14f5e9fabd6025f" class="method">
@@ -6433,6 +6563,7 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a4c2bdba987d0ca08d14f5e9fabd6025f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1ad4acc3774c730c65a67b4419154717d3">ofIndexType</a> </span><span class="name">getCapIndices</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>a vector of the indices of vertices that make up the cap (as opposed to the cone indices). </dd></dl>
 
 </div></div>
   </div><div id="a51e0e50361bd9fe57ba30188595dcbee" class="method">
@@ -6447,6 +6578,7 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a51e0e50361bd9fe57ba30188595dcbee_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">getCapMesh</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>an <a class="el" href="ofMesh.html" title="Represents a set of vertices in 3D spaces with normals, colors, and texture coordinates at those poin...">ofMesh</a> made up of the cap (as opposed to the cone). </dd></dl>
 
 </div></div>
   </div><div id="a8e11cde48e08659bcc2d2c2983648e2d" class="method">
@@ -6489,6 +6621,7 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="ae7328ac20bef7485657f773f3c784422_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getResolutionCap</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>the resolution of the cap (rather than the cone). </dd></dl>
 
 </div></div>
   </div><div id="aa3bbb1b4abe9de1128841b49e9fefd2e" class="method">
@@ -6503,6 +6636,7 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="aa3bbb1b4abe9de1128841b49e9fefd2e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getResolution</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>the resolution of the cone (rather than the cap). </dd></dl>
 
 </div></div>
   </div><div id="a872ebdbb3f463e980173f3fc741fd4d0" class="method">
@@ -6517,6 +6651,7 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a872ebdbb3f463e980173f3fc741fd4d0_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getRadius</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>the radius of the cap. </dd></dl>
 
 </div></div>
   </div><div id="a9f6a657f8e766090fc18db7bfa4ce11b" class="method">
@@ -6531,6 +6666,7 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a9f6a657f8e766090fc18db7bfa4ce11b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getHeight</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>the height of the cone. </dd></dl>
 
 </div></div>
   </div><div id="classof3d_primitive_1ad90951485c94c5c6c4e5dcd2e9051d9e" class="method">
@@ -7431,7 +7567,35 @@
     <div class="classHeader">
       <h1 class="classTitle">ofBoxPrimitive<small>class</small></h1>
     </div>
-    <div class="classDescription"></div>
+    <div class="classDescription"><div class="textblock"><p>The <a class="el" href="ofBoxPrimitive.html" title="The ofBoxPrimitive allows you to create cubes and cuboids. ">ofBoxPrimitive</a> allows you to create cubes and cuboids. </p>
+<p>Like other primitives, it allows you to set its dimensions and position, draw it, etc. As a simple example:</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> setup()</div>
+<div class="line">{</div>
+<div class="line"></div>
+<div class="line">    box.set( boxSize );</div>
+<div class="line">    <span class="comment">// or</span></div>
+<div class="line">    <span class="comment">// box.set( boxHeight, boxWidth, boxDepth );</span></div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> <a class="code" href="of3dPrimitive.html#aa6d2e5db5bee3196c2bcb13eb9e32d27">draw</a>()</div>
+<div class="line">{</div>
+<div class="line"></div>
+<div class="line">    box.setPosition(<a class="code" href="of_app_runner_8cpp.html#a28bb1c518b5c68ee2eae655bd4e56445">ofGetWidth</a>()*.2, <a class="code" href="of_app_runner_8cpp.html#a415b5eadf885ebd1f4799cc40e5db137">ofGetHeight</a>()*.75, 0);</div>
+<div class="line">    box.rotate(spinX, 1.0, 0.0, 0.0);</div>
+<div class="line">    box.rotate(spinY, 0, 1.0, 0.0);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// get all the faces from the icoSphere, handy when you want to copy</span></div>
+<div class="line">    <span class="comment">// individual vertices or tweak them a little ;)</span></div>
+<div class="line">    vector&lt;ofMeshFace&gt; triangles = box.getMesh().getUniqueFaces();</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// now draw</span></div>
+<div class="line">    box.draw();</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>To draw a texture over any primitive, simply bind the <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> instance and then draw your primitive:</p>
+<div class="fragment"><div class="line">texture.getTextureReference().bind();</div>
+<div class="line"><span class="comment">// now draw</span></div>
+<div class="line">box.draw();</div>
+</div><!-- fragment --> </div></div>
     <div class="classMethods"><div id="Types">
     <h3 class="sectionHeader">Types</h3>
     <div class="sectionDescription"></div>
