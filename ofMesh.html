@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <span class="class">ofMesh</span><li class="chapter"><a href="#Vertices">Vertices</a></li><li class="chapter"><a href="#Normals">Normals</a></li><li class="chapter"><a href="#Colors">Colors</a></li><li class="chapter"><a href="#TextureCoordinates">Texture Coordinates</a></li><li class="chapter"><a href="#Indices">Indices</a></li><li class="chapter"><a href="#Drawing">Drawing</a></li><li class="chapter"><a href="#Savingandloading">Saving and loading</a></li><li class="chapter"><a href="#Primitiveconstructorhelpermethods">Primitive constructor helper methods</a></li><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofMeshFace</span><li class="chapter"><a href="#Functions">Functions</a></li></ul>
+        <span class="class">ofMesh</span><li class="chapter"><a href="#Construction">Construction</a></li><li class="chapter"><a href="#MeshMode">Mesh Mode</a></li><li class="chapter"><a href="#Primitiveconstructorhelpermethods">Primitive constructor helper methods</a></li><li class="chapter"><a href="#Vertices">Vertices</a></li><li class="chapter"><a href="#Normals">Normals</a></li><li class="chapter"><a href="#Faces">Faces</a></li><li class="chapter"><a href="#Colors">Colors</a></li><li class="chapter"><a href="#TextureCoordinates">Texture Coordinates</a></li><li class="chapter"><a href="#Indices">Indices</a></li><li class="chapter"><a href="#Drawing">Drawing</a></li><li class="chapter"><a href="#Savingandloading">Saving and loading</a></li><span class="class">ofMeshFace</span><li class="chapter"><a href="#Functions">Functions</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -95,41 +95,244 @@
 <div class="line">        mesh.<a class="code" href="ofMesh.html#acbaef665f6314833b590fa4fae9c05ff">addColor</a>(<a class="code" href="ofColor.html#ac32ecc231f9436904c104121b32baac0">ofFloatColor</a>(0,0,0));  <span class="comment">// add a color at that vertex</span></div>
 <div class="line">    }</div>
 <div class="line">}</div>
+</div><!-- fragment --><p>Now it&apos;s important to make sure that each vertex is correctly connected with the other vertices around it. This is done using indices, which you can set up like so: </p>
+<div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = 0; y&lt;height-1; y++){</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x=0; x&lt;width-1; x++){</div>
+<div class="line">        mesh.<a class="code" href="ofMesh.html#a1a9c5465e90e7faf40d66a896d0bfc90">addIndex</a>(x+y*width);               <span class="comment">// 0</span></div>
+<div class="line">        mesh.<a class="code" href="ofMesh.html#a1a9c5465e90e7faf40d66a896d0bfc90">addIndex</a>((x+1)+y*width);           <span class="comment">// 1</span></div>
+<div class="line">        mesh.<a class="code" href="ofMesh.html#a1a9c5465e90e7faf40d66a896d0bfc90">addIndex</a>(x+(y+1)*width);           <span class="comment">// 10</span></div>
 <div class="line"></div>
-<div class="line">now it<span class="stringliteral">&apos;s important to make sure that each vertex is correctly connected </span></div>
-<div class="line"><span class="stringliteral">with the other vertices around it. This is done using indices, which you </span></div>
-<div class="line"><span class="stringliteral">can set up like so:</span></div>
-<div class="line"><span class="stringliteral">for (int y = 0; y&lt;height-1; y++){</span></div>
-<div class="line"><span class="stringliteral">    for (int x=0; x&lt;width-1; x++){</span></div>
-<div class="line"><span class="stringliteral">        mesh.addIndex(x+y*width);               // 0</span></div>
-<div class="line"><span class="stringliteral">        mesh.addIndex((x+1)+y*width);           // 1</span></div>
-<div class="line"><span class="stringliteral">        mesh.addIndex(x+(y+1)*width);           // 10</span></div>
-<div class="line"><span class="stringliteral"></span></div>
-<div class="line"><span class="stringliteral">        mesh.addIndex((x+1)+y*width);           // 1</span></div>
-<div class="line"><span class="stringliteral">        mesh.addIndex((x+1)+(y+1)*width);       // 11</span></div>
-<div class="line"><span class="stringliteral">        mesh.addIndex(x+(y+1)*width);           // 10</span></div>
-<div class="line"><span class="stringliteral">    }</span></div>
-<div class="line"><span class="stringliteral">}</span></div>
+<div class="line">        mesh.<a class="code" href="ofMesh.html#a1a9c5465e90e7faf40d66a896d0bfc90">addIndex</a>((x+1)+y*width);           <span class="comment">// 1</span></div>
+<div class="line">        mesh.<a class="code" href="ofMesh.html#a1a9c5465e90e7faf40d66a896d0bfc90">addIndex</a>((x+1)+(y+1)*width);       <span class="comment">// 11</span></div>
+<div class="line">        mesh.<a class="code" href="ofMesh.html#a1a9c5465e90e7faf40d66a896d0bfc90">addIndex</a>(x+(y+1)*width);           <span class="comment">// 10</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
 </div><!-- fragment --> </div></div>
-    <div class="classMethods"><div id="Vertices">
-    <h3 class="sectionHeader">Vertices</h3>
+    <div class="classMethods"><div id="Construction">
+    <h3 class="sectionHeader">Construction</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a57998157b1b7e041930ad775c5d5ffc8" class="method">
+    <div class="sectionContent"><div id="a3ffeb1343321a13b07250eae05ce357e" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a57998157b1b7e041930ad775c5d5ffc8&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3ffeb1343321a13b07250eae05ce357e&quot;)">
         <span class="type"></span>
-        <a class="name">getVertex</a>
+        <a class="name">ofMesh</a>
         <span class="args"></span>
         <span class="kind">()</span>
         <span class="note"></span>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="a57998157b1b7e041930ad775c5d5ffc8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getVertex</span><span class="args">(ofIndexType i) const </span></div><div class="memberDocumentation">
-<dl class="section return"><dt>Returns</dt><dd>the vertex at the index. </dd></dl>
+    <div class="methodDescription" style="display:none" id="a3ffeb1343321a13b07250eae05ce357e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofMesh</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>This creates the mesh, using OF_PRIMITIVE_TRIANGLES without any initial vertices. </p>
+
+</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofMesh</span><span class="args">(ofPrimitiveMode mode, const vector&lt; ofVec3f &gt; &amp;verts)</span></div><div class="memberDocumentation">
+
+<p>This allows to you to use one of the other ofPrimitiveModes: OF_PRIMITIVE_TRIANGLES, OF_PRIMITIVE_TRIANGLE_STRIP, OF_PRIMITIVE_TRIANGLE_FAN, OF_PRIMITIVE_LINES, OF_PRIMITIVE_LINE_STRIP, OF_PRIMITIVE_LINE_LOOP, OF_PRIMITIVE_POINTS. See <a href="../gl/ofGLUtils.htm">ofGLUtils</a> for more information on these types. </p>
 
 </div></div>
-  </div><div id="a14be43bd2e272fed5e030d4f51e61dbf" class="method">
+  </div><div id="afeb448ae4f175099f6cc36106e5d4279" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#afeb448ae4f175099f6cc36106e5d4279&quot;)">
+        <span class="type"></span>
+        <a class="name">setFromTriangles</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="afeb448ae4f175099f6cc36106e5d4279_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setFromTriangles</span><span class="args">(const vector&lt; ofMeshFace &gt; &amp;tris, bool bUseFaceNormal=false)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div></div>
+  </div><div id="MeshMode">
+    <h3 class="sectionHeader">Mesh Mode</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a472d0c5866e27efd96687ca98c024f14" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a472d0c5866e27efd96687ca98c024f14&quot;)">
+        <span class="type"></span>
+        <a class="name">setMode</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a472d0c5866e27efd96687ca98c024f14_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setMode</span><span class="args">(ofPrimitiveMode mode)</span></div><div class="memberDocumentation">
+
+<p>Allows you to set the ofPrimitiveMode. The available modes are OF_PRIMITIVE_TRIANGLES, OF_PRIMITIVE_TRIANGLE_STRIP, OF_PRIMITIVE_TRIANGLE_FAN, OF_PRIMITIVE_LINES, OF_PRIMITIVE_LINE_STRIP, OF_PRIMITIVE_LINE_LOOP, OF_PRIMITIVE_POINTS. </p>
+
+</div></div>
+  </div><div id="a9ecefc7c940cc76fc6c9e3648d73d99d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9ecefc7c940cc76fc6c9e3648d73d99d&quot;)">
+        <span class="type"></span>
+        <a class="name">getMode</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a9ecefc7c940cc76fc6c9e3648d73d99d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofGLUtils.html#1a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a> </span><span class="name">getMode</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>\returns the primitive mode that the mesh is using. </p>
+
+</div></div>
+  </div></div>
+  </div><div id="Primitiveconstructorhelpermethods">
+    <h3 class="sectionHeader">Primitive constructor helper methods</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a6af08c9c7a3f557b10b2fa29ed1246bf" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6af08c9c7a3f557b10b2fa29ed1246bf&quot;)">
+        <span class="type"></span>
+        <a class="name">plane</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a6af08c9c7a3f557b10b2fa29ed1246bf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">plane</span><span class="args">(float width, float height, int columns=2, int rows=2, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a12a08517b4c200b159f78f4594c95469" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a12a08517b4c200b159f78f4594c95469&quot;)">
+        <span class="type"></span>
+        <a class="name">sphere</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a12a08517b4c200b159f78f4594c95469_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">sphere</span><span class="args">(float radius, int res=12, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a045e6acc171f203e4eebf089f0905fdf" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a045e6acc171f203e4eebf089f0905fdf&quot;)">
+        <span class="type"></span>
+        <a class="name">icosahedron</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a045e6acc171f203e4eebf089f0905fdf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">icosahedron</span><span class="args">(float radius)</span></div><div class="memberDocumentation">
+<p>Step 1 : Generate icosahedron </p>
+
+</div></div>
+  </div><div id="aeff5b066cc0ce3121946c534572618e3" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aeff5b066cc0ce3121946c534572618e3&quot;)">
+        <span class="type"></span>
+        <a class="name">icosphere</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aeff5b066cc0ce3121946c534572618e3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">icosphere</span><span class="args">(float radius, int iterations=2)</span></div><div class="memberDocumentation">
+<p>Step 2 : tessellate</p>
+<p>Step 3 : generate texcoords</p>
+<p>Step 4 : fix texcoords </p>
+
+</div></div>
+  </div><div id="a2ea7154b0a3bc98680813ef1dbf0cbda" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2ea7154b0a3bc98680813ef1dbf0cbda&quot;)">
+        <span class="type"></span>
+        <a class="name">cylinder</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a2ea7154b0a3bc98680813ef1dbf0cbda_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">cylinder</span><span class="args">(float radius, float height, int radiusSegments=12, int heightSegments=6, int numCapSegments=2, bool bCapped=true, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP)</span></div><div class="memberDocumentation">
+
+<p>A helper method that returns a cylinder made of triangles. The resolution settings for the radius, height, and cap are optional (they are set at a default of 12 segments around the radius, 6 segments in the height, and 2 on the cap). You have the option to cap the cylinder or not. The only valid modes are the default OF_PRIMITIVE_TRIANGLE_STRIP and OF_PRIMITIVE_TRIANGLES. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofMesh.html">ofMesh</a> mesh;</div>
+<div class="line">mesh = <a class="code" href="ofMesh.html#a2ea7154b0a3bc98680813ef1dbf0cbda">ofMesh::cylinder</a>(100.0, 200.0);</div>
+</div><!-- fragment --><p>. </p>
+<div class="image">
+<img src="images/3d/cylinder.jpg" alt="image of a simple cylinder">
+</div>
+ 
+</div></div>
+  </div><div id="a41c4a867973347df2662c9273ee82067" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a41c4a867973347df2662c9273ee82067&quot;)">
+        <span class="type"></span>
+        <a class="name">cone</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a41c4a867973347df2662c9273ee82067_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">cone</span><span class="args">(float radius, float height, int radiusSegments=12, int heightSegments=6, int capSegments=2, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP)</span></div><div class="memberDocumentation">
+
+<p>A helper method that returns a cone made of triangles. The resolution settings for the radius, height, and cap are optional (they are set at a default of 12 segments around the radius, 6 segments in the height, and 2 on the cap). The only valid modes are the default OF_PRIMITIVE_TRIANGLE_STRIP and OF_PRIMITIVE_TRIANGLES. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofMesh.html">ofMesh</a> mesh;</div>
+<div class="line">mesh = <a class="code" href="ofMesh.html#a41c4a867973347df2662c9273ee82067">ofMesh::cone</a>(100.0, 200.0);</div>
+</div><!-- fragment --><p>. </p>
+<div class="image">
+<img src="images/3d/cone.jpg" alt="image of a simple cone">
+</div>
+ 
+</div></div>
+  </div><div id="a1b134e9f9570c68a0ddf0fbb2e4ba2c1" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1b134e9f9570c68a0ddf0fbb2e4ba2c1&quot;)">
+        <span class="type"></span>
+        <a class="name">box</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a1b134e9f9570c68a0ddf0fbb2e4ba2c1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">box</span><span class="args">(float width, float height, float depth, int resX=2, int resY=2, int resZ=2)</span></div><div class="memberDocumentation">
+
+<p>A helper method that returns a box made of triangles. The resolution settings for the width and height are optional (they are both set at a default of 2 triangles per side). </p>
+<div class="fragment"><div class="line"><a class="code" href="ofMesh.html">ofMesh</a> mesh;</div>
+<div class="line">mesh = <a class="code" href="ofMesh.html#a1b134e9f9570c68a0ddf0fbb2e4ba2c1">ofMesh::box</a>(200.0, 200.0, 200.0);</div>
+</div><!-- fragment --><p>. </p>
+<div class="image">
+<img src="images/3d/box.jpg" alt="image of a simple box">
+</div>
+ 
+</div></div>
+  </div><div id="a918e15d2eb729e8d20d066258fb95d73" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a918e15d2eb729e8d20d066258fb95d73&quot;)">
+        <span class="type"></span>
+        <a class="name">axis</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a918e15d2eb729e8d20d066258fb95d73_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">axis</span><span class="args">(float size=1.0)</span></div><div class="memberDocumentation">
+
+<p>Returns an <a class="el" href="ofMesh.html" title="Represents a set of vertices in 3D spaces with normals, colors, and texture coordinates at those poin...">ofMesh</a> representing an XYZ coordinate system. </p>
+<dl class="section return"><dt>Returns</dt><dd>an <a class="el" href="ofMesh.html" title="Represents a set of vertices in 3D spaces with normals, colors, and texture coordinates at those poin...">ofMesh</a> representing an XYZ coordinate system. </dd></dl>
+
+</div></div>
+  </div></div>
+  </div><div id="Vertices">
+    <h3 class="sectionHeader">Vertices</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a14be43bd2e272fed5e030d4f51e61dbf" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a14be43bd2e272fed5e030d4f51e61dbf&quot;)">
         <span class="type"></span>
@@ -211,6 +414,22 @@
 <p>Removes all the vertices. </p>
 
 </div></div>
+  </div><div id="a3f84e571d711ee21c45ebaa11bde422e" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3f84e571d711ee21c45ebaa11bde422e&quot;)">
+        <span class="type"></span>
+        <a class="name">clear</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a3f84e571d711ee21c45ebaa11bde422e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clear</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Removes all the vertices, colors, and indices from the mesh. </p>
+
+</div></div>
   </div><div id="ae2d9f9ca63ae1f5febd68b00ebd3a371" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae2d9f9ca63ae1f5febd68b00ebd3a371&quot;)">
@@ -244,20 +463,19 @@
 <dl class="section return"><dt>Returns</dt><dd>a pointer to the vertices that the mesh contains. </dd></dl>
 
 </div></div>
-  </div><div id="acf727a93d0e042c855583fcb949380cf" class="method">
+  </div><div id="a57998157b1b7e041930ad775c5d5ffc8" class="method">
     <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#acf727a93d0e042c855583fcb949380cf&quot;)">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a57998157b1b7e041930ad775c5d5ffc8&quot;)">
         <span class="type"></span>
-        <a class="name">getIndices</a>
+        <a class="name">getVertex</a>
         <span class="args"></span>
         <span class="kind">()</span>
         <span class="note"></span>
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="acf727a93d0e042c855583fcb949380cf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1ad4acc3774c730c65a67b4419154717d3">ofIndexType</a> </span><span class="name">getIndices</span><span class="args">()</span></div><div class="memberDocumentation">
-<p>Use this if you plan to change the indices as part of this call as it will force a reset of the cache. </p>
-<dl class="section return"><dt>Returns</dt><dd>the vector that contains all of the indices of the mesh, if it has any. </dd></dl>
+    <div class="methodDescription" style="display:none" id="a57998157b1b7e041930ad775c5d5ffc8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getVertex</span><span class="args">(ofIndexType i) const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>the vertex at the index. </dd></dl>
 
 </div></div>
   </div><div id="ada0d7a5f3c7813f6414c32b46987e7e1" class="method">
@@ -306,6 +524,51 @@
 
     <div class="methodDescription" style="display:none" id="ac8ee220b47ff0009c08e3a342c8fde5b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">hasVertices</span><span class="args">() const </span></div><div class="memberDocumentation">
 <dl class="section return"><dt>Returns</dt><dd>Whether the mesh has any vertices. </dd></dl>
+
+</div></div>
+  </div><div id="a94fe509e4a0765a9f8cf20d7f4f8ca1e" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a94fe509e4a0765a9f8cf20d7f4f8ca1e&quot;)">
+        <span class="type"></span>
+        <a class="name">append</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a94fe509e4a0765a9f8cf20d7f4f8ca1e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">append</span><span class="args">(const ofMesh &amp;mesh)</span></div><div class="memberDocumentation">
+
+<p>Add the vertices, normals, texture coordinates and indices of one mesh onto another mesh. Everything from the referenced mesh is simply added at the end of the current mesh&apos;s lists. </p>
+
+</div></div>
+  </div><div id="a9ad0c698acc3c5dfc9fe33ddc9eef291" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9ad0c698acc3c5dfc9fe33ddc9eef291&quot;)">
+        <span class="type"></span>
+        <a class="name">mergeDuplicateVertices</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a9ad0c698acc3c5dfc9fe33ddc9eef291_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">mergeDuplicateVertices</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="acbac3d141ee803d7123c2454e815e842" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#acbac3d141ee803d7123c2454e815e842&quot;)">
+        <span class="type"></span>
+        <a class="name">getCentroid</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="acbac3d141ee803d7123c2454e815e842_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getCentroid</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="ofVec3f.html" title="ofVec3f is a class for storing a three dimensional vector. ">ofVec3f</a> defining the centroid of all the vetices in the mesh. </dd></dl>
 
 </div></div>
   </div></div>
@@ -545,6 +808,71 @@
     <div class="methodDescription" style="display:none" id="a006a5c8f5f504680ea11592dd827b414_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">usingNormals</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 <p>Reimplemented in <a class="el" href="ofVboMesh.html#a9024f6fa98bb129872230a14575bb390">ofVboMesh</a>.</p>
+
+</div></div>
+  </div><div id="ab8f5b239deb5f0e06a02f0c82fc84957" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab8f5b239deb5f0e06a02f0c82fc84957&quot;)">
+        <span class="type"></span>
+        <a class="name">smoothNormals</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ab8f5b239deb5f0e06a02f0c82fc84957_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">smoothNormals</span><span class="args">(float angle)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div></div>
+  </div><div id="Faces">
+    <h3 class="sectionHeader">Faces</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="ad1b2bf3302c51306e17df889d1bbaf0d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad1b2bf3302c51306e17df889d1bbaf0d&quot;)">
+        <span class="type"></span>
+        <a class="name">getFace</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ad1b2bf3302c51306e17df889d1bbaf0d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">vector&lt; int &gt; &amp; </span><span class="name">getFace</span><span class="args">(int faceId)</span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>the vector that contains all of the faces of the mesh. This isn&apos;t currently implemented. </dd></dl>
+
+</div></div>
+  </div><div id="ab7f92489a2476fc476c0f95231e16a7a" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab7f92489a2476fc476c0f95231e16a7a&quot;)">
+        <span class="type"></span>
+        <a class="name">getFaceNormals</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ab7f92489a2476fc476c0f95231e16a7a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getFaceNormals</span><span class="args">(bool perVetex=false) const </span></div><div class="memberDocumentation">
+
+<p>Get normals for each face As a default it only calculates the normal for the face as a whole but by setting (perVertex = true) it will return the same normal value for each of the three vertices making up a face. </p>
+<dl class="section return"><dt>Returns</dt><dd>a vector containing the calculated normals of each face in the mesh. </dd></dl>
+
+</div></div>
+  </div><div id="ade10f4e157ed99e74a1f3f0bc0823a43" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ade10f4e157ed99e74a1f3f0bc0823a43&quot;)">
+        <span class="type"></span>
+        <a class="name">getUniqueFaces</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ade10f4e157ed99e74a1f3f0bc0823a43_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMeshFace.html">ofMeshFace</a> </span><span class="name">getUniqueFaces</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>the mesh as a vector of unique ofMeshFaces a list of triangles that do not share vertices or indices </dd></dl>
 
 </div></div>
   </div></div>
@@ -1031,7 +1359,40 @@
   </div><div id="Indices">
     <h3 class="sectionHeader">Indices</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="aac2a306dca03af3ff00493992a2aa830" class="method">
+    <div class="sectionContent"><div id="a8c365cae4b0864698c7cd41e11f7ddd3" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8c365cae4b0864698c7cd41e11f7ddd3&quot;)">
+        <span class="type"></span>
+        <a class="name">setupIndicesAuto</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a8c365cae4b0864698c7cd41e11f7ddd3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setupIndicesAuto</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Allow you to set up the indices automatically when you add a vertex. </p>
+
+</div></div>
+  </div><div id="acf727a93d0e042c855583fcb949380cf" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#acf727a93d0e042c855583fcb949380cf&quot;)">
+        <span class="type"></span>
+        <a class="name">getIndices</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="acf727a93d0e042c855583fcb949380cf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1ad4acc3774c730c65a67b4419154717d3">ofIndexType</a> </span><span class="name">getIndices</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Use this if you plan to change the indices as part of this call as it will force a reset of the cache. </p>
+<dl class="section return"><dt>Returns</dt><dd>the vector that contains all of the indices of the mesh, if it has any. </dd></dl>
+
+</div></div>
+  </div><div id="aac2a306dca03af3ff00493992a2aa830" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aac2a306dca03af3ff00493992a2aa830&quot;)">
         <span class="type"></span>
@@ -1294,6 +1655,38 @@
 <p>Reimplemented in <a class="el" href="ofVboMesh.html#aab037c349d5079cdf8d21288461c7f30">ofVboMesh</a>.</p>
 
 </div></div>
+  </div><div id="a8f0875a7da176aa4a7c4c656a46385bf" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8f0875a7da176aa4a7c4c656a46385bf&quot;)">
+        <span class="type"></span>
+        <a class="name">setColorForIndices</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a8f0875a7da176aa4a7c4c656a46385bf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setColorForIndices</span><span class="args">(int startIndex, int endIndex, ofColor color)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="a4fbb52b77cfef1a78234cd6e9ab960cf" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4fbb52b77cfef1a78234cd6e9ab960cf&quot;)">
+        <span class="type"></span>
+        <a class="name">getMeshForIndices</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a4fbb52b77cfef1a78234cd6e9ab960cf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">getMeshForIndices</span><span class="args">(int startIndex, int endIndex) const </span></div><div class="memberDocumentation">
+<p>The new mesh includes the mesh mode, colors, textures, and normals of the original mesh (assuming any were added). </p>
+<dl class="section return"><dt>Returns</dt><dd>a mesh made up of a range of indices from startIndex to the endIndex. </dd></dl>
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">getMeshForIndices</span><span class="args">(int startIndex, int endIndex, int startVertIndex, int endVertIndex) const </span></div><div class="memberDocumentation">
+
+</div></div>
   </div></div>
   </div><div id="Drawing">
     <h3 class="sectionHeader">Drawing</h3>
@@ -1406,407 +1799,6 @@
 <p>There are two format options for PLY: a binary format and an ASCII format. By default, it will save using the ASCII format. Passing <code>true</code> into the <code>useBinary</code> parameter will save it in the binary format.</p>
 <p>If you&apos;re planning on reloading the mesh into <a class="el" href="ofMesh.html" title="Represents a set of vertices in 3D spaces with normals, colors, and texture coordinates at those poin...">ofMesh</a>, <a class="el" href="ofMesh.html" title="Represents a set of vertices in 3D spaces with normals, colors, and texture coordinates at those poin...">ofMesh</a> currently only supports loading the ASCII format.</p>
 <p>For more information, see the <a href="http://paulbourke.net/dataformats/ply/">PLY format specification</a>. </p>
-
-</div></div>
-  </div></div>
-  </div><div id="Primitiveconstructorhelpermethods">
-    <h3 class="sectionHeader">Primitive constructor helper methods</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a6af08c9c7a3f557b10b2fa29ed1246bf" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6af08c9c7a3f557b10b2fa29ed1246bf&quot;)">
-        <span class="type"></span>
-        <a class="name">plane</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a6af08c9c7a3f557b10b2fa29ed1246bf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">plane</span><span class="args">(float width, float height, int columns=2, int rows=2, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a12a08517b4c200b159f78f4594c95469" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a12a08517b4c200b159f78f4594c95469&quot;)">
-        <span class="type"></span>
-        <a class="name">sphere</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a12a08517b4c200b159f78f4594c95469_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">sphere</span><span class="args">(float radius, int res=12, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a045e6acc171f203e4eebf089f0905fdf" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a045e6acc171f203e4eebf089f0905fdf&quot;)">
-        <span class="type"></span>
-        <a class="name">icosahedron</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a045e6acc171f203e4eebf089f0905fdf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">icosahedron</span><span class="args">(float radius)</span></div><div class="memberDocumentation">
-<p>Step 1 : Generate icosahedron </p>
-
-</div></div>
-  </div><div id="aeff5b066cc0ce3121946c534572618e3" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aeff5b066cc0ce3121946c534572618e3&quot;)">
-        <span class="type"></span>
-        <a class="name">icosphere</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aeff5b066cc0ce3121946c534572618e3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">icosphere</span><span class="args">(float radius, int iterations=2)</span></div><div class="memberDocumentation">
-<p>Step 2 : tessellate</p>
-<p>Step 3 : generate texcoords</p>
-<p>Step 4 : fix texcoords </p>
-
-</div></div>
-  </div><div id="a2ea7154b0a3bc98680813ef1dbf0cbda" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2ea7154b0a3bc98680813ef1dbf0cbda&quot;)">
-        <span class="type"></span>
-        <a class="name">cylinder</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a2ea7154b0a3bc98680813ef1dbf0cbda_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">cylinder</span><span class="args">(float radius, float height, int radiusSegments=12, int heightSegments=6, int numCapSegments=2, bool bCapped=true, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP)</span></div><div class="memberDocumentation">
-
-<p>A helper method that returns a cylinder made of triangles. The resolution settings for the radius, height, and cap are optional (they are set at a default of 12 segments around the radius, 6 segments in the height, and 2 on the cap). You have the option to cap the cylinder or not. The only valid modes are the default OF_PRIMITIVE_TRIANGLE_STRIP and OF_PRIMITIVE_TRIANGLES. </p>
-<div class="fragment"><div class="line"><a class="code" href="ofMesh.html">ofMesh</a> mesh;</div>
-<div class="line">mesh = <a class="code" href="ofMesh.html#a2ea7154b0a3bc98680813ef1dbf0cbda">ofMesh::cylinder</a>(100.0, 200.0);</div>
-</div><!-- fragment --><p>. </p>
-<div class="image">
-<img src="images/3d/cylinder.jpg" alt="image of a simple cylinder">
-</div>
- 
-</div></div>
-  </div><div id="a41c4a867973347df2662c9273ee82067" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a41c4a867973347df2662c9273ee82067&quot;)">
-        <span class="type"></span>
-        <a class="name">cone</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a41c4a867973347df2662c9273ee82067_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">cone</span><span class="args">(float radius, float height, int radiusSegments=12, int heightSegments=6, int capSegments=2, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP)</span></div><div class="memberDocumentation">
-
-<p>A helper method that returns a cone made of triangles. The resolution settings for the radius, height, and cap are optional (they are set at a default of 12 segments around the radius, 6 segments in the height, and 2 on the cap). The only valid modes are the default OF_PRIMITIVE_TRIANGLE_STRIP and OF_PRIMITIVE_TRIANGLES. </p>
-<div class="fragment"><div class="line"><a class="code" href="ofMesh.html">ofMesh</a> mesh;</div>
-<div class="line">mesh = <a class="code" href="ofMesh.html#a41c4a867973347df2662c9273ee82067">ofMesh::cone</a>(100.0, 200.0);</div>
-</div><!-- fragment --><p>. </p>
-<div class="image">
-<img src="images/3d/cone.jpg" alt="image of a simple cone">
-</div>
- 
-</div></div>
-  </div><div id="a1b134e9f9570c68a0ddf0fbb2e4ba2c1" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a1b134e9f9570c68a0ddf0fbb2e4ba2c1&quot;)">
-        <span class="type"></span>
-        <a class="name">box</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a1b134e9f9570c68a0ddf0fbb2e4ba2c1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">box</span><span class="args">(float width, float height, float depth, int resX=2, int resY=2, int resZ=2)</span></div><div class="memberDocumentation">
-
-<p>A helper method that returns a box made of triangles. The resolution settings for the width and height are optional (they are both set at a default of 2 triangles per side). </p>
-<div class="fragment"><div class="line"><a class="code" href="ofMesh.html">ofMesh</a> mesh;</div>
-<div class="line">mesh = <a class="code" href="ofMesh.html#a1b134e9f9570c68a0ddf0fbb2e4ba2c1">ofMesh::box</a>(200.0, 200.0, 200.0);</div>
-</div><!-- fragment --><p>. </p>
-<div class="image">
-<img src="images/3d/box.jpg" alt="image of a simple box">
-</div>
- 
-</div></div>
-  </div><div id="a918e15d2eb729e8d20d066258fb95d73" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a918e15d2eb729e8d20d066258fb95d73&quot;)">
-        <span class="type"></span>
-        <a class="name">axis</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a918e15d2eb729e8d20d066258fb95d73_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">axis</span><span class="args">(float size=1.0)</span></div><div class="memberDocumentation">
-
-<p>Returns an <a class="el" href="ofMesh.html" title="Represents a set of vertices in 3D spaces with normals, colors, and texture coordinates at those poin...">ofMesh</a> representing an XYZ coordinate system. </p>
-<dl class="section return"><dt>Returns</dt><dd>an <a class="el" href="ofMesh.html" title="Represents a set of vertices in 3D spaces with normals, colors, and texture coordinates at those poin...">ofMesh</a> representing an XYZ coordinate system. </dd></dl>
-
-</div></div>
-  </div></div>
-  </div><div id="Functions">
-    <h3 class="sectionHeader">Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a3ffeb1343321a13b07250eae05ce357e" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3ffeb1343321a13b07250eae05ce357e&quot;)">
-        <span class="type"></span>
-        <a class="name">ofMesh</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a3ffeb1343321a13b07250eae05ce357e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofMesh</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>This creates the mesh, using OF_PRIMITIVE_TRIANGLES without any initial vertices. </p>
-
-</div><hr><div class="memberVariant"><span class="type"> </span><span class="name">ofMesh</span><span class="args">(ofPrimitiveMode mode, const vector&lt; ofVec3f &gt; &amp;verts)</span></div><div class="memberDocumentation">
-
-<p>This allows to you to use one of the other ofPrimitiveModes: OF_PRIMITIVE_TRIANGLES, OF_PRIMITIVE_TRIANGLE_STRIP, OF_PRIMITIVE_TRIANGLE_FAN, OF_PRIMITIVE_LINES, OF_PRIMITIVE_LINE_STRIP, OF_PRIMITIVE_LINE_LOOP, OF_PRIMITIVE_POINTS. See <a href="../gl/ofGLUtils.htm">ofGLUtils</a> for more information on these types. </p>
-
-</div></div>
-  </div><div id="a7caa88fce14c9aa5b5f67a094b6233ba" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7caa88fce14c9aa5b5f67a094b6233ba&quot;)">
-        <span class="type"></span>
-        <a class="name">~ofMesh</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a7caa88fce14c9aa5b5f67a094b6233ba_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">~ofMesh</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a472d0c5866e27efd96687ca98c024f14" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a472d0c5866e27efd96687ca98c024f14&quot;)">
-        <span class="type"></span>
-        <a class="name">setMode</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a472d0c5866e27efd96687ca98c024f14_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setMode</span><span class="args">(ofPrimitiveMode mode)</span></div><div class="memberDocumentation">
-
-<p>Allows you to set the ofPrimitiveMode. The available modes are OF_PRIMITIVE_TRIANGLES, OF_PRIMITIVE_TRIANGLE_STRIP, OF_PRIMITIVE_TRIANGLE_FAN, OF_PRIMITIVE_LINES, OF_PRIMITIVE_LINE_STRIP, OF_PRIMITIVE_LINE_LOOP, OF_PRIMITIVE_POINTS. </p>
-
-</div></div>
-  </div><div id="a9ecefc7c940cc76fc6c9e3648d73d99d" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9ecefc7c940cc76fc6c9e3648d73d99d&quot;)">
-        <span class="type"></span>
-        <a class="name">getMode</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a9ecefc7c940cc76fc6c9e3648d73d99d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofGLUtils.html#1a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a> </span><span class="name">getMode</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>\returns the primitive mode that the mesh is using. </p>
-
-</div></div>
-  </div><div id="a3f84e571d711ee21c45ebaa11bde422e" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3f84e571d711ee21c45ebaa11bde422e&quot;)">
-        <span class="type"></span>
-        <a class="name">clear</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a3f84e571d711ee21c45ebaa11bde422e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clear</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Removes all the vertices, colors, and indices from the mesh. </p>
-
-</div></div>
-  </div><div id="a8c365cae4b0864698c7cd41e11f7ddd3" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8c365cae4b0864698c7cd41e11f7ddd3&quot;)">
-        <span class="type"></span>
-        <a class="name">setupIndicesAuto</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a8c365cae4b0864698c7cd41e11f7ddd3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setupIndicesAuto</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Allow you to set up the indices automatically when you add a vertex. </p>
-
-</div></div>
-  </div><div id="ad1b2bf3302c51306e17df889d1bbaf0d" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad1b2bf3302c51306e17df889d1bbaf0d&quot;)">
-        <span class="type"></span>
-        <a class="name">getFace</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ad1b2bf3302c51306e17df889d1bbaf0d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">vector&lt; int &gt; &amp; </span><span class="name">getFace</span><span class="args">(int faceId)</span></div><div class="memberDocumentation">
-<dl class="section return"><dt>Returns</dt><dd>the vector that contains all of the faces of the mesh. This isn&apos;t currently implemented. </dd></dl>
-
-</div></div>
-  </div><div id="acbac3d141ee803d7123c2454e815e842" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#acbac3d141ee803d7123c2454e815e842&quot;)">
-        <span class="type"></span>
-        <a class="name">getCentroid</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="acbac3d141ee803d7123c2454e815e842_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getCentroid</span><span class="args">() const </span></div><div class="memberDocumentation">
-<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="ofVec3f.html" title="ofVec3f is a class for storing a three dimensional vector. ">ofVec3f</a> defining the centroid of all the vetices in the mesh. </dd></dl>
-
-</div></div>
-  </div><div id="a94fe509e4a0765a9f8cf20d7f4f8ca1e" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a94fe509e4a0765a9f8cf20d7f4f8ca1e&quot;)">
-        <span class="type"></span>
-        <a class="name">append</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a94fe509e4a0765a9f8cf20d7f4f8ca1e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">append</span><span class="args">(const ofMesh &amp;mesh)</span></div><div class="memberDocumentation">
-
-<p>Add the vertices, normals, texture coordinates and indices of one mesh onto another mesh. Everything from the referenced mesh is simply added at the end of the current mesh&apos;s lists. </p>
-
-</div></div>
-  </div><div id="a8f0875a7da176aa4a7c4c656a46385bf" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8f0875a7da176aa4a7c4c656a46385bf&quot;)">
-        <span class="type"></span>
-        <a class="name">setColorForIndices</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a8f0875a7da176aa4a7c4c656a46385bf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setColorForIndices</span><span class="args">(int startIndex, int endIndex, ofColor color)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a4fbb52b77cfef1a78234cd6e9ab960cf" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4fbb52b77cfef1a78234cd6e9ab960cf&quot;)">
-        <span class="type"></span>
-        <a class="name">getMeshForIndices</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a4fbb52b77cfef1a78234cd6e9ab960cf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">getMeshForIndices</span><span class="args">(int startIndex, int endIndex) const </span></div><div class="memberDocumentation">
-<p>The new mesh includes the mesh mode, colors, textures, and normals of the original mesh (assuming any were added). </p>
-<dl class="section return"><dt>Returns</dt><dd>a mesh made up of a range of indices from startIndex to the endIndex. </dd></dl>
-
-</div><hr><div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">getMeshForIndices</span><span class="args">(int startIndex, int endIndex, int startVertIndex, int endVertIndex) const </span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a9ad0c698acc3c5dfc9fe33ddc9eef291" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9ad0c698acc3c5dfc9fe33ddc9eef291&quot;)">
-        <span class="type"></span>
-        <a class="name">mergeDuplicateVertices</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a9ad0c698acc3c5dfc9fe33ddc9eef291_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">mergeDuplicateVertices</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ade10f4e157ed99e74a1f3f0bc0823a43" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ade10f4e157ed99e74a1f3f0bc0823a43&quot;)">
-        <span class="type"></span>
-        <a class="name">getUniqueFaces</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ade10f4e157ed99e74a1f3f0bc0823a43_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMeshFace.html">ofMeshFace</a> </span><span class="name">getUniqueFaces</span><span class="args">() const </span></div><div class="memberDocumentation">
-<dl class="section return"><dt>Returns</dt><dd>the mesh as a vector of unique ofMeshFaces a list of triangles that do not share vertices or indices </dd></dl>
-
-</div></div>
-  </div><div id="ab7f92489a2476fc476c0f95231e16a7a" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab7f92489a2476fc476c0f95231e16a7a&quot;)">
-        <span class="type"></span>
-        <a class="name">getFaceNormals</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ab7f92489a2476fc476c0f95231e16a7a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getFaceNormals</span><span class="args">(bool perVetex=false) const </span></div><div class="memberDocumentation">
-
-<p>Get normals for each face As a default it only calculates the normal for the face as a whole but by setting (perVertex = true) it will return the same normal value for each of the three vertices making up a face. </p>
-<dl class="section return"><dt>Returns</dt><dd>a vector containing the calculated normals of each face in the mesh. </dd></dl>
-
-</div></div>
-  </div><div id="afeb448ae4f175099f6cc36106e5d4279" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#afeb448ae4f175099f6cc36106e5d4279&quot;)">
-        <span class="type"></span>
-        <a class="name">setFromTriangles</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="afeb448ae4f175099f6cc36106e5d4279_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setFromTriangles</span><span class="args">(const vector&lt; ofMeshFace &gt; &amp;tris, bool bUseFaceNormal=false)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ab8f5b239deb5f0e06a02f0c82fc84957" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ab8f5b239deb5f0e06a02f0c82fc84957&quot;)">
-        <span class="type"></span>
-        <a class="name">smoothNormals</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ab8f5b239deb5f0e06a02f0c82fc84957_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">smoothNormals</span><span class="args">(float angle)</span></div><div class="memberDocumentation">
 
 </div></div>
   </div></div>

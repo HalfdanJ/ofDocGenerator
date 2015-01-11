@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <span class="class">ofEasyCam</span><li class="chapter"><a href="#Functions">Functions</a></li></ul>
+        <span class="class">ofEasyCam</span><li class="chapter"><a href="#CameraSettings">Camera Settings</a></li><li class="chapter"><a href="#OpenGLSetup">OpenGL Setup</a></li><li class="chapter"><a href="#Rendering">Rendering</a></li><li class="chapter"><a href="#OpenGLMatrix">OpenGL Matrix</a></li><li class="chapter"><a href="#CoordinateConversion">Coordinate Conversion</a></li><li class="chapter"><a href="#Renderer">Renderer</a></li><li class="chapter"><a href="#ConstructorandDestructor">Constructor and Destructor</a></li><li class="chapter"><a href="#Rendering">Rendering</a></li><li class="chapter"><a href="#CameraTarget">Camera Target</a></li><li class="chapter"><a href="#Getters">Getters</a></li><li class="chapter"><a href="#Setters">Setters</a></li><li class="chapter"><a href="#MouseInput">Mouse Input</a></li><li class="chapter"><a href="#ParentNode">Parent Node</a></li><li class="chapter"><a href="#Getters">Getters</a></li><li class="chapter"><a href="#Setters">Setters</a></li><li class="chapter"><a href="#Modifiers">Modifiers</a></li><li class="chapter"><a href="#OpenGLTransformation">OpenGL Transformation</a></li><li class="chapter"><a href="#Drawing">Drawing</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -75,396 +75,10 @@
     </div>
     <div class="classDescription"><div class="textblock"><p>A super simple camera for interacting with objects in 3D space. </p>
 </div></div>
-    <div class="classMethods"><div id="Functions">
-    <h3 class="sectionHeader">Functions</h3>
+    <div class="classMethods"><div id="CameraSettings">
+    <h3 class="sectionHeader">Camera Settings</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="ae432309081375a91cacf80c5d9093c14" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae432309081375a91cacf80c5d9093c14&quot;)">
-        <span class="type"></span>
-        <a class="name">ofEasyCam</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ae432309081375a91cacf80c5d9093c14_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofEasyCam</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Create a default camera. </p>
-
-</div></div>
-  </div><div id="a00f32e3774a5d9f4733ee43dd6b9b8f7" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a00f32e3774a5d9f4733ee43dd6b9b8f7&quot;)">
-        <span class="type"></span>
-        <a class="name">~ofEasyCam</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a00f32e3774a5d9f4733ee43dd6b9b8f7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">~ofEasyCam</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Destroy the camera. </p>
-
-</div></div>
-  </div><div id="a573175b87f314ec09df6713fe07d02fc" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a573175b87f314ec09df6713fe07d02fc&quot;)">
-        <span class="type"></span>
-        <a class="name">begin</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a573175b87f314ec09df6713fe07d02fc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">begin</span><span class="args">(ofRectangle viewport=ofRectangle())</span></div><div class="memberDocumentation">
-
-<p>Begins rendering with the camera. </p>
-<p>Example: </p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="ofNode.html#a69ed7a21f7f8ee435fa6d8a99424e9ba">draw</a>() {</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// Begin rendering from the camera&apos;s perspective.</span></div>
-<div class="line">    camera.begin();</div>
-<div class="line"></div>
-<div class="line">    <a class="code" href="of_graphics_8cpp.html#acc4b7173caaa9e04c8965782c6925bdc">ofLine</a>(0, 0, <a class="code" href="of_app_runner_8cpp.html#a28bb1c518b5c68ee2eae655bd4e56445">ofGetWidth</a>(), <a class="code" href="of_app_runner_8cpp.html#a415b5eadf885ebd1f4799cc40e5db137">ofGetHeight</a>());</div>
-<div class="line">    <span class="comment">// Additional rendering ...</span></div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// End rendering form the camera&apos;s perspective.</span></div>
-<div class="line">    camera.end();</div>
-<div class="line"></div>
-<div class="line">}</div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">viewport</td><td>The camera&apos;s rendering viewport. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="ofCamera.html#ae7e92c2c1a3e8d6a13d795334668b9cd">ofCamera</a>.</p>
-
-</div></div>
-  </div><div id="a8833ae781975911013b5f6aa3bec32cd" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8833ae781975911013b5f6aa3bec32cd&quot;)">
-        <span class="type"></span>
-        <a class="name">reset</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a8833ae781975911013b5f6aa3bec32cd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">reset</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Reset the camera position and orientation. </p>
-
-</div></div>
-  </div><div id="a16d54adecaba3892262551e5ea8dce25" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a16d54adecaba3892262551e5ea8dce25&quot;)">
-        <span class="type"></span>
-        <a class="name">setTarget</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a16d54adecaba3892262551e5ea8dce25_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setTarget</span><span class="args">(const ofVec3f &amp;target)</span></div><div class="memberDocumentation">
-
-<p>Set the camera&apos;s target. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">target</td><td>The position of the target. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setTarget</span><span class="args">(ofNode &amp;target)</span></div><div class="memberDocumentation">
-
-<p>Set the camera&apos;s target. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">target</td><td>The position of the target. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="afbf5951608a33ebd3c5f32b9fd0f2b1d" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#afbf5951608a33ebd3c5f32b9fd0f2b1d&quot;)">
-        <span class="type"></span>
-        <a class="name">getTarget</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="afbf5951608a33ebd3c5f32b9fd0f2b1d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofNode.html">ofNode</a> </span><span class="name">getTarget</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Get the camera&apos;s target node reference. </p>
-<dl class="section return"><dt>Returns</dt><dd>a reference the the camera&apos;s target node. </dd></dl>
-
-</div></div>
-  </div><div id="a4e3ba707cdc44c46bd442641d1b0c25a" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4e3ba707cdc44c46bd442641d1b0c25a&quot;)">
-        <span class="type"></span>
-        <a class="name">setDistance</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a4e3ba707cdc44c46bd442641d1b0c25a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setDistance</span><span class="args">(float distance)</span></div><div class="memberDocumentation">
-
-<p>Set the camera&apos;s distance to the target. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">distance</td><td>The distance to the target. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="a27eac21ea675b765c599cc3947455efd" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a27eac21ea675b765c599cc3947455efd&quot;)">
-        <span class="type"></span>
-        <a class="name">getDistance</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a27eac21ea675b765c599cc3947455efd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getDistance</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>Get the distance to the target. </p>
-<dl class="section return"><dt>Returns</dt><dd>the distance to the target. </dd></dl>
-
-</div></div>
-  </div><div id="a3c25cc3a6ca19efd4e06667bcc2586b0" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3c25cc3a6ca19efd4e06667bcc2586b0&quot;)">
-        <span class="type"></span>
-        <a class="name">setDrag</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a3c25cc3a6ca19efd4e06667bcc2586b0_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setDrag</span><span class="args">(float drag)</span></div><div class="memberDocumentation">
-
-<p>Set the camera&apos;s drag coefficient. </p>
-<p>Drag is affects how quickly the camera starts up and slows down when a user interacts with its position using a pointer.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">drag</td><td>The normalized coefficient value between 0 and 1. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="a160c0400017413385c89bb9084073bff" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a160c0400017413385c89bb9084073bff&quot;)">
-        <span class="type"></span>
-        <a class="name">getDrag</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a160c0400017413385c89bb9084073bff_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getDrag</span><span class="args">() const </span></div><div class="memberDocumentation">
-
-<p>Get the camera&apos;s drag coefficient. </p>
-<dl class="section return"><dt>Returns</dt><dd>the camera&apos;s drag coefficient. </dd></dl>
-
-</div></div>
-  </div><div id="aa4d75c007405c69f76d7fb4a89f931bd" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa4d75c007405c69f76d7fb4a89f931bd&quot;)">
-        <span class="type"></span>
-        <a class="name">setTranslationKey</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa4d75c007405c69f76d7fb4a89f931bd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setTranslationKey</span><span class="args">(char key)</span></div><div class="memberDocumentation">
-
-<p>Set the key used to switch between camera rotation and translation. </p>
-<p>Translation will only happen when the translation key is pressed.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">key</td><td>The key code for the translation key. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="ae9a2019ff4ed6c2f26e0bb799c735b21" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae9a2019ff4ed6c2f26e0bb799c735b21&quot;)">
-        <span class="type"></span>
-        <a class="name">getTranslationKey</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ae9a2019ff4ed6c2f26e0bb799c735b21_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">char </span><span class="name">getTranslationKey</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Get the current translation key code. </p>
-<dl class="section return"><dt>Returns</dt><dd>the current translation key code. </dd></dl>
-
-</div></div>
-  </div><div id="ac267e28e06a92003f6422e0ba707bfae" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac267e28e06a92003f6422e0ba707bfae&quot;)">
-        <span class="type"></span>
-        <a class="name">enableMouseInput</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ac267e28e06a92003f6422e0ba707bfae_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">enableMouseInput</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Enable mouse camera control. </p>
-
-</div></div>
-  </div><div id="a206a55a70de3bc16bd53cc3b6e9d07f0" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a206a55a70de3bc16bd53cc3b6e9d07f0&quot;)">
-        <span class="type"></span>
-        <a class="name">disableMouseInput</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a206a55a70de3bc16bd53cc3b6e9d07f0_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">disableMouseInput</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Disable mouse camera control. </p>
-
-</div></div>
-  </div><div id="a47affec73161672979f9ae3e826702d6" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a47affec73161672979f9ae3e826702d6&quot;)">
-        <span class="type"></span>
-        <a class="name">getMouseInputEnabled</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a47affec73161672979f9ae3e826702d6_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">getMouseInputEnabled</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Determine if mouse camera control is enabled. </p>
-
-</div></div>
-  </div><div id="aa42058727e704550d6e23b91e81fe985" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa42058727e704550d6e23b91e81fe985&quot;)">
-        <span class="type"></span>
-        <a class="name">enableMouseMiddleButton</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa42058727e704550d6e23b91e81fe985_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">enableMouseMiddleButton</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Enable the mouse&apos;s middle button for camera control. </p>
-
-</div></div>
-  </div><div id="ae7762c86d87889acd1cdd7c0d3a408cc" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae7762c86d87889acd1cdd7c0d3a408cc&quot;)">
-        <span class="type"></span>
-        <a class="name">disableMouseMiddleButton</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ae7762c86d87889acd1cdd7c0d3a408cc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">disableMouseMiddleButton</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Disable the mouse&apos;s middle button for camera control. </p>
-
-</div></div>
-  </div><div id="ae69406a67c4ceea8ee86767e53c08a44" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae69406a67c4ceea8ee86767e53c08a44&quot;)">
-        <span class="type"></span>
-        <a class="name">getMouseMiddleButtonEnabled</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ae69406a67c4ceea8ee86767e53c08a44_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">getMouseMiddleButtonEnabled</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Determine if the middle mouse button is enabled. </p>
-
-</div></div>
-  </div><div id="ac7b61a7f125b40d75eb4ab03d05fc0b8" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac7b61a7f125b40d75eb4ab03d05fc0b8&quot;)">
-        <span class="type"></span>
-        <a class="name">setAutoDistance</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ac7b61a7f125b40d75eb4ab03d05fc0b8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setAutoDistance</span><span class="args">(bool bAutoDistance)</span></div><div class="memberDocumentation">
-
-<p>Enable or disable camera autodistance. </p>
-<p>Allow the camera to attempt to set the distance based on the camera&apos;s current viewpoirt.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bAutoDistance</td><td>true to enable auto distance. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div></div>
-  </div><div id="a272aa1d05bde6bcbb5ea23ab54fe5123" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a272aa1d05bde6bcbb5ea23ab54fe5123&quot;)">
-        <span class="type"></span>
-        <a class="name">setEvents</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a272aa1d05bde6bcbb5ea23ab54fe5123_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setEvents</span><span class="args">(ofCoreEvents &amp;events)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="classof_camera_1ac79f42fa863eb5ce703625800dee236c" class="method">
+    <div class="sectionContent"><div id="classof_camera_1ac79f42fa863eb5ce703625800dee236c" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_camera_1ac79f42fa863eb5ce703625800dee236c&quot;)">
         <span class="type"></span>
@@ -684,7 +298,11 @@ frustum&quot; and is used (for example) in stereo views. It is acheived by apply
 <dl class="section return"><dt>Returns</dt><dd>The aspect ratio of this camera&apos;s viewport. </dd></dl>
 
 </div></div>
-  </div><div id="classof_camera_1a72cedd2a056d8bf460c2add5cc607179" class="method">
+  </div></div>
+  </div><div id="OpenGLSetup">
+    <h3 class="sectionHeader">OpenGL Setup</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="classof_camera_1a72cedd2a056d8bf460c2add5cc607179" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_camera_1a72cedd2a056d8bf460c2add5cc607179&quot;)">
         <span class="type"></span>
@@ -796,7 +414,11 @@ frustum&quot; and is used (for example) in stereo views. It is acheived by apply
     <div class="methodDescription" style="display:none" id="classof_camera_1a3580ee80c482551767cda5aea4fb8b1b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getImagePlaneDistance</span><span class="args">(ofRectangle viewport=ofRectangle()) const </span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="classof_camera_1a2ab2daf9b7432374e6c4bf70a5d94861" class="method">
+  </div></div>
+  </div><div id="Rendering">
+    <h3 class="sectionHeader">Rendering</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="classof_camera_1a2ab2daf9b7432374e6c4bf70a5d94861" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_camera_1a2ab2daf9b7432374e6c4bf70a5d94861&quot;)">
         <span class="type"></span>
@@ -812,7 +434,11 @@ frustum&quot; and is used (for example) in stereo views. It is acheived by apply
 <p>Ends rendering with the camera. </p>
 
 </div></div>
-  </div><div id="classof_camera_1adae8531891832904ff32a8551c9f5ad2" class="method">
+  </div></div>
+  </div><div id="OpenGLMatrix">
+    <h3 class="sectionHeader">OpenGL Matrix</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="classof_camera_1adae8531891832904ff32a8551c9f5ad2" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_camera_1adae8531891832904ff32a8551c9f5ad2&quot;)">
         <span class="type"></span>
@@ -860,7 +486,11 @@ frustum&quot; and is used (for example) in stereo views. It is acheived by apply
     <div class="methodDescription" style="display:none" id="classof_camera_1acc6d778e628e8bb8403a529c22f5d501_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMatrix4x4.html">ofMatrix4x4</a> </span><span class="name">getModelViewProjectionMatrix</span><span class="args">(ofRectangle viewport=ofRectangle()) const </span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="classof_camera_1aca23c0e808719eec1167837b060b0d33" class="method">
+  </div></div>
+  </div><div id="CoordinateConversion">
+    <h3 class="sectionHeader">Coordinate Conversion</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="classof_camera_1aca23c0e808719eec1167837b060b0d33" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_camera_1aca23c0e808719eec1167837b060b0d33&quot;)">
         <span class="type"></span>
@@ -937,7 +567,11 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
     <div class="methodDescription" style="display:none" id="classof_camera_1a19c0323a3f031e0203262aed598928a2_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">cameraToWorld</span><span class="args">(ofVec3f CameraXYZ, ofRectangle viewport=ofRectangle()) const </span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="classof_camera_1ae46d78c7679d8102374ddcd8b53098b3" class="method">
+  </div></div>
+  </div><div id="Renderer">
+    <h3 class="sectionHeader">Renderer</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="classof_camera_1ae46d78c7679d8102374ddcd8b53098b3" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_camera_1ae46d78c7679d8102374ddcd8b53098b3&quot;)">
         <span class="type"></span>
@@ -951,7 +585,418 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
     <div class="methodDescription" style="display:none" id="classof_camera_1ae46d78c7679d8102374ddcd8b53098b3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setRenderer</span><span class="args">(shared_ptr&lt; ofBaseRenderer &gt; renderer)</span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="classof_node_1ad475e04b79cbd1528ae3c59adba0a7c2" class="method">
+  </div></div>
+  </div><div id="ConstructorandDestructor">
+    <h3 class="sectionHeader">Constructor and Destructor</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="ae432309081375a91cacf80c5d9093c14" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae432309081375a91cacf80c5d9093c14&quot;)">
+        <span class="type"></span>
+        <a class="name">ofEasyCam</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ae432309081375a91cacf80c5d9093c14_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofEasyCam</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Create a default camera. </p>
+
+</div></div>
+  </div><div id="a00f32e3774a5d9f4733ee43dd6b9b8f7" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a00f32e3774a5d9f4733ee43dd6b9b8f7&quot;)">
+        <span class="type"></span>
+        <a class="name">~ofEasyCam</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a00f32e3774a5d9f4733ee43dd6b9b8f7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">~ofEasyCam</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Destroy the camera. </p>
+
+</div></div>
+  </div></div>
+  </div><div id="Rendering">
+    <h3 class="sectionHeader">Rendering</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a573175b87f314ec09df6713fe07d02fc" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a573175b87f314ec09df6713fe07d02fc&quot;)">
+        <span class="type"></span>
+        <a class="name">begin</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a573175b87f314ec09df6713fe07d02fc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">begin</span><span class="args">(ofRectangle viewport=ofRectangle())</span></div><div class="memberDocumentation">
+
+<p>Begins rendering with the camera. </p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="ofNode.html#a69ed7a21f7f8ee435fa6d8a99424e9ba">draw</a>() {</div>
+<div class="line">    <span class="comment">// Begin rendering from the camera&apos;s perspective.</span></div>
+<div class="line">    camera.begin();</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="of_graphics_8cpp.html#acc4b7173caaa9e04c8965782c6925bdc">ofLine</a>(0, 0, <a class="code" href="of_app_runner_8cpp.html#a28bb1c518b5c68ee2eae655bd4e56445">ofGetWidth</a>(), <a class="code" href="of_app_runner_8cpp.html#a415b5eadf885ebd1f4799cc40e5db137">ofGetHeight</a>());</div>
+<div class="line">    <span class="comment">// Additional rendering ...</span></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// End rendering form the camera&apos;s perspective.</span></div>
+<div class="line">    camera.end();</div>
+<div class="line">}</div>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">viewport</td><td>The camera&apos;s rendering viewport. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="ofCamera.html#ae7e92c2c1a3e8d6a13d795334668b9cd">ofCamera</a>.</p>
+
+</div></div>
+  </div><div id="a8833ae781975911013b5f6aa3bec32cd" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8833ae781975911013b5f6aa3bec32cd&quot;)">
+        <span class="type"></span>
+        <a class="name">reset</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a8833ae781975911013b5f6aa3bec32cd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">reset</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Reset the camera position and orientation. </p>
+
+</div></div>
+  </div></div>
+  </div><div id="CameraTarget">
+    <h3 class="sectionHeader">Camera Target</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a16d54adecaba3892262551e5ea8dce25" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a16d54adecaba3892262551e5ea8dce25&quot;)">
+        <span class="type"></span>
+        <a class="name">setTarget</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a16d54adecaba3892262551e5ea8dce25_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setTarget</span><span class="args">(const ofVec3f &amp;target)</span></div><div class="memberDocumentation">
+
+<p>Set the camera&apos;s target. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>The position of the target. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setTarget</span><span class="args">(ofNode &amp;target)</span></div><div class="memberDocumentation">
+
+<p>Set the camera&apos;s target. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>The position of the target. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="afbf5951608a33ebd3c5f32b9fd0f2b1d" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#afbf5951608a33ebd3c5f32b9fd0f2b1d&quot;)">
+        <span class="type"></span>
+        <a class="name">getTarget</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="afbf5951608a33ebd3c5f32b9fd0f2b1d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofNode.html">ofNode</a> </span><span class="name">getTarget</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Get the camera&apos;s target node reference. </p>
+<dl class="section return"><dt>Returns</dt><dd>a reference the the camera&apos;s target node. </dd></dl>
+
+</div></div>
+  </div></div>
+  </div><div id="Getters">
+    <h3 class="sectionHeader">Getters</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a4e3ba707cdc44c46bd442641d1b0c25a" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a4e3ba707cdc44c46bd442641d1b0c25a&quot;)">
+        <span class="type"></span>
+        <a class="name">setDistance</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a4e3ba707cdc44c46bd442641d1b0c25a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setDistance</span><span class="args">(float distance)</span></div><div class="memberDocumentation">
+
+<p>Set the camera&apos;s distance to the target. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">distance</td><td>The distance to the target. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="a27eac21ea675b765c599cc3947455efd" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a27eac21ea675b765c599cc3947455efd&quot;)">
+        <span class="type"></span>
+        <a class="name">getDistance</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a27eac21ea675b765c599cc3947455efd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getDistance</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Get the distance to the target. </p>
+<dl class="section return"><dt>Returns</dt><dd>the distance to the target. </dd></dl>
+
+</div></div>
+  </div><div id="a3c25cc3a6ca19efd4e06667bcc2586b0" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a3c25cc3a6ca19efd4e06667bcc2586b0&quot;)">
+        <span class="type"></span>
+        <a class="name">setDrag</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a3c25cc3a6ca19efd4e06667bcc2586b0_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setDrag</span><span class="args">(float drag)</span></div><div class="memberDocumentation">
+
+<p>Set the camera&apos;s drag coefficient. </p>
+<p>Drag is affects how quickly the camera starts up and slows down when a user interacts with its position using a pointer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">drag</td><td>The normalized coefficient value between 0 and 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="a160c0400017413385c89bb9084073bff" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a160c0400017413385c89bb9084073bff&quot;)">
+        <span class="type"></span>
+        <a class="name">getDrag</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a160c0400017413385c89bb9084073bff_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getDrag</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Get the camera&apos;s drag coefficient. </p>
+<dl class="section return"><dt>Returns</dt><dd>the camera&apos;s drag coefficient. </dd></dl>
+
+</div></div>
+  </div></div>
+  </div><div id="Setters">
+    <h3 class="sectionHeader">Setters</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="ac7b61a7f125b40d75eb4ab03d05fc0b8" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac7b61a7f125b40d75eb4ab03d05fc0b8&quot;)">
+        <span class="type"></span>
+        <a class="name">setAutoDistance</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ac7b61a7f125b40d75eb4ab03d05fc0b8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setAutoDistance</span><span class="args">(bool bAutoDistance)</span></div><div class="memberDocumentation">
+
+<p>Enable or disable camera autodistance. </p>
+<p>Allow the camera to attempt to set the distance based on the camera&apos;s current viewpoirt.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bAutoDistance</td><td>true to enable auto distance. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="a272aa1d05bde6bcbb5ea23ab54fe5123" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a272aa1d05bde6bcbb5ea23ab54fe5123&quot;)">
+        <span class="type"></span>
+        <a class="name">setEvents</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a272aa1d05bde6bcbb5ea23ab54fe5123_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setEvents</span><span class="args">(ofCoreEvents &amp;events)</span></div><div class="memberDocumentation">
+
+</div></div>
+  </div><div id="aa4d75c007405c69f76d7fb4a89f931bd" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa4d75c007405c69f76d7fb4a89f931bd&quot;)">
+        <span class="type"></span>
+        <a class="name">setTranslationKey</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aa4d75c007405c69f76d7fb4a89f931bd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setTranslationKey</span><span class="args">(char key)</span></div><div class="memberDocumentation">
+
+<p>Set the key used to switch between camera rotation and translation. </p>
+<p>Translation will only happen when the translation key is pressed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key code for the translation key. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
+  </div><div id="ae9a2019ff4ed6c2f26e0bb799c735b21" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae9a2019ff4ed6c2f26e0bb799c735b21&quot;)">
+        <span class="type"></span>
+        <a class="name">getTranslationKey</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ae9a2019ff4ed6c2f26e0bb799c735b21_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">char </span><span class="name">getTranslationKey</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Get the current translation key code. </p>
+<dl class="section return"><dt>Returns</dt><dd>the current translation key code. </dd></dl>
+
+</div></div>
+  </div></div>
+  </div><div id="MouseInput">
+    <h3 class="sectionHeader">Mouse Input</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="ac267e28e06a92003f6422e0ba707bfae" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac267e28e06a92003f6422e0ba707bfae&quot;)">
+        <span class="type"></span>
+        <a class="name">enableMouseInput</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ac267e28e06a92003f6422e0ba707bfae_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">enableMouseInput</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Enable mouse camera control. </p>
+
+</div></div>
+  </div><div id="a206a55a70de3bc16bd53cc3b6e9d07f0" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a206a55a70de3bc16bd53cc3b6e9d07f0&quot;)">
+        <span class="type"></span>
+        <a class="name">disableMouseInput</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a206a55a70de3bc16bd53cc3b6e9d07f0_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">disableMouseInput</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Disable mouse camera control. </p>
+
+</div></div>
+  </div><div id="a47affec73161672979f9ae3e826702d6" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a47affec73161672979f9ae3e826702d6&quot;)">
+        <span class="type"></span>
+        <a class="name">getMouseInputEnabled</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="a47affec73161672979f9ae3e826702d6_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">getMouseInputEnabled</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Determine if mouse camera control is enabled. </p>
+
+</div></div>
+  </div><div id="aa42058727e704550d6e23b91e81fe985" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa42058727e704550d6e23b91e81fe985&quot;)">
+        <span class="type"></span>
+        <a class="name">enableMouseMiddleButton</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="aa42058727e704550d6e23b91e81fe985_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">enableMouseMiddleButton</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Enable the mouse&apos;s middle button for camera control. </p>
+
+</div></div>
+  </div><div id="ae7762c86d87889acd1cdd7c0d3a408cc" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae7762c86d87889acd1cdd7c0d3a408cc&quot;)">
+        <span class="type"></span>
+        <a class="name">disableMouseMiddleButton</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ae7762c86d87889acd1cdd7c0d3a408cc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">disableMouseMiddleButton</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Disable the mouse&apos;s middle button for camera control. </p>
+
+</div></div>
+  </div><div id="ae69406a67c4ceea8ee86767e53c08a44" class="method">
+    <div class="methodHeader">
+      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae69406a67c4ceea8ee86767e53c08a44&quot;)">
+        <span class="type"></span>
+        <a class="name">getMouseMiddleButtonEnabled</a>
+        <span class="args"></span>
+        <span class="kind">()</span>
+        <span class="note"></span>
+      </div>
+    </div>
+
+    <div class="methodDescription" style="display:none" id="ae69406a67c4ceea8ee86767e53c08a44_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">getMouseMiddleButtonEnabled</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Determine if the middle mouse button is enabled. </p>
+
+</div></div>
+  </div></div>
+  </div><div id="ParentNode">
+    <h3 class="sectionHeader">Parent Node</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="classof_node_1ad475e04b79cbd1528ae3c59adba0a7c2" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_node_1ad475e04b79cbd1528ae3c59adba0a7c2&quot;)">
         <span class="type"></span>
@@ -964,7 +1009,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1ad475e04b79cbd1528ae3c59adba0a7c2_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setParent</span><span class="args">(ofNode &amp;parent, bool bMaintainGlobalTransform=false)</span></div><div class="memberDocumentation">
 
-<p>set parent to link nodes transformations are inherited from parent node set to NULL if not needed (default) </p>
+<p>Set parent to link nodes transformations. This will inherit transformations from parent node. </p>
 
 </div></div>
   </div><div id="classof_node_1aa6c41c2d514797f04f162bb323cb4dfa" class="method">
@@ -980,6 +1025,8 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1aa6c41c2d514797f04f162bb323cb4dfa_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clearParent</span><span class="args">(bool bMaintainGlobalTransform=false)</span></div><div class="memberDocumentation">
 
+<p>Remove parent node linking. </p>
+
 </div></div>
   </div><div id="classof_node_1a08d61ddc77fd655780a7c269756b7ecb" class="method">
     <div class="methodHeader">
@@ -994,8 +1041,14 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1a08d61ddc77fd655780a7c269756b7ecb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofNode.html">ofNode</a> </span><span class="name">getParent</span><span class="args">() const </span></div><div class="memberDocumentation">
 
+<p>Get the parent node that this node is linked to. </p>
+
 </div></div>
-  </div><div id="classof_node_1a89350f61b536e5f64dc13682a6aee97d" class="method">
+  </div></div>
+  </div><div id="Getters">
+    <h3 class="sectionHeader">Getters</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="classof_node_1a89350f61b536e5f64dc13682a6aee97d" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_node_1a89350f61b536e5f64dc13682a6aee97d&quot;)">
         <span class="type"></span>
@@ -1008,7 +1061,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1a89350f61b536e5f64dc13682a6aee97d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getPosition</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>Get position. </p>
+<p>Get position as a 3d vector. </p>
 
 </div></div>
   </div><div id="classof_node_1a819b96492b11250d5682e7853c5b753c" class="method">
@@ -1024,7 +1077,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1a819b96492b11250d5682e7853c5b753c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getX</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>get x coordinate. </p>
+<p>Get x coordinate. </p>
 
 </div></div>
   </div><div id="classof_node_1a1177cd7d07224c3690a4364684f1719f" class="method">
@@ -1040,7 +1093,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1a1177cd7d07224c3690a4364684f1719f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getY</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>get y coordinate. </p>
+<p>Get y coordinate. </p>
 
 </div></div>
   </div><div id="classof_node_1aad7aed0da357927a7bfa1c5669fd9e64" class="method">
@@ -1056,7 +1109,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1aad7aed0da357927a7bfa1c5669fd9e64_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getZ</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>get z coordinate. </p>
+<p>Get z coordinate. </p>
 
 </div></div>
   </div><div id="classof_node_1a75af589eae2b502216acad4668edf43b" class="method">
@@ -1072,7 +1125,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1a75af589eae2b502216acad4668edf43b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getXAxis</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>get x axis. </p>
+<p>Get x axis as 3d vector. </p>
 
 </div></div>
   </div><div id="classof_node_1a6bf67ed85db5017a37aba4e3262e914a" class="method">
@@ -1088,7 +1141,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1a6bf67ed85db5017a37aba4e3262e914a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getYAxis</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>get y axis. </p>
+<p>Get y axis as 3d vector. </p>
 
 </div></div>
   </div><div id="classof_node_1aecfc7c45671b9bb4757821e3a10dccb1" class="method">
@@ -1104,7 +1157,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1aecfc7c45671b9bb4757821e3a10dccb1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getZAxis</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>get z axis. </p>
+<p>Get z axis as 3d vector. </p>
 
 </div></div>
   </div><div id="classof_node_1aaa10e7761bcbfc1c504c6312c52f833a" class="method">
@@ -1120,7 +1173,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1aaa10e7761bcbfc1c504c6312c52f833a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getSideDir</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>get x axis. </p>
+<p>Get x axis as 3d vector. </p>
 <dl class="section return"><dt>Returns</dt><dd>x axis. </dd></dl>
 
 </div></div>
@@ -1137,7 +1190,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1a884d1b02034ac8822415bbb43ac4dd5f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getLookAtDir</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>get -z axis. </p>
+<p>Get -z axis as 3d vector. </p>
 <dl class="section return"><dt>Returns</dt><dd>-z axis. </dd></dl>
 
 </div></div>
@@ -1154,7 +1207,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1ae24a97f7de20c48a5f75d82fb12577cf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getUpDir</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>get y axis. </p>
+<p>Get y axis as 3d vector. </p>
 <dl class="section return"><dt>Returns</dt><dd>y axis. </dd></dl>
 
 </div></div>
@@ -1312,7 +1365,11 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
     <div class="methodDescription" style="display:none" id="classof_node_1a47c700c7791c41afb514a9949653540c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getGlobalScale</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="classof_node_1aee04a17c179cb45f7e03f8518be8d0ad" class="method">
+  </div></div>
+  </div><div id="Setters">
+    <h3 class="sectionHeader">Setters</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="classof_node_1aee04a17c179cb45f7e03f8518be8d0ad" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_node_1aee04a17c179cb45f7e03f8518be8d0ad&quot;)">
         <span class="type"></span>
@@ -1324,6 +1381,8 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
     </div>
 
     <div class="methodDescription" style="display:none" id="classof_node_1aee04a17c179cb45f7e03f8518be8d0ad_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setTransformMatrix</span><span class="args">(const ofMatrix4x4 &amp;m44)</span></div><div class="memberDocumentation">
+
+<p>Directly set the transformation matrix. </p>
 
 </div></div>
   </div><div id="classof_node_1a6f5733da97701638ec9e089016d0381a" class="method">
@@ -1338,6 +1397,8 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
     </div>
 
     <div class="methodDescription" style="display:none" id="classof_node_1a6f5733da97701638ec9e089016d0381a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setPosition</span><span class="args">(float px, float py, float pz)</span></div><div class="memberDocumentation">
+
+<p>Set the position of the node. </p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setPosition</span><span class="args">(const ofVec3f &amp;p)</span></div><div class="memberDocumentation">
 
@@ -1371,7 +1432,12 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1a732a883de750dcd157ba03a7a9432f57_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setOrientation</span><span class="args">(const ofQuaternion &amp;q)</span></div><div class="memberDocumentation">
 
+<p>Set orientation with a quaternion. </p>
+
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setOrientation</span><span class="args">(const ofVec3f &amp;eulerAngles)</span></div><div class="memberDocumentation">
+
+<p>Set orientation with a euler angles. </p>
+<dl class="section note"><dt>Note</dt><dd>Prepare for gimbal lock </dd></dl>
 
 </div></div>
   </div><div id="classof_node_1ac888a4aabc97bdfa86114079dcdf4832" class="method">
@@ -1406,7 +1472,11 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setScale</span><span class="args">(const ofVec3f &amp;s)</span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="classof_node_1a89949bfa32613379f65466be7514032a" class="method">
+  </div></div>
+  </div><div id="Modifiers">
+    <h3 class="sectionHeader">Modifiers</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="classof_node_1a89949bfa32613379f65466be7514032a" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_node_1a89949bfa32613379f65466be7514032a&quot;)">
         <span class="type"></span>
@@ -1419,11 +1489,11 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1a89949bfa32613379f65466be7514032a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">move</span><span class="args">(float x, float y, float z)</span></div><div class="memberDocumentation">
 
-<p>move by arbitrary amount </p>
+<p>Move by arbitrary amount. </p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">move</span><span class="args">(const ofVec3f &amp;offset)</span></div><div class="memberDocumentation">
 
-<p>move by arbitrary amount </p>
+<p>Move by arbitrary amount. </p>
 
 </div></div>
   </div><div id="classof_node_1a61fcc8f30420847847f62873a47cca8a" class="method">
@@ -1439,7 +1509,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1a61fcc8f30420847847f62873a47cca8a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">truck</span><span class="args">(float amount)</span></div><div class="memberDocumentation">
 
-<p>move sideways (in local x axis) </p>
+<p>Move sideways (in local x axis) </p>
 
 </div></div>
   </div><div id="classof_node_1ad030cd8c55b9df3dbf2786347f62ad3b" class="method">
@@ -1455,7 +1525,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1ad030cd8c55b9df3dbf2786347f62ad3b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">boom</span><span class="args">(float amount)</span></div><div class="memberDocumentation">
 
-<p>move up+down (in local y axis) </p>
+<p>Move up+down (in local y axis) </p>
 
 </div></div>
   </div><div id="classof_node_1a8ab940d4c166064c8b2e3b4ab237917c" class="method">
@@ -1471,7 +1541,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1a8ab940d4c166064c8b2e3b4ab237917c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">dolly</span><span class="args">(float amount)</span></div><div class="memberDocumentation">
 
-<p>move forward+backward (in local z axis) </p>
+<p>Move forward+backward (in local z axis) </p>
 
 </div></div>
   </div><div id="classof_node_1a674ca0b1cb71f609fadf8dba79106a72" class="method">
@@ -1487,7 +1557,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1a674ca0b1cb71f609fadf8dba79106a72_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">tilt</span><span class="args">(float degrees)</span></div><div class="memberDocumentation">
 
-<p>tilt up+down (around local x axis) </p>
+<p>Tilt up+down (around local x axis) </p>
 
 </div></div>
   </div><div id="classof_node_1ad8f671a39235404984fb84da35dd93ae" class="method">
@@ -1503,7 +1573,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1ad8f671a39235404984fb84da35dd93ae_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">pan</span><span class="args">(float degrees)</span></div><div class="memberDocumentation">
 
-<p>rotate left+right (around local y axis) </p>
+<p>Rotate left+right (around local y axis) </p>
 
 </div></div>
   </div><div id="classof_node_1a6eabc08d0e5ec0f8e7b6d2931531e400" class="method">
@@ -1519,7 +1589,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1a6eabc08d0e5ec0f8e7b6d2931531e400_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">roll</span><span class="args">(float degrees)</span></div><div class="memberDocumentation">
 
-<p>roll left+right (around local z axis) </p>
+<p>Roll left+right (around local z axis) </p>
 
 </div></div>
   </div><div id="classof_node_1a1334bc48d4dbbc8d769ce42ee82fdf96" class="method">
@@ -1535,15 +1605,15 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1a1334bc48d4dbbc8d769ce42ee82fdf96_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">rotate</span><span class="args">(const ofQuaternion &amp;q)</span></div><div class="memberDocumentation">
 
-<p>rotate by quaternion </p>
+<p>Rotate by quaternion. </p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">rotate</span><span class="args">(float degrees, const ofVec3f &amp;v)</span></div><div class="memberDocumentation">
 
-<p>rotate around arbitrary axis by angle </p>
+<p>Rotate around arbitrary axis by angle. </p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">rotate</span><span class="args">(float degrees, float vx, float vy, float vz)</span></div><div class="memberDocumentation">
 
-<p>rotate around arbitrary axis by angle </p>
+<p>Rotate around arbitrary axis by angle. </p>
 
 </div></div>
   </div><div id="classof_node_1a084b6a9cc56ae474be007ba4595c471d" class="method">
@@ -1559,11 +1629,11 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1a084b6a9cc56ae474be007ba4595c471d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">rotateAround</span><span class="args">(const ofQuaternion &amp;q, const ofVec3f &amp;point)</span></div><div class="memberDocumentation">
 
-<p>rotate by quaternion around point </p>
+<p>Rotate by quaternion around point. </p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">rotateAround</span><span class="args">(float degrees, const ofVec3f &amp;axis, const ofVec3f &amp;point)</span></div><div class="memberDocumentation">
 
-<p>rotate around arbitrary axis by angle around point </p>
+<p>Rotate around arbitrary axis by angle around point. </p>
 
 </div></div>
   </div><div id="classof_node_1a039b31630ea3fc3718da43e23ecd7ef3" class="method">
@@ -1579,11 +1649,11 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1a039b31630ea3fc3718da43e23ecd7ef3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">lookAt</span><span class="args">(const ofVec3f &amp;lookAtPosition, ofVec3f upVector=ofVec3f(0, 1, 0))</span></div><div class="memberDocumentation">
 
-<p>orient node to look at position (-z axis pointing to position) </p>
+<p>Orient node to look at position (-z axis pointing to position) </p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">lookAt</span><span class="args">(const ofNode &amp;lookAtNode, const ofVec3f &amp;upVector=ofVec3f(0, 1, 0))</span></div><div class="memberDocumentation">
 
-<p>orient node to look at node (-z axis pointing to node) </p>
+<p>Orient node to look at node (-z axis pointing to node) </p>
 
 </div></div>
   </div><div id="classof_node_1a2a0989e1ed10fcbfea932ea305f064c1" class="method">
@@ -1599,12 +1669,16 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1a2a0989e1ed10fcbfea932ea305f064c1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">orbit</span><span class="args">(float longitude, float latitude, float radius, const ofVec3f &#xA2;erPoint=ofVec3f(0, 0, 0))</span></div><div class="memberDocumentation">
 
-<p>orbit object around target at radius </p>
+<p>Orbit object around target at radius. </p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">orbit</span><span class="args">(float longitude, float latitude, float radius, ofNode &#xA2;erNode)</span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="classof_node_1ad6523607a72bb535e3363e848937a9f3" class="method">
+  </div></div>
+  </div><div id="OpenGLTransformation">
+    <h3 class="sectionHeader">OpenGL Transformation</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="classof_node_1ad6523607a72bb535e3363e848937a9f3" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_node_1ad6523607a72bb535e3363e848937a9f3&quot;)">
         <span class="type"></span>
@@ -1617,7 +1691,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1ad6523607a72bb535e3363e848937a9f3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">transformGL</span><span class="args">(ofBaseRenderer *renderer=ofGetCurrentRenderer().get()) const </span></div><div class="memberDocumentation">
 
-<p>set opengl&apos;s modelview matrix to this nodes transform if you want to draw something at the position+orientation+scale of this node... ...call ofNode::transform(); write your draw code, and ofNode::restoreTransform(); OR A simpler way is to extend <a class="el" href="ofNode.html" title="a generic 3d object in space with transformation (position, rotation, scale) The ofNode is the base o...">ofNode</a> and override <a class="el" href="ofNode.html#a23a1ca114eeff7e8494cecee90002534">ofNode::customDraw()</a>; </p>
+<p>Set opengl&apos;s modelview matrix to this nodes transform if you want to draw something at the position+orientation+scale of this node... ...call ofNode::transform(); write your draw code, and ofNode::restoreTransform(); OR A simpler way is to extend <a class="el" href="ofNode.html" title="A generic 3d object in space with transformation (position, rotation, scale). ">ofNode</a> and override <a class="el" href="ofNode.html#a23a1ca114eeff7e8494cecee90002534">ofNode::customDraw()</a>;. </p>
 
 </div></div>
   </div><div id="classof_node_1a0fa1b33b13277b7b9df8773faf61cf4d" class="method">
@@ -1647,10 +1721,14 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1ace344f081aa534670949ae9e03374626_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">resetTransform</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>resets this node&apos;s transformation </p>
+<p>Resets this node&apos;s transformation. </p>
 
 </div></div>
-  </div><div id="classof_node_1a6f3b18d2902d062f08b62c03abf08cc3" class="method">
+  </div></div>
+  </div><div id="Drawing">
+    <h3 class="sectionHeader">Drawing</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="classof_node_1a6f3b18d2902d062f08b62c03abf08cc3" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_node_1a6f3b18d2902d062f08b62c03abf08cc3&quot;)">
         <span class="type"></span>
@@ -1663,7 +1741,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1a6f3b18d2902d062f08b62c03abf08cc3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">customDraw</span><span class="args">(const ofBaseRenderer *renderer) const </span></div><div class="memberDocumentation">
 
-<p>if you extend <a class="el" href="ofNode.html" title="a generic 3d object in space with transformation (position, rotation, scale) The ofNode is the base o...">ofNode</a> and wish to change the way it draws, extend this try to not use global functions for rendering and instead use the passed renderer </p>
+<p>If you extend <a class="el" href="ofNode.html" title="A generic 3d object in space with transformation (position, rotation, scale). ">ofNode</a> and wish to change the way it draws, extend this try to not use global functions for rendering and instead use the passed renderer. </p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">customDraw</span><span class="args">()</span></div><div class="memberDocumentation">
 
@@ -1681,7 +1759,7 @@ coordinate&quot; is set to be the same as your camera&apos;s.</p>
 
     <div class="methodDescription" style="display:none" id="classof_node_1a69ed7a21f7f8ee435fa6d8a99424e9ba_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>draw function. do NOT override this transforms the node to its position+orientation+scale and calls the virtual &apos;customDraw&apos; method above which you CAN override </p>
+<p>Draw function. do NOT override this transforms the node to its position+orientation+scale and calls the virtual &apos;customDraw&apos; method above which you CAN override. </p>
 
 <p>Reimplemented in <a class="el" href="of3dPrimitive.html#aa6d2e5db5bee3196c2bcb13eb9e32d27">of3dPrimitive</a>.</p>
 

@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <span class="class">ofNode</span><li class="chapter"><a href="#Functions">Functions</a></li></ul>
+        <span class="class">ofNode</span><li class="chapter"><a href="#ParentNode">Parent Node</a></li><li class="chapter"><a href="#Getters">Getters</a></li><li class="chapter"><a href="#Setters">Setters</a></li><li class="chapter"><a href="#Modifiers">Modifiers</a></li><li class="chapter"><a href="#OpenGLTransformation">OpenGL Transformation</a></li><li class="chapter"><a href="#Drawing">Drawing</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -73,43 +73,16 @@
     <div class="classHeader">
       <h1 class="classTitle">ofNode<small>class</small></h1>
     </div>
-    <div class="classDescription"><div class="textblock"><p>a generic 3d object in space with transformation (position, rotation, scale) The <a class="el" href="ofNode.html" title="a generic 3d object in space with transformation (position, rotation, scale) The ofNode is the base o...">ofNode</a> is the base of all things 3d. It lets you represent a location and orientation in 3d space and also allows you to add children or parents so that sets of nodes can move together. This is handy for representing complex 3d models that are linked together, the same way that your hand is linked to your wrist (hopefully), which is linked to your elbow (hopefully), and so on. Nodes are the base of the ofPrimitives, <a class="el" href="ofCamera.html" title="A basic camera object for interacting with objects in 3D space. ">ofCamera</a>, and ofEasyCamera, among other things. </p>
+    <div class="classDescription"><div class="textblock"><p>A generic 3d object in space with transformation (position, rotation, scale). </p>
+<p>The <a class="el" href="ofNode.html" title="A generic 3d object in space with transformation (position, rotation, scale). ">ofNode</a> is the base of all things 3d. It lets you represent a location and orientation in 3d space and also allows you to add children or parents so that sets of nodes can move together. This is handy for representing complex 3d models that are linked together, the same way that your hand is linked to your wrist (hopefully), which is linked to your elbow (hopefully), and so on. Nodes are the base of the ofPrimitives, <a class="el" href="ofCamera.html" title="A basic camera object for interacting with objects in 3D space. ">ofCamera</a>, and ofEasyCamera, among other things.</p>
 <p>with API to move around in global or local space and virtual draw method</p>
 <p>Info: uses right-handed coordinate system ofNodes &apos;look&apos; along -ve z axis All set* methods work in local space unless stated otherwise</p>
-<p>TODO: cache inverseMatrix, local and global To get the current position, check out: <a class="el" href="ofNode.html#a819b96492b11250d5682e7853c5b753c" title="get x coordinate. ">getX()</a>, <a class="el" href="ofNode.html#a1177cd7d07224c3690a4364684f1719f" title="get y coordinate. ">getY()</a>, <a class="el" href="ofNode.html#aad7aed0da357927a7bfa1c5669fd9e64" title="get z coordinate. ">getZ()</a>. To get the axis of the node call <a class="el" href="ofNode.html#a75af589eae2b502216acad4668edf43b" title="get x axis. ">getXAxis()</a> (or the y and z variants for those other axes). Another really useful feature of the <a class="el" href="ofNode.html" title="a generic 3d object in space with transformation (position, rotation, scale) The ofNode is the base o...">ofNode</a> is that you can get the <a href="http://en.wikipedia.org/wiki/Euler_angles">Eulerian angles</a> of each node: <a class="el" href="ofNode.html#a4f52fa48348f59307623c7a7bb4ef59f">getPitch()</a>, <a class="el" href="ofNode.html#a91b332c93dd0da7c289ffcc95ccc5a46">getHeading()</a>, <a class="el" href="ofNode.html#a0336b1426c2bc493bc15a7093fb35b5a">getRoll()</a>. The global transformation matrix of the <a class="el" href="ofNode.html" title="a generic 3d object in space with transformation (position, rotation, scale) The ofNode is the base o...">ofNode</a> is also available using the <a class="el" href="ofNode.html#a78a98aca9e6d389ae4918ad9783f3bf7">getGlobalTransformMatrix()</a>, very handy for figuring out things in relation to the OpenGL representation of your OF world. <a class="el" href="ofNode.html#a427fce44ef9e64b50c223a42d057a700">getGlobalOrientation()</a> also is handy, returning a <a class="el" href="ofQuaternion.html">ofQuaternion</a> that you can use to find out whether your node is upside down in relation to the rest of your OF world (really an OpenGL context, but let&apos;s not get into that quite yet). </p>
+<p>To get the current position, check out: <a class="el" href="ofNode.html#a819b96492b11250d5682e7853c5b753c" title="Get x coordinate. ">getX()</a>, <a class="el" href="ofNode.html#a1177cd7d07224c3690a4364684f1719f" title="Get y coordinate. ">getY()</a>, <a class="el" href="ofNode.html#aad7aed0da357927a7bfa1c5669fd9e64" title="Get z coordinate. ">getZ()</a>. To get the axis of the node call <a class="el" href="ofNode.html#a75af589eae2b502216acad4668edf43b" title="Get x axis as 3d vector. ">getXAxis()</a> (or the y and z variants for those other axes). Another really useful feature of the <a class="el" href="ofNode.html" title="A generic 3d object in space with transformation (position, rotation, scale). ">ofNode</a> is that you can get the <a href="http://en.wikipedia.org/wiki/Euler_angles">Eulerian angles</a> of each node: <a class="el" href="ofNode.html#a4f52fa48348f59307623c7a7bb4ef59f">getPitch()</a>, <a class="el" href="ofNode.html#a91b332c93dd0da7c289ffcc95ccc5a46">getHeading()</a>, <a class="el" href="ofNode.html#a0336b1426c2bc493bc15a7093fb35b5a">getRoll()</a>. The global transformation matrix of the <a class="el" href="ofNode.html" title="A generic 3d object in space with transformation (position, rotation, scale). ">ofNode</a> is also available using the <a class="el" href="ofNode.html#a78a98aca9e6d389ae4918ad9783f3bf7">getGlobalTransformMatrix()</a>, very handy for figuring out things in relation to the OpenGL representation of your OF world. <a class="el" href="ofNode.html#a427fce44ef9e64b50c223a42d057a700">getGlobalOrientation()</a> also is handy, returning a <a class="el" href="ofQuaternion.html">ofQuaternion</a> that you can use to find out whether your node is upside down in relation to the rest of your OF world (really an OpenGL context, but let&apos;s not get into that quite yet). </p>
 </div></div>
-    <div class="classMethods"><div id="Functions">
-    <h3 class="sectionHeader">Functions</h3>
+    <div class="classMethods"><div id="ParentNode">
+    <h3 class="sectionHeader">Parent Node</h3>
     <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="aa2b223ca1f8560ef193eb7bde666d758" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa2b223ca1f8560ef193eb7bde666d758&quot;)">
-        <span class="type"></span>
-        <a class="name">ofNode</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa2b223ca1f8560ef193eb7bde666d758_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">ofNode</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ad0f916a28a08c95064e89bdc5131b923" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad0f916a28a08c95064e89bdc5131b923&quot;)">
-        <span class="type"></span>
-        <a class="name">~ofNode</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ad0f916a28a08c95064e89bdc5131b923_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"> </span><span class="name">~ofNode</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ad475e04b79cbd1528ae3c59adba0a7c2" class="method">
+    <div class="sectionContent"><div id="ad475e04b79cbd1528ae3c59adba0a7c2" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad475e04b79cbd1528ae3c59adba0a7c2&quot;)">
         <span class="type"></span>
@@ -122,7 +95,7 @@
 
     <div class="methodDescription" style="display:none" id="ad475e04b79cbd1528ae3c59adba0a7c2_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setParent</span><span class="args">(ofNode &amp;parent, bool bMaintainGlobalTransform=false)</span></div><div class="memberDocumentation">
 
-<p>set parent to link nodes transformations are inherited from parent node set to NULL if not needed (default) </p>
+<p>Set parent to link nodes transformations. This will inherit transformations from parent node. </p>
 
 </div></div>
   </div><div id="aa6c41c2d514797f04f162bb323cb4dfa" class="method">
@@ -138,6 +111,8 @@
 
     <div class="methodDescription" style="display:none" id="aa6c41c2d514797f04f162bb323cb4dfa_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clearParent</span><span class="args">(bool bMaintainGlobalTransform=false)</span></div><div class="memberDocumentation">
 
+<p>Remove parent node linking. </p>
+
 </div></div>
   </div><div id="a08d61ddc77fd655780a7c269756b7ecb" class="method">
     <div class="methodHeader">
@@ -152,8 +127,14 @@
 
     <div class="methodDescription" style="display:none" id="a08d61ddc77fd655780a7c269756b7ecb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofNode.html">ofNode</a> </span><span class="name">getParent</span><span class="args">() const </span></div><div class="memberDocumentation">
 
+<p>Get the parent node that this node is linked to. </p>
+
 </div></div>
-  </div><div id="a89350f61b536e5f64dc13682a6aee97d" class="method">
+  </div></div>
+  </div><div id="Getters">
+    <h3 class="sectionHeader">Getters</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a89350f61b536e5f64dc13682a6aee97d" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a89350f61b536e5f64dc13682a6aee97d&quot;)">
         <span class="type"></span>
@@ -166,7 +147,7 @@
 
     <div class="methodDescription" style="display:none" id="a89350f61b536e5f64dc13682a6aee97d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getPosition</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>Get position. </p>
+<p>Get position as a 3d vector. </p>
 
 </div></div>
   </div><div id="a819b96492b11250d5682e7853c5b753c" class="method">
@@ -182,7 +163,7 @@
 
     <div class="methodDescription" style="display:none" id="a819b96492b11250d5682e7853c5b753c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getX</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>get x coordinate. </p>
+<p>Get x coordinate. </p>
 
 </div></div>
   </div><div id="a1177cd7d07224c3690a4364684f1719f" class="method">
@@ -198,7 +179,7 @@
 
     <div class="methodDescription" style="display:none" id="a1177cd7d07224c3690a4364684f1719f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getY</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>get y coordinate. </p>
+<p>Get y coordinate. </p>
 
 </div></div>
   </div><div id="aad7aed0da357927a7bfa1c5669fd9e64" class="method">
@@ -214,7 +195,7 @@
 
     <div class="methodDescription" style="display:none" id="aad7aed0da357927a7bfa1c5669fd9e64_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">getZ</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>get z coordinate. </p>
+<p>Get z coordinate. </p>
 
 </div></div>
   </div><div id="a75af589eae2b502216acad4668edf43b" class="method">
@@ -230,7 +211,7 @@
 
     <div class="methodDescription" style="display:none" id="a75af589eae2b502216acad4668edf43b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getXAxis</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>get x axis. </p>
+<p>Get x axis as 3d vector. </p>
 
 </div></div>
   </div><div id="a6bf67ed85db5017a37aba4e3262e914a" class="method">
@@ -246,7 +227,7 @@
 
     <div class="methodDescription" style="display:none" id="a6bf67ed85db5017a37aba4e3262e914a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getYAxis</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>get y axis. </p>
+<p>Get y axis as 3d vector. </p>
 
 </div></div>
   </div><div id="aecfc7c45671b9bb4757821e3a10dccb1" class="method">
@@ -262,7 +243,7 @@
 
     <div class="methodDescription" style="display:none" id="aecfc7c45671b9bb4757821e3a10dccb1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getZAxis</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>get z axis. </p>
+<p>Get z axis as 3d vector. </p>
 
 </div></div>
   </div><div id="aaa10e7761bcbfc1c504c6312c52f833a" class="method">
@@ -278,7 +259,7 @@
 
     <div class="methodDescription" style="display:none" id="aaa10e7761bcbfc1c504c6312c52f833a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getSideDir</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>get x axis. </p>
+<p>Get x axis as 3d vector. </p>
 <dl class="section return"><dt>Returns</dt><dd>x axis. </dd></dl>
 
 </div></div>
@@ -295,7 +276,7 @@
 
     <div class="methodDescription" style="display:none" id="a884d1b02034ac8822415bbb43ac4dd5f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getLookAtDir</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>get -z axis. </p>
+<p>Get -z axis as 3d vector. </p>
 <dl class="section return"><dt>Returns</dt><dd>-z axis. </dd></dl>
 
 </div></div>
@@ -312,7 +293,7 @@
 
     <div class="methodDescription" style="display:none" id="ae24a97f7de20c48a5f75d82fb12577cf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getUpDir</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>get y axis. </p>
+<p>Get y axis as 3d vector. </p>
 <dl class="section return"><dt>Returns</dt><dd>y axis. </dd></dl>
 
 </div></div>
@@ -470,7 +451,11 @@
     <div class="methodDescription" style="display:none" id="a47c700c7791c41afb514a9949653540c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getGlobalScale</span><span class="args">() const </span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="aee04a17c179cb45f7e03f8518be8d0ad" class="method">
+  </div></div>
+  </div><div id="Setters">
+    <h3 class="sectionHeader">Setters</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="aee04a17c179cb45f7e03f8518be8d0ad" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aee04a17c179cb45f7e03f8518be8d0ad&quot;)">
         <span class="type"></span>
@@ -482,6 +467,8 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="aee04a17c179cb45f7e03f8518be8d0ad_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setTransformMatrix</span><span class="args">(const ofMatrix4x4 &amp;m44)</span></div><div class="memberDocumentation">
+
+<p>Directly set the transformation matrix. </p>
 
 </div></div>
   </div><div id="a6f5733da97701638ec9e089016d0381a" class="method">
@@ -496,6 +483,8 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="a6f5733da97701638ec9e089016d0381a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setPosition</span><span class="args">(float px, float py, float pz)</span></div><div class="memberDocumentation">
+
+<p>Set the position of the node. </p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setPosition</span><span class="args">(const ofVec3f &amp;p)</span></div><div class="memberDocumentation">
 
@@ -529,7 +518,12 @@
 
     <div class="methodDescription" style="display:none" id="a732a883de750dcd157ba03a7a9432f57_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setOrientation</span><span class="args">(const ofQuaternion &amp;q)</span></div><div class="memberDocumentation">
 
+<p>Set orientation with a quaternion. </p>
+
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setOrientation</span><span class="args">(const ofVec3f &amp;eulerAngles)</span></div><div class="memberDocumentation">
+
+<p>Set orientation with a euler angles. </p>
+<dl class="section note"><dt>Note</dt><dd>Prepare for gimbal lock </dd></dl>
 
 </div></div>
   </div><div id="ac888a4aabc97bdfa86114079dcdf4832" class="method">
@@ -564,7 +558,11 @@
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">setScale</span><span class="args">(const ofVec3f &amp;s)</span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="a89949bfa32613379f65466be7514032a" class="method">
+  </div></div>
+  </div><div id="Modifiers">
+    <h3 class="sectionHeader">Modifiers</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a89949bfa32613379f65466be7514032a" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a89949bfa32613379f65466be7514032a&quot;)">
         <span class="type"></span>
@@ -577,11 +575,11 @@
 
     <div class="methodDescription" style="display:none" id="a89949bfa32613379f65466be7514032a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">move</span><span class="args">(float x, float y, float z)</span></div><div class="memberDocumentation">
 
-<p>move by arbitrary amount </p>
+<p>Move by arbitrary amount. </p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">move</span><span class="args">(const ofVec3f &amp;offset)</span></div><div class="memberDocumentation">
 
-<p>move by arbitrary amount </p>
+<p>Move by arbitrary amount. </p>
 
 </div></div>
   </div><div id="a61fcc8f30420847847f62873a47cca8a" class="method">
@@ -597,7 +595,7 @@
 
     <div class="methodDescription" style="display:none" id="a61fcc8f30420847847f62873a47cca8a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">truck</span><span class="args">(float amount)</span></div><div class="memberDocumentation">
 
-<p>move sideways (in local x axis) </p>
+<p>Move sideways (in local x axis) </p>
 
 </div></div>
   </div><div id="ad030cd8c55b9df3dbf2786347f62ad3b" class="method">
@@ -613,7 +611,7 @@
 
     <div class="methodDescription" style="display:none" id="ad030cd8c55b9df3dbf2786347f62ad3b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">boom</span><span class="args">(float amount)</span></div><div class="memberDocumentation">
 
-<p>move up+down (in local y axis) </p>
+<p>Move up+down (in local y axis) </p>
 
 </div></div>
   </div><div id="a8ab940d4c166064c8b2e3b4ab237917c" class="method">
@@ -629,7 +627,7 @@
 
     <div class="methodDescription" style="display:none" id="a8ab940d4c166064c8b2e3b4ab237917c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">dolly</span><span class="args">(float amount)</span></div><div class="memberDocumentation">
 
-<p>move forward+backward (in local z axis) </p>
+<p>Move forward+backward (in local z axis) </p>
 
 </div></div>
   </div><div id="a674ca0b1cb71f609fadf8dba79106a72" class="method">
@@ -645,7 +643,7 @@
 
     <div class="methodDescription" style="display:none" id="a674ca0b1cb71f609fadf8dba79106a72_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">tilt</span><span class="args">(float degrees)</span></div><div class="memberDocumentation">
 
-<p>tilt up+down (around local x axis) </p>
+<p>Tilt up+down (around local x axis) </p>
 
 </div></div>
   </div><div id="ad8f671a39235404984fb84da35dd93ae" class="method">
@@ -661,7 +659,7 @@
 
     <div class="methodDescription" style="display:none" id="ad8f671a39235404984fb84da35dd93ae_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">pan</span><span class="args">(float degrees)</span></div><div class="memberDocumentation">
 
-<p>rotate left+right (around local y axis) </p>
+<p>Rotate left+right (around local y axis) </p>
 
 </div></div>
   </div><div id="a6eabc08d0e5ec0f8e7b6d2931531e400" class="method">
@@ -677,7 +675,7 @@
 
     <div class="methodDescription" style="display:none" id="a6eabc08d0e5ec0f8e7b6d2931531e400_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">roll</span><span class="args">(float degrees)</span></div><div class="memberDocumentation">
 
-<p>roll left+right (around local z axis) </p>
+<p>Roll left+right (around local z axis) </p>
 
 </div></div>
   </div><div id="a1334bc48d4dbbc8d769ce42ee82fdf96" class="method">
@@ -693,15 +691,15 @@
 
     <div class="methodDescription" style="display:none" id="a1334bc48d4dbbc8d769ce42ee82fdf96_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">rotate</span><span class="args">(const ofQuaternion &amp;q)</span></div><div class="memberDocumentation">
 
-<p>rotate by quaternion </p>
+<p>Rotate by quaternion. </p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">rotate</span><span class="args">(float degrees, const ofVec3f &amp;v)</span></div><div class="memberDocumentation">
 
-<p>rotate around arbitrary axis by angle </p>
+<p>Rotate around arbitrary axis by angle. </p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">rotate</span><span class="args">(float degrees, float vx, float vy, float vz)</span></div><div class="memberDocumentation">
 
-<p>rotate around arbitrary axis by angle </p>
+<p>Rotate around arbitrary axis by angle. </p>
 
 </div></div>
   </div><div id="a084b6a9cc56ae474be007ba4595c471d" class="method">
@@ -717,11 +715,11 @@
 
     <div class="methodDescription" style="display:none" id="a084b6a9cc56ae474be007ba4595c471d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">rotateAround</span><span class="args">(const ofQuaternion &amp;q, const ofVec3f &amp;point)</span></div><div class="memberDocumentation">
 
-<p>rotate by quaternion around point </p>
+<p>Rotate by quaternion around point. </p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">rotateAround</span><span class="args">(float degrees, const ofVec3f &amp;axis, const ofVec3f &amp;point)</span></div><div class="memberDocumentation">
 
-<p>rotate around arbitrary axis by angle around point </p>
+<p>Rotate around arbitrary axis by angle around point. </p>
 
 </div></div>
   </div><div id="a039b31630ea3fc3718da43e23ecd7ef3" class="method">
@@ -737,11 +735,11 @@
 
     <div class="methodDescription" style="display:none" id="a039b31630ea3fc3718da43e23ecd7ef3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">lookAt</span><span class="args">(const ofVec3f &amp;lookAtPosition, ofVec3f upVector=ofVec3f(0, 1, 0))</span></div><div class="memberDocumentation">
 
-<p>orient node to look at position (-z axis pointing to position) </p>
+<p>Orient node to look at position (-z axis pointing to position) </p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">lookAt</span><span class="args">(const ofNode &amp;lookAtNode, const ofVec3f &amp;upVector=ofVec3f(0, 1, 0))</span></div><div class="memberDocumentation">
 
-<p>orient node to look at node (-z axis pointing to node) </p>
+<p>Orient node to look at node (-z axis pointing to node) </p>
 
 </div></div>
   </div><div id="a2a0989e1ed10fcbfea932ea305f064c1" class="method">
@@ -757,12 +755,16 @@
 
     <div class="methodDescription" style="display:none" id="a2a0989e1ed10fcbfea932ea305f064c1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">orbit</span><span class="args">(float longitude, float latitude, float radius, const ofVec3f &#xA2;erPoint=ofVec3f(0, 0, 0))</span></div><div class="memberDocumentation">
 
-<p>orbit object around target at radius </p>
+<p>Orbit object around target at radius. </p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">orbit</span><span class="args">(float longitude, float latitude, float radius, ofNode &#xA2;erNode)</span></div><div class="memberDocumentation">
 
 </div></div>
-  </div><div id="ad6523607a72bb535e3363e848937a9f3" class="method">
+  </div></div>
+  </div><div id="OpenGLTransformation">
+    <h3 class="sectionHeader">OpenGL Transformation</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="ad6523607a72bb535e3363e848937a9f3" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ad6523607a72bb535e3363e848937a9f3&quot;)">
         <span class="type"></span>
@@ -775,7 +777,7 @@
 
     <div class="methodDescription" style="display:none" id="ad6523607a72bb535e3363e848937a9f3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">transformGL</span><span class="args">(ofBaseRenderer *renderer=ofGetCurrentRenderer().get()) const </span></div><div class="memberDocumentation">
 
-<p>set opengl&apos;s modelview matrix to this nodes transform if you want to draw something at the position+orientation+scale of this node... ...call ofNode::transform(); write your draw code, and ofNode::restoreTransform(); OR A simpler way is to extend <a class="el" href="ofNode.html" title="a generic 3d object in space with transformation (position, rotation, scale) The ofNode is the base o...">ofNode</a> and override <a class="el" href="ofNode.html#a23a1ca114eeff7e8494cecee90002534">ofNode::customDraw()</a>; </p>
+<p>Set opengl&apos;s modelview matrix to this nodes transform if you want to draw something at the position+orientation+scale of this node... ...call ofNode::transform(); write your draw code, and ofNode::restoreTransform(); OR A simpler way is to extend <a class="el" href="ofNode.html" title="A generic 3d object in space with transformation (position, rotation, scale). ">ofNode</a> and override <a class="el" href="ofNode.html#a23a1ca114eeff7e8494cecee90002534">ofNode::customDraw()</a>;. </p>
 
 </div></div>
   </div><div id="a0fa1b33b13277b7b9df8773faf61cf4d" class="method">
@@ -805,10 +807,14 @@
 
     <div class="methodDescription" style="display:none" id="ace344f081aa534670949ae9e03374626_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">resetTransform</span><span class="args">()</span></div><div class="memberDocumentation">
 
-<p>resets this node&apos;s transformation </p>
+<p>Resets this node&apos;s transformation. </p>
 
 </div></div>
-  </div><div id="a6f3b18d2902d062f08b62c03abf08cc3" class="method">
+  </div></div>
+  </div><div id="Drawing">
+    <h3 class="sectionHeader">Drawing</h3>
+    <div class="sectionDescription"></div>
+    <div class="sectionContent"><div id="a6f3b18d2902d062f08b62c03abf08cc3" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a6f3b18d2902d062f08b62c03abf08cc3&quot;)">
         <span class="type"></span>
@@ -821,7 +827,7 @@
 
     <div class="methodDescription" style="display:none" id="a6f3b18d2902d062f08b62c03abf08cc3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">customDraw</span><span class="args">(const ofBaseRenderer *renderer) const </span></div><div class="memberDocumentation">
 
-<p>if you extend <a class="el" href="ofNode.html" title="a generic 3d object in space with transformation (position, rotation, scale) The ofNode is the base o...">ofNode</a> and wish to change the way it draws, extend this try to not use global functions for rendering and instead use the passed renderer </p>
+<p>If you extend <a class="el" href="ofNode.html" title="A generic 3d object in space with transformation (position, rotation, scale). ">ofNode</a> and wish to change the way it draws, extend this try to not use global functions for rendering and instead use the passed renderer. </p>
 
 </div><hr><div class="memberVariant"><span class="type">void </span><span class="name">customDraw</span><span class="args">()</span></div><div class="memberDocumentation">
 
@@ -839,7 +845,7 @@
 
     <div class="methodDescription" style="display:none" id="a69ed7a21f7f8ee435fa6d8a99424e9ba_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">() const </span></div><div class="memberDocumentation">
 
-<p>draw function. do NOT override this transforms the node to its position+orientation+scale and calls the virtual &apos;customDraw&apos; method above which you CAN override </p>
+<p>Draw function. do NOT override this transforms the node to its position+orientation+scale and calls the virtual &apos;customDraw&apos; method above which you CAN override. </p>
 
 <p>Reimplemented in <a class="el" href="of3dPrimitive.html#aa6d2e5db5bee3196c2bcb13eb9e32d27">of3dPrimitive</a>.</p>
 
