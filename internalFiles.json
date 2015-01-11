@@ -1,4 +1,42 @@
 {
+  "sound":[
+    "ofBaseSoundPlayer",
+    "ofBaseSoundStream",
+    "ofFmodSoundPlayer",
+    "ofRtAudioSoundStream"
+  ],
+
+  "app":[
+    "ofAppBaseWindow",
+    "ofAppEGLWindow",
+    "ofAppGLFWWindow",
+    "ofAppGlutWindow",
+    "ofAppNoWindow",
+    "ofBaseApp"
+  ],
+
+  "video":[
+    "ofAVFMovieRenderer",
+    "ofAVFoundationPlayer",
+    "ofDirectShowGrabber",
+    "ofDirectShowPlayer",
+    "ofGstUtils",
+    "ofGstVideoGrabber",
+    "ofGstVideoPlayer",
+    "ofQTKitGrabber",
+    "ofQuickTimeGrabber"
+  ],
+
+  "gl": [
+    "ofGLProgrammableRenderer",
+    "ofGLRenderer"
+  ],
+
+  "graphics": [
+    "ofRendererCollection",
+    "ofCairoRenderer"
+  ],
+
   "types":[
     "ofBaseTypes"
   ]
