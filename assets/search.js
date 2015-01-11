@@ -32,7 +32,14 @@ $( document ).ready(function() {
 
         el.append(link);
 
-        link.append('<p class="searchName">' + res.name + '</p>');
+        var pathEl = $('<p class="searchName">');
+        for(var i=0;i<res.path.length;i++){
+          pathEl.append('<span>' + res.path[i] + ' > </span>');
+        }
+
+        pathEl.append('<span>'+res.name+'</span>')
+
+        link.append(pathEl);
         link.append('<span class="searchType">' + res.type + '</span>');
         searchElm.append(el)
       });

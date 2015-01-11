@@ -551,12 +551,17 @@ function scrapeDoxygenHtml(fileDescription){
 // ----------
 
 function addFileToSearch(file){
+  var path = [];
+
   // File / class
   searchToc.push({
     name: file.name,
     type: file.kind,
-    ref: file.url
+    ref: file.url,
+    path: _.clone(path)
   });
+
+  path.push(file.name)
 
   // Methods
   file.sections.forEach(function (section) {
@@ -565,15 +570,16 @@ function addFileToSearch(file){
       searchToc.push({
         name: method.implementations[0].name,
         type: method.implementations[0].info.kind,
-        ref: file.url + "#" + ref
+        ref: file.url + "#" + ref,
+        path: _.clone(path)
       })
     });
+  });
 
-    // Inner classes recursive add
-    file.classes.forEach(function (innerclass) {
-      innerclass.url = file.url;
-      addFileToSearch(innerclass);
-    });
+  // Inner classes recursive add
+  file.classes.forEach(function (innerclass) {
+    innerclass.url = file.url;
+    addFileToSearch(innerclass);
   });
 }
 
