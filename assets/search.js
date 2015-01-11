@@ -1,6 +1,4 @@
 $( document ).ready(function() {
-  console.log(ofToc);
-
   var options = {
     keys: ['name'],
     threshold: 0.15
