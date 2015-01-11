@@ -88,7 +88,10 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a57998157b1b7e041930ad775c5d5ffc8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getVertex</span><span class="args">(ofIndexType i) const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a57998157b1b7e041930ad775c5d5ffc8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getVertex</span><span class="args">(ofIndexType i) const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>the vertex at the index. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1a14be43bd2e272fed5e030d4f51e61dbf" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a14be43bd2e272fed5e030d4f51e61dbf&quot;)">
@@ -100,7 +103,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a14be43bd2e272fed5e030d4f51e61dbf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addVertex</span><span class="args">(const ofVec3f &amp;v)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a14be43bd2e272fed5e030d4f51e61dbf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addVertex</span><span class="args">(const ofVec3f &amp;v)</span></div><div class="memberDocumentation">
+
+<p>Add a new vertex at the end of the current list of vertices. It is important to remember that the order the vertices are added to the list determines how they link they form the polygons and strips (assuming you do not change their indeces). See the <a class="el" href="ofMesh.html" title="Represents a set of vertices in 3D spaces with normals, colors, and texture coordinates at those poin...">ofMesh</a> class description for details. </p>
+
+</div></div>
   </div><div id="classof_mesh_1a71e7a3d050abd65ec3cf881535df889e" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a71e7a3d050abd65ec3cf881535df889e&quot;)">
@@ -112,7 +119,15 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a71e7a3d050abd65ec3cf881535df889e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addVertices</span><span class="args">(const vector&lt; ofVec3f &gt; &amp;verts)</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">addVertices</span><span class="args">(const ofVec3f *verts, int amt)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a71e7a3d050abd65ec3cf881535df889e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addVertices</span><span class="args">(const vector&lt; ofVec3f &gt; &amp;verts)</span></div><div class="memberDocumentation">
+
+<p>Add a vector of vertices to a mesh, allowing you to push out many at once rather than adding one at a time. The vector of vertices is added after the end of the current vertices list. </p>
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">addVertices</span><span class="args">(const ofVec3f *verts, int amt)</span></div><div class="memberDocumentation">
+
+<p>Add an array of vertices to the mesh. Because you are using a pointer to the array you also have to define the length of the array as an int (amt). The vertices are added at the end of the current vertices list. </p>
+
+</div></div>
   </div><div id="classof_mesh_1a93e16441ec4d64399e2a73d2078c1521" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a93e16441ec4d64399e2a73d2078c1521&quot;)">
@@ -124,7 +139,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a93e16441ec4d64399e2a73d2078c1521_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">removeVertex</span><span class="args">(ofIndexType index)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a93e16441ec4d64399e2a73d2078c1521_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">removeVertex</span><span class="args">(ofIndexType index)</span></div><div class="memberDocumentation">
+
+<p>Removes the vertex at the index in the vector. </p>
+
+</div></div>
   </div><div id="classof_mesh_1a413f83e88338584214efa854013dbb3b" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a413f83e88338584214efa854013dbb3b&quot;)">
@@ -136,7 +155,9 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a413f83e88338584214efa854013dbb3b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setVertex</span><span class="args">(ofIndexType index, const ofVec3f &amp;v)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a413f83e88338584214efa854013dbb3b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setVertex</span><span class="args">(ofIndexType index, const ofVec3f &amp;v)</span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_mesh_1af93146321d946367eb2cd56986d84e5e" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1af93146321d946367eb2cd56986d84e5e&quot;)">
@@ -148,7 +169,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1af93146321d946367eb2cd56986d84e5e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clearVertices</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1af93146321d946367eb2cd56986d84e5e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clearVertices</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Removes all the vertices. </p>
+
+</div></div>
   </div><div id="classof_mesh_1ae2d9f9ca63ae1f5febd68b00ebd3a371" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1ae2d9f9ca63ae1f5febd68b00ebd3a371&quot;)">
@@ -160,7 +185,10 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1ae2d9f9ca63ae1f5febd68b00ebd3a371_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getNumVertices</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1ae2d9f9ca63ae1f5febd68b00ebd3a371_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getNumVertices</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>the size of the vertices vector for the mesh. This will tell you how many vertices are contained in the mesh. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1add367fe228c4ed4f8293caad2caac06d" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1add367fe228c4ed4f8293caad2caac06d&quot;)">
@@ -172,7 +200,13 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1add367fe228c4ed4f8293caad2caac06d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getVerticesPointer</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getVerticesPointer</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1add367fe228c4ed4f8293caad2caac06d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getVerticesPointer</span><span class="args">()</span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the vertices that the mesh contains. </dd></dl>
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getVerticesPointer</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the vertices that the mesh contains. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1acf727a93d0e042c855583fcb949380cf" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1acf727a93d0e042c855583fcb949380cf&quot;)">
@@ -184,7 +218,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1acf727a93d0e042c855583fcb949380cf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1ad4acc3774c730c65a67b4419154717d3">ofIndexType</a> </span><span class="name">getIndices</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1acf727a93d0e042c855583fcb949380cf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1ad4acc3774c730c65a67b4419154717d3">ofIndexType</a> </span><span class="name">getIndices</span><span class="args">()</span></div><div class="memberDocumentation">
+<p>Use this if you plan to change the indices as part of this call as it will force a reset of the cache. </p>
+<dl class="section return"><dt>Returns</dt><dd>the vector that contains all of the indices of the mesh, if it has any. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1ada0d7a5f3c7813f6414c32b46987e7e1" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1ada0d7a5f3c7813f6414c32b46987e7e1&quot;)">
@@ -196,7 +234,13 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1ada0d7a5f3c7813f6414c32b46987e7e1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getVertices</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getVertices</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1ada0d7a5f3c7813f6414c32b46987e7e1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getVertices</span><span class="args">()</span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>the vector that contains all of the vertices of the mesh. </dd></dl>
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getVertices</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>the vector that contains all of the vertices of the mesh. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1ada9a3c0d67fb8242def99959dbc31b3c" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1ada9a3c0d67fb8242def99959dbc31b3c&quot;)">
@@ -208,7 +252,10 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1ada9a3c0d67fb8242def99959dbc31b3c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">haveVertsChanged</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1ada9a3c0d67fb8242def99959dbc31b3c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">haveVertsChanged</span><span class="args">()</span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>If the vertices of the mesh have changed, been added or removed. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1ac8ee220b47ff0009c08e3a342c8fde5b" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1ac8ee220b47ff0009c08e3a342c8fde5b&quot;)">
@@ -220,7 +267,10 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1ac8ee220b47ff0009c08e3a342c8fde5b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">hasVertices</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1ac8ee220b47ff0009c08e3a342c8fde5b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">hasVertices</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>Whether the mesh has any vertices. </dd></dl>
+
+</div></div>
   </div></div>
   </div><div id="Normals">
     <h3 class="sectionHeader">Normals</h3>
@@ -236,7 +286,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1aca4d16af25141116f2395f5ab746b392_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getNormal</span><span class="args">(ofIndexType i) const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1aca4d16af25141116f2395f5ab746b392_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getNormal</span><span class="args">(ofIndexType i) const </span></div><div class="memberDocumentation">
+
+<p>\returns the normal at the index in the normals vector. </p>
+
+</div></div>
   </div><div id="classof_mesh_1a2a8e205209d7e98538bead28742e2e80" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a2a8e205209d7e98538bead28742e2e80&quot;)">
@@ -248,7 +302,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a2a8e205209d7e98538bead28742e2e80_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addNormal</span><span class="args">(const ofVec3f &amp;n)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a2a8e205209d7e98538bead28742e2e80_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addNormal</span><span class="args">(const ofVec3f &amp;n)</span></div><div class="memberDocumentation">
+
+<p>Add a normal to the mesh as a 3D vector, typically perpendicular to the plane of the face. A normal is a vector that defines how a surface responds to lighting, i.e. how it is lit. The amount of light reflected by a surface is proportional to the angle between the light&apos;s direction and the normal. The smaller the angle the brighter the surface will look. See the normalsExample for advice on computing the normals. addNormal adds the 3D vector to the end of the list, so you need to make sure you add normals at the same index of the matching face. </p>
+
+</div></div>
   </div><div id="classof_mesh_1a86f849a45aadc67fec7ed0d76aadfac9" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a86f849a45aadc67fec7ed0d76aadfac9&quot;)">
@@ -260,7 +318,15 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a86f849a45aadc67fec7ed0d76aadfac9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addNormals</span><span class="args">(const vector&lt; ofVec3f &gt; &amp;norms)</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">addNormals</span><span class="args">(const ofVec3f *norms, int amt)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a86f849a45aadc67fec7ed0d76aadfac9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addNormals</span><span class="args">(const vector&lt; ofVec3f &gt; &amp;norms)</span></div><div class="memberDocumentation">
+
+<p>Add a vector of normals to a mesh, allowing you to push out many normals at once rather than adding one at a time. The vector of normals is added after the end of the current normals list. </p>
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">addNormals</span><span class="args">(const ofVec3f *norms, int amt)</span></div><div class="memberDocumentation">
+
+<p>Add an array of normals to the mesh. Because you are using a pointer to the array you also have to define the length of the array as an int (amt). The normals are added at the end of the current normals list. </p>
+
+</div></div>
   </div><div id="classof_mesh_1ae9b1c46faa53adb1e05da9e1e1dce688" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1ae9b1c46faa53adb1e05da9e1e1dce688&quot;)">
@@ -272,7 +338,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1ae9b1c46faa53adb1e05da9e1e1dce688_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">removeNormal</span><span class="args">(ofIndexType index)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1ae9b1c46faa53adb1e05da9e1e1dce688_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">removeNormal</span><span class="args">(ofIndexType index)</span></div><div class="memberDocumentation">
+
+<p>Remove a normal. </p>
+
+</div></div>
   </div><div id="classof_mesh_1aa80f060780c38e55d5b0ca38e0b1bc61" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1aa80f060780c38e55d5b0ca38e0b1bc61&quot;)">
@@ -284,7 +354,9 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1aa80f060780c38e55d5b0ca38e0b1bc61_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setNormal</span><span class="args">(ofIndexType index, const ofVec3f &amp;n)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1aa80f060780c38e55d5b0ca38e0b1bc61_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setNormal</span><span class="args">(ofIndexType index, const ofVec3f &amp;n)</span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_mesh_1a81d5eb9c9c3ca7a5d2096019efb70a19" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a81d5eb9c9c3ca7a5d2096019efb70a19&quot;)">
@@ -296,7 +368,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a81d5eb9c9c3ca7a5d2096019efb70a19_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clearNormals</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a81d5eb9c9c3ca7a5d2096019efb70a19_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clearNormals</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Remove all the normals. </p>
+
+</div></div>
   </div><div id="classof_mesh_1a4c483a94a87485b5c90b9180f6fdc7e0" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a4c483a94a87485b5c90b9180f6fdc7e0&quot;)">
@@ -308,7 +384,12 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a4c483a94a87485b5c90b9180f6fdc7e0_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getNumNormals</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a4c483a94a87485b5c90b9180f6fdc7e0_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getNumNormals</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>This will tell you how many normals are contained in the mesh. </p>
+<dl class="section return"><dt>Returns</dt><dd>the size of the normals vector for the mesh. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1a6c451abd17d9982621a5dcff7d9beacc" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a6c451abd17d9982621a5dcff7d9beacc&quot;)">
@@ -320,7 +401,13 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a6c451abd17d9982621a5dcff7d9beacc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getNormalsPointer</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getNormalsPointer</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a6c451abd17d9982621a5dcff7d9beacc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getNormalsPointer</span><span class="args">()</span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the normals that the mesh contains. </dd></dl>
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getNormalsPointer</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the normals that the mesh contains. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1ac78f5fdd4e20781da19b9316108ec44f" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1ac78f5fdd4e20781da19b9316108ec44f&quot;)">
@@ -332,7 +419,14 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1ac78f5fdd4e20781da19b9316108ec44f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getNormals</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getNormals</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1ac78f5fdd4e20781da19b9316108ec44f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getNormals</span><span class="args">()</span></div><div class="memberDocumentation">
+<p>Use this if you plan to change the normals as part of this call as it will force a reset of the cache. </p>
+<dl class="section return"><dt>Returns</dt><dd>the vector that contains all of the normals of the mesh, if it has any. </dd></dl>
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getNormals</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>the vector that contains all of the normals of the mesh, if it has any. (read only) </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1a5277897643031ed700dd0ff3e0d89bf7" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a5277897643031ed700dd0ff3e0d89bf7&quot;)">
@@ -344,7 +438,10 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a5277897643031ed700dd0ff3e0d89bf7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">haveNormalsChanged</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a5277897643031ed700dd0ff3e0d89bf7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">haveNormalsChanged</span><span class="args">()</span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>If the normals of the mesh have changed, been added or removed. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1a4eac00436a63515c933d91f87d1f8b26" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a4eac00436a63515c933d91f87d1f8b26&quot;)">
@@ -356,7 +453,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a4eac00436a63515c933d91f87d1f8b26_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">hasNormals</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a4eac00436a63515c933d91f87d1f8b26_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">hasNormals</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>/returnsWhether the mesh has any normals. </p>
+
+</div></div>
   </div></div>
   </div><div id="Colors">
     <h3 class="sectionHeader">Colors</h3>
@@ -372,7 +473,10 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1ae4668a95cbeb3148195345b46215cad2_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html#1ac32ecc231f9436904c104121b32baac0">ofFloatColor</a> </span><span class="name">getColor</span><span class="args">(ofIndexType i) const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1ae4668a95cbeb3148195345b46215cad2_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html#1ac32ecc231f9436904c104121b32baac0">ofFloatColor</a> </span><span class="name">getColor</span><span class="args">(ofIndexType i) const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>the color at the index in the colors vector. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1acbaef665f6314833b590fa4fae9c05ff" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1acbaef665f6314833b590fa4fae9c05ff&quot;)">
@@ -384,7 +488,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1acbaef665f6314833b590fa4fae9c05ff_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addColor</span><span class="args">(const ofFloatColor &amp;c)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1acbaef665f6314833b590fa4fae9c05ff_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addColor</span><span class="args">(const ofFloatColor &amp;c)</span></div><div class="memberDocumentation">
+
+<p>This adds a color to the mesh, the color will be associated with the vertex in the same position. </p>
+
+</div></div>
   </div><div id="classof_mesh_1a699d3b304f2e57ce2501fd295600d2de" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a699d3b304f2e57ce2501fd295600d2de&quot;)">
@@ -396,7 +504,15 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a699d3b304f2e57ce2501fd295600d2de_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addColors</span><span class="args">(const vector&lt; ofFloatColor &gt; &amp;cols)</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">addColors</span><span class="args">(const ofFloatColor *cols, int amt)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a699d3b304f2e57ce2501fd295600d2de_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addColors</span><span class="args">(const vector&lt; ofFloatColor &gt; &amp;cols)</span></div><div class="memberDocumentation">
+
+<p>This adds colors using a reference to a vector of ofColors. For each color in the vector, this will put the colors at the corresponding vertex. </p>
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">addColors</span><span class="args">(const ofFloatColor *cols, int amt)</span></div><div class="memberDocumentation">
+
+<p>This adds a pointer of colors to the <a class="el" href="ofMesh.html" title="Represents a set of vertices in 3D spaces with normals, colors, and texture coordinates at those poin...">ofMesh</a> instance with the amount passed as the second parameter. </p>
+
+</div></div>
   </div><div id="classof_mesh_1a0a7904c14b66ad0774d0ed5e7a7af153" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a0a7904c14b66ad0774d0ed5e7a7af153&quot;)">
@@ -408,7 +524,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a0a7904c14b66ad0774d0ed5e7a7af153_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">removeColor</span><span class="args">(ofIndexType index)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a0a7904c14b66ad0774d0ed5e7a7af153_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">removeColor</span><span class="args">(ofIndexType index)</span></div><div class="memberDocumentation">
+
+<p>Remove a color at the index in the colors vector. </p>
+
+</div></div>
   </div><div id="classof_mesh_1afa7998f9e2703e9ea30ce5cb0fdeb7b9" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1afa7998f9e2703e9ea30ce5cb0fdeb7b9&quot;)">
@@ -420,7 +540,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1afa7998f9e2703e9ea30ce5cb0fdeb7b9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(ofIndexType index, const ofFloatColor &amp;c)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1afa7998f9e2703e9ea30ce5cb0fdeb7b9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setColor</span><span class="args">(ofIndexType index, const ofFloatColor &amp;c)</span></div><div class="memberDocumentation">
+
+<p>Set the color at the index in the colors vector. </p>
+
+</div></div>
   </div><div id="classof_mesh_1ad59ef8a34a9d252d28e8d2abd3a3d8e3" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1ad59ef8a34a9d252d28e8d2abd3a3d8e3&quot;)">
@@ -432,7 +556,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1ad59ef8a34a9d252d28e8d2abd3a3d8e3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clearColors</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1ad59ef8a34a9d252d28e8d2abd3a3d8e3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clearColors</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Clear all the colors. </p>
+
+</div></div>
   </div><div id="classof_mesh_1a8be552e86134942fe574c39237da6f92" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a8be552e86134942fe574c39237da6f92&quot;)">
@@ -444,7 +572,10 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a8be552e86134942fe574c39237da6f92_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getNumColors</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a8be552e86134942fe574c39237da6f92_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getNumColors</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>the size of the colors vector for the mesh. This will tell you how many colors are contained in the mesh. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1a2a197f2dda30372b8886207468aa30a8" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a2a197f2dda30372b8886207468aa30a8&quot;)">
@@ -456,7 +587,14 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a2a197f2dda30372b8886207468aa30a8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html#1ac32ecc231f9436904c104121b32baac0">ofFloatColor</a> </span><span class="name">getColorsPointer</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html#1ac32ecc231f9436904c104121b32baac0">ofFloatColor</a> </span><span class="name">getColorsPointer</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a2a197f2dda30372b8886207468aa30a8_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html#1ac32ecc231f9436904c104121b32baac0">ofFloatColor</a> </span><span class="name">getColorsPointer</span><span class="args">()</span></div><div class="memberDocumentation">
+<p>Use this if you plan to change the colors as part of this call as it will force a reset of the cache. </p>
+<dl class="section return"><dt>Returns</dt><dd>a pointer that contains all of the colors of the mesh, if it has any. </dd></dl>
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html#1ac32ecc231f9436904c104121b32baac0">ofFloatColor</a> </span><span class="name">getColorsPointer</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>a pointer that contains all of the colors of the mesh, if it has any. (read only) </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1a0fae8088852c05a58b22afeb9d5d8102" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a0fae8088852c05a58b22afeb9d5d8102&quot;)">
@@ -468,7 +606,14 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a0fae8088852c05a58b22afeb9d5d8102_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html#1ac32ecc231f9436904c104121b32baac0">ofFloatColor</a> </span><span class="name">getColors</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html#1ac32ecc231f9436904c104121b32baac0">ofFloatColor</a> </span><span class="name">getColors</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a0fae8088852c05a58b22afeb9d5d8102_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofColor.html#1ac32ecc231f9436904c104121b32baac0">ofFloatColor</a> </span><span class="name">getColors</span><span class="args">()</span></div><div class="memberDocumentation">
+<p>Use this if you plan to change the colors as part of this call as it will force a reset of the cache. </p>
+<dl class="section return"><dt>Returns</dt><dd>the vector that contains all of the colors of the mesh, if it has any. </dd></dl>
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofColor.html#1ac32ecc231f9436904c104121b32baac0">ofFloatColor</a> </span><span class="name">getColors</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>the vector that contains all of the colors of the mesh, if it has any. (read only) </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1a9b8a658247548c364c481c2fefacee95" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a9b8a658247548c364c481c2fefacee95&quot;)">
@@ -480,7 +625,10 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a9b8a658247548c364c481c2fefacee95_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">haveColorsChanged</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a9b8a658247548c364c481c2fefacee95_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">haveColorsChanged</span><span class="args">()</span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>If the colors of the mesh have changed, been added or removed. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1ab6be53b0d38750bac37466a2afb80df4" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1ab6be53b0d38750bac37466a2afb80df4&quot;)">
@@ -492,7 +640,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1ab6be53b0d38750bac37466a2afb80df4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">hasColors</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1ab6be53b0d38750bac37466a2afb80df4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">hasColors</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>/returns Whether the mesh has any colors. </p>
+
+</div></div>
   </div></div>
   </div><div id="TextureCoordinates">
     <h3 class="sectionHeader">Texture Coordinates</h3>
@@ -508,7 +660,10 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a749be937f57bd2663feacd5534aa6f92_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a> </span><span class="name">getTexCoord</span><span class="args">(ofIndexType i) const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a749be937f57bd2663feacd5534aa6f92_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a> </span><span class="name">getTexCoord</span><span class="args">(ofIndexType i) const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>the Vec2f representing the texture coordinate. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1a1470a135a7eabd35a31205f0e25cdc23" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a1470a135a7eabd35a31205f0e25cdc23&quot;)">
@@ -520,7 +675,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a1470a135a7eabd35a31205f0e25cdc23_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addTexCoord</span><span class="args">(const ofVec2f &amp;t)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a1470a135a7eabd35a31205f0e25cdc23_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addTexCoord</span><span class="args">(const ofVec2f &amp;t)</span></div><div class="memberDocumentation">
+
+<p>Add a Vec2f representing the texture coordinate. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates. </p>
+
+</div></div>
   </div><div id="classof_mesh_1a095c75e860dab3813f3bd2305523e7cf" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a095c75e860dab3813f3bd2305523e7cf&quot;)">
@@ -532,7 +691,15 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a095c75e860dab3813f3bd2305523e7cf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addTexCoords</span><span class="args">(const vector&lt; ofVec2f &gt; &amp;tCoords)</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">addTexCoords</span><span class="args">(const ofVec2f *tCoords, int amt)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a095c75e860dab3813f3bd2305523e7cf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addTexCoords</span><span class="args">(const vector&lt; ofVec2f &gt; &amp;tCoords)</span></div><div class="memberDocumentation">
+
+<p>Add a vector of texture coordinates to a mesh, allowing you to push out many at once rather than adding one at a time. The vector of texture coordinates is added after the end of the current texture coordinates list. </p>
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">addTexCoords</span><span class="args">(const ofVec2f *tCoords, int amt)</span></div><div class="memberDocumentation">
+
+<p>Add an array of texture coordinates to the mesh. Because you are using a pointer to the array you also have to define the length of the array as an int (amt). The texture coordinates are added at the end of the current texture coordinates list. </p>
+
+</div></div>
   </div><div id="classof_mesh_1a467daea580754129a7d64dc91c674939" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a467daea580754129a7d64dc91c674939&quot;)">
@@ -544,7 +711,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a467daea580754129a7d64dc91c674939_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">removeTexCoord</span><span class="args">(ofIndexType index)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a467daea580754129a7d64dc91c674939_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">removeTexCoord</span><span class="args">(ofIndexType index)</span></div><div class="memberDocumentation">
+
+<p>Remove a Vec2f representing the texture coordinate. </p>
+
+</div></div>
   </div><div id="classof_mesh_1add50f27214daddfe72b4bb6138cd867f" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1add50f27214daddfe72b4bb6138cd867f&quot;)">
@@ -556,7 +727,9 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1add50f27214daddfe72b4bb6138cd867f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setTexCoord</span><span class="args">(ofIndexType index, const ofVec2f &amp;t)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1add50f27214daddfe72b4bb6138cd867f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setTexCoord</span><span class="args">(ofIndexType index, const ofVec2f &amp;t)</span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_mesh_1ad39901f6dfd43b9374adeb25626d96db" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1ad39901f6dfd43b9374adeb25626d96db&quot;)">
@@ -568,7 +741,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1ad39901f6dfd43b9374adeb25626d96db_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clearTexCoords</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1ad39901f6dfd43b9374adeb25626d96db_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clearTexCoords</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Clear all the texture coordinates. </p>
+
+</div></div>
   </div><div id="classof_mesh_1ac101b06ebefb3905fff8ce0947e26435" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1ac101b06ebefb3905fff8ce0947e26435&quot;)">
@@ -580,7 +757,12 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1ac101b06ebefb3905fff8ce0947e26435_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getNumTexCoords</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1ac101b06ebefb3905fff8ce0947e26435_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getNumTexCoords</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>This will tell you how many texture coordinates are contained in the mesh. </p>
+<dl class="section return"><dt>Returns</dt><dd>the size of the texture coordinates vector for the mesh. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1a4ffebae46bb320c243824bce66f7f51b" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a4ffebae46bb320c243824bce66f7f51b&quot;)">
@@ -592,7 +774,14 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a4ffebae46bb320c243824bce66f7f51b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a> </span><span class="name">getTexCoordsPointer</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a> </span><span class="name">getTexCoordsPointer</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a4ffebae46bb320c243824bce66f7f51b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a> </span><span class="name">getTexCoordsPointer</span><span class="args">()</span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the texture coords that the mesh contains. </dd></dl>
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a> </span><span class="name">getTexCoordsPointer</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Get a pointer to the <a class="el" href="ofVec2f.html" title="ofVec2f is a class for storing a two dimensional vector. ">ofVec2f</a> texture coordinates that the mesh contains. </p>
+
+</div></div>
   </div><div id="classof_mesh_1a943c41c666988c7a36b9dc633f019484" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a943c41c666988c7a36b9dc633f019484&quot;)">
@@ -604,7 +793,16 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a943c41c666988c7a36b9dc633f019484_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a> </span><span class="name">getTexCoords</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a> </span><span class="name">getTexCoords</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a943c41c666988c7a36b9dc633f019484_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a> </span><span class="name">getTexCoords</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Get a vector representing the texture coordinates of the mesh Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates. Use this if you plan to change the texture coordinates as part of this call as it will force a reset of the cache. </p>
+<dl class="section return"><dt>Returns</dt><dd>a vector of Vec2f representing the texture coordinates for the whole mesh. </dd></dl>
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofVec2f.html">ofVec2f</a> </span><span class="name">getTexCoords</span><span class="args">() const </span></div><div class="memberDocumentation">
+<p>Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates. </p>
+<dl class="section return"><dt>Returns</dt><dd>a vector of Vec2f representing the texture coordinates for the whole mesh. (read only) </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1acd571a2fb9cf9c3eb4baa7db60097e49" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1acd571a2fb9cf9c3eb4baa7db60097e49&quot;)">
@@ -616,7 +814,10 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1acd571a2fb9cf9c3eb4baa7db60097e49_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">haveTexCoordsChanged</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1acd571a2fb9cf9c3eb4baa7db60097e49_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">haveTexCoordsChanged</span><span class="args">()</span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>If the texture coords of the mesh have changed, been added or removed. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1a3045440dd2c5afefe6966c916ad1799f" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a3045440dd2c5afefe6966c916ad1799f&quot;)">
@@ -628,7 +829,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a3045440dd2c5afefe6966c916ad1799f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">hasTexCoords</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a3045440dd2c5afefe6966c916ad1799f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">hasTexCoords</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>/returns Whether the mesh has any textures assigned to it. </p>
+
+</div></div>
   </div></div>
   </div><div id="Indices">
     <h3 class="sectionHeader">Indices</h3>
@@ -644,7 +849,10 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a975724315c09f2ad00f2480ecbb4264d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1ad4acc3774c730c65a67b4419154717d3">ofIndexType</a> </span><span class="name">getIndices</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a975724315c09f2ad00f2480ecbb4264d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1ad4acc3774c730c65a67b4419154717d3">ofIndexType</a> </span><span class="name">getIndices</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>the vector that contains all of the indices of the mesh, if it has any. (read only) </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1aac2a306dca03af3ff00493992a2aa830" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1aac2a306dca03af3ff00493992a2aa830&quot;)">
@@ -656,7 +864,10 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1aac2a306dca03af3ff00493992a2aa830_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1ad4acc3774c730c65a67b4419154717d3">ofIndexType</a> </span><span class="name">getIndex</span><span class="args">(ofIndexType i) const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1aac2a306dca03af3ff00493992a2aa830_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1ad4acc3774c730c65a67b4419154717d3">ofIndexType</a> </span><span class="name">getIndex</span><span class="args">(ofIndexType i) const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>the index from the index vector. Each index represents the index of the vertex in the vertices vector. This determines the way that the vertices are connected into the polgoynon type set in the primitiveMode. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1a1a9c5465e90e7faf40d66a896d0bfc90" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a1a9c5465e90e7faf40d66a896d0bfc90&quot;)">
@@ -668,7 +879,26 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a1a9c5465e90e7faf40d66a896d0bfc90_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addIndex</span><span class="args">(ofIndexType i)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a1a9c5465e90e7faf40d66a896d0bfc90_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addIndex</span><span class="args">(ofIndexType i)</span></div><div class="memberDocumentation">
+<p>Add an index to the index vector. Each index represents the order of connection for vertices. This determines the way that the vertices are connected according to the polygon type set in the primitiveMode. It important to note that a particular vertex might be used for several faces and so would be referenced several times in the index vector. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofMesh.html">ofMesh</a> mesh;</div>
+<div class="line">mesh.<a class="code" href="ofMesh.html#a472d0c5866e27efd96687ca98c024f14">setMode</a>(<a class="code" href="ofGLUtils.html#a0f71f0b23a18629a446952d5540e16e0a56773d485b35d619c99840afc4b02193">OF_PRIMITIVE_TRIANGLES</a>);</div>
+<div class="line">mesh.<a class="code" href="ofMesh.html#a14be43bd2e272fed5e030d4f51e61dbf">addVertex</a>(<a class="code" href="ofBaseTypes.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a>(0,-200,0));</div>
+<div class="line">mesh.<a class="code" href="ofMesh.html#a14be43bd2e272fed5e030d4f51e61dbf">addVertex</a>(<a class="code" href="ofBaseTypes.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a>(200, 0, 0 ));</div>
+<div class="line">mesh.<a class="code" href="ofMesh.html#a14be43bd2e272fed5e030d4f51e61dbf">addVertex</a>(<a class="code" href="ofBaseTypes.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a>(-200, 0, 0 ));</div>
+<div class="line">mesh.<a class="code" href="ofMesh.html#a14be43bd2e272fed5e030d4f51e61dbf">addVertex</a>(<a class="code" href="ofBaseTypes.html#a0e9c5f9596918593de99ee1bd275476f">ofPoint</a>(0, 200, 0 ));</div>
+<div class="line">mesh.<a class="code" href="ofMesh.html#a1a9c5465e90e7faf40d66a896d0bfc90">addIndex</a>(0); <span class="comment">//connect the first vertex we made, v0</span></div>
+<div class="line">mesh.<a class="code" href="ofMesh.html#a1a9c5465e90e7faf40d66a896d0bfc90">addIndex</a>(1); <span class="comment">//to v1</span></div>
+<div class="line">mesh.<a class="code" href="ofMesh.html#a1a9c5465e90e7faf40d66a896d0bfc90">addIndex</a>(2); <span class="comment">//to v2 to complete the face</span></div>
+<div class="line">mesh.<a class="code" href="ofMesh.html#a1a9c5465e90e7faf40d66a896d0bfc90">addIndex</a>(1); <span class="comment">//now start a new face beginning with v1</span></div>
+<div class="line">mesh.<a class="code" href="ofMesh.html#a1a9c5465e90e7faf40d66a896d0bfc90">addIndex</a>(2); <span class="comment">//that is connected to v2</span></div>
+<div class="line">mesh.<a class="code" href="ofMesh.html#a1a9c5465e90e7faf40d66a896d0bfc90">addIndex</a>(3); <span class="comment">//and we complete the face with v3</span></div>
+</div><!-- fragment --><p>Will give you this shape: </p>
+<div class="image">
+<img src="images/3d/index.jpg" alt="image of basic use of indices">
+</div>
+ 
+</div></div>
   </div><div id="classof_mesh_1a1378ca9b5cee56274aee9756668ebfc0" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a1378ca9b5cee56274aee9756668ebfc0&quot;)">
@@ -680,7 +910,15 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a1378ca9b5cee56274aee9756668ebfc0_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addIndices</span><span class="args">(const vector&lt; ofIndexType &gt; &amp;inds)</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">addIndices</span><span class="args">(const ofIndexType *inds, int amt)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a1378ca9b5cee56274aee9756668ebfc0_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addIndices</span><span class="args">(const vector&lt; ofIndexType &gt; &amp;inds)</span></div><div class="memberDocumentation">
+
+<p>This adds a vector of indices. </p>
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">addIndices</span><span class="args">(const ofIndexType *inds, int amt)</span></div><div class="memberDocumentation">
+
+<p>This adds indices to the <a class="el" href="ofMesh.html" title="Represents a set of vertices in 3D spaces with normals, colors, and texture coordinates at those poin...">ofMesh</a> by pointing to an array of indices. The &quot;amt&quot; defines the length of the array. </p>
+
+</div></div>
   </div><div id="classof_mesh_1a0f01675297cabeca6993526b5986c937" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a0f01675297cabeca6993526b5986c937&quot;)">
@@ -692,7 +930,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a0f01675297cabeca6993526b5986c937_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">removeIndex</span><span class="args">(ofIndexType index)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a0f01675297cabeca6993526b5986c937_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">removeIndex</span><span class="args">(ofIndexType index)</span></div><div class="memberDocumentation">
+
+<p>Removes an index. </p>
+
+</div></div>
   </div><div id="classof_mesh_1ad6c57857be2b9a7b13662f9e4f9ee5b2" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1ad6c57857be2b9a7b13662f9e4f9ee5b2&quot;)">
@@ -704,7 +946,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1ad6c57857be2b9a7b13662f9e4f9ee5b2_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setIndex</span><span class="args">(ofIndexType index, ofIndexType val)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1ad6c57857be2b9a7b13662f9e4f9ee5b2_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setIndex</span><span class="args">(ofIndexType index, ofIndexType val)</span></div><div class="memberDocumentation">
+
+<p>This sets the index at i. </p>
+
+</div></div>
   </div><div id="classof_mesh_1aed651bb80b9ab296094d2bd62145eac7" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1aed651bb80b9ab296094d2bd62145eac7&quot;)">
@@ -716,7 +962,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1aed651bb80b9ab296094d2bd62145eac7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clearIndices</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1aed651bb80b9ab296094d2bd62145eac7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clearIndices</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Remove all the indices of the mesh. This means that your mesh will be a point cloud. </p>
+
+</div></div>
   </div><div id="classof_mesh_1a566c70e505b5270d281c65b80c160e1d" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a566c70e505b5270d281c65b80c160e1d&quot;)">
@@ -728,7 +978,12 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a566c70e505b5270d281c65b80c160e1d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getNumIndices</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a566c70e505b5270d281c65b80c160e1d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">int </span><span class="name">getNumIndices</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>This will tell you how many indices are contained in the mesh. </p>
+<dl class="section return"><dt>Returns</dt><dd>the size of the indices vector for the mesh. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1aff81d2d6063f10bb3907c57a05ba5760" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1aff81d2d6063f10bb3907c57a05ba5760&quot;)">
@@ -740,7 +995,13 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1aff81d2d6063f10bb3907c57a05ba5760_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1ad4acc3774c730c65a67b4419154717d3">ofIndexType</a> </span><span class="name">getIndexPointer</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type"><a href="ofConstants.html#1ad4acc3774c730c65a67b4419154717d3">ofIndexType</a> </span><span class="name">getIndexPointer</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1aff81d2d6063f10bb3907c57a05ba5760_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofConstants.html#1ad4acc3774c730c65a67b4419154717d3">ofIndexType</a> </span><span class="name">getIndexPointer</span><span class="args">()</span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the indices that the mesh contains. </dd></dl>
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofConstants.html#1ad4acc3774c730c65a67b4419154717d3">ofIndexType</a> </span><span class="name">getIndexPointer</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the indices that the mesh contains. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1a720d91d34321fb273c585b8469215efd" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a720d91d34321fb273c585b8469215efd&quot;)">
@@ -752,7 +1013,10 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a720d91d34321fb273c585b8469215efd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">haveIndicesChanged</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a720d91d34321fb273c585b8469215efd_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">haveIndicesChanged</span><span class="args">()</span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>If the indices of the mesh have changed, been added or removed. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1a777bb666983203c64004e54dde51708a" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a777bb666983203c64004e54dde51708a&quot;)">
@@ -764,7 +1028,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a777bb666983203c64004e54dde51708a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">hasIndices</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a777bb666983203c64004e54dde51708a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">hasIndices</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>/returns Whether the mesh has any indices assigned to it. </p>
+
+</div></div>
   </div><div id="classof_mesh_1a1ef8238528c08850c387e7ce57ff0548" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a1ef8238528c08850c387e7ce57ff0548&quot;)">
@@ -776,7 +1044,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a1ef8238528c08850c387e7ce57ff0548_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addTriangle</span><span class="args">(ofIndexType index1, ofIndexType index2, ofIndexType index3)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a1ef8238528c08850c387e7ce57ff0548_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">addTriangle</span><span class="args">(ofIndexType index1, ofIndexType index2, ofIndexType index3)</span></div><div class="memberDocumentation">
+
+<p>Adding a triangle means using three of the vertices that have already been added to create a triangle. This is an easy way to create triangles in the mesh. The indices refer to the index of the vertex in the vector of vertices. </p>
+
+</div></div>
   </div></div>
   </div><div id="Drawing">
     <h3 class="sectionHeader">Drawing</h3>
@@ -792,7 +1064,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a06d3def7048ac8e49d0b16aecdc4fee9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawVertices</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a06d3def7048ac8e49d0b16aecdc4fee9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawVertices</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>This allows you draw just the vertices, meaning that you&apos;ll have a point cloud. </p>
+
+</div></div>
   </div><div id="classof_mesh_1a6ef295466ff7218e2cc6f8a260211169" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a6ef295466ff7218e2cc6f8a260211169&quot;)">
@@ -804,7 +1080,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a6ef295466ff7218e2cc6f8a260211169_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawWireframe</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a6ef295466ff7218e2cc6f8a260211169_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawWireframe</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>This draws the mesh as GL_LINES, meaning that you&apos;ll have a wireframe. </p>
+
+</div></div>
   </div><div id="classof_mesh_1a08a63838d98569ba791cf24731d6dbbc" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a08a63838d98569ba791cf24731d6dbbc&quot;)">
@@ -816,7 +1096,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a08a63838d98569ba791cf24731d6dbbc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawFaces</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a08a63838d98569ba791cf24731d6dbbc_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">drawFaces</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>This draws the mesh as faces, meaning that you&apos;ll have a collection of faces. </p>
+
+</div></div>
   </div><div id="classof_mesh_1ac7b4d26dc486372e9067a99b0be3293c" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1ac7b4d26dc486372e9067a99b0be3293c&quot;)">
@@ -828,7 +1112,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1ac7b4d26dc486372e9067a99b0be3293c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1ac7b4d26dc486372e9067a99b0be3293c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>This draws the mesh using its primitive type, meaning that if you set them up to be triangles, this will draw the triangles. </p>
+
+</div></div>
   </div></div>
   </div><div id="Savingandloading">
     <h3 class="sectionHeader">Saving and loading</h3>
@@ -844,7 +1132,12 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1acb6eef7eab7f4e7295f9da212c3c9aeb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">load</span><span class="args">(string path)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1acb6eef7eab7f4e7295f9da212c3c9aeb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">load</span><span class="args">(string path)</span></div><div class="memberDocumentation">
+
+<p>Loads a mesh from a file located at the provided path into the mesh. This will replace any existing data within the mesh. </p>
+<p>It expects that the file will be in the <a href="http://en.wikipedia.org/wiki/PLY_(file_format">PLY Format</a>). It will only load meshes saved in the PLY ASCII format; the binary format is not supported. </p>
+
+</div></div>
   </div><div id="classof_mesh_1ae945f4e97fce6c90bb39b0c3e1928b2b" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1ae945f4e97fce6c90bb39b0c3e1928b2b&quot;)">
@@ -856,7 +1149,14 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1ae945f4e97fce6c90bb39b0c3e1928b2b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">save</span><span class="args">(string path, bool useBinary=false) const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1ae945f4e97fce6c90bb39b0c3e1928b2b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">save</span><span class="args">(string path, bool useBinary=false) const </span></div><div class="memberDocumentation">
+
+<p>Saves the mesh at the passed path in the <a href="http://en.wikipedia.org/wiki/PLY_(file_format">PLY Format</a>). </p>
+<p>There are two format options for PLY: a binary format and an ASCII format. By default, it will save using the ASCII format. Passing <code>true</code> into the <code>useBinary</code> parameter will save it in the binary format.</p>
+<p>If you&apos;re planning on reloading the mesh into <a class="el" href="ofMesh.html" title="Represents a set of vertices in 3D spaces with normals, colors, and texture coordinates at those poin...">ofMesh</a>, <a class="el" href="ofMesh.html" title="Represents a set of vertices in 3D spaces with normals, colors, and texture coordinates at those poin...">ofMesh</a> currently only supports loading the ASCII format.</p>
+<p>For more information, see the <a href="http://paulbourke.net/dataformats/ply/">PLY format specification</a>. </p>
+
+</div></div>
   </div></div>
   </div><div id="Primitiveconstructorhelpermethods">
     <h3 class="sectionHeader">Primitive constructor helper methods</h3>
@@ -872,7 +1172,9 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a6af08c9c7a3f557b10b2fa29ed1246bf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">plane</span><span class="args">(float width, float height, int columns=2, int rows=2, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a6af08c9c7a3f557b10b2fa29ed1246bf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">plane</span><span class="args">(float width, float height, int columns=2, int rows=2, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP)</span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_mesh_1a12a08517b4c200b159f78f4594c95469" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a12a08517b4c200b159f78f4594c95469&quot;)">
@@ -884,7 +1186,9 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a12a08517b4c200b159f78f4594c95469_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">sphere</span><span class="args">(float radius, int res=12, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a12a08517b4c200b159f78f4594c95469_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">sphere</span><span class="args">(float radius, int res=12, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP)</span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_mesh_1a045e6acc171f203e4eebf089f0905fdf" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a045e6acc171f203e4eebf089f0905fdf&quot;)">
@@ -896,7 +1200,10 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a045e6acc171f203e4eebf089f0905fdf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">icosahedron</span><span class="args">(float radius)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a045e6acc171f203e4eebf089f0905fdf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">icosahedron</span><span class="args">(float radius)</span></div><div class="memberDocumentation">
+<p>Step 1 : Generate icosahedron </p>
+
+</div></div>
   </div><div id="classof_mesh_1aeff5b066cc0ce3121946c534572618e3" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1aeff5b066cc0ce3121946c534572618e3&quot;)">
@@ -908,7 +1215,12 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1aeff5b066cc0ce3121946c534572618e3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">icosphere</span><span class="args">(float radius, int iterations=2)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1aeff5b066cc0ce3121946c534572618e3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">icosphere</span><span class="args">(float radius, int iterations=2)</span></div><div class="memberDocumentation">
+<p>Step 2 : tessellate</p>
+<p>Step 3 : generate texcoords</p>
+<p>Step 4 : fix texcoords </p>
+
+</div></div>
   </div><div id="classof_mesh_1a2ea7154b0a3bc98680813ef1dbf0cbda" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a2ea7154b0a3bc98680813ef1dbf0cbda&quot;)">
@@ -920,7 +1232,17 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a2ea7154b0a3bc98680813ef1dbf0cbda_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">cylinder</span><span class="args">(float radius, float height, int radiusSegments=12, int heightSegments=6, int numCapSegments=2, bool bCapped=true, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a2ea7154b0a3bc98680813ef1dbf0cbda_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">cylinder</span><span class="args">(float radius, float height, int radiusSegments=12, int heightSegments=6, int numCapSegments=2, bool bCapped=true, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP)</span></div><div class="memberDocumentation">
+
+<p>A helper method that returns a cylinder made of triangles. The resolution settings for the radius, height, and cap are optional (they are set at a default of 12 segments around the radius, 6 segments in the height, and 2 on the cap). You have the option to cap the cylinder or not. The only valid modes are the default OF_PRIMITIVE_TRIANGLE_STRIP and OF_PRIMITIVE_TRIANGLES. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofMesh.html">ofMesh</a> mesh;</div>
+<div class="line">mesh = <a class="code" href="ofMesh.html#a2ea7154b0a3bc98680813ef1dbf0cbda">ofMesh::cylinder</a>(100.0, 200.0);</div>
+</div><!-- fragment --><p>. </p>
+<div class="image">
+<img src="images/3d/cylinder.jpg" alt="image of a simple cylinder">
+</div>
+ 
+</div></div>
   </div><div id="classof_mesh_1a41c4a867973347df2662c9273ee82067" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a41c4a867973347df2662c9273ee82067&quot;)">
@@ -932,7 +1254,17 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a41c4a867973347df2662c9273ee82067_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">cone</span><span class="args">(float radius, float height, int radiusSegments=12, int heightSegments=6, int capSegments=2, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a41c4a867973347df2662c9273ee82067_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">cone</span><span class="args">(float radius, float height, int radiusSegments=12, int heightSegments=6, int capSegments=2, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP)</span></div><div class="memberDocumentation">
+
+<p>A helper method that returns a cone made of triangles. The resolution settings for the radius, height, and cap are optional (they are set at a default of 12 segments around the radius, 6 segments in the height, and 2 on the cap). The only valid modes are the default OF_PRIMITIVE_TRIANGLE_STRIP and OF_PRIMITIVE_TRIANGLES. </p>
+<div class="fragment"><div class="line"><a class="code" href="ofMesh.html">ofMesh</a> mesh;</div>
+<div class="line">mesh = <a class="code" href="ofMesh.html#a41c4a867973347df2662c9273ee82067">ofMesh::cone</a>(100.0, 200.0);</div>
+</div><!-- fragment --><p>. </p>
+<div class="image">
+<img src="images/3d/cone.jpg" alt="image of a simple cone">
+</div>
+ 
+</div></div>
   </div><div id="classof_mesh_1a1b134e9f9570c68a0ddf0fbb2e4ba2c1" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a1b134e9f9570c68a0ddf0fbb2e4ba2c1&quot;)">
@@ -944,7 +1276,17 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a1b134e9f9570c68a0ddf0fbb2e4ba2c1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">box</span><span class="args">(float width, float height, float depth, int resX=2, int resY=2, int resZ=2)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a1b134e9f9570c68a0ddf0fbb2e4ba2c1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">box</span><span class="args">(float width, float height, float depth, int resX=2, int resY=2, int resZ=2)</span></div><div class="memberDocumentation">
+
+<p>A helper method that returns a box made of triangles. The resolution settings for the width and height are optional (they are both set at a default of 2 triangles per side). </p>
+<div class="fragment"><div class="line"><a class="code" href="ofMesh.html">ofMesh</a> mesh;</div>
+<div class="line">mesh = <a class="code" href="ofMesh.html#a1b134e9f9570c68a0ddf0fbb2e4ba2c1">ofMesh::box</a>(200.0, 200.0, 200.0);</div>
+</div><!-- fragment --><p>. </p>
+<div class="image">
+<img src="images/3d/box.jpg" alt="image of a simple box">
+</div>
+ 
+</div></div>
   </div><div id="classof_mesh_1a918e15d2eb729e8d20d066258fb95d73" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a918e15d2eb729e8d20d066258fb95d73&quot;)">
@@ -956,7 +1298,12 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a918e15d2eb729e8d20d066258fb95d73_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">axis</span><span class="args">(float size=1.0)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a918e15d2eb729e8d20d066258fb95d73_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">axis</span><span class="args">(float size=1.0)</span></div><div class="memberDocumentation">
+
+<p>Returns an <a class="el" href="ofMesh.html" title="Represents a set of vertices in 3D spaces with normals, colors, and texture coordinates at those poin...">ofMesh</a> representing an XYZ coordinate system. </p>
+<dl class="section return"><dt>Returns</dt><dd>an <a class="el" href="ofMesh.html" title="Represents a set of vertices in 3D spaces with normals, colors, and texture coordinates at those poin...">ofMesh</a> representing an XYZ coordinate system. </dd></dl>
+
+</div></div>
   </div></div>
   </div><div id="Functions">
     <h3 class="sectionHeader">Functions</h3>
@@ -1272,7 +1619,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a472d0c5866e27efd96687ca98c024f14_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setMode</span><span class="args">(ofPrimitiveMode mode)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a472d0c5866e27efd96687ca98c024f14_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setMode</span><span class="args">(ofPrimitiveMode mode)</span></div><div class="memberDocumentation">
+
+<p>Allows you to set the ofPrimitiveMode. The available modes are OF_PRIMITIVE_TRIANGLES, OF_PRIMITIVE_TRIANGLE_STRIP, OF_PRIMITIVE_TRIANGLE_FAN, OF_PRIMITIVE_LINES, OF_PRIMITIVE_LINE_STRIP, OF_PRIMITIVE_LINE_LOOP, OF_PRIMITIVE_POINTS. </p>
+
+</div></div>
   </div><div id="classof_mesh_1a9ecefc7c940cc76fc6c9e3648d73d99d" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a9ecefc7c940cc76fc6c9e3648d73d99d&quot;)">
@@ -1284,7 +1635,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a9ecefc7c940cc76fc6c9e3648d73d99d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofGLUtils.html#1a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a> </span><span class="name">getMode</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a9ecefc7c940cc76fc6c9e3648d73d99d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofGLUtils.html#1a0f71f0b23a18629a446952d5540e16e0">ofPrimitiveMode</a> </span><span class="name">getMode</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>\returns the primitive mode that the mesh is using. </p>
+
+</div></div>
   </div><div id="classof_mesh_1a3f84e571d711ee21c45ebaa11bde422e" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a3f84e571d711ee21c45ebaa11bde422e&quot;)">
@@ -1296,7 +1651,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a3f84e571d711ee21c45ebaa11bde422e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clear</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a3f84e571d711ee21c45ebaa11bde422e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">clear</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Removes all the vertices, colors, and indices from the mesh. </p>
+
+</div></div>
   </div><div id="classof_mesh_1a8c365cae4b0864698c7cd41e11f7ddd3" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a8c365cae4b0864698c7cd41e11f7ddd3&quot;)">
@@ -1308,7 +1667,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a8c365cae4b0864698c7cd41e11f7ddd3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setupIndicesAuto</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a8c365cae4b0864698c7cd41e11f7ddd3_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setupIndicesAuto</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Allow you to set up the indices automatically when you add a vertex. </p>
+
+</div></div>
   </div><div id="classof_mesh_1ad1b2bf3302c51306e17df889d1bbaf0d" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1ad1b2bf3302c51306e17df889d1bbaf0d&quot;)">
@@ -1320,7 +1683,10 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1ad1b2bf3302c51306e17df889d1bbaf0d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">vector&lt; int &gt; &amp; </span><span class="name">getFace</span><span class="args">(int faceId)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1ad1b2bf3302c51306e17df889d1bbaf0d_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">vector&lt; int &gt; &amp; </span><span class="name">getFace</span><span class="args">(int faceId)</span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>the vector that contains all of the faces of the mesh. This isn&apos;t currently implemented. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1acbac3d141ee803d7123c2454e815e842" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1acbac3d141ee803d7123c2454e815e842&quot;)">
@@ -1332,7 +1698,10 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1acbac3d141ee803d7123c2454e815e842_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getCentroid</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1acbac3d141ee803d7123c2454e815e842_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getCentroid</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="ofVec3f.html" title="ofVec3f is a class for storing a three dimensional vector. ">ofVec3f</a> defining the centroid of all the vetices in the mesh. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1a94fe509e4a0765a9f8cf20d7f4f8ca1e" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a94fe509e4a0765a9f8cf20d7f4f8ca1e&quot;)">
@@ -1344,7 +1713,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a94fe509e4a0765a9f8cf20d7f4f8ca1e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">append</span><span class="args">(const ofMesh &amp;mesh)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a94fe509e4a0765a9f8cf20d7f4f8ca1e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">append</span><span class="args">(const ofMesh &amp;mesh)</span></div><div class="memberDocumentation">
+
+<p>Add the vertices, normals, texture coordinates and indices of one mesh onto another mesh. Everything from the referenced mesh is simply added at the end of the current mesh&apos;s lists. </p>
+
+</div></div>
   </div><div id="classof_mesh_1a8f0875a7da176aa4a7c4c656a46385bf" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a8f0875a7da176aa4a7c4c656a46385bf&quot;)">
@@ -1356,7 +1729,9 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a8f0875a7da176aa4a7c4c656a46385bf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setColorForIndices</span><span class="args">(int startIndex, int endIndex, ofColor color)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a8f0875a7da176aa4a7c4c656a46385bf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setColorForIndices</span><span class="args">(int startIndex, int endIndex, ofColor color)</span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_mesh_1a4fbb52b77cfef1a78234cd6e9ab960cf" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a4fbb52b77cfef1a78234cd6e9ab960cf&quot;)">
@@ -1368,7 +1743,13 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a4fbb52b77cfef1a78234cd6e9ab960cf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">getMeshForIndices</span><span class="args">(int startIndex, int endIndex) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">getMeshForIndices</span><span class="args">(int startIndex, int endIndex, int startVertIndex, int endVertIndex) const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a4fbb52b77cfef1a78234cd6e9ab960cf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">getMeshForIndices</span><span class="args">(int startIndex, int endIndex) const </span></div><div class="memberDocumentation">
+<p>The new mesh includes the mesh mode, colors, textures, and normals of the original mesh (assuming any were added). </p>
+<dl class="section return"><dt>Returns</dt><dd>a mesh made up of a range of indices from startIndex to the endIndex. </dd></dl>
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofMesh.html">ofMesh</a> </span><span class="name">getMeshForIndices</span><span class="args">(int startIndex, int endIndex, int startVertIndex, int endVertIndex) const </span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_mesh_1a9ad0c698acc3c5dfc9fe33ddc9eef291" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1a9ad0c698acc3c5dfc9fe33ddc9eef291&quot;)">
@@ -1380,7 +1761,9 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1a9ad0c698acc3c5dfc9fe33ddc9eef291_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">mergeDuplicateVertices</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1a9ad0c698acc3c5dfc9fe33ddc9eef291_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">mergeDuplicateVertices</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_mesh_1ade10f4e157ed99e74a1f3f0bc0823a43" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1ade10f4e157ed99e74a1f3f0bc0823a43&quot;)">
@@ -1392,7 +1775,10 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1ade10f4e157ed99e74a1f3f0bc0823a43_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMeshFace.html">ofMeshFace</a> </span><span class="name">getUniqueFaces</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1ade10f4e157ed99e74a1f3f0bc0823a43_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofMeshFace.html">ofMeshFace</a> </span><span class="name">getUniqueFaces</span><span class="args">() const </span></div><div class="memberDocumentation">
+<dl class="section return"><dt>Returns</dt><dd>the mesh as a vector of unique ofMeshFaces a list of triangles that do not share vertices or indices </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1ab7f92489a2476fc476c0f95231e16a7a" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1ab7f92489a2476fc476c0f95231e16a7a&quot;)">
@@ -1404,7 +1790,12 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1ab7f92489a2476fc476c0f95231e16a7a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getFaceNormals</span><span class="args">(bool perVetex=false) const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1ab7f92489a2476fc476c0f95231e16a7a_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofVec3f.html">ofVec3f</a> </span><span class="name">getFaceNormals</span><span class="args">(bool perVetex=false) const </span></div><div class="memberDocumentation">
+
+<p>Get normals for each face As a default it only calculates the normal for the face as a whole but by setting (perVertex = true) it will return the same normal value for each of the three vertices making up a face. </p>
+<dl class="section return"><dt>Returns</dt><dd>a vector containing the calculated normals of each face in the mesh. </dd></dl>
+
+</div></div>
   </div><div id="classof_mesh_1afeb448ae4f175099f6cc36106e5d4279" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1afeb448ae4f175099f6cc36106e5d4279&quot;)">
@@ -1416,7 +1807,9 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1afeb448ae4f175099f6cc36106e5d4279_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setFromTriangles</span><span class="args">(const vector&lt; ofMeshFace &gt; &amp;tris, bool bUseFaceNormal=false)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1afeb448ae4f175099f6cc36106e5d4279_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setFromTriangles</span><span class="args">(const vector&lt; ofMeshFace &gt; &amp;tris, bool bUseFaceNormal=false)</span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_mesh_1ab8f5b239deb5f0e06a02f0c82fc84957" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_mesh_1ab8f5b239deb5f0e06a02f0c82fc84957&quot;)">
@@ -1428,7 +1821,9 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_mesh_1ab8f5b239deb5f0e06a02f0c82fc84957_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">smoothNormals</span><span class="args">(float angle)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_mesh_1ab8f5b239deb5f0e06a02f0c82fc84957_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">smoothNormals</span><span class="args">(float angle)</span></div><div class="memberDocumentation">
+
+</div></div>
   </div></div>
   </div></div>
   </div></div>

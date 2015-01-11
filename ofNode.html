@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <span class="class">ofNode</span><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li></ul>
+        <span class="class">ofNode</span><li class="chapter"><a href="#Functions">Functions</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -78,25 +78,7 @@
 <p>Info: uses right-handed coordinate system ofNodes &apos;look&apos; along -ve z axis All set* methods work in local space unless stated otherwise</p>
 <p>TODO: cache inverseMatrix, local and global To get the current position, check out: <a class="el" href="ofNode.html#a819b96492b11250d5682e7853c5b753c" title="get x coordinate. ">getX()</a>, <a class="el" href="ofNode.html#a1177cd7d07224c3690a4364684f1719f" title="get y coordinate. ">getY()</a>, <a class="el" href="ofNode.html#aad7aed0da357927a7bfa1c5669fd9e64" title="get z coordinate. ">getZ()</a>. To get the axis of the node call <a class="el" href="ofNode.html#a75af589eae2b502216acad4668edf43b" title="get x axis. ">getXAxis()</a> (or the y and z variants for those other axes). Another really useful feature of the <a class="el" href="ofNode.html" title="a generic 3d object in space with transformation (position, rotation, scale) The ofNode is the base o...">ofNode</a> is that you can get the <a href="http://en.wikipedia.org/wiki/Euler_angles">Eulerian angles</a> of each node: <a class="el" href="ofNode.html#a4f52fa48348f59307623c7a7bb4ef59f">getPitch()</a>, <a class="el" href="ofNode.html#a91b332c93dd0da7c289ffcc95ccc5a46">getHeading()</a>, <a class="el" href="ofNode.html#a0336b1426c2bc493bc15a7093fb35b5a">getRoll()</a>. The global transformation matrix of the <a class="el" href="ofNode.html" title="a generic 3d object in space with transformation (position, rotation, scale) The ofNode is the base o...">ofNode</a> is also available using the <a class="el" href="ofNode.html#a78a98aca9e6d389ae4918ad9783f3bf7">getGlobalTransformMatrix()</a>, very handy for figuring out things in relation to the OpenGL representation of your OF world. <a class="el" href="ofNode.html#a427fce44ef9e64b50c223a42d057a700">getGlobalOrientation()</a> also is handy, returning a <a class="el" href="ofQuaternion.html">ofQuaternion</a> that you can use to find out whether your node is upside down in relation to the rest of your OF world (really an OpenGL context, but let&apos;s not get into that quite yet). </p>
 </div></div>
-    <div class="classMethods"><div id="ProtectedAttributes">
-    <h3 class="sectionHeader">Protected Attributes</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a9fa60edff25434ada1671e837335fbdf" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a9fa60edff25434ada1671e837335fbdf&quot;)">
-        <span class="type"></span>
-        <a class="name">parent</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a9fa60edff25434ada1671e837335fbdf_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofNode.html">ofNode</a> </span><span class="name">parent</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div><div id="Functions">
+    <div class="classMethods"><div id="Functions">
     <h3 class="sectionHeader">Functions</h3>
     <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="aa2b223ca1f8560ef193eb7bde666d758" class="method">
@@ -860,86 +842,6 @@
 <p>draw function. do NOT override this transforms the node to its position+orientation+scale and calls the virtual &apos;customDraw&apos; method above which you CAN override </p>
 
 <p>Reimplemented in <a class="el" href="of3dPrimitive.html#aa6d2e5db5bee3196c2bcb13eb9e32d27">of3dPrimitive</a>.</p>
-
-</div></div>
-  </div></div>
-  </div><div id="ProtectedFunctions">
-    <h3 class="sectionHeader">Protected Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a7619a7cabd3690c782ad10cc13093074" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7619a7cabd3690c782ad10cc13093074&quot;)">
-        <span class="type"></span>
-        <a class="name">createMatrix</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a7619a7cabd3690c782ad10cc13093074_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">createMatrix</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="afff4fc410900b003a6fa8fde688da330" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#afff4fc410900b003a6fa8fde688da330&quot;)">
-        <span class="type"></span>
-        <a class="name">updateAxis</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="afff4fc410900b003a6fa8fde688da330_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">updateAxis</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="aa31b92a732d3258f15c730ec8106273c" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#aa31b92a732d3258f15c730ec8106273c&quot;)">
-        <span class="type"></span>
-        <a class="name">onPositionChanged</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="aa31b92a732d3258f15c730ec8106273c_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">onPositionChanged</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>classes extending <a class="el" href="ofNode.html" title="a generic 3d object in space with transformation (position, rotation, scale) The ofNode is the base o...">ofNode</a> can override this method to get notified when the position changed. </p>
-
-</div></div>
-  </div><div id="a423c1683913adf900cf8602b55361275" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a423c1683913adf900cf8602b55361275&quot;)">
-        <span class="type"></span>
-        <a class="name">onOrientationChanged</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a423c1683913adf900cf8602b55361275_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">onOrientationChanged</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>classes extending <a class="el" href="ofNode.html" title="a generic 3d object in space with transformation (position, rotation, scale) The ofNode is the base o...">ofNode</a> can override this methods to get notified when the orientation changed. </p>
-
-</div></div>
-  </div><div id="a8e851ac0a96a9348d85e365e1e7c71be" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8e851ac0a96a9348d85e365e1e7c71be&quot;)">
-        <span class="type"></span>
-        <a class="name">onScaleChanged</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a8e851ac0a96a9348d85e365e1e7c71be_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">onScaleChanged</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>classes extending <a class="el" href="ofNode.html" title="a generic 3d object in space with transformation (position, rotation, scale) The ofNode is the base o...">ofNode</a> can override this methods to get notified when the scale changed. </p>
 
 </div></div>
   </div></div>

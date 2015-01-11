@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <li class="chapter"><a href="#Defines">Defines</a></li><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofSoundObject</span><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li><span class="class">ofSoundInput</span><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li><span class="class">ofSoundOutput</span><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li><span class="class">ofSoundMixer</span><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li></ul>
+        <li class="chapter"><a href="#Defines">Defines</a></li><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofSoundObject</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofSoundInput</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofSoundOutput</span><li class="chapter"><a href="#Functions">Functions</a></li><span class="class">ofSoundMixer</span><li class="chapter"><a href="#Functions">Functions</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -112,39 +112,7 @@
     </div>
     <div class="classDescription"><div class="textblock"><p>Represents a node in your sound dsp chain It can have one input, and one output. If it doesn&apos;t have an input, it&apos;s the beginning of the dsp chain (i.e. an oscillator or a microphone input). </p>
 </div></div>
-    <div class="classMethods"><div id="ProtectedAttributes">
-    <h3 class="sectionHeader">Protected Attributes</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="afa64ed94c17017a1932be6e0343defe9" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#afa64ed94c17017a1932be6e0343defe9&quot;)">
-        <span class="type"></span>
-        <a class="name">inputObject</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="afa64ed94c17017a1932be6e0343defe9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">inputObject</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a2acf89026b4b9067ec41c686f393544f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2acf89026b4b9067ec41c686f393544f&quot;)">
-        <span class="type"></span>
-        <a class="name">outputObjectPtr</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a2acf89026b4b9067ec41c686f393544f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">outputObjectPtr</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div></div>
-  </div><div id="Functions">
+    <div class="classMethods"><div id="Functions">
     <h3 class="sectionHeader">Functions</h3>
     <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="a77abee96e1194e4e3d2cf0dfce7b3f3f" class="method">
@@ -219,8 +187,6 @@
     </div>
 
     <div class="methodDescription" style="display:none" id="aed66d29b18f963555a9ca10d0a938f7f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">disconnectInput</span><span class="args">(ofSoundObject &amp;input)</span></div><div class="memberDocumentation">
-
-<p>Reimplemented in <a class="el" href="ofSoundMixer.html#a645ad5042186ef9f721c06c32a38b9ab">ofSoundMixer</a>.</p>
 
 </div></div>
   </div><div id="a9f4d1de728e8c87a7115ba2980127fce" class="method">
@@ -303,7 +269,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_base_sound_output_1affbe31ef262e3fad9bbb70538523c191_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(float *output, int bufferSize, int nChannels, int deviceID, long unsigned long tickCount)</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(float *output, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_base_sound_output_1affbe31ef262e3fad9bbb70538523c191_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(float *output, int bufferSize, int nChannels, int deviceID, long unsigned long tickCount)</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(float *output, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_base_sound_output_1a5736b7e23b8a8c563aeaae27d97c75ff" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_sound_output_1a5736b7e23b8a8c563aeaae27d97c75ff&quot;)">
@@ -315,25 +285,7 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_base_sound_output_1a5736b7e23b8a8c563aeaae27d97c75ff_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioRequested</span><span class="args">(float *output, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">undefined</div></div>
-  </div></div>
-  </div><div id="ProtectedFunctions">
-    <h3 class="sectionHeader">Protected Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a8bddcd4cb5806b5ec1be7f3e61469431" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a8bddcd4cb5806b5ec1be7f3e61469431&quot;)">
-        <span class="type"></span>
-        <a class="name">setInput</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a8bddcd4cb5806b5ec1be7f3e61469431_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setInput</span><span class="args">(ofSoundObject &amp;obj)</span></div><div class="memberDocumentation">
-
-<p>Reimplemented in <a class="el" href="ofSoundMixer.html#a19a97962e4a7693e0a676776dddc8748">ofSoundMixer</a>.</p>
+    <div class="methodDescription" style="display:none" id="classof_base_sound_output_1a5736b7e23b8a8c563aeaae27d97c75ff_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioRequested</span><span class="args">(float *output, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">
 
 </div></div>
   </div></div>
@@ -405,7 +357,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_base_sound_input_1a27614c83263da3af6ba55f91ec651b70_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioIn</span><span class="args">(float *input, int bufferSize, int nChannels, int deviceID, long unsigned long tickCount)</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">audioIn</span><span class="args">(float *input, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_base_sound_input_1a27614c83263da3af6ba55f91ec651b70_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioIn</span><span class="args">(float *input, int bufferSize, int nChannels, int deviceID, long unsigned long tickCount)</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">audioIn</span><span class="args">(float *input, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_base_sound_input_1aa25595a25f26bade23a380ec76a52849" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_sound_input_1aa25595a25f26bade23a380ec76a52849&quot;)">
@@ -417,7 +373,9 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_base_sound_input_1aa25595a25f26bade23a380ec76a52849_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioReceived</span><span class="args">(float *input, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_base_sound_input_1aa25595a25f26bade23a380ec76a52849_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioReceived</span><span class="args">(float *input, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_sound_object_1acbcb204241f93f6ada21de6662e0eb05" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1acbcb204241f93f6ada21de6662e0eb05&quot;)">
@@ -429,7 +387,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1acbcb204241f93f6ada21de6662e0eb05_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">connectTo</span><span class="args">(ofSoundObject &amp;soundObject)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_sound_object_1acbcb204241f93f6ada21de6662e0eb05_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">connectTo</span><span class="args">(ofSoundObject &amp;soundObject)</span></div><div class="memberDocumentation">
+
+<p>Connects the output of this <a class="el" href="ofSoundObject.html" title="Represents a node in your sound dsp chain It can have one input, and one output. If it doesn&apos;t have a...">ofSoundObject</a> to the input of the parameter <a class="el" href="ofSoundObject.html" title="Represents a node in your sound dsp chain It can have one input, and one output. If it doesn&apos;t have a...">ofSoundObject</a>. </p>
+
+</div></div>
   </div><div id="classof_sound_object_1abf28b11a28b9f5fbbc805f4e9f81162b" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1abf28b11a28b9f5fbbc805f4e9f81162b&quot;)">
@@ -441,7 +403,9 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1abf28b11a28b9f5fbbc805f4e9f81162b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">disconnect</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_sound_object_1abf28b11a28b9f5fbbc805f4e9f81162b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">disconnect</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_sound_object_1aed66d29b18f963555a9ca10d0a938f7f" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1aed66d29b18f963555a9ca10d0a938f7f&quot;)">
@@ -453,7 +417,9 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1aed66d29b18f963555a9ca10d0a938f7f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">disconnectInput</span><span class="args">(ofSoundObject &amp;input)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_sound_object_1aed66d29b18f963555a9ca10d0a938f7f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">disconnectInput</span><span class="args">(ofSoundObject &amp;input)</span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_sound_object_1a9f4d1de728e8c87a7115ba2980127fce" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1a9f4d1de728e8c87a7115ba2980127fce&quot;)">
@@ -465,7 +431,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1a9f4d1de728e8c87a7115ba2980127fce_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">process</span><span class="args">(ofSoundBuffer &amp;input, ofSoundBuffer &amp;output)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_sound_object_1a9f4d1de728e8c87a7115ba2980127fce_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">process</span><span class="args">(ofSoundBuffer &amp;input, ofSoundBuffer &amp;output)</span></div><div class="memberDocumentation">
+
+<p>This is the method you implement to process the signal from inputs to outputs. </p>
+
+</div></div>
   </div><div id="classof_base_sound_output_1affbe31ef262e3fad9bbb70538523c191" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_sound_output_1affbe31ef262e3fad9bbb70538523c191&quot;)">
@@ -477,7 +447,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_base_sound_output_1affbe31ef262e3fad9bbb70538523c191_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(float *output, int bufferSize, int nChannels, int deviceID, long unsigned long tickCount)</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(float *output, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_base_sound_output_1affbe31ef262e3fad9bbb70538523c191_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(float *output, int bufferSize, int nChannels, int deviceID, long unsigned long tickCount)</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(float *output, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_sound_object_1aa0b19dcff8c169c638b39fc8de1bb498" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1aa0b19dcff8c169c638b39fc8de1bb498&quot;)">
@@ -489,7 +463,13 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1aa0b19dcff8c169c638b39fc8de1bb498_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">checkForInfiniteLoops</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_sound_object_1aa0b19dcff8c169c638b39fc8de1bb498_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">checkForInfiniteLoops</span><span class="args">() const </span></div><div class="memberDocumentation">
+<p>this checks the dsp chain to ensure there are no infinite loops</p>
+<ul>
+<li>might want to override this if you make a splitter returns true if there are no infinite loops. </li>
+</ul>
+
+</div></div>
   </div><div id="classof_sound_object_1a4ffadce2a8627232a5626808a8559095" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1a4ffadce2a8627232a5626808a8559095&quot;)">
@@ -501,7 +481,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1a4ffadce2a8627232a5626808a8559095_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">getInputObject</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">getInputObject</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_sound_object_1a4ffadce2a8627232a5626808a8559095_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">getInputObject</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">getInputObject</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_base_sound_output_1a5736b7e23b8a8c563aeaae27d97c75ff" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_sound_output_1a5736b7e23b8a8c563aeaae27d97c75ff&quot;)">
@@ -513,51 +497,9 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_base_sound_output_1a5736b7e23b8a8c563aeaae27d97c75ff_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioRequested</span><span class="args">(float *output, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">undefined</div></div>
-  </div></div>
-  </div><div id="ProtectedAttributes">
-    <h3 class="sectionHeader">Protected Attributes</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="classof_sound_object_1afa64ed94c17017a1932be6e0343defe9" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1afa64ed94c17017a1932be6e0343defe9&quot;)">
-        <span class="type"></span>
-        <a class="name">inputObject</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
+    <div class="methodDescription" style="display:none" id="classof_base_sound_output_1a5736b7e23b8a8c563aeaae27d97c75ff_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioRequested</span><span class="args">(float *output, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">
 
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1afa64ed94c17017a1932be6e0343defe9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">inputObject</span><span class="args"></span></div><div class="memberDocumentation">undefined</div></div>
-  </div><div id="classof_sound_object_1a2acf89026b4b9067ec41c686f393544f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1a2acf89026b4b9067ec41c686f393544f&quot;)">
-        <span class="type"></span>
-        <a class="name">outputObjectPtr</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1a2acf89026b4b9067ec41c686f393544f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">outputObjectPtr</span><span class="args"></span></div><div class="memberDocumentation">undefined</div></div>
-  </div></div>
-  </div><div id="ProtectedFunctions">
-    <h3 class="sectionHeader">Protected Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="classof_sound_object_1a8bddcd4cb5806b5ec1be7f3e61469431" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1a8bddcd4cb5806b5ec1be7f3e61469431&quot;)">
-        <span class="type"></span>
-        <a class="name">setInput</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1a8bddcd4cb5806b5ec1be7f3e61469431_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setInput</span><span class="args">(ofSoundObject &amp;obj)</span></div><div class="memberDocumentation">undefined</div></div>
+</div></div>
   </div></div>
   </div></div>
   </div><div id="" class="classBlock">
@@ -566,35 +508,7 @@
     </div>
     <div class="classDescription"><div class="textblock"><p>Represents the output of your dsp chain. </p>
 </div></div>
-    <div class="classMethods"><div id="ProtectedAttributes">
-    <h3 class="sectionHeader">Protected Attributes</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="classof_sound_object_1afa64ed94c17017a1932be6e0343defe9" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1afa64ed94c17017a1932be6e0343defe9&quot;)">
-        <span class="type"></span>
-        <a class="name">inputObject</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1afa64ed94c17017a1932be6e0343defe9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">inputObject</span><span class="args"></span></div><div class="memberDocumentation">undefined</div></div>
-  </div><div id="classof_sound_object_1a2acf89026b4b9067ec41c686f393544f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1a2acf89026b4b9067ec41c686f393544f&quot;)">
-        <span class="type"></span>
-        <a class="name">outputObjectPtr</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1a2acf89026b4b9067ec41c686f393544f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">outputObjectPtr</span><span class="args"></span></div><div class="memberDocumentation">undefined</div></div>
-  </div></div>
-  </div><div id="Functions">
+    <div class="classMethods"><div id="Functions">
     <h3 class="sectionHeader">Functions</h3>
     <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="classof_sound_object_1acbcb204241f93f6ada21de6662e0eb05" class="method">
@@ -608,7 +522,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1acbcb204241f93f6ada21de6662e0eb05_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">connectTo</span><span class="args">(ofSoundObject &amp;soundObject)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_sound_object_1acbcb204241f93f6ada21de6662e0eb05_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">connectTo</span><span class="args">(ofSoundObject &amp;soundObject)</span></div><div class="memberDocumentation">
+
+<p>Connects the output of this <a class="el" href="ofSoundObject.html" title="Represents a node in your sound dsp chain It can have one input, and one output. If it doesn&apos;t have a...">ofSoundObject</a> to the input of the parameter <a class="el" href="ofSoundObject.html" title="Represents a node in your sound dsp chain It can have one input, and one output. If it doesn&apos;t have a...">ofSoundObject</a>. </p>
+
+</div></div>
   </div><div id="classof_sound_object_1abf28b11a28b9f5fbbc805f4e9f81162b" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1abf28b11a28b9f5fbbc805f4e9f81162b&quot;)">
@@ -620,7 +538,9 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1abf28b11a28b9f5fbbc805f4e9f81162b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">disconnect</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_sound_object_1abf28b11a28b9f5fbbc805f4e9f81162b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">disconnect</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_sound_object_1aed66d29b18f963555a9ca10d0a938f7f" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1aed66d29b18f963555a9ca10d0a938f7f&quot;)">
@@ -632,7 +552,9 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1aed66d29b18f963555a9ca10d0a938f7f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">disconnectInput</span><span class="args">(ofSoundObject &amp;input)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_sound_object_1aed66d29b18f963555a9ca10d0a938f7f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">disconnectInput</span><span class="args">(ofSoundObject &amp;input)</span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_sound_object_1a9f4d1de728e8c87a7115ba2980127fce" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1a9f4d1de728e8c87a7115ba2980127fce&quot;)">
@@ -644,7 +566,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1a9f4d1de728e8c87a7115ba2980127fce_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">process</span><span class="args">(ofSoundBuffer &amp;input, ofSoundBuffer &amp;output)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_sound_object_1a9f4d1de728e8c87a7115ba2980127fce_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">process</span><span class="args">(ofSoundBuffer &amp;input, ofSoundBuffer &amp;output)</span></div><div class="memberDocumentation">
+
+<p>This is the method you implement to process the signal from inputs to outputs. </p>
+
+</div></div>
   </div><div id="classof_sound_object_1a1185af4b6dfe0f0d3d8be50ec47bdd67" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1a1185af4b6dfe0f0d3d8be50ec47bdd67&quot;)">
@@ -656,7 +582,18 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1a1185af4b6dfe0f0d3d8be50ec47bdd67_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(ofSoundBuffer &amp;output)</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(float *output, int bufferSize, int nChannels, int deviceID, long unsigned long tickCount)</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(float *output, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_sound_object_1a1185af4b6dfe0f0d3d8be50ec47bdd67_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(ofSoundBuffer &amp;output)</span></div><div class="memberDocumentation">
+<p>this pulls the audio through from earlier links in the chain. you can override this to add more interesting functionality like signal splitters, sidechains etc. </p>
+
+<p>Reimplemented from <a class="el" href="ofBaseSoundOutput.html#a1be5dbbac2fe66fcdf103dafa412d2ba">ofBaseSoundOutput</a>.</p>
+
+<p>Reimplemented in <a class="el" href="ofSoundMixer.html#ab1326a07579428d5a40770adb1fbafaf">ofSoundMixer</a>, and <a class="el" href="ofSoundInput.html#aeba62c98482df356dcb08ba3b6a5e5ea">ofSoundInput</a>.</p>
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(float *output, int bufferSize, int nChannels, int deviceID, long unsigned long tickCount)</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(float *output, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_sound_object_1aa0b19dcff8c169c638b39fc8de1bb498" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1aa0b19dcff8c169c638b39fc8de1bb498&quot;)">
@@ -668,7 +605,13 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1aa0b19dcff8c169c638b39fc8de1bb498_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">checkForInfiniteLoops</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_sound_object_1aa0b19dcff8c169c638b39fc8de1bb498_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">checkForInfiniteLoops</span><span class="args">() const </span></div><div class="memberDocumentation">
+<p>this checks the dsp chain to ensure there are no infinite loops</p>
+<ul>
+<li>might want to override this if you make a splitter returns true if there are no infinite loops. </li>
+</ul>
+
+</div></div>
   </div><div id="classof_sound_object_1a4ffadce2a8627232a5626808a8559095" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1a4ffadce2a8627232a5626808a8559095&quot;)">
@@ -680,7 +623,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1a4ffadce2a8627232a5626808a8559095_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">getInputObject</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">getInputObject</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_sound_object_1a4ffadce2a8627232a5626808a8559095_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">getInputObject</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">getInputObject</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_base_sound_output_1a5736b7e23b8a8c563aeaae27d97c75ff" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_sound_output_1a5736b7e23b8a8c563aeaae27d97c75ff&quot;)">
@@ -692,23 +639,9 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_base_sound_output_1a5736b7e23b8a8c563aeaae27d97c75ff_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioRequested</span><span class="args">(float *output, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">undefined</div></div>
-  </div></div>
-  </div><div id="ProtectedFunctions">
-    <h3 class="sectionHeader">Protected Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="classof_sound_object_1a8bddcd4cb5806b5ec1be7f3e61469431" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1a8bddcd4cb5806b5ec1be7f3e61469431&quot;)">
-        <span class="type"></span>
-        <a class="name">setInput</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
+    <div class="methodDescription" style="display:none" id="classof_base_sound_output_1a5736b7e23b8a8c563aeaae27d97c75ff_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioRequested</span><span class="args">(float *output, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">
 
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1a8bddcd4cb5806b5ec1be7f3e61469431_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setInput</span><span class="args">(ofSoundObject &amp;obj)</span></div><div class="memberDocumentation">undefined</div></div>
+</div></div>
   </div></div>
   </div></div>
   </div><div id="" class="classBlock">
@@ -717,77 +650,7 @@
     </div>
     <div class="classDescription"><div class="textblock"><p>Represents a simple mixer which adds together the output of multiple chains of ofSoundObjects. </p>
 </div></div>
-    <div class="classMethods"><div id="ProtectedAttributes">
-    <h3 class="sectionHeader">Protected Attributes</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a74cb4d2d0bbd3edf30e2328230402815" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a74cb4d2d0bbd3edf30e2328230402815&quot;)">
-        <span class="type"></span>
-        <a class="name">channels</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a74cb4d2d0bbd3edf30e2328230402815_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">channels</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="adfe2d9c9c80af6499c17c8d3d0bfd4f5" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#adfe2d9c9c80af6499c17c8d3d0bfd4f5&quot;)">
-        <span class="type"></span>
-        <a class="name">masterPan</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="adfe2d9c9c80af6499c17c8d3d0bfd4f5_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">masterPan</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ae2266ce8f587263e2399c859a30a6048" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ae2266ce8f587263e2399c859a30a6048&quot;)">
-        <span class="type"></span>
-        <a class="name">masterVolume</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ae2266ce8f587263e2399c859a30a6048_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">float </span><span class="name">masterVolume</span><span class="args"></span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="classof_sound_object_1afa64ed94c17017a1932be6e0343defe9" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1afa64ed94c17017a1932be6e0343defe9&quot;)">
-        <span class="type"></span>
-        <a class="name">inputObject</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1afa64ed94c17017a1932be6e0343defe9_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">inputObject</span><span class="args"></span></div><div class="memberDocumentation">undefined</div></div>
-  </div><div id="classof_sound_object_1a2acf89026b4b9067ec41c686f393544f" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1a2acf89026b4b9067ec41c686f393544f&quot;)">
-        <span class="type"></span>
-        <a class="name">outputObjectPtr</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1a2acf89026b4b9067ec41c686f393544f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">outputObjectPtr</span><span class="args"></span></div><div class="memberDocumentation">undefined</div></div>
-  </div></div>
-  </div><div id="Functions">
+    <div class="classMethods"><div id="Functions">
     <h3 class="sectionHeader">Functions</h3>
     <div class="sectionDescription"></div>
     <div class="sectionContent"><div id="ad0f8080eaf68c2b51361a6bffb4ef54d" class="method">
@@ -946,7 +809,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1acbcb204241f93f6ada21de6662e0eb05_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">connectTo</span><span class="args">(ofSoundObject &amp;soundObject)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_sound_object_1acbcb204241f93f6ada21de6662e0eb05_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">connectTo</span><span class="args">(ofSoundObject &amp;soundObject)</span></div><div class="memberDocumentation">
+
+<p>Connects the output of this <a class="el" href="ofSoundObject.html" title="Represents a node in your sound dsp chain It can have one input, and one output. If it doesn&apos;t have a...">ofSoundObject</a> to the input of the parameter <a class="el" href="ofSoundObject.html" title="Represents a node in your sound dsp chain It can have one input, and one output. If it doesn&apos;t have a...">ofSoundObject</a>. </p>
+
+</div></div>
   </div><div id="classof_sound_object_1abf28b11a28b9f5fbbc805f4e9f81162b" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1abf28b11a28b9f5fbbc805f4e9f81162b&quot;)">
@@ -958,7 +825,9 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1abf28b11a28b9f5fbbc805f4e9f81162b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">disconnect</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_sound_object_1abf28b11a28b9f5fbbc805f4e9f81162b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">disconnect</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_sound_object_1a9f4d1de728e8c87a7115ba2980127fce" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1a9f4d1de728e8c87a7115ba2980127fce&quot;)">
@@ -970,7 +839,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1a9f4d1de728e8c87a7115ba2980127fce_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">process</span><span class="args">(ofSoundBuffer &amp;input, ofSoundBuffer &amp;output)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_sound_object_1a9f4d1de728e8c87a7115ba2980127fce_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">process</span><span class="args">(ofSoundBuffer &amp;input, ofSoundBuffer &amp;output)</span></div><div class="memberDocumentation">
+
+<p>This is the method you implement to process the signal from inputs to outputs. </p>
+
+</div></div>
   </div><div id="classof_base_sound_output_1affbe31ef262e3fad9bbb70538523c191" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_sound_output_1affbe31ef262e3fad9bbb70538523c191&quot;)">
@@ -982,7 +855,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_base_sound_output_1affbe31ef262e3fad9bbb70538523c191_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(float *output, int bufferSize, int nChannels, int deviceID, long unsigned long tickCount)</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(float *output, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_base_sound_output_1affbe31ef262e3fad9bbb70538523c191_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(float *output, int bufferSize, int nChannels, int deviceID, long unsigned long tickCount)</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">audioOut</span><span class="args">(float *output, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_sound_object_1aa0b19dcff8c169c638b39fc8de1bb498" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1aa0b19dcff8c169c638b39fc8de1bb498&quot;)">
@@ -994,7 +871,13 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1aa0b19dcff8c169c638b39fc8de1bb498_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">checkForInfiniteLoops</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_sound_object_1aa0b19dcff8c169c638b39fc8de1bb498_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">checkForInfiniteLoops</span><span class="args">() const </span></div><div class="memberDocumentation">
+<p>this checks the dsp chain to ensure there are no infinite loops</p>
+<ul>
+<li>might want to override this if you make a splitter returns true if there are no infinite loops. </li>
+</ul>
+
+</div></div>
   </div><div id="classof_sound_object_1a4ffadce2a8627232a5626808a8559095" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_sound_object_1a4ffadce2a8627232a5626808a8559095&quot;)">
@@ -1006,7 +889,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_sound_object_1a4ffadce2a8627232a5626808a8559095_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">getInputObject</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">getInputObject</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_sound_object_1a4ffadce2a8627232a5626808a8559095_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">getInputObject</span><span class="args">()</span></div><div class="memberDocumentation">
+
+</div><hr><div class="memberVariant"><span class="type"><a href="ofSoundObject.html">ofSoundObject</a> </span><span class="name">getInputObject</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_base_sound_output_1a5736b7e23b8a8c563aeaae27d97c75ff" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_sound_output_1a5736b7e23b8a8c563aeaae27d97c75ff&quot;)">
@@ -1018,41 +905,7 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_base_sound_output_1a5736b7e23b8a8c563aeaae27d97c75ff_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioRequested</span><span class="args">(float *output, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">undefined</div></div>
-  </div></div>
-  </div><div id="ProtectedFunctions">
-    <h3 class="sectionHeader">Protected Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a645ad5042186ef9f721c06c32a38b9ab" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a645ad5042186ef9f721c06c32a38b9ab&quot;)">
-        <span class="type"></span>
-        <a class="name">disconnectInput</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a645ad5042186ef9f721c06c32a38b9ab_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">disconnectInput</span><span class="args">(ofSoundObject &amp;input)</span></div><div class="memberDocumentation">
-
-<p>Reimplemented from <a class="el" href="ofSoundObject.html#aed66d29b18f963555a9ca10d0a938f7f">ofSoundObject</a>.</p>
-
-</div></div>
-  </div><div id="a19a97962e4a7693e0a676776dddc8748" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a19a97962e4a7693e0a676776dddc8748&quot;)">
-        <span class="type"></span>
-        <a class="name">setInput</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a19a97962e4a7693e0a676776dddc8748_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">setInput</span><span class="args">(ofSoundObject &amp;obj)</span></div><div class="memberDocumentation">
-
-<p>Reimplemented from <a class="el" href="ofSoundObject.html#a8bddcd4cb5806b5ec1be7f3e61469431">ofSoundObject</a>.</p>
+    <div class="methodDescription" style="display:none" id="classof_base_sound_output_1a5736b7e23b8a8c563aeaae27d97c75ff_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">audioRequested</span><span class="args">(float *output, int bufferSize, int nChannels)</span></div><div class="memberDocumentation">
 
 </div></div>
   </div></div>

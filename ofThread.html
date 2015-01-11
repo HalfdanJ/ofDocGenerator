@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <span class="class">ofThread</span><li class="chapter"><a href="#Types">Types</a></li><li class="chapter"><a href="#ProtectedAttributes">Protected Attributes</a></li><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#StaticFunctions">Static Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li></ul>
+        <span class="class">ofThread</span><li class="chapter"><a href="#Types">Types</a></li><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#StaticFunctions">Static Functions</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -112,43 +112,6 @@
 </td></tr>
 </table>
 
-</div></div>
-  </div></div>
-  </div><div id="ProtectedAttributes">
-    <h3 class="sectionHeader">Protected Attributes</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a2ac54808d526a915319b3ba81edeeea1" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a2ac54808d526a915319b3ba81edeeea1&quot;)">
-        <span class="type"></span>
-        <a class="name">thread</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a2ac54808d526a915319b3ba81edeeea1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">Poco::Thread </span><span class="name">thread</span><span class="args"></span></div><div class="memberDocumentation">
-
-<p>The Poco::Thread that runs the Poco::Runnable. </p>
-
-</div></div>
-  </div><div id="a12ff152ef6ad45f82cff7dcd5b4b9742" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a12ff152ef6ad45f82cff7dcd5b4b9742&quot;)">
-        <span class="type"></span>
-        <a class="name">mutex</a>
-        <span class="args"></span>
-        <span class="kind">variable</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a12ff152ef6ad45f82cff7dcd5b4b9742_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofTypes.html#1a14d0290b2d9067f9b5c30fa5e4e56927">ofMutex</a> </span><span class="name">mutex</span><span class="args"></span></div><div class="memberDocumentation">
-
-<p>The internal mutex called through <a class="el" href="ofThread.html#a8b682673b3d11225785b74f68fc3ce96" title="Try to lock the mutex. ">lock()</a> &amp; <a class="el" href="ofThread.html#a98fd09fe1a8db65c2444abab0e806831" title="Unlock the mutex. ">unlock()</a>. </p>
-<p>This mutext can also be used with ofScopedLock within the threaded function by calling: </p>
-<pre class="fragment">ofScopedLock lock(mutex);</pre> 
 </div></div>
   </div></div>
   </div><div id="Functions">
@@ -321,7 +284,7 @@
     <div class="methodDescription" style="display:none" id="a3102a3bf7897f579d70a418ae3ed010b_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">stopThread</span><span class="args">()</span></div><div class="memberDocumentation">
 
 <p>Stop the thread. </p>
-<p>This does immediately stop the thread from processing, but will only set a flag that must be checked from within your <a class="el" href="ofThread.html#a7e90ddaf0113435c451e6daf600c33f1" title="The thread&apos;s run function. ">threadedFunction()</a> by calling <a class="el" href="ofThread.html#a07a51505ea9f5407e8c5999368bd54e2" title="Check the running status of the thread. ">isThreadRunning()</a>. If the user wants to both stop the thread AND wait for the thread to finish processing, the user should call waitForThread(true, ...). </p>
+<p>This does immediately stop the thread from processing, but will only set a flag that must be checked from within your threadedFunction() by calling <a class="el" href="ofThread.html#a07a51505ea9f5407e8c5999368bd54e2" title="Check the running status of the thread. ">isThreadRunning()</a>. If the user wants to both stop the thread AND wait for the thread to finish processing, the user should call waitForThread(true, ...). </p>
 
 </div></div>
   </div><div id="a4faefa778ff5338ee7add57dd5ec2a5f" class="method">
@@ -338,7 +301,7 @@
     <div class="methodDescription" style="display:none" id="a4faefa778ff5338ee7add57dd5ec2a5f_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">waitForThread</span><span class="args">(bool callStopThread=true, long milliseconds=INFINITE_JOIN_TIMEOUT)</span></div><div class="memberDocumentation">
 
 <p>Wait for the thread to exit (aka &quot;joining&quot; the thread). </p>
-<p>This method waits for a thread will &quot;block&quot; and wait for the thread (aka &quot;join&quot; the thread) before it returns. This allows the user to be sure that the thread is properly cleaned up. An example of when this might be particularly important is if the <a class="el" href="ofThread.html#a7e90ddaf0113435c451e6daf600c33f1" title="The thread&apos;s run function. ">threadedFunction()</a> is opening a set of network sockets, or downloading data from the web. Destroying an <a class="el" href="ofThread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> subclass without releasing those sockets (or other resources), may result in segmentation faults, error signals or other undefined behaviors.</p>
+<p>This method waits for a thread will &quot;block&quot; and wait for the thread (aka &quot;join&quot; the thread) before it returns. This allows the user to be sure that the thread is properly cleaned up. An example of when this might be particularly important is if the threadedFunction() is opening a set of network sockets, or downloading data from the web. Destroying an <a class="el" href="ofThread.html" title="A threaded base class with a built in mutex for convenience. ">ofThread</a> subclass without releasing those sockets (or other resources), may result in segmentation faults, error signals or other undefined behaviors.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">callStopThread</td><td>Set stop to true if you want to signal the thread to exit before waiting. This is the equivalent to calling <a class="el" href="ofThread.html#a3102a3bf7897f579d70a418ae3ed010b" title="Stop the thread. ">stopThread()</a>. If you your threadedFunction uses a while-loop that depends on <a class="el" href="ofThread.html#a07a51505ea9f5407e8c5999368bd54e2" title="Check the running status of the thread. ">isThreadRunning()</a> and you do not call <a class="el" href="ofThread.html#a3102a3bf7897f579d70a418ae3ed010b" title="Stop the thread. ">stopThread()</a> or set stop == true, waitForThread will hang indefinitely. Set stop == false ONLY if you have already called <a class="el" href="ofThread.html#a3102a3bf7897f579d70a418ae3ed010b" title="Stop the thread. ">stopThread()</a> and you simply need to be sure your thread has finished its tasks.</td></tr>
@@ -369,7 +332,7 @@
     <div class="methodDescription" style="display:none" id="a9e99dc383aba491a664efad32d2d7ccb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">sleep</span><span class="args">(long milliseconds)</span></div><div class="memberDocumentation">
 
 <p>Tell the thread to sleep for a certain amount of milliseconds. </p>
-<p>This is useful inside the <a class="el" href="ofThread.html#a7e90ddaf0113435c451e6daf600c33f1" title="The thread&apos;s run function. ">threadedFunction()</a> when a thread is waiting for input to process: </p>
+<p>This is useful inside the threadedFunction() when a thread is waiting for input to process: </p>
 <pre class="fragment">void MyThreadedClass::threadedFunction()
 {
     // start
@@ -530,50 +493,6 @@ else
 <p>Get the current Poco thread. </p>
 <p>In most cases, it is more appropriate to query the current thread by calling <a class="el" href="ofThread.html#a96b7892fb6c0ddda7fe046aaa019da90" title="Query whether the current thread is active. ">isCurrentThread()</a> on an active thread or by calling <a class="el" href="ofThread.html#a23f292adedaad5a0991637a1746d9772" title="A query to see if the current thread is the main thread. ">ofThread::isMainThread()</a>. See the method documentation for more information on those methods.</p>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the current active thread OR 0 iff the main application thread is active. </dd></dl>
-
-</div></div>
-  </div></div>
-  </div><div id="ProtectedFunctions">
-    <h3 class="sectionHeader">Protected Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a7e90ddaf0113435c451e6daf600c33f1" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a7e90ddaf0113435c451e6daf600c33f1&quot;)">
-        <span class="type"></span>
-        <a class="name">threadedFunction</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a7e90ddaf0113435c451e6daf600c33f1_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">threadedFunction</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>The thread&apos;s run function. </p>
-<p>Users must overide this in your their derived class and then implement their threaded activity inside the loop. If the the users&apos;s threadedFunction does not have a loop, the contents of the threadedFunction will be executed once and the thread will then exit.</p>
-<p>For tasks that must be repeated, the user can use a while loop that will run repeatedly until the thread&apos;s threadRunning is set to false via the <a class="el" href="ofThread.html#a3102a3bf7897f579d70a418ae3ed010b" title="Stop the thread. ">stopThread()</a> method. </p>
-<pre class="fragment">void MyThreadedClass::threadedFunction()
-{
-    // Start the loop and continue until
-    // isThreadRunning() returns false.
-    while(isThreadRunning())
-    {
-        // Do activity repeatedly here:
-
-        // int j = 1 + 1;
-
-        // This while loop will run as fast as it possibly
-        // can, consuming as much processor speed as it can.
-        // To help the processor stay cool, users are
-        // encouraged to let the while loop sleep via the
-        // sleep() method, or call the yield() method to let
-        // other threads have a turn.  See the sleep() and
-        // yield() methods for more information.
-
-        // sleep(100);
-    }
-</pre> 
-<p>Reimplemented in <a class="el" href="ofAppEGLWindow.html#a3ae549b0d4f26ba0ba3200554dd659d2">ofAppEGLWindow</a>, and <a class="el" href="ofURLFileLoaderImpl.html#a945b2dfdc767abe627a72b023e970b24">ofURLFileLoaderImpl</a>.</p>
 
 </div></div>
   </div></div>

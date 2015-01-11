@@ -57,7 +57,7 @@
       <li class="group selected">
         Topics
         <ul id="topics">
-        <span class="class">ofGstVideoPlayer</span><li class="chapter"><a href="#Functions">Functions</a></li><li class="chapter"><a href="#ProtectedFunctions">Protected Functions</a></li></ul>
+        <span class="class">ofGstVideoPlayer</span><li class="chapter"><a href="#Functions">Functions</a></li></ul>
     </li></ul>
   </nav>
   <div class="main">
@@ -712,7 +712,11 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_base_video_player_1afc23254b9e5ca10822a78b3b359ba7b4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofTexture.html">ofTexture</a> </span><span class="name">getTexturePtr</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_base_video_player_1afc23254b9e5ca10822a78b3b359ba7b4_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofTexture.html">ofTexture</a> </span><span class="name">getTexturePtr</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Reimplemented in <a class="el" href="ofAVFoundationPlayer.html#a4d143275ec7b2647dafd4dbf78f34837">ofAVFoundationPlayer</a>.</p>
+
+</div></div>
   </div><div id="classof_base_video_player_1a1d7a6c01e6d504b3761b754753d715cb" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_video_player_1a1d7a6c01e6d504b3761b754753d715cb&quot;)">
@@ -724,7 +728,17 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_base_video_player_1a1d7a6c01e6d504b3761b754753d715cb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">isInitialized</span><span class="args">() const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_base_video_player_1a1d7a6c01e6d504b3761b754753d715cb_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">isInitialized</span><span class="args">() const </span></div><div class="memberDocumentation">
+
+<p>Determine if the video source is initialized. </p>
+<p>Video sources such as cameras are often initialized with a setup() method. Video sources such as movie players are often initialized with a <a class="el" href="ofBaseVideoPlayer.html#aa1e7b031f15145123a80ad981f5e93dd">load()</a> method.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if the video source is initialized. </dd></dl>
+
+<p>Implements <a class="el" href="ofBaseVideo.html#aedfdad42e95250631170ebd5258bc27d">ofBaseVideo</a>.</p>
+
+<p>Reimplemented in <a class="el" href="ofVideoPlayer.html#a0c8dc190928dccc314cfe8eb5c21853d">ofVideoPlayer</a>.</p>
+
+</div></div>
   </div><div id="classof_gst_app_sink_1a124d863f6b033e79ad56d6cb67a70dc7" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_gst_app_sink_1a124d863f6b033e79ad56d6cb67a70dc7&quot;)">
@@ -736,7 +750,9 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_gst_app_sink_1a124d863f6b033e79ad56d6cb67a70dc7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">GstFlowReturn </span><span class="name">on_preroll</span><span class="args">(shared_ptr&lt; GstBuffer &gt; buffer)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_gst_app_sink_1a124d863f6b033e79ad56d6cb67a70dc7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">GstFlowReturn </span><span class="name">on_preroll</span><span class="args">(shared_ptr&lt; GstBuffer &gt; buffer)</span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_gst_app_sink_1ab2a082df09b28d549ae99ac6b427b252" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_gst_app_sink_1ab2a082df09b28d549ae99ac6b427b252&quot;)">
@@ -748,7 +764,9 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_gst_app_sink_1ab2a082df09b28d549ae99ac6b427b252_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">GstFlowReturn </span><span class="name">on_buffer</span><span class="args">(shared_ptr&lt; GstBuffer &gt; buffer)</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_gst_app_sink_1ab2a082df09b28d549ae99ac6b427b252_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">GstFlowReturn </span><span class="name">on_buffer</span><span class="args">(shared_ptr&lt; GstBuffer &gt; buffer)</span></div><div class="memberDocumentation">
+
+</div></div>
   </div><div id="classof_gst_app_sink_1a03b003d1a338cf12be908d7f0138fb3e" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_gst_app_sink_1a03b003d1a338cf12be908d7f0138fb3e&quot;)">
@@ -760,69 +778,7 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_gst_app_sink_1a03b003d1a338cf12be908d7f0138fb3e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">on_eos</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
-  </div></div>
-  </div><div id="ProtectedFunctions">
-    <h3 class="sectionHeader">Protected Functions</h3>
-    <div class="sectionDescription"></div>
-    <div class="sectionContent"><div id="a61cbfc95314a9bbcdc1e15c6450541c7" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a61cbfc95314a9bbcdc1e15c6450541c7&quot;)">
-        <span class="type"></span>
-        <a class="name">allocate</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a61cbfc95314a9bbcdc1e15c6450541c7_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">allocate</span><span class="args">()</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="a258cbb24a1edcdf55e5815cf2e938417" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a258cbb24a1edcdf55e5815cf2e938417&quot;)">
-        <span class="type"></span>
-        <a class="name">createPipeline</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a258cbb24a1edcdf55e5815cf2e938417_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">createPipeline</span><span class="args">(string uri)</span></div><div class="memberDocumentation">
-
-</div></div>
-  </div><div id="ac3d97ba6cd0b922dab0fe8c4717d8071" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#ac3d97ba6cd0b922dab0fe8c4717d8071&quot;)">
-        <span class="type"></span>
-        <a class="name">on_stream_prepared</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="ac3d97ba6cd0b922dab0fe8c4717d8071_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">on_stream_prepared</span><span class="args">()</span></div><div class="memberDocumentation">
-
-<p>Reimplemented from <a class="el" href="ofGstAppSink.html#a2f0e2897c2967e2ec442e81a4af89ddc">ofGstAppSink</a>.</p>
-
-</div></div>
-  </div><div id="a30a1c4b0d176b6b8bbebf7875e4a4782" class="method">
-    <div class="methodHeader">
-      <div class="methodHeaderBox" onClick="toggleDescription(&quot;#a30a1c4b0d176b6b8bbebf7875e4a4782&quot;)">
-        <span class="type"></span>
-        <a class="name">on_message</a>
-        <span class="args"></span>
-        <span class="kind">()</span>
-        <span class="note"></span>
-      </div>
-    </div>
-
-    <div class="methodDescription" style="display:none" id="a30a1c4b0d176b6b8bbebf7875e4a4782_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">bool </span><span class="name">on_message</span><span class="args">(GstMessage *msg)</span></div><div class="memberDocumentation">
-
-<p>Reimplemented from <a class="el" href="ofGstAppSink.html#a60f84fb94bb4b9edca99684f9b4dde63">ofGstAppSink</a>.</p>
+    <div class="methodDescription" style="display:none" id="classof_gst_app_sink_1a03b003d1a338cf12be908d7f0138fb3e_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">on_eos</span><span class="args">()</span></div><div class="memberDocumentation">
 
 </div></div>
   </div></div>

@@ -786,7 +786,13 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_base_video_grabber_1a27c96b31dd24e51209ceb93cdcbb9b79_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofTexture.html">ofTexture</a> </span><span class="name">getTexturePtr</span><span class="args">()</span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_base_video_grabber_1a27c96b31dd24e51209ceb93cdcbb9b79_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type"><a href="ofTexture.html">ofTexture</a> </span><span class="name">getTexturePtr</span><span class="args">()</span></div><div class="memberDocumentation">
+
+<p>Get the video grabber&apos;s internal <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> pointer if available. </p>
+<dl class="section note"><dt>Note</dt><dd>Subclasses should implement this method only if internal API can upload video grabber pixels directly to an <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a>.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the internal <a class="el" href="ofTexture.html" title="A wrapper class for an OpenGL texture. ">ofTexture</a> pointer or NULL if not available. </dd></dl>
+
+</div></div>
   </div><div id="classof_base_draws_1a041f709fcc67b8be6cc576629a332682" class="method">
     <div class="methodHeader">
       <div class="methodHeaderBox" onClick="toggleDescription(&quot;#classof_base_draws_1a041f709fcc67b8be6cc576629a332682&quot;)">
@@ -798,7 +804,40 @@
       </div>
     </div>
 
-    <div class="methodDescription" style="display:none" id="classof_base_draws_1a041f709fcc67b8be6cc576629a332682_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofPoint &amp;point) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofRectangle &amp;rect) const </span></div><div class="memberDocumentation">undefined</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofPoint &amp;point, float w, float h) const </span></div><div class="memberDocumentation">undefined</div></div>
+    <div class="methodDescription" style="display:none" id="classof_base_draws_1a041f709fcc67b8be6cc576629a332682_description"> <!-- Description goes here --> <div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofPoint &amp;point) const </span></div><div class="memberDocumentation">
+
+<p>Draw at a position at the native size. </p>
+<p>Native size is determined by <a class="el" href="ofBaseDraws.html#a0513ff59c024202df4cfd31e1244ac4b" title="Get the width. ">getWidth()</a> and <a class="el" href="ofBaseDraws.html#a65f504e6dec109161334138f17b19402" title="Get the height. ">getHeight()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>Draw position. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofRectangle &amp;rect) const </span></div><div class="memberDocumentation">
+
+<p>Draw at a position and size specified by a rectangle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td>Draw position and size. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div><hr><div class="memberVariant"><span class="type">void </span><span class="name">draw</span><span class="args">(const ofPoint &amp;point, float w, float h) const </span></div><div class="memberDocumentation">
+
+<p>Draw at a position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>Draw position. </td></tr>
+    <tr><td class="paramname">w</td><td>Draw width. </td></tr>
+    <tr><td class="paramname">h</td><td>Draw height. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div></div>
   </div></div>
   </div></div>
   </div></div>
