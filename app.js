@@ -63,27 +63,24 @@ loadStructure()
 
     // Iterate over the categories
     for (var folder in structure['core']) {
-      structure['core'][folder].forEach(function (file) {
-        file.category = folder;
+      structure['core'][folder].forEach(function (fileDescription) {
+        fileDescription.category = folder;
 
-        if(_.contains(internalFiles[folder], file.name)){
-          file.internal = true;
+        // Mark files internal
+        if(_.contains(internalFiles[folder], fileDescription.name)){
+          fileDescription.internal = true;
         }
-
-        // Generate the doc of the file
-        var p = generateDoc(file)
-          /*.then(function(){
-            console.log(file)
-          })*/
-          // If the doc fails, remove it from the structure so it's not shown on the frontpage
-          .fail(function (e) {
-            console.error("Error generating doc:", e, file, file.category)
-            var index = structure['core'][file.category].indexOf(file);
-            structure['core'][file.category].splice(index, 1);
-          });
-
+        else {
+          // Generate the doc of the file
+          var p = generateDoc(fileDescription)
+            // If the doc fails, remove it from the structure so it's not shown on the frontpage
+            .fail(function (e) {
+              console.error("Error generating doc:", e, fileDescription, fileDescription.category)
+              var index = structure['core'][fileDescription.category].indexOf(fileDescription);
+              structure['core'][fileDescription.category].splice(index, 1);
+            });
+        }
         promises.push(p);
-
       })
     }
 
@@ -119,11 +116,14 @@ function loadStructure(){
   var promises = [];
   var structure = {core: {}};
 
+  // Iterate through all XML files in doxygen ouput folder
   var files = fs.readdirSync(dir+'xml');
   files.forEach(function(f){
+    // Match if its a xml describing a dir
     if(f.match(/^dir_/)){
       var deferred = Q.defer();
 
+      // Open and parse the XML file
       var xmlData = fs.readFileSync(dir+'xml/'+f);
       var xmlParser = new xml2js.Parser();
       xmlParser.parseString(xmlData, function (err, result) {
@@ -137,19 +137,20 @@ function loadStructure(){
 
           } else {
             structure.core[compoundname] = [];
+
+            // Iterate over the files described in the XML file
             if(result['doxygen']['compounddef'][0]['innerfile']) {
               result['doxygen']['compounddef'][0]['innerfile'].forEach(function (innerfile) {
                 var filename = innerfile['_'];
-                var refid = innerfile['$']['refid']
-
+                var refid = innerfile['$']['refid'];
                 //Is it a headerfile?
                 if (filename.match(/\.h$/)) {
                   structure.core[compoundname].push({
                     name: filename.replace(/\.h$/, ""),
-                    ref: refid
+                    filename: filename,
+                    doxygen_ref: refid
                   })
                 }
-
               })
             }
           }
@@ -174,56 +175,50 @@ function loadStructure(){
 //
 function generateDoc(fileDescription) {
   var category = fileDescription.category;
-  var className = fileDescription.name;
-  var doxygenName = fileDescription.ref;
+  var doxygenName = fileDescription.doxygen_ref;
 
-  console.log("Generate "+className)
+  fileDescription.kind = 'file';
+  fileDescription.url = fileDescription.name+".html";
+
+  console.log("Generate "+fileDescription.name)
 
   // First parse the doxygen xml
   return parseDoxygenXml(doxygenName)
-
-    // Then scrape the doxygen html for descriptions
-    .then(function(parseData) {
-      // If the XML marked the file as internal, then mark the file internal
-      //fileDescription.internal = parseData.internal;
-
-
-      console.log("Scrape "+className)
-      return scrapeDoxygenHtml(parseData);
+    .then(function(xmlData) {
+      fileDescription.sections = xmlData.sections;
+      fileDescription.classes = xmlData.classes;
     })
 
-    .then(function(parsedData){
-      var stats = getStatsOnObject(parsedData);
+    // Then scrape the doxygen html for descriptions
+    .then(function(){
+      console.log("Scrape " + fileDescription.name)
+      return scrapeDoxygenHtml(fileDescription);
+    })
+
+   .then(function(){
+      var stats = getStatsOnObject(fileDescription);
       fileDescription.stats = stats;
-
-
       console.log(doxygenName+" completion rate: "+stats.docRate+"%");
-
-      return parsedData;
     })
 
     // Then generate search toc object
-    .then(function(parsedData){
-      addObjectToSearch(parsedData);
-
-      return parsedData;
+    .then(function(){
+      addFileToSearch(fileDescription);
     })
 
     // Then generate the html output
-    .then(function(parseData){
-      console.log("Generate html "+className)
+    .then(function(){
+      console.log("Generate html "+fileDescription.name)
 
-      return generateHtml(parseData, category);
+      return generateHtml(fileDescription);
     })
 
     // Then save the output file
     .then(function(html){
       //Save the html
-      console.log("Save "+className)
-      fs.writeFile("output/"+className+".html", html);
+      console.log("Save "+fileDescription.name)
+      fs.writeFile("output/"+fileDescription.url, html);
     })
-
-
 }
 
 
@@ -233,16 +228,16 @@ function generateDoc(fileDescription) {
 function parseDoxygenXml(doxygenName){
   var deferred = Q.defer();
 
-  var ret = {
+  var xmlPath = dir + "xml/" + doxygenName + ".xml";
+
+  var xmlParseRet = {
     classes: [],
     sections: [],
-    doxygenName: doxygenName,
-    xmlPath: dir + "xml/" + doxygenName + ".xml",
-    htmlPath: dir + "html/" + doxygenName + ".html"
+    doxygen_ref: doxygenName,
   };
 
   //Load the doxygen xml file
-  var xmlData = fs.readFileSync(ret.xmlPath);
+  var xmlData = fs.readFileSync(xmlPath);
   var xmlParser = new xml2js.Parser();
   xmlParser.parseString(xmlData, function (err, result) {
 
@@ -262,23 +257,22 @@ function parseDoxygenXml(doxygenName){
       var compound = compounds[i];
 
       // Object name
-      ret.name = compound['compoundname'][0].replace(".h","");
+      xmlParseRet.name = compound['compoundname'][0].replace(".h","");
 
       // Object url
-      ret.url = compound['location'][0]['$']['file'].match(/\/(\w+).h$/)[1]+".html";
-
+      //xmlParseRet.url = compound['location'][0]['$']['file'].match(/\/(\w+).h$/)[1]+".html";
 
       // Object type
-      ret.kind = compound['$'].kind;
-      console.log(doxygenName,ret.name, ret.url,ret.kind );
+      xmlParseRet.kind = compound['$'].kind;
+      // console.log(doxygenName,xmlParseRet.name, xmlParseRet.url,xmlParseRet.kind );
 
       // Brief description
       if (compound['briefdescription'].length == 1
         && compound['briefdescription'][0]['para']) {
-        tocInfo[ret.name] = compound['briefdescription'][0]['para'][0];
-        ret.briefDescription = compound['briefdescription'][0]['para'][0];
+        tocInfo[xmlParseRet.name] = compound['briefdescription'][0]['para'][0];
+        xmlParseRet.briefDescription = compound['briefdescription'][0]['para'][0];
       } else {
-        console.error("Missing briefDescription on " + ret.name);
+        console.error("Missing briefDescription on " + xmlParseRet.name);
       }
 
       // Sections
@@ -379,7 +373,7 @@ function parseDoxygenXml(doxygenName){
               };
 
               // Member ref (anchor)
-              m.ref = m.info.id.replace(doxygenName + "_1", "");
+              m.doxygen_ref = m.info.id.replace(doxygenName + "_1", "");
 
               // Member kind
               m.kind = m.info.kind;
@@ -423,7 +417,7 @@ function parseDoxygenXml(doxygenName){
           }
 
           // Add the section
-          ret.sections.push(section);
+          xmlParseRet.sections.push(section);
 
         });
       }
@@ -439,7 +433,7 @@ function parseDoxygenXml(doxygenName){
           parseDoxygenXml(innerClassDoxygenName)
             .then(function(classData){
               // If there where no errors, add it to the classes array
-              ret.classes.push(classData);
+              xmlParseRet.classes.push(classData);
             })
             .fail(function(e){
               console.log(innerClassDoxygenName+" skipped since it could not be parsed",e);
@@ -463,14 +457,14 @@ function parseDoxygenXml(doxygenName){
         console.log("Done with "+doxygenName);
 
         // If there are no classes or sections, return an error
-        if(ret.classes.length == 0 && ret.sections.length == 0){
+        if(xmlParseRet.classes.length == 0 && xmlParseRet.sections.length == 0){
           // "Empty" file, let's remove it
           console.log(doxygenName + " is empty");
           deferred.reject("Object has no members or sections");
           return;
         }
 
-        deferred.resolve(ret);
+        deferred.resolve(xmlParseRet);
       })
       .fail(function(e){
         deferred.reject(e);
@@ -484,40 +478,39 @@ function parseDoxygenXml(doxygenName){
 
 // -----------
 
-function scrapeDoxygenHtml(parsedData){
+function scrapeDoxygenHtml(fileDescription){
   var promises = [];
 
-  if(!fs.existsSync(parsedData.htmlPath)){
-    console.error("Missing html for "+parsedData.name + " "+parsedData.htmlPath)
+  var htmlPath = dir + "html/" + fileDescription.doxygen_ref + ".html";
+
+  if(!fs.existsSync(htmlPath)){
+    console.error("Missing html for "+fileDescription.name + " "+htmlPath)
     return Q.all([]);
   }
-  var htmlData = fs.readFileSync(parsedData.htmlPath);
-  parsedData.htmlData = htmlData;
+
+  // Load HTML file
+  var htmlData = fs.readFileSync(htmlPath);
+  fileDescription.htmlData = htmlData;
 
   var $input = cheerio.load(htmlData.toString());
 
   // Overall description
   $input(".groupheader").each(function (i, elm) {
     if ($input(elm).text() == "Detailed Description") {
-      parsedData.description = $input(elm).next();
-
-      //console.log(parsedData.name , parsedData.description);
+      fileDescription.html_description = $input(elm).next();
     }
   });
 
 
-  // Classes
-  parsedData.classes.forEach(function (innerclass) {
-    var p = scrapeDoxygenHtml(innerclass).then(function(parsedData){
-      innerclass = parsedData;
-    });
-
+  // Inner Classes
+  fileDescription.classes.forEach(function (innerclass) {
+    var p = scrapeDoxygenHtml(innerclass);
     promises.push(p);
   });
 
 
   // Sections
-  parsedData.sections.forEach(function (section) {
+  fileDescription.sections.forEach(function (section) {
     // Find description of section
     $input("div.groupHeader").each(function (i, elm) {
       if ($input(elm).text() == section.name) {
@@ -532,7 +525,7 @@ function scrapeDoxygenHtml(parsedData){
         // Description
 
         // Find the coresponding description in the doxygen generated html
-        var ref = method.info.id.replace(parsedData.doxygenName + "_1", "");
+        var ref = method.info.id.replace(fileDescription.doxygen_ref + "_1", "");
         var refElm = $input("#" + ref);
 
         if (!refElm) {
@@ -544,7 +537,7 @@ function scrapeDoxygenHtml(parsedData){
           //if(memitem.is('.memdoc')) {
           if (memdoc.html()) {
 
-            method.htmlDescription = memdoc.html();
+            method.html_description = memdoc.html();
           }
         }
       })
@@ -552,64 +545,58 @@ function scrapeDoxygenHtml(parsedData){
   });
 
 
-  return Q.all(promises).then(function(){
-    return parsedData;
-  });
+  return Q.all(promises);
 }
 
 // ----------
 
-function addObjectToSearch(obj){
-  if(!obj.internal) {
+function addFileToSearch(file){
+  // File / class
+  searchToc.push({
+    name: file.name,
+    type: file.kind,
+    ref: file.url
+  });
 
-    // File / class
-    searchToc.push({
-      name: obj.name,
-      type: obj.kind,
-      ref: obj.url
+  // Methods
+  file.sections.forEach(function (section) {
+    section.methods.forEach(function (method) {
+      var ref = method.implementations[0].doxygen_ref;
+      searchToc.push({
+        name: method.implementations[0].name,
+        type: method.implementations[0].info.kind,
+        ref: file.url + "#" + ref
+      })
     });
 
-    // Methods
-    obj.sections.forEach(function (section) {
-      section.methods.forEach(function (method) {
-        var ref = method.implementations[0].ref;
-        searchToc.push({
-          name: method.implementations[0].name,
-          type: method.implementations[0].info.kind,
-          ref: obj.url + "#" + ref
-        })
-      });
-
-      // Inner classes
-      obj.classes.forEach(function (innerclass) {
-        addObjectToSearch(innerclass);
-      });
-
+    // Inner classes recursive add
+    file.classes.forEach(function (innerclass) {
+      innerclass.url = file.url;
+      addFileToSearch(innerclass);
     });
-
-  }
+  });
 }
 
 // -----------
 
-function generateHtml(parsedData, category){
+function generateHtml(fileDescription){
+  // Load template
   var templateData = fs.readFileSync("template.html");
-
   var $ = cheerio.load(templateData.toString());
 
   // Page title
-  $('title').text(parsedData.name);
+  $('title').text(fileDescription.name);
 
   //Quick nav
-  $('#classQuickNav').text(parsedData.name);
-  $('#categoryQuickNav').text(category);
+  $('#classQuickNav').text(fileDescription.name);
+  $('#categoryQuickNav').text(fileDescription.category);
 
 
   // Global  members
-  generateHtmlContent(parsedData, $);
+  generateHtmlContent(fileDescription, $);
 
   // Inner classes
-  parsedData.classes.forEach(function(innerclass){
+  fileDescription.classes.forEach(function(innerclass){
     $("#topics").append('<span class="class">'+innerclass.name+'</span>');
 
     generateHtmlContent(innerclass, $);
@@ -644,7 +631,7 @@ function generateHtmlContent(parsedData, $){
   }
   classTemplate.find('.classTitle').html(parsedData.name+kind);
   //classTemplate.find('.classKind').html(parsedData.kind);
-  classTemplate.find('.classDescription').html(parsedData.description);
+  classTemplate.find('.classDescription').html(parsedData.html_description);
 
   // Sections
   parsedData.sections.forEach(function (section) {
@@ -655,8 +642,8 @@ function generateHtmlContent(parsedData, $){
     // Section template
     var s = $('#sectionTemplate').clone().attr('id', section.anchor);
     s.children('.sectionHeader').text(section.name);
-    if(section.description) {
-      s.children('.sectionDescription').html(section.description);
+    if(section.html_description) {
+      s.children('.sectionDescription').html(section.html_description);
     }
 
     // Iterate over all members in the section
@@ -664,7 +651,7 @@ function generateHtmlContent(parsedData, $){
       var member = memberGroup.implementations[0];
 
       // Set the #ID of the element
-      var ref = member.ref;
+      var ref = member.doxygen_ref;
       var m = $('#classMethodTemplate').clone().attr('id', ref);
 
       var header = m.find(".methodHeader").find('.methodHeaderBox');
@@ -711,7 +698,7 @@ function generateHtmlContent(parsedData, $){
         variantDesc.append('<span class="name">'+method.name+'</span>');
         variantDesc.append('<span class="args">'+method.argsstring+'</span>');
 
-        methodDescription.append('<div class="memberDocumentation">'+method.htmlDescription+"</div>");
+        methodDescription.append('<div class="memberDocumentation">'+method.html_description+"</div>");
 
         first = false;
       //  methodImplementations.append(method.name)
@@ -812,7 +799,7 @@ function getStatsOnObject(parsedData){
   parsedData.sections.forEach(function (section) {
     section.methods.forEach(function (memberGroup) {
       memberGroup.implementations.forEach(function(method) {
-        if(method.htmlDescription && method.htmlDescription.trim().length > 0){
+        if(method.html_description && method.html_description.trim().length > 0){
           numMembersWithDoc ++;
         }
         numMembers++;
