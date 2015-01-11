@@ -3,6 +3,7 @@ var fs = require('fs-extra'),
   Q = require('q'),
   xml2js = require('xml2js'),
   cheerio = require('cheerio')
+  _ = require('underscore')._;
 
 // Set this to the section you work on to speed up the generation.
 // But remember to remove it again! :)
@@ -51,6 +52,8 @@ fs.copySync(root+'/docs/images', 'output/images');
 var tocInfo = {};
 var searchToc = [];
 
+var internalFiles = require('./internalFiles.json');
+
 // Load the structure from the doxygen xml
 loadStructure()
 
@@ -59,9 +62,13 @@ loadStructure()
     var promises = [];
 
     // Iterate over the categories
-    for (var category in structure['core']) {
-      structure['core'][category].forEach(function (file) {
-        file.category = category;
+    for (var folder in structure['core']) {
+      structure['core'][folder].forEach(function (file) {
+        file.category = folder;
+
+        if(_.contains(internalFiles[folder], file.name)){
+          file.internal = true;
+        }
 
         // Generate the doc of the file
         var p = generateDoc(file)
@@ -178,7 +185,8 @@ function generateDoc(fileDescription) {
     // Then scrape the doxygen html for descriptions
     .then(function(parseData) {
       // If the XML marked the file as internal, then mark the file internal
-      fileDescription.internal = parseData.internal;
+      //fileDescription.internal = parseData.internal;
+
 
       console.log("Scrape "+className)
       return scrapeDoxygenHtml(parseData);
@@ -187,6 +195,7 @@ function generateDoc(fileDescription) {
     .then(function(parsedData){
       var stats = getStatsOnObject(parsedData);
       fileDescription.stats = stats;
+
 
       console.log(doxygenName+" completion rate: "+stats.docRate+"%");
 
@@ -243,10 +252,10 @@ function parseDoxygenXml(doxygenName){
     var compounds = result['doxygen']['compounddef'];
 
     // Find the detailed description of the file, and see if its defined as Internal
-    var simpleDescriptionSet = getNested(compounds, 0, 'detaileddescription', 0, 'para', 0, 'simplesect',0,'title',0)
+    /*var simpleDescriptionSet = getNested(compounds, 0, 'detaileddescription', 0, 'para', 0, 'simplesect',0,'title',0)
     if(simpleDescriptionSet == 'Internal ') {
       ret.internal = true;
-    }
+    }*/
 
     // compounds.length is always 1
     for (var i = 0; i < compounds.length; i++) {
@@ -258,8 +267,10 @@ function parseDoxygenXml(doxygenName){
       // Object url
       ret.url = compound['location'][0]['$']['file'].match(/\/(\w+).h$/)[1]+".html";
 
+
       // Object type
       ret.kind = compound['$'].kind;
+      console.log(doxygenName,ret.name, ret.url,ret.kind );
 
       // Brief description
       if (compound['briefdescription'].length == 1
@@ -548,23 +559,29 @@ function scrapeDoxygenHtml(parsedData){
 
 // ----------
 
-function addObjectToSearch(parsedData){
-  if(!parsedData.internal) {
+function addObjectToSearch(obj){
+  if(!obj.internal) {
 
-    searchToc.push({name: parsedData.name, type: parsedData.kind, ref: parsedData.url})
+    // File / class
+    searchToc.push({
+      name: obj.name,
+      type: obj.kind,
+      ref: obj.url
+    });
 
-    parsedData.sections.forEach(function (section) {
+    // Methods
+    obj.sections.forEach(function (section) {
       section.methods.forEach(function (method) {
         var ref = method.implementations[0].ref;
         searchToc.push({
           name: method.implementations[0].name,
           type: method.implementations[0].info.kind,
-          ref: parsedData.url + "#" + ref
+          ref: obj.url + "#" + ref
         })
       });
 
       // Inner classes
-      parsedData.classes.forEach(function (innerclass) {
+      obj.classes.forEach(function (innerclass) {
         addObjectToSearch(innerclass);
       });
 
