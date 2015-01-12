@@ -1,23 +1,20 @@
 before_install:
-    - sudo apt-get install python-software-properties 
-    - sudo apt-add-repository -y ppa:libreoffice/libreoffice-4-2
-    - sudo apt-get update
-    - sudo apt-get install doxygen
-    - gem install sass --version "=3.2.12"
-    - gem install compass --version "=0.12.2"
-
+- sudo apt-get install python-software-properties
+- sudo apt-add-repository -y ppa:libreoffice/libreoffice-4-2
+- sudo apt-get update
+- sudo apt-get install doxygen
+- gem install sass --version "=3.2.12"
+- gem install compass --version "=0.12.2"
 language: node_js
-node_js: "0.10"
+node_js: '0.10'
 env:
-    global:
-        - secure: "cDW4C0M6gHP7Zfhyi2xwKrHtqT3FkuS7BkyVe/hG4piSYxnf7LyxElQhDxjedEg0ibxNNbINAnYwtvc+s7skL40c6HsgkFm49AE/h150KVKqfu9nhJUoMsHVsCBnF29oKk9qXvla3mfJsGOBfZsY9UNIosqnMjXHzYuDbsNQ/5k="
-
+  global:
+  - secure: RIsZhGwZY2PZLxqSBMh1z1MiqNFkRupOk/fV7M03i/n51xLX+KVFibbtm+YslgxPj6wGJFk8mU+UZnxhbM5RCOY/mQXyckqgXH4/VFp+VChsvCMFg2k/TC+YIugCLulWH/Ny52i0BBa5TjDi6758JZRmgZ7oybM49zribYyX4mw=
 script:
-    - git config --global user.name "Travis-CI"
-    - git config --global user.email ${GIT_EMAIL}
-    - git clone --quiet https://github.com/openframeworks/openFrameworks.git
-    - cd openFrameworks/scripts/
-    - git clone https://github.com/halfdanJ/ofDocGenerator
-    - cd ofDocGenerator
-    - npm run start
-    - ./publish.sh
+- git clone --quiet https://github.com/openframeworks/openFrameworks.git
+- cd openFrameworks/scripts/
+- git clone https://github.com/halfdanJ/ofDocGenerator
+- cd ofDocGenerator
+- npm run start
+after_success:
+- "./publish.sh"

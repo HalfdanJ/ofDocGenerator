@@ -1,16 +1,8 @@
 #!/bin/bash
 
 echo "Start ofDoc publishing"
+echo $FTP_USER
 
-rm -rf ghpages || exit 0;
-git clone --branch=gh-pages https://github.com/HalfdanJ/ofDocGenerator.git ghpages
-cp -R output/* ghpages/
-(
-	cd ghpages;
-	git add --all .;
-	git commit -m "Travis auto ofDoc generation";
-	git remote set-url origin "https://${GIT_TOKEN}@github.com/HalfdanJ/ofDocGenerator.git"
-	git push -fq origin gh-pages  > /dev/null 2>&1
-)
+ncftpput -R -v -u $FTP_USER -p $FTP_PASSWORD 104.130.212.175 / output/*
 
 echo "Publishing done"
