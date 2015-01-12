@@ -17,6 +17,10 @@ small {
     height: 45px;
     font-size: 16px;
   }
+  .labelToggle {
+    top: 50px;
+    position:relative;
+  }
 
   .searchResult {
     border: 1px solid #ccc;
@@ -32,9 +36,14 @@ small {
   }
 
   .section {
-    float:left;
-    width:228px;
-    margin-bottom:20px;
+    display: inline-block;
+    vertical-align: top;
+    width: 190px;
+    margin-bottom: 40px;
+
+    .label {
+      display:none;
+    }
   }
 }
 
