@@ -2,12 +2,12 @@ var fs = require('fs-extra'),
   util = require('util'),
   Q = require('q'),
   xml2js = require('xml2js'),
-  cheerio = require('cheerio')
+  cheerio = require('cheerio'),
   _ = require('underscore')._;
 
 // Set this to the section you work on to speed up the generation.
 // But remember to remove it again! :)
-var filterGroup = 'types';
+var filterGroup = '3d';
 
 // Check for sass compatibility (it does not work on Travis-ci)
 try {
@@ -195,7 +195,7 @@ function generateDoc(fileDescription) {
       return scrapeDoxygenHtml(fileDescription);
     })
 
-   .then(function(){
+    .then(function(){
       var stats = getStatsOnObject(fileDescription);
       fileDescription.stats = stats;
       console.log(doxygenName+" completion rate: "+stats.docRate+"%");
@@ -248,9 +248,9 @@ function parseDoxygenXml(doxygenName){
 
     // Find the detailed description of the file, and see if its defined as Internal
     /*var simpleDescriptionSet = getNested(compounds, 0, 'detaileddescription', 0, 'para', 0, 'simplesect',0,'title',0)
-    if(simpleDescriptionSet == 'Internal ') {
-      ret.internal = true;
-    }*/
+     if(simpleDescriptionSet == 'Internal ') {
+     ret.internal = true;
+     }*/
 
     // compounds.length is always 1
     for (var i = 0; i < compounds.length; i++) {
@@ -525,8 +525,8 @@ function scrapeDoxygenHtml(fileDescription){
         // Description
 
         // Find the coresponding description in the doxygen generated html
-	//var ref = method.info.id.replace(fileDescription.doxygen_ref + "_1", "");
-	var ref = method.info.id.match(/^\w+_1([a-z0-9]+)$/)[1];
+        //var ref = method.info.id.replace(fileDescription.doxygen_ref + "_1", "");
+        var ref = method.info.id.match(/^\w+_1([a-z0-9]+)$/)[1];
         var refElm = $input("#" + ref);
 
         if (!refElm) {
@@ -708,7 +708,7 @@ function generateHtmlContent(parsedData, $){
         methodDescription.append('<div class="memberDocumentation">'+method.html_description+"</div>");
 
         first = false;
-      //  methodImplementations.append(method.name)
+        //  methodImplementations.append(method.name)
       });
       /*}else {
        console.error(name+" missing memeber description for "+method.name)
@@ -780,8 +780,8 @@ function getTypeHtml(type){
   if (typeof type == "string") {
     //header.children('.type').text(method.type + " ");
     /*if (method.type == "") {
-      header.children('.type').css("display", 'none');
-    }*/
+     header.children('.type').css("display", 'none');
+     }*/
     return type + " ";
   } else {
     var refid = type.ref[0]['$']['refid'];
