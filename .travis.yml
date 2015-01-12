@@ -3,6 +3,7 @@ before_install:
 - sudo apt-add-repository -y ppa:libreoffice/libreoffice-4-2
 - sudo apt-get update
 - sudo apt-get install doxygen
+- sudo apt-get install ncftp
 - gem install sass --version "=3.2.12"
 - gem install compass --version "=0.12.2"
 language: node_js
