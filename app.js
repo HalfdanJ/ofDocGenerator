@@ -9,7 +9,7 @@ var fs = require('fs-extra'),
 
 // Set this to the section you work on to speed up the generation.
 // But remember to remove it again! :)
-var filterGroup = '';
+var filterGroup = 'communication';
 
 // Check for sass compatibility (it does not work on Travis-ci)
 try {
@@ -594,7 +594,7 @@ function addFileToSearch(file){
 
 function generateHtml(fileDescription){
   // Load template
-  var templateData = fs.readFileSync("template.html");
+  var templateData = fs.readFileSync("templateDoc.html");
   var $ = cheerio.load(templateData.toString());
 
   // Page title
@@ -740,7 +740,7 @@ function generateHtmlContent(parsedData, $){
 // -----------
 
 function generateToc(structure, tocInfo){
-  var templateData = fs.readFileSync("templateToc.html");
+  var templateData = fs.readFileSync("templateIndex.html");
   var $ = cheerio.load(templateData.toString());
 
   var c = $(".content");
