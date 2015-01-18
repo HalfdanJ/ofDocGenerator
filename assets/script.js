@@ -28,6 +28,8 @@ function toggleDescription(elm){
 
 
 $( document ).ready(function() {
+  var date = moment(info.date)
+  $('.lastModified').text("Build: "+date.fromNow())
 
   // Check if there is a # in the url, and open the description if there is
   if(window.location.hash) {

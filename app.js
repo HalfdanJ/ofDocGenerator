@@ -5,9 +5,11 @@ var fs = require('fs-extra'),
   cheerio = require('cheerio'),
   _ = require('underscore')._;
 
+
+
 // Set this to the section you work on to speed up the generation.
 // But remember to remove it again! :)
-var filterGroup = '3d';
+var filterGroup = '';
 
 // Check for sass compatibility (it does not work on Travis-ci)
 try {
@@ -102,6 +104,9 @@ loadStructure()
     generateSearchTocJSON(structure, searchToc);
   })
 
+  // Save current version info
+  .then(saveInfoFile)
+
   // Fall back
   .fail(function(e){
     console.error("General critical error! ",e)
@@ -174,7 +179,6 @@ function loadStructure(){
 // The chain of `then` ensures that if one step fails, it will will stop parsing
 //
 function generateDoc(fileDescription) {
-  var category = fileDescription.category;
   var doxygenName = fileDescription.doxygen_ref;
 
   fileDescription.kind = 'file';
@@ -374,6 +378,8 @@ function parseDoxygenXml(doxygenName){
 
               // Member ref (anchor)
               m.doxygen_ref = m.info.id.replace(doxygenName + "_1", "");
+
+              //console.log(member.definition[0]);
 
               // Member kind
               m.kind = m.info.kind;
@@ -908,15 +914,10 @@ function getLinkUrlFromDoxygenUrl(ref){
   return ref;
 }
 
-function getNested(obj /*, level1, level2, ... levelN*/) {
-  var args = Array.prototype.slice.call(arguments),
-    obj = args.shift();
 
-  for (var i = 0; i < args.length; i++) {
-    if (!obj || !obj.hasOwnProperty(args[i])) {
-      return false;
-    }
-    obj = obj[args[i]];
+function saveInfoFile(){
+  var info = {
+    date: new Date()
   }
-  return obj;
+  fs.writeFile('output/info.js',"var info="+JSON.stringify(info));
 }
