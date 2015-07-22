@@ -132,34 +132,37 @@ function loadStructure(){
       var xmlData = fs.readFileSync(dir+'xml/'+f);
       var xmlParser = new xml2js.Parser();
       xmlParser.parseString(xmlData, function (err, result) {
-        var compoundname = result['doxygen']['compounddef'][0]['compoundname'][0].match(/\/(\w+)$/)[1];
+	var matches = result['doxygen']['compounddef'][0]['compoundname'][0].match(/\/(\w+)$/);
+	if(matches.length >= 2){
+		var compoundname = matches[1];
 
-        // Filter out the root dir xml that descripes the openframeworks base folder
-        if(!compoundname.match(/openframeworks$/i) && !compoundname.match(/libs$/i) ) {
-          //console.log('"' + compoundname + '"', '"' + filterGroup + '"', filterGroup != compoundname);
+		// Filter out the root dir xml that descripes the openframeworks base folder
+		if(!compoundname.match(/openframeworks$/i) && !compoundname.match(/libs$/i) ) {
+		  //console.log('"' + compoundname + '"', '"' + filterGroup + '"', filterGroup != compoundname);
 
-          if (filterGroup && filterGroup != compoundname) {
+		  if (filterGroup && filterGroup != compoundname) {
 
-          } else {
-            structure.core[compoundname] = [];
+		  } else {
+		    structure.core[compoundname] = [];
 
-            // Iterate over the files described in the XML file
-            if(result['doxygen']['compounddef'][0]['innerfile']) {
-              result['doxygen']['compounddef'][0]['innerfile'].forEach(function (innerfile) {
-                var filename = innerfile['_'];
-                var refid = innerfile['$']['refid'];
-                //Is it a headerfile?
-                if (filename.match(/\.h$/)) {
-                  structure.core[compoundname].push({
-                    name: filename.replace(/\.h$/, ""),
-                    filename: filename,
-                    doxygen_ref: refid
-                  })
-                }
-              })
-            }
-          }
-        }
+		    // Iterate over the files described in the XML file
+		    if(result['doxygen']['compounddef'][0]['innerfile']) {
+		      result['doxygen']['compounddef'][0]['innerfile'].forEach(function (innerfile) {
+			var filename = innerfile['_'];
+			var refid = innerfile['$']['refid'];
+			//Is it a headerfile?
+			if (filename.match(/\.h$/)) {
+			  structure.core[compoundname].push({
+			    name: filename.replace(/\.h$/, ""),
+			    filename: filename,
+			    doxygen_ref: refid
+			  })
+			}
+		      })
+		    }
+		  }
+		}
+	    }
 
         deferred.resolve();
       });
