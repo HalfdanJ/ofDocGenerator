@@ -9,7 +9,7 @@
     "doxygen": "doxygen Doxyfile",
     "parse": "node app.js",
     "sass": "sass assets/stylesheet.scss output/stylesheet.css",
-    "start": "npm run doxygen; npm run parse; npm run sass"
+    "start": "npm run doxygen && npm run parse && npm run sass"
   },
   "dependencies": {
     "cheerio": "^0.18.0",
